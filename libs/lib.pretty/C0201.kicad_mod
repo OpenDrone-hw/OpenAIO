@@ -1,0 +1,81 @@
+(footprint "C0201"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "C0201 footprint")
+	(tags "C0201 footprint C76937")
+	(property "Reference" "REF**"
+		(at 0 -2.390602 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "ad5e999d-9a89-41aa-937e-3d6d95748663")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "C0201"
+		(at 0 2.390602 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c8779362-b8fa-4f90-a8f9-159f6a7eca21")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "34d06311-47a0-4c6b-8c35-8a9647bdf338")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "67c9bb25-fc61-4898-aed3-d20dee040299")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(pad "1" smd rect
+		(at -0.25 0)
+		(size 0.35 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c571dc03-1cd6-44a6-8feb-71ebd8b08039")
+	)
+	(pad "2" smd rect
+		(at 0.25 0)
+		(size 0.35 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "24dd0a11-6a7e-4252-93b3-b2cc6229821c")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/libs/lib.3dshapes/C0201.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

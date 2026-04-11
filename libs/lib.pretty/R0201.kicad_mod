@@ -1,0 +1,91 @@
+(footprint "R0201"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "R0201 footprint")
+	(tags "R0201 footprint C473048")
+	(property "Reference" "REF**"
+		(at 0 -2.390602 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "814ca0f7-66ef-4430-a730-60a8ade52da8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "R0201"
+		(at 0 2.390602 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0c7ad213-fba2-4b8b-a467-a7bb3d1bbec9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e05519a4-1d96-42a5-9b72-9c749e75b2ce")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4c531e88-f35d-4918-bc40-fbf2f69a47c1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line (start -0.45 -0.24) (end 0.45 -0.24) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+	(fp_line (start 0.45 -0.24) (end 0.45 0.24) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+	(fp_line (start 0.45 0.24) (end -0.45 0.24) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+	(fp_line (start -0.45 0.24) (end -0.45 -0.24) (stroke (width 0.05) (type solid)) (layer "F.CrtYd"))
+	(fp_line (start -0.3 -0.15) (end 0.3 -0.15) (stroke (width 0.05) (type solid)) (layer "F.Fab"))
+	(fp_line (start 0.3 -0.15) (end 0.3 0.15) (stroke (width 0.05) (type solid)) (layer "F.Fab"))
+	(fp_line (start 0.3 0.15) (end -0.3 0.15) (stroke (width 0.05) (type solid)) (layer "F.Fab"))
+	(fp_line (start -0.3 0.15) (end -0.3 -0.15) (stroke (width 0.05) (type solid)) (layer "F.Fab"))
+	(pad "1" smd roundrect
+		(at -0.22 0)
+		(size 0.26 0.28)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "bc1fbf83-3554-4180-aee6-9ee5ea74b854")
+	)
+	(pad "2" smd roundrect
+		(at 0.22 0)
+		(size 0.26 0.28)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "1fe68ffd-c05d-42e0-89e0-afe8d9d71902")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/libs/lib.3dshapes/R0201.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

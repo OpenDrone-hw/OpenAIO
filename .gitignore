@@ -1,0 +1,22 @@
+# KiCad transient files
+*-backups/
+*.kicad_prl
+*.kicad_sch-bak
+*.kicad_pcb-bak
+~*.kicad_pro.lck
+fp-info-cache
+*.bak
+
+# Plugin artifacts
+replicate_layout.log
+replicate_layout_error.log
+
+# macOS
+.DS_Store
+
+# Editor history
+.history/
+
+# Production exports (regenerated on demand)
+production/
+gerbers/
