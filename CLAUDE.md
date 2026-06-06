@@ -69,7 +69,9 @@
 - **SP40N03GNJ**: 12k on LCSC, route via JLCPCB global sourcing for production runs
 
 ## Rules
-- **NEVER** raw-edit `.kicad_sch`, `.kicad_pcb`, `.kicad_pro` — use Python scripts with kicad-skip or pcbnew API
+- Be direct and critical — flag problems, skip praise.
+- **Metadata yes, physical connections no.** Claude may edit *metadata* programmatically — KiCad text variables (`.kicad_pro`), symbol BOM/doc fields (MPN, Manufacturer, LCSC, Cost, BOM Comments, Datasheet, notes) — via kicad-skip or the pcbnew API. Claude must **never** change physical connections: nets, wiring, routing, placement, footprint assignments, or component values that alter the circuit. Those stay Stan's, done in KiCad.
+- **NEVER raw-edit** `.kicad_sch`, `.kicad_pcb`, or `.kicad_pro` as text — use kicad-skip / the pcbnew API. (`.kicad_pro` is JSON; safe programmatic metadata edits there are fine.)
 - Libraries are project-local: `lib.kicad_sym`, `lib.pretty/`, `lib.3dshapes/`, plus per-prefix shim libs
 - KiCad standard libraries (`Device:`, `power:`, `Connector:`, `Package_SO:`, etc.) are external and NOT bundled
 - Production exports go in `production/` via KiCad Fabrication Toolkit for JLCPCB

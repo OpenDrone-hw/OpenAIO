@@ -20,3 +20,6 @@ replicate_layout_error.log
 # Production exports (regenerated on demand)
 production/
 gerbers/
+
+# Claude agent context (local only)
+CLAUDE.md
