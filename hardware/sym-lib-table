@@ -1,4 +1,6 @@
 (sym_lib_table
 	(version 7)
-	(lib (name "lib")(type "KiCad")(uri "${KIPRJMOD}/libs/lib.kicad_sym")(options "")(descr "OpenAIO merged symbol library (FC+ESC+ELRS)"))
+	(lib (name "lib")(type "KiCad")(uri "${KIPRJMOD}/lib.kicad_sym")(options "")(descr "FC symbols (from OpenFC-Lite-Mini rev2)"))
+	(lib (name "components")(type "KiCad")(uri "${KIPRJMOD}/components.kicad_sym")(options "")(descr "ESC symbols (from 4in1-mini Rev2)"))
+	(lib (name "OpenRX-Shared")(type "KiCad")(uri "${KIPRJMOD}/OpenRX-Shared.kicad_sym")(options "")(descr "ELRS RX symbols (from OpenRX shared)"))
 )
