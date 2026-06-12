@@ -3,4 +3,5 @@
 	(lib (name "lib")(type "KiCad")(uri "${KIPRJMOD}/lib.pretty")(options "")(descr "FC footprints (from OpenFC-Lite-Mini rev2)"))
 	(lib (name "4in1ESC")(type "KiCad")(uri "${KIPRJMOD}/4in1ESC.pretty")(options "")(descr "ESC footprints (from 4in1-mini Rev2)"))
 	(lib (name "OpenRX-Shared")(type "KiCad")(uri "${KIPRJMOD}/OpenRX-Shared.pretty")(options "")(descr "ELRS RX footprints (from OpenRX shared)"))
+	(lib (name "imports")(type "KiCad")(uri "${KIPRJMOD}/imports.pretty")(options "")(descr "easyeda2kicad imports: X2SON-4 TPS7A2018"))
 )
