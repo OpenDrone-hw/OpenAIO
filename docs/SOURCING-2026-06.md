@@ -34,6 +34,6 @@ Whoop-specific parts (OpenAIO-Whoop): see that repo's `docs/ESC_DESIGN.md` — h
 
 ## Action items
 
-1. **NCV8187AMT180TAG replacement** — 1.8 V / ~1 A / high-PSRR LDO. Blocks every board in the family that inherits the OpenFC-Lite-Mini power sheet.
+1. **NCV8187AMT180TAG replacement — RESOLVED 2026-06-12: LP5912-1.8DRVR (C2876234).** Same WSON-6 2×2 land pattern as the design's existing LP5912-3.3DRVR, PSRR 75 dB@1 kHz (matches NCV8187), 12 µVrms noise (better), keeps PG (D8 LED net survives); pin order differs → minor re-route on same pads. Stock: LCSC 550 / DigiKey 5.8k (1.8 V is the rare family variant) — buy/consign reel early. Runner-up: TPS7A2018 (95 dB, 7 µVrms, X2SON-4 1×1 / SOT-23-5, DK 25k) if PG and the footprint change are acceptable. Applies family-wide (OpenAIO, OpenAIO-Whoop, OpenFC-Lite-Mini).
 2. **DOY180N03T** — not orderable through JLCPCB assembly. Options: consignment, JLCPCB global sourcing, or revisit the MOSFET (see `ALTERNATIVES.md`).
 3. Prototype runs are fine on current JLC stock for everything else; the <1k-JLC parts (NSG2065Q, INA186A3, TLV7031, RP2354A, TLV75533, antenna) need pre-order/reservation for any production batch.
