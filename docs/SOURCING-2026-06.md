@@ -34,7 +34,7 @@ Whoop-specific parts (OpenAIO-Whoop): see that repo's `docs/ESC_DESIGN.md` — h
 
 ## Action items
 
-1. **NCV8187AMT180TAG replacement — candidates compared on actual PSRR curves (gyro load ≈1 mA), 2026-06-12:**
+1. **NCV8187AMT180TAG replacement — DECIDED 2026-06-12: TPS7A2018PDQNR** (X2SON-4 1×1 mm; LCSC C2878130 42 pcs / DigiKey 25k @ $0.136 → consign; SOT-23-5 DBV C963430 25k on LCSC as the large-package alternate). Symbol/footprint imported into `imports` lib in both AIO repos; datasheet local. PG pin is lost — re-purpose or drop the D8 LED net. Candidates compared on actual PSRR curves (gyro load ≈1 mA):
 
    | Freq | NCV8187 (curve) | LP5912-1.8 (curve) | TPS7A2018 (spec) |
    |---|---|---|---|
