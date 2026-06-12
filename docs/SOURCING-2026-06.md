@@ -34,6 +34,21 @@ Whoop-specific parts (OpenAIO-Whoop): see that repo's `docs/ESC_DESIGN.md` — h
 
 ## Action items
 
-1. **NCV8187AMT180TAG replacement — RESOLVED 2026-06-12: LP5912-1.8DRVR (C2876234).** Same WSON-6 2×2 land pattern as the design's existing LP5912-3.3DRVR, PSRR 75 dB@1 kHz (matches NCV8187), 12 µVrms noise (better), keeps PG (D8 LED net survives); pin order differs → minor re-route on same pads. Stock: LCSC 550 / DigiKey 5.8k (1.8 V is the rare family variant) — buy/consign reel early. Runner-up: TPS7A2018 (95 dB, 7 µVrms, X2SON-4 1×1 / SOT-23-5, DK 25k) if PG and the footprint change are acceptable. Applies family-wide (OpenAIO, OpenAIO-Whoop, OpenFC-Lite-Mini).
+1. **NCV8187AMT180TAG replacement — candidates compared on actual PSRR curves (gyro load ≈1 mA), 2026-06-12:**
+
+   | Freq | NCV8187 (curve) | LP5912-1.8 (curve) | TPS7A2018 (spec) |
+   |---|---|---|---|
+   | 1 kHz | ~90 dB | ~78 dB | 95 dB |
+   | 10 kHz | ~70 dB | ~58 dB | **75 dB** |
+   | 100 kHz | ~40 dB | ~50 dB | **75 dB** |
+   | 300 kHz | ~35 dB (valley) | ~50 dB | ~70 dB |
+   | 1 MHz (buck fsw) | ~50 dB | ~47 dB | 45 dB |
+   | Noise | 15 µVrms | 12 µVrms | **7–10 µVrms** |
+
+   **Preferred: TPS7A2018** — dominates both legacy parts through the band where motor-PWM/loop noise lives (10 k–300 kHz). Packages: X2SON-4 **1×1 mm** DQN (LCSC C2878130 only 42 pcs; DigiKey 25k @ $0.136 — consign) or SOT-23-5 DBV (LCSC C963430, 25k stock, $0.144). Costs PG (D8 LED net) and a footprint change. At 1 MHz all three are equivalent — kill buck ripple with an input ferrite/RC regardless.
+   **No-new-footprint alternative: LP5912-1.8DRVR** (C2876234) — same WSON-6 2×2 land pattern as the design's LP5912-3.3, keeps PG, but has a ~58 dB valley at 10–30 kHz (still a higher floor than NCV8187's 35 dB @ 300 kHz). LCSC 550 / DK 5.8k.
+   Applies family-wide (OpenAIO, OpenAIO-Whoop, OpenFC-Lite-Mini).
+
+   *How the IMU LDO is spec'd (rationale):* three bands matter, not one cutoff. (a) **DC–1 kHz, hardest requirement** — ripple here couples directly into the flight-control band as fake rotation; the dominant real aggressors are ELRS TX current bursts at packet rate (250 Hz–1 kHz) and motor/prop-wash-correlated rail sag. (b) **~20–30 kHz** — MEMS gyro drive resonance; supply tones here intermodulate into the sense path, so keep ≥55–60 dB (this is exactly where LP5912 dips). (c) **buck fsw ~1.1 MHz + harmonics** — aliases/demodulates through the IMU's internal sampling; no LDO is strong there (all ~45–50 dB), so a ferrite/RC pole ahead of the LDO handles it regardless of part choice. LDO output noise (7–15 µVrms, 1/f corner) sits below the gyro's own noise floor for all three candidates — not a differentiator.
 2. **DOY180N03T** — not orderable through JLCPCB assembly. Options: consignment, JLCPCB global sourcing, or revisit the MOSFET (see `ALTERNATIVES.md`).
 3. Prototype runs are fine on current JLC stock for everything else; the <1k-JLC parts (NSG2065Q, INA186A3, TLV7031, RP2354A, TLV75533, antenna) need pre-order/reservation for any production batch.
