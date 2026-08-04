@@ -4,4 +4,5 @@
 	(lib (name "components")(type "KiCad")(uri "${KIPRJMOD}/components.kicad_sym")(options "")(descr "ESC symbols (from 4in1-mini Rev2)"))
 	(lib (name "OpenRX-Shared")(type "KiCad")(uri "${KIPRJMOD}/OpenRX-Shared.kicad_sym")(options "")(descr "ELRS RX symbols (from OpenRX shared)"))
 	(lib (name "imports")(type "KiCad")(uri "${KIPRJMOD}/imports.kicad_sym")(options "")(descr "easyeda2kicad imports: TPS7A2018 gyro LDO"))
+	(lib (name "Incutec")(type "KiCad")(uri "${KIPRJMOD}/../libs/KiCad-Library/symbol/Incutec.kicad_sym")(options "")(descr "incutec shared library (submodule libs/KiCad-Library)"))
 )
