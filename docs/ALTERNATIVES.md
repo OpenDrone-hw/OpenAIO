@@ -1,6 +1,6 @@
-# Pin-Compatible Alternatives — 4in1 ESC
+# Pin-Compatible Alternatives: ESC Stage
 
-Supply chain redundancy guide. All parts verified pin-compatible with the current PCB layout unless noted.
+Supply chain redundancy guide. **Historical snapshot (2026-03-14)**, baselined on the pre-refresh ESC BOM of the 20x20 source board (now [OpenESC-20x20](https://github.com/incutec-hw/OpenESC-20x20)): SP40N03GNJ FETs, U3/U7/U9/U11 gate-driver refdes. The committed design now uses **DOY180N03T** (C49441966, 30 V, PowerDI3333-8) FETs; current sourcing is in [SOURCING-2026-06.md](SOURCING-2026-06.md). The gate-driver pinout compatibility notes remain valid (NSG2065Q unchanged). Pin-compatibility claims refer to the pre-refresh layout.
 
 ## Gate Drivers (QFN-24, 4x4mm)
 
@@ -62,7 +62,7 @@ QFN-24 4x4mm but **completely different pinout** with added SD pin. For 30x30 va
 
 ## MOSFETs — 20x20 Variant (3x3mm / 3.3x3.3mm DFN-8)
 
-Current part: **SP40N03GNJ** (C22466709) — 40V, 75A, 2.9mΩ, $0.10
+Part at the time of this snapshot: **SP40N03GNJ** (C22466709), 40V, 75A, 2.9mΩ, $0.10. The committed design has since moved to **DOY180N03T** (C49441966).
 
 ### 40V Alternatives — Sorted by Performance
 

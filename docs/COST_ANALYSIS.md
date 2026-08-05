@@ -1,6 +1,8 @@
-# 4-in-1 ESC Cost Analysis (JLCPCB)
+# ESC Cost Analysis (JLCPCB)
 
 Generated: 2026-03-17
+
+**Historical snapshot.** This cost model is built on the pre-refresh ESC BOM (SP40N03GNJ FETs, LMR51420 buck) of the source ESC design. The committed OpenAIO design uses DOY180N03T (C49441966) and LMR54406DBVR (C5219316); current sourcing is in [SOURCING-2026-06.md](SOURCING-2026-06.md). Kept for cost-structure reference only.
 
 ## Board Specs
 - 6-layer PCB, 30.5 × 32.2 mm
