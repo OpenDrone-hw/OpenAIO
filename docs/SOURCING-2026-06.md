@@ -1,4 +1,4 @@
-# LCSC / JLCPCB Sourcing Snapshot — 2026-06-12
+# LCSC / JLCPCB Sourcing Snapshot: 2026-06-12
 
 JLC = JLCPCB assembly parts library stock; LCSC = retail warehouse. $@100 = LCSC USD unit price at 100-pc ladder. **All parts are Extended for JLCPCB assembly** (zero basic parts in the design). No formal EOL flags, but several parts are effectively unavailable.
 
@@ -16,7 +16,7 @@ JLC = JLCPCB assembly parts library stock; LCSC = retail warehouse. $@100 = LCSC
 | C5219261 | LMR51430YFDDCR | FC buck ×2 | 1,187 | 7,921 | 0.513 | OK (JLC marginal) |
 | C3235557 | TPS2116DRLR | power mux | 11,017 | 18,448 | 0.268 | OK |
 | C524780 | LP5912-3.3DRVR | 3.3 V LDO | 3,997 | 7,720 | 0.597 | OK |
-| C893189 | NCV8187AMT180TAG | 1.8 V gyro LDO | **62** | **19** | 0.380 | ⚠⚠⚠ **effectively unobtainable — replace before any spin** |
+| C893189 | NCV8187AMT180TAG | 1.8 V gyro LDO | **62** | **19** | 0.380 | ⚠⚠⚠ **effectively unobtainable, replace before any spin** |
 | C7463385 | COS8051SOT | OSD opamp | 11,538 | 4,675 | 0.218 | OK |
 | C2876045 | TLV7031DPWR | OSD comparator | **172** | 5,556 | 0.270 | ⚠ JLC <1k |
 | C2673087 | SN74LVC1G3157DTBR | OSD switch | 2,868 | 2,565 | 0.097 | OK |
@@ -30,11 +30,11 @@ JLC = JLCPCB assembly parts library stock; LCSC = retail warehouse. $@100 = LCSC
 | C160405 | SM06B-SRSS-TB | JST SH 6P | 4,840 | 65,780 | 0.242 | OK |
 | C160407 | SM08B-SRSS-TB | JST SH 8P | 7,624 | 265,850 | 0.255 | OK |
 
-Whoop-specific parts (OpenAIO-Whoop): see that repo's `docs/ESC_DESIGN.md` — headline risks there are AGM310MAP (515 pcs total), BY25Q64ESCIG (1 pc — swap part), EFM8BB51F16G (not in JLC lib, 17k at LCSC retail).
+Whoop-specific parts (OpenAIO-Whoop): see that repo's `docs/ESC_DESIGN.md`: headline risks there are AGM310MAP (515 pcs total), BY25Q64ESCIG (1 pc, swap part), EFM8BB51F16G (not in JLC lib, 17k at LCSC retail).
 
 ## Action items
 
-1. **NCV8187AMT180TAG replacement — DECIDED 2026-06-12: TPS7A2018PDQNR** (X2SON-4 1×1 mm; LCSC C2878130 42 pcs / DigiKey 25k @ $0.136 → consign; SOT-23-5 DBV C963430 25k on LCSC as the large-package alternate). Symbol/footprint imported into `imports` lib in both AIO repos; datasheet local. PG pin is lost — re-purpose or drop the D8 LED net. Candidates compared on actual PSRR curves (gyro load ≈1 mA):
+1. **NCV8187AMT180TAG replacement, DECIDED 2026-06-12: TPS7A2018PDQNR** (X2SON-4 1×1 mm; LCSC C2878130 42 pcs / DigiKey 25k @ $0.136 → consign; SOT-23-5 DBV C963430 25k on LCSC as the large-package alternate). Symbol/footprint imported into `imports` lib in both AIO repos; datasheet local. PG pin is lost: re-purpose or drop the D8 LED net. Candidates compared on actual PSRR curves (gyro load ≈1 mA):
 
    | Freq | NCV8187 (curve) | LP5912-1.8 (curve) | TPS7A2018 (spec) |
    |---|---|---|---|
@@ -43,12 +43,12 @@ Whoop-specific parts (OpenAIO-Whoop): see that repo's `docs/ESC_DESIGN.md` — h
    | 100 kHz | ~40 dB | ~50 dB | **75 dB** |
    | 300 kHz | ~35 dB (valley) | ~50 dB | ~70 dB |
    | 1 MHz (buck fsw) | ~50 dB | ~47 dB | 45 dB |
-   | Noise | 15 µVrms | 12 µVrms | **7–10 µVrms** |
+   | Noise | 15 µVrms | 12 µVrms | **7-10 µVrms** |
 
-   **Preferred: TPS7A2018** — dominates both legacy parts through the band where motor-PWM/loop noise lives (10 k–300 kHz). Packages: X2SON-4 **1×1 mm** DQN (LCSC C2878130 only 42 pcs; DigiKey 25k @ $0.136 — consign) or SOT-23-5 DBV (LCSC C963430, 25k stock, $0.144). Costs PG (D8 LED net) and a footprint change. At 1 MHz all three are equivalent — kill buck ripple with an input ferrite/RC regardless.
-   **No-new-footprint alternative: LP5912-1.8DRVR** (C2876234) — same WSON-6 2×2 land pattern as the design's LP5912-3.3, keeps PG, but has a ~58 dB valley at 10–30 kHz (still a higher floor than NCV8187's 35 dB @ 300 kHz). LCSC 550 / DK 5.8k.
+   **Preferred: TPS7A2018**. It dominates both legacy parts through the band where motor-PWM/loop noise lives (10 k-300 kHz). Packages: X2SON-4 **1×1 mm** DQN (LCSC C2878130 only 42 pcs; DigiKey 25k @ $0.136, consign) or SOT-23-5 DBV (LCSC C963430, 25k stock, $0.144). Costs PG (D8 LED net) and a footprint change. At 1 MHz all three are equivalent: kill buck ripple with an input ferrite/RC regardless.
+   **No-new-footprint alternative: LP5912-1.8DRVR** (C2876234), same WSON-6 2×2 land pattern as the design's LP5912-3.3, keeps PG, but has a ~58 dB valley at 10-30 kHz (still a higher floor than NCV8187's 35 dB @ 300 kHz). LCSC 550 / DK 5.8k.
    Applies family-wide (OpenAIO, OpenAIO-Whoop, OpenFC-Lite-Mini).
 
-   *How the IMU LDO is spec'd (rationale):* three bands matter, not one cutoff. (a) **DC–1 kHz, hardest requirement** — ripple here couples directly into the flight-control band as fake rotation; the dominant real aggressors are ELRS TX current bursts at packet rate (250 Hz–1 kHz) and motor/prop-wash-correlated rail sag. (b) **~20–30 kHz** — MEMS gyro drive resonance; supply tones here intermodulate into the sense path, so keep ≥55–60 dB (this is exactly where LP5912 dips). (c) **buck fsw ~1.1 MHz + harmonics** — aliases/demodulates through the IMU's internal sampling; no LDO is strong there (all ~45–50 dB), so a ferrite/RC pole ahead of the LDO handles it regardless of part choice. LDO output noise (7–15 µVrms, 1/f corner) sits below the gyro's own noise floor for all three candidates — not a differentiator.
-2. **DOY180N03T** — not orderable through JLCPCB assembly. Options: consignment, JLCPCB global sourcing, or revisit the MOSFET (see `ALTERNATIVES.md`).
+   *How the IMU LDO is spec'd (rationale):* three bands matter, not one cutoff. (a) **DC-1 kHz, hardest requirement**: ripple here couples directly into the flight-control band as fake rotation; the dominant real aggressors are ELRS TX current bursts at packet rate (250 Hz-1 kHz) and motor/prop-wash-correlated rail sag. (b) **~20-30 kHz**: MEMS gyro drive resonance; supply tones here intermodulate into the sense path, so keep ≥55-60 dB (this is exactly where LP5912 dips). (c) **buck fsw ~1.1 MHz + harmonics**: aliases/demodulates through the IMU's internal sampling; no LDO is strong there (all ~45-50 dB), so a ferrite/RC pole ahead of the LDO handles it regardless of part choice. LDO output noise (7-15 µVrms, 1/f corner) sits below the gyro's own noise floor for all three candidates: not a differentiator.
+2. **DOY180N03T**: not orderable through JLCPCB assembly. Options: consignment, JLCPCB global sourcing, or revisit the MOSFET (see `ALTERNATIVES.md`).
 3. Prototype runs are fine on current JLC stock for everything else; the <1k-JLC parts (NSG2065Q, INA186A3, TLV7031, RP2354A, TLV75533, antenna) need pre-order/reservation for any production batch.

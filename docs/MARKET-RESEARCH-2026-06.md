@@ -1,4 +1,4 @@
-# FPV AIO Competitive Landscape — June 2026
+# FPV AIO Competitive Landscape: June 2026
 
 Research for the two OpenDrone AIOs: **OpenAIO** (toothpick, 25.5×25.5, 6S, AM32, onboard ELRS) and **OpenAIO-Whoop** (1-2S, Bluejay, digital-only). Web research with adversarial verification against primary sources (DJI manuals, GitHub APIs, manufacturer manuals), 2026-06-12.
 
@@ -6,21 +6,21 @@ Research for the two OpenDrone AIOs: **OpenAIO** (toothpick, 25.5×25.5, 6S, AM3
 
 | Board | MCU / Gyro | ESC | RX | Blackbox | Weight | Price |
 |---|---|---|---|---|---|---|
-| **HDZero Gamma 45A** | G473 / — | 45A/60A AM32, 3-6S | **onboard serial ELRS 2.4G** | — | 8.4 g | $89.99 |
-| Airbot Fenix G4 | G473 / ICM-42688P | 35A/45A AM32 (QF32MTF4AK8U7 = AT32F421+ID6288 chiplet) | none | 16 MB | — | $89.99 |
+| **HDZero Gamma 45A** | G473 / - | 45A/60A AM32, 3-6S | **onboard serial ELRS 2.4G** | - | 8.4 g | $89.99 |
+| Airbot Fenix G4 | G473 / ICM-42688P | 35A/45A AM32 (QF32MTF4AK8U7 = AT32F421+ID6288 chiplet) | none | 16 MB | - | $89.99 |
 | Holybro Kakute AIO G473 | G473 / ICM-42688P | 35A AM32, 4× discrete MCUs | none | 16 MB | 7.5 g | ~$90 |
 | Flywoo GOKU GN745 V3 | F745 / MPU6000 or ICM42688 | 45A AM32 | none (pads) | 16 MB | 9.4 g | $89.99 |
 | GEPRC TAKER F722 45A | F722 / ICM-42688P | 45A/55A BLHeli_32 (EOL fw) | none | 16 MB | 9.2 g | $79.99 |
 | iFlight BLITZ Whoop F7 55A | F745 / ICM42688 or BMI270 | 55A/65A Bluejay | none | 16 MB | 10.5 g | $116-141 |
 | Foxeer Reaper AIO V4 | F745 / MPU6000 | 45A/50A BLHeli_S (Bluejay-flashable) | none | 16 Mb | 8.6 g | $99.99 |
-| BetaFPV F722 35A V2 | F722 / ICM42688 | 35A/40A BLHeli_32 on AT32F421 | none | — | ~7 g | $51-114 |
+| BetaFPV F722 35A V2 | F722 / ICM42688 | 35A/40A BLHeli_32 on AT32F421 | none | - | ~7 g | $51-114 |
 | SpeedyBee F745 35A | F745 / MPU6000 | 35A/45A BLHeli_S | none | 8 MB | 10.1 g | $115.99 |
-| Diatone Mamba MK5 G4 | G473 / IIM-42652 | 40A/45A BLHeli_32 | none | — | — | $79.99 |
-| HGLRC Specter 25A | F722 / MPU6000 | 25A Bluejay | none | 16 MB | 12.05 g | — |
+| Diatone Mamba MK5 G4 | G473 / IIM-42652 | 40A/45A BLHeli_32 | none | - | - | $79.99 |
+| HGLRC Specter 25A | F722 / MPU6000 | 25A Bluejay | none | 16 MB | 12.05 g | - |
 
 **Class structure mid-2026:** converged on G4/F7 FC + AT32F421-class ESC MCUs running AM32, 35-45 A, 25.5×25.5 Φ3 mm + M2 grommets, 16 MB flash, ICM-42688P, dual 5V/9-10V BEC, $80-100. Legacy boards stranded on EOL BLHeli_32 or 8-bit BLHeli_S.
 
-**Direct competitor for OpenAIO: HDZero Gamma 45A** — the only 6S AIO with onboard serial ELRS. Digital-HD-only, single board, closed source, G473. OpenAIO's differentiators against it: analog PIO-OSD option, microSD blackbox (nobody has SD in class), open hardware, RP2350 (also a platform-maturity risk).
+**Direct competitor for OpenAIO: HDZero Gamma 45A**, the only 6S AIO with onboard serial ELRS. Digital-HD-only, single board, closed source, G473. OpenAIO's differentiators against it: analog PIO-OSD option, microSD blackbox (nobody has SD in class), open hardware, RP2350 (also a platform-maturity risk).
 
 ## Whoop class (1-2S)
 
@@ -28,10 +28,10 @@ Research for the two OpenDrone AIOs: **OpenAIO** (toothpick, 25.5×25.5, 6S, AM3
 |---|---|---|---|---|---|---|---|
 | BetaFPV Air 5in1 (Air65/75) | 26×26 M1.4 | G473 / ICM42688P | 5A BB51 Bluejay 96k | serial ELRS | 400 mW analog | 2.9 g | $44.99 |
 | **BetaFPV Matrix 1S 5IN1 II** | 26×26 | G473 / ICM42688P | **12A/18A BB51 Bluejay** | serial ELRS | 400 mW | ~3.5 g | $54.99 |
-| **BetaFPV Matrix 1S 3IN1 HD** | 26×26 | G473 / ICM42688P | 12A/18A Bluejay | serial ELRS | **none — SH1.0 6-pin O4 port, 5V/3A BEC** | 3.2 g | ~$50 |
+| **BetaFPV Matrix 1S 3IN1 HD** | 26×26 | G473 / ICM42688P | 12A/18A Bluejay | serial ELRS | **none: SH1.0 6-pin O4 port, 5V/3A BEC** | 3.2 g | ~$50 |
 | BetaFPV F4 2-3S 20A (Pavo Pico) | 26×26 | F405 / ICM42688P | 20A/25A Bluejay | serial ELRS | none; 9V/2A + 5V/3A, O4 plug | 5.6 g | $54.99 |
 | Happymodel X12 / Pro | 25.5×25.5 | F411 / lottery | 12A/15A | SPI / serial (Pro) | OpenVTX 400 mW | 5.1 g | $45-75 |
-| Happymodel X14 | 25.5×25.5 | **G473 / LSM6DSV16X** | 12A/15A Bluejay | serial ELRS + WiFi | OpenVTX 400 mW | ~5 g | — |
+| Happymodel X14 | 25.5×25.5 | **G473 / LSM6DSV16X** | 12A/15A Bluejay | serial ELRS + WiFi | OpenVTX 400 mW | ~5 g | - |
 | NewBeeDrone BeeBrain BLV5 | 25.5×25.5 | G474 / MPU6000 | **18A double-NMOS** Bluejay | serial ELRS **diversity** + TCXO | 400 mW | 5.8 g | $99 |
 | NBD Hummingbird RaceSpec V2 | 25.5×25.5 | AT32F435 / ICM42688 | 18A Bluejay | serial ELRS | 400 mW | 4.71 g | $59.99 |
 | GEPRC TAKER F411-12A-E | 25.5×25.5 M2 | F411 / ICM42688P | 12A/13A | serial ELRS | none | 4.2 g | $59.99 |
@@ -41,18 +41,18 @@ Notes: BetaFPV FC mount stays 26×26 M1.4 through the Matrix II generation (veri
 
 ## User pain points (ranked)
 
-1. **SPI ELRS = designed-in obsolescence** — version-locked to BF, ELRS-4 incompatible today. Every 2024+ design is serial.
-2. **F411 UART starvation** — structural reason F411 AIOs are legacy; vendors mislabel softserial as "FULL UARTS".
-3. **Lifted motor/battery pads** during repair — mitigations users praise: through-hole-reinforced pads, motor plugs, big thermal-relieved battery pads.
-4. **ESC burnout totals the whole AIO** — core economic argument against integration; per-channel SWD rescue pads help.
-5. **O4-Lite-on-1S brownouts** — an entire aftermarket boost-BEC market exists (Flywoo O4 1S module, Fractal Boostybaby).
+1. **SPI ELRS = designed-in obsolescence**: version-locked to BF, ELRS-4 incompatible today. Every 2024+ design is serial.
+2. **F411 UART starvation**: structural reason F411 AIOs are legacy; vendors mislabel softserial as "FULL UARTS".
+3. **Lifted motor/battery pads** during repair. Mitigations users praise: through-hole-reinforced pads, motor plugs, big thermal-relieved battery pads.
+4. **ESC burnout totals the whole AIO**: core economic argument against integration; per-channel SWD rescue pads help.
+5. **O4-Lite-on-1S brownouts**: an entire aftermarket boost-BEC market exists (Flywoo O4 1S module, Fractal Boostybaby).
 6. **Current sensing absent (1S) or miscalibrated** (factory scale off 2×).
-7. **No/undersized blackbox** — 8 MB ≈ one flight; 16 MB is the bare minimum for tuning.
-8. **USB ripping off** — anchor it through-hole, keep clear of frame rails.
+7. **No/undersized blackbox**: 8 MB ≈ one flight; 16 MB is the bare minimum for tuning.
+8. **USB ripping off**: anchor it through-hole, keep clear of frame rails.
 9. **Betaflight target abandonment** + silent hardware revisions ("gyro lottery").
-10. **Connector chaos** — same shells, different pinouts; silkscreen rail voltages at every plug.
-11. **Mounting/grommet chaos** — 25.5/26/26.5 + M1.4/M2 mix; size holes to accept both grommet types.
-12. **Zero open documentation** — no vendor publishes schematics.
+10. **Connector chaos**: same shells, different pinouts; silkscreen rail voltages at every plug.
+11. **Mounting/grommet chaos**: 25.5/26/26.5 + M1.4/M2 mix; size holes to accept both grommet types.
+12. **Zero open documentation**: no vendor publishes schematics.
 
 ## Verified trends 2025-2026
 
@@ -61,8 +61,8 @@ Notes: BetaFPV FC mount stays 26×26 M1.4 through the Matrix II generation (veri
 - **ELRS 4.0.0** (2026-02-06): OTA-incompatible with 3.x, STM32 RX dropped; `Unified_ESP32C3_2400_RX` survives in 4.0 targets (verified).
 - **BLHeli_32 dead** (June 2024). AM32 owns 32-bit; Bluejay on EFM8 BB51 (48/96 kHz) owns sub-20A whoop tier.
 - **Betaflight on RP2350**: landed in 2025.12; PIO bidir DShot + PIO UARTs merged; open issues on I2C/SPI and PWM. Budget bring-up time; pin to a tested release.
-- Gyros: ICM-42688-P mainstream; **LSM6DSV16X now shipping on Happymodel latest revs** — validates the family gyro choice.
-- **Open-source landscape effectively empty** — no open-hardware Betaflight AIO has shipped. First-mover position intact for both boards.
+- Gyros: ICM-42688-P mainstream; **LSM6DSV16X now shipping on Happymodel latest revs**: validates the family gyro choice.
+- **Open-source landscape effectively empty**: no open-hardware Betaflight AIO has shipped. First-mover position intact for both boards.
 
 ## Conventions / targets
 
