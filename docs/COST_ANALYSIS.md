@@ -1,6 +1,8 @@
-# 4-in-1 ESC Cost Analysis (JLCPCB)
+# ESC Cost Analysis (JLCPCB)
 
 Generated: 2026-03-17
+
+**Historical snapshot.** This cost model is built on the pre-refresh ESC BOM (SP40N03GNJ FETs, LMR51420 buck) of the source ESC design. The committed OpenAIO design uses DOY180N03T (C49441966) and LMR54406DBVR (C5219316); current sourcing is in [SOURCING-2026-06.md](SOURCING-2026-06.md). Kept for cost-structure reference only.
 
 ## Board Specs
 - 6-layer PCB, 30.5 × 32.2 mm
@@ -46,25 +48,25 @@ Note: U4 (4in1ESC module) is a schematic reference, not a purchasable part. Test
 | Category | Cost | Per Board |
 |----------|------|-----------|
 | **PCB Fabrication** | €212.86 | €0.43 |
-| — Engineering fee | €28.68 | |
-| — Board | €54.93 | |
-| — Min via hole size/diameter | €50.88 | |
-| — Large size | €29.55 | |
-| — 4-wire Kelvin test | €20.18 | |
-| — Surface finish | €11.82 | |
-| — Board outline tolerance | €10.84 | |
-| — Material type | €5.08 | |
-| — Confirm production file | €0.90 | |
+| - Engineering fee | €28.68 | |
+| - Board | €54.93 | |
+| - Min via hole size/diameter | €50.88 | |
+| - Large size | €29.55 | |
+| - 4-wire Kelvin test | €20.18 | |
+| - Surface finish | €11.82 | |
+| - Board outline tolerance | €10.84 | |
+| - Material type | €5.08 | |
+| - Confirm production file | €0.90 | |
 | **Assembly (non-BOM)** | €397.83 | €0.80 |
-| — SMT placement | €176.67 | |
-| — Nitrogen reflow | €85.26 | |
-| — Large size surcharge | €49.57 | |
-| — Setup fee | €44.10 | |
-| — Feeders loading (Extended parts) | €19.82 | |
-| — Stencil | €14.17 | |
-| — Photo confirmation | €7.08 | |
-| — Board cleaning | €0.70 | |
-| — Packaging | €0.45 | |
+| - SMT placement | €176.67 | |
+| - Nitrogen reflow | €85.26 | |
+| - Large size surcharge | €49.57 | |
+| - Setup fee | €44.10 | |
+| - Feeders loading (Extended parts) | €19.82 | |
+| - Stencil | €14.17 | |
+| - Photo confirmation | €7.08 | |
+| - Board cleaning | €0.70 | |
+| - Packaging | €0.45 | |
 | **Build time surcharge** | €42.49 | €0.08 |
 | **BOM (all 21 parts)** | €4,291.49 | €8.58 |
 | | | |
@@ -99,11 +101,11 @@ Fixed costs (PCB+assembly) are noise above 500 units. BOM is 87-92% of total cos
 
 ## Top 5 Cost Drivers (72% of BOM)
 
-1. **MOSFETs** (€1,320 / 30%) — 24 per board at €0.11 each
-2. **MCUs** (€827 / 19%) — 4 per board at €0.41 each. Already cheapest AM32-compatible option.
-3. **10uF 0805 caps** (€606 / 14%) — 33 per board. Already Basic part.
-4. **Gate drivers** (€463 / 11%) — 4 per board at €0.23 each. Many clone alternatives exist.
-5. **Buck converter** (€385 / 9%) — 1 per board at €0.77. Only SOT-23-6 option at 36V/2A.
+1. **MOSFETs** (€1,320 / 30%) - 24 per board at €0.11 each
+2. **MCUs** (€827 / 19%) - 4 per board at €0.41 each. Already cheapest AM32-compatible option.
+3. **10uF 0805 caps** (€606 / 14%) - 33 per board. Already Basic part.
+4. **Gate drivers** (€463 / 11%) - 4 per board at €0.23 each. Many clone alternatives exist.
+5. **Buck converter** (€385 / 9%) - 1 per board at €0.77. Only SOT-23-6 option at 36V/2A.
 
 ---
 
@@ -111,42 +113,42 @@ Fixed costs (PCB+assembly) are noise above 500 units. BOM is 87-92% of total cos
 
 | Part | Qty for 500 | JLCPCB Stock | LCSC Stock | Shortfall | Risk |
 |------|-------------|-------------|------------|-----------|------|
-| SP40N03GNJ | 12,000 | 2,340 | 12,014 | 9,674 | **Medium** — LCSC has enough total |
-| 10kΩ 0201 | 16,500 | 536 | 1.1M+ | 15,979 | **Low** — massive LCSC stock |
-| 220Ω 0201 | 2,000 | 67 | 10k+ | 1,943 | **Low** — adequate LCSC stock |
-| NSG2065Q | 2,000 | 215 | ~225 | 1,785 | **High** — only ~225 on LCSC. Use clone 6288Q-MNS (9.9k stock) as fallback |
-| LMR51420 | 500 | 416 | ~700 | 84 | **Medium** — tight but sourceable. Multiple variants. |
+| SP40N03GNJ | 12,000 | 2,340 | 12,014 | 9,674 | **Medium** - LCSC has enough total |
+| 10kΩ 0201 | 16,500 | 536 | 1.1M+ | 15,979 | **Low** - massive LCSC stock |
+| 220Ω 0201 | 2,000 | 67 | 10k+ | 1,943 | **Low** - adequate LCSC stock |
+| NSG2065Q | 2,000 | 215 | ~225 | 1,785 | **High** - only ~225 on LCSC. Use clone 6288Q-MNS (9.9k stock) as fallback |
+| LMR51420 | 500 | 416 | ~700 | 84 | **Medium** - tight but sourceable. Multiple variants. |
 
 ---
 
 ## Alternative Component Research
 
-### MCU: AT32F421G8U7 — KEEP
+### MCU: AT32F421G8U7 - KEEP
 
 Already the cheapest AM32-compatible MCU in QFN-28 4x4mm at ~$0.475/unit.
 - GD32E230G8U6TR ($0.448) has only 8KB SRAM (insufficient, 16KB required)
 - STM32G071G8U6 ($0.78) is 65% more expensive
-- No alternatives are pin-compatible — switching requires full board redesign
+- No alternatives are pin-compatible - switching requires full board redesign
 - Stock: 11,330 units on LCSC, enough for multiple runs
 
-### Buck: LMR51420YDDCR — KEEP (source via JLCPCB global)
+### Buck: LMR51420YDDCR - KEEP (source via JLCPCB global)
 
 Only SOT-23-6 buck converter at 36V input / 2A output on LCSC.
 - LMR51420XDDCR (C5246146, 500kHz variant): pin-compatible, $0.82, 183 stock
 - LMR51420YFDDCR (C7296200, JLCPCB variant): pin-compatible, $0.72
-- AOZ1282CI (C111916): $0.22, 9k stock, 36V — but only 1.2A and different pinout (requires PCB rework)
-- AP63200 family: $0.20-0.41, 2A — but only 32V max (unsafe for 6S with transients)
+- AOZ1282CI (C111916): $0.22, 9k stock, 36V - but only 1.2A and different pinout (requires PCB rework)
+- AP63200 family: $0.20-0.41, 2A - but only 32V max (unsafe for 6S with transients)
 - Recommendation: keep LMR51420, order through JLCPCB global sourcing
 
-### Current Sense Amp: INA186A3IDCKR — MONITOR
+### Current Sense Amp: INA186A3IDCKR - MONITOR
 
 Stock critically low (74 units as of 2026-03-17). No Chinese clones exist.
-- INA199A2DCKR (C131913): $0.248 (52% cheaper), same SC-70-6 footprint, 909 stock, bidirectional, zero-drift — but **26V common-mode limit** (tight for 6S at 25.2V, no transient margin)
+- INA199A2DCKR (C131913): $0.248 (52% cheaper), same SC-70-6 footprint, 909 stock, bidirectional, zero-drift - but **26V common-mode limit** (tight for 6S at 25.2V, no transient margin)
 - INA180A3IDBVR (C122882): $0.154 (70% cheaper), SOT-23-5 (different footprint), unidirectional only, 4,875 stock
-- 3PEAK TP181A2-CR (C2902350): $0.10, SC-70-6, 36V CM, INA199 pinout — **currently OOS**, monitor for restock
+- 3PEAK TP181A2-CR (C2902350): $0.10, SC-70-6, 36V CM, INA199 pinout - **currently OOS**, monitor for restock
 - For V1: source INA186A3 via JLCPCB global. For V2: consider INA199A2 if 26V CM is acceptable.
 
-### Passives — Minor Optimizations Available
+### Passives - Minor Optimizations Available
 
 All 0201 parts are Extended (no 0201 Basic parts exist on JLCPCB).
 
@@ -175,4 +177,4 @@ These are minor (~5% of BOM) and require verification of voltage rails before im
 | BOM as % of total | 87% |
 | Unique Extended parts | 18 of 21 |
 | Parts needing global sourcing | 5 of 21 |
-| Highest risk part | NSG2065Q (gate driver) — 225 total LCSC stock |
+| Highest risk part | NSG2065Q (gate driver) - 225 total LCSC stock |

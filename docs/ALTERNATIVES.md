@@ -1,6 +1,6 @@
-# Pin-Compatible Alternatives — 4in1 ESC
+# Pin-Compatible Alternatives: ESC Stage
 
-Supply chain redundancy guide. All parts verified pin-compatible with the current PCB layout unless noted.
+Supply chain redundancy guide. **Historical snapshot (2026-03-14)**, baselined on the pre-refresh ESC BOM of the 20x20 source board (now [OpenESC-20x20](https://github.com/incutec-hw/OpenESC-20x20)): SP40N03GNJ FETs, U3/U7/U9/U11 gate-driver refdes. The committed design now uses **DOY180N03T** (C49441966, 30 V, PowerDI3333-8) FETs; current sourcing is in [SOURCING-2026-06.md](SOURCING-2026-06.md). The gate-driver pinout compatibility notes remain valid (NSG2065Q unchanged). Pin-compatibility claims refer to the pre-refresh layout.
 
 ## Gate Drivers (QFN-24, 4x4mm)
 
@@ -30,12 +30,12 @@ All FD6288Q-family clones share **identical pinout** with the NSG2065Q. No PCB c
 | **SD6288Q** | C44606223 | JSMSEMI | 1.5A/1.0A | 5,045 | $0.31 | SD6288Q_JSMSEMI_datasheet.pdf |
 | **EG2124** | C2856308 | EG Micro | 0.8A/1.2A | 3,821 | $0.23 | EG2124_datasheet.pdf |
 | **HL6288Q** | C50331902 | HL | 1.5A/1.8A | 3,272 | $0.19 | HL6288Q_datasheet.pdf |
-| **YC6288Q** | C54157432 | YLPTEC | — | 2,946 | $0.42 | YC6288Q_YLPTEC_datasheet.pdf |
+| **YC6288Q** | C54157432 | YLPTEC | - | 2,946 | $0.42 | YC6288Q_YLPTEC_datasheet.pdf |
 | **JSM6288Q** | C19077370 | JSMSEMI | 1.5A/1.8A | 1,989 | $0.46 | JSM6288Q_JSMSEMI_datasheet.pdf |
 
 **Combined stock: ~27,000+ units** across all clones.
 
-### DRV8300 (TI) — Layout-Compatible with Caveats
+### DRV8300 (TI) - Layout-Compatible with Caveats
 
 | Part | LCSC | Stock | Price |
 |------|------|-------|-------|
@@ -44,27 +44,27 @@ All FD6288Q-family clones share **identical pinout** with the NSG2065Q. No PCB c
 Pin differences vs FD6288Q family:
 - **Pin 5 = MODE** (internal 200k pulldown → floats to non-inverting = same behavior as FD6288 family). **Safe to leave NC.**
 - **Pin 21 = DT** (floating = fixed ~215ns deadtime). **Safe to leave NC.**
-- Source current only 750mA (vs 1.5A on most clones) — slower MOSFET turn-on
-- Max 100V (vs 250V on FD6288 family) — fine for LiPo, less transient headroom
+- Source current only 750mA (vs 1.5A on most clones) - slower MOSFET turn-on
+- Max 100V (vs 250V on FD6288 family) - fine for LiPo, less transient headroom
 - LCSC stock is terrible (53 units)
 
 **Verdict:** Works on the same pads, no PCB changes needed. Not recommended as primary due to low stock and weaker drive. Good as emergency fallback.
 
-### FD6288Q (Fortior, original) — Discontinued
+### FD6288Q (Fortior, original) - Discontinued
 
-All QFN-24 variants OOS on LCSC. Only FD6288T (TSSOP-20, C97683, 34k stock) available — wrong package.
+All QFN-24 variants OOS on LCSC. Only FD6288T (TSSOP-20, C97683, 34k stock) available - wrong package.
 
-### NSG20652Q — NOT Compatible
+### NSG20652Q - NOT Compatible
 
 QFN-24 4x4mm but **completely different pinout** with added SD pin. For 30x30 variant only (separate repo/board).
 
 ---
 
-## MOSFETs — 20x20 Variant (3x3mm / 3.3x3.3mm DFN-8)
+## MOSFETs - 20x20 Variant (3x3mm / 3.3x3.3mm DFN-8)
 
-Current part: **SP40N03GNJ** (C22466709) — 40V, 75A, 2.9mΩ, $0.10
+Part at the time of this snapshot: **SP40N03GNJ** (C22466709), 40V, 75A, 2.9mΩ, $0.10. The committed design has since moved to **DOY180N03T** (C49441966).
 
-### 40V Alternatives — Sorted by Performance
+### 40V Alternatives - Sorted by Performance
 
 | Part | LCSC | Mfg | RDS(on) | Id | Pkg (mm) | Stock | Price |
 |------|------|-----|---------|----|----------|-------|-------|
@@ -76,19 +76,19 @@ Current part: **SP40N03GNJ** (C22466709) — 40V, 75A, 2.9mΩ, $0.10
 | **BSZ028N04LS** | C534649 | Infineon | 2.8mΩ | 40A | 3.3x3.3 | 1,595 | $0.88 |
 | **SP40N03GNJ** | C22466709 | Siliup | 2.9mΩ | 75A | 3.0x3.0 | 2,125 | **$0.10** |
 
-### 30V Premium Alternative — FDMC8010DC
+### 30V Premium Alternative - FDMC8010DC
 
 | Part | LCSC | Mfg | RDS(on) | Id | Qg | Pkg (mm) | Stock | Price |
 |------|------|-----|---------|----|-----|----------|-------|-------|
 | **FDMC8010DC** | C555489 | onsemi | **1.28mΩ@10V** | 157A | 67nC | PQFN-8 (3.3x3.3) | 2,965 | $0.90 |
 
 **Trade-offs vs SP40N03GNJ:**
-- **56% lower RDS(on)** — 1.28mΩ vs 2.9mΩ. Per-phase MOSFET loss drops from 5.8mΩ (2×2.9) to 2.56mΩ (2×1.28)
-- **36% lower total phase resistance** — ~5.8mΩ vs ~9.0mΩ including ~3.2mΩ copper (3mm wide × 10mm, 1oz)
-- **9× more expensive** — $0.90 vs $0.10 per FET, $21.60 vs $2.40 for all 24
-- **30V Vds** — max 7S LiPo (29.4V) vs 40V on SP40N03GNJ which handles 8S+ with margin. Limits battery voltage headroom and transient margin on 6S
-- **3.3x3.3mm package** — needs footprint update from current 3.0x3.0mm POWERPAK-1212-8
-- **Higher Qg** (67nC vs ~35nC) — more gate charge means slightly higher switching losses, partially offsets conduction gains at high PWM frequencies
+- **56% lower RDS(on)** - 1.28mΩ vs 2.9mΩ. Per-phase MOSFET loss drops from 5.8mΩ (2×2.9) to 2.56mΩ (2×1.28)
+- **36% lower total phase resistance** - ~5.8mΩ vs ~9.0mΩ including ~3.2mΩ copper (3mm wide × 10mm, 1oz)
+- **9× more expensive** - $0.90 vs $0.10 per FET, $21.60 vs $2.40 for all 24
+- **30V Vds** - max 7S LiPo (29.4V) vs 40V on SP40N03GNJ which handles 8S+ with margin. Limits battery voltage headroom and transient margin on 6S
+- **3.3x3.3mm package** - needs footprint update from current 3.0x3.0mm POWERPAK-1212-8
+- **Higher Qg** (67nC vs ~35nC) - more gate charge means slightly higher switching losses, partially offsets conduction gains at high PWM frequencies
 
 **Verdict:** Advertise as an optional premium build for users who want maximum efficiency on 3-6S and are willing to pay more. Not the default due to cost and reduced voltage headroom. Requires footprint change to 3.3x3.3mm PQFN-8.
 
@@ -98,13 +98,13 @@ Current part: **SP40N03GNJ** (C22466709) — 40V, 75A, 2.9mΩ, $0.10
 |------|------|-----|---------|----|-----|-------|-------|
 | **BSZ0901NS** | C534685 | Infineon | **1.7mΩ@10V** | 145A | 23nC | 4,035 | $0.74 |
 | **NCEP3065QU** | C502964 | Wuxi NCE | **1.9mΩ@10V** | 65A | 34.8nC | 2,356 | $0.40 |
-| **BSZ019N03LS** | C152374 | Infineon | 1.9mΩ@10V | 22A | — | 2,654 | $1.25 |
+| **BSZ019N03LS** | C152374 | Infineon | 1.9mΩ@10V | 22A | - | 2,654 | $1.25 |
 
 All 30V parts share the same trade-off: lower RDS(on) but reduced voltage headroom (max 7S) and require 3.3x3.3mm footprint.
 
 ### Verify Footprint Fit
 
-The current footprint (POWERPAK-1212-8) is 3.0x3.0mm. All 3.3x3.3mm parts (BSZ, AON, FDMC8010DC, NCEP3065QU) need footprint verification — pad pitch and layout could differ slightly. **Check datasheets before assuming drop-in compatibility with 3.3mm parts.**
+The current footprint (POWERPAK-1212-8) is 3.0x3.0mm. All 3.3x3.3mm parts (BSZ, AON, FDMC8010DC, NCEP3065QU) need footprint verification - pad pitch and layout could differ slightly. **Check datasheets before assuming drop-in compatibility with 3.3mm parts.**
 
 ### Ohmic Loss Analysis (3mm trace width, 10mm trace length, 1oz copper, 80°C)
 
@@ -130,9 +130,9 @@ FDMC8010DC saves ~3.9W per phase at 35A (36% reduction). MOSFETs are the dominan
 
 ---
 
-## MOSFETs — 30x30 Variant (larger packages OK)
+## MOSFETs - 30x30 Variant (larger packages OK)
 
-### PSMN1R6-40YLC (Nexperia) — Target Part
+### PSMN1R6-40YLC (Nexperia) - Target Part
 
 | Parameter | Value |
 |-----------|-------|
@@ -140,7 +140,7 @@ FDMC8010DC saves ~3.9W per phase at 35A (36% reduction). MOSFETs are the dominan
 | RDS(on) | **1.25mΩ** @10V, **1.55mΩ** @4.5V |
 | Id | 100A |
 | Qg | 59nC @4.5V |
-| Package | **LFPAK56 (5x6mm)** — NOT 3x3mm |
+| Package | **LFPAK56 (5x6mm)** - NOT 3x3mm |
 | LCSC | **Not stocked** |
 
 **Status: Discontinued/unavailable on LCSC.** Closest available:
@@ -148,7 +148,7 @@ FDMC8010DC saves ~3.9W per phase at 35A (36% reduction). MOSFETs are the dominan
 | Part | LCSC | RDS(on) | Qg | Stock | Price |
 |------|------|---------|----|-------|-------|
 | PSMN1R8-40YLC | C88071 | 1.8mΩ @4.5V | 45nC | 94 | $1.33 |
-| PSMN1R5-40YSDX | C553230 | 1.5mΩ @10V | 99nC | 50 | — |
+| PSMN1R5-40YSDX | C553230 | 1.5mΩ @10V | 99nC | 50 | - |
 
 Stock is terrible for all Nexperia 40V LFPAK56 on LCSC. May need to source from DigiKey/Mouser for the 30x30 variant, or find Chinese equivalents in LFPAK56.
 
@@ -167,4 +167,4 @@ Stock is terrible for all Nexperia 40V LFPAK56 on LCSC. May need to source from 
 
 ---
 
-*Last updated: 2026-03-14. Stock numbers are approximate — verify on lcsc.com before ordering.*
+*Last updated: 2026-03-14. Stock numbers are approximate - verify on lcsc.com before ordering.*

@@ -23,3 +23,7 @@ gerbers/
 
 # Claude agent context (local only)
 CLAUDE.md
+.claude/
+
+# Local reference datasheets (kept on disk, not tracked)
+hardware/datasheets/
