@@ -39,7 +39,7 @@ Generated: 2026-03-17
 
 **Per-board BOM: €8.58**
 
-Note: U4 (4in1ESC module) is a schematic reference, not a purchasable part. Test points are bare pads.
+Note: U4 (`4in1ESC` module) is a schematic reference, not a purchasable part. Test points are bare pads.
 
 ---
 
