@@ -1,6 +1,6 @@
-# Pin-Compatible Alternatives: ESC Stage
+# Component Alternatives: ESC Stage
 
-Supply chain redundancy guide. **Historical snapshot (2026-03-14)**, baselined on the pre-refresh ESC BOM of the 20x20 source board (now [OpenESC-20x20](https://github.com/incutec-hw/OpenESC-20x20)): SP40N03GNJ FETs, U3/U7/U9/U11 gate-driver refdes. The committed design now uses **DOY180N03T** (C49441966, 30 V, PowerDI3333-8) FETs; current sourcing is in [SOURCING-2026-06.md](SOURCING-2026-06.md). The gate-driver pinout compatibility notes remain valid (NSG2065Q unchanged). Pin-compatibility claims refer to the pre-refresh layout.
+Supply chain redundancy guide, and the single home for ESC-stage alternative research in this repo. **Historical snapshot (2026-03-14, MCU/CSA/passive sections 2026-03-17)**, baselined on the pre-refresh ESC BOM of the 20x20 source board (now [OpenESC-20x20](https://github.com/incutec-hw/OpenESC-20x20)): SP40N03GNJ FETs, U3/U7/U9/U11 gate-driver refdes. The committed design now uses **DOY180N03T** (C49441966, 30 V, PowerDI3333-8) FETs; current stock, prices and risks are in [SOURCING-2026-06.md](SOURCING-2026-06.md), which supersedes every stock and price figure below. The gate-driver pinout compatibility notes remain valid (NSG2065Q unchanged). Pin-compatibility claims refer to the pre-refresh layout.
 
 ## Gate Drivers (QFN-24, 4x4mm)
 
@@ -87,10 +87,10 @@ Part at the time of this snapshot: **SP40N03GNJ** (C22466709), 40V, 75A, 2.9mΩ,
 - **36% lower total phase resistance** - ~5.8mΩ vs ~9.0mΩ including ~3.2mΩ copper (3mm wide × 10mm, 1oz)
 - **9× more expensive** - $0.90 vs $0.10 per FET, $21.60 vs $2.40 for all 24
 - **30V Vds** - max 7S LiPo (29.4V) vs 40V on SP40N03GNJ which handles 8S+ with margin. Limits battery voltage headroom and transient margin on 6S
-- **3.3x3.3mm package** - needs footprint update from current 3.0x3.0mm POWERPAK-1212-8
+- **3.3x3.3mm package** - was a footprint change from the 3.0x3.0mm POWERPAK-1212-8 used at the time of this snapshot
 - **Higher Qg** (67nC vs ~35nC) - more gate charge means slightly higher switching losses, partially offsets conduction gains at high PWM frequencies
 
-**Verdict:** Advertise as an optional premium build for users who want maximum efficiency on 3-6S and are willing to pay more. Not the default due to cost and reduced voltage headroom. Requires footprint change to 3.3x3.3mm PQFN-8.
+**Verdict:** Advertise as an optional premium build for users who want maximum efficiency on 3-6S and are willing to pay more. Not the default due to cost and reduced voltage headroom. Needed a footprint change to 3.3x3.3mm PQFN-8 at the time; the schematic has since moved to a 3.3x3.3mm land pattern anyway.
 
 ### Other 30V Low-RDS Alternatives (3.3x3.3mm DFN-8)
 
@@ -100,11 +100,11 @@ Part at the time of this snapshot: **SP40N03GNJ** (C22466709), 40V, 75A, 2.9mΩ,
 | **NCEP3065QU** | C502964 | Wuxi NCE | **1.9mΩ@10V** | 65A | 34.8nC | 2,356 | $0.40 |
 | **BSZ019N03LS** | C152374 | Infineon | 1.9mΩ@10V | 22A | - | 2,654 | $1.25 |
 
-All 30V parts share the same trade-off: lower RDS(on) but reduced voltage headroom (max 7S) and require 3.3x3.3mm footprint.
+All 30V parts share the same trade-off: lower RDS(on) but reduced voltage headroom (max 7S), and all use a 3.3x3.3mm footprint.
 
 ### Verify Footprint Fit
 
-The current footprint (POWERPAK-1212-8) is 3.0x3.0mm. All 3.3x3.3mm parts (BSZ, AON, FDMC8010DC, NCEP3065QU) need footprint verification - pad pitch and layout could differ slightly. **Check datasheets before assuming drop-in compatibility with 3.3mm parts.**
+At the time of this snapshot the footprint was POWERPAK-1212-8, 3.0x3.0mm, so every 3.3x3.3mm part listed above counted as a footprint change. The committed schematic has since moved to `Package_SON:Diodes_PowerDI3333-8` (3.3x3.3mm) for the DOY180N03T, though the committed PCB still places the 3.0x3.0mm pattern. Either way, pad pitch and layout differ between 3.3mm parts. **Check datasheets before assuming drop-in compatibility with 3.3mm parts.**
 
 ### Ohmic Loss Analysis (3mm trace width, 10mm trace length, 1oz copper, 80°C)
 
@@ -154,11 +154,53 @@ Stock is terrible for all Nexperia 40V LFPAK56 on LCSC. May need to source from 
 
 ---
 
+## ESC MCU and Current Sense Amp
+
+Carried over from the 2026-03-17 cost study of the same pre-refresh BOM. Stock and price figures are from that date; current figures are in [SOURCING-2026-06.md](SOURCING-2026-06.md).
+
+### MCU: AT32F421G8U7 - KEEP
+
+Cheapest AM32-compatible MCU in QFN-28 4x4mm at ~$0.475/unit at the time.
+- GD32E230G8U6TR ($0.448) has only 8KB SRAM, insufficient against the 16KB requirement
+- STM32G071G8U6 ($0.78) is 65% more expensive
+- No alternative is pin-compatible; switching requires a full board redesign
+
+### Current Sense Amp: INA186A3IDCKR - MONITOR
+
+Stock is the standing risk (74 units on LCSC at 2026-03-17, and still under 1k in the JLC library at 2026-06-12). No Chinese clones exist.
+- INA199A2DCKR (C131913): $0.248 (52% cheaper), same SC-70-6 footprint, 909 stock, bidirectional, zero-drift, but **26V common-mode limit**, tight for 6S at 25.2V with no transient margin
+- INA180A3IDBVR (C122882): $0.154 (70% cheaper), SOT-23-5 so a different footprint, unidirectional only, 4,875 stock
+- 3PEAK TP181A2-CR (C2902350): $0.10, SC-70-6, 36V CM, INA199 pinout, was OOS; monitor for restock
+- For V1: source INA186A3 via JLCPCB global sourcing. For V2: consider INA199A2 if the 26V common-mode limit is acceptable
+
+### Buck: LMR51420YDDCR family
+
+Applies to the 20x20 source board, not to the committed OpenAIO design. OpenAIO's instantiated bucks are two LMR51430YFDDCR on the FC power sheet; the LMR54406DBVR ESC buck sits in the un-instantiated `esc_main` sheet. Kept because the constraint still holds: at 36V input the SOT-23-6 options are thin.
+- LMR51420XDDCR (C5246146, 500kHz variant): pin-compatible, $0.82
+- LMR51420YFDDCR (C7296200, JLCPCB variant): pin-compatible, $0.72
+- AOZ1282CI (C111916): $0.22, 36V, but only 1.2A and a different pinout, so it needs PCB rework
+- AP63200 family: $0.20-0.41, 2A, but only 32V max, unsafe for 6S with transients
+
+### Passive Optimizations
+
+All 0201 parts are Extended; JLCPCB has no 0201 Basic parts. Drop-in swaps identified at the time, each worth verifying against the actual rail voltage first:
+
+| Swap | From -> To | Notes |
+|------|-----------|-------|
+| 100nF 0201 35V -> 6.3V | C181043 -> C76928 | Murata, safe for 3.3V/5V decoupling |
+| 22uF 0402 | C105226 -> C415703 | Murata, same voltage, 63% cheaper |
+| 22uF 0603 16V -> 6.3V | C2762594 -> C59461 | Samsung, Basic part. Verify voltage rail |
+| Shunt redesign | 0.2mOhm -> 2mOhm + INA186A1 | Requires a CSA gain change |
+
+Combined these were ~5% of that BOM, so they are a last-pass optimization, not a lever.
+
+---
+
 ## Design Changes for Universal Gate Driver Support
 
-**Current state:** Pins 5, 7, 8, 21 are NC with no copper on all 4 gate driver instances (U3, U7, U9, U11). VCC on +8V, COM/EP on GND.
+**State at the time of this snapshot:** Pins 5, 7, 8, 21 are NC with no copper on all 4 gate driver instances (U3, U7, U9, U11). VCC on +8V, COM/EP on GND.
 
-**Required changes: NONE.** The current PCB already supports all listed gate drivers:
+**Required changes: NONE.** That PCB already supported all listed gate drivers:
 - FD6288Q clones: Pins 5/7/8/21 = NC → no conflict
 - DRV8300: Pin 5 (MODE) floats low via internal pulldown → non-inverting (correct). Pin 21 (DT) floating → fixed 215ns deadtime (acceptable)
 - All signal pins (1-3, 9-20, 22-24) are functionally identical across all parts
@@ -167,4 +209,4 @@ Stock is terrible for all Nexperia 40V LFPAK56 on LCSC. May need to source from 
 
 ---
 
-*Last updated: 2026-03-14. Stock numbers are approximate - verify on lcsc.com before ordering.*
+*Research dated 2026-03-14 and 2026-03-17. Absorbed the MCU, current-sense-amp, buck and passive sections from the retired COST_ANALYSIS.md on 2026-08-06. Every stock number and price here is a snapshot: verify on lcsc.com before ordering, and check SOURCING-2026-06.md first.*

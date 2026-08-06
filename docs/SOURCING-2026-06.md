@@ -1,6 +1,6 @@
 # LCSC / JLCPCB Sourcing Snapshot: 2026-06-12
 
-JLC = JLCPCB assembly parts library stock; LCSC = retail warehouse. $@100 = LCSC USD unit price at 100-pc ladder. **All parts are Extended for JLCPCB assembly** (zero basic parts in the design). No formal EOL flags, but several parts are effectively unavailable.
+JLC = JLCPCB assembly parts library stock; LCSC = retail warehouse. $@100 = LCSC USD unit price at 100-pc ladder. The table covers the semiconductors and connectors only; **every part in it is Extended for JLCPCB assembly**. Passives are not surveyed here, and not all of them are Extended: four 0402 caps in the instantiated sheets are Basic parts, C15525 (10 uF), C23733 (4.7 uF), C307331 (100 nF) and C52923 (1 uF). No formal EOL flags, but several parts are effectively unavailable.
 
 ## Stock table
 
@@ -10,8 +10,8 @@ JLC = JLCPCB assembly parts library stock; LCSC = retail warehouse. $@100 = LCSC
 | C41414478 | NSG2065Q | gate driver ×4 | **365** | 4,373 | 0.278 | ⚠ JLC <1k |
 | C49441966 | DOY180N03T | ESC FET ×24 | **not in JLC lib** | 1,450 | 0.227 | ⚠⚠ consign or global-source; 1,450 pcs = 60 boards |
 | C2058245 | INA186A3IDCKR | CSA | **318** | 4,047 | 0.465 | ⚠ JLC <1k (known issue confirmed) |
-| C5219316 | LMR54406DBVR | ESC buck | 5,014 | 57,377 | 0.230 | OK |
-| C2848334 | TLV76733DRVR | ESC LDO | 8,666 | 4,000 | 0.180 | OK |
+| C5219316 | LMR54406DBVR | ESC buck | 5,014 | 57,377 | 0.230 | Not in the instantiated design, see note below |
+| C2848334 | TLV76733DRVR | ESC LDO | 8,666 | 4,000 | 0.180 | Not in the instantiated design, see note below |
 | C5267406 | LSM6DSV16XTR | IMU | 2,883 | **10** | 3.154 | ⚠⚠ LCSC retail empty; JLC ok for now |
 | C5219261 | LMR51430YFDDCR | FC buck ×2 | 1,187 | 7,921 | 0.513 | OK (JLC marginal) |
 | C3235557 | TPS2116DRLR | power mux | 11,017 | 18,448 | 0.268 | OK |
@@ -22,13 +22,15 @@ JLC = JLCPCB assembly parts library stock; LCSC = retail warehouse. $@100 = LCSC
 | C2673087 | SN74LVC1G3157DTBR | OSD switch | 2,868 | 2,565 | 0.097 | OK |
 | C498185 | TF-021B-H265 | microSD slot | 9,124 | 32,596 | 0.179 | OK |
 | C41378174 | RP2354A | FC MCU (QFN-60) | **184** | 3,674 | 1.269 | ⚠ JLC <1k; LCSC retail fine |
-| C2858491 | ESP32-C3FH4 | RX MCU | 3,520 | 16,528 | 1.569 | OK |
+| C2858491 | ESP32-C3FH4 | RX MCU | 3,520 | 16,528 | 1.569 | Stock OK, but the ELRS sheet still carries the generic ESP32-C3 symbol with no LCSC field; fix before export |
 | C2151551 | SX1281IMLTRT | RX radio | 3,470 | **4** | 2.255 | ⚠ LCSC retail empty; JLC ok |
 | C2861882 | TLV75533PDQNR | RX LDO | **103** | 1,400 | 0.186 | ⚠ JLC <1k |
 | C2651081 | 2450FM07D0034T | RX BPF | 3,798 | **0** | 0.253 | ⚠ LCSC retail 0; JLC ok |
 | C89334 | 2450AT18A100E | Wi-Fi antenna | **729** | 5,235 | 0.301 | ⚠ JLC <1k |
 | C160405 | SM06B-SRSS-TB | JST SH 6P | 4,840 | 65,780 | 0.242 | OK |
 | C160407 | SM08B-SRSS-TB | JST SH 8P | 7,624 | 265,850 | 0.255 | OK |
+
+The ESC buck and ESC LDO live in `esc_main.kicad_sch`, which the root sheet does not instantiate, so neither reaches an exported BOM as the design stands. The same applies to the SMF24A-T13 input TVS, which is why it is not tracked above. Rows kept because the parts return the moment that stage is wired into the root sheet. See `hardware/docs/DESIGN.md`.
 
 Whoop-specific parts (OpenAIO-Whoop): see that repo's `docs/ESC_DESIGN.md`: headline risks there are AGM310MAP (515 pcs total), BY25Q64ESCIG (1 pc, swap part), EFM8BB51F16G (not in JLC lib, 17k at LCSC retail).
 
