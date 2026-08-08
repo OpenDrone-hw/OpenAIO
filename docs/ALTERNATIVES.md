@@ -1,6 +1,6 @@
 # Component Alternatives: ESC Stage
 
-Supply chain redundancy guide, and the single home for ESC-stage alternative research in this repo. **Historical snapshot (2026-03-14, MCU/CSA/passive sections 2026-03-17)**, baselined on the pre-refresh ESC BOM of the 20x20 source board (now [OpenESC-20x20](https://github.com/incutec-hw/OpenESC-20x20)): SP40N03GNJ FETs, U3/U7/U9/U11 gate-driver refdes. The committed design now uses **DOY180N03T** (C49441966, 30 V, PowerDI3333-8) FETs; current stock, prices and risks are in [SOURCING-2026-06.md](SOURCING-2026-06.md), which supersedes every stock and price figure below. The gate-driver pinout compatibility notes remain valid (NSG2065Q unchanged). Pin-compatibility claims refer to the pre-refresh layout.
+Supply chain redundancy guide, and the single home for ESC-stage alternative research in this repo. **Historical snapshot (2026-03-14, MCU/CSA/passive sections 2026-03-17)**, baselined on the pre-refresh ESC BOM of the 20x20 source board (now [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20)): SP40N03GNJ FETs, U3/U7/U9/U11 gate-driver refdes. The committed design now uses **DOY180N03T** (C49441966, 30 V, PowerDI3333-8) FETs; current stock, prices and risks are in [SOURCING-2026-06.md](SOURCING-2026-06.md), which supersedes every stock and price figure below. The gate-driver pinout compatibility notes remain valid (NSG2065Q unchanged). Pin-compatibility claims refer to the pre-refresh layout.
 
 ## Gate Drivers (QFN-24, 4x4mm)
 

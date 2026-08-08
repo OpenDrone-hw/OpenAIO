@@ -44,7 +44,7 @@ The project uses per-stage local libraries plus the shared `Incutec` library fro
 ## Build and export
 
 ```
-git clone --recursive https://github.com/incutec-hw/OpenAIO.git
+git clone --recursive https://github.com/OpenDrone-hw/OpenAIO.git
 ```
 
 Open `hardware/OpenAIO.kicad_pro` in KiCad 10. Production exports (gerbers, BOM, CPL) are generated with the [KiCad Fabrication Toolkit](https://github.com/bennymeg/Fabrication-Toolkit) plugin into `hardware/production/` (gitignored); none exist yet for this design. Headless checks use `kicad-cli`:
