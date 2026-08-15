@@ -5133,7 +5133,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0207287f-a170-402e-9442-21b3044af211")
-		(property "Reference" "R30"
+		(property "Reference" "R69"
 			(at 234.95 93.1978 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5291,6 +5291,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R69")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R69")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R69")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R69")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -5305,7 +5323,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03a9c797-51ec-4a52-a32e-84c5fc227279")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR093"
 			(at 72.39 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -5381,6 +5399,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR093")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR093")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR093")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR093")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -5394,7 +5430,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "16ecf559-69f0-4983-8452-63808a379217")
-		(property "Reference" "TP1"
+		(property "Reference" "TP7"
 			(at 25.146 74.422 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5469,6 +5505,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "TP7")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "TP7")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "TP7")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -5483,7 +5537,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1b088461-2863-4244-b0f0-8cd81dc2f3c1")
-		(property "Reference" "#PWR045"
+		(property "Reference" "#PWR0105"
 			(at 254 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -5559,6 +5613,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0105")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0105")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0105")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -5573,7 +5645,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20ede2b2-d3bc-42b3-baca-562998e89377")
-		(property "Reference" "R29"
+		(property "Reference" "R68"
 			(at 234.95 111.7599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5732,6 +5804,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R68")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R68")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R68")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R68")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -5745,7 +5835,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "26ebf752-bc8e-4e2a-a796-cb73df12a260")
-		(property "Reference" "C50"
+		(property "Reference" "C80"
 			(at 41.656 69.596 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5904,6 +5994,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "C80")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "C80")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "C80")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "C80")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -5918,7 +6026,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "27b20d01-8951-4b8a-9fbb-5f65eb3a72cb")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR090"
 			(at 39.37 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -5994,6 +6102,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR090")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR090")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR090")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR090")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6008,7 +6134,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2963aff8-312e-4907-9e61-11a3759d1865")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR095"
 			(at 99.06 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -6084,6 +6210,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR095")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR095")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR095")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR095")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6097,7 +6241,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "308997bb-528a-4cea-b845-511c6dbad964")
-		(property "Reference" "R16"
+		(property "Reference" "R55"
 			(at 29.21 142.494 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6252,6 +6396,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R55")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R55")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R55")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R55")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6265,7 +6427,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "30a756ea-91b9-430d-a47d-8b27cd18f4da")
-		(property "Reference" "C32"
+		(property "Reference" "C35"
 			(at 159.004 61.976 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6424,6 +6586,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "C35")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "C35")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "C35")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "C35")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6438,7 +6618,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "37883ce9-3ba2-4263-a26a-c25b41383d43")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR096"
 			(at 99.06 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -6514,6 +6694,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR096")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR096")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR096")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR096")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6528,7 +6726,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "392d35f8-1fb3-4b69-b279-a01430056712")
-		(property "Reference" "U3"
+		(property "Reference" "U11"
 			(at 133.35 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6754,6 +6952,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "U11")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "U11")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "U11")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "U11")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6768,7 +6984,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3cd7b13d-63b0-42f4-baed-fbf4c1e83e30")
-		(property "Reference" "#PWR043"
+		(property "Reference" "#PWR0103"
 			(at 205.74 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -6844,6 +7060,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0103")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0103")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0103")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0103")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6858,7 +7092,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3d572661-719d-4838-b033-bd66f97a6615")
-		(property "Reference" "R25"
+		(property "Reference" "R64"
 			(at 210.82 90.1699 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7017,6 +7251,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R64")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R64")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R64")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R64")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7030,7 +7282,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "43ce57ca-c919-43f7-9b19-8f4cd4fa9045")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR086"
 			(at 62.23 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -7106,6 +7358,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR086")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR086")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR086")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR086")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7120,7 +7390,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45a65dcf-d4e0-4466-b87e-77261c8d9a31")
-		(property "Reference" "R27"
+		(property "Reference" "R66"
 			(at 210.82 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7278,6 +7548,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R66")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R66")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R66")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R66")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7291,7 +7579,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "48da86fc-a9f7-47d5-94eb-29b25f7b494a")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR097"
 			(at 116.84 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -7367,6 +7655,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR097")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR097")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR097")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR097")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7380,7 +7686,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "49a04e93-8604-4afb-b9c4-740388e8d1e6")
-		(property "Reference" "C49"
+		(property "Reference" "C79"
 			(at 80.264 35.814 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7539,6 +7845,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "C79")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "C79")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "C79")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "C79")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7553,7 +7877,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4b80351d-58f5-4946-ab60-c5514cb8ebb2")
-		(property "Reference" "R19"
+		(property "Reference" "R58"
 			(at 49.53 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7711,6 +8035,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R58")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R58")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R58")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R58")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7725,7 +8067,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4dcb51a7-8f21-4346-bfe7-f0ca37ca8014")
-		(property "Reference" "R33"
+		(property "Reference" "R72"
 			(at 259.08 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7883,6 +8225,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R72")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R72")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R72")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R72")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7896,7 +8256,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4ffb9b21-0044-4ca9-a90f-69e20c34aff9")
-		(property "Reference" "C48"
+		(property "Reference" "C78"
 			(at 58.166 39.116 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8055,6 +8415,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "C78")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "C78")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "C78")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "C78")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8069,7 +8447,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "50c60d97-4209-47ee-a259-e385d2b100a6")
-		(property "Reference" "R26"
+		(property "Reference" "R65"
 			(at 210.82 111.7599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8228,6 +8606,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R65")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R65")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R65")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R65")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8242,7 +8638,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5d777ac9-ee6a-4111-baf4-d69234a742df")
-		(property "Reference" "R31"
+		(property "Reference" "R70"
 			(at 256.54 90.1699 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8401,6 +8797,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R70")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R70")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R70")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R70")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8414,7 +8828,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5eb14246-b401-47f9-959e-6f096790a60d")
-		(property "Reference" "C53"
+		(property "Reference" "C83"
 			(at 148.844 59.436 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8573,6 +8987,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "C83")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "C83")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "C83")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "C83")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8587,7 +9019,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64bce399-bf33-46c3-89eb-ab22631eb2be")
-		(property "Reference" "R28"
+		(property "Reference" "R67"
 			(at 232.41 90.1699 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8746,6 +9178,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R67")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R67")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R67")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R67")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8760,7 +9210,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "679ba691-79a2-40fb-895f-c76dc4fb8f36")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR087"
 			(at 29.21 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8836,6 +9286,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR087")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR087")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR087")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR087")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8849,7 +9317,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6db4f592-2c0f-45a7-adb9-5ce48ca48a8d")
-		(property "Reference" "R22"
+		(property "Reference" "R61"
 			(at 88.9 157.734 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9004,6 +9472,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R61")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R61")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R61")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R61")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9017,7 +9503,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6e92df75-7edf-4574-97f6-e0e9b80bcd18")
-		(property "Reference" "C57"
+		(property "Reference" "C88"
 			(at 183.896 28.956 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9176,6 +9662,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "C88")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "C88")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "C88")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "C88")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9189,7 +9693,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "718f5ec9-d88b-4b82-b61e-f023eec71dc8")
-		(property "Reference" "U2"
+		(property "Reference" "U10"
 			(at 71.882 73.152 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9429,6 +9933,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "U10")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "U10")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "U10")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "U10")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9442,7 +9964,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "76d1d8ca-f263-4744-b56b-6b61bbd29994")
-		(property "Reference" "R24"
+		(property "Reference" "R63"
 			(at 149.86 156.464 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9597,6 +10119,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R63")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R63")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R63")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R63")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9611,7 +10151,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7a614b05-edaf-45dd-b454-62f750565c5a")
-		(property "Reference" "Q3"
+		(property "Reference" "Q21"
 			(at 102.87 144.7799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9771,6 +10311,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "Q21")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "Q21")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "Q21")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "Q21")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9784,7 +10342,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8bc6297c-b0cc-476c-b5e4-3b63308d9121")
-		(property "Reference" "R23"
+		(property "Reference" "R62"
 			(at 149.86 141.224 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9939,6 +10497,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R62")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R62")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R62")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R62")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9952,7 +10528,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8e4076ab-c104-40fd-aae4-f8fb13c1588f")
-		(property "Reference" "R21"
+		(property "Reference" "R60"
 			(at 88.9 142.494 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10107,6 +10683,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R60")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R60")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R60")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R60")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10121,7 +10715,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "91b34538-5e75-41b4-af67-1cffacb8e83b")
-		(property "Reference" "#PWR039"
+		(property "Reference" "#PWR059"
 			(at 187.96 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -10197,6 +10791,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR059")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR059")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR059")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR059")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10211,7 +10823,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b65e2be7-47e1-4bb9-82c6-27d434f8d677")
-		(property "Reference" "Q2"
+		(property "Reference" "Q20"
 			(at 43.18 160.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10371,6 +10983,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "Q20")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "Q20")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "Q20")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "Q20")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10385,7 +11015,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b7f2632a-37c3-45ff-83c3-f9088547e792")
-		(property "Reference" "R32"
+		(property "Reference" "R71"
 			(at 259.08 111.7599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10544,6 +11174,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R71")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R71")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R71")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R71")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10558,7 +11206,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b81d2055-72dd-4f80-8595-bad8791ff875")
-		(property "Reference" "Q5"
+		(property "Reference" "Q23"
 			(at 163.83 143.5099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10718,6 +11366,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "Q23")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "Q23")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "Q23")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "Q23")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10732,7 +11398,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bced1852-aff7-4a36-8611-bd5bceac7e1d")
-		(property "Reference" "#PWR044"
+		(property "Reference" "#PWR0104"
 			(at 229.87 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -10808,6 +11474,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0104")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10821,7 +11505,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ce2b3565-8c3a-47a6-a3df-025cfef0ee9f")
-		(property "Reference" "R17"
+		(property "Reference" "R56"
 			(at 29.21 157.734 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10976,6 +11660,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R56")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R56")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R56")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R56")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10990,7 +11692,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ced00908-aa48-4a1c-9c42-f75eea75c367")
-		(property "Reference" "#PWR0111"
+		(property "Reference" "#PWR0114"
 			(at 92.71 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -11066,6 +11768,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0114")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0114")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0114")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0114")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11079,7 +11799,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cf1a5f0c-b6cb-4e5e-b1be-36fb15edf64d")
-		(property "Reference" "#PWR042"
+		(property "Reference" "#PWR0102"
 			(at 187.96 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -11155,6 +11875,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0102")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0102")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0102")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0102")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11169,7 +11907,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d09ea843-e489-4c7a-b5ef-1840fa329d59")
-		(property "Reference" "#PWR078"
+		(property "Reference" "#PWR0101"
 			(at 143.51 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -11245,6 +11983,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0101")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11258,7 +12014,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d6c613f0-b29a-453b-88ee-8c6b8443abd9")
-		(property "Reference" "C36"
+		(property "Reference" "C39"
 			(at 169.164 64.516 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11417,6 +12173,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "C39")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "C39")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "C39")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "C39")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11431,7 +12205,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d765bdf0-71c7-42f4-a633-7eb74ba7ddd2")
-		(property "Reference" "R74"
+		(property "Reference" "R77"
 			(at 71.12 26.67 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11586,6 +12360,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R77")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R77")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R77")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R77")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11600,7 +12392,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e1c307e0-da1e-4199-993c-565dacc1988b")
-		(property "Reference" "Q1"
+		(property "Reference" "Q19"
 			(at 43.18 144.7799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11760,6 +12552,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "Q19")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "Q19")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "Q19")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "Q19")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11774,7 +12584,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec7f2106-44a9-41c0-9d71-940acdd19990")
-		(property "Reference" "R20"
+		(property "Reference" "R59"
 			(at 49.7944 85.09 90)
 			(hide yes)
 			(show_name no)
@@ -11934,6 +12744,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R59")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R59")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R59")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R59")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11947,7 +12775,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "efc6443a-6623-4556-a8ae-15d833f084fe")
-		(property "Reference" "#PWR038"
+		(property "Reference" "#PWR098"
 			(at 116.84 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -12023,6 +12851,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR098")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR098")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR098")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR098")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12036,7 +12882,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f00611af-956f-4432-8234-bac8d0476ced")
-		(property "Reference" "TP4"
+		(property "Reference" "TP8"
 			(at 25.146 76.708 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12111,6 +12957,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "TP8")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "TP8")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "TP8")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12125,7 +12989,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f3d0f2cb-b08e-4f62-8fe2-1bea57687fc8")
-		(property "Reference" "#PWR040"
+		(property "Reference" "#PWR0100"
 			(at 160.02 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -12201,6 +13065,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0100")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0100")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0100")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0100")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12215,7 +13097,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7a7859e-b3c9-4b3f-bed4-9b63cee0a8fc")
-		(property "Reference" "R18"
+		(property "Reference" "R57"
 			(at 34.29 57.15 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12373,6 +13255,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "R57")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "R57")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "R57")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "R57")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12386,7 +13286,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f82b9073-21b4-45e2-b111-0e79f084e605")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR091"
 			(at 38.1 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -12462,6 +13362,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR091")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR091")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR091")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR091")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12475,7 +13393,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f9be6bf0-40d7-45eb-9105-a374905585c8")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR089"
 			(at 83.82 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -12551,6 +13469,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR089")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR089")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR089")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR089")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12564,7 +13500,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fbabe502-72f3-40da-80af-b353f6f1a94a")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR092"
 			(at 45.72 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -12640,6 +13576,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR092")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR092")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR092")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR092")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12654,7 +13608,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "feada041-3f26-4ed6-b8f5-d6b054d8a23f")
-		(property "Reference" "Q4"
+		(property "Reference" "Q22"
 			(at 102.87 160.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12814,6 +13768,24 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "Q22")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "Q22")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "Q22")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "Q22")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12828,7 +13800,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fef311bf-17a1-48c9-b5cb-13c108cf7b12")
-		(property "Reference" "Q6"
+		(property "Reference" "Q24"
 			(at 163.83 158.7499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12985,6 +13957,24 @@
 				)
 				(path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1"
 					(reference "Q6")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "Q24")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "Q24")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "Q24")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "Q24")
 					(unit 1)
 				)
 			)

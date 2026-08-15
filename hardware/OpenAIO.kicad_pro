@@ -716,7 +716,7 @@
         "uuid": "fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
       }
     ],
-    "used_designators": "",
+    "used_designators": "X1,U1-2,Q1-2,C1-17,D1,L1,USB1,R1-16",
     "variants": []
   },
   "sheets": [
@@ -727,50 +727,6 @@
     [
       "01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2",
       "RP2354A"
-    ],
-    [
-      "067dfe4f-0feb-4fee-b449-2d51932eecf1",
-      "IMU"
-    ],
-    [
-      "6891e3d6-67ec-46df-a6dd-bbed7a5ef668",
-      "Pads"
-    ],
-    [
-      "6e8501c6-71d5-4860-9b96-3d3562c097af",
-      "RX"
-    ],
-    [
-      "7eb6278f-5b99-473d-b708-4fb1f437cf9b",
-      "OSD"
-    ],
-    [
-      "92d80a6e-4bd9-4df0-920d-da7b8cdc2925",
-      "Blackbox"
-    ],
-    [
-      "cdf44e0a-3675-4533-b9f5-78ffc381d2a5",
-      "Power"
-    ],
-    [
-      "280e1a5f-ee27-4564-afe5-6cb1b046a945",
-      "ESC"
-    ],
-    [
-      "0f1ac7ef-71be-4cf4-81ac-90268323e1b3",
-      "ESC4"
-    ],
-    [
-      "6061fcc0-8b26-44e0-b078-a202b47fdd16",
-      "ESC3"
-    ],
-    [
-      "3fa70197-fd52-4922-8368-62c7feb267b9",
-      "ESC2"
-    ],
-    [
-      "f870c78f-43b6-4f66-afe4-21d85c4907b1",
-      "ESC1"
     ]
   ],
   "text_variables": {},

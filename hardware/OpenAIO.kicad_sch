@@ -1,1 +1,1230 @@
-(kicad_sch (version 20260306) (generator "eeschema") (generator_version "10.0") (uuid "2c3a7206-1e66-4d43-a02f-491225e20dd6") (paper "A4") (lib_symbols) (sheet (at 114.3 66.04) (size 66.675 89.535) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2") (property "Sheetname" "RP2354A" (at 114.3 65.3284 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "fc_rp2350a.kicad_sch" (at 114.3 156.1596 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "10V_ENABLE" output (at 180.975 76.2 0) (uuid "0af19949-4364-4afc-bf89-32bd1e3e2455") (effects (font (size 1.27 1.27)) (justify right))) (pin "BUZZER-" output (at 180.975 78.74 0) (uuid "0ab1fb39-0c67-4be2-8d75-cc6888424fc6") (effects (font (size 1.27 1.27)) (justify right))) (pin "ESC_CURRENT" input (at 114.3 78.74 180) (uuid "fdf2c6c9-81e8-4b9f-a240-34ded2f0367f") (effects (font (size 1.27 1.27)) (justify left))) (pin "FLASH_CS" output (at 180.975 92.71 0) (uuid "d8477ac5-a292-4390-9908-4bd86590195a") (effects (font (size 1.27 1.27)) (justify right))) (pin "GYRO_CS" output (at 180.975 104.14 0) (uuid "3cd3e1fd-c3e7-4edd-913f-bc7bc4698389") (effects (font (size 1.27 1.27)) (justify right))) (pin "GYRO_INT" input (at 180.975 106.68 0) (uuid "9b329549-01ab-46c9-8e2d-4c2a5494a2a7") (effects (font (size 1.27 1.27)) (justify right))) (pin "I2C0{SCL,SDA}" bidirectional (at 114.3 96.52 180) (uuid "4b620979-9f6e-4889-854b-cd1842eb2a30") (effects (font (size 1.27 1.27)) (justify left))) (pin "LED_STRIP" output (at 180.975 69.85 0) (uuid "f271491f-507a-4548-9b02-7df4dc05c3a0") (effects (font (size 1.27 1.27)) (justify right))) (pin "MOTOR1" bidirectional (at 142.24 66.04 90) (uuid "bc0e5751-d0dc-4082-bce0-0f9b8591991e") (effects (font (size 1.27 1.27)) (justify right))) (pin "MOTOR2" bidirectional (at 144.78 66.04 90) (uuid "3962b95f-f600-49cc-a393-1ac31598fccd") (effects (font (size 1.27 1.27)) (justify right))) (pin "MOTOR3" bidirectional (at 147.32 66.04 90) (uuid "df7a5f3a-05f5-4567-bba4-59cf3b76a330") (effects (font (size 1.27 1.27)) (justify right))) (pin "MOTOR4" bidirectional (at 149.86 66.04 90) (uuid "623f6022-763a-41c3-88f4-60849a35b835") (effects (font (size 1.27 1.27)) (justify right))) (pin "OSD_EN" output (at 143.51 155.575 270) (uuid "684a4697-2719-42fe-a61c-e74988a39069") (effects (font (size 1.27 1.27)) (justify left))) (pin "OSD_SYNC" input (at 146.05 155.575 270) (uuid "38ecbee8-b7f2-4c9f-8cd2-49e4e4857f80") (effects (font (size 1.27 1.27)) (justify left))) (pin "OSD_W" output (at 148.59 155.575 270) (uuid "17136ab4-f517-48ac-8e03-717bee090a11") (effects (font (size 1.27 1.27)) (justify left))) (pin "PIOUART0_RX" input (at 114.3 109.22 180) (uuid "550c1307-ccb2-44e2-9a8b-b65f7ff0af0f") (effects (font (size 1.27 1.27)) (justify left))) (pin "PIOUART0_TX" output (at 114.3 106.68 180) (uuid "97559d3e-bd54-4cec-a385-7b389e6903f8") (effects (font (size 1.27 1.27)) (justify left))) (pin "SPI0{SCK,MOSI,MISO}" bidirectional (at 180.975 101.6 0) (uuid "77a300e6-986b-4d30-bfa1-6e5eb125a8f5") (effects (font (size 1.27 1.27)) (justify right))) (pin "SPI1{SCK,MOSI,MISO}" bidirectional (at 180.975 90.17 0) (uuid "eb4dbba9-5100-478d-b40e-50bca7a9e66a") (effects (font (size 1.27 1.27)) (justify right))) (pin "UART0_RX" input (at 114.3 91.44 180) (uuid "bb92419b-ee20-411b-a83c-4ed8a80aa4ea") (effects (font (size 1.27 1.27)) (justify left))) (pin "UART0_TX" output (at 114.3 88.9 180) (uuid "30454e11-cddb-44fd-bcf9-d059a91a6e15") (effects (font (size 1.27 1.27)) (justify left))) (pin "UART1_RX" input (at 114.3 85.09 180) (uuid "aa59e33a-dea8-4e3b-8030-7d18532dbdad") (effects (font (size 1.27 1.27)) (justify left))) (pin "UART1_TX" output (at 114.3 82.55 180) (uuid "bfa1fbe5-8dda-4f7a-9911-2e65e35226aa") (effects (font (size 1.27 1.27)) (justify left))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "2"))))) (sheet (at 57.15 55.88) (size 40.64 25.4) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "067dfe4f-0feb-4fee-b449-2d51932eecf1") (property "Sheetname" "IMU" (at 57.15 55.1684 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "fc_imu.kicad_sch" (at 57.15 81.8646 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "CLKIN" input (at 97.79 68.58 0) (uuid "5d25de24-099f-4f54-8dd4-191df735e758") (effects (font (size 1.27 1.27)) (justify right))) (pin "CS" input (at 97.79 71.12 0) (uuid "a53d67c8-fbcf-4c8a-876c-98119a949afb") (effects (font (size 1.27 1.27)) (justify right))) (pin "GYRO_INT" output (at 97.79 73.66 0) (uuid "820e655f-5da4-4dda-a21a-dbd809500594") (effects (font (size 1.27 1.27)) (justify right))) (pin "SPI1{SCK,MOSI,MISO}" bidirectional (at 97.79 76.2 0) (uuid "ba199d7a-a52b-4c38-bb0a-6c43ec2a8574") (effects (font (size 1.27 1.27)) (justify right))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "3"))))) (sheet (at 228.6 20.32) (size 40.64 25.4) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "6891e3d6-67ec-46df-a6dd-bbed7a5ef668") (property "Sheetname" "Pads" (at 228.6 19.6084 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "fc_pads.kicad_sch" (at 228.6 46.3046 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "ADC2" output (at 228.6 27.94 180) (uuid "f6a8adce-b13c-4771-b9ae-9518a9537116") (effects (font (size 1.27 1.27)) (justify left))) (pin "BUZZER-" input (at 228.6 30.48 180) (uuid "d63e7049-48a1-48bf-b5ac-8c5355dacb7d") (effects (font (size 1.27 1.27)) (justify left))) (pin "CAMERA" output (at 228.6 33.02 180) (uuid "780f0e42-951b-436b-baac-307ec1ac7c53") (effects (font (size 1.27 1.27)) (justify left))) (pin "CURRENT" output (at 228.6 35.56 180) (uuid "af163a95-869c-42ed-b5c2-6c671b5aba27") (effects (font (size 1.27 1.27)) (justify left))) (pin "I2C0{SCL,SDA}" bidirectional (at 228.6 38.1 180) (uuid "de6ceb4a-e4b8-4763-8e58-3a838b90844d") (effects (font (size 1.27 1.27)) (justify left))) (pin "LED_STRIP" input (at 228.6 40.64 180) (uuid "d40dc155-61b6-4d96-952e-a169ad8a4e67") (effects (font (size 1.27 1.27)) (justify left))) (pin "M1" bidirectional (at 269.24 26.67 0) (uuid "c6c6ca01-34ba-4d42-bffb-a88c2dc5bcd1") (effects (font (size 1.27 1.27)) (justify right))) (pin "M2" bidirectional (at 269.24 29.21 0) (uuid "38cb39ac-69b9-40fa-ba4e-c1a76370270b") (effects (font (size 1.27 1.27)) (justify right))) (pin "M3" bidirectional (at 269.24 31.75 0) (uuid "8d300e1a-f21e-40b0-bd9a-5cca50e796ac") (effects (font (size 1.27 1.27)) (justify right))) (pin "M4" bidirectional (at 269.24 34.29 0) (uuid "cb66093f-eed0-447f-b24d-3d2ed170c480") (effects (font (size 1.27 1.27)) (justify right))) (pin "PIOUART0_RX" output (at 251.46 45.72 270) (uuid "3dcbc0c7-3f91-49ce-b9b4-f1ae759cd611") (effects (font (size 1.27 1.27)) (justify left))) (pin "PIOUART0_TX" input (at 254 45.72 270) (uuid "f6fe79ab-2c00-46d3-a3c2-11d5b24ea341") (effects (font (size 1.27 1.27)) (justify left))) (pin "PIOUART1_RX" output (at 256.54 45.72 270) (uuid "b8f329b4-3a79-4e7a-896f-02f656b1a664") (effects (font (size 1.27 1.27)) (justify left))) (pin "PIOUART1_TX" input (at 259.08 45.72 270) (uuid "298f3320-32f8-4c99-a636-bdd50fc01e30") (effects (font (size 1.27 1.27)) (justify left))) (pin "RSSI" output (at 251.46 20.32 90) (uuid "b7074b02-bf9a-4a4e-a4a7-8189355558ce") (effects (font (size 1.27 1.27)) (justify right))) (pin "UART0_RX" output (at 254 20.32 90) (uuid "2c1e524a-421c-4660-82df-773ed029b16d") (effects (font (size 1.27 1.27)) (justify right))) (pin "UART0_TX" input (at 256.54 20.32 90) (uuid "2a63c043-4df6-47bf-a295-08a363555969") (effects (font (size 1.27 1.27)) (justify right))) (pin "UART1_RX" output (at 259.08 20.32 90) (uuid "00202cba-edc7-4fa4-8b90-b57368255fcf") (effects (font (size 1.27 1.27)) (justify right))) (pin "UART1_TX" input (at 261.62 20.32 90) (uuid "f267c2f3-9ca5-4da1-a734-761183e5b15e") (effects (font (size 1.27 1.27)) (justify right))) (pin "VTX" input (at 241.3 20.32 90) (uuid "f429efb9-9c3b-4760-8a11-26bd91f0a02f") (effects (font (size 1.27 1.27)) (justify right))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "4"))))) (sheet (at 57.785 88.9) (size 40.64 25.4) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "6e8501c6-71d5-4860-9b96-3d3562c097af") (property "Sheetname" "RX" (at 57.785 88.1884 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "rx_esp32c3_sx1281.kicad_sch" (at 57.785 114.8846 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "ELRS_RX" output (at 98.425 100.965 0) (uuid "b4fb0667-48a0-4926-9e09-0e0c2e5c3714") (effects (font (size 1.27 1.27)) (justify right))) (pin "ELRS_TX" input (at 98.425 98.425 0) (uuid "dc94778d-13c5-4b61-8f2f-acd66e9e8e78") (effects (font (size 1.27 1.27)) (justify right))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "5"))))) (sheet (at 127 20.32) (size 40.64 25.4) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "7eb6278f-5b99-473d-b708-4fb1f437cf9b") (property "Sheetname" "OSD" (at 127 19.6084 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "fc_osd.kicad_sch" (at 127 46.3046 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "OSD_EN" input (at 127 33.02 180) (uuid "a6712f43-d5d5-4ea3-9996-1ed88613f70a") (effects (font (size 1.27 1.27)) (justify left))) (pin "OSD_SYNC" output (at 127 35.56 180) (uuid "03736da5-b1d2-4b40-a632-2bffd19721ad") (effects (font (size 1.27 1.27)) (justify left))) (pin "OSD_W" input (at 127 38.1 180) (uuid "f8f11cb9-c4f4-4395-8bcc-3ca02cb2281f") (effects (font (size 1.27 1.27)) (justify left))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "6"))))) (sheet (at 177.8 20.32) (size 40.64 25.4) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "92d80a6e-4bd9-4df0-920d-da7b8cdc2925") (property "Sheetname" "Blackbox" (at 177.8 19.6084 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "fc_blackbox.kicad_sch" (at 177.8 46.3046 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "FLASH_CS" input (at 177.8 31.75 180) (uuid "0d0f2c6d-7164-4c87-882a-e841d2fedd02") (effects (font (size 1.27 1.27)) (justify left))) (pin "SPI0{SCK,MOSI,MISO}" bidirectional (at 177.8 34.29 180) (uuid "3709d325-09fb-47a0-ba93-95e20335bdb4") (effects (font (size 1.27 1.27)) (justify left))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "7"))))) (sheet (at 25.4 20.32) (size 40.64 25.4) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "cdf44e0a-3675-4533-b9f5-78ffc381d2a5") (property "Sheetname" "Power" (at 25.4 19.6084 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "fc_power.kicad_sch" (at 25.4 46.3046 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "10V_ENABLE" input (at 25.4 33.02 180) (uuid "42e863e6-8da5-457c-9078-c4db3d80d410") (effects (font (size 1.27 1.27)) (justify left))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "8"))))) (sheet (at 25.4 127.0) (size 40.64 25.4) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "ac4075e1-668f-423c-9250-a2f59aaf121c") (property "Sheetname" "ESC1" (at 25.4 126.2884 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "esc_channel.kicad_sch" (at 25.4 152.9846 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "CLKIN" input (at 97.79 68.58 0) (uuid "5d25de24-099f-4f54-8dd4-191df735e758") (effects (font (size 1.27 1.27)) (justify right))) (pin "CS" input (at 97.79 71.12 0) (uuid "a53d67c8-fbcf-4c8a-876c-98119a949afb") (effects (font (size 1.27 1.27)) (justify right))) (pin "GYRO_INT" output (at 97.79 73.66 0) (uuid "820e655f-5da4-4dda-a21a-dbd809500594") (effects (font (size 1.27 1.27)) (justify right))) (pin "SPI1{SCK,MOSI,MISO}" bidirectional (at 97.79 76.2 0) (uuid "ba199d7a-a52b-4c38-bb0a-6c43ec2a8574") (effects (font (size 1.27 1.27)) (justify right))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "9"))))) (sheet (at 76.2 127.0) (size 40.64 25.4) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "7fae1aef-7561-4b00-abc3-f59b6ed8b176") (property "Sheetname" "ESC2" (at 76.2 126.2884 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "esc_channel.kicad_sch" (at 76.2 152.9846 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "CLKIN" input (at 97.79 68.58 0) (uuid "5d25de24-099f-4f54-8dd4-191df735e758") (effects (font (size 1.27 1.27)) (justify right))) (pin "CS" input (at 97.79 71.12 0) (uuid "a53d67c8-fbcf-4c8a-876c-98119a949afb") (effects (font (size 1.27 1.27)) (justify right))) (pin "GYRO_INT" output (at 97.79 73.66 0) (uuid "820e655f-5da4-4dda-a21a-dbd809500594") (effects (font (size 1.27 1.27)) (justify right))) (pin "SPI1{SCK,MOSI,MISO}" bidirectional (at 97.79 76.2 0) (uuid "ba199d7a-a52b-4c38-bb0a-6c43ec2a8574") (effects (font (size 1.27 1.27)) (justify right))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "10"))))) (sheet (at 127.0 127.0) (size 40.64 25.4) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "a953f2e0-fe2b-4a39-a588-51f8c9325528") (property "Sheetname" "ESC3" (at 127.0 126.2884 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "esc_channel.kicad_sch" (at 127.0 152.9846 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "CLKIN" input (at 97.79 68.58 0) (uuid "5d25de24-099f-4f54-8dd4-191df735e758") (effects (font (size 1.27 1.27)) (justify right))) (pin "CS" input (at 97.79 71.12 0) (uuid "a53d67c8-fbcf-4c8a-876c-98119a949afb") (effects (font (size 1.27 1.27)) (justify right))) (pin "GYRO_INT" output (at 97.79 73.66 0) (uuid "820e655f-5da4-4dda-a21a-dbd809500594") (effects (font (size 1.27 1.27)) (justify right))) (pin "SPI1{SCK,MOSI,MISO}" bidirectional (at 97.79 76.2 0) (uuid "ba199d7a-a52b-4c38-bb0a-6c43ec2a8574") (effects (font (size 1.27 1.27)) (justify right))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "11"))))) (sheet (at 177.8 127.0) (size 40.64 25.4) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced yes) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid "60c3f58e-b87c-4c10-a550-fcfd0ee68387") (property "Sheetname" "ESC4" (at 177.8 126.2884 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "esc_channel.kicad_sch" (at 177.8 152.9846 0) (show_name no) (do_not_autoplace no) (effects (font (size 1.27 1.27)) (justify left top))) (pin "CLKIN" input (at 97.79 68.58 0) (uuid "5d25de24-099f-4f54-8dd4-191df735e758") (effects (font (size 1.27 1.27)) (justify right))) (pin "CS" input (at 97.79 71.12 0) (uuid "a53d67c8-fbcf-4c8a-876c-98119a949afb") (effects (font (size 1.27 1.27)) (justify right))) (pin "GYRO_INT" output (at 97.79 73.66 0) (uuid "820e655f-5da4-4dda-a21a-dbd809500594") (effects (font (size 1.27 1.27)) (justify right))) (pin "SPI1{SCK,MOSI,MISO}" bidirectional (at 97.79 76.2 0) (uuid "ba199d7a-a52b-4c38-bb0a-6c43ec2a8574") (effects (font (size 1.27 1.27)) (justify right))) (instances (project "OpenAIO" (path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64" (page "12"))))) (sheet_instances (path "/" (page "1"))) (embedded_fonts no))
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "2c3a7206-1e66-4d43-a02f-491225e20dd6")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 114.3 66.04)
+		(size 66.675 89.535)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2")
+		(property "Sheetname" "RP2354A"
+			(at 114.3 65.3284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fc_rp2350a.kicad_sch"
+			(at 114.3 156.1596 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "10V_ENABLE" output
+			(at 180.975 76.2 0)
+			(uuid "0af19949-4364-4afc-bf89-32bd1e3e2455")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "BUZZER-" output
+			(at 180.975 78.74 0)
+			(uuid "0ab1fb39-0c67-4be2-8d75-cc6888424fc6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ESC_CURRENT" input
+			(at 114.3 78.74 180)
+			(uuid "fdf2c6c9-81e8-4b9f-a240-34ded2f0367f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "FLASH_CS" output
+			(at 180.975 92.71 0)
+			(uuid "d8477ac5-a292-4390-9908-4bd86590195a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GYRO_CS" output
+			(at 180.975 104.14 0)
+			(uuid "3cd3e1fd-c3e7-4edd-913f-bc7bc4698389")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GYRO_INT" input
+			(at 180.975 106.68 0)
+			(uuid "9b329549-01ab-46c9-8e2d-4c2a5494a2a7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "I2C0{SCL,SDA}" bidirectional
+			(at 114.3 96.52 180)
+			(uuid "4b620979-9f6e-4889-854b-cd1842eb2a30")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "LED_STRIP" output
+			(at 180.975 69.85 0)
+			(uuid "f271491f-507a-4548-9b02-7df4dc05c3a0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MOTOR1" bidirectional
+			(at 142.24 66.04 90)
+			(uuid "bc0e5751-d0dc-4082-bce0-0f9b8591991e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MOTOR2" bidirectional
+			(at 144.78 66.04 90)
+			(uuid "3962b95f-f600-49cc-a393-1ac31598fccd")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MOTOR3" bidirectional
+			(at 147.32 66.04 90)
+			(uuid "df7a5f3a-05f5-4567-bba4-59cf3b76a330")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MOTOR4" bidirectional
+			(at 149.86 66.04 90)
+			(uuid "623f6022-763a-41c3-88f4-60849a35b835")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "OSD_EN" output
+			(at 143.51 155.575 270)
+			(uuid "684a4697-2719-42fe-a61c-e74988a39069")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OSD_SYNC" input
+			(at 146.05 155.575 270)
+			(uuid "38ecbee8-b7f2-4c9f-8cd2-49e4e4857f80")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OSD_W" output
+			(at 148.59 155.575 270)
+			(uuid "17136ab4-f517-48ac-8e03-717bee090a11")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PIOUART0_RX" input
+			(at 114.3 109.22 180)
+			(uuid "550c1307-ccb2-44e2-9a8b-b65f7ff0af0f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PIOUART0_TX" output
+			(at 114.3 106.68 180)
+			(uuid "97559d3e-bd54-4cec-a385-7b389e6903f8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SPI0{SCK,MOSI,MISO}" bidirectional
+			(at 180.975 101.6 0)
+			(uuid "77a300e6-986b-4d30-bfa1-6e5eb125a8f5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SPI1{SCK,MOSI,MISO}" bidirectional
+			(at 180.975 90.17 0)
+			(uuid "eb4dbba9-5100-478d-b40e-50bca7a9e66a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART0_RX" input
+			(at 114.3 91.44 180)
+			(uuid "bb92419b-ee20-411b-a83c-4ed8a80aa4ea")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "UART0_TX" output
+			(at 114.3 88.9 180)
+			(uuid "30454e11-cddb-44fd-bcf9-d059a91a6e15")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "UART1_RX" input
+			(at 114.3 85.09 180)
+			(uuid "aa59e33a-dea8-4e3b-8030-7d18532dbdad")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "UART1_TX" output
+			(at 114.3 82.55 180)
+			(uuid "bfa1fbe5-8dda-4f7a-9911-2e65e35226aa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 57.15 55.88)
+		(size 40.64 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "067dfe4f-0feb-4fee-b449-2d51932eecf1")
+		(property "Sheetname" "IMU"
+			(at 57.15 55.1684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fc_imu.kicad_sch"
+			(at 57.15 81.8646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CLKIN" input
+			(at 97.79 68.58 0)
+			(uuid "5d25de24-099f-4f54-8dd4-191df735e758")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CS" input
+			(at 97.79 71.12 0)
+			(uuid "a53d67c8-fbcf-4c8a-876c-98119a949afb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "GYRO_INT" output
+			(at 97.79 73.66 0)
+			(uuid "820e655f-5da4-4dda-a21a-dbd809500594")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SPI1{SCK,MOSI,MISO}" bidirectional
+			(at 97.79 76.2 0)
+			(uuid "ba199d7a-a52b-4c38-bb0a-6c43ec2a8574")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 228.6 20.32)
+		(size 40.64 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6891e3d6-67ec-46df-a6dd-bbed7a5ef668")
+		(property "Sheetname" "Pads"
+			(at 228.6 19.6084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fc_pads.kicad_sch"
+			(at 228.6 46.3046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ADC2" output
+			(at 228.6 27.94 180)
+			(uuid "f6a8adce-b13c-4771-b9ae-9518a9537116")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "BUZZER-" input
+			(at 228.6 30.48 180)
+			(uuid "d63e7049-48a1-48bf-b5ac-8c5355dacb7d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAMERA" output
+			(at 228.6 33.02 180)
+			(uuid "780f0e42-951b-436b-baac-307ec1ac7c53")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CURRENT" output
+			(at 228.6 35.56 180)
+			(uuid "af163a95-869c-42ed-b5c2-6c671b5aba27")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "I2C0{SCL,SDA}" bidirectional
+			(at 228.6 38.1 180)
+			(uuid "de6ceb4a-e4b8-4763-8e58-3a838b90844d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "LED_STRIP" input
+			(at 228.6 40.64 180)
+			(uuid "d40dc155-61b6-4d96-952e-a169ad8a4e67")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "M1" bidirectional
+			(at 269.24 26.67 0)
+			(uuid "c6c6ca01-34ba-4d42-bffb-a88c2dc5bcd1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "M2" bidirectional
+			(at 269.24 29.21 0)
+			(uuid "38cb39ac-69b9-40fa-ba4e-c1a76370270b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "M3" bidirectional
+			(at 269.24 31.75 0)
+			(uuid "8d300e1a-f21e-40b0-bd9a-5cca50e796ac")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "M4" bidirectional
+			(at 269.24 34.29 0)
+			(uuid "cb66093f-eed0-447f-b24d-3d2ed170c480")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "PIOUART0_RX" output
+			(at 251.46 45.72 270)
+			(uuid "3dcbc0c7-3f91-49ce-b9b4-f1ae759cd611")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PIOUART0_TX" input
+			(at 254 45.72 270)
+			(uuid "f6fe79ab-2c00-46d3-a3c2-11d5b24ea341")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PIOUART1_RX" output
+			(at 256.54 45.72 270)
+			(uuid "b8f329b4-3a79-4e7a-896f-02f656b1a664")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "PIOUART1_TX" input
+			(at 259.08 45.72 270)
+			(uuid "298f3320-32f8-4c99-a636-bdd50fc01e30")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "RSSI" output
+			(at 251.46 20.32 90)
+			(uuid "b7074b02-bf9a-4a4e-a4a7-8189355558ce")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART0_RX" output
+			(at 254 20.32 90)
+			(uuid "2c1e524a-421c-4660-82df-773ed029b16d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART0_TX" input
+			(at 256.54 20.32 90)
+			(uuid "2a63c043-4df6-47bf-a295-08a363555969")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART1_RX" output
+			(at 259.08 20.32 90)
+			(uuid "00202cba-edc7-4fa4-8b90-b57368255fcf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART1_TX" input
+			(at 261.62 20.32 90)
+			(uuid "f267c2f3-9ca5-4da1-a734-761183e5b15e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VTX" input
+			(at 241.3 20.32 90)
+			(uuid "f429efb9-9c3b-4760-8a11-26bd91f0a02f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 219.71 88.9)
+		(size 40.64 8.89)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6a76a238-9289-499d-aa08-95fd7cfd4af9")
+		(property "Sheetname" "ESC3"
+			(at 219.71 88.1884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "esc_channel.kicad_sch"
+			(at 219.71 98.3746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "A" output
+			(at 260.35 90.805 0)
+			(uuid "d4135315-6781-42a7-9a79-761c6cb82f07")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B" output
+			(at 260.35 93.345 0)
+			(uuid "ca9edde9-0a60-4b98-8ac4-ef9c37103eb8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "C" output
+			(at 260.35 95.885 0)
+			(uuid "1e7431f4-1bab-4cdb-8fc8-6a0f68597329")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "dshot" input
+			(at 219.71 93.345 180)
+			(uuid "d19d9f24-53f1-4353-85cb-46bea8bd63a3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 219.71 74.93)
+		(size 40.64 8.89)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6df3c64b-9042-4802-8151-ba4261464fb0")
+		(property "Sheetname" "ESC2"
+			(at 219.71 74.2184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "esc_channel.kicad_sch"
+			(at 219.71 84.4046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "A" output
+			(at 260.35 76.835 0)
+			(uuid "78122dc0-d30f-439f-bd7f-1f83162e09fb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B" output
+			(at 260.35 79.375 0)
+			(uuid "b233075f-1ba4-46d1-91dc-c1a5e1efe17b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "C" output
+			(at 260.35 81.915 0)
+			(uuid "11beb1be-b8a2-4987-898c-7dcb094509dc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "dshot" input
+			(at 219.71 79.375 180)
+			(uuid "c6374f63-cda4-407d-b5e5-23cbe3080dc8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 57.785 88.9)
+		(size 40.64 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6e8501c6-71d5-4860-9b96-3d3562c097af")
+		(property "Sheetname" "RX"
+			(at 57.785 88.1884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "rx_esp32c3_sx1281.kicad_sch"
+			(at 57.785 114.8846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ELRS_RX" output
+			(at 98.425 100.965 0)
+			(uuid "b4fb0667-48a0-4926-9e09-0e0c2e5c3714")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "ELRS_TX" input
+			(at 98.425 98.425 0)
+			(uuid "dc94778d-13c5-4b61-8f2f-acd66e9e8e78")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 127 20.32)
+		(size 40.64 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "7eb6278f-5b99-473d-b708-4fb1f437cf9b")
+		(property "Sheetname" "OSD"
+			(at 127 19.6084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fc_osd.kicad_sch"
+			(at 127 46.3046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "OSD_EN" input
+			(at 127 33.02 180)
+			(uuid "a6712f43-d5d5-4ea3-9996-1ed88613f70a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OSD_SYNC" output
+			(at 127 35.56 180)
+			(uuid "03736da5-b1d2-4b40-a632-2bffd19721ad")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OSD_W" input
+			(at 127 38.1 180)
+			(uuid "f8f11cb9-c4f4-4395-8bcc-3ca02cb2281f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 177.8 20.32)
+		(size 40.64 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "92d80a6e-4bd9-4df0-920d-da7b8cdc2925")
+		(property "Sheetname" "Blackbox"
+			(at 177.8 19.6084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fc_blackbox.kicad_sch"
+			(at 177.8 46.3046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "FLASH_CS" input
+			(at 177.8 31.75 180)
+			(uuid "0d0f2c6d-7164-4c87-882a-e841d2fedd02")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SPI0{SCK,MOSI,MISO}" bidirectional
+			(at 177.8 34.29 180)
+			(uuid "3709d325-09fb-47a0-ba93-95e20335bdb4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 20.32)
+		(size 40.64 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "cdf44e0a-3675-4533-b9f5-78ffc381d2a5")
+		(property "Sheetname" "Power"
+			(at 25.4 19.6084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fc_power.kicad_sch"
+			(at 25.4 46.3046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "10V_ENABLE" input
+			(at 25.4 33.02 180)
+			(uuid "42e863e6-8da5-457c-9078-c4db3d80d410")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 219.71 102.87)
+		(size 40.64 8.89)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "db3cdd4a-035f-42d3-8f2e-6db113113326")
+		(property "Sheetname" "ESC4"
+			(at 219.71 102.1584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "esc_channel.kicad_sch"
+			(at 219.71 112.3446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "A" output
+			(at 260.35 104.775 0)
+			(uuid "de655c5d-3813-48ac-884a-bbbb63b0a834")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B" output
+			(at 260.35 107.315 0)
+			(uuid "b5f5ce8f-749a-44d3-a7f3-b038ff6c4091")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "C" output
+			(at 260.35 109.855 0)
+			(uuid "11015857-2e1b-46e1-85b1-a7f1e68f0680")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "dshot" input
+			(at 219.71 107.315 180)
+			(uuid "1c2b0408-6920-4a69-aec4-5fb2c5d73df7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 219.71 60.96)
+		(size 40.64 8.89)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ed03c608-7402-46a1-8e98-baf93a4f0edb")
+		(property "Sheetname" "ESC1"
+			(at 219.71 60.2484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "esc_channel.kicad_sch"
+			(at 219.71 70.4346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "A" output
+			(at 260.35 62.865 0)
+			(uuid "236cf13d-b36b-4db2-b7b7-ebbedd15380c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "B" output
+			(at 260.35 65.405 0)
+			(uuid "19f91d99-9f02-4810-9c03-7549fa06d5d7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "C" output
+			(at 260.35 67.945 0)
+			(uuid "553bd72f-f207-42c2-a8b2-25bb12dddf19")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "dshot" input
+			(at 219.71 65.405 180)
+			(uuid "18d5c3f1-a2e4-4320-9f63-d3076432cb3d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
