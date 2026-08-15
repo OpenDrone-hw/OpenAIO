@@ -716,7 +716,7 @@
         "uuid": "fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
       }
     ],
-    "used_designators": "X1,U1-2,U14-15,Rsense2-3,#PWR40-43,#PWR48-49,#PWR151-152,#PWR168-171,Q1-2,C1-17,C95-98,D1,L1,USB1,R1-16,R74-75",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
