@@ -1150,7 +1150,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0c326a59-fd9c-40da-8769-829cfc10f176")
-		(property "Reference" "#PWR0155"
+		(property "Reference" "#PWR0103"
 			(at 72.39 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -1210,7 +1210,7 @@
 		(instances
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
-					(reference "#PWR0155")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -1227,7 +1227,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "19be7955-58d0-4c8d-a2a1-cb0c14a2c282")
-		(property "Reference" "R39"
+		(property "Reference" "R34"
 			(at 97.79 60.96 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1322,7 +1322,7 @@
 		(instances
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
-					(reference "R39")
+					(reference "R34")
 					(unit 1)
 				)
 			)
@@ -1339,7 +1339,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1ec1adf4-cd1a-492a-816f-22ff8bdb6a5a")
-		(property "Reference" "Card2"
+		(property "Reference" "Card1"
 			(at 72.39 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -1446,7 +1446,7 @@
 			)
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
-					(reference "Card2")
+					(reference "Card1")
 					(unit 1)
 				)
 			)
@@ -1464,7 +1464,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "371042a3-69f2-408a-be95-db01591802db")
-		(property "Reference" "#PWR060"
+		(property "Reference" "#PWR0102"
 			(at 52.07 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -1525,7 +1525,7 @@
 		(instances
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
-					(reference "#PWR060")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -1543,7 +1543,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "37bd9262-d0cf-47fd-a6f0-a005ca5912ac")
-		(property "Reference" "#PWR0154"
+		(property "Reference" "#PWR0104"
 			(at 72.39 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -1603,7 +1603,7 @@
 		(instances
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
-					(reference "#PWR0154")
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -1621,7 +1621,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5cf00a05-a2cc-481e-b5f1-da17367e4424")
-		(property "Reference" "#PWR0153"
+		(property "Reference" "#PWR0105"
 			(at 92.71 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -1681,7 +1681,7 @@
 		(instances
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
-					(reference "#PWR0153")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -1698,7 +1698,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6fb21271-9946-422b-8fd6-e50aeacf88aa")
-		(property "Reference" "C43"
+		(property "Reference" "C36"
 			(at 59.436 46.99 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1794,7 +1794,7 @@
 		(instances
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
-					(reference "C43")
+					(reference "C36")
 					(unit 1)
 				)
 			)
