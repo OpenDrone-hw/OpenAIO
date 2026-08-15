@@ -64,11 +64,11 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
 
 ```sh
 # schematic and board checks
-kicad-cli sch erc --exit-code-violations hardware/<name>.kicad_sch
-kicad-cli pcb drc --schematic-parity --refill-zones --exit-code-violations hardware/<name>.kicad_pcb
+kicad-cli sch erc --exit-code-violations hardware/OpenAIO.kicad_sch
+kicad-cli pcb drc --schematic-parity --refill-zones --exit-code-violations hardware/OpenAIO.kicad_pcb
 
 # netlist, for scripted analysis
-kicad-cli sch export netlist --format kicadsexpr -o /tmp/<name>.net hardware/<name>.kicad_sch
+kicad-cli sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/OpenAIO.kicad_sch
 ```
 
 On macOS `kicad-cli` is at
