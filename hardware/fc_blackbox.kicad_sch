@@ -1208,8 +1208,8 @@
 			(uuid "3c2e2cbf-f1f9-4c12-8bf8-166b3a53a78a")
 		)
 		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68"
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "#PWR0155")
 					(unit 1)
 				)
@@ -1320,8 +1320,8 @@
 			(uuid "8080a90c-0ea6-4752-9185-4b04d5e63f15")
 		)
 		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68"
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "R39")
 					(unit 1)
 				)
@@ -1339,7 +1339,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1ec1adf4-cd1a-492a-816f-22ff8bdb6a5a")
-		(property "Reference" "Card1"
+		(property "Reference" "Card2"
 			(at 72.39 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -1444,9 +1444,9 @@
 					(unit 1)
 				)
 			)
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68"
-					(reference "Card1")
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
+					(reference "Card2")
 					(unit 1)
 				)
 			)
@@ -1523,8 +1523,8 @@
 			(uuid "a2ea993a-35d1-48b1-9646-dd9fb2a02102")
 		)
 		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68"
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "#PWR060")
 					(unit 1)
 				)
@@ -1601,8 +1601,8 @@
 			(uuid "78234105-2f85-4134-b9dc-6153ff9e1afc")
 		)
 		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68"
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "#PWR0154")
 					(unit 1)
 				)
@@ -1679,8 +1679,8 @@
 			(uuid "ab53c62e-d90e-4e85-84da-744a4614d459")
 		)
 		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68"
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "#PWR0153")
 					(unit 1)
 				)
@@ -1792,8 +1792,8 @@
 			(uuid "10e658bf-f8c7-48bd-a635-3fe5c0028a6d")
 		)
 		(instances
-			(project "OpenFC"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/4c4f8c63-c695-4758-b1bc-c8af53273c68"
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "C43")
 					(unit 1)
 				)

@@ -6200,6 +6200,28 @@
 		)
 		(uuid "ff56df1e-361c-4d98-96e9-5c646950946b")
 	)
+	(hierarchical_label "ELRS_RX"
+		(shape output)
+		(at 199.39 223.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a491fc3b-b0dd-4554-b335-33a134016767")
+	)
+	(hierarchical_label "ELRS_TX"
+		(shape input)
+		(at 199.39 220.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f3551aec-974e-4a74-a22f-33d32b562e45")
+	)
 	(symbol
 		(lib_id "power:+3V3")
 		(at 81.28 187.96 0)
@@ -6272,6 +6294,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR08")
 					(unit 1)
 				)
@@ -6350,6 +6378,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR014")
 					(unit 1)
 				)
@@ -6457,6 +6491,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C10")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6532,6 +6572,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR028")
 					(unit 1)
 				)
@@ -6614,6 +6660,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6689,6 +6741,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR035")
 					(unit 1)
 				)
@@ -6790,6 +6848,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "L1")
 					(unit 1)
 				)
@@ -6898,6 +6962,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C27")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -6970,6 +7040,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "TP5")
 					(unit 1)
 				)
@@ -7073,6 +7149,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "C8")
 					(unit 1)
 				)
@@ -7182,6 +7264,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C25")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7254,6 +7342,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "TP4")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "TP4")
 					(unit 1)
 				)
@@ -7337,6 +7431,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7412,6 +7512,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR034")
 					(unit 1)
 				)
@@ -7506,6 +7612,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "C11")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "C11")
 					(unit 1)
 				)
@@ -7614,6 +7726,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C17")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7692,6 +7810,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7766,6 +7890,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR026")
 					(unit 1)
 				)
@@ -7849,6 +7979,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR032")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -7923,6 +8059,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR025")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR025")
 					(unit 1)
 				)
@@ -8026,6 +8168,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "C13")
 					(unit 1)
 				)
@@ -8141,6 +8289,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "U2")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8240,6 +8394,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "AE2")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8314,6 +8474,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR016")
 					(unit 1)
 				)
@@ -8396,6 +8562,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8470,6 +8642,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR022")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR022")
 					(unit 1)
 				)
@@ -8575,6 +8753,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C26")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8650,6 +8834,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR01")
 					(unit 1)
 				)
@@ -8733,6 +8923,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR036")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -8806,6 +9002,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR02")
 					(unit 1)
 				)
@@ -8917,6 +9119,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "X1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9022,6 +9230,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C24")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9097,6 +9311,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR037")
 					(unit 1)
 				)
@@ -9179,6 +9399,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9254,6 +9480,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "L4")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "L4")
 					(unit 1)
 				)
@@ -9355,6 +9587,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "C20")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "C20")
 					(unit 1)
 				)
@@ -9462,6 +9700,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9564,6 +9808,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C19")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9638,6 +9888,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR012")
 					(unit 1)
 				)
@@ -9745,6 +10001,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C15")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9819,6 +10081,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#FLG02")
 					(unit 1)
 				)
@@ -9902,6 +10170,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -9977,6 +10251,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR031")
 					(unit 1)
 				)
@@ -10152,6 +10432,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "U3")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10226,6 +10512,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR024")
 					(unit 1)
 				)
@@ -10332,6 +10624,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "AE1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10406,6 +10704,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR06")
 					(unit 1)
 				)
@@ -10514,6 +10818,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C6")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10588,6 +10898,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR019")
 					(unit 1)
 				)
@@ -10670,6 +10986,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10745,6 +11067,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR017")
 					(unit 1)
 				)
@@ -10853,6 +11181,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C14")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -10945,6 +11279,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C22")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11019,6 +11359,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR04")
 					(unit 1)
 				)
@@ -11098,6 +11444,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR018")
 					(unit 1)
 				)
@@ -11205,6 +11557,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C28")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11306,6 +11664,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "R3")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11384,6 +11748,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11458,6 +11828,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#FLG01")
 					(unit 1)
 				)
@@ -11565,6 +11941,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C16")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11644,80 +12026,9 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 199.39 223.52 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c20eea41-fc44-4bc8-9577-7d7d48eed05f")
-		(property "Reference" "TP1"
-			(at 192.278 223.774 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "RX"
-			(at 192.786 223.52 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "OpenRX-Shared:SolderPad_1.2x2.0mm"
-			(at 199.39 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 199.39 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 199.39 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0cddff8c-050d-4555-8e88-ba1e7c8a994c")
-		)
-		(instances
-			(project "OpenRX-Lite"
-				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
-					(reference "TP1")
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -11795,6 +12106,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#FLG03")
 					(unit 1)
 				)
@@ -11904,6 +12221,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C4")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -11979,6 +12302,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR05")
 					(unit 1)
 				)
@@ -12113,6 +12442,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "FL1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12212,6 +12547,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "C3")
 					(unit 1)
 				)
@@ -12324,6 +12665,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "OSC1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12411,6 +12758,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "L3")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "L3")
 					(unit 1)
 				)
@@ -12507,6 +12860,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C21")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12598,6 +12957,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "L2")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12677,6 +13042,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12752,6 +13123,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR029")
 					(unit 1)
 				)
@@ -12857,6 +13234,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "R2")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -12931,6 +13314,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR027")
 					(unit 1)
 				)
@@ -13032,6 +13421,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "D1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -13106,6 +13501,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR020")
 					(unit 1)
 				)
@@ -13210,6 +13611,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "C23")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "C23")
 					(unit 1)
 				)
@@ -13319,6 +13726,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C12")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -13391,6 +13804,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "TP3")
 					(unit 1)
 				)
@@ -13496,80 +13915,9 @@
 					(unit 1)
 				)
 			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 199.39 220.98 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f8aa056d-6e0c-4a4f-8f1b-7068ba9d6e79")
-		(property "Reference" "TP2"
-			(at 192.278 221.234 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TX"
-			(at 192.786 220.98 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "OpenRX-Shared:SolderPad_1.2x2.0mm"
-			(at 199.39 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 199.39 215.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 199.39 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "973d6a2c-a5dd-4811-b594-03bca76bc8b5")
-		)
-		(instances
-			(project "OpenRX-Lite"
-				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
-					(reference "TP2")
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -13673,6 +14021,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "C5")
 					(unit 1)
 				)
@@ -13782,6 +14136,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "C9")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -13857,6 +14217,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR033")
 					(unit 1)
 				)
@@ -14035,6 +14401,12 @@
 					(unit 1)
 				)
 			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "U1")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -14132,6 +14504,12 @@
 		(instances
 			(project "OpenRX-Lite"
 				(path "/8521861a-4fab-458b-8289-5e2efb91d906/d4225140-81df-42e7-abd7-e679e5ab5187"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "R5")
 					(unit 1)
 				)

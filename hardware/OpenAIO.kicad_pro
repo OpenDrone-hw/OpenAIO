@@ -716,13 +716,57 @@
         "uuid": "fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
       }
     ],
-    "used_designators": "",
+    "used_designators": "X1,U1-2,Q1-2,C1-17,D1,L1,USB1,R1-16",
     "variants": []
   },
   "sheets": [
     [
-      "00000000-0000-0000-0000-000000000000",
-      "Root"
+      "fb88b6f9-ee39-4640-a9d4-04a17ceeac64",
+      "OpenAIO"
+    ],
+    [
+      "01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2",
+      "RP2354A"
+    ],
+    [
+      "cdf44e0a-3675-4533-b9f5-78ffc381d2a5",
+      "Power"
+    ],
+    [
+      "067dfe4f-0feb-4fee-b449-2d51932eecf1",
+      "IMU"
+    ],
+    [
+      "7eb6278f-5b99-473d-b708-4fb1f437cf9b",
+      "OSD"
+    ],
+    [
+      "92d80a6e-4bd9-4df0-920d-da7b8cdc2925",
+      "Blackbox"
+    ],
+    [
+      "6891e3d6-67ec-46df-a6dd-bbed7a5ef668",
+      "Pads"
+    ],
+    [
+      "ed03c608-7402-46a1-8e98-baf93a4f0edb",
+      "ESC1"
+    ],
+    [
+      "6df3c64b-9042-4802-8151-ba4261464fb0",
+      "ESC2"
+    ],
+    [
+      "6a76a238-9289-499d-aa08-95fd7cfd4af9",
+      "ESC3"
+    ],
+    [
+      "db3cdd4a-035f-42d3-8f2e-6db113113326",
+      "ESC4"
+    ],
+    [
+      "6e8501c6-71d5-4860-9b96-3d3562c097af",
+      "RX"
     ]
   ],
   "text_variables": {},
