@@ -58,7 +58,6 @@ The three designs this merges, all manufactured and flying:
 Research so far, reference rather than decisions:
 
 - [research/MARKET-RESEARCH-2026-06.md](research/MARKET-RESEARCH-2026-06.md): competing toothpick and whoop AIOs, June 2026
-- [research/SOURCING-2026-06.md](research/SOURCING-2026-06.md): LCSC/JLCPCB stock and risk snapshot of the candidate parts, June 2026
 - [research/ALTERNATIVES.md](research/ALTERNATIVES.md): ESC-stage part alternatives, gate driver and FET options, March 2026
 - [research/DESIGN.md](research/DESIGN.md): write-up of the stitched design that was reset in August 2026, kept for its part list and lessons
 
