@@ -1,0 +1,7 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "lib")(type "KiCad")(uri "${KIPRJMOD}/lib.kicad_sym")(options "")(descr "project-local symbols"))
+	(lib (name "OpenDrone")(type "KiCad")(uri "${OPENDRONE_LIB}/symbol/OpenDrone.kicad_sym")(options "")(descr "OpenDrone parts catalogue, one checkout of OpenDrone-hw/KiCad-Library per machine, path variable OPENDRONE_LIB"))
+	(lib (name "components")(type "KiCad")(uri "${OPENDRONE_LIB}/symbol/OpenDrone.kicad_sym")(options "")(descr "alias: nickname used by the OpenESC-20x20 sheet, same catalogue"))
+	(lib (name "OpenRX-Shared")(type "KiCad")(uri "${OPENDRONE_LIB}/symbol/OpenDrone.kicad_sym")(options "")(descr "alias: nickname used by the OpenRX sheet, same catalogue"))
+)
