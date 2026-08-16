@@ -2951,7 +2951,7 @@
 			(uuid "e4449193-4a99-4b35-bab7-710c0ebedfcf")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/0d0b26c5-e9b6-4ca3-8b9f-93c86665bc0c"
 					(reference "J90")
 					(unit 1)
@@ -3126,7 +3126,7 @@
 			(uuid "ec2ee4b0-340d-4bba-82d6-973530807fc7")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/0d0b26c5-e9b6-4ca3-8b9f-93c86665bc0c"
 					(reference "J91")
 					(unit 1)

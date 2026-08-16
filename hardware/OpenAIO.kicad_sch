@@ -5,6 +5,129 @@
 	(uuid "fb88b6f9-ee39-4640-a9d4-04a17ceeac64")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -3700,28 +3823,94 @@
 		)
 	)
 	(junction
-		(at 215.265 133.35)
+		(at 68.58 61.595)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "181b582a-b991-42c7-bc2d-b1f410cae4c3")
+	)
+	(junction
+		(at 151.765 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "19a5dc54-ad20-4fa5-87cc-2badcad648d9")
+	)
+	(junction
+		(at 151.13 24.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "24b50ab6-1946-49bf-8bb5-b17c3140f376")
+	)
+	(junction
+		(at 152.4 48.895)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2a5bebf4-7a77-4017-a7c6-9d78162f253d")
+	)
+	(junction
+		(at 236.22 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "360fed11-f7d9-450b-b43b-c7923945524c")
 	)
 	(junction
-		(at 244.475 119.38)
+		(at 151.6832 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "402fd288-f3f1-43d4-ad68-5c0743d5cdea")
+	)
+	(junction
+		(at 151.765 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5b2f2d64-f195-4069-8df6-d0769ba74bfe")
+	)
+	(junction
+		(at 64.77 56.515)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "603b55bb-8ab3-4f4e-b2e1-d482ef4fe507")
+	)
+	(junction
+		(at 70.485 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60f3f3e1-c824-48a9-9217-cf40e1c88a27")
+	)
+	(junction
+		(at 265.43 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "757ac227-546c-41ab-89c5-4fd569ec63b2")
+	)
+	(junction
+		(at 152.4 46.355)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "90f2f94b-d6c7-46f5-bcce-c40986532947")
+	)
+	(junction
+		(at 73.66 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cdd1df5f-2b6e-4bcb-af1b-f3d994b392c3")
+	)
+	(junction
+		(at 151.765 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d2ec2d03-4a0a-4744-a2e9-f82054c71566")
 	)
 	(no_connect
 		(at 62.23 87.63)
 		(uuid "78859d2d-3eae-4e04-9d81-4df46565c72d")
 	)
 	(no_connect
-		(at 149.86 29.21)
+		(at 170.815 29.21)
 		(uuid "b07e07f1-a57d-4de8-bbd8-f0474ad8850c")
 	)
 	(wire
 		(pts
-			(xy 215.265 133.35) (xy 215.265 137.16)
+			(xy 236.22 133.35) (xy 236.22 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3731,7 +3920,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 48.895) (xy 195.58 48.895)
+			(xy 211.455 48.895) (xy 216.535 48.895)
 		)
 		(stroke
 			(width 0)
@@ -3741,7 +3930,7 @@
 	)
 	(wire
 		(pts
-			(xy 206.375 140.97) (xy 211.455 140.97)
+			(xy 227.33 140.97) (xy 232.41 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3751,7 +3940,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 35.56) (xy 149.86 35.56)
+			(xy 145.415 35.56) (xy 170.815 35.56)
 		)
 		(stroke
 			(width 0)
@@ -3761,7 +3950,17 @@
 	)
 	(wire
 		(pts
-			(xy 236.855 119.38) (xy 244.475 119.38)
+			(xy 151.765 121.92) (xy 170.815 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0789b4b1-ceb6-43df-ba8b-3e765df902da")
+	)
+	(wire
+		(pts
+			(xy 257.81 119.38) (xy 265.43 119.38)
 		)
 		(stroke
 			(width 0)
@@ -3771,7 +3970,7 @@
 	)
 	(wire
 		(pts
-			(xy 236.855 119.38) (xy 236.855 120.65)
+			(xy 257.81 119.38) (xy 257.81 120.65)
 		)
 		(stroke
 			(width 0)
@@ -3781,7 +3980,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 60.325) (xy 149.86 60.325)
+			(xy 145.415 60.325) (xy 170.815 60.325)
 		)
 		(stroke
 			(width 0)
@@ -3791,7 +3990,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 24.13) (xy 149.86 24.13)
+			(xy 145.415 24.13) (xy 151.13 24.13)
 		)
 		(stroke
 			(width 0)
@@ -3811,7 +4010,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.045 140.97) (xy 234.315 139.7)
+			(xy 254 140.97) (xy 255.27 139.7)
 		)
 		(stroke
 			(width 0)
@@ -3821,7 +4020,7 @@
 	)
 	(wire
 		(pts
-			(xy 215.265 112.395) (xy 215.265 125.73)
+			(xy 236.22 112.395) (xy 236.22 125.73)
 		)
 		(stroke
 			(width 0)
@@ -3831,7 +4030,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 135.89) (xy 149.86 135.89)
+			(xy 145.415 135.89) (xy 151.765 135.89)
 		)
 		(stroke
 			(width 0)
@@ -3841,7 +4040,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 61.595) (xy 78.74 61.595)
+			(xy 62.23 61.595) (xy 68.58 61.595)
 		)
 		(stroke
 			(width 0)
@@ -3851,13 +4050,23 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 75.565) (xy 195.58 75.565)
+			(xy 211.455 75.565) (xy 216.535 75.565)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "25795535-5eba-48c4-bb5a-e668594fd710")
+	)
+	(wire
+		(pts
+			(xy 151.765 93.98) (xy 170.815 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25e8c119-e2de-4478-a0e1-eed5e3822879")
 	)
 	(wire
 		(pts
@@ -3871,7 +4080,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 48.895) (xy 149.86 48.895)
+			(xy 145.415 48.895) (xy 152.4 48.895)
 		)
 		(stroke
 			(width 0)
@@ -3881,7 +4090,17 @@
 	)
 	(wire
 		(pts
-			(xy 215.265 133.35) (xy 233.045 133.35)
+			(xy 151.765 135.89) (xy 170.815 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d5e0e33-bdbf-4c40-8150-fb16be96de19")
+	)
+	(wire
+		(pts
+			(xy 236.22 133.35) (xy 254 133.35)
 		)
 		(stroke
 			(width 0)
@@ -3891,7 +4110,7 @@
 	)
 	(wire
 		(pts
-			(xy 254.635 137.16) (xy 260.985 137.16)
+			(xy 275.59 137.16) (xy 281.94 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3901,7 +4120,27 @@
 	)
 	(wire
 		(pts
-			(xy 211.455 140.97) (xy 215.265 137.16)
+			(xy 152.4 48.895) (xy 170.815 48.895)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4db005f4-91e7-48f7-a731-c42517d1cfb1")
+	)
+	(wire
+		(pts
+			(xy 152.4 46.355) (xy 170.815 46.355)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52e5c93e-bac8-4b5c-839b-be991752cf5b")
+	)
+	(wire
+		(pts
+			(xy 232.41 140.97) (xy 236.22 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3911,7 +4150,17 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 74.93) (xy 149.86 74.93)
+			(xy 70.485 107.95) (xy 78.74 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6274c3e3-c393-409f-951b-07ef375658cb")
+	)
+	(wire
+		(pts
+			(xy 145.415 74.93) (xy 170.815 74.93)
 		)
 		(stroke
 			(width 0)
@@ -3921,7 +4170,17 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 110.49) (xy 78.74 110.49)
+			(xy 73.66 110.49) (xy 78.74 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c6411e9-0436-4ff8-8314-089c974c13d0")
+	)
+	(wire
+		(pts
+			(xy 62.23 110.49) (xy 73.66 110.49)
 		)
 		(stroke
 			(width 0)
@@ -3931,7 +4190,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 40.005) (xy 149.86 40.005)
+			(xy 145.415 40.005) (xy 170.815 40.005)
 		)
 		(stroke
 			(width 0)
@@ -3941,7 +4200,7 @@
 	)
 	(wire
 		(pts
-			(xy 202.565 135.89) (xy 202.565 137.16)
+			(xy 223.52 135.89) (xy 223.52 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3951,7 +4210,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 121.92) (xy 149.86 121.92)
+			(xy 145.415 121.92) (xy 151.765 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3961,7 +4220,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 107.95) (xy 149.86 107.95)
+			(xy 145.415 107.95) (xy 151.6832 107.95)
 		)
 		(stroke
 			(width 0)
@@ -3971,7 +4230,17 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 93.98) (xy 149.86 93.98)
+			(xy 151.13 24.13) (xy 170.815 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c0925ac-8735-479f-9a1c-fa822df077e9")
+	)
+	(wire
+		(pts
+			(xy 145.415 93.98) (xy 151.765 93.98)
 		)
 		(stroke
 			(width 0)
@@ -3981,7 +4250,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 77.47) (xy 149.86 77.47)
+			(xy 145.415 77.47) (xy 170.815 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3991,7 +4260,17 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 80.01) (xy 149.86 80.01)
+			(xy 151.6832 107.95) (xy 170.815 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0b061bd-e94e-4d93-9bf9-49a25fc66f90")
+	)
+	(wire
+		(pts
+			(xy 145.415 80.01) (xy 170.815 80.01)
 		)
 		(stroke
 			(width 0)
@@ -4001,7 +4280,17 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 42.545) (xy 149.86 42.545)
+			(xy 219.075 26.67) (xy 211.455 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa9ab735-5e02-4da6-a901-34b3e2d04167")
+	)
+	(wire
+		(pts
+			(xy 145.415 42.545) (xy 170.815 42.545)
 		)
 		(stroke
 			(width 0)
@@ -4011,7 +4300,17 @@
 	)
 	(wire
 		(pts
-			(xy 197.485 46.355) (xy 197.485 78.105)
+			(xy 145.415 62.865) (xy 170.815 62.865)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad1b68ef-4c72-4e9e-a37c-dbc6c4f58455")
+	)
+	(wire
+		(pts
+			(xy 218.44 46.355) (xy 218.44 78.105)
 		)
 		(stroke
 			(width 0)
@@ -4031,7 +4330,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 33.02) (xy 149.86 33.02)
+			(xy 145.415 33.02) (xy 170.815 33.02)
 		)
 		(stroke
 			(width 0)
@@ -4041,7 +4340,17 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 78.105) (xy 197.485 78.105)
+			(xy 219.075 29.21) (xy 211.455 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc22723d-9f87-40b5-8408-feca1fd39681")
+	)
+	(wire
+		(pts
+			(xy 211.455 78.105) (xy 218.44 78.105)
 		)
 		(stroke
 			(width 0)
@@ -4051,17 +4360,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 62.865) (xy 149.86 62.865)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c4d157b9-9be7-4f7a-8267-4afad551b470")
-	)
-	(wire
-		(pts
-			(xy 244.475 119.38) (xy 244.475 127)
+			(xy 265.43 119.38) (xy 265.43 127)
 		)
 		(stroke
 			(width 0)
@@ -4071,7 +4370,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 46.355) (xy 149.86 46.355)
+			(xy 145.415 46.355) (xy 152.4 46.355)
 		)
 		(stroke
 			(width 0)
@@ -4081,7 +4380,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 48.895) (xy 195.58 75.565)
+			(xy 216.535 48.895) (xy 216.535 75.565)
 		)
 		(stroke
 			(width 0)
@@ -4091,7 +4390,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 56.515) (xy 78.74 56.515)
+			(xy 62.23 56.515) (xy 64.77 56.515)
 		)
 		(stroke
 			(width 0)
@@ -4101,7 +4400,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 107.95) (xy 78.74 107.95)
+			(xy 62.23 107.95) (xy 70.485 107.95)
 		)
 		(stroke
 			(width 0)
@@ -4111,7 +4410,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.045 133.35) (xy 234.315 134.62)
+			(xy 254 133.35) (xy 255.27 134.62)
 		)
 		(stroke
 			(width 0)
@@ -4121,7 +4420,27 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 46.355) (xy 197.485 46.355)
+			(xy 68.58 61.595) (xy 78.74 61.595)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea1a2e09-f0cd-4e48-ab44-0dc3d0cae7a9")
+	)
+	(wire
+		(pts
+			(xy 64.77 56.515) (xy 78.74 56.515)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f02d611a-c672-4f38-991e-f8ae97e4953f")
+	)
+	(wire
+		(pts
+			(xy 211.455 46.355) (xy 218.44 46.355)
 		)
 		(stroke
 			(width 0)
@@ -4131,7 +4450,7 @@
 	)
 	(wire
 		(pts
-			(xy 202.565 137.16) (xy 206.375 140.97)
+			(xy 223.52 137.16) (xy 227.33 140.97)
 		)
 		(stroke
 			(width 0)
@@ -4140,7 +4459,7 @@
 		(uuid "ffcb3db1-b39d-42b3-bdd0-9e4a93459852")
 	)
 	(label "3A"
-		(at 190.5 119.38 0)
+		(at 211.455 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4150,7 +4469,7 @@
 		(uuid "0c9b17cf-3255-4c36-8eab-3840aa44915b")
 	)
 	(label "4B"
-		(at 235.585 99.695 0)
+		(at 256.54 99.695 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4160,7 +4479,7 @@
 		(uuid "1271c430-92a8-4cbf-b81f-6f7d3066ca4e")
 	)
 	(label "2B"
-		(at 200.025 103.505 180)
+		(at 220.98 103.505 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4170,7 +4489,7 @@
 		(uuid "17f2b849-291b-4d49-8b1d-cb344e8902c4")
 	)
 	(label "4B"
-		(at 190.5 135.89 0)
+		(at 211.455 135.89 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4180,7 +4499,7 @@
 		(uuid "2341f3d7-859f-4652-a085-7f0e2d6cfaf2")
 	)
 	(label "1B"
-		(at 200.025 89.535 180)
+		(at 220.98 89.535 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4190,7 +4509,7 @@
 		(uuid "2af42af7-24e4-4718-83af-01fc1365fc78")
 	)
 	(label "2B"
-		(at 190.5 107.95 0)
+		(at 211.455 107.95 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4200,7 +4519,7 @@
 		(uuid "3665b964-9a4f-465c-9d25-1e515f9a2b1e")
 	)
 	(label "1B"
-		(at 190.5 93.98 0)
+		(at 211.455 93.98 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4210,7 +4529,7 @@
 		(uuid "3d356f21-5b0e-48fe-9054-c2a867989616")
 	)
 	(label "2C"
-		(at 200.025 95.885 180)
+		(at 220.98 95.885 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4220,7 +4539,7 @@
 		(uuid "6fdb3e4b-3735-4770-86aa-bc17d8a31af9")
 	)
 	(label "4C"
-		(at 190.5 138.43 0)
+		(at 211.455 138.43 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4230,7 +4549,7 @@
 		(uuid "7282e793-95e3-4755-9747-af7d7942d82a")
 	)
 	(label "4C"
-		(at 235.585 103.505 0)
+		(at 256.54 103.505 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4240,7 +4559,7 @@
 		(uuid "7cb5e6bd-e958-45f0-a531-248aedd1f1a8")
 	)
 	(label "1C"
-		(at 200.025 93.345 180)
+		(at 220.98 93.345 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4250,7 +4569,7 @@
 		(uuid "84e92fa9-bbda-49f3-84f0-a930b8d921d9")
 	)
 	(label "3B"
-		(at 235.585 93.345 0)
+		(at 256.54 93.345 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4260,7 +4579,7 @@
 		(uuid "8fd32e51-cdc4-4c10-9f87-9b209bed287c")
 	)
 	(label "1C"
-		(at 190.5 96.52 0)
+		(at 211.455 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4270,7 +4589,7 @@
 		(uuid "97371587-bcd1-4821-9b51-038bf19cd8f9")
 	)
 	(label "4A"
-		(at 190.5 133.35 0)
+		(at 211.455 133.35 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4280,7 +4599,7 @@
 		(uuid "9ac451af-7087-4e88-9704-5d30f12365b2")
 	)
 	(label "1A"
-		(at 190.5 91.44 0)
+		(at 211.455 91.44 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4290,7 +4609,7 @@
 		(uuid "a136ccb7-e35d-46cc-b6bd-d15ecf6e7bfd")
 	)
 	(label "4A"
-		(at 235.585 95.885 0)
+		(at 256.54 95.885 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4300,7 +4619,7 @@
 		(uuid "a82bfc1c-f1cb-4391-af38-ecea8da886e5")
 	)
 	(label "3B"
-		(at 190.5 121.92 0)
+		(at 211.455 121.92 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4310,7 +4629,7 @@
 		(uuid "ac686a26-73a0-442e-a563-b3e872a79e0e")
 	)
 	(label "2C"
-		(at 190.5 110.49 0)
+		(at 211.455 110.49 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4320,7 +4639,7 @@
 		(uuid "d3b5b5c2-6d76-44e8-8dd6-29781bdf9b9e")
 	)
 	(label "CSA+"
-		(at 233.045 140.97 180)
+		(at 254 140.97 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4330,7 +4649,7 @@
 		(uuid "d611c733-167b-467b-ac22-9545951b309c")
 	)
 	(label "3C"
-		(at 190.5 124.46 0)
+		(at 211.455 124.46 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4340,7 +4659,7 @@
 		(uuid "dcab44a9-37ed-4a53-bb73-d68f5007fe41")
 	)
 	(label "1A"
-		(at 200.025 85.725 180)
+		(at 220.98 85.725 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4350,7 +4669,7 @@
 		(uuid "e1c8e3f8-b308-40a8-9f49-d0c4fc9a75fc")
 	)
 	(label "2A"
-		(at 200.025 99.695 180)
+		(at 220.98 99.695 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4360,7 +4679,7 @@
 		(uuid "e7fd43fa-f711-4836-8573-b8d9b3638eab")
 	)
 	(label "3C"
-		(at 235.585 85.725 0)
+		(at 256.54 85.725 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4370,7 +4689,7 @@
 		(uuid "e8823f53-9d7b-4032-9396-78dda2b031aa")
 	)
 	(label "3A"
-		(at 235.585 89.535 0)
+		(at 256.54 89.535 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4380,7 +4699,7 @@
 		(uuid "f22511de-d37d-4c03-b2c5-8dd6dd1ec6b7")
 	)
 	(label "2A"
-		(at 190.5 105.41 0)
+		(at 211.455 105.41 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4390,7 +4709,7 @@
 		(uuid "f364a553-67cc-4479-841f-810593885d72")
 	)
 	(label "CSA+"
-		(at 215.265 121.92 180)
+		(at 236.22 121.92 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4401,7 +4720,7 @@
 	)
 	(global_label "UART1_TX"
 		(shape bidirectional)
-		(at 190.5 26.67 0)
+		(at 219.075 26.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4410,7 +4729,7 @@
 		)
 		(uuid "1fc87ad5-8bb8-4a29-affc-f30ab08581d1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 190.5 26.67 90)
+			(at 219.075 26.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4423,7 +4742,7 @@
 	)
 	(global_label "MOTOR3"
 		(shape bidirectional)
-		(at 146.4 121.92 90)
+		(at 167.355 121.92 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4432,7 +4751,7 @@
 		)
 		(uuid "3b9ae980-9d01-4560-9238-b8f9e24daec0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.4 121.92 0)
+			(at 167.355 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4489,7 +4808,7 @@
 	)
 	(global_label "MOTOR2"
 		(shape bidirectional)
-		(at 146.4 107.95 90)
+		(at 167.355 107.95 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4498,7 +4817,7 @@
 		)
 		(uuid "7f3f112f-41e5-4736-a405-85e24bb10476")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.4 107.95 0)
+			(at 167.355 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4511,7 +4830,7 @@
 	)
 	(global_label "CURR"
 		(shape bidirectional)
-		(at 260.985 137.16 0)
+		(at 281.94 137.16 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4520,7 +4839,7 @@
 		)
 		(uuid "7f4483a9-47e0-4042-b7d0-4b3b141247e8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 260.985 137.16 0)
+			(at 281.94 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4533,7 +4852,7 @@
 	)
 	(global_label "UART0_TX"
 		(shape bidirectional)
-		(at 146.4 46.355 90)
+		(at 167.355 46.355 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4542,7 +4861,7 @@
 		)
 		(uuid "8b8ba0a3-76e0-4a09-b6a7-281c968f24a3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.4 46.355 0)
+			(at 167.355 46.355 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4577,7 +4896,7 @@
 	)
 	(global_label "UART0_RX"
 		(shape bidirectional)
-		(at 148.8 48.895 270)
+		(at 169.755 48.895 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4586,7 +4905,7 @@
 		)
 		(uuid "9d462772-60e3-4703-8e16-0219cd1c3ce8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.8 48.895 0)
+			(at 169.755 48.895 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4599,7 +4918,7 @@
 	)
 	(global_label "MOTOR1"
 		(shape bidirectional)
-		(at 146.4 93.98 90)
+		(at 167.355 93.98 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4608,7 +4927,7 @@
 		)
 		(uuid "a6dfe0b4-41f9-4978-b08f-35f7763d2c59")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.4 93.98 0)
+			(at 167.355 93.98 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4621,7 +4940,7 @@
 	)
 	(global_label "SPI0{SCK,MOSI,MISO}"
 		(shape bidirectional)
-		(at 148.8 62.865 270)
+		(at 169.755 62.865 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4630,7 +4949,7 @@
 		)
 		(uuid "aabb9c94-1dd6-4d35-ac00-2b1d796099b2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.8 62.865 0)
+			(at 169.755 62.865 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4643,7 +4962,7 @@
 	)
 	(global_label "UART1_RX"
 		(shape bidirectional)
-		(at 190.5 29.21 0)
+		(at 219.075 29.21 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4652,7 +4971,7 @@
 		)
 		(uuid "bf64122a-e6ea-4c29-b1cd-1add9ce89f7d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 190.5 29.21 90)
+			(at 219.075 29.21 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4665,7 +4984,7 @@
 	)
 	(global_label "FLASH_CS"
 		(shape bidirectional)
-		(at 146.4 60.325 90)
+		(at 167.355 60.325 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4674,7 +4993,7 @@
 		)
 		(uuid "c8ae7f18-ba61-4481-b52b-ded0dae9fbc2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.4 60.325 0)
+			(at 167.355 60.325 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4687,7 +5006,7 @@
 	)
 	(global_label "MOTOR4"
 		(shape bidirectional)
-		(at 146.4 135.89 90)
+		(at 167.355 135.89 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4696,7 +5015,7 @@
 		)
 		(uuid "e9a7c2b9-426a-4b93-a1c7-a459f89fb771")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 146.4 135.89 0)
+			(at 167.355 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4731,7 +5050,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 215.265 129.54 0)
+		(at 236.22 129.54 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4742,7 +5061,7 @@
 		(fields_autoplaced yes)
 		(uuid "0f2913fd-e175-4dd4-8f7b-d828f89d01c0")
 		(property "Reference" "Rsense2"
-			(at 217.805 128.2699 0)
+			(at 238.76 128.2699 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4754,7 +5073,7 @@
 			)
 		)
 		(property "Value" "0.2mR"
-			(at 217.805 130.8099 0)
+			(at 238.76 130.8099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4765,7 +5084,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
-			(at 213.487 129.54 90)
+			(at 234.442 129.54 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4776,7 +5095,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.265 129.54 0)
+			(at 236.22 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4787,7 +5106,7 @@
 			)
 		)
 		(property "Description" "shunt"
-			(at 215.265 129.54 0)
+			(at 236.22 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4798,7 +5117,7 @@
 			)
 		)
 		(property "LCSC" "C695806"
-			(at 215.265 129.54 0)
+			(at 236.22 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4809,7 +5128,7 @@
 			)
 		)
 		(property "Farnell" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4820,7 +5139,7 @@
 			)
 		)
 		(property "Mouser" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4831,7 +5150,7 @@
 			)
 		)
 		(property "Digi-Key" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4842,7 +5161,7 @@
 			)
 		)
 		(property "Cost" "0.2657"
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4853,7 +5172,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4864,7 +5183,7 @@
 			)
 		)
 		(property "MPN" "ASR-S-3-0.2F"
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4875,7 +5194,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 215.265 129.54 0)
+			(at 236.22 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4892,7 +5211,7 @@
 			(uuid "2e43d97b-6c28-4ca7-9c1c-69560544b494")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "Rsense2")
 					(unit 1)
@@ -4902,7 +5221,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 202.565 135.89 0)
+		(at 223.52 135.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4913,7 +5232,7 @@
 		(fields_autoplaced yes)
 		(uuid "170fe344-a39a-4fc1-94cc-1669bdef1fed")
 		(property "Reference" "#PWR060"
-			(at 202.565 139.7 0)
+			(at 223.52 139.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4924,7 +5243,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 202.565 130.81 0)
+			(at 223.52 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4934,7 +5253,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 202.565 135.89 0)
+			(at 223.52 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4945,7 +5264,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 202.565 135.89 0)
+			(at 223.52 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4956,7 +5275,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 202.565 135.89 0)
+			(at 223.52 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4970,7 +5289,7 @@
 			(uuid "d1e34e85-9b52-4101-adf7-2d2057d0bdae")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "#PWR060")
 					(unit 1)
@@ -4979,8 +5298,166 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 151.6832 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "214046e3-819c-4107-a7bf-28db04f9547a")
+		(property "Reference" "TP21"
+			(at 153.5882 103.3779 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.5882 105.9179 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 156.7632 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.7632 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 151.6832 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8bf5dba3-76fc-4513-a897-91283a78ff6a")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 151.765 93.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "233ee6c2-cee4-4637-9d1e-8495a82f2def")
+		(property "Reference" "TP20"
+			(at 153.67 89.4079 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.67 91.9479 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 156.845 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.845 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 151.765 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "22386b6f-17ca-410b-9230-31819db3abdd")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "components:INA186A3IDCKR")
-		(at 244.475 137.16 0)
+		(at 265.43 137.16 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4990,7 +5467,7 @@
 		(dnp no)
 		(uuid "2ba267c1-a23b-40a3-a811-030d5ad5b970")
 		(property "Reference" "U25"
-			(at 246.507 124.206 0)
+			(at 267.462 124.206 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5001,7 +5478,7 @@
 			)
 		)
 		(property "Value" "INA186A3IDCKR"
-			(at 246.507 126.746 0)
+			(at 267.462 126.746 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5012,7 +5489,7 @@
 			)
 		)
 		(property "Footprint" "4in1ESC:SOT-363_SC-70-6"
-			(at 244.475 154.94 0)
+			(at 265.43 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5023,7 +5500,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina186.pdf"
-			(at 244.475 137.16 0)
+			(at 265.43 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5034,7 +5511,7 @@
 			)
 		)
 		(property "Description" "INA186 36V, Low-Power, Precision, Voltage-Output Current Sense Amplifier, 100V/V gain"
-			(at 244.475 137.16 0)
+			(at 265.43 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5045,7 +5522,7 @@
 			)
 		)
 		(property "LCSC" "C2058245"
-			(at 244.475 157.48 0)
+			(at 265.43 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5056,7 +5533,7 @@
 			)
 		)
 		(property "Farnell" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5067,7 +5544,7 @@
 			)
 		)
 		(property "Mouser" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5078,7 +5555,7 @@
 			)
 		)
 		(property "Digi-Key" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5089,7 +5566,7 @@
 			)
 		)
 		(property "Cost" "0.79"
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5100,7 +5577,7 @@
 			)
 		)
 		(property "Manufacturer" "Texas Instruments"
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5111,7 +5588,7 @@
 			)
 		)
 		(property "MPN" "INA186A3IDCKR"
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5140,7 +5617,7 @@
 			(uuid "a55eb0aa-0959-4f93-ba34-672b02d52f06")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "U25")
 					(unit 1)
@@ -5150,7 +5627,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 236.855 128.27 0)
+		(at 257.81 128.27 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5160,7 +5637,7 @@
 		(dnp no)
 		(uuid "2dba2dc5-5a6e-49d2-90fe-b7f583ee005b")
 		(property "Reference" "#PWR0274"
-			(at 236.855 134.62 0)
+			(at 257.81 134.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5171,7 +5648,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 239.395 128.524 0)
+			(at 260.35 128.524 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5181,7 +5658,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 236.855 128.27 0)
+			(at 257.81 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5192,7 +5669,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 236.855 128.27 0)
+			(at 257.81 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5203,7 +5680,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 236.855 128.27 0)
+			(at 257.81 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5217,7 +5694,7 @@
 			(uuid "218bca9d-85e5-401d-9350-a88ceafc26ee")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "#PWR0274")
 					(unit 1)
@@ -5226,8 +5703,166 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 151.13 24.13 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3f201bdd-fa44-475a-b25b-a63af10efc17")
+		(property "Reference" "TP15"
+			(at 153.035 19.5579 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.035 22.0979 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 156.21 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 151.13 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "02feb374-fd29-4335-b9c9-3543a36289c8")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 152.4 48.895 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "40e62344-9231-452f-abe7-ba3911f83927")
+		(property "Reference" "TP17"
+			(at 154.305 44.3229 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 154.305 46.8629 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 157.48 48.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 48.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 152.4 48.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7bacecd1-85f0-4d72-9e3f-019639728321")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "ESCLibrary:GRM033R61C104KE84D")
-		(at 236.855 124.46 270)
+		(at 257.81 124.46 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5237,7 +5872,7 @@
 		(dnp no)
 		(uuid "72d6867b-f4da-4f1d-befa-57c5e9e173ff")
 		(property "Reference" "C104"
-			(at 233.045 123.698 90)
+			(at 254 123.698 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5248,7 +5883,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 234.061 125.476 90)
+			(at 255.016 125.476 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5259,7 +5894,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
-			(at 226.695 124.46 0)
+			(at 247.65 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5271,7 +5906,7 @@
 			)
 		)
 		(property "Datasheet" "https://item.szlcsc.com/360022.html"
-			(at 236.982 122.174 0)
+			(at 257.937 122.174 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5283,7 +5918,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 236.855 124.46 0)
+			(at 257.81 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5294,7 +5929,7 @@
 			)
 		)
 		(property "LCSC" "C181043"
-			(at 236.855 124.46 0)
+			(at 257.81 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5305,7 +5940,7 @@
 			)
 		)
 		(property "Farnell" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5316,7 +5951,7 @@
 			)
 		)
 		(property "Mouser" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5327,7 +5962,7 @@
 			)
 		)
 		(property "Digi-Key" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5338,7 +5973,7 @@
 			)
 		)
 		(property "Cost" "0.008457"
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5349,7 +5984,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5360,7 +5995,7 @@
 			)
 		)
 		(property "MPN" "GRM033R6YA104KE14D"
-			(at -79.375 -3.81 0)
+			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5371,7 +6006,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 236.855 124.46 0)
+			(at 257.81 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5388,7 +6023,7 @@
 			(uuid "9f7e47be-14fd-4679-a2ad-a1b7d5c4cc1b")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "C104")
 					(unit 1)
@@ -5397,8 +6032,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 244.475 119.38 0)
+		(lib_id "Connector:TestPoint")
+		(at 70.485 107.95 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5407,30 +6042,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "831ea333-c61d-444e-a7f7-da7481d0efc3")
-		(property "Reference" "#PWR0275"
-			(at 244.475 123.19 0)
-			(hide yes)
+		(uuid "8060952c-6b0a-4515-b764-5ac751d644ea")
+		(property "Reference" "TP12"
+			(at 72.39 103.3779 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 244.475 114.3 0)
+		(property "Value" "TestPoint"
+			(at 72.39 105.9179 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 244.475 119.38 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 75.565 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5441,7 +6077,85 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 244.475 119.38 0)
+			(at 75.565 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 70.485 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "07a9fb3e-19af-4b3b-b68a-4450c360cd4d")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 265.43 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "831ea333-c61d-444e-a7f7-da7481d0efc3")
+		(property "Reference" "#PWR0275"
+			(at 265.43 123.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 265.43 114.3 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 265.43 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 265.43 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5452,7 +6166,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 244.475 119.38 0)
+			(at 265.43 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5466,7 +6180,7 @@
 			(uuid "6954c99f-9b67-4319-afa3-130a7b31a42d")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "#PWR0275")
 					(unit 1)
@@ -5476,7 +6190,7 @@
 	)
 	(symbol
 		(lib_id "lib:AIO_outline")
-		(at 217.805 94.615 0)
+		(at 238.76 94.615 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5487,7 +6201,7 @@
 		(fields_autoplaced yes)
 		(uuid "8d4437a1-0938-4f9c-9171-98b1cc307271")
 		(property "Reference" "U24"
-			(at 217.805 74.93 0)
+			(at 238.76 74.93 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5497,7 +6211,7 @@
 			)
 		)
 		(property "Value" "AIO_outline"
-			(at 217.805 77.47 0)
+			(at 238.76 77.47 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5507,7 +6221,7 @@
 			)
 		)
 		(property "Footprint" "OpenDrone:AIO_outline"
-			(at 217.805 94.615 0)
+			(at 238.76 94.615 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5518,7 +6232,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 217.805 94.615 0)
+			(at 238.76 94.615 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5529,7 +6243,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 217.805 94.615 0)
+			(at 238.76 94.615 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5585,7 +6299,7 @@
 			(uuid "e676e334-07c5-475a-9ddd-0b1e1472faf7")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "U24")
 					(unit 1)
@@ -5594,8 +6308,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 244.475 147.32 0)
+		(lib_id "Connector:TestPoint")
+		(at 151.765 135.89 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5604,30 +6318,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9dd8a6f4-d1be-458f-9e65-b94a66749404")
-		(property "Reference" "#PWR0276"
-			(at 244.475 153.67 0)
-			(hide yes)
+		(uuid "96cb0a0a-57d6-47b2-b338-7b6ceb3a4324")
+		(property "Reference" "TP23"
+			(at 153.67 131.3179 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "GND"
-			(at 244.475 152.4 0)
+		(property "Value" "TestPoint"
+			(at 153.67 133.8579 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 244.475 147.32 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 156.845 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5638,7 +6353,85 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 244.475 147.32 0)
+			(at 156.845 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 151.765 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e2a8fc24-d74b-4c6f-bb39-2a9809469c76")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 265.43 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9dd8a6f4-d1be-458f-9e65-b94a66749404")
+		(property "Reference" "#PWR0276"
+			(at 265.43 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 265.43 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 265.43 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 265.43 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5649,7 +6442,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 244.475 147.32 0)
+			(at 265.43 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5663,7 +6456,7 @@
 			(uuid "e1732272-43b2-4ded-8572-6371eef1a9b3")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "#PWR0276")
 					(unit 1)
@@ -5672,8 +6465,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 220.345 112.395 0)
+		(lib_id "Connector:TestPoint")
+		(at 64.77 56.515 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5682,30 +6475,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b8369682-0afa-4755-a73a-77cc192669cb")
-		(property "Reference" "#PWR0278"
-			(at 220.345 118.745 0)
-			(hide yes)
+		(uuid "af1ebf09-ffa7-4881-88b7-289aab9225cd")
+		(property "Reference" "TP13"
+			(at 66.675 51.9429 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "GND"
-			(at 220.345 117.475 0)
+		(property "Value" "TestPoint"
+			(at 66.675 54.4829 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 220.345 112.395 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 69.85 56.515 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5716,7 +6510,164 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 220.345 112.395 0)
+			(at 69.85 56.515 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 64.77 56.515 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8eac4305-d6cb-4095-98c2-20171f5ddcb8")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 73.66 110.49 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b0a75e8e-fb51-48cc-b97d-91f04f7ebe36")
+		(property "Reference" "TP10"
+			(at 76.2 105.9179 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 76.2 108.4579 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "OpenDrone:TestPoint_Pad_D1.0mm"
+			(at 78.74 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 73.66 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ea38a9b9-79f2-48c4-acb6-1db0d4c3e478")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 241.3 112.395 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b8369682-0afa-4755-a73a-77cc192669cb")
+		(property "Reference" "#PWR0278"
+			(at 241.3 118.745 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 241.3 117.475 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 241.3 112.395 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 112.395 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5727,7 +6678,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 220.345 112.395 0)
+			(at 241.3 112.395 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5741,7 +6692,7 @@
 			(uuid "1d74f780-0d51-4dfd-ae02-d058b5032fdf")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "#PWR0278")
 					(unit 1)
@@ -5750,8 +6701,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 215.265 94.615 0)
+		(lib_id "Connector:TestPoint")
+		(at 68.58 61.595 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5760,30 +6711,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "dff4050e-b7b8-4eda-a8f7-97afe3a731b2")
-		(property "Reference" "#PWR0279"
-			(at 215.265 100.965 0)
-			(hide yes)
+		(uuid "cc446076-22a2-45a0-aa7c-92e20524220b")
+		(property "Reference" "TP14"
+			(at 70.485 57.0229 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "GND"
-			(at 215.265 99.695 0)
+		(property "Value" "TestPoint"
+			(at 70.485 59.5629 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 215.265 94.615 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 73.66 61.595 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5794,7 +6746,85 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 215.265 94.615 0)
+			(at 73.66 61.595 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 68.58 61.595 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ff579e24-7965-4ad2-a1f0-0d31bb0ebff8")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 236.22 94.615 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dff4050e-b7b8-4eda-a8f7-97afe3a731b2")
+		(property "Reference" "#PWR0279"
+			(at 236.22 100.965 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 236.22 99.695 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 94.615 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 94.615 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5805,7 +6835,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 215.265 94.615 0)
+			(at 236.22 94.615 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5819,7 +6849,7 @@
 			(uuid "355cdcd4-8ef8-4c9c-b754-3e09c40e70e9")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "#PWR0279")
 					(unit 1)
@@ -5828,8 +6858,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 254.635 132.08 90)
+		(lib_id "Connector:TestPoint")
+		(at 152.4 46.355 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5838,31 +6868,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "f0315fac-9d4a-4f90-a9ec-9bf5987da0c1")
-		(property "Reference" "#PWR0277"
-			(at 260.985 132.08 0)
-			(hide yes)
+		(uuid "efd23774-57a7-4a4d-9d42-39a24f1ca34d")
+		(property "Reference" "TP16"
+			(at 154.305 41.7829 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "GND"
-			(at 258.445 132.0799 90)
+		(property "Value" "TestPoint"
+			(at 154.305 44.3229 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 254.635 132.08 0)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 157.48 46.355 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5873,7 +6903,86 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254.635 132.08 0)
+			(at 157.48 46.355 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 152.4 46.355 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ea6f3973-4ea0-4e7e-bf3f-c405c4f40d73")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 275.59 132.08 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0315fac-9d4a-4f90-a9ec-9bf5987da0c1")
+		(property "Reference" "#PWR0277"
+			(at 281.94 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 279.4 132.0799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 275.59 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 275.59 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5884,7 +6993,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 254.635 132.08 0)
+			(at 275.59 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5898,9 +7007,88 @@
 			(uuid "f15d16eb-5dc3-4884-8757-f962fa3f5032")
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "#PWR0277")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 151.765 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f7a44c52-b06b-45fb-9cb9-c9c0a62296ce")
+		(property "Reference" "TP22"
+			(at 153.67 117.3479 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.67 119.8879 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 156.845 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.845 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 151.765 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "cc5dad91-a39b-437a-9554-053112efe1b6")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP22")
 					(unit 1)
 				)
 			)
@@ -6175,7 +7363,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "2")
 				)
@@ -6261,7 +7449,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "4")
 				)
@@ -6307,7 +7495,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "13")
 				)
@@ -6315,7 +7503,7 @@
 		)
 	)
 	(sheet
-		(at 149.86 21.59)
+		(at 170.815 21.59)
 		(size 40.64 29.845)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6331,7 +7519,7 @@
 		)
 		(uuid "6891e3d6-67ec-46df-a6dd-bbed7a5ef668")
 		(property "Sheetname" "Pads"
-			(at 149.86 20.8784 0)
+			(at 170.815 20.8784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6342,7 +7530,7 @@
 			)
 		)
 		(property "Sheetfile" "fc_pads.kicad_sch"
-			(at 149.86 52.0196 0)
+			(at 170.815 52.0196 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6353,7 +7541,7 @@
 			)
 		)
 		(pin "ADC2" output
-			(at 149.86 29.21 180)
+			(at 170.815 29.21 180)
 			(uuid "f6a8adce-b13c-4771-b9ae-9518a9537116")
 			(effects
 				(font
@@ -6363,7 +7551,7 @@
 			)
 		)
 		(pin "BUZZER-" input
-			(at 149.86 33.02 180)
+			(at 170.815 33.02 180)
 			(uuid "d63e7049-48a1-48bf-b5ac-8c5355dacb7d")
 			(effects
 				(font
@@ -6373,7 +7561,7 @@
 			)
 		)
 		(pin "CAMERA" output
-			(at 190.5 46.355 0)
+			(at 211.455 46.355 0)
 			(uuid "780f0e42-951b-436b-baac-307ec1ac7c53")
 			(effects
 				(font
@@ -6383,7 +7571,7 @@
 			)
 		)
 		(pin "I2C0{SCL,SDA}" bidirectional
-			(at 149.86 35.56 180)
+			(at 170.815 35.56 180)
 			(uuid "de6ceb4a-e4b8-4763-8e58-3a838b90844d")
 			(effects
 				(font
@@ -6393,7 +7581,7 @@
 			)
 		)
 		(pin "LED_STRIP" input
-			(at 149.86 24.13 180)
+			(at 170.815 24.13 180)
 			(uuid "d40dc155-61b6-4d96-952e-a169ad8a4e67")
 			(effects
 				(font
@@ -6403,7 +7591,7 @@
 			)
 		)
 		(pin "PIOUART0_RX" output
-			(at 149.86 42.545 180)
+			(at 170.815 42.545 180)
 			(uuid "3dcbc0c7-3f91-49ce-b9b4-f1ae759cd611")
 			(effects
 				(font
@@ -6413,7 +7601,7 @@
 			)
 		)
 		(pin "PIOUART0_TX" input
-			(at 149.86 40.005 180)
+			(at 170.815 40.005 180)
 			(uuid "f6fe79ab-2c00-46d3-a3c2-11d5b24ea341")
 			(effects
 				(font
@@ -6423,7 +7611,7 @@
 			)
 		)
 		(pin "UART0_RX" output
-			(at 149.86 48.895 180)
+			(at 170.815 48.895 180)
 			(uuid "2c1e524a-421c-4660-82df-773ed029b16d")
 			(effects
 				(font
@@ -6433,7 +7621,7 @@
 			)
 		)
 		(pin "UART0_TX" input
-			(at 149.86 46.355 180)
+			(at 170.815 46.355 180)
 			(uuid "2a63c043-4df6-47bf-a295-08a363555969")
 			(effects
 				(font
@@ -6443,7 +7631,7 @@
 			)
 		)
 		(pin "VTX" input
-			(at 190.5 48.895 0)
+			(at 211.455 48.895 0)
 			(uuid "f429efb9-9c3b-4760-8a11-26bd91f0a02f")
 			(effects
 				(font
@@ -6453,7 +7641,7 @@
 			)
 		)
 		(pin "UART1_TX" output
-			(at 190.5 26.67 0)
+			(at 211.455 26.67 0)
 			(uuid "1f777b5f-c85a-4a93-a418-70efca1004f8")
 			(effects
 				(font
@@ -6463,7 +7651,7 @@
 			)
 		)
 		(pin "UART1_RX" input
-			(at 190.5 29.21 0)
+			(at 211.455 29.21 0)
 			(uuid "4ad228f3-f3a9-471f-82f2-fb736cdc4a13")
 			(effects
 				(font
@@ -6473,7 +7661,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "7")
 				)
@@ -6481,7 +7669,7 @@
 		)
 	)
 	(sheet
-		(at 149.86 117.475)
+		(at 170.815 117.475)
 		(size 40.64 8.89)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6497,7 +7685,7 @@
 		)
 		(uuid "6a76a238-9289-499d-aa08-95fd7cfd4af9")
 		(property "Sheetname" "ESC3"
-			(at 149.86 116.7634 0)
+			(at 170.815 116.7634 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6508,7 +7696,7 @@
 			)
 		)
 		(property "Sheetfile" "esc_channel.kicad_sch"
-			(at 149.86 126.9496 0)
+			(at 170.815 126.9496 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6519,7 +7707,7 @@
 			)
 		)
 		(pin "A" output
-			(at 190.5 119.38 0)
+			(at 211.455 119.38 0)
 			(uuid "d4135315-6781-42a7-9a79-761c6cb82f07")
 			(effects
 				(font
@@ -6529,7 +7717,7 @@
 			)
 		)
 		(pin "B" output
-			(at 190.5 121.92 0)
+			(at 211.455 121.92 0)
 			(uuid "ca9edde9-0a60-4b98-8ac4-ef9c37103eb8")
 			(effects
 				(font
@@ -6539,7 +7727,7 @@
 			)
 		)
 		(pin "C" output
-			(at 190.5 124.46 0)
+			(at 211.455 124.46 0)
 			(uuid "1e7431f4-1bab-4cdb-8fc8-6a0f68597329")
 			(effects
 				(font
@@ -6549,7 +7737,7 @@
 			)
 		)
 		(pin "dshot" input
-			(at 149.86 121.92 180)
+			(at 170.815 121.92 180)
 			(uuid "d19d9f24-53f1-4353-85cb-46bea8bd63a3")
 			(effects
 				(font
@@ -6559,7 +7747,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "10")
 				)
@@ -6567,7 +7755,7 @@
 		)
 	)
 	(sheet
-		(at 149.86 103.505)
+		(at 170.815 103.505)
 		(size 40.64 8.89)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6583,7 +7771,7 @@
 		)
 		(uuid "6df3c64b-9042-4802-8151-ba4261464fb0")
 		(property "Sheetname" "ESC2"
-			(at 149.86 102.7934 0)
+			(at 170.815 102.7934 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6594,7 +7782,7 @@
 			)
 		)
 		(property "Sheetfile" "esc_channel.kicad_sch"
-			(at 149.86 112.9796 0)
+			(at 170.815 112.9796 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6605,7 +7793,7 @@
 			)
 		)
 		(pin "A" output
-			(at 190.5 105.41 0)
+			(at 211.455 105.41 0)
 			(uuid "78122dc0-d30f-439f-bd7f-1f83162e09fb")
 			(effects
 				(font
@@ -6615,7 +7803,7 @@
 			)
 		)
 		(pin "B" output
-			(at 190.5 107.95 0)
+			(at 211.455 107.95 0)
 			(uuid "b233075f-1ba4-46d1-91dc-c1a5e1efe17b")
 			(effects
 				(font
@@ -6625,7 +7813,7 @@
 			)
 		)
 		(pin "C" output
-			(at 190.5 110.49 0)
+			(at 211.455 110.49 0)
 			(uuid "11beb1be-b8a2-4987-898c-7dcb094509dc")
 			(effects
 				(font
@@ -6635,7 +7823,7 @@
 			)
 		)
 		(pin "dshot" input
-			(at 149.86 107.95 180)
+			(at 170.815 107.95 180)
 			(uuid "c6374f63-cda4-407d-b5e5-23cbe3080dc8")
 			(effects
 				(font
@@ -6645,7 +7833,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "9")
 				)
@@ -6711,7 +7899,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "12")
 				)
@@ -6719,7 +7907,7 @@
 		)
 	)
 	(sheet
-		(at 149.86 72.39)
+		(at 170.815 72.39)
 		(size 40.64 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6735,7 +7923,7 @@
 		)
 		(uuid "7eb6278f-5b99-473d-b708-4fb1f437cf9b")
 		(property "Sheetname" "OSD"
-			(at 149.86 71.6784 0)
+			(at 170.815 71.6784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6746,7 +7934,7 @@
 			)
 		)
 		(property "Sheetfile" "fc_osd.kicad_sch"
-			(at 149.86 83.1346 0)
+			(at 170.815 83.1346 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6757,7 +7945,7 @@
 			)
 		)
 		(pin "OSD_EN" input
-			(at 149.86 74.93 180)
+			(at 170.815 74.93 180)
 			(uuid "a6712f43-d5d5-4ea3-9996-1ed88613f70a")
 			(effects
 				(font
@@ -6767,7 +7955,7 @@
 			)
 		)
 		(pin "OSD_SYNC" output
-			(at 149.86 77.47 180)
+			(at 170.815 77.47 180)
 			(uuid "03736da5-b1d2-4b40-a632-2bffd19721ad")
 			(effects
 				(font
@@ -6777,7 +7965,7 @@
 			)
 		)
 		(pin "OSD_W" input
-			(at 149.86 80.01 180)
+			(at 170.815 80.01 180)
 			(uuid "f8f11cb9-c4f4-4395-8bcc-3ca02cb2281f")
 			(effects
 				(font
@@ -6787,7 +7975,7 @@
 			)
 		)
 		(pin "VIDEO_OUT" output
-			(at 190.5 75.565 0)
+			(at 211.455 75.565 0)
 			(uuid "947a355a-cf7e-4948-ba20-808aec77d4dc")
 			(effects
 				(font
@@ -6797,7 +7985,7 @@
 			)
 		)
 		(pin "VIDEO_IN" input
-			(at 190.5 78.105 0)
+			(at 211.455 78.105 0)
 			(uuid "439131d2-3b69-4aa6-82a9-34c4842a76fd")
 			(effects
 				(font
@@ -6807,7 +7995,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "5")
 				)
@@ -6815,7 +8003,7 @@
 		)
 	)
 	(sheet
-		(at 149.86 57.15)
+		(at 170.815 57.15)
 		(size 40.64 8.255)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6831,7 +8019,7 @@
 		)
 		(uuid "92d80a6e-4bd9-4df0-920d-da7b8cdc2925")
 		(property "Sheetname" "Blackbox"
-			(at 149.86 56.4384 0)
+			(at 170.815 56.4384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6842,7 +8030,7 @@
 			)
 		)
 		(property "Sheetfile" "fc_blackbox.kicad_sch"
-			(at 149.86 65.9896 0)
+			(at 170.815 65.9896 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6853,7 +8041,7 @@
 			)
 		)
 		(pin "FLASH_CS" input
-			(at 149.86 60.325 180)
+			(at 170.815 60.325 180)
 			(uuid "0d0f2c6d-7164-4c87-882a-e841d2fedd02")
 			(effects
 				(font
@@ -6863,7 +8051,7 @@
 			)
 		)
 		(pin "SPI0{SCK,MOSI,MISO}" bidirectional
-			(at 149.86 62.865 180)
+			(at 170.815 62.865 180)
 			(uuid "3709d325-09fb-47a0-ba93-95e20335bdb4")
 			(effects
 				(font
@@ -6873,7 +8061,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "6")
 				)
@@ -6939,7 +8127,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "3")
 				)
@@ -6947,7 +8135,7 @@
 		)
 	)
 	(sheet
-		(at 149.86 131.445)
+		(at 170.815 131.445)
 		(size 40.64 8.89)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6963,7 +8151,7 @@
 		)
 		(uuid "db3cdd4a-035f-42d3-8f2e-6db113113326")
 		(property "Sheetname" "ESC4"
-			(at 149.86 130.7334 0)
+			(at 170.815 130.7334 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6974,7 +8162,7 @@
 			)
 		)
 		(property "Sheetfile" "esc_channel.kicad_sch"
-			(at 149.86 140.9196 0)
+			(at 170.815 140.9196 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6985,7 +8173,7 @@
 			)
 		)
 		(pin "A" output
-			(at 190.5 133.35 0)
+			(at 211.455 133.35 0)
 			(uuid "de655c5d-3813-48ac-884a-bbbb63b0a834")
 			(effects
 				(font
@@ -6995,7 +8183,7 @@
 			)
 		)
 		(pin "B" output
-			(at 190.5 135.89 0)
+			(at 211.455 135.89 0)
 			(uuid "b5f5ce8f-749a-44d3-a7f3-b038ff6c4091")
 			(effects
 				(font
@@ -7005,7 +8193,7 @@
 			)
 		)
 		(pin "C" output
-			(at 190.5 138.43 0)
+			(at 211.455 138.43 0)
 			(uuid "11015857-2e1b-46e1-85b1-a7f1e68f0680")
 			(effects
 				(font
@@ -7015,7 +8203,7 @@
 			)
 		)
 		(pin "dshot" input
-			(at 149.86 135.89 180)
+			(at 170.815 135.89 180)
 			(uuid "1c2b0408-6920-4a69-aec4-5fb2c5d73df7")
 			(effects
 				(font
@@ -7025,7 +8213,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "11")
 				)
@@ -7033,7 +8221,7 @@
 		)
 	)
 	(sheet
-		(at 149.86 89.535)
+		(at 170.815 89.535)
 		(size 40.64 8.89)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7049,7 +8237,7 @@
 		)
 		(uuid "ed03c608-7402-46a1-8e98-baf93a4f0edb")
 		(property "Sheetname" "ESC1"
-			(at 149.86 88.8234 0)
+			(at 170.815 88.8234 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7060,7 +8248,7 @@
 			)
 		)
 		(property "Sheetfile" "esc_channel.kicad_sch"
-			(at 149.86 99.0096 0)
+			(at 170.815 99.0096 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7071,7 +8259,7 @@
 			)
 		)
 		(pin "A" output
-			(at 190.5 91.44 0)
+			(at 211.455 91.44 0)
 			(uuid "236cf13d-b36b-4db2-b7b7-ebbedd15380c")
 			(effects
 				(font
@@ -7081,7 +8269,7 @@
 			)
 		)
 		(pin "B" output
-			(at 190.5 93.98 0)
+			(at 211.455 93.98 0)
 			(uuid "19f91d99-9f02-4810-9c03-7549fa06d5d7")
 			(effects
 				(font
@@ -7091,7 +8279,7 @@
 			)
 		)
 		(pin "C" output
-			(at 190.5 96.52 0)
+			(at 211.455 96.52 0)
 			(uuid "553bd72f-f207-42c2-a8b2-25bb12dddf19")
 			(effects
 				(font
@@ -7101,7 +8289,7 @@
 			)
 		)
 		(pin "dshot" input
-			(at 149.86 93.98 180)
+			(at 170.815 93.98 180)
 			(uuid "18d5c3f1-a2e4-4320-9f63-d3076432cb3d")
 			(effects
 				(font
@@ -7111,7 +8299,7 @@
 			)
 		)
 		(instances
-			(project "OpenAIO"
+			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "8")
 				)
