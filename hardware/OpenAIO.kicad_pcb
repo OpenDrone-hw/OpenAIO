@@ -11536,7 +11536,7 @@
 			)
 			(fill no)
 			(layer "Cmts.User")
-			(uuid "3a26f296-392b-4bce-afaf-33decd3c119c")
+			(uuid "3f678f32-e1b5-4bf6-8ce0-36c09666858d")
 		)
 		(fp_rect
 			(start -8.05 -6.55)
@@ -84059,8 +84059,8 @@
 	)
 	(zone
 		(layers "F.Cu" "B.Cu" "In1.Cu" "In2.Cu" "In3.Cu" "In4.Cu")
-		(uuid "7303735c-d047-4de1-97e1-36ee3f00c3a6")
-		(name "Core")
+		(uuid "91602daa-5b85-4a0d-8021-acbb42e87304")
+		(name "Base")
 		(hatch edge 0.5)
 		(connect_pads
 			(clearance 0)
@@ -84084,7 +84084,7 @@
 		)
 		(polygon
 			(pts
-				(xy 102.05 42.45) (xy 127.15 42.45) (xy 127.15 64.65) (xy 102.05 64.65)
+				(xy 56.7 42.21) (xy 94.1 42.21) (xy 94.1 79.61) (xy 56.7 79.61)
 			)
 		)
 	)

@@ -8,7 +8,8 @@ master's copper; it writes:
 
   export/OpenAIO-Base.kicad_pcb  (+ .kicad_pro/.kicad_dru copies)   Base island only
   export/OpenAIO-Core.kicad_pcb  (+ .kicad_pro/.kicad_dru copies)   Core island only,
-                              aux (drill) origin at the LGA centre = J91
+                              aux (drill) origin at the LGA centre = J91,
+                              board thickness CORE_THICKNESS_MM
   export/OpenAIO-Core.step       Core STEP, origin at the LGA centre, for the
                               3D model of J90 in the master (--update-master)
   export/*-drc.json              DRC of each derived board (--drc)
@@ -36,6 +37,7 @@ MASTER = os.path.join(HW, "OpenAIO.kicad_pcb")
 FAB = os.path.join(HW, "export")
 KICAD_CLI = "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli"
 LAND, PADS = "J90", "J91"
+CORE_THICKNESS_MM = 0.6   # the hat is as thin as JLCPCB makes a 4-layer board; order it at this thickness
 
 
 def mm(v):
@@ -85,6 +87,7 @@ def derive(keep_left, name):
         # aux origin at the LGA centre so STEP/gerber origins are the mating point
         j = {f.GetReference(): f for f in b.GetFootprints()}[PADS]
         b.GetDesignSettings().SetAuxOrigin(j.GetPosition())
+        b.GetDesignSettings().SetBoardThickness(pcbnew.FromMM(CORE_THICKNESS_MM))
         # Core outline relative to the LGA centre, for the shadow on J90
         bb = None
         for d in b.GetDrawings():
