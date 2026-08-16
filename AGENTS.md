@@ -15,7 +15,10 @@
 All-in-one board for toothpick-class 6S FPV: RP2354A flight controller, 4x AM32
 ESC and ExpressLRS 2.4 GHz receiver on 25.5 x 25.5 mm. The design starts from
 the manufactured sub-sheets of OpenFC-Lite-Mini, OpenESC-20x20 and OpenRX-Lite,
-copied verbatim into `hardware/` and not yet placed on the root sheet.
+copied into `hardware/` and wired on the root sheet. It is a two-PCB stack:
+the **Base** (ESCs, power, pads, RX) and the **Core** (RP2354A, IMU, OSD,
+blackbox), soldered onto the Base as an interior LGA. Both live in one project
+and one master PCB; see Architecture.
 
 ## Repo
 
@@ -25,8 +28,9 @@ copied verbatim into `hardware/` and not yet placed on the root sheet.
 | Status | See the `status-*` topic on the repo. Never written here. |
 | Designed in | KiCad 10 |
 | KiCad project | `hardware/OpenAIO.kicad_pro` |
-| Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets awaiting placement: `fc_power`, `fc_rp2350a`, `fc_imu`, `fc_osd`, `fc_blackbox`, `fc_pads` (OpenFC-Lite-Mini), `esc_channel` (OpenESC-20x20, one channel), `rx_esp32c3_sx1281` (OpenRX-Lite) |
-| Board | `hardware/OpenAIO.kicad_pcb`, 6 layers, template stackup, nothing placed |
+| Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_rp2350a`, `fc_imu`, `fc_osd`, `fc_blackbox`, `fc_pads` (OpenFC-Lite-Mini), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite), `core_interface` (the Base<->Core LGA, generated) |
+| Board | `hardware/OpenAIO.kicad_pcb`, the **master**: Base island and Core island side by side, one stackup, all routing lives here |
+| Derived boards | `hardware/export/OpenAIO-Base.kicad_pcb` and `OpenAIO-Core.kicad_pcb`, written by `hardware/tools/split_boards.py`, gitignored, never edited by hand. DRC, Fabrication Toolkit and STEP run on these |
 | Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib`. Seeded with the OpenFC-Lite-Mini local library so the copied FC sheets resolve; the lib tables also alias `components`, `4in1ESC` and `OpenRX-Shared` onto the catalogue for the same reason |
 | Shared library | [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), one checkout per machine, nickname `OpenDrone`, resolved through the KiCad path variable `OPENDRONE_LIB` (Preferences > Configure Paths) |
 | Design rules | `hardware/OpenAIO.kicad_dru`, canonical block, no board-specific rules yet |
@@ -69,6 +73,9 @@ kicad-cli pcb drc --schematic-parity --refill-zones --exit-code-violations hardw
 
 # netlist, for scripted analysis
 kicad-cli sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/OpenAIO.kicad_sch
+
+# derive Base and Core from the master, DRC both, refresh J90's Core model (KiCad closed)
+cd hardware && /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/split_boards.py --drc --update-master
 ```
 
 On macOS `kicad-cli` is at
@@ -79,9 +86,25 @@ packaging art) live in `OpenDrone-Scripts`; board-specific scripts live in
 
 ## Architecture
 
-<The signal and power chain, block by block, in prose. Roughly ten lines. Say
-why, not just what: the parts of the design a reader could not infer from the
-schematic. Sub-sheet names in backticks so a reader can open the right one.>
+Two PCBs, one project, one schematic, one master PCB. KiCad has one board per
+project, so the master `OpenAIO.kicad_pcb` carries both boards as separate
+islands (Base left, Core right); `tools/split_boards.py` derives the two
+shippable boards from it by island. Nothing is ever routed in the derived files.
+
+The Base<->Core interface is one pin table in `tools/lga_gen.py`, which emits
+everything that must agree: `lib:Core_LGA_land` (F.Cu land pattern on the
+Base, J90), `lib:Core_LGA_pads` (B.Cu pads on the Core, J91, X pre-mirrored so
+the flipped footprint overlays the land pad for pad), the `lib:Core_LGA`
+symbol and the `core_interface` sheet. 2 x 16 pads, 1.0 mm pitch, 12 mm row
+gap, 0.6 mm round pads: 8 GND, `+BATT`, `+5V` x2, `+10V` x2, `+3.3V` x2,
+`+4v5`, and 16 signals (`MOTOR1..4`, `UART0_TX/RX`, `UART1_TX/RX` to the RX,
+`SPI0` + `FLASH_CS` to the SD card, `USB_D+/-`, `10V_ENABLE`, `CURR`). Every
+interface net is a global label; `python3 tools/lga_gen.py` prints the table.
+In the master those nets show one ratsnest line each between the islands, land
+pad to Core pad; that is the interface, not an error (exclude them in the DRC
+dialog once). The Core STEP from the split is J90's 3D model, so the master's
+3D view shows the Core stacked at its true position for collision checks, and
+the Core outline sits on J90's User.Comments layer while routing the Base.
 
 ## Key parts
 
@@ -113,9 +136,13 @@ upstream. Do not restate upstream documentation.>
 
 ## Layout rules
 
-<Only constraints a future editor would break by accident: keep-outs, RF
-clearances, thermal copper, differential pairs, antenna keepouts, current paths
-that must stay short. Delete the section if the board has none.>
+- The Core is one island in the master, kept right of the Base with a clear
+  gap; `split_boards.py` sorts items by which side of the J90/J91 midpoint they
+  lie on and drops anything spanning it. Do not park parts in the gap.
+- J90 and J91 must stay a mirror pair: same rotation, J91 flipped to B.Cu. Move
+  the Core outline (Edge.Cuts) with the island; the split re-derives the shadow.
+- Only the Core's top face carries parts; its bottom is the LGA. Nothing on the
+  Base may stand under the Core footprint outline (J90 User.Comments).
 
 ## Revisions
 

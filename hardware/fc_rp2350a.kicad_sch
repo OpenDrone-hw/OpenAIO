@@ -15773,4 +15773,26 @@
 			)
 		)
 	)
+	(global_label "USB_D+"
+		(shape bidirectional)
+		(at 252.73 190.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7bf75963-1175-479f-b177-36deafcbffba")
+	)
+	(global_label "USB_D-"
+		(shape bidirectional)
+		(at 252.73 187.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "14432ee3-8b78-4a2b-974d-74f8ee804fbf")
+	)
 )
