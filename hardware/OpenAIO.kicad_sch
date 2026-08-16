@@ -3841,6 +3841,12 @@
 		(uuid "24b50ab6-1946-49bf-8bb5-b17c3140f376")
 	)
 	(junction
+		(at 72.39 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2546f39f-aae1-4baf-a721-17aeabfe5925")
+	)
+	(junction
 		(at 152.4 48.895)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3871,12 +3877,6 @@
 		(uuid "603b55bb-8ab3-4f4e-b2e1-d482ef4fe507")
 	)
 	(junction
-		(at 70.485 107.95)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "60f3f3e1-c824-48a9-9217-cf40e1c88a27")
-	)
-	(junction
 		(at 265.43 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3889,16 +3889,16 @@
 		(uuid "90f2f94b-d6c7-46f5-bcce-c40986532947")
 	)
 	(junction
-		(at 73.66 110.49)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cdd1df5f-2b6e-4bcb-af1b-f3d994b392c3")
-	)
-	(junction
 		(at 151.765 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d2ec2d03-4a0a-4744-a2e9-f82054c71566")
+	)
+	(junction
+		(at 70.485 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc528caa-6d44-46f8-8962-658fc27f2d16")
 	)
 	(no_connect
 		(at 62.23 87.63)
@@ -4060,6 +4060,16 @@
 	)
 	(wire
 		(pts
+			(xy 72.39 110.49) (xy 78.74 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25a9a91b-9e67-4ad7-b068-4771e9a1fd65")
+	)
+	(wire
+		(pts
 			(xy 151.765 93.98) (xy 170.815 93.98)
 		)
 		(stroke
@@ -4170,17 +4180,7 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 110.49) (xy 78.74 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c6411e9-0436-4ff8-8314-089c974c13d0")
-	)
-	(wire
-		(pts
-			(xy 62.23 110.49) (xy 73.66 110.49)
+			(xy 62.23 110.49) (xy 72.39 110.49)
 		)
 		(stroke
 			(width 0)
@@ -4257,6 +4257,16 @@
 			(type default)
 		)
 		(uuid "8ce21231-485e-4d90-8fa2-15ede4e73e41")
+	)
+	(wire
+		(pts
+			(xy 70.485 104.14) (xy 70.485 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9abd5248-16d0-4141-9e14-3ad4d8c46548")
 	)
 	(wire
 		(pts
@@ -5303,8 +5313,8 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5382,8 +5392,8 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5708,8 +5718,8 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5787,8 +5797,8 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5855,6 +5865,85 @@
 			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "TP17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 72.39 110.49 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58b681c3-f730-43a0-92aa-620dc0f608aa")
+		(property "Reference" "TP41"
+			(at 74.295 105.9179 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 74.295 108.4579 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 77.47 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 77.47 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 72.39 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9644ecc0-071c-4564-9907-2e2d681b4fe2")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP41")
 					(unit 1)
 				)
 			)
@@ -6033,18 +6122,18 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 70.485 107.95 0)
+		(at 70.485 104.14 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8060952c-6b0a-4515-b764-5ac751d644ea")
 		(property "Reference" "TP12"
-			(at 72.39 103.3779 0)
+			(at 72.39 99.5679 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6055,7 +6144,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 72.39 105.9179 0)
+			(at 72.39 102.1079 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6066,7 +6155,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 75.565 107.95 0)
+			(at 75.565 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6077,7 +6166,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 75.565 107.95 0)
+			(at 75.565 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6088,7 +6177,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 70.485 107.95 0)
+			(at 70.485 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6313,8 +6402,8 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6470,8 +6559,8 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6538,85 +6627,6 @@
 			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "TP13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 73.66 110.49 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b0a75e8e-fb51-48cc-b97d-91f04f7ebe36")
-		(property "Reference" "TP10"
-			(at 76.2 105.9179 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 76.2 108.4579 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "OpenDrone:TestPoint_Pad_D1.0mm"
-			(at 78.74 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 73.66 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ea38a9b9-79f2-48c4-acb6-1db0d4c3e478")
-		)
-		(instances
-			(project "OpenAIO-Base"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(reference "TP10")
 					(unit 1)
 				)
 			)
@@ -6706,8 +6716,8 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6863,8 +6873,8 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -7021,8 +7031,8 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -8305,6 +8315,17 @@
 				)
 			)
 		)
+	)
+	(global_label "LED_STRIP"
+		(shape bidirectional)
+		(at 160.02 24.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "82c8c21f-de05-4111-8c1d-72d2f4dcfdc8")
 	)
 	(sheet_instances
 		(path "/"

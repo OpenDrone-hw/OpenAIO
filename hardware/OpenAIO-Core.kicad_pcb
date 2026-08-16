@@ -589,7 +589,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "0954d06c-a02f-4b99-93d6-30886bad9c12")
-		(at 120.97 55.2)
+		(at 121.07 55.18)
 		(property "Reference" "J42"
 			(at 0 -0.5 0)
 			(unlocked yes)
@@ -681,7 +681,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "0c0c1857-06e4-4ba5-9a37-f17006c0fb50")
-		(at 120.97 53.2)
+		(at 121.07 53.18)
 		(property "Reference" "J43"
 			(at 0 -0.5 0)
 			(unlocked yes)
@@ -1157,7 +1157,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "1337dfaf-231e-4d41-8d65-af1e4767c3c5")
-		(at 120.97 57.2 180)
+		(at 121.07 57.18 180)
 		(property "Reference" "J45"
 			(at 0 -0.5 180)
 			(unlocked yes)
@@ -1249,7 +1249,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "13fdf1fa-8aac-49db-99cc-994b15cb43b9")
-		(at 116.2 44.9 90)
+		(at 116 44.68 90)
 		(property "Reference" "J30"
 			(at 0 -0.5 90)
 			(unlocked yes)
@@ -1341,7 +1341,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "16379905-6632-409b-a10f-bdd6563b15e6")
-		(at 124.8 55.2)
+		(at 124.99 55.19)
 		(property "Reference" "J37"
 			(at 0 -0.5 0)
 			(unlocked yes)
@@ -2399,7 +2399,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "22b8cf2f-b1ac-4670-b8ab-a3abba96c65d")
-		(at 121.2 61.5 -90)
+		(at 121.39 61.62 -90)
 		(property "Reference" "J48"
 			(at 0 -0.5 270)
 			(unlocked yes)
@@ -2491,7 +2491,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "22ef43fd-5e15-49dd-8eb9-7c065bda9be9")
-		(at 110.225 44.93 90)
+		(at 110.025 44.71 90)
 		(property "Reference" "J23"
 			(at 0 -0.5 90)
 			(unlocked yes)
@@ -5416,7 +5416,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "458fe7d0-5511-4b0d-91ab-2e7f3d5c0311")
-		(at 124.8 57.2)
+		(at 124.99 57.19)
 		(property "Reference" "J38"
 			(at 0 -0.5 0)
 			(unlocked yes)
@@ -5508,7 +5508,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "4bf0354d-2645-4de8-ba50-0a047990598a")
-		(at 104.2 44.9 -90)
+		(at 104 44.68 -90)
 		(property "Reference" "J39"
 			(at 0 -0.5 270)
 			(unlocked yes)
@@ -8924,7 +8924,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "8491b778-c7fa-40f5-9427-1c2ba93e0234")
-		(at 112.2 44.93 90)
+		(at 112 44.71 90)
 		(property "Reference" "J26"
 			(at 0 -0.5 90)
 			(unlocked yes)
@@ -9016,13 +9016,13 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "8538a928-17be-4fa2-a1e2-d7a63776cddc")
-		(at 118.83 48.6 180)
+		(at 119.13 48.35 180)
 		(property "Reference" "J52"
 			(at 0 -0.5 180)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "e7dbe68b-a90f-4b17-a893-0e8c50ddd93f")
+			(uuid "5ca83876-86c0-470e-b123-c9c311aa8100")
 			(effects
 				(font
 					(size 1 1)
@@ -9034,7 +9034,7 @@
 			(at 0 1 180)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "0eeb2bb5-920b-46a3-a8c5-3417ebe8dcbe")
+			(uuid "8579efc3-f07b-4389-a070-45e87ffeb1f6")
 			(effects
 				(font
 					(size 1 1)
@@ -9047,7 +9047,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "1c683214-6207-41c8-88f4-7c8a41dcd9ac")
+			(uuid "b9a97b99-21d0-44dc-94b4-28acebe0529f")
 			(effects
 				(font
 					(size 1 1)
@@ -9060,7 +9060,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c1872812-cdcb-4570-9869-5fc89e40e33f")
+			(uuid "6ede4619-e6b9-4c3a-a377-2d1f93362ced")
 			(effects
 				(font
 					(size 1 1)
@@ -9464,7 +9464,7 @@
 			(at -0.34 0 270)
 			(size 0.6 0.35)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "/Pads/LED_STRIP")
+			(net "LED_STRIP")
 			(pinfunction "D_3")
 			(pintype "unspecified")
 			(uuid "fe66f7ce-9cfc-45ae-bfb8-85be776e0b04")
@@ -9677,13 +9677,13 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "8f1498d8-a902-41d0-aa03-4a017c2e6cb6")
-		(at 118.83 44.6 180)
+		(at 119.13 44.35 180)
 		(property "Reference" "J55"
 			(at 0 -0.5 180)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "34c19428-d22d-4c62-9614-aede7d37bd27")
+			(uuid "872a141d-0a9e-4b44-8130-567fb0152d59")
 			(effects
 				(font
 					(size 1 1)
@@ -9695,7 +9695,7 @@
 			(at 0 1 180)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "f0acda6b-f52c-4fe0-ade5-210d3ad4b856")
+			(uuid "df7cb826-d052-4bfb-bf07-cbd3ca32472e")
 			(effects
 				(font
 					(size 1 1)
@@ -9708,7 +9708,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4a1d71c0-440f-4c8e-9936-ad582b116db8")
+			(uuid "7a64b7c8-9758-4185-9969-462d43c321e3")
 			(effects
 				(font
 					(size 1 1)
@@ -9721,7 +9721,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "73d31766-9678-4820-b0c8-f9e699b4d2e6")
+			(uuid "06b33e23-1b6c-49b3-88f3-64019a085ee5")
 			(effects
 				(font
 					(size 1 1)
@@ -9967,7 +9967,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "9242d39f-bf5c-4d35-b274-976252f62f15")
-		(at 124.8 53.2)
+		(at 124.99 53.19)
 		(property "Reference" "J35"
 			(at 0 -0.5 0)
 			(unlocked yes)
@@ -10251,7 +10251,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "958c5dc0-792c-48e8-aa5c-851bdff6d69d")
-		(at 121 59.2 180)
+		(at 121.1 59.18 180)
 		(property "Reference" "J44"
 			(at 0 -0.5 180)
 			(unlocked yes)
@@ -10727,7 +10727,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "a2787cac-0e7f-41f1-87c7-2d8e2565712b")
-		(at 115.2 61.5 -90)
+		(at 115.39 61.62 -90)
 		(property "Reference" "J51"
 			(at 0 -0.5 270)
 			(unlocked yes)
@@ -10819,7 +10819,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "a386c710-d2a1-4a15-8107-71510cdd87a6")
-		(at 117.2 61.5 -90)
+		(at 117.39 61.62 -90)
 		(property "Reference" "J50"
 			(at 0 -0.5 270)
 			(unlocked yes)
@@ -10911,7 +10911,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "a38bb22f-591b-4969-bc42-a233ffec8d57")
-		(at 106.2 44.9 -90)
+		(at 106 44.68 -90)
 		(property "Reference" "J41"
 			(at 0 -0.5 270)
 			(unlocked yes)
@@ -11244,7 +11244,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "a93fafeb-538c-41cc-93c7-8e31cfbba641")
-		(at 108.2 44.9 -90)
+		(at 108 44.68 -90)
 		(property "Reference" "J40"
 			(at 0 -0.5 270)
 			(unlocked yes)
@@ -11530,13 +11530,13 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "ab8ba100-8145-4205-a71b-72e6fc536cd2")
-		(at 118.83 46.6 180)
+		(at 119.13 46.35 180)
 		(property "Reference" "J54"
 			(at 0 -0.5 180)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "ce21d4e0-0ae8-41c4-a633-4cbde6299fa4")
+			(uuid "16fa6b9e-29df-4fb3-b018-129df009f55e")
 			(effects
 				(font
 					(size 1 1)
@@ -11548,7 +11548,7 @@
 			(at 0 1 180)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "27a8c920-b0b7-409b-b763-ffe97ca42637")
+			(uuid "65a82112-564b-4dec-9a08-d91a64edf609")
 			(effects
 				(font
 					(size 1 1)
@@ -11561,7 +11561,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "53f327c2-68fe-44ba-a535-39f563ebd061")
+			(uuid "82cffe5f-8e26-4278-9369-e4804bec8a82")
 			(effects
 				(font
 					(size 1 1)
@@ -11574,7 +11574,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "ce9460aa-fbe1-4447-8f75-bba0c09a205c")
+			(uuid "e6af8de2-fe4e-4046-9f95-bb69c461b695")
 			(effects
 				(font
 					(size 1 1)
@@ -11622,7 +11622,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "ab9977f9-6a9e-432c-b07a-9bf38a95a697")
-		(at 114.2 44.9 90)
+		(at 114 44.68 90)
 		(property "Reference" "J34"
 			(at 0 -0.5 90)
 			(unlocked yes)
@@ -13808,7 +13808,7 @@
 			(size 0.46 0.4)
 			(layers "F.Cu" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net "/Pads/LED_STRIP")
+			(net "LED_STRIP")
 			(pintype "passive")
 			(uuid "52bb08cf-9ea0-4223-a8a5-7763523bf88f")
 		)
@@ -13828,7 +13828,7 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "d4b69e4f-4c1b-4a36-9a18-cdc75bb72829")
-		(at 119.2 61.5 -90)
+		(at 119.39 61.62 -90)
 		(property "Reference" "J49"
 			(at 0 -0.5 270)
 			(unlocked yes)
@@ -15565,13 +15565,13 @@
 	(footprint "lib:small_pad"
 		(layer "F.Cu")
 		(uuid "fac7adf3-edc1-490f-9f25-4569383ff199")
-		(at 118.83 50.6 180)
+		(at 119.13 50.35 180)
 		(property "Reference" "J53"
 			(at 0 -0.5 180)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "3298d784-5332-49a6-a03f-d5cdac03b80f")
+			(uuid "2a5fc765-744f-457e-8622-d6d59403fbd5")
 			(effects
 				(font
 					(size 1 1)
@@ -15583,7 +15583,7 @@
 			(at 0 1 180)
 			(unlocked yes)
 			(layer "F.Fab")
-			(uuid "63392c2e-d7e7-4c65-8525-297c8501546f")
+			(uuid "01695428-1d0e-43de-8ae9-2fd0b50625e4")
 			(effects
 				(font
 					(size 1 1)
@@ -15596,7 +15596,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "713d6848-507d-4ac4-bcf7-09ad824481c0")
+			(uuid "82db2681-0c48-440b-a465-97599aa1e7c8")
 			(effects
 				(font
 					(size 1 1)
@@ -15609,7 +15609,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "c6652ae8-84d4-47d6-a278-4ce7b0831b23")
+			(uuid "1ac1c6af-44c6-42d8-893e-c384adb6aa2c")
 			(effects
 				(font
 					(size 1 1)
@@ -15999,334 +15999,316 @@
 	)
 	(footprint "lib:Core_LGA_pads"
 		(layer "B.Cu")
-		(uuid "52de1279-71b2-4493-8214-cf0578a041f4")
+		(uuid "3142ceea-dd8e-4eb1-afd6-ac771f622eec")
 		(at 114.1 53.55 180)
 		(descr "OpenAIO Core LGA pads on the Core bottom. Place on B.Cu: X is pre-mirrored so the flipped footprint overlays Core_LGA_land pad for pad. No paste. Generated by tools/lga_gen.py")
 		(tags "OpenAIO LGA board-to-board")
 		(property "Reference" "J91"
-			(at 0 7.55 0)
+			(at 0 -11.81 180)
 			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "52003cc4-ddf3-41a6-bb5a-09ba90c13e8b")
+			(layer "F.SilkS")
+			(uuid "adaab206-54f2-4354-9ea6-bf6ed255d44d")
 			(effects
 				(font
 					(size 0.8 0.8)
 					(thickness 0.12)
 				)
-				(justify mirror)
 			)
 		)
 		(property "Value" "Core_LGA"
-			(at 0 -7.55 0)
+			(at 0 11.81 180)
 			(unlocked yes)
-			(layer "B.Fab")
-			(uuid "938f9eb6-996d-4799-867d-86f3b8170c83")
+			(layer "F.Fab")
+			(uuid "05a87c5c-1bd7-4b5c-b608-14c4da5fbc4d")
 			(effects
 				(font
 					(size 0.8 0.8)
 					(thickness 0.12)
 				)
-				(justify mirror)
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
-			(layer "B.Fab")
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "7a2dbd98-156c-48c9-ba9c-bc22ad044d2b")
+			(uuid "e9fec98f-4506-4dee-b65f-09a4312622b6")
 			(effects
 				(font
 					(size 0.8 0.8)
 					(thickness 0.12)
 				)
-				(justify mirror)
 			)
 		)
 		(property "Description" "OpenAIO Core LGA pads on the Core bottom. Place on B.Cu: X is pre-mirrored so the flipped footprint overlays Core_LGA_land pad for pad. No paste. Generated by tools/lga_gen.py"
-			(at 0 0 0)
+			(at 0 0 180)
 			(unlocked yes)
-			(layer "B.Fab")
+			(layer "F.Fab")
 			(hide yes)
-			(uuid "97b1ce07-46d5-4a5b-a4dc-522e0476b6c9")
+			(uuid "6d060b10-578b-4e0d-9523-1aeb5fc6276d")
 			(effects
 				(font
 					(size 0.8 0.8)
 					(thickness 0.12)
 				)
-				(justify mirror)
 			)
 		)
 		(path "/0d0b26c5-e9b6-4ca3-8b9f-93c86665bc0c/d395b1fb-c80e-4a09-90ac-e42e3079cc9c")
 		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
-			(center 8.4 6.9)
-			(end 8.55 6.9)
+			(center 1.15 -11.16)
+			(end 1.3 -11.16)
 			(stroke
 				(width 0.15)
 				(type default)
 			)
 			(fill yes)
-			(layer "B.SilkS")
-			(uuid "7a4de40a-2232-40ec-8703-88cc1519a22c")
+			(layer "F.SilkS")
+			(uuid "461752c8-c24d-46ff-b832-be0da90f23b8")
 		)
 		(fp_rect
-			(start -8.05 6.55)
-			(end 8.05 -6.55)
+			(start -11 -10.81)
+			(end 11 10.81)
 			(stroke
 				(width 0.05)
 				(type default)
 			)
 			(fill no)
-			(layer "B.CrtYd")
-			(uuid "7fc116f7-3473-4438-ac8e-1257c9f9b051")
+			(layer "F.CrtYd")
+			(uuid "859af93e-7d2b-4b01-8034-0f566c965543")
 		)
 		(fp_rect
-			(start -8.05 6.55)
-			(end 8.05 -6.55)
+			(start -11 -10.81)
+			(end 11 10.81)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(fill no)
-			(layer "B.Fab")
-			(uuid "74c1cef8-3072-4403-bb9f-3c0baa920968")
+			(layer "F.Fab")
+			(uuid "bf406cf6-55d4-488c-805b-92f34b9914eb")
 		)
 		(fp_circle
-			(center 8.4 6.9)
-			(end 8.55 6.9)
+			(center 1.15 -11.16)
+			(end 1.3 -11.16)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(fill yes)
-			(layer "B.Fab")
-			(uuid "617a1234-2920-4a80-be55-36af4d33864e")
+			(layer "F.Fab")
+			(uuid "3a941076-f3e1-4b12-9cbb-fed497060545")
 		)
 		(pad "1" smd circle
-			(at 7.5 6 180)
+			(at 0.25 -10.26 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
+			(layers "F.Cu" "F.Mask")
 			(net "GND")
-			(uuid "90d41f84-67c7-417b-a4b0-9a1f403218ff")
+			(uuid "4832085b-8d65-40c4-adc6-318e7cd1f9d3")
 		)
 		(pad "2" smd circle
-			(at 6.5 6 180)
+			(at 10.45 -7.48 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "+BATT")
-			(uuid "23919ee8-2087-496b-a7a9-5cd19d087960")
+			(layers "F.Cu" "F.Mask")
+			(net "10V_ENABLE")
+			(uuid "8cd108be-e614-4c1f-8135-f959bf5222c2")
 		)
 		(pad "3" smd circle
-			(at 5.5 6 180)
+			(at 10.45 -5.48 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "GND")
-			(uuid "9178442b-6d0c-4aee-a2ba-cbe351571802")
+			(layers "F.Cu" "F.Mask")
+			(net "CURR")
+			(uuid "2a340eb4-bd76-4b05-8413-8eebb0c1520a")
 		)
 		(pad "4" smd circle
-			(at 4.5 6 180)
+			(at 7.8 -4.79 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "+5V")
-			(uuid "96a6d510-c73a-456d-9caf-646d8d4c4dbe")
+			(layers "F.Cu" "F.Mask")
+			(net "SPI0.MISO")
+			(uuid "409e735b-bca6-469d-b1cc-a51462c0f030")
 		)
 		(pad "5" smd circle
-			(at 3.5 6 180)
+			(at 5.8 -4.79 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "+5V")
-			(uuid "94db72b2-6c00-4913-ac26-5ffac4d85d8c")
+			(layers "F.Cu" "F.Mask")
+			(net "SPI0.SCK")
+			(uuid "fe176171-ed29-4ca4-9328-13ff5267831f")
 		)
 		(pad "6" smd circle
-			(at 2.5 6 180)
+			(at 3.8 -4.79 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "GND")
-			(uuid "c5c08ef9-9b49-41c9-b4c6-685d4d4b6ebe")
+			(layers "F.Cu" "F.Mask")
+			(net "SPI0.MOSI")
+			(uuid "3fc77370-6967-47c3-98de-173e0613b584")
 		)
 		(pad "7" smd circle
-			(at 1.5 6 180)
+			(at 1.8 -4.79 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "+10V")
-			(uuid "67b8dda5-4e2d-4fe4-89d6-df4b4ccd9b99")
+			(layers "F.Cu" "F.Mask")
+			(net "FLASH_CS")
+			(uuid "bad1a69e-5d5a-453d-98ab-f92f0c496dc0")
 		)
 		(pad "8" smd circle
-			(at 0.5 6 180)
+			(at 10.45 -3.48 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "+10V")
-			(uuid "110ef005-fed8-4b6d-aea9-cdc3fdd7059c")
+			(layers "F.Cu" "F.Mask")
+			(net "USB_D+")
+			(uuid "199230c1-eb6e-42a4-acee-683f44b7a16e")
 		)
 		(pad "9" smd circle
-			(at -0.5 6 180)
+			(at 5.8 -2.79 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
+			(layers "F.Cu" "F.Mask")
 			(net "GND")
-			(uuid "cba378a9-a6e4-40ec-926d-88688fd0e8d1")
+			(uuid "397b807d-ae9e-40b3-ab0f-ee491844d650")
 		)
 		(pad "10" smd circle
-			(at -1.5 6 180)
+			(at 3.8 -2.79 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "+3.3V")
-			(uuid "e133a135-6254-4b00-bf73-006ecf2da6a8")
+			(layers "F.Cu" "F.Mask")
+			(net "GND")
+			(uuid "d39c87c5-0d8a-4760-b236-291751349bc7")
 		)
 		(pad "11" smd circle
-			(at -2.5 6 180)
+			(at 10.45 -1.48 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "+3.3V")
-			(uuid "92cd537e-95f1-4a06-8dfc-8b8185b496cf")
+			(layers "F.Cu" "F.Mask")
+			(net "USB_D-")
+			(uuid "3dd92539-d41b-467d-a82a-d9abc4f77218")
 		)
 		(pad "12" smd circle
-			(at -3.5 6 180)
+			(at -8.45 1.4 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "+4v5")
-			(uuid "3dff8a37-df8d-4f84-b908-c58cb66c7b79")
+			(layers "F.Cu" "F.Mask")
+			(net "GND")
+			(uuid "21bc1328-437b-4a68-9f6a-90ba1e532dc1")
 		)
 		(pad "13" smd circle
-			(at -4.5 6 180)
+			(at -10.45 1.4 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
+			(layers "F.Cu" "F.Mask")
 			(net "GND")
-			(uuid "2157e158-adb2-45bb-9112-54656e85fce3")
+			(uuid "e372a6a5-a5a7-4928-ad64-f8722657b18b")
 		)
 		(pad "14" smd circle
-			(at -5.5 6 180)
+			(at 5.82 3.29 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "10V_ENABLE")
-			(uuid "2d85cf67-4f14-4b91-b904-33b36fcbcd40")
+			(layers "F.Cu" "F.Mask")
+			(net "MOTOR2")
+			(uuid "486f9f20-cf7b-48d9-8b39-4ecc374f9c4e")
 		)
 		(pad "15" smd circle
-			(at -6.5 6 180)
+			(at 3.82 3.29 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "CURR")
-			(uuid "0671a369-e84c-4b83-a83f-0e8cf9f8ba99")
+			(layers "F.Cu" "F.Mask")
+			(net "MOTOR4")
+			(uuid "07e9710c-271c-4115-83e6-f928887daba0")
 		)
 		(pad "16" smd circle
-			(at -7.5 6 180)
+			(at 1.82 3.29 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
+			(layers "F.Cu" "F.Mask")
 			(net "GND")
-			(uuid "0079e00d-9341-4519-a1a6-9bee2c12e96c")
+			(uuid "9983f1a3-e840-4471-a0f9-a5b6b1eb4d26")
 		)
 		(pad "17" smd circle
-			(at 7.5 -6 180)
+			(at -0.18 3.29 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
+			(layers "F.Cu" "F.Mask")
 			(net "GND")
-			(uuid "8fc69f65-a99b-46ce-88cf-5835a51b3067")
+			(uuid "ee90d909-f9ff-4024-a143-02ee6c279b92")
 		)
 		(pad "18" smd circle
-			(at 6.5 -6 180)
+			(at 5.82 5.29 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "USB_D+")
-			(uuid "036397ca-1b2c-4e7e-b462-0fcf3d513670")
+			(layers "F.Cu" "F.Mask")
+			(net "MOTOR1")
+			(uuid "fde548c8-071c-42a5-a951-270a422a31f1")
 		)
 		(pad "19" smd circle
-			(at 5.5 -6 180)
+			(at 3.82 5.29 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "USB_D-")
-			(uuid "b6b915de-e8ed-4ed9-99f0-21dbfc85e47f")
+			(layers "F.Cu" "F.Mask")
+			(net "MOTOR3")
+			(uuid "eb3a51e4-6535-4d62-b9b4-a5f590a385da")
 		)
 		(pad "20" smd circle
-			(at 4.5 -6 180)
+			(at 1.82 5.29 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
+			(layers "F.Cu" "F.Mask")
 			(net "GND")
-			(uuid "cafcd672-4aca-41ce-8d7b-bdda27dd2d5c")
+			(uuid "6496f697-1e8f-4d54-8668-c33032b1931c")
 		)
 		(pad "21" smd circle
-			(at 3.5 -6 180)
+			(at -0.18 5.29 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "MOTOR1")
-			(uuid "30560aaa-ae4c-4e21-86bd-a3aa939af851")
+			(layers "F.Cu" "F.Mask")
+			(net "GND")
+			(uuid "89c214e6-7831-4312-a6e5-54a2fa156de7")
 		)
 		(pad "22" smd circle
-			(at 2.5 -6 180)
+			(at 8.3 5.4 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "MOTOR2")
-			(uuid "9e692394-d481-4e94-840b-50b345162cfe")
+			(layers "F.Cu" "F.Mask")
+			(net "+BATT")
+			(uuid "86857237-a5b4-42ac-9a30-ef0247f63cf8")
 		)
 		(pad "23" smd circle
-			(at 1.5 -6 180)
+			(at 7.13 8.25 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "MOTOR3")
-			(uuid "35078d22-c412-4611-bf22-f464e7f9cb81")
+			(layers "F.Cu" "F.Mask")
+			(net "GND")
+			(uuid "088d0093-125f-4c35-83a6-795e115ebf1c")
 		)
 		(pad "24" smd circle
-			(at 0.5 -6 180)
+			(at 4.12 8.25 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "MOTOR4")
-			(uuid "390c2aaa-97db-4dfb-ad29-0c5528688bc3")
+			(layers "F.Cu" "F.Mask")
+			(net "GND")
+			(uuid "7ee80c89-2e02-47bc-bff0-467780d81e30")
 		)
 		(pad "25" smd circle
-			(at -0.5 -6 180)
+			(at -2.97 9.95 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "UART0_TX")
-			(uuid "0dc98ecd-9965-4b11-bfb8-2de311dfc5f8")
+			(layers "F.Cu" "F.Mask")
+			(net "GND")
+			(uuid "658fdbea-1fc5-4e8b-be0d-5baa94206e6f")
 		)
 		(pad "26" smd circle
-			(at -1.5 -6 180)
+			(at -4.97 9.95 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "UART0_RX")
-			(uuid "9adea34d-bd8f-4c49-bfd5-063104236e2e")
+			(layers "F.Cu" "F.Mask")
+			(net "UART0_TX")
+			(uuid "73db984c-c6e2-46a8-939e-39566f700a7a")
 		)
 		(pad "27" smd circle
-			(at -2.5 -6 180)
+			(at -6.97 9.95 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "UART1_TX")
-			(uuid "70840a22-84d8-49cb-b15a-831c1f4b1c1e")
+			(layers "F.Cu" "F.Mask")
+			(net "UART0_RX")
+			(uuid "b7cfddd3-ce3e-407a-9314-02fd6a307fe8")
 		)
 		(pad "28" smd circle
-			(at -3.5 -6 180)
+			(at 7.13 10.25 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "UART1_RX")
-			(uuid "a20a84ea-42e7-4ce2-9203-ebd208b276f3")
+			(layers "F.Cu" "F.Mask")
+			(net "LED_STRIP")
+			(uuid "52ef6a52-abb2-4bae-8565-e076b959ad55")
 		)
 		(pad "29" smd circle
-			(at -4.5 -6 180)
+			(at 3.13 10.25 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "SPI0.SCK")
-			(uuid "4d27f111-15e2-43a8-ad14-22b698689964")
+			(layers "F.Cu" "F.Mask")
+			(net "UART1_RX")
+			(uuid "b551d702-d3e0-43f5-8e3b-5c4ef0d37240")
 		)
 		(pad "30" smd circle
-			(at -5.5 -6 180)
+			(at 1.13 10.25 180)
 			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "SPI0.MOSI")
-			(uuid "5c75ea94-9555-4a00-9808-57dc23611355")
-		)
-		(pad "31" smd circle
-			(at -6.5 -6 180)
-			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "SPI0.MISO")
-			(uuid "7ad862fc-dae2-496b-91e4-e95e44249da1")
-		)
-		(pad "32" smd circle
-			(at -7.5 -6 180)
-			(size 0.6 0.6)
-			(layers "B.Cu" "B.Mask")
-			(net "FLASH_CS")
-			(uuid "b884c336-cbca-4cca-addd-2e38a0267cab")
+			(layers "F.Cu" "F.Mask")
+			(net "UART1_TX")
+			(uuid "54ce7c23-cabc-4679-9149-e619aa951207")
 		)
 		(embedded_fonts no)
 	)

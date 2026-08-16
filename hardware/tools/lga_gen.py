@@ -12,8 +12,13 @@ they cannot drift:
   core_interface.kicad_sch             the interface sheet (only if missing, or
                                        with --sheet; it is a hand-editable file)
 
-Run from hardware/:  python3 tools/lga_gen.py [--sheet]
-Plain Python 3, no dependencies. Never edits OpenAIO.kicad_sch.
+Run from hardware/:
+  KPY tools/lga_gen.py --from-base [--sheet]   read the marker test points on the Base
+                                               (KiCad's Python), rewrite the pin table
+                                               here, then generate everything
+  python3 tools/lga_gen.py [--sheet]           regenerate from the stored table
+Never edits OpenAIO.kicad_sch. Putting the new footprints on the boards is
+tools/lga_apply.py.
 """
 import os
 import re
@@ -24,61 +29,132 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 HW = os.path.dirname(HERE)
 
 # ---------------------------------------------------------------- pin table
-# (number, name, kind)   kind: PWR power net, SIG signal, BUS member of SPI0.
+# (number, name, kind, x, y)   kind: PWR power net, SIG signal, BUS member of SPI0.
+# x, y in mm, top view of the Base land pattern, footprint origin = ORIGIN.
 # Every interface net is a GLOBAL label: the interface is board-wide by nature.
-# Row A = pins 1..16 (y = -ROW_GAP/2), row B = pins 17..32 (y = +ROW_GAP/2),
-# pin 1 top-left, numbers increase left to right in each row (top view of the
-# Base land pattern).
-PITCH = 1.0        # mm, pad pitch inside a row
-ROW_GAP = 12.0     # mm, distance between the two rows
+# The table is written by `--from-base`: it reads the marker test points
+# (TP10 and up, one per pin, net = the interface net) from OpenAIO-Base.kicad_pcb
+# and rewrites the block between PINS-BEGIN and PINS-END in this file. Pins
+# are numbered in reading order, top row first, left to right.
 PAD = 0.6          # mm, round pad diameter
-NPR = 16           # pads per row
-
+MARKER_MIN = 10    # TP references below this are real test points, not markers
+# PINS-BEGIN
+ORIGIN = (80.25, 60.26)   # absolute Base position of J90 (and of J91 relative to the Core)
 PINS = [
-    (1, "GND", "PWR"),
-    (2, "+BATT", "PWR"),
-    (3, "GND", "PWR"),
-    (4, "+5V", "PWR"),
-    (5, "+5V", "PWR"),
-    (6, "GND", "PWR"),
-    (7, "+10V", "PWR"),
-    (8, "+10V", "PWR"),
-    (9, "GND", "PWR"),
-    (10, "+3.3V", "PWR"),
-    (11, "+3.3V", "PWR"),
-    (12, "+4v5", "PWR"),
-    (13, "GND", "PWR"),
-    (14, "10V_ENABLE", "SIG"),
-    (15, "CURR", "SIG"),
-    (16, "GND", "PWR"),
-    (17, "GND", "PWR"),
-    (18, "USB_D+", "SIG"),
-    (19, "USB_D-", "SIG"),
-    (20, "GND", "PWR"),
-    (21, "MOTOR1", "SIG"),
-    (22, "MOTOR2", "SIG"),
-    (23, "MOTOR3", "SIG"),
-    (24, "MOTOR4", "SIG"),
-    (25, "UART0_TX", "SIG"),
-    (26, "UART0_RX", "SIG"),
-    (27, "UART1_TX", "SIG"),
-    (28, "UART1_RX", "SIG"),
-    (29, "SPI0.SCK", "BUS"),
-    (30, "SPI0.MOSI", "BUS"),
-    (31, "SPI0.MISO", "BUS"),
-    (32, "FLASH_CS", "SIG"),
+    (1, "GND", "PWR", -0.25, -10.26),
+    (2, "10V_ENABLE", "SIG", -10.45, -7.48),
+    (3, "CURR", "SIG", -10.45, -5.48),
+    (4, "SPI0.MISO", "BUS", -7.8, -4.79),
+    (5, "SPI0.SCK", "BUS", -5.8, -4.79),
+    (6, "SPI0.MOSI", "BUS", -3.8, -4.79),
+    (7, "FLASH_CS", "SIG", -1.8, -4.79),
+    (8, "USB_D+", "SIG", -10.45, -3.48),
+    (9, "GND", "PWR", -5.8, -2.79),
+    (10, "GND", "PWR", -3.8, -2.79),
+    (11, "USB_D-", "SIG", -10.45, -1.48),
+    (12, "GND", "PWR", 8.45, 1.4),
+    (13, "GND", "PWR", 10.45, 1.4),
+    (14, "MOTOR2", "SIG", -5.82, 3.29),
+    (15, "MOTOR4", "SIG", -3.82, 3.29),
+    (16, "GND", "PWR", -1.82, 3.29),
+    (17, "GND", "PWR", 0.18, 3.29),
+    (18, "MOTOR1", "SIG", -5.82, 5.29),
+    (19, "MOTOR3", "SIG", -3.82, 5.29),
+    (20, "GND", "PWR", -1.82, 5.29),
+    (21, "GND", "PWR", 0.18, 5.29),
+    (22, "+BATT", "PWR", -8.3, 5.4),
+    (23, "GND", "PWR", -7.13, 8.25),
+    (24, "GND", "PWR", -4.12, 8.25),
+    (25, "GND", "PWR", 2.97, 9.95),
+    (26, "UART0_TX", "SIG", 4.97, 9.95),
+    (27, "UART0_RX", "SIG", 6.97, 9.95),
+    (28, "LED_STRIP", "SIG", -7.13, 10.25),
+    (29, "UART1_RX", "SIG", -3.13, 10.25),
+    (30, "UART1_TX", "SIG", -1.13, 10.25),
 ]
+# PINS-END
 BUS_LABEL = "SPI0{SCK,MOSI,MISO}"
-assert len(PINS) == 2 * NPR and [p[0] for p in PINS] == list(range(1, 2 * NPR + 1))
+
+
+def N():
+    return len(PINS)
+
+
+def kind_of(name):
+    if name.startswith("SPI0."):
+        return "BUS"
+    if name == "GND" or name.startswith("+"):
+        return "PWR"
+    return "SIG"
 
 
 def pad_xy(n):
     """Top-view position of pad n on the Base land pattern, footprint origin
-    at the array centre."""
-    row, col = divmod(n - 1, NPR)
-    x = (col - (NPR - 1) / 2) * PITCH
-    y = (row - 0.5) * ROW_GAP
-    return round(x, 4), round(y, 4)
+    at ORIGIN."""
+    for m, _, _, x, y in PINS:
+        if m == n:
+            return x, y
+    raise KeyError(n)
+
+
+def pad_name(n):
+    for m, name, _, _, _ in PINS:
+        if m == n:
+            return name
+    raise KeyError(n)
+
+
+def bbox():
+    xs = [p[3] for p in PINS]
+    ys = [p[4] for p in PINS]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def read_markers_from_base():
+    """Marker test points on OpenAIO-Base.kicad_pcb -> (origin, pins). Needs
+    KiCad's Python (pcbnew)."""
+    import pcbnew
+    b = pcbnew.LoadBoard(os.path.join(HW, "OpenAIO-Base.kicad_pcb"))
+    marks = []
+    for f in b.GetFootprints():
+        ref = f.GetReference()
+        m = re.fullmatch(r"TP(\d+)", ref)
+        if not m or int(m.group(1)) < MARKER_MIN:
+            continue
+        nets = {p.GetNetname() for p in f.Pads()} - {""}
+        net = next(iter(nets)) if len(nets) == 1 else None
+        if not net or net.startswith("unconnected-"):
+            print(f"  skip {ref}: no net")
+            continue
+        net = net.rsplit("/", 1)[-1]   # a local net (/Pads/LED_STRIP) becomes the global label LED_STRIP
+        pos = f.GetPosition()
+        marks.append((ref, net, round(pcbnew.ToMM(pos.x), 3), round(pcbnew.ToMM(pos.y), 3)))
+    if not marks:
+        sys.exit("no marker test points (TP%d+ with a net) on OpenAIO-Base" % MARKER_MIN)
+    xs = [m[2] for m in marks]
+    ys = [m[3] for m in marks]
+    ox = round((min(xs) + max(xs)) / 2, 2)
+    oy = round((min(ys) + max(ys)) / 2, 2)
+    marks.sort(key=lambda m: (round(m[3], 1), m[2]))
+    pins = [(i + 1, net, kind_of(net), round(x - ox, 3), round(y - oy, 3)) for i, (ref, net, x, y) in enumerate(marks)]
+    for (ref, net, x, y), pin in zip(marks, pins):
+        print(f"  {ref:5s} -> pin {pin[0]:2d} {net:12s} at ({pin[3]:+.3f}, {pin[4]:+.3f})")
+    return (ox, oy), pins
+
+
+def rewrite_pins(origin, pins):
+    """Rewrite the PINS-BEGIN..PINS-END block of this file."""
+    path = os.path.abspath(__file__)
+    s = open(path).read()
+    a = s.index("# PINS-BEGIN\n") + len("# PINS-BEGIN\n")
+    z = s.index("# PINS-END")
+    body = [f"ORIGIN = ({origin[0]}, {origin[1]})   # absolute Base position of J90 (and of J91 relative to the Core)", "PINS = ["]
+    for n, name, kind, x, y in pins:
+        body.append(f'    ({n}, "{name}", "{kind}", {x}, {y}),')
+    body.append("]")
+    s = s[:a] + "\n".join(body) + "\n" + s[z:]
+    open(path, "w").write(s)
+    print(f"rewrote PINS in tools/lga_gen.py: {len(pins)} pins, origin {origin}")
 
 
 def u():
@@ -95,8 +171,9 @@ def footprint(name, mirror, layers, paste, descr):
     L.append('\t(layer "F.Cu")')
     L.append(f'\t(descr "{descr}")')
     L.append('\t(tags "OpenAIO LGA board-to-board")')
-    half_w = (NPR - 1) / 2 * PITCH + PAD / 2 + 0.25
-    half_h = ROW_GAP / 2 + PAD / 2 + 0.25
+    x0, y0, x1, y1 = bbox()
+    half_w = max(abs(x0), abs(x1)) + PAD / 2 + 0.25
+    half_h = max(abs(y0), abs(y1)) + PAD / 2 + 0.25
 
     def prop(k, v, y, layer, hide=False):
         L.append(f'\t(property "{k}" "{v}"')
@@ -125,8 +202,7 @@ def footprint(name, mirror, layers, paste, descr):
              f' (stroke (width 0.15) (type default)) (fill yes) (layer "F.SilkS") (uuid "{u()}"))')
     L.append(f'\t(fp_circle (center {sx * (x1 - 0.9):.4f} {y1 - 0.9:.4f}) (end {sx * (x1 - 0.9) + 0.15:.4f} {y1 - 0.9:.4f})'
              f' (stroke (width 0.1) (type default)) (fill yes) (layer "F.Fab") (uuid "{u()}"))')
-    for n, pname, kind in PINS:
-        x, y = pad_xy(n)
+    for n, pname, kind, x, y in PINS:
         if mirror:
             x = -x
         lay = " ".join(f'"{l}"' for l in layers)
@@ -140,8 +216,8 @@ def footprint(name, mirror, layers, paste, descr):
 def write_footprints():
     d = os.path.join(HW, "lib.pretty")
     land = footprint("Core_LGA_land", False, ["F.Cu", "F.Mask", "F.Paste"], True,
-                     "OpenAIO Core LGA land pattern on the Base, 2x16 pads, 1.0 mm pitch, 12 mm row gap, "
-                     "0.6 mm pads, paste. Generated by tools/lga_gen.py")
+                     f"OpenAIO Core LGA land pattern on the Base, {N()} pads, 0.6 mm, positions from the marker "
+                     "test points. Paste. Generated by tools/lga_gen.py --from-base")
     pads = footprint("Core_LGA_pads", True, ["F.Cu", "F.Mask"], False,
                      "OpenAIO Core LGA pads on the Core bottom. Place on B.Cu: X is pre-mirrored so the flipped "
                      "footprint overlays Core_LGA_land pad for pad. No paste. Generated by tools/lga_gen.py")
@@ -154,12 +230,11 @@ def write_footprints():
 # ---------------------------------------------------------------- symbol
 SYM = "Core_LGA"
 SYM_PITCH = 2.54
-SYM_H = (2 * NPR + 1) * SYM_PITCH   # body height
 
 
 def symbol_block():
     """Symbol with all pins on the left, one per LGA pad. Reference J."""
-    top = -((2 * NPR - 1) / 2) * SYM_PITCH  # y of pin 1
+    top = -((N() - 1) / 2) * SYM_PITCH  # y of pin 1
     L = []
     L.append(f'\t(symbol "{SYM}"')
     L.append('\t\t(exclude_from_sim no)')
@@ -180,13 +255,13 @@ def symbol_block():
     prop("Value", SYM, 0, top - 3.81)
     prop("Footprint", "lib:Core_LGA_land", 0, 0, True)
     prop("Datasheet", "", 0, 0, True)
-    prop("Description", "OpenAIO Base<->Core LGA interface, 32 pads. Two instances: J90 land (Base), J91 pads (Core). Pin table: tools/lga_gen.py", 0, 0, True)
+    prop("Description", f"OpenAIO Base<->Core LGA interface, {N()} pads. Two instances: J90 land (Base), J91 pads (Core). Pin table: tools/lga_gen.py", 0, 0, True)
     L.append(f'\t\t(symbol "{SYM}_0_1"')
-    L.append(f'\t\t\t(rectangle (start 0 {top - 2.54}) (end 12.7 {top + (2 * NPR) * SYM_PITCH - 0.0})'
+    L.append(f'\t\t\t(rectangle (start 0 {top - 2.54}) (end 12.7 {top + N() * SYM_PITCH - 0.0})'
              ' (stroke (width 0.254) (type default)) (fill (type background)))')
     L.append('\t\t)')
     L.append(f'\t\t(symbol "{SYM}_1_1"')
-    for n, pname, kind in PINS:
+    for n, pname, kind, _, _ in PINS:
         y = -(top + (n - 1) * SYM_PITCH)   # symbol Y axis is up in lib files
         etype = "passive"
         L.append(f'\t\t\t(pin {etype} line')
@@ -255,7 +330,7 @@ def sheet_file(root_uuid, sheet_uuid, sym_uuids):
     L.append(lib_symbol_for_sheet().rstrip('\n'))
     L.append('\t)')
 
-    top = -((2 * NPR - 1) / 2) * SYM_PITCH
+    top = -((N() - 1) / 2) * SYM_PITCH
     inst_path = f"/{root_uuid}/{sheet_uuid}"
 
     def place(ref, fpname, ox, oy):
@@ -283,7 +358,7 @@ def sheet_file(root_uuid, sheet_uuid, sym_uuids):
             L.append('\t\t\t(do_not_autoplace no)')
             L.append('\t\t\t(effects (font (size 1.27 1.27)) (justify left))')
             L.append('\t\t)')
-        for n, _, _ in PINS:
+        for n, _, _, _, _ in PINS:
             L.append(f'\t\t(pin "{n}" (uuid "{u()}"))')
         L.append('\t\t(instances')
         L.append('\t\t\t(project "OpenAIO"')
@@ -319,7 +394,7 @@ def sheet_file(root_uuid, sheet_uuid, sym_uuids):
         place(ref, fp, ox, oy)
         px = ox - 3.81
         bus_x = px - 20.32
-        for n, pname, kind in PINS:
+        for n, pname, kind, _, _ in PINS:
             py = oy + top + (n - 1) * SYM_PITCH
             if kind == "PWR":
                 wire(px, py, px - 7.62, py)
@@ -333,7 +408,7 @@ def sheet_file(root_uuid, sheet_uuid, sym_uuids):
                 L.append(f'\t(bus_entry (at {bus_x:.4f} {py + 2.54:.4f}) (size 2.54 -2.54)'
                          f' (stroke (width 0) (type default)) (uuid "{u()}"))')
         # bus spine + hierarchical bus label
-        bus_pins = [n for n, _, k in PINS if k == "BUS"]
+        bus_pins = [n for n, _, k, _, _ in PINS if k == "BUS"]
         y0 = oy + top + (bus_pins[0] - 1) * SYM_PITCH + 2.54
         y1 = oy + top + (bus_pins[-1] - 1) * SYM_PITCH + 2.54 + 7.62
         bus(bus_x, y0 - 2.54, bus_x, y1)
@@ -375,12 +450,17 @@ def write_sheet(force):
 
 def print_table():
     print("\nLGA pin table (top view of the Base land pattern):")
-    for n, pname, kind in PINS:
-        x, y = pad_xy(n)
-        print(f"  {n:2d}  {pname:12s} {kind:3s}  x={x:+6.2f} y={y:+6.2f}")
+    for n, pname, kind, x, y in PINS:
+        print(f"  {n:2d}  {pname:12s} {kind:3s}  x={x:+7.3f} y={y:+7.3f}")
 
 
 if __name__ == "__main__":
+    if "--from-base" in sys.argv:
+        origin, pins = read_markers_from_base()
+        rewrite_pins(origin, pins)
+        ORIGIN, PINS = origin, pins
+    if not PINS:
+        sys.exit("PINS is empty: run  tools/lga_gen.py --from-base  with the marker test points on OpenAIO-Base")
     write_footprints()
     splice_symbol()
     write_sheet("--sheet" in sys.argv)
