@@ -32,12 +32,13 @@ HW = os.path.dirname(HERE)
 # (number, name, kind, x, y)   kind: PWR power net, SIG signal, BUS member of SPI0.
 # x, y in mm, top view of the Base land pattern, footprint origin = ORIGIN.
 # Every interface net is a GLOBAL label: the interface is board-wide by nature.
-# The table is written by `--from-base`: it reads the marker test points
-# (TP10 and up, one per pin, net = the interface net) from OpenAIO-Base.kicad_pcb
+# The table is written by `--from-base`: it reads the J90 on the board plus the
+# marker test points (see read_markers_from_base) from OpenAIO-Base.kicad_pcb
 # and rewrites the block between PINS-BEGIN and PINS-END in this file. Pins
 # are numbered in reading order, top row first, left to right.
 PAD = 1.0          # mm, round pad diameter, same as the marker test points
 MARKER_MIN = 10    # TP references below this are real test points, not markers
+MOVE_R = 1.0       # mm, a marker this close to an existing pin moves (with net) or deletes (no net) it
 # PINS-BEGIN
 ORIGIN = (80.25, 60.26)   # absolute Base position of J90 (and of J91 relative to the Core)
 PINS = [
@@ -111,35 +112,75 @@ def bbox():
 
 
 def read_markers_from_base():
-    """Marker test points on OpenAIO-Base.kicad_pcb -> (origin, pins). Needs
-    KiCad's Python (pcbnew)."""
+    """Markers on OpenAIO-Base.kicad_pcb -> (origin, pins). Needs KiCad's
+    Python (pcbnew).
+
+    The pin set starts from the pads of the J90 already on the board (net +
+    position), so the pattern survives between regenerations. Then every test
+    point footprint (any lib, name TestPoint*, reference not TP1..TP9, which
+    are the board's real test points):
+      with a net     -> a pin. If a pin of the same net lies within MOVE_R of
+                        it, that pin moves here (moved pad); else it is added.
+      without a net  -> deletes the pin within MOVE_R of it (any net); a
+                        footprint added straight from the library has no net,
+                        so "drop a TestPoint on the pad" removes the pad.
+    A local net (/Pads/LED_STRIP) becomes the global label LED_STRIP.
+    """
     import pcbnew
     b = pcbnew.LoadBoard(os.path.join(HW, "OpenAIO-Base.kicad_pcb"))
-    marks = []
+    pins = []      # [net, x, y]
+    for f in b.GetFootprints():
+        if f.GetFPID().GetLibItemName() == "Core_LGA_land":
+            for p in f.Pads():
+                q = p.GetPosition()
+                pins.append([p.GetNetname(), round(pcbnew.ToMM(q.x), 3), round(pcbnew.ToMM(q.y), 3)])
+    if pins:
+        print(f"  {len(pins)} pins from the J90 on the board")
+
+    def near(x, y, net=None):
+        for i, (n, px, py) in enumerate(pins):
+            if ((px - x) ** 2 + (py - y) ** 2) ** 0.5 <= MOVE_R and (net is None or n == net):
+                return i
+        return None
+
     for f in b.GetFootprints():
         ref = f.GetReference()
-        m = re.fullmatch(r"TP(\d+)", ref)
-        if not m or int(m.group(1)) < MARKER_MIN:
+        if not str(f.GetFPID().GetLibItemName()).startswith("TestPoint"):
             continue
+        m = re.fullmatch(r"TP(\d+)", ref)
+        if m and int(m.group(1)) < MARKER_MIN:
+            continue
+        pos = f.GetPosition()
+        x, y = round(pcbnew.ToMM(pos.x), 3), round(pcbnew.ToMM(pos.y), 3)
         nets = {p.GetNetname() for p in f.Pads()} - {""}
         net = next(iter(nets)) if len(nets) == 1 else None
         if not net or net.startswith("unconnected-"):
-            print(f"  skip {ref}: no net")
+            i = near(x, y)
+            if i is None:
+                print(f"  {ref} at ({x}, {y}): no net and no pad within {MOVE_R} mm, ignored")
+            else:
+                print(f"  {ref}: deletes pin {pins[i][0]} at ({pins[i][1]}, {pins[i][2]})")
+                pins.pop(i)
             continue
-        net = net.rsplit("/", 1)[-1]   # a local net (/Pads/LED_STRIP) becomes the global label LED_STRIP
-        pos = f.GetPosition()
-        marks.append((ref, net, round(pcbnew.ToMM(pos.x), 3), round(pcbnew.ToMM(pos.y), 3)))
-    if not marks:
-        sys.exit("no marker test points (TP%d+ with a net) on OpenAIO-Base" % MARKER_MIN)
-    xs = [m[2] for m in marks]
-    ys = [m[3] for m in marks]
+        net = net.rsplit("/", 1)[-1]
+        i = near(x, y, net)
+        if i is not None:
+            print(f"  {ref}: moves {net} ({pins[i][1]}, {pins[i][2]}) -> ({x}, {y})")
+            pins[i][1], pins[i][2] = x, y
+        else:
+            print(f"  {ref}: adds {net} at ({x}, {y})")
+            pins.append([net, x, y])
+    if not pins:
+        sys.exit("no pins: no J90 and no marker test points with a net on OpenAIO-Base")
+    xs = [p[1] for p in pins]
+    ys = [p[2] for p in pins]
     ox = round((min(xs) + max(xs)) / 2, 2)
     oy = round((min(ys) + max(ys)) / 2, 2)
-    marks.sort(key=lambda m: (round(m[3], 1), m[2]))
-    pins = [(i + 1, net, kind_of(net), round(x - ox, 3), round(y - oy, 3)) for i, (ref, net, x, y) in enumerate(marks)]
-    for (ref, net, x, y), pin in zip(marks, pins):
-        print(f"  {ref:5s} -> pin {pin[0]:2d} {net:12s} at ({pin[3]:+.3f}, {pin[4]:+.3f})")
-    return (ox, oy), pins
+    pins.sort(key=lambda p: (round(p[2], 1), p[1]))
+    out = [(i + 1, net, kind_of(net), round(x - ox, 3), round(y - oy, 3)) for i, (net, x, y) in enumerate(pins)]
+    for n, net, kind, x, y in out:
+        print(f"  pin {n:2d} {net:12s} at ({x:+.3f}, {y:+.3f})")
+    return (ox, oy), out
 
 
 def rewrite_pins(origin, pins):

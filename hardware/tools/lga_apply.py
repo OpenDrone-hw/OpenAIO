@@ -5,9 +5,9 @@
   KPY=/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3
   $KPY tools/lga_apply.py
 
-  Base  OpenAIO-Base.kicad_pcb : deletes the marker test points (TP10 and up)
-        and any old J90, places lib:Core_LGA_land as J90 at ORIGIN, pad nets
-        from the pin table
+  Base  OpenAIO-Base.kicad_pcb : deletes the marker test points (every
+        TestPoint footprint except TP1..TP9) and the old J90, places
+        lib:Core_LGA_land as J90 at ORIGIN, pad nets from the pin table
   Core  OpenAIO-Core.kicad_pcb : replaces J91 (lib:Core_LGA_pads, B.Cu) at its
         current position, pad nets from the pin table
   Schematic: the marker test points get "exclude from board" (they stay as the
@@ -74,7 +74,9 @@ def do_base(paths):
     for f in list(b.GetFootprints()):
         r = f.GetReference()
         m = re.fullmatch(r"TP(\d+)", r)
-        if (m and int(m.group(1)) >= lga_gen.MARKER_MIN) or f.GetFPID().GetLibItemName() == "Core_LGA_land":
+        real_tp = m and int(m.group(1)) < lga_gen.MARKER_MIN
+        is_marker = str(f.GetFPID().GetLibItemName()).startswith("TestPoint") and not real_tp
+        if is_marker or f.GetFPID().GetLibItemName() == "Core_LGA_land":
             gone.append(r)
             b.Delete(f)
     ox, oy = lga_gen.ORIGIN
