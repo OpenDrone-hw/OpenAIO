@@ -69,6 +69,51 @@ def load():
     return b, fps, split
 
 
+def set_thickness(b, total_mm):
+    """Board thickness for the STEP export. KiCad builds the body from the
+    stackup, whose descriptor is not reachable from Python, so the general
+    thickness is set here and the dielectric layers of the stackup are scaled
+    in the written file by fix_stackup()."""
+    b.GetDesignSettings().SetBoardThickness(pcbnew.FromMM(total_mm))
+
+
+def fix_stackup(path, total_mm):
+    """Scale every dielectric thickness in the (stackup ...) block of a derived
+    board file so copper + dielectric = total_mm. Generated file, text edit is fine."""
+    s = open(path).read()
+    a = s.find("(stackup")
+    if a < 0:
+        return
+    d = 0
+    e = a
+    while True:
+        c = s[e]
+        if c == "(":
+            d += 1
+        elif c == ")":
+            d -= 1
+            if d == 0:
+                e += 1
+                break
+        e += 1
+    blk = s[a:e]
+    layers = re.findall(r'\(layer "([^"]+)"(.*?)\n\t\t\t\)', blk, re.S)
+    cu = sum(float(m) for name, body in layers if name.endswith(".Cu")
+             for m in re.findall(r"\(thickness ([0-9.]+)\)", body))
+    ndiel = sum(len(re.findall(r"\(thickness ([0-9.]+)", body)) for name, body in layers if name.startswith("dielectric"))
+    if not ndiel:
+        return
+    each = (total_mm - cu) / ndiel
+
+    def sub(m):
+        name, body = m.group(1), m.group(2)
+        if name.startswith("dielectric"):
+            body = re.sub(r"\(thickness [0-9.]+", f"(thickness {each:.4f}", body)
+        return f'(layer "{name}"{body}\n\t\t\t)'
+    blk2 = re.sub(r'\(layer "([^"]+)"(.*?)\n\t\t\t\)', sub, blk, flags=re.S)
+    open(path, "w").write(s[:a] + blk2 + s[e:])
+
+
 def derive(keep_left, name):
     """Reload the master and delete everything on the other side."""
     b, fps, split = load()
@@ -87,7 +132,7 @@ def derive(keep_left, name):
         # aux origin at the LGA centre so STEP/gerber origins are the mating point
         j = {f.GetReference(): f for f in b.GetFootprints()}[PADS]
         b.GetDesignSettings().SetAuxOrigin(j.GetPosition())
-        b.GetDesignSettings().SetBoardThickness(pcbnew.FromMM(CORE_THICKNESS_MM))
+        set_thickness(b, CORE_THICKNESS_MM)
         # Core outline relative to the LGA centre, for the shadow on J90
         bb = None
         for d in b.GetDrawings():
@@ -105,6 +150,8 @@ def derive(keep_left, name):
     out = os.path.join(FAB, name + ".kicad_pcb")
     b.SetFileName(out)
     pcbnew.SaveBoard(out, b)
+    if not keep_left:
+        fix_stackup(out, CORE_THICKNESS_MM)
     print(f"  wrote export/{name}.kicad_pcb  ({len(list(b.GetFootprints()))} footprints, {dropped} items dropped)")
     return out
 
@@ -121,7 +168,11 @@ def export_step(core_pcb):
     r = subprocess.run([KICAD_CLI, "pcb", "export", "step", "--drill-origin", "--no-dnp", "--subst-models",
                         "--force", "-o", out, core_pcb], capture_output=True, text=True)
     ok = os.path.exists(out) and r.returncode == 0
-    print(f"  Core STEP {'ok' if ok else 'FAILED: ' + r.stderr.strip()[-300:]}: export/OpenAIO-Core.step")
+    if not ok:  # kicad-cli exits non-zero for skipped .wrl models but still writes the STEP
+        ok = os.path.exists(out) and "Export time" in (r.stdout + r.stderr) or "Cannot use VRML" in r.stderr
+    wrl = r.stderr.count("Cannot use VRML")
+    print(f"  Core STEP {'ok' if ok else 'FAILED: ' + r.stderr.strip()[-300:]}: export/OpenAIO-Core.step"
+          + (f"  ({wrl} .wrl-only models skipped, STEP export cannot use VRML)" if wrl else ""))
     return out if ok else None
 
 
@@ -186,6 +237,11 @@ def main():
             update_master(os.path.join(FAB, "OpenAIO-Core.step"), os.path.join(FAB, "OpenAIO-Core.kicad_pcb"))
         return
     os.makedirs(FAB, exist_ok=True)
+    # ${KIPRJMOD} of a derived board is export/, so the project 3D models must
+    # be reachable there for the STEP export
+    link = os.path.join(FAB, "lib.3dshapes")
+    if not os.path.lexists(link):
+        os.symlink(os.path.join("..", "lib.3dshapes"), link)
     print("split master into export/OpenAIO-Base and export/OpenAIO-Core")
 
     def child(ph):
