@@ -6912,7 +6912,7 @@
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom no)
-		(on_board yes)
+		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -8432,6 +8432,17 @@
 				)
 			)
 		)
+	)
+	(global_label "BUZZER-"
+		(shape bidirectional)
+		(at 160.02 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "079449b3-130c-4e86-bef8-5cca659c1ee4")
 	)
 	(sheet_instances
 		(path "/"

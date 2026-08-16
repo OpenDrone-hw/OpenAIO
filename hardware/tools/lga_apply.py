@@ -8,8 +8,9 @@
   Base  OpenAIO-Base.kicad_pcb : deletes the marker test points (every
         TestPoint footprint except TP1..TP9) and the old J90, places
         lib:Core_LGA_land as J90 at ORIGIN, pad nets from the pin table
-  Core  OpenAIO-Core.kicad_pcb : replaces J91 (lib:Core_LGA_pads, B.Cu) at its
-        current position, pad nets from the pin table
+  Core  OpenAIO-Core.kicad_pcb : replaces J91 (lib:Core_LGA_pads, B.Cu),
+        shifted by the same amount the pattern centre moved on the Base so
+        the hat keeps its place, pad nets from the pin table
   Schematic: the marker test points get "exclude from board" (they stay as the
         record of which net crosses where, the plugin skips them); nets that
         were local labels get the matching global label on the root
@@ -71,22 +72,27 @@ def do_base(paths):
     """Returns the marker refs it removed."""
     b = pcbnew.LoadBoard(BASE)
     gone = []
+    old_j90 = None
     for f in list(b.GetFootprints()):
         r = f.GetReference()
         m = re.fullmatch(r"TP(\d+)", r)
         real_tp = m and int(m.group(1)) < lga_gen.MARKER_MIN
         is_marker = str(f.GetFPID().GetLibItemName()).startswith("TestPoint") and not real_tp
         if is_marker or f.GetFPID().GetLibItemName() == "Core_LGA_land":
+            if f.GetFPID().GetLibItemName() == "Core_LGA_land":
+                old_j90 = f.GetPosition()
             gone.append(r)
             b.Delete(f)
     ox, oy = lga_gen.ORIGIN
     place(b, "Core_LGA_land", "J90", pcbnew.VECTOR2I(pcbnew.FromMM(ox), pcbnew.FromMM(oy)), False, paths["J90"])
     pcbnew.SaveBoard(BASE, b)
     print(f"Base: removed {len(gone)} ({', '.join(sorted(gone))}), J90 at ({ox}, {oy})")
-    return [r for r in gone if r.startswith("TP")]
+    # the pattern centre moved by this much; J91 follows so the hat stays put on the Base
+    delta = (pcbnew.FromMM(ox) - old_j90.x, pcbnew.FromMM(oy) - old_j90.y) if old_j90 else (0, 0)
+    return [r for r in gone if r.startswith("TP")], delta
 
 
-def do_core(paths):
+def do_core(paths, delta=(0, 0)):
     c = pcbnew.LoadBoard(CORE)
     old = [f for f in c.GetFootprints() if f.GetReference() == "J91" or f.GetFPID().GetLibItemName() == "Core_LGA_pads"]
     if old:
@@ -95,6 +101,9 @@ def do_core(paths):
             c.Delete(f)
     else:
         pos = c.GetDesignSettings().GetAuxOrigin()
+    pos = pcbnew.VECTOR2I(pos.x + delta[0], pos.y + delta[1])
+    if delta != (0, 0):
+        print(f"Core: J91 shifted by ({pcbnew.ToMM(delta[0]):.3f}, {pcbnew.ToMM(delta[1]):.3f}) with the pattern centre")
     place(c, "Core_LGA_pads", "J91", pos, True, paths["J91"])
     c.GetDesignSettings().SetAuxOrigin(pos)
     pcbnew.SaveBoard(CORE, c)
@@ -175,8 +184,9 @@ def main():
             sys.exit(f"{os.path.basename(f)} is open in KiCad, close it")
     paths = sym_paths()
     root_globals()
-    markers_off_board(do_base(paths))
-    do_core(paths)
+    consumed, delta = do_base(paths)
+    markers_off_board(consumed)
+    do_core(paths, delta)
 
 
 if __name__ == "__main__":
