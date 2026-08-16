@@ -128,6 +128,161 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -5266,6 +5421,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 234.95 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b499fe88-fc6e-48a3-a274-9b480187f9f6")
 		)
@@ -5306,6 +5472,96 @@
 				)
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
 					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+BATT")
+		(at 234.95 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "023ab7c7-1ae1-49e1-823a-da723031d52d")
+		(property "Reference" "#PWR0248"
+			(at 234.95 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+BATT"
+			(at 234.95 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 234.95 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
+			(at 234.95 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ea8d1679-75d8-426d-b052-ab293de504c5")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0260")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0254")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0266")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0248")
 					(unit 1)
 				)
 			)
@@ -5779,6 +6035,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 229.87 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "4916948a-4058-42e1-b7c8-46439a51fb08")
 		)
@@ -5819,6 +6086,96 @@
 				)
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
 					(reference "R49")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 245.745 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "22627c00-04c1-48b9-ab89-c91f960565dc")
+		(property "Reference" "#PWR0251"
+			(at 245.745 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 245.745 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 245.745 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 245.745 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 245.745 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "37c54295-8969-4bf6-b741-0614bf4a90de")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0263")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0257")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0269")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0251")
 					(unit 1)
 				)
 			)
@@ -5960,6 +6317,17 @@
 		)
 		(property "MPN" "GRM033R6YA104KE14D"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 45.72 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6231,6 +6599,186 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+BATT")
+		(at 223.52 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2a670bc3-ff69-46d7-ba92-24e8f8ff5446")
+		(property "Reference" "#PWR0246"
+			(at 223.52 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+BATT"
+			(at 223.52 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.52 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
+			(at 223.52 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8e7fa190-c776-4996-ba02-e29a394bdabb")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0258")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0252")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0264")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0246")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 234.95 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2e0a9a19-e5b1-4339-a3be-e844973b7ec0")
+		(property "Reference" "#PWR0249"
+			(at 234.95 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 234.95 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 234.95 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 234.95 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "572c8fe4-8dc3-415f-9610-638809a56962")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0261")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0255")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0267")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0249")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_Resistor_AKL:R_0402")
 		(at 29.21 147.32 90)
 		(unit 1)
@@ -6362,6 +6910,17 @@
 		)
 		(property "MPN" "0201WMF150JTEE"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 29.21 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6552,6 +7111,17 @@
 		)
 		(property "MPN" "CL05B104KB54PNC"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 161.29 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7226,6 +7796,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 205.74 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "74d812c6-7c21-4767-b5a1-19b932e6f0f6")
 		)
@@ -7266,6 +7847,111 @@
 				)
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
 					(reference "R45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 245.745 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "408ed278-6f83-4191-8dfc-88276e654a61")
+		(property "Reference" "C92"
+			(at 248.92 38.0999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 248.92 40.6399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 246.7102 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 245.745 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 245.745 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 245.745 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c1186e25-e424-4c35-aa44-5dfcbf0cf6ff")
+		)
+		(pin "1"
+			(uuid "b0bdf1c9-a2bb-4e4b-8421-45dcb92f3bfd")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "C98")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "C95")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "C101")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "C92")
 					(unit 1)
 				)
 			)
@@ -7514,6 +8200,17 @@
 		)
 		(property "MPN" "RC0201FR-0710KL"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 210.82 99.06 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7820,6 +8517,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 83.82 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ff454802-82c3-46d3-826f-757cd5b6a82b")
 		)
@@ -8001,6 +8709,17 @@
 		)
 		(property "MPN" "RC0201FR-0710KL"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 49.53 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8200,6 +8919,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 259.08 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b37674c6-8e01-4640-8458-b3c308ad2131")
 		)
@@ -8381,6 +9111,17 @@
 		)
 		(property "MPN" "GRM033R6YA104KE14D"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 62.23 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8581,6 +9322,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 205.74 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "d663e2d5-0543-4a0f-85fa-9a7e142da25d")
 		)
@@ -8763,6 +9515,17 @@
 		)
 		(property "MPN" "RC0201FR-0710KL"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 254 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8962,6 +9725,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 151.13 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7a85b162-94db-4548-86dc-611822f8a86c")
 		)
@@ -9144,6 +9918,17 @@
 		)
 		(property "MPN" "RC0201FR-0710KL"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 229.87 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9447,6 +10232,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 88.9 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "34c8d9ba-b985-4cc5-8de6-a44db945c5ec")
 		)
@@ -9628,6 +10424,17 @@
 		)
 		(property "MPN" "GRM033R6YA104KE14D"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 187.96 26.67 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10094,6 +10901,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 149.86 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d418c306-a34d-4f1c-b436-e70e73ccce09")
 		)
@@ -10134,6 +10952,96 @@
 				)
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
 					(reference "R44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 223.52 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "788be35c-0cc4-4d35-b5b2-508a5cd99040")
+		(property "Reference" "#PWR0247"
+			(at 223.52 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 223.52 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 223.52 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 223.52 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e7fbd9f4-f72f-4db9-9e75-0a7dee7a5d24")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0259")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0253")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0265")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0247")
 					(unit 1)
 				)
 			)
@@ -10332,6 +11240,111 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 234.95 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7e452976-17c6-4f45-b776-8046af86c07d")
+		(property "Reference" "C91"
+			(at 238.125 38.0999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 238.125 40.6399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 235.9152 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.95 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 234.95 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 234.95 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "be1991df-2a07-4ad4-9974-138967250b0b")
+		)
+		(pin "1"
+			(uuid "f89f3e73-5f5a-4bf2-8c64-6fa5cec0c312")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "C97")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "C94")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "C100")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "C91")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_Resistor_AKL:R_0402")
 		(at 149.86 146.05 90)
 		(unit 1)
@@ -10463,6 +11476,17 @@
 		)
 		(property "MPN" "0201WMF150JTEE"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 149.86 146.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10649,6 +11673,17 @@
 		)
 		(property "MPN" "0201WMF150JTEE"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 88.9 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11149,6 +12184,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 254 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "15ac97e8-78cb-457a-84f7-1d325931ceba")
 		)
@@ -11495,6 +12541,96 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+BATT")
+		(at 245.745 35.56 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c3dc90c7-0c37-4caf-be43-01773e5eda25")
+		(property "Reference" "#PWR0250"
+			(at 245.745 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+BATT"
+			(at 245.745 30.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 245.745 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 245.745 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
+			(at 245.745 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b0fad990-7efb-4f77-b76d-3b9e896043ee")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "#PWR0262")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "#PWR0256")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "#PWR0268")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "#PWR0250")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_Resistor_AKL:R_0402")
 		(at 29.21 162.56 90)
 		(unit 1)
@@ -11626,6 +12762,17 @@
 		)
 		(property "MPN" "0201WMF150JTEE"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 29.21 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12148,6 +13295,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 171.45 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fb85e9b2-d404-45d8-b2ad-9212c6c159ac")
 		)
@@ -12326,6 +13484,17 @@
 		)
 		(property "MPN" "RC0201FR-0710RL"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 71.12 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12573,6 +13742,111 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 223.52 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e25955d6-cedd-4b4a-857c-685f9946d3b1")
+		(property "Reference" "C90"
+			(at 226.695 38.0999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 226.695 40.6399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 224.4852 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 223.52 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 223.52 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 223.52 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "73703ad4-b759-4e3f-bb7b-455fde8c5457")
+		)
+		(pin "1"
+			(uuid "1e8e2874-c40a-4d89-8d6a-d60e49521fe0")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
+					(reference "C96")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
+					(reference "C93")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
+					(reference "C99")
+					(unit 1)
+				)
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
+					(reference "C90")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "ESCLibrary:0201_220R")
 		(at 49.53 80.01 0)
 		(unit 1)
@@ -12710,6 +13984,17 @@
 		)
 		(property "MPN" "AC0201FR-07220RL"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 49.53 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13221,6 +14506,17 @@
 		)
 		(property "MPN" "RC0201FR-0710KL"
 			(at 0 0 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 34.29 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

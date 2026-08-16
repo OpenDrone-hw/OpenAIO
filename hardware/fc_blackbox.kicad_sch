@@ -1313,6 +1313,17 @@
 				)
 			)
 		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 92.71 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "c6035a24-7440-4f16-8d33-068d04da05d0")
 		)
@@ -1776,6 +1787,17 @@
 		)
 		(property "Manufacturer" "Murata Electronics"
 			(at 132.08 -109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 63.5 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
