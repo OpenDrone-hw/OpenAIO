@@ -34,7 +34,7 @@ projects; see Architecture.
 | Shared library | [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), one checkout per machine, nickname `OpenDrone`, resolved through the KiCad path variable `OPENDRONE_LIB` (Preferences > Configure Paths) |
 | Design rules | `hardware/OpenAIO-Base.kicad_dru`: canonical block plus 2 oz outer copper (0.16 mm clearance and track). `hardware/OpenAIO-Core.kicad_dru`: canonical block, 1 oz line standard 0.09, plus "nothing but J91 on B.Cu". `OpenAIO.kicad_dru` is the schematic project's copy of the canonical block |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
-| Board setup | Standard: 6 layers, 0.09 mm clearance and track, via 0.35 on 0.20 drill. Base 1.6 mm, 2 oz outer; Core 0.8 mm (JLCPCB 6-layer minimum), 1 oz |
+| Board setup | Standard: 6 layers, 0.09 mm clearance and track, via 0.35 on 0.20 drill. Base 1.6 mm, 2 oz outer, the master netclasses. Core 0.8 mm (JLCPCB 6-layer minimum, JLC06081H-3313-like stackup), 1 oz, Default netclass only, same as OpenFC-Lite-Mini |
 | License | CERN-OHL-S-2.0 |
 
 <!-- Mechanical repos: replace the KiCad rows with the CAD tool -->
