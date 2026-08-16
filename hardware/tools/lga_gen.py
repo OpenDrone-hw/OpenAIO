@@ -208,6 +208,13 @@ def footprint(name, mirror, layers, paste, descr):
         lay = " ".join(f'"{l}"' for l in layers)
         L.append(f'\t(pad "{n}" smd circle (at {x:.4f} {y:.4f}) (size {PAD} {PAD})'
                  f' (layers {lay}) (uuid "{u()}"))')
+    if not mirror:
+        # the land carries the Core as its 3D model (tools/core_model.py writes
+        # it, origin at J91 = this footprint's origin), so the Base 3D view
+        # shows the hat in place
+        L.append('\t(model "${KIPRJMOD}/export/OpenAIO-Core.wrl"')
+        L.append('\t\t(offset (xyz 0 0 0)) (scale (xyz 1 1 1)) (rotate (xyz 0 0 0))')
+        L.append('\t)')
     L.append('\t(embedded_fonts no)')
     L.append(')')
     return "\n".join(L) + "\n"

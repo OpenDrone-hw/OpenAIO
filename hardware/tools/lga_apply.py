@@ -50,6 +50,7 @@ def place(board, name, ref, pos, flip, path):
     fp = pcbnew.FootprintLoad(PRETTY, name)
     if fp is None:
         sys.exit(f"lib.pretty has no {name}, run tools/lga_gen.py first")
+    fp.SetFPID(pcbnew.LIB_ID("lib", name))   # nickname on, else the plugin update "replaces" it every time
     fp.SetReference(ref)
     fp.SetValue("Core_LGA")
     board.Add(fp)              # Add before Flip: pcbnew segfaults the other way round
