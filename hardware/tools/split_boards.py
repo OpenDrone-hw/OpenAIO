@@ -37,7 +37,7 @@ MASTER = os.path.join(HW, "OpenAIO.kicad_pcb")
 FAB = os.path.join(HW, "export")
 KICAD_CLI = "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli"
 LAND, PADS = "J90", "J91"
-CORE_THICKNESS_MM = 0.6   # the hat is as thin as JLCPCB makes a 4-layer board; order it at this thickness
+CORE_THICKNESS_MM = 0.8   # thinnest JLCPCB 6-layer (the Core inherits the master layer count); order it at this thickness
 
 
 def mm(v):

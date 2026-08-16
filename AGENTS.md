@@ -148,7 +148,7 @@ upstream. Do not restate upstream documentation.>
   purpose: the router does not evaluate area conditions reliably for the track
   being drawn, and a missed rule is caught by DRC while a wrongly applied one
   blocks routing the Core at 1 oz widths. `tools/lga_rule_area.py` redraws it.
-- The Core is 0.6 mm thick (set on the derived board by `split_boards.py`,
+- The Core is 0.8 mm thick, the JLCPCB 6-layer minimum (set on the derived board by `split_boards.py`,
   and the JLCPCB order option); the Base keeps the master's thickness.
 
 ## Revisions
