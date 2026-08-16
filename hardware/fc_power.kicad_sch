@@ -4973,6 +4973,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 102.87 165.735 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "163e3413-c613-4ea7-a89d-e770eae6658a")
+		(property "Reference" "C105"
+			(at 106.045 164.4649 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 106.045 167.0049 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 103.8352 169.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 165.735 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 102.87 165.735 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 102.87 165.735 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "eb445776-11a8-4df3-8274-fa57b3ab14dd")
+		)
+		(pin "1"
+			(uuid "58de9ff5-8fba-4f01-94c7-3f6e3d701846")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cdf44e0a-3675-4533-b9f5-78ffc381d2a5"
+					(reference "C105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "LP5912-3.3DRV_1")
 		(lib_id "Regulator_Linear:LP5912-3.3DRV")
 		(at 218.44 121.92 0)
@@ -5513,6 +5606,84 @@
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cdf44e0a-3675-4533-b9f5-78ffc381d2a5"
 					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 102.87 169.545 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "24227b06-d662-4cf4-ba6a-94c52c5ed634")
+		(property "Reference" "#PWR0283"
+			(at 102.87 175.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 102.87 174.625 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 169.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 169.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 102.87 169.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1f0a1cba-7002-476e-9133-96a00e8c458b")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cdf44e0a-3675-4533-b9f5-78ffc381d2a5"
+					(reference "#PWR0283")
 					(unit 1)
 				)
 			)
@@ -7104,6 +7275,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 115.57 169.545 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7429b798-fe98-41e5-bcba-2dc7668b61df")
+		(property "Reference" "#PWR0285"
+			(at 115.57 175.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 115.57 174.625 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 169.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 169.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 115.57 169.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "07d0003b-4bca-41c7-b62b-c37b178e7295")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cdf44e0a-3675-4533-b9f5-78ffc381d2a5"
+					(reference "#PWR0285")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 80.01 187.325 0)
 		(unit 1)
 		(body_style 1)
@@ -7305,6 +7554,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 115.57 165.735 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7847b95e-8b9d-4998-b7aa-13734eb08a70")
+		(property "Reference" "C106"
+			(at 118.745 164.4649 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "C"
+			(at 118.745 167.0049 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 116.5352 169.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 165.735 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 115.57 165.735 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 115.57 165.735 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e8220242-0da0-4530-8305-b724b9692a2d")
+		)
+		(pin "1"
+			(uuid "74ddf900-d092-4550-898e-6391099c86bb")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cdf44e0a-3675-4533-b9f5-78ffc381d2a5"
+					(reference "C106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+BATT")
 		(at 80.01 179.705 0)
 		(unit 1)
@@ -7470,6 +7812,84 @@
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cdf44e0a-3675-4533-b9f5-78ffc381d2a5"
 					(reference "C103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+BATT")
+		(at 115.57 161.925 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "874d9948-b673-4917-a47c-734df6445aad")
+		(property "Reference" "#PWR0284"
+			(at 115.57 165.735 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+BATT"
+			(at 115.57 156.845 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 161.925 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 161.925 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
+			(at 115.57 161.925 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1dcaef58-827a-4f03-b7a5-f7830c52e83e")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cdf44e0a-3675-4533-b9f5-78ffc381d2a5"
+					(reference "#PWR0284")
 					(unit 1)
 				)
 			)
@@ -8976,6 +9396,84 @@
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cdf44e0a-3675-4533-b9f5-78ffc381d2a5"
 					(reference "#PWR0270")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+BATT")
+		(at 102.87 161.925 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce155eda-35d9-4bd0-a80c-943f17e4312c")
+		(property "Reference" "#PWR0282"
+			(at 102.87 165.735 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+BATT"
+			(at 102.87 156.845 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 161.925 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 161.925 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
+			(at 102.87 161.925 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b1bc3108-120b-4d57-8495-d6bf83fa0aaf")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/cdf44e0a-3675-4533-b9f5-78ffc381d2a5"
+					(reference "#PWR0282")
 					(unit 1)
 				)
 			)

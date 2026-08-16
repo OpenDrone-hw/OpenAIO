@@ -3712,7 +3712,7 @@
 		(uuid "757ac227-546c-41ab-89c5-4fd569ec63b2")
 	)
 	(no_connect
-		(at 74.295 87.63)
+		(at 62.23 87.63)
 		(uuid "78859d2d-3eae-4e04-9d81-4df46565c72d")
 	)
 	(no_connect
@@ -3801,7 +3801,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.295 95.25) (xy 78.74 95.25)
+			(xy 62.23 95.25) (xy 78.74 95.25)
 		)
 		(stroke
 			(width 0)
@@ -3841,7 +3841,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.295 61.595) (xy 78.74 61.595)
+			(xy 62.23 61.595) (xy 78.74 61.595)
 		)
 		(stroke
 			(width 0)
@@ -3861,7 +3861,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.295 92.71) (xy 78.74 92.71)
+			(xy 62.23 92.71) (xy 78.74 92.71)
 		)
 		(stroke
 			(width 0)
@@ -3921,7 +3921,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.295 110.49) (xy 78.74 110.49)
+			(xy 62.23 110.49) (xy 78.74 110.49)
 		)
 		(stroke
 			(width 0)
@@ -4021,7 +4021,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.295 90.17) (xy 78.74 90.17)
+			(xy 62.23 90.17) (xy 78.74 90.17)
 		)
 		(stroke
 			(width 0)
@@ -4091,7 +4091,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.295 56.515) (xy 78.74 56.515)
+			(xy 62.23 56.515) (xy 78.74 56.515)
 		)
 		(stroke
 			(width 0)
@@ -4101,7 +4101,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.295 107.95) (xy 78.74 107.95)
+			(xy 62.23 107.95) (xy 78.74 107.95)
 		)
 		(stroke
 			(width 0)
@@ -4399,6 +4399,116 @@
 		)
 		(uuid "f39dd4c5-83ce-46b6-a812-03fd6e2ae357")
 	)
+	(global_label "UART1_TX"
+		(shape bidirectional)
+		(at 190.5 26.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1fc87ad5-8bb8-4a29-affc-f30ab08581d1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.5 26.67 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MOTOR3"
+		(shape bidirectional)
+		(at 146.4 121.92 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3b9ae980-9d01-4560-9238-b8f9e24daec0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 146.4 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "UART1_TX"
+		(shape bidirectional)
+		(at 67.945 110.49 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5acdec9c-8f29-433d-9e8f-6b950d3f528d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 67.945 110.49 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "10V_ENABLE"
+		(shape bidirectional)
+		(at 68.58 61.595 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7e053bf8-a55b-4bd8-a8aa-0cf3150f0c89")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 68.58 61.595 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MOTOR2"
+		(shape bidirectional)
+		(at 146.4 107.95 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7f3f112f-41e5-4736-a405-85e24bb10476")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 146.4 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "CURR"
 		(shape bidirectional)
 		(at 260.985 137.16 0)
@@ -4409,6 +4519,215 @@
 			(justify left)
 		)
 		(uuid "7f4483a9-47e0-4042-b7d0-4b3b141247e8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 260.985 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "UART0_TX"
+		(shape bidirectional)
+		(at 146.4 46.355 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8b8ba0a3-76e0-4a09-b6a7-281c968f24a3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 146.4 46.355 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "UART1_RX"
+		(shape bidirectional)
+		(at 67.945 107.95 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9d2ced07-f0cf-4ff6-9658-f6c437605120")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 67.945 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "UART0_RX"
+		(shape bidirectional)
+		(at 148.8 48.895 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d462772-60e3-4703-8e16-0219cd1c3ce8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 148.8 48.895 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MOTOR1"
+		(shape bidirectional)
+		(at 146.4 93.98 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a6dfe0b4-41f9-4978-b08f-35f7763d2c59")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 146.4 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "SPI0{SCK,MOSI,MISO}"
+		(shape bidirectional)
+		(at 148.8 62.865 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "aabb9c94-1dd6-4d35-ac00-2b1d796099b2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 148.8 62.865 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "UART1_RX"
+		(shape bidirectional)
+		(at 190.5 29.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bf64122a-e6ea-4c29-b1cd-1add9ce89f7d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 190.5 29.21 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "FLASH_CS"
+		(shape bidirectional)
+		(at 146.4 60.325 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c8ae7f18-ba61-4481-b52b-ded0dae9fbc2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 146.4 60.325 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "MOTOR4"
+		(shape bidirectional)
+		(at 146.4 135.89 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e9a7c2b9-426a-4b93-a1c7-a459f89fb771")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 146.4 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "CURR"
+		(shape bidirectional)
+		(at 69.215 56.515 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f7e2e093-171f-49f0-83df-de614a5336fd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 69.215 56.515 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -5864,7 +6183,7 @@
 		)
 	)
 	(sheet
-		(at 33.655 82.55)
+		(at 21.59 82.55)
 		(size 40.64 17.78)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5880,7 +6199,7 @@
 		)
 		(uuid "067dfe4f-0feb-4fee-b449-2d51932eecf1")
 		(property "Sheetname" "IMU"
-			(at 33.655 81.8384 0)
+			(at 21.59 81.8384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5891,7 +6210,7 @@
 			)
 		)
 		(property "Sheetfile" "fc_imu.kicad_sch"
-			(at 33.655 100.9146 0)
+			(at 21.59 100.9146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5902,7 +6221,7 @@
 			)
 		)
 		(pin "CLKIN" input
-			(at 74.295 87.63 0)
+			(at 62.23 87.63 0)
 			(uuid "5d25de24-099f-4f54-8dd4-191df735e758")
 			(effects
 				(font
@@ -5912,7 +6231,7 @@
 			)
 		)
 		(pin "CS" input
-			(at 74.295 90.17 0)
+			(at 62.23 90.17 0)
 			(uuid "a53d67c8-fbcf-4c8a-876c-98119a949afb")
 			(effects
 				(font
@@ -5922,7 +6241,7 @@
 			)
 		)
 		(pin "GYRO_INT" output
-			(at 74.295 92.71 0)
+			(at 62.23 92.71 0)
 			(uuid "820e655f-5da4-4dda-a21a-dbd809500594")
 			(effects
 				(font
@@ -5932,7 +6251,7 @@
 			)
 		)
 		(pin "SPI1{SCK,MOSI,MISO}" bidirectional
-			(at 74.295 95.25 0)
+			(at 62.23 95.25 0)
 			(uuid "ba199d7a-a52b-4c38-bb0a-6c43ec2a8574")
 			(effects
 				(font
@@ -5945,6 +6264,52 @@
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 21.59 118.11)
+		(size 40.64 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0d0b26c5-e9b6-4ca3-8b9f-93c86665bc0c")
+		(property "Sheetname" "Core_Interface"
+			(at 21.59 117.3984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "core_interface.kicad_sch"
+			(at 21.59 131.3946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(page "13")
 				)
 			)
 		)
@@ -6080,6 +6445,26 @@
 		(pin "VTX" input
 			(at 190.5 48.895 0)
 			(uuid "f429efb9-9c3b-4760-8a11-26bd91f0a02f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART1_TX" output
+			(at 190.5 26.67 0)
+			(uuid "1f777b5f-c85a-4a93-a418-70efca1004f8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "UART1_RX" input
+			(at 190.5 29.21 0)
+			(uuid "4ad228f3-f3a9-471f-82f2-fb736cdc4a13")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6268,7 +6653,7 @@
 		)
 	)
 	(sheet
-		(at 33.655 106.045)
+		(at 21.59 106.045)
 		(size 40.64 6.35)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6284,7 +6669,7 @@
 		)
 		(uuid "6e8501c6-71d5-4860-9b96-3d3562c097af")
 		(property "Sheetname" "RX"
-			(at 33.655 105.3334 0)
+			(at 21.59 105.3334 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6295,7 +6680,7 @@
 			)
 		)
 		(property "Sheetfile" "rx_esp32c3_sx1281.kicad_sch"
-			(at 33.655 112.9796 0)
+			(at 21.59 112.9796 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6306,7 +6691,7 @@
 			)
 		)
 		(pin "ELRS_RX" output
-			(at 74.295 110.49 0)
+			(at 62.23 110.49 0)
 			(uuid "b4fb0667-48a0-4926-9e09-0e0c2e5c3714")
 			(effects
 				(font
@@ -6316,7 +6701,7 @@
 			)
 		)
 		(pin "ELRS_TX" input
-			(at 74.295 107.95 0)
+			(at 62.23 107.95 0)
 			(uuid "dc94778d-13c5-4b61-8f2f-acd66e9e8e78")
 			(effects
 				(font
@@ -6496,7 +6881,7 @@
 		)
 	)
 	(sheet
-		(at 33.655 48.895)
+		(at 21.59 48.895)
 		(size 40.64 25.4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6512,7 +6897,7 @@
 		)
 		(uuid "cdf44e0a-3675-4533-b9f5-78ffc381d2a5")
 		(property "Sheetname" "Power"
-			(at 33.655 48.1834 0)
+			(at 21.59 48.1834 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6523,7 +6908,7 @@
 			)
 		)
 		(property "Sheetfile" "fc_power.kicad_sch"
-			(at 33.655 74.8796 0)
+			(at 21.59 74.8796 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6534,7 +6919,7 @@
 			)
 		)
 		(pin "10V_ENABLE" input
-			(at 74.295 61.595 0)
+			(at 62.23 61.595 0)
 			(uuid "42e863e6-8da5-457c-9078-c4db3d80d410")
 			(effects
 				(font
@@ -6544,7 +6929,7 @@
 			)
 		)
 		(pin "CURR" input
-			(at 74.295 56.515 0)
+			(at 62.23 56.515 0)
 			(uuid "11a6d4cf-d47a-4a5d-b6b3-7ab50e5f5766")
 			(effects
 				(font
@@ -6732,184 +7117,6 @@
 				)
 			)
 		)
-	)
-	(sheet
-		(at 33.655 118.11)
-		(size 40.64 12.7)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0)
-		)
-		(uuid "0d0b26c5-e9b6-4ca3-8b9f-93c86665bc0c")
-		(property "Sheetname" "Core_Interface"
-			(at 33.655 117.3984 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "core_interface.kicad_sch"
-			(at 33.655 131.3946 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(page "13")
-				)
-			)
-		)
-	)
-	(global_label "10V_ENABLE"
-		(shape bidirectional)
-		(at 76.5175 61.595 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7e053bf8-a55b-4bd8-a8aa-0cf3150f0c89")
-	)
-	(global_label "CURR"
-		(shape bidirectional)
-		(at 76.5175 56.515 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f7e2e093-171f-49f0-83df-de614a5336fd")
-	)
-	(global_label "MOTOR1"
-		(shape bidirectional)
-		(at 146.4 93.98 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a6dfe0b4-41f9-4978-b08f-35f7763d2c59")
-	)
-	(global_label "MOTOR2"
-		(shape bidirectional)
-		(at 146.4 107.95 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7f3f112f-41e5-4736-a405-85e24bb10476")
-	)
-	(global_label "MOTOR3"
-		(shape bidirectional)
-		(at 146.4 121.92 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "3b9ae980-9d01-4560-9238-b8f9e24daec0")
-	)
-	(global_label "MOTOR4"
-		(shape bidirectional)
-		(at 146.4 135.89 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e9a7c2b9-426a-4b93-a1c7-a459f89fb771")
-	)
-	(global_label "UART0_TX"
-		(shape bidirectional)
-		(at 146.4 46.355 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8b8ba0a3-76e0-4a09-b6a7-281c968f24a3")
-	)
-	(global_label "UART0_RX"
-		(shape bidirectional)
-		(at 148.8 48.895 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9d462772-60e3-4703-8e16-0219cd1c3ce8")
-	)
-	(global_label "UART1_TX"
-		(shape bidirectional)
-		(at 76.5175 110.49 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "5acdec9c-8f29-433d-9e8f-6b950d3f528d")
-	)
-	(global_label "UART1_RX"
-		(shape bidirectional)
-		(at 76.5175 107.95 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9d2ced07-f0cf-4ff6-9658-f6c437605120")
-	)
-	(global_label "SPI0{SCK,MOSI,MISO}"
-		(shape bidirectional)
-		(at 148.8 62.865 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "aabb9c94-1dd6-4d35-ac00-2b1d796099b2")
-	)
-	(global_label "FLASH_CS"
-		(shape bidirectional)
-		(at 146.4 60.325 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c8ae7f18-ba61-4481-b52b-ded0dae9fbc2")
 	)
 	(sheet_instances
 		(path "/"

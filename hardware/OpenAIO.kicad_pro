@@ -933,7 +933,7 @@
         "uuid": "fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
       }
     ],
-    "used_designators": "#PWR279",
+    "used_designators": "C105-106,J52-55,#PWR280-285",
     "variants": []
   },
   "sheets": [
@@ -984,6 +984,10 @@
     [
       "6e8501c6-71d5-4860-9b96-3d3562c097af",
       "RX"
+    ],
+    [
+      "0d0b26c5-e9b6-4ca3-8b9f-93c86665bc0c",
+      "Core_Interface"
     ]
   ],
   "text_variables": {},
