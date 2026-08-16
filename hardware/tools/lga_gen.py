@@ -4,8 +4,8 @@
 One pin table produces every artefact of the board-to-board interface, so
 they cannot drift:
 
-  lib.pretty/Core_LGA_land.kicad_mod   F.Cu land pattern, goes on the Base island
-  lib.pretty/Core_LGA_pads.kicad_mod   pads for the Core island, place it on B.Cu
+  lib.pretty/Core_LGA_land.kicad_mod   F.Cu land pattern, J90 on OpenAIO-Base
+  lib.pretty/Core_LGA_pads.kicad_mod   pads for the Core, J91 on B.Cu of OpenAIO-Core
                                        (its X is pre-mirrored so that after the
                                        flip pad k sits exactly over land pad k)
   lib.kicad_sym : symbol Core_LGA      one symbol, two instances in the schematic

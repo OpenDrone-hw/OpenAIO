@@ -17,8 +17,8 @@ ESC and ExpressLRS 2.4 GHz receiver on 25.5 x 25.5 mm. The design starts from
 the manufactured sub-sheets of OpenFC-Lite-Mini, OpenESC-20x20 and OpenRX-Lite,
 copied into `hardware/` and wired on the root sheet. It is a two-PCB stack:
 the **Base** (ESCs, power, pads, RX) and the **Core** (RP2354A, IMU, OSD,
-blackbox), soldered onto the Base as an interior LGA. Both live in one project
-and one master PCB; see Architecture.
+blackbox), soldered onto the Base as an interior LGA. One schematic, two board
+projects; see Architecture.
 
 ## Repo
 
@@ -27,15 +27,14 @@ and one master PCB; see Architecture.
 | Maintainer | @stancoene |
 | Status | See the `status-*` topic on the repo. Never written here. |
 | Designed in | KiCad 10 |
-| KiCad project | `hardware/OpenAIO.kicad_pro` |
+| Schematic project | `hardware/OpenAIO.kicad_pro`: open this one to edit the schematic. It has no board |
 | Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_rp2350a`, `fc_imu`, `fc_osd`, `fc_blackbox`, `fc_pads` (OpenFC-Lite-Mini), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite), `core_interface` (the Base<->Core LGA, generated) |
-| Board | `hardware/OpenAIO.kicad_pcb`, the **master**: Base island and Core island side by side, one stackup, all routing lives here |
-| Derived boards | `hardware/export/OpenAIO-Base.kicad_pcb` and `OpenAIO-Core.kicad_pcb`, written by `hardware/tools/split_boards.py`, gitignored, never edited by hand. DRC, Fabrication Toolkit and STEP run on these |
+| Boards | `hardware/OpenAIO-Base.kicad_pro` + `.kicad_pcb` (carrier) and `hardware/OpenAIO-Core.kicad_pro` + `.kicad_pcb` (hat), two full KiCad projects in the same directory. Their root schematics `OpenAIO-Base.kicad_sch` and `OpenAIO-Core.kicad_sch` are symlinks to `OpenAIO.kicad_sch`, so both boards see the one schematic. Which footprint lives on which board is decided by the board it was placed on: `.kicad_multiboard.json` + the multiboard plugin, see Environment |
 | Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib`. Seeded with the OpenFC-Lite-Mini local library so the copied FC sheets resolve; the lib tables also alias `components`, `4in1ESC` and `OpenRX-Shared` onto the catalogue for the same reason |
 | Shared library | [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), one checkout per machine, nickname `OpenDrone`, resolved through the KiCad path variable `OPENDRONE_LIB` (Preferences > Configure Paths) |
-| Design rules | `hardware/OpenAIO.kicad_dru`: canonical block plus 2 oz outer copper (0.16 mm clearance and track) applied only inside the rule area `Base` (the Base island); the Core is 1 oz and keeps the line standard 0.09 |
+| Design rules | `hardware/OpenAIO-Base.kicad_dru`: canonical block plus 2 oz outer copper (0.16 mm clearance and track). `hardware/OpenAIO-Core.kicad_dru`: canonical block, 1 oz line standard 0.09, plus "nothing but J91 on B.Cu". `OpenAIO.kicad_dru` is the schematic project's copy of the canonical block |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
-| Board setup | Standard: 6 layers, 0.09 mm clearance and track, via 0.35 on 0.20 drill |
+| Board setup | Standard: 6 layers, 0.09 mm clearance and track, via 0.35 on 0.20 drill. Base 1.6 mm, 2 oz outer; Core 0.8 mm (JLCPCB 6-layer minimum), 1 oz |
 | License | CERN-OHL-S-2.0 |
 
 <!-- Mechanical repos: replace the KiCad rows with the CAD tool -->
@@ -67,29 +66,47 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
 ## Environment
 
 ```sh
-# schematic and board checks
+# schematic and board checks (no --schematic-parity: each board holds a subset of the schematic)
 kicad-cli sch erc --exit-code-violations hardware/OpenAIO.kicad_sch
-kicad-cli pcb drc --schematic-parity --refill-zones --exit-code-violations hardware/OpenAIO.kicad_pcb
+kicad-cli pcb drc --refill-zones --exit-code-violations hardware/OpenAIO-Base.kicad_pcb
+kicad-cli pcb drc --refill-zones --exit-code-violations hardware/OpenAIO-Core.kicad_pcb
 
 # netlist, for scripted analysis
 kicad-cli sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/OpenAIO.kicad_sch
 
-# derive Base and Core from the master, DRC both, refresh J90's Core model (KiCad closed)
-cd hardware && /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3 tools/split_boards.py --drc --update-master
+# schematic -> boards (KiCad's Update PCB from Schematic would import the whole
+# schematic into each board; the multiboard plugin only brings each board its own
+# footprints). GUI: PCB editor > Tools > External Plugins > Multi-Board Manager,
+# select the board that should receive new parts, Update. Headless, boards closed:
+KPY=/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3
+$KPY ~/OpenDrone/software/OpenDrone-Scripts/kicad/multiboard/update.py hardware              # refresh both, new parts to the Base
+$KPY ~/OpenDrone/software/OpenDrone-Scripts/kicad/multiboard/update.py hardware OpenAIO-Core # new parts to the Core
+
+# Core 3D model for J90 on the Base (after changing the Core layout; KiCad may stay open)
+cd hardware && python3 tools/core_model.py
 ```
 
-On macOS `kicad-cli` is at
+Plugin, once per machine: `sh ~/OpenDrone/software/OpenDrone-Scripts/kicad/multiboard/install.sh`
+(OpenDrone fork of [Kicad-Multi-PCB](https://github.com/Eliot-Abramo/Kicad-Multi-PCB),
+KiCad 10, its README says what was changed). On macOS `kicad-cli` is at
 `/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, and `pcbnew` imports
 only under KiCad's bundled Python. Shared scripts (renders, STEP export,
 packaging art) live in `OpenDrone-Scripts`; board-specific scripts live in
-`hardware/tools/`.
+`hardware/tools/` (`lga_gen.py`, `core_model.py`).
 
 ## Architecture
 
-Two PCBs, one project, one schematic, one master PCB. KiCad has one board per
-project, so the master `OpenAIO.kicad_pcb` carries both boards as separate
-islands (Base left, Core right); `tools/split_boards.py` derives the two
-shippable boards from it by island. Nothing is ever routed in the derived files.
+Two PCBs, one schematic. KiCad has one board per project, so there are three
+projects in `hardware/`: `OpenAIO` (schematic only), `OpenAIO-Base` and
+`OpenAIO-Core` (one board each, root schematic symlinked to `OpenAIO.kicad_sch`).
+The plugin's ownership rule decides the split: a footprint belongs to the board
+it was placed on first, and an Update of a board only refreshes its own
+footprints and adds symbols that are on no board yet. To move a part, delete it
+from one board and Update the other. Nets are board-wide names, so a net that
+crosses the LGA is complete on each board through J90 or J91. Edit the schematic
+from the `OpenAIO` project only: opening it through a board project works for
+reading and cross-probing but saving from there writes extra project instance
+data into the shared sheets.
 
 The Base<->Core interface is one pin table in `tools/lga_gen.py`, which emits
 everything that must agree: `lib:Core_LGA_land` (F.Cu land pattern on the
@@ -100,12 +117,11 @@ gap, 0.6 mm round pads: 8 GND, `+BATT`, `+5V` x2, `+10V` x2, `+3.3V` x2,
 `+4v5`, and 16 signals (`MOTOR1..4`, `UART0_TX/RX`, `UART1_TX/RX` to the RX,
 `SPI0` + `FLASH_CS` to the SD card, `USB_D+/-`, `10V_ENABLE`, `CURR`). Every
 interface net is a global label; `python3 tools/lga_gen.py` prints the table.
-In the master those nets show one ratsnest line each between the islands, land
-pad to Core pad; that is the interface, not an error (exclude them in the DRC
-dialog once). The Core VRML from the split (STEP alongside, picked up by
-`--subst-models`) is J90's 3D model, so the master's
-3D view shows the Core stacked at its true position for collision checks, and
-the Core outline sits on J90's User.Comments layer while routing the Base.
+`tools/core_model.py` exports the Core as `export/OpenAIO-Core.wrl` (+ `.step`,
+origin at J91) and that file is J90's 3D model, so the Base's 3D view shows the
+Core stacked at its true position for collision checks; the Core outline also
+sits on J90's User.Comments layer while routing the Base. `export/` is
+gitignored: run the script once after cloning.
 
 ## Key parts
 
@@ -137,20 +153,15 @@ upstream. Do not restate upstream documentation.>
 
 ## Layout rules
 
-- The Core is one island in the master, kept right of the Base with a clear
-  gap; `split_boards.py` sorts items by which side of the J90/J91 midpoint they
-  lie on and drops anything spanning it. Do not park parts in the gap.
-- J90 and J91 must stay a mirror pair: same rotation, J91 flipped to B.Cu. Move
-  the Core outline (Edge.Cuts) with the island; the split re-derives the shadow.
-- Only the Core's top face carries parts; its bottom is the LGA. Nothing on the
-  Base may stand under the Core footprint outline (J90 User.Comments).
-- The rule area named `Base` (all copper layers, Base Edge.Cuts + 1 mm) is what
-  switches the 2 oz rules on for the Base. It is on the Base, not the Core, on
-  purpose: the router does not evaluate area conditions reliably for the track
-  being drawn, and a missed rule is caught by DRC while a wrongly applied one
-  blocks routing the Core at 1 oz widths. `tools/lga_rule_area.py` redraws it.
-- The Core is 0.8 mm thick, the JLCPCB 6-layer minimum (set on the derived board by `split_boards.py`,
-  and the JLCPCB order option); the Base keeps the master's thickness.
+- J90 (Base, F.Cu) and J91 (Core, B.Cu, flipped) are a mirror pair from one
+  generator; change pads in `tools/lga_gen.py`, regenerate, then Update
+  Footprints from Library on both boards. J91's position is the Core's model
+  origin: `core_model.py` after moving it.
+- Only the Core's top face carries parts; its bottom is the LGA (DRU rule on
+  the Core). Nothing on the Base may stand under the Core outline (J90
+  User.Comments); check the Base 3D view.
+- The Core is 0.8 mm thick, the JLCPCB 6-layer minimum, 1 oz outer; the Base
+  is 1.6 mm, 2 oz outer. Both are board settings of their own project now.
 
 ## Revisions
 
