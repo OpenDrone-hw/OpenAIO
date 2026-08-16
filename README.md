@@ -1,13 +1,17 @@
 # OpenAIO
 
-An all-in-one board for toothpick-class 6S FPV: flight controller, 4-in-1 ESC
-and ExpressLRS receiver on a single 25.5 x 25.5 mm board. One board, one
-connector, no stack. It merges three boards OpenDrone already makes.
+An all-in-one for toothpick-class 6S FPV: flight controller, 4-in-1 ESC and
+ExpressLRS receiver on 25.5 x 25.5 mm mounting. It merges three boards
+OpenDrone already makes. Two PCBs, no connector: the **Base** carries the ESC
+power stages, power, receiver and all pads, and the **Core**, a 23 x 20 mm hat
+with the RP2354A, IMU, OSD and blackbox, is soldered flat onto it as an
+interior LGA.
 
 [![Status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project)
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/v3sWmTcx3R)
 
-Nobody holds this board yet: claim it on Discord.
+Held by @stancoene. Layout in progress on the branch
+`design/start-kicad-project`; nothing has been manufactured.
 
 ## Why
 
@@ -17,21 +21,21 @@ removes two connectors, two sets of mounting hardware and a lot of wiring, and
 those connectors are where builds fail.
 
 The parts are proven separately, so this is an integration problem rather than
-a research one. That makes it a good first board for someone who has not
-designed for us before. The only 6S AIO with onboard serial ELRS on the market
-is closed and digital-only; an open one with analog OSD and blackbox has a
-place, see the market research below.
+a research one. The only 6S AIO with onboard serial ELRS on the market is
+closed and digital-only; an open one with analog OSD and blackbox has a place,
+see the market research below.
 
 ## Specifications
 
-Targets. The board does not exist yet.
+From the design files. Not manufactured yet.
 
 | | |
 |---|---|
-| Mounting | 25.5 x 25.5 mm |
+| Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm (Base) |
+| Stack | Base 6 layers 1.6 mm, 2 oz outer; Core hat 23.1 x 20.2 mm, 6 layers 0.8 mm, soldered on as a 34-pad LGA |
 | Input | 6S |
-| Flight controller | RP2354A, Betaflight target |
-| ESC | 4x AM32, one MCU per channel like the OpenESC boards |
+| Flight controller | RP2354A, BMI270 IMU, analog OSD, microSD blackbox, USB-C |
+| ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |
 | Receiver | ExpressLRS 2.4 GHz, ESP32-C3 + SX1281 |
 | Assembly | JLCPCB, LCSC basic parts preferred |
 
@@ -63,19 +67,14 @@ Research so far, reference rather than decisions:
 
 ## Open questions
 
-The decisions to make before any of it gets drawn. Answering them is a real
-contribution that needs no KiCad.
+Still open while the layout is drawn. Answering them is a real contribution
+that needs no KiCad.
 
 - **Thermal.** Four power stages next to an MCU and a radio on 25.5 mm square,
-  with no airflow guarantee. What is the continuous current budget, and does it
-  need copper beyond 2 oz outer?
-- **RF isolation.** A 2.4 GHz receiver on top of four switching power stages.
-  Where does the antenna go, what does the ground plane have to do, and is a
-  shield can needed?
-- **Current sensing.** Board level like the ESCs, or per channel?
-- **Video.** Analog OSD, digital only, or both?
-- **What gets dropped.** An AIO cannot carry everything the three separate
-  boards do. Which I/O is worth the space?
+  with no airflow guarantee. What is the continuous current budget on 2 oz
+  outer copper?
+- **RF isolation.** A 2.4 GHz receiver next to four switching power stages.
+  Antenna placement, ground plane, shield can or not.
 
 ## In the line
 
