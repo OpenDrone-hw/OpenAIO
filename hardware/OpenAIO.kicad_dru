@@ -33,11 +33,19 @@
 # board minimum would constrain the signal routing on the inner layers for no
 # reason. Anything narrower than 0.16 mm (USB pair, Analog, Default 0.09)
 # therefore routes on the inner layers or gets widened where it surfaces.
+#
+# Only the Base is 2 oz. The Core (daughter board, same master PCB) is 1 oz
+# outer and keeps the line standard, so the rules skip everything inside the
+# rule area named "Core" that covers the Core island in the master. The
+# derived Core board carries that area, the derived Base board does not, so
+# both derived boards check with the right rules without a second file.
 
 (rule "2 oz outer copper, clearance"
   (constraint clearance (min 0.16mm))
-  (layer outer))
+  (layer outer)
+  (condition "!A.intersectsArea('Core') && !B.intersectsArea('Core')"))
 
 (rule "2 oz outer copper, track width"
   (constraint track_width (min 0.16mm))
-  (layer outer))
+  (layer outer)
+  (condition "!A.intersectsArea('Core')"))

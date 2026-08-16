@@ -33,7 +33,7 @@ and one master PCB; see Architecture.
 | Derived boards | `hardware/export/OpenAIO-Base.kicad_pcb` and `OpenAIO-Core.kicad_pcb`, written by `hardware/tools/split_boards.py`, gitignored, never edited by hand. DRC, Fabrication Toolkit and STEP run on these |
 | Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib`. Seeded with the OpenFC-Lite-Mini local library so the copied FC sheets resolve; the lib tables also alias `components`, `4in1ESC` and `OpenRX-Shared` onto the catalogue for the same reason |
 | Shared library | [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), one checkout per machine, nickname `OpenDrone`, resolved through the KiCad path variable `OPENDRONE_LIB` (Preferences > Configure Paths) |
-| Design rules | `hardware/OpenAIO.kicad_dru`, canonical block, no board-specific rules yet |
+| Design rules | `hardware/OpenAIO.kicad_dru`: canonical block plus 2 oz outer copper (0.16 mm clearance and track) for the Base only; the rules skip the rule area `Core`, which covers the Core island (1 oz, line standard 0.09) |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
 | Board setup | Standard: 6 layers, 0.09 mm clearance and track, via 0.35 on 0.20 drill |
 | License | CERN-OHL-S-2.0 |
@@ -143,6 +143,9 @@ upstream. Do not restate upstream documentation.>
   the Core outline (Edge.Cuts) with the island; the split re-derives the shadow.
 - Only the Core's top face carries parts; its bottom is the LGA. Nothing on the
   Base may stand under the Core footprint outline (J90 User.Comments).
+- The rule area named `Core` (all copper layers, Core Edge.Cuts + 1 mm) is what
+  switches the 2 oz rules off for the Core. Keep it over the whole island;
+  `tools/lga_core_area.py` redraws it from the Core outline.
 
 ## Revisions
 
