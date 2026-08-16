@@ -3900,6 +3900,12 @@
 		(color 0 0 0 0)
 		(uuid "dc528caa-6d44-46f8-8962-658fc27f2d16")
 	)
+	(junction
+		(at 150.495 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "edcadca6-dddf-4323-9630-144f75b3427b")
+	)
 	(no_connect
 		(at 62.23 87.63)
 		(uuid "78859d2d-3eae-4e04-9d81-4df46565c72d")
@@ -4340,7 +4346,7 @@
 	)
 	(wire
 		(pts
-			(xy 145.415 33.02) (xy 170.815 33.02)
+			(xy 145.415 33.02) (xy 150.495 33.02)
 		)
 		(stroke
 			(width 0)
@@ -4447,6 +4453,16 @@
 			(type default)
 		)
 		(uuid "f02d611a-c672-4f38-991e-f8ae97e4953f")
+	)
+	(wire
+		(pts
+			(xy 150.495 33.02) (xy 170.815 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f093ef22-8f54-41e4-8dc1-501b091e31eb")
 	)
 	(wire
 		(pts
@@ -4850,6 +4866,28 @@
 		(uuid "7f4483a9-47e0-4042-b7d0-4b3b141247e8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 281.94 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "LED_STRIP"
+		(shape bidirectional)
+		(at 160.02 24.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "82c8c21f-de05-4111-8c1d-72d2f4dcfdc8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 160.02 24.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6869,6 +6907,85 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
+		(at 150.495 33.02 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e6f1d1a8-890c-4522-b5fe-c43568edb94e")
+		(property "Reference" "TP29"
+			(at 152.4 28.4479 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 152.4 30.9879 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 155.575 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 155.575 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 150.495 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3fa2ee70-1461-42bd-b5fe-f43a54960e34")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
+					(reference "TP29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
 		(at 152.4 46.355 0)
 		(unit 1)
 		(body_style 1)
@@ -8315,17 +8432,6 @@
 				)
 			)
 		)
-	)
-	(global_label "LED_STRIP"
-		(shape bidirectional)
-		(at 160.02 24.13 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "82c8c21f-de05-4111-8c1d-72d2f4dcfdc8")
 	)
 	(sheet_instances
 		(path "/"

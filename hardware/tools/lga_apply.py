@@ -33,7 +33,8 @@ IFACE = os.path.join(HW, "core_interface.kicad_sch")
 ROOT = os.path.join(HW, "OpenAIO.kicad_sch")
 PRETTY = os.path.join(HW, "lib.pretty")
 # global label to add on the root wire, for interface nets that were local labels
-ROOT_GLOBALS = [("LED_STRIP", 160.02, 24.13)]   # root wire RP2354A LED_STRIP -> Pads LED_STRIP, TP15 sat on it
+ROOT_GLOBALS = [("LED_STRIP", 160.02, 24.13),   # root wire RP2354A LED_STRIP -> Pads LED_STRIP, TP15 sat on it
+                ("BUZZER-", 160.02, 33.02)]     # root wire RP2354A BUZZER- -> Pads BUZZER-, TP29 sat on it
 
 
 def sym_paths():
@@ -67,6 +68,7 @@ def place(board, name, ref, pos, flip, path):
 
 
 def do_base(paths):
+    """Returns the marker refs it removed."""
     b = pcbnew.LoadBoard(BASE)
     gone = []
     for f in list(b.GetFootprints()):
@@ -79,6 +81,7 @@ def do_base(paths):
     place(b, "Core_LGA_land", "J90", pcbnew.VECTOR2I(pcbnew.FromMM(ox), pcbnew.FromMM(oy)), False, paths["J90"])
     pcbnew.SaveBoard(BASE, b)
     print(f"Base: removed {len(gone)} ({', '.join(sorted(gone))}), J90 at ({ox}, {oy})")
+    return [r for r in gone if r.startswith("TP")]
 
 
 def do_core(paths):
@@ -109,8 +112,11 @@ def block_end(s, i):
         j += 1
 
 
-def markers_off_board():
-    """Marker test point symbols: on_board no, in_bom no, in every sheet."""
+def markers_off_board(refs):
+    """The consumed marker test point symbols: on_board no, in_bom no, in
+    every sheet. Only the refs that were on the Base and became pins, so a
+    marker added later (often a copy of an old one: un-tick "exclude from
+    board" on it) is not touched."""
     n = 0
     for fn in sorted(os.listdir(HW)):
         if not fn.endswith(".kicad_sch") or os.path.islink(os.path.join(HW, fn)):
@@ -126,8 +132,8 @@ def markers_off_board():
             j += 1
             k = block_end(s, j)
             blk = s[j:k]
-            m = re.search(r'\(property "Reference" "TP(\d+)"', blk)
-            if m and int(m.group(1)) >= lga_gen.MARKER_MIN and "(on_board yes)" in blk:
+            m = re.search(r'\(property "Reference" "(TP\d+)"', blk)
+            if m and m.group(1) in refs and "(on_board yes)" in blk:
                 blk = blk.replace("(on_board yes)", "(on_board no)").replace("(in_bom yes)", "(in_bom no)")
                 changed += 1
             out.append(s[i:j])
@@ -146,7 +152,7 @@ def root_globals():
     s = open(ROOT).read()
     add = ""
     for text, x, y in ROOT_GLOBALS:
-        if f'(global_label "{text}"' in s:
+        if f'(global_label "{text}"' in s or text not in {p[1] for p in lga_gen.PINS}:
             continue
         add += (f'\t(global_label "{text}"\n\t\t(shape bidirectional)\n\t\t(at {x} {y} 0)\n'
                 f'\t\t(effects\n\t\t\t(font\n\t\t\t\t(size 1.27 1.27)\n\t\t\t)\n\t\t\t(justify left)\n\t\t)\n'
@@ -167,8 +173,7 @@ def main():
             sys.exit(f"{os.path.basename(f)} is open in KiCad, close it")
     paths = sym_paths()
     root_globals()
-    markers_off_board()
-    do_base(paths)
+    markers_off_board(do_base(paths))
     do_core(paths)
 
 

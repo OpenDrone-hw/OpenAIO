@@ -2164,6 +2164,105 @@
 			)
 		)
 	)
+	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
+		(layer "F.Cu")
+		(uuid "1eb63507-ec3f-4b75-b5f2-cdb4e94034b3")
+		(at 60 50)
+		(descr "SMD pad as test Point, diameter 1.0mm")
+		(tags "test point SMD pad")
+		(property "Reference" "TP30"
+			(at 0 -1.448 0)
+			(layer "F.SilkS")
+			(uuid "e9fb8427-401d-425c-aba1-bf7e78294e06")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 0 1.55 0)
+			(layer "F.Fab")
+			(uuid "33ac34bb-a1b6-4dc6-a46e-e63b410cf827")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1923c2d3-6283-43e8-bce1-80afabba4c88")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "053ab87c-b8a7-4de4-b6d4-d77ab96f7f4e")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/cdf44e0a-3675-4533-b9f5-78ffc381d2a5/93a45909-64e4-4a09-8e79-a012621fb7cf")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 0 0.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "760d3c0a-8008-4617-a6e4-e981225df8ef")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "dc36b097-adfd-4ebd-aa86-1bf55993c6ca")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 -1.45 0)
+			(layer "F.Fab")
+			(uuid "058045e0-2d07-4f87-b9ae-1f3e1b56da4c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd circle
+			(at 0 0)
+			(size 1 1)
+			(layers "F.Cu" "F.Mask")
+			(net "+5V")
+			(uuid "22d46f49-32d3-4091-82c5-c9dcd168cdeb")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "OpenDrone:AIO_outline"
 		(layer "F.Cu")
 		(uuid "2017d526-5773-4680-949b-e260f1af09f0")
@@ -5333,7 +5432,7 @@
 			(size 0.46 0.4)
 			(layers "F.Cu" "F.Mask")
 			(roundrect_rratio 0.25)
-			(net "+3.3V")
+			(net "+3V3")
 			(pintype "passive")
 			(uuid "8811ee6c-a045-4500-81f9-1384ae1d9c40")
 		)
@@ -8036,6 +8135,105 @@
 			)
 		)
 	)
+	(footprint "TestPoint:TestPoint_Pad_D1.0mm"
+		(layer "F.Cu")
+		(uuid "ba953348-7e81-44b5-ad60-786d6988ebe2")
+		(at 50 50)
+		(descr "SMD pad as test Point, diameter 1.0mm")
+		(tags "test point SMD pad")
+		(property "Reference" "TP29"
+			(at 0 -1.448 0)
+			(layer "F.SilkS")
+			(uuid "099a1ac5-d053-4862-be75-81c70bc7b2b0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 0 1.55 0)
+			(layer "F.Fab")
+			(uuid "06bb38c1-2f26-4755-abdf-6f987b2e080c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e650bdce-6305-4333-b126-b1ccb557df6b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3a688551-a98d-4c37-a7f9-56f0883dc12a")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(path "/e6f1d1a8-890c-4522-b5fe-c43568edb94e")
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 0 0.7)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "916ce586-aa1f-4b5f-bb72-026e4ab6e25e")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 1 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "d426a588-f5f1-4939-ae73-5892f74b4b31")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 -1.45 0)
+			(layer "F.Fab")
+			(uuid "1e3cf157-b806-4f63-9a47-69f8a50f3318")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(pad "1" smd circle
+			(at 0 0)
+			(size 1 1)
+			(layers "F.Cu" "F.Mask")
+			(net "/Pads/BUZZER-")
+			(uuid "2a6ae287-2b53-429f-b3a0-ce01fb4eaf40")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Capacitor_SMD:C_1206_3216Metric"
 		(layer "F.Cu")
 		(uuid "d3606308-540b-4103-862c-53da0faceff4")
@@ -8841,7 +9039,7 @@
 			(at 0.48 -1.25)
 			(size 1.2 0.7)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "+3.3V")
+			(net "+3V3")
 			(pinfunction "VDD_4")
 			(pintype "unspecified")
 			(uuid "88ba13b2-cb80-41f9-8abf-956f5ae82e88")
@@ -57016,7 +57214,7 @@
 			(size 0.46 0.4)
 			(layers "B.Cu" "B.Mask")
 			(roundrect_rratio 0.25)
-			(net "+3.3V")
+			(net "+3V3")
 			(pintype "passive")
 			(uuid "5f5d65b7-8bc9-4c37-b941-65ec3e77f974")
 		)
