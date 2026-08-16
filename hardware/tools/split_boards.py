@@ -10,15 +10,18 @@ master's copper; it writes:
   export/OpenAIO-Core.kicad_pcb  (+ .kicad_pro/.kicad_dru copies)   Core island only,
                               aux (drill) origin at the LGA centre = J91,
                               board thickness CORE_THICKNESS_MM
-  export/OpenAIO-Core.step       Core STEP, origin at the LGA centre, for the
-                              3D model of J90 in the master (--update-master)
+  export/OpenAIO-Core.wrl        Core VRML (all models, incl. the .wrl-only
+                              ones), origin at the LGA centre: the 3D model of
+                              J90 in the master (--update-master)
+  export/OpenAIO-Core.step       same in STEP (VRML-only parts missing); the
+                              master's STEP export picks it up via --subst-models
   export/*-drc.json              DRC of each derived board (--drc)
 
 Items go to the island whose side of SPLIT_X they lie on; SPLIT_X is the
 midpoint between J90 and J91. Anything spanning the gap is reported and
 dropped.
 
---update-master   also gives J90 in the master the Core STEP as 3D model
+--update-master   also gives J90 in the master the Core VRML as 3D model
                   (offset so the Core sits pad on pad on the Base) and draws
                   the Core outline on J90's User.Comments layer.
 Run with KiCad's Python, KiCad closed:
@@ -176,6 +179,30 @@ def export_step(core_pcb):
     return out if ok else None
 
 
+def export_vrml(core_pcb):
+    """VRML of the Core with KiCad's own exporter: unlike STEP it embeds every
+    model, VRML or STEP. Units 'tenths' (0.1 in) is the footprint-model VRML
+    convention, so scale 1 in J90. KiCad centres the VRML board on z=0
+    (thickness field), while the STEP body starts at z=0; the whole file is
+    wrapped in a Transform raising it by thickness/2 so both files share
+    offset 0 and --subst-models stays consistent."""
+    out = os.path.join(FAB, "OpenAIO-Core.wrl")
+    b = pcbnew.LoadBoard(core_pcb)
+    o = b.GetDesignSettings().GetAuxOrigin()
+    origin = f"{pcbnew.ToMM(o.x)}x{pcbnew.ToMM(o.y)}mm"
+    r = subprocess.run([KICAD_CLI, "pcb", "export", "vrml", "--units", "tenths", "--user-origin", origin,
+                        "--no-dnp", "--force", "-o", out, core_pcb], capture_output=True, text=True)
+    if r.returncode != 0 or not os.path.exists(out):
+        print(f"  Core VRML FAILED: {r.stderr.strip()[-300:]}")
+        return None
+    t = open(out).read()
+    head, body = t.split("\n", 1)          # keep the '#VRML V2.0 utf8' line first
+    dz = CORE_THICKNESS_MM / 2 / 2.54
+    open(out, "w").write(f"{head}\nTransform {{ translation 0 0 {dz:.6f} children [\n{body}\n] }}\n")
+    print(f"  Core VRML ok: export/OpenAIO-Core.wrl ({os.path.getsize(out) // 1024} kB, all models)")
+    return out
+
+
 def drc(pcb):
     out = pcb.replace(".kicad_pcb", "-drc.json")
     subprocess.run([KICAD_CLI, "pcb", "drc", "--format", "json", "--severity-error", "--refill-zones",
@@ -190,16 +217,18 @@ def drc(pcb):
 
 
 def update_master(step_path, core_pcb):
-    """J90 in the master gets the Core STEP + the Core outline shadow."""
+    """J90 in the master gets the Core VRML (STEP alongside) + the outline shadow."""
     b, fps, split = load()
     j90, j91 = fps[LAND], fps[PADS]
-    # 3D model: STEP origin = J91 centre (drill origin). kicad-cli exports the
-    # board body from z=0 (bottom face) to z=thickness, y up (verified with a
-    # PLY export), and a footprint model's origin sits on the Base top face,
-    # so the Core's bottom pads land on the Base pads with zero offset.
+    # 3D model: origin = J91 centre (drill origin), body from z=0 (bottom face)
+    # up, y up (STEP verified with a PLY export, VRML shifted to match in
+    # export_vrml). A footprint model's origin sits on the Base top face, so
+    # the Core's bottom pads land on the Base pads with zero offset. The .wrl
+    # is what the 3D viewer shows; a STEP export of the master with
+    # --subst-models swaps in OpenAIO-Core.step.
     j90.Models().clear() if hasattr(j90.Models(), 'clear') else None
     m = pcbnew.FP_3DMODEL()
-    m.m_Filename = "${KIPRJMOD}/export/OpenAIO-Core.step"
+    m.m_Filename = "${KIPRJMOD}/export/OpenAIO-Core.wrl"
     m.m_Offset = pcbnew.VECTOR3D(0, 0, 0)
     m.m_Show = True
     j90.Models().push_back(m)
@@ -221,7 +250,7 @@ def update_master(step_path, core_pcb):
     else:
         print("  master: Core has no Edge.Cuts yet, no shadow drawn")
     pcbnew.SaveBoard(MASTER, b)
-    print("  master: J90 3D model = export/OpenAIO-Core.step")
+    print("  master: J90 3D model = export/OpenAIO-Core.wrl (STEP alongside for --subst-models)")
 
 
 def main():
@@ -258,6 +287,7 @@ def main():
     sidecars("OpenAIO-Base")
     sidecars("OpenAIO-Core")
     step = export_step(core)
+    export_vrml(core)
     if "--drc" in sys.argv:
         drc(base)
         drc(core)

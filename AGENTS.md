@@ -102,7 +102,8 @@ gap, 0.6 mm round pads: 8 GND, `+BATT`, `+5V` x2, `+10V` x2, `+3.3V` x2,
 interface net is a global label; `python3 tools/lga_gen.py` prints the table.
 In the master those nets show one ratsnest line each between the islands, land
 pad to Core pad; that is the interface, not an error (exclude them in the DRC
-dialog once). The Core STEP from the split is J90's 3D model, so the master's
+dialog once). The Core VRML from the split (STEP alongside, picked up by
+`--subst-models`) is J90's 3D model, so the master's
 3D view shows the Core stacked at its true position for collision checks, and
 the Core outline sits on J90's User.Comments layer while routing the Base.
 
