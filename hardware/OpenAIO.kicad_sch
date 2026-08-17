@@ -4744,6 +4744,28 @@
 		)
 		(uuid "f39dd4c5-83ce-46b6-a812-03fd6e2ae357")
 	)
+	(global_label "BUZZER-"
+		(shape bidirectional)
+		(at 160.02 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "079449b3-130c-4e86-bef8-5cca659c1ee4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 160.02 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(global_label "UART1_TX"
 		(shape bidirectional)
 		(at 219.075 26.67 0)
@@ -8432,17 +8454,6 @@
 				)
 			)
 		)
-	)
-	(global_label "BUZZER-"
-		(shape bidirectional)
-		(at 160.02 33.02 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "079449b3-130c-4e86-bef8-5cca659c1ee4")
 	)
 	(sheet_instances
 		(path "/"

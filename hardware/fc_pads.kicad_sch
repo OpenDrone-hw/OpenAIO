@@ -1747,6 +1747,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 113.03) (xy 55.88 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39b7609a-d00e-4dbb-9ae3-2b8147600b83")
+	)
+	(wire
+		(pts
 			(xy 45.72 62.23) (xy 45.72 64.77)
 		)
 		(stroke
@@ -1954,6 +1964,16 @@
 			(type default)
 		)
 		(uuid "99fa5a2a-30de-48d9-ad1b-ec1fe38658ae")
+	)
+	(wire
+		(pts
+			(xy 62.23 113.03) (xy 62.23 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b27615c-2928-4a13-b864-d2431741821e")
 	)
 	(wire
 		(pts
@@ -2235,6 +2255,16 @@
 		)
 		(uuid "e59047fe-ea91-4a0b-be9b-84fe8d5cb91f")
 	)
+	(label "U1RX"
+		(at 55.88 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fd50a6c7-f9d3-40cd-85f8-6201a3c53ef8")
+	)
 	(hierarchical_label "LED_STRIP"
 		(shape input)
 		(at 91.44 35.56 270)
@@ -2248,7 +2278,7 @@
 	)
 	(hierarchical_label "UART1_RX"
 		(shape input)
-		(at 55.88 107.95 270)
+		(at 55.88 113.03 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2314,7 +2344,7 @@
 	)
 	(hierarchical_label "UART1_TX"
 		(shape output)
-		(at 62.23 107.95 270)
+		(at 62.23 113.03 270)
 		(effects
 			(font
 				(size 1.27 1.27)
