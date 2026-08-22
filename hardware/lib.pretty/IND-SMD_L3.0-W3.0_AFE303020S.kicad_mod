@@ -6,7 +6,7 @@
 	(property "Reference" "REF**"
 		(at 0 -4 0)
 		(layer "F.SilkS")
-		(uuid "9a5de030-b003-4875-a77b-ac2107bb8bb9")
+		(uuid "c3bee7a2-4d2d-460e-8a66-cf7fc33715d8")
 		(effects
 			(font
 				(size 1 1)
@@ -17,7 +17,7 @@
 	(property "Value" "IND-SMD_L3.0-W3.0_AFE303020S"
 		(at 0 4 0)
 		(layer "F.Fab")
-		(uuid "2c6731f7-fc43-41b6-9f4c-d466bcef9d68")
+		(uuid "4988f99f-77f2-4eb3-a392-d25af5b144a6")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "30aeb3c4-e7b9-48cd-826b-c893b547d80d")
+		(uuid "2c704545-0e8c-4ddf-8944-92694c19ed65")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,7 +40,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "16919d6d-82e0-45e4-a844-c0cc1c47af2a")
+		(uuid "f13da73a-bc28-4f2b-954a-5aaed528f606")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -57,7 +57,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "69b19a51-c8ed-4ad8-937a-75f76be5baaa")
+		(uuid "5f1448cc-05f5-4e94-9de3-6ff4ba985050")
 	)
 	(fp_line
 		(start -1.5 1.7)
@@ -67,7 +67,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "8b3a034c-8f2e-4c9d-b42d-13162a18954e")
+		(uuid "ca235305-c7ba-4c5b-98c7-eab87edc5fa2")
 	)
 	(fp_circle
 		(center -1.5 1.5)
@@ -78,12 +78,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "a098c323-0b92-4752-ad7f-d2abb151430e")
+		(uuid "4f55369d-21f2-480a-bbc0-7dd3e9ac29a7")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "4b709648-7a2f-4bb7-a840-74807217f5f4")
+		(uuid "71e4c061-cb8d-418d-b1d9-02a9162db628")
 		(effects
 			(font
 				(size 1 1)
@@ -95,18 +95,18 @@
 		(at -0.95 0)
 		(size 1.2 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "dd8f146e-5dd3-477a-a74a-c703daebd872")
+		(uuid "ffcdb8cb-3e5c-4308-918a-a394f2c4af85")
 	)
 	(pad "2" smd rect
 		(at 0.95 0)
 		(size 1.2 3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "87a5a2e7-87a0-44d9-aaf0-94ebc8d49b7e")
+		(uuid "343714b1-bd55-42a4-9375-df7623074cf3")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/lib.3dshapes/IND-SMD_L3.0-W3.0_AFE303020S.wrl"
+	(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Changjiang_FTC303020D.step"
 		(offset
-			(xyz 0 -0 0)
+			(xyz 0 0 0)
 		)
 		(scale
 			(xyz 1 1 1)
