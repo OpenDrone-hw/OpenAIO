@@ -933,7 +933,7 @@
         "uuid": "fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
       }
     ],
-    "used_designators": "",
+    "used_designators": "USB1,R3-4,#PWR1,#PWR10-11,#PWR15-18",
     "variants": []
   },
   "sheets": [
@@ -942,24 +942,8 @@
       "OpenAIO"
     ],
     [
-      "01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2",
-      "RP2354A"
-    ],
-    [
       "cdf44e0a-3675-4533-b9f5-78ffc381d2a5",
       "Power"
-    ],
-    [
-      "067dfe4f-0feb-4fee-b449-2d51932eecf1",
-      "IMU"
-    ],
-    [
-      "7eb6278f-5b99-473d-b708-4fb1f437cf9b",
-      "OSD"
-    ],
-    [
-      "92d80a6e-4bd9-4df0-920d-da7b8cdc2925",
-      "Blackbox"
     ],
     [
       "6891e3d6-67ec-46df-a6dd-bbed7a5ef668",
@@ -984,10 +968,6 @@
     [
       "6e8501c6-71d5-4860-9b96-3d3562c097af",
       "RX"
-    ],
-    [
-      "0d0b26c5-e9b6-4ca3-8b9f-93c86665bc0c",
-      "Core_Interface"
     ]
   ],
   "text_variables": {},
