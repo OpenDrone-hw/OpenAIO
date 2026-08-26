@@ -8819,13 +8819,13 @@
 			(pin passive line
 				(at -3.81 -25.40 0)
 				(length 3.81)
-				(name "I2C0_SDA" (effects (font (size 1.0 1.0))))
+				(name "I2C0.SDA" (effects (font (size 1.0 1.0))))
 				(number "3" (effects (font (size 1.0 1.0))))
 			)
 			(pin passive line
 				(at -3.81 -27.94 0)
 				(length 3.81)
-				(name "I2C0_SCL" (effects (font (size 1.0 1.0))))
+				(name "I2C0.SCL" (effects (font (size 1.0 1.0))))
 				(number "4" (effects (font (size 1.0 1.0))))
 			)
 			(pin passive line
@@ -8837,7 +8837,7 @@
 			(pin passive line
 				(at -3.81 -35.56 0)
 				(length 3.81)
-				(name "PINIO2" (effects (font (size 1.0 1.0))))
+				(name "10V_ENABLE" (effects (font (size 1.0 1.0))))
 				(number "46" (effects (font (size 1.0 1.0))))
 			)
 			(pin passive line
@@ -8855,13 +8855,13 @@
 			(pin passive line
 				(at 26.67 -2.54 180)
 				(length 3.81)
-				(name "USB_D+" (effects (font (size 1.0 1.0))))
+				(name "D+" (effects (font (size 1.0 1.0))))
 				(number "7" (effects (font (size 1.0 1.0))))
 			)
 			(pin passive line
 				(at 26.67 -5.08 180)
 				(length 3.81)
-				(name "USB_D-" (effects (font (size 1.0 1.0))))
+				(name "D-" (effects (font (size 1.0 1.0))))
 				(number "8" (effects (font (size 1.0 1.0))))
 			)
 			(pin power_in line
@@ -8915,7 +8915,7 @@
 			(pin passive line
 				(at 26.67 -38.10 180)
 				(length 3.81)
-				(name "ESC_CURRENT" (effects (font (size 1.0 1.0))))
+				(name "CURR" (effects (font (size 1.0 1.0))))
 				(number "42" (effects (font (size 1.0 1.0))))
 			)
 			(pin passive line
