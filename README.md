@@ -2,10 +2,9 @@
 
 An all-in-one for toothpick-class 6S FPV: flight controller, 4-in-1 ESC and
 ExpressLRS receiver on 25.5 x 25.5 mm mounting. It merges three boards
-OpenDrone already makes. Two PCBs, no connector: the **Base** carries the ESC
-power stages, power, receiver and all pads, and the **Core**, a 23 x 20 mm hat
-with the RP2354A, IMU, OSD and blackbox, is soldered flat onto it as an
-interior LGA.
+OpenDrone already makes: the ESC power stages, power, receiver and all pads on
+this board, and the flight controller as the shared OpenFC-Core module, a
+15 x 15 mm LGA reflowed flat onto it, no connector.
 
 [![Status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project)
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/v3sWmTcx3R)
@@ -31,10 +30,10 @@ From the design files. Not manufactured yet.
 
 | | |
 |---|---|
-| Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm (Base) |
-| Stack | Base 6 layers 1.6 mm, 2 oz outer; Core hat 23.1 x 20.2 mm, 6 layers 0.8 mm, soldered on as a 34-pad LGA |
+| Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm |
+| Stack | 6 layers 1.6 mm, 2 oz outer; OpenFC-Core module on top as a 54-pad LGA |
 | Input | 6S |
-| Flight controller | RP2354A, BMI270 IMU, analog OSD, microSD blackbox, USB-C |
+| Flight controller | OpenFC-Core module: RP2350-class MCU, IMU, barometer, analog OSD, microSD blackbox; USB-C on this board |
 | ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |
 | Receiver | ExpressLRS 2.4 GHz, ESP32-C3 + SX1281 |
 | Assembly | JLCPCB, LCSC basic parts preferred |

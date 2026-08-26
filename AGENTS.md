@@ -12,13 +12,11 @@
 
 # OpenAIO
 
-All-in-one board for toothpick-class 6S FPV: RP2354A flight controller, 4x AM32
-ESC and ExpressLRS 2.4 GHz receiver on 25.5 x 25.5 mm. The design starts from
-the manufactured sub-sheets of OpenFC-Lite-Mini, OpenESC-20x20 and OpenRX-Lite,
-copied into `hardware/` and wired on the root sheet. It is a two-PCB stack:
-the **Base** (ESCs, power, pads, RX) and the **Core** (RP2354A, IMU, OSD,
-blackbox), soldered onto the Base as an interior LGA. One schematic, two board
-projects; see Architecture.
+All-in-one board for toothpick-class 6S FPV: 4x AM32 ESC, power, pads and
+ExpressLRS 2.4 GHz receiver on 25.5 x 25.5 mm, with the flight controller
+(MCU, IMU, baro, OSD, blackbox) on the shared OpenFC-Core module, reflowed onto
+this board as a 54 pad LGA (J1). The ESC and RX sheets come from OpenESC-20x20
+and OpenRX-Lite, the pads from OpenFC-Lite-Mini, wired on the root sheet.
 
 ## Repo
 
@@ -27,14 +25,15 @@ projects; see Architecture.
 | Maintainer | @stancoene |
 | Status | See the `status-*` topic on the repo. Never written here. |
 | Designed in | KiCad 10 |
-| Schematic project | `hardware/OpenAIO.kicad_pro`: open this one to edit the schematic. It has no board |
-| Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_rp2350a`, `fc_imu`, `fc_osd`, `fc_blackbox`, `fc_pads` (OpenFC-Lite-Mini), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite), `core_interface` (the Base<->Core LGA, generated) |
-| Boards | `hardware/OpenAIO-Base.kicad_pro` + `.kicad_pcb` (carrier) and `hardware/OpenAIO-Core.kicad_pro` + `.kicad_pcb` (hat), two full KiCad projects in the same directory. Their root schematics `OpenAIO-Base.kicad_sch` and `OpenAIO-Core.kicad_sch` are symlinks to `OpenAIO.kicad_sch`, so both boards see the one schematic. Which footprint lives on which board is decided by the board it was placed on: `.kicad_multiboard.json` + the multiboard plugin, see Environment |
-| Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib`. Seeded with the OpenFC-Lite-Mini local library so the copied FC sheets resolve; the lib tables also alias `components`, `4in1ESC` and `OpenRX-Shared` onto the catalogue for the same reason |
+| KiCad project | `hardware/OpenAIO.kicad_pro` |
+| Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_pads` (OpenFC-Lite-Mini), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite). The core is the symbol `lib:OpenDrone-Core`, J1, on the root |
+| Board | `hardware/OpenAIO.kicad_pcb`, 6 layers, 1.6 mm, 2 oz outer |
+| Core module | OpenFC-Core, one symbol and one footprint (`OpenDrone-Core_LGA_land`) copied into `lib` by that repo's `tools/sync_to.py`; never edit them here |
+| Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib`. Seeded with the OpenFC-Lite-Mini local library so the copied sheets resolve; the lib tables also alias `components`, `4in1ESC` and `OpenRX-Shared` onto the catalogue for the same reason |
 | Shared library | [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), one checkout per machine, nickname `OpenDrone`, resolved through the KiCad path variable `OPENDRONE_LIB` (Preferences > Configure Paths) |
-| Design rules | `hardware/OpenAIO-Base.kicad_dru`: canonical block plus 2 oz outer copper (0.16 mm clearance and track). `hardware/OpenAIO-Core.kicad_dru`: canonical block, 1 oz line standard 0.09, plus "nothing but J91 on B.Cu". `OpenAIO.kicad_dru` is the schematic project's copy of the canonical block |
+| Design rules | `hardware/OpenAIO.kicad_dru`: canonical block plus 2 oz outer copper (0.16 mm clearance and track) |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
-| Board setup | Standard: 6 layers, 0.09 mm clearance and track, via 0.35 on 0.20 drill. Base 1.6 mm, 2 oz outer, the master netclasses. Core 0.8 mm (JLCPCB 6-layer minimum, JLC06081H-3313-like stackup), 1 oz, Default netclass only, same as OpenFC-Lite-Mini |
+| Board setup | 6 layers, 1.6 mm, 2 oz outer, 0.16 mm clearance and track, via 0.35 on 0.20 drill |
 | License | CERN-OHL-S-2.0 |
 
 <!-- Mechanical repos: replace the KiCad rows with the CAD tool -->
@@ -66,62 +65,33 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
 ## Environment
 
 ```sh
-# schematic and board checks (no --schematic-parity: each board holds a subset of the schematic)
+# schematic and board checks
 kicad-cli sch erc --exit-code-violations hardware/OpenAIO.kicad_sch
-kicad-cli pcb drc --refill-zones --exit-code-violations hardware/OpenAIO-Base.kicad_pcb
-kicad-cli pcb drc --refill-zones --exit-code-violations hardware/OpenAIO-Core.kicad_pcb
+kicad-cli pcb drc --schematic-parity --refill-zones --exit-code-violations hardware/OpenAIO.kicad_pcb
 
 # netlist, for scripted analysis
 kicad-cli sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/OpenAIO.kicad_sch
-
-# schematic -> boards (KiCad's Update PCB from Schematic would import the whole
-# schematic into each board; the multiboard plugin only brings each board its own
-# footprints). GUI: PCB editor > Tools > External Plugins > Multi-Board Manager,
-# select the board that should receive new parts, Update. Headless, boards closed:
-KPY=/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3
-$KPY ~/OpenDrone/software/OpenDrone-Scripts/kicad/multiboard/update.py hardware              # refresh both, new parts to the Base
-$KPY ~/OpenDrone/software/OpenDrone-Scripts/kicad/multiboard/update.py hardware OpenAIO-Core # new parts to the Core
-
-# Core 3D model for J90 on the Base (after changing the Core layout; KiCad may stay open)
-cd hardware && python3 tools/core_model.py
 ```
 
-Plugin, once per machine: `sh ~/OpenDrone/software/OpenDrone-Scripts/kicad/multiboard/install.sh`
-(OpenDrone fork of [Kicad-Multi-PCB](https://github.com/Eliot-Abramo/Kicad-Multi-PCB),
-KiCad 10, its README says what was changed). On macOS `kicad-cli` is at
+On macOS `kicad-cli` is at
 `/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, and `pcbnew` imports
 only under KiCad's bundled Python. Shared scripts (renders, STEP export,
-packaging art) live in `OpenDrone-Scripts`; board-specific scripts live in
-`hardware/tools/` (`lga_gen.py`, `core_model.py`).
+packaging art) live in `OpenDrone-Scripts`.
 
 ## Architecture
 
-Two PCBs, one schematic. KiCad has one board per project, so there are three
-projects in `hardware/`: `OpenAIO` (schematic only), `OpenAIO-Base` and
-`OpenAIO-Core` (one board each, root schematic symlinked to `OpenAIO.kicad_sch`).
-The plugin's ownership rule decides the split: a footprint belongs to the board
-it was placed on first, and an Update of a board only refreshes its own
-footprints and adds symbols that are on no board yet. To move a part, delete it
-from one board and Update the other. Nets are board-wide names, so a net that
-crosses the LGA is complete on each board through J90 or J91. Edit the schematic
-from the `OpenAIO` project only: opening it through a board project works for
-reading and cross-probing but saving from there writes extra project instance
-data into the shared sheets.
-
-The Base<->Core interface is one pin table in `tools/lga_gen.py`, which emits
-everything that must agree: `lib:Core_LGA_land` (F.Cu land pattern on the
-Base, J90), `lib:Core_LGA_pads` (B.Cu pads on the Core, J91, X pre-mirrored so
-the flipped footprint overlays the land pad for pad), the `lib:Core_LGA`
-symbol and the `core_interface` sheet. 2 x 16 pads, 1.0 mm pitch, 12 mm row
-gap, 0.6 mm round pads: 8 GND, `+BATT`, `+5V` x2, `+10V` x2, `+3.3V` x2,
-`+4v5`, and 16 signals (`MOTOR1..4`, `UART0_TX/RX`, `UART1_TX/RX` to the RX,
-`SPI0` + `FLASH_CS` to the SD card, `USB_D+/-`, `10V_ENABLE`, `CURR`). Every
-interface net is a global label; `python3 tools/lga_gen.py` prints the table.
-`tools/core_model.py` exports the Core as `export/OpenAIO-Core.wrl` (+ `.step`,
-origin at J91) and that file is J90's 3D model, so the Base's 3D view shows the
-Core stacked at its true position for collision checks; the Core outline also
-sits on J90's User.Comments layer while routing the Base. `export/` is
-gitignored: run the script once after cloning.
+One board. The flight controller is not designed here: it is the OpenFC-Core
+module, placed as J1 (`lib:OpenDrone-Core`, footprint
+`OpenDrone-Core_LGA_land`, 54 pads of 1.0 mm on a 2.0 mm grid, 15 x 15 mm)
+and reflowed onto the top side like any other part. Everything the core needs
+from this board crosses that land: `+4v5` and `+BATT` in, `MOTOR1..4` out to
+the four `esc_channel` sheets, `UART0`/`UART1` and `PIOUART0`/`PIOUART1` to
+the RX sheet and the pads, `CURR` from the current sense amplifier,
+`10V_ENABLE` to the power sheet, `BUZZER-`, `LED_STRIP`, `VIDEO_IN`/`OUT`,
+USB `D+`/`D-` to the Type-C. Pad names are the core's net names; the pin map
+and the layout rules of the module are in the OpenFC-Core repo. The core's
+symbol and footprint are copied here by `OpenFC-Core/hardware/tools/sync_to.py`
+and are not edited in this repo.
 
 ## Key parts
 
@@ -153,15 +123,11 @@ upstream. Do not restate upstream documentation.>
 
 ## Layout rules
 
-- J90 (Base, F.Cu) and J91 (Core, B.Cu, flipped) are a mirror pair from one
-  generator; change pads in `tools/lga_gen.py`, regenerate, then Update
-  Footprints from Library on both boards. J91's position is the Core's model
-  origin: `core_model.py` after moving it.
-- Only the Core's top face carries parts; its bottom is the LGA (DRU rule on
-  the Core). Nothing on the Base may stand under the Core outline (J90
-  User.Comments); check the Base 3D view.
-- The Core is 0.8 mm thick, the JLCPCB 6-layer minimum, 1 oz outer; the Base
-  is 1.6 mm, 2 oz outer. Both are board settings of their own project now.
+- Nothing may stand under J1 on the top side: the core's bottom is flat
+  copper on the land. Bottom side parts under it are fine.
+- J1 keeps every pad, unused ones stay open; delete pads per instance only for
+  routing room. Ground pads tie into the plane.
+- Move the core only by moving J1; never edit the footprint here.
 
 ## Revisions
 
