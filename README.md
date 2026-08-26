@@ -1,10 +1,10 @@
 # OpenAIO
 
-An all-in-one for toothpick-class 6S FPV: flight controller, 4-in-1 ESC and
-ExpressLRS receiver on 25.5 x 25.5 mm mounting. It merges three boards
-OpenDrone already makes: the ESC power stages, power, receiver and all pads on
-this board, and the flight controller as the shared OpenFC-Core module, a
-15 x 15 mm LGA reflowed flat onto it, no connector.
+An all-in-one for toothpick-class FPV on 2 to 6 cells: flight controller,
+4-in-1 ESC and ExpressLRS receiver on 25.5 x 25.5 mm mounting. It merges
+three boards OpenDrone already makes: the ESC power stages, power, receiver
+and all pads on this board, and the flight controller as the shared
+OpenFC-Core module, a 15 x 15 mm LGA reflowed flat onto it, no connector.
 
 [![Status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project)
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/v3sWmTcx3R)
@@ -32,7 +32,7 @@ From the design files. Not manufactured yet.
 |---|---|
 | Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm |
 | Stack | 6 layers 1.6 mm, 2 oz outer; OpenFC-Core module on top as a 54-pad LGA |
-| Input | 6S |
+| Input | 2-6S LiPo (6.0-25.2 V) |
 | Flight controller | OpenFC-Core module: RP2350-class MCU, IMU, barometer, analog OSD, microSD blackbox; USB-C on this board |
 | ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |
 | Receiver | ExpressLRS 2.4 GHz, ESP32-C3 + SX1281 |

@@ -12,7 +12,7 @@
 
 # OpenAIO
 
-All-in-one board for toothpick-class 6S FPV: 4x AM32 ESC, power, pads and
+All-in-one board for toothpick-class FPV, 2-6S: 4x AM32 ESC, power, pads and
 ExpressLRS 2.4 GHz receiver on 25.5 x 25.5 mm, with the flight controller
 (MCU, IMU, baro, OSD, blackbox) on the shared OpenFC-Core module, reflowed onto
 this board as a 54 pad LGA (J1). The ESC and RX sheets come from OpenESC-20x20
@@ -92,6 +92,19 @@ USB `D+`/`D-` to the Type-C. Pad names are the core's net names; the pin map
 and the layout rules of the module are in the OpenFC-Core repo. The core's
 symbol and footprint are copied here by `OpenFC-Core/hardware/tools/sync_to.py`
 and are not edited in this repo.
+
+## Voltage envelope
+
+2S-6S, 6.0 to 25.2 V. The ceiling is the MOSFET: DOY180N03T is 30 V VDSS, the
+same part and the same NSG2065Q topology OpenESC-20x20 flies at 6S. The 40 V
+SP40N01GHNK that takes OpenESC-30x30 to 8S is PDFN-8L 5x6 and four channels of
+it do not fit on 25.5 mm, so 6S is the ceiling here, not 8S.
+
+At the bottom of the range the +10V gate rail is not regulated: the buck runs
+in pass-through and the drivers see roughly +BATT, which at 2S is about 5.9 V,
+above the NSG2065Q 4.5 V UVLO and inside its 5-20 V supply range. The board
+runs, but gate drive is about half, so continuous current at 2S is not the 6S
+figure. Measure both before either goes in the README table.
 
 ## Key parts
 
