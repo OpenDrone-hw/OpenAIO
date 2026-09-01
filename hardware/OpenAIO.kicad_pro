@@ -933,13 +933,17 @@
         "uuid": "fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
       }
     ],
-    "used_designators": "USB1,R3-4,#PWR1,#PWR10-11,#PWR15-18",
+    "used_designators": "U20,Rsense3,R96-98,C84,C86-87,C95-96,#PWR211,#PWR219-226",
     "variants": []
   },
   "sheets": [
     [
       "fb88b6f9-ee39-4640-a9d4-04a17ceeac64",
       "OpenAIO"
+    ],
+    [
+      "bc7411c7-60bd-4d84-ad4c-e6de8efd40d7",
+      "RX Mono"
     ],
     [
       "cdf44e0a-3675-4533-b9f5-78ffc381d2a5",
@@ -964,10 +968,6 @@
     [
       "db3cdd4a-035f-42d3-8f2e-6db113113326",
       "ESC4"
-    ],
-    [
-      "6e8501c6-71d5-4860-9b96-3d3562c097af",
-      "RX"
     ]
   ],
   "text_variables": {},

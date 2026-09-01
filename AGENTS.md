@@ -1,8 +1,6 @@
-<!-- This file fills in as the board gets drawn. It ships mostly empty and that
-     is fine. A planned repo does not carry it at all (README is the write-up
-     until a design exists); it comes back from the template when someone
-     claims the board, with the Repo table filled and the rest landing as the
-     design settles. Do not save it all for the end.
+<!-- Keep this one-view brief at every project stage. Fill it from verified
+     repository facts as the design develops; omit sections that do not yet
+     apply instead of adding plans or placeholders.
 
      Keep the section order identical in every OpenDrone repo, so a reader and an
      agent find the same thing in the same place anywhere. Delete a section that
@@ -15,7 +13,7 @@
 All-in-one board for toothpick-class FPV, 2-6S: 4x AM32 ESC, power, pads and
 ExpressLRS 2.4 GHz receiver on 25.5 x 25.5 mm, with the flight controller
 (MCU, IMU, baro, OSD, blackbox) on the shared OpenFC-Core module, reflowed onto
-this board as a 54 pad LGA (J1). The ESC and RX sheets come from OpenESC-20x20
+this board as a 52 pad LGA (J1). The ESC and RX sheets come from OpenESC-20x20
 and OpenRX-Lite, the pads from OpenFC-Lite-Mini, wired on the root sheet.
 
 ## Repo
@@ -35,8 +33,6 @@ and OpenRX-Lite, the pads from OpenFC-Lite-Mini, wired on the root sheet.
 | Fab config | `hardware/fabrication-toolkit-options.json` |
 | Board setup | 6 layers, 1.6 mm, 2 oz outer, 0.16 mm clearance and track, via 0.35 on 0.20 drill |
 | License | CERN-OHL-S-2.0 |
-
-<!-- Mechanical repos: replace the KiCad rows with the CAD tool -->
 
 ## Rules
 
@@ -82,7 +78,7 @@ packaging art) live in `OpenDrone-Scripts`.
 
 One board. The flight controller is not designed here: it is the OpenFC-Core
 module, placed as J1 (`lib:OpenDrone-Core`, footprint
-`OpenDrone-Core_LGA_land`, 54 pads of 1.0 mm on a 2.0 mm grid, 15 x 15 mm)
+`OpenDrone-Core_LGA_land`, 52 pads of 1.0 mm on a 2.0 mm grid, 15 x 15 mm)
 and reflowed onto the top side like any other part. Everything the core needs
 from this board crosses that land: `+4v5` and `+BATT` in, `MOTOR1..4` out to
 the four `esc_channel` sheets, `UART0`/`UART1` and `PIOUART0`/`PIOUART1` to
@@ -106,34 +102,6 @@ above the NSG2065Q 4.5 V UVLO and inside its 5-20 V supply range. The board
 runs, but gate drive is about half, so continuous current at 2S is not the 6S
 figure. Measure both before either goes in the README table.
 
-## Key parts
-
-| Function | Ref | Part | LCSC | Note |
-|---|---|---|---|---|
-| <MCU> | U1 | | | |
-| | | | | |
-
-## Power
-
-```
-<ASCII tree: source, each regulator with its part and output, and what each
-rail feeds. One block, no prose.>
-```
-
-## Connectors and I/O
-
-| Connector | Ref | Part | Function |
-|---|---|---|---|
-| | | | |
-
-<Pinout table or pin map, only where the pinout is not visible from the
-schematic sheet name.>
-
-## Firmware
-
-<Which firmware, which target, how it gets on the board the first time. Link
-upstream. Do not restate upstream documentation.>
-
 ## Layout rules
 
 - Nothing may stand under J1 on the top side: the core's bottom is flat
@@ -141,9 +109,3 @@ upstream. Do not restate upstream documentation.>
 - J1 keeps every pad, unused ones stay open; delete pads per instance only for
   routing room. Ground pads tie into the plane.
 - Move the core only by moving J1; never edit the footprint here.
-
-## Revisions
-
-| Rev | Date | Change |
-|---|---|---|
-| <rev1> | <YYYY-MM-DD> | First release. |

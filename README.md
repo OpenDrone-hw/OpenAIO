@@ -9,8 +9,8 @@ OpenFC-Core module, a 15 x 15 mm LGA reflowed flat onto it, no connector.
 [![Status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project)
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/v3sWmTcx3R)
 
-Held by @stancoene. Layout in progress on the branch
-`design/start-kicad-project`; nothing has been manufactured.
+The KiCad implementation lives in `hardware/`. Use Git for branch state and
+manufacturing or test evidence for maturity claims.
 
 ## Why
 
@@ -64,10 +64,9 @@ Research so far, reference rather than decisions:
 - [research/ALTERNATIVES.md](research/ALTERNATIVES.md): ESC-stage part alternatives, gate driver and FET options, March 2026
 - The stitched design reset in August 2026 is in the git history before #9; reference for the thinking, not a design to continue from.
 
-## Open questions
+## Design questions
 
-Still open while the layout is drawn. Answering them is a real contribution
-that needs no KiCad.
+Resolve these only as part of user-requested design work:
 
 - **Thermal.** Four power stages next to an MCU and a radio on 25.5 mm square,
   with no airflow guarantee. What is the continuous current budget on 2 oz
