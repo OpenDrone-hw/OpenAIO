@@ -28,7 +28,7 @@ and OpenRX-Lite, the pads from OpenFC-Lite-Mini, wired on the root sheet.
 | Board | `hardware/OpenAIO.kicad_pcb`, 6 layers, 1.6 mm, 2 oz outer |
 | Core module | OpenFC-Core, one symbol and one footprint (`OpenDrone-Core_LGA_land`) copied into `lib` by that repo's `tools/sync_to.py`; never edit them here |
 | Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib`. Seeded with the OpenFC-Lite-Mini local library so the copied sheets resolve; the lib tables also alias `components`, `4in1ESC` and `OpenRX-Shared` onto the catalogue for the same reason |
-| Shared library | [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), one checkout per machine, nickname `OpenDrone`, resolved through the KiCad path variable `OPENDRONE_LIB` (Preferences > Configure Paths) |
+| Shared library | `hardware/KiCad-Library/`, pinned submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), nickname `OpenDrone`; 3D models and exact component datasheets resolve through `OPENDRONE_LIB` |
 | Design rules | `hardware/OpenAIO.kicad_dru`: canonical block plus 2 oz outer copper (0.16 mm clearance and track) |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
 | Board setup | 6 layers, 1.6 mm, 2 oz outer, 0.16 mm clearance and track, via 0.35 on 0.20 drill |
@@ -49,8 +49,9 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
   at process start and overwrites files on save.
 - **Reuse before you draw.** Check the `OpenDrone` library and its
   `PARTS-USED.md` first. If the part is there we have already sourced,
-  footprinted and shipped it: place it from `OpenDrone`. Draw a new part into
-  `lib` only when the catalogue has nothing that fits, imported with
+  footprinted and shipped it, and its symbol links to the exact committed
+  datasheet: place it from `OpenDrone`. Draw a new part into `lib` only when
+  the catalogue has nothing that fits, imported with
   `easyeda2kicad` from its LCSC number. Pulling a newer catalogue is a
   deliberate, reviewed commit: `git submodule update --remote
   hardware/KiCad-Library`, then DRC.

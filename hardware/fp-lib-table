@@ -1,7 +1,7 @@
 (fp_lib_table
 	(version 7)
 	(lib (name "lib")(type "KiCad")(uri "${KIPRJMOD}/lib.pretty")(options "")(descr "project-local footprints"))
-	(lib (name "OpenDrone")(type "KiCad")(uri "${OPENDRONE_LIB}/footprint/OpenDrone.pretty")(options "")(descr "OpenDrone parts catalogue, one checkout of OpenDrone-hw/KiCad-Library per machine, path variable OPENDRONE_LIB"))
-	(lib (name "4in1ESC")(type "KiCad")(uri "${OPENDRONE_LIB}/footprint/OpenDrone.pretty")(options "")(descr "alias: nickname used by the OpenESC-20x20 sheet, same catalogue"))
-	(lib (name "OpenRX-Shared")(type "KiCad")(uri "${OPENDRONE_LIB}/footprint/OpenDrone.pretty")(options "")(descr "alias: nickname used by the OpenRX sheet, same catalogue"))
+	(lib (name "OpenDrone")(type "KiCad")(uri "${KIPRJMOD}/KiCad-Library/footprint/OpenDrone.pretty")(options "")(descr "OpenDrone parts catalogue, submodule hardware/KiCad-Library"))
+	(lib (name "4in1ESC")(type "KiCad")(uri "${KIPRJMOD}/KiCad-Library/footprint/OpenDrone.pretty")(options "")(descr "alias: nickname used by the OpenESC-20x20 sheet, same catalogue"))
+	(lib (name "OpenRX-Shared")(type "KiCad")(uri "${KIPRJMOD}/KiCad-Library/footprint/OpenDrone.pretty")(options "")(descr "alias: nickname used by the OpenRX sheet, same catalogue"))
 )
