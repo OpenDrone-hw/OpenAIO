@@ -56,7 +56,7 @@ The three designs this merges, all manufactured and flying:
 
 - [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini): the RP2354A flight controller
 - [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20): the AM32 4-in-1 power stage
-- [OpenRX](https://github.com/OpenDrone-hw/OpenRX): the ELRS receiver
+- [OpenRX Lite](https://github.com/OpenDrone-hw/OpenRX-Lite): the ELRS receiver
 
 Research so far, reference rather than decisions:
 
