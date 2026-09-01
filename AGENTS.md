@@ -1,13 +1,3 @@
-<!-- Keep this one-view brief at every project stage. Fill it from verified
-     repository facts as the design develops; omit sections that do not yet
-     apply instead of adding plans or placeholders.
-
-     Keep the section order identical in every OpenDrone repo, so a reader and an
-     agent find the same thing in the same place anywhere. Delete a section that
-     does not apply rather than leaving it empty. Target 150 lines: if a section
-     grows past a screen, the detail belongs in the schematic, not here. State
-     current fact only. No plans, no TODOs, no history outside Revisions. -->
-
 # OpenAIO
 
 All-in-one board for toothpick-class FPV, 2-6S: 4x AM32 ESC, power, pads and
@@ -20,13 +10,13 @@ and OpenRX-Lite, the pads from OpenFC-Lite-Mini, wired on the root sheet.
 
 | | |
 |---|---|
-| Maintainer | @stancoene |
+| Maintainer | @Just4Stan (Discord: juststan_) |
 | Status | See the `status-*` topic on the repo. Never written here. |
 | Designed in | KiCad 10 |
 | KiCad project | `hardware/OpenAIO.kicad_pro` |
 | Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_pads` (OpenFC-Lite-Mini), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite). The core is the symbol `lib:OpenDrone-Core`, J1, on the root |
 | Board | `hardware/OpenAIO.kicad_pcb`, 6 layers, 1.6 mm, 2 oz outer |
-| Core module | OpenFC-Core, one symbol and one footprint (`OpenDrone-Core_LGA_land`) copied into `lib` by that repo's `tools/sync_to.py`; never edit them here |
+| Core module | OpenFC-Core, one symbol and one footprint (`OpenDrone-Core_LGA_land`) vendored into `lib`; never edit them here |
 | Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib`. Seeded with the OpenFC-Lite-Mini local library so the copied sheets resolve; the lib tables also alias `components`, `4in1ESC` and `OpenRX-Shared` onto the catalogue for the same reason |
 | Shared library | `hardware/KiCad-Library/`, pinned submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), nickname `OpenDrone`; 3D models and exact component datasheets resolve through `OPENDRONE_LIB` |
 | Design rules | `hardware/OpenAIO.kicad_dru`: canonical block plus 2 oz outer copper (0.16 mm clearance and track) |
@@ -74,8 +64,11 @@ kicad-cli sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/Op
 
 On macOS `kicad-cli` is at
 `/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, and `pcbnew` imports
-only under KiCad's bundled Python. Reusable scripts (renders, STEP export,
-packaging art) come from Incutec hardware tooling; the OpenDrone release standard lives in `OpenDrone-hw/.github/RELEASES.md`.
+only under KiCad's bundled Python. Reusable scripts for renders, STEP export,
+and packaging art come from Incutec hardware tooling. The OpenDrone release
+standard is
+[RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md).
+Board-specific scripts, where a board has any, live in `hardware/tools/`.
 
 ## Architecture
 
@@ -88,9 +81,8 @@ the four `esc_channel` sheets, `UART0`/`UART1` and `PIOUART0`/`PIOUART1` to
 the RX sheet and the pads, `CURR` from the current sense amplifier,
 `10V_ENABLE` to the power sheet, `BUZZER-`, `LED_STRIP`, `VIDEO_IN`/`OUT`,
 USB `D+`/`D-` to the Type-C. Pad names are the core's net names; the pin map
-and the layout rules of the module are in the OpenFC-Core repo. The core's
-symbol and footprint are copied here by `OpenFC-Core/hardware/tools/sync_to.py`
-and are not edited in this repo.
+and land are defined by the core's vendored symbol and footprint. They are not
+edited in this repo.
 
 ## Voltage envelope
 
@@ -102,8 +94,8 @@ it do not fit on 25.5 mm, so 6S is the ceiling here, not 8S.
 At the bottom of the range the +10V gate rail is not regulated: the buck runs
 in pass-through and the drivers see roughly +BATT, which at 2S is about 5.9 V,
 above the NSG2065Q 4.5 V UVLO and inside its 5-20 V supply range. The board
-runs, but gate drive is about half, so continuous current at 2S is not the 6S
-figure. Measure both before either goes in the README table.
+runs, but gate drive is about half, so the continuous-current rating at 2S is
+lower than at 6S; neither figure is published without a measurement.
 
 ## Layout rules
 
