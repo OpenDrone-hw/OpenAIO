@@ -1,13 +1,3 @@
-<!-- Keep this one-view brief at every project stage. Fill it from verified
-     repository facts as the design develops; omit sections that do not yet
-     apply instead of adding plans or placeholders.
-
-     Keep the section order identical in every OpenDrone repo, so a reader and an
-     agent find the same thing in the same place anywhere. Delete a section that
-     does not apply rather than leaving it empty. Target 150 lines: if a section
-     grows past a screen, the detail belongs in the schematic, not here. State
-     current fact only. No plans, no TODOs, no history outside Revisions. -->
-
 # OpenAIO
 
 All-in-one board for toothpick-class FPV, 2-6S: 4x AM32 ESC, power, pads and
@@ -16,23 +6,77 @@ ExpressLRS 2.4 GHz receiver on 25.5 x 25.5 mm, with the flight controller
 this board as a 52 pad LGA (J1). The ESC and RX sheets come from OpenESC-20x20
 and OpenRX-Lite, the pads from OpenFC-Lite-Mini, wired on the root sheet.
 
+## Architecture
+
+One board. The flight controller is not designed here: it is the OpenFC-Core
+module, placed as J1 (`lib:OpenDrone-Core`, footprint
+`OpenDrone-Core_LGA_land`, 52 pads of 1.0 mm on a 2.0 mm grid, 15 x 15 mm)
+and reflowed onto the top side like any other part. Everything the core needs
+from this board crosses that land: `+4v5` and `+BATT` in, `MOTOR1..4` out to
+the four `esc_channel` sheets, `UART0`/`UART1` and `PIOUART0`/`PIOUART1` to
+the RX sheet and the pads, `CURR` from the current sense amplifier,
+`10V_ENABLE` to the power sheet, `BUZZER-`, `LED_STRIP`, `VIDEO_IN`/`OUT`,
+USB `D+`/`D-` to the Type-C. Pad names are the core's net names; the pin map
+and land are defined by the core's vendored symbol and footprint. They are not
+edited in this repo.
+
+## Voltage envelope
+
+2S-6S, 6.0 to 25.2 V. The ceiling is the MOSFET: DOY180N03T is 30 V VDSS, the
+same part and the same NSG2065Q topology OpenESC-20x20 flies at 6S. The 40 V
+SP40N01GHNK that takes OpenESC-30x30 to 8S is PDFN-8L 5x6 and four channels of
+it do not fit on 25.5 mm, so 6S is the ceiling here, not 8S.
+
+At the bottom of the range the +10V gate rail is not regulated: the buck runs
+in pass-through and the drivers see roughly +BATT, which at 2S is about 5.9 V,
+above the NSG2065Q 4.5 V UVLO and inside its 5-20 V supply range. The board
+runs, but gate drive is about half, so the continuous-current rating at 2S is
+lower than at 6S; neither figure is published without a measurement.
+
+## Layout rules
+
+- Nothing may stand under J1 on the top side: the core's bottom is flat
+  copper on the land. Bottom side parts under it are fine.
+- J1 keeps every pad, unused ones stay open; delete pads per instance only for
+  routing room. Ground pads tie into the plane.
+- Move the core only by moving J1; never edit the footprint here.
+
 ## Repo
 
 | | |
 |---|---|
-| Maintainer | @stancoene |
+| Maintainer | @Just4Stan (Discord: juststan_) |
 | Status | See the `status-*` topic on the repo. Never written here. |
 | Designed in | KiCad 10 |
 | KiCad project | `hardware/OpenAIO.kicad_pro` |
 | Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_pads` (OpenFC-Lite-Mini), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite). The core is the symbol `lib:OpenDrone-Core`, J1, on the root |
 | Board | `hardware/OpenAIO.kicad_pcb`, 6 layers, 1.6 mm, 2 oz outer |
-| Core module | OpenFC-Core, one symbol and one footprint (`OpenDrone-Core_LGA_land`) copied into `lib` by that repo's `tools/sync_to.py`; never edit them here |
+| Core module | OpenFC-Core, one symbol and one footprint (`OpenDrone-Core_LGA_land`) vendored into `lib`; never edit them here |
 | Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib`. Seeded with the OpenFC-Lite-Mini local library so the copied sheets resolve; the lib tables also alias `components`, `4in1ESC` and `OpenRX-Shared` onto the catalogue for the same reason |
 | Shared library | `hardware/KiCad-Library/`, pinned submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), nickname `OpenDrone`; 3D models and exact component datasheets resolve through `OPENDRONE_LIB` |
 | Design rules | `hardware/OpenAIO.kicad_dru`: canonical block plus 2 oz outer copper (0.16 mm clearance and track) |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
 | Board setup | 6 layers, 1.6 mm, 2 oz outer, 0.16 mm clearance and track, via 0.35 on 0.20 drill |
 | License | CERN-OHL-S-2.0 |
+
+## Environment
+
+```sh
+# schematic and board checks
+kicad-cli sch erc hardware/OpenAIO.kicad_sch
+kicad-cli pcb drc --schematic-parity --refill-zones hardware/OpenAIO.kicad_pcb
+
+# netlist, for scripted analysis
+kicad-cli sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/OpenAIO.kicad_sch
+```
+
+On macOS `kicad-cli` is at
+`/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, and `pcbnew` imports
+only under KiCad's bundled Python. Reusable scripts for renders, STEP export,
+and packaging art come from Incutec hardware tooling. The OpenDrone release
+standard is
+[RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md).
+Board-specific scripts, where a board has any, live in `hardware/tools/`.
 
 ## Rules
 
@@ -59,56 +103,5 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
   on Discord that you are taking it. See [CONTRIBUTING.md](CONTRIBUTING.md).
 - **Run ERC and DRC before every pull request.** Existing approved findings
   may remain; a new type or increased count must be reviewed before merge.
-  Commands below.
+  Commands are in Environment above.
 
-## Environment
-
-```sh
-# schematic and board checks
-kicad-cli sch erc hardware/OpenAIO.kicad_sch
-kicad-cli pcb drc --schematic-parity --refill-zones hardware/OpenAIO.kicad_pcb
-
-# netlist, for scripted analysis
-kicad-cli sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/OpenAIO.kicad_sch
-```
-
-On macOS `kicad-cli` is at
-`/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, and `pcbnew` imports
-only under KiCad's bundled Python. Reusable scripts (renders, STEP export,
-packaging art) come from Incutec hardware tooling; the OpenDrone release standard lives in `OpenDrone-hw/.github/RELEASES.md`.
-
-## Architecture
-
-One board. The flight controller is not designed here: it is the OpenFC-Core
-module, placed as J1 (`lib:OpenDrone-Core`, footprint
-`OpenDrone-Core_LGA_land`, 52 pads of 1.0 mm on a 2.0 mm grid, 15 x 15 mm)
-and reflowed onto the top side like any other part. Everything the core needs
-from this board crosses that land: `+4v5` and `+BATT` in, `MOTOR1..4` out to
-the four `esc_channel` sheets, `UART0`/`UART1` and `PIOUART0`/`PIOUART1` to
-the RX sheet and the pads, `CURR` from the current sense amplifier,
-`10V_ENABLE` to the power sheet, `BUZZER-`, `LED_STRIP`, `VIDEO_IN`/`OUT`,
-USB `D+`/`D-` to the Type-C. Pad names are the core's net names; the pin map
-and the layout rules of the module are in the OpenFC-Core repo. The core's
-symbol and footprint are copied here by `OpenFC-Core/hardware/tools/sync_to.py`
-and are not edited in this repo.
-
-## Voltage envelope
-
-2S-6S, 6.0 to 25.2 V. The ceiling is the MOSFET: DOY180N03T is 30 V VDSS, the
-same part and the same NSG2065Q topology OpenESC-20x20 flies at 6S. The 40 V
-SP40N01GHNK that takes OpenESC-30x30 to 8S is PDFN-8L 5x6 and four channels of
-it do not fit on 25.5 mm, so 6S is the ceiling here, not 8S.
-
-At the bottom of the range the +10V gate rail is not regulated: the buck runs
-in pass-through and the drivers see roughly +BATT, which at 2S is about 5.9 V,
-above the NSG2065Q 4.5 V UVLO and inside its 5-20 V supply range. The board
-runs, but gate drive is about half, so continuous current at 2S is not the 6S
-figure. Measure both before either goes in the README table.
-
-## Layout rules
-
-- Nothing may stand under J1 on the top side: the core's bottom is flat
-  copper on the land. Bottom side parts under it are fine.
-- J1 keeps every pad, unused ones stay open; delete pads per instance only for
-  routing room. Ground pads tie into the plane.
-- Move the core only by moving J1; never edit the footprint here.
