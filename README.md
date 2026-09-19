@@ -31,7 +31,7 @@ From the design files. Not manufactured yet.
 | | |
 |---|---|
 | Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm |
-| Stack | 6 layers 1.6 mm, 2 oz outer; OpenFC-Core module on top as a 54-pad LGA |
+| Stack | 6 layers 1.6 mm, 2 oz outer; OpenFC-Core module on top as a 52-pad LGA |
 | Input | 2-6S LiPo (6.0-25.2 V) |
 | Flight controller | OpenFC-Core module: RP2350-class MCU, IMU, barometer, analog OSD, microSD blackbox; USB-C on this board |
 | ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |
