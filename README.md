@@ -36,7 +36,7 @@ From the design files. Not manufactured yet.
 | Flight controller | OpenFC-Core module: RP2350-class MCU, IMU, barometer, analog OSD, microSD blackbox; USB-C on this board |
 | ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |
 | Receiver | ExpressLRS 2.4 GHz, ESP32-C3 + SX1281 |
-| Assembly | JLCPCB, LCSC basic parts preferred |
+| Assembly | Chosen per release; see production/. LCSC basic parts preferred |
 
 ## Constraints
 
@@ -45,7 +45,8 @@ From the design files. Not manufactured yet.
   on the receiver. No forks.
 - Reuses the manufactured circuits of OpenFC-Lite-Mini, OpenESC-20x20 and
   OpenRX where they fit; parts come from the shared library first.
-- JLCPCB assembly from LCSC parts, extended parts kept to a minimum.
+- Assembly from LCSC parts, extended parts kept to a minimum; assembly house
+  chosen per release, see production/.
 - Do not start from the three schematics stitched together. That was tried,
   and it produced a board that looked finished and was not (recoverable at the
   `pre-reset-2026-08-13` tag). Start from the requirements.
