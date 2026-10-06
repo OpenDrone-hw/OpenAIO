@@ -56,6 +56,13 @@ Owner rules from the shared `pcb-agent-commons` repo, adopted at R1 (the owner s
 - KiCad features used properly: netclass directive labels, impedance stackup, diff pairs, custom DRU rules, keepouts, zone priorities;
 - independent critique rounds until no round finds a BLOCKER or MAJOR.
 
+Adopted from the other boards' lessons in the commons (gate R2):
+- **Base vias stay 0.35/0.20.** The owner told OpenFC-H7 that NextPCB builds 0.35/0.20 vias, so the planned resize to 0.43/0.20 is dropped. The Core keeps 0.35/0.15.
+- **The route is a proof of concept.** The owner does the finish pass, so every net is routed or listed, without polishing.
+- **Agents are bounded.** Each has one deliverable and checkpoints to a state file.
+- **Shared tools:** freeroute.py, sync_pcb.py, check_rules.py and silk_check.py from the commons.
+- **X-ray:** offset back-to-back exposed pads so 2D X-ray can read them. Mirrored high-side/low-side FET pairs are weighed against this in R3.
+
 Not done without the maintainer:
 - replacing the microSD with flash;
 - swapping the SX1281 receiver for the LR1121 "mono" sheet;
@@ -72,11 +79,9 @@ Each step ends with these checks:
 A step that makes any of these worse is reverted, not pushed.
 
 1. **R1, DFM and circuit fixes** (both boards, local edits only): LAYOUT_REVIEW step 1, plus the circuit fixes above that need no re-pattern.
-2. **R2, LGA and Core:**
-   - new land and pad footprints;
-   - net assignment;
-   - schematic moves S1, S2, B2, D7;
-   - Core re-route with B.Cu signal-free.
+2. **R2, LGA and Core.** The LGA spec is in `LGA_SPEC.md`: 46 pads, 21 GND, 2.0 mm grid.
+   - R2-1: schematic moves S1, S2, B2 and D7; new land and pad footprints; nets synced to both boards. Base interface nets are reconnected so both boards are back at 0 unconnected.
+   - R2-2: Core re-route, with B.Cu signal-free.
 3. **R3, Base:**
    - stack re-plan;
    - power stage (shunt, Kelvin, via arrays, feeds);
