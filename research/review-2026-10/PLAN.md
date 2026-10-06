@@ -46,6 +46,16 @@ The circuit review's other should-fix items are also taken:
 - RX LED supply;
 - SX1281 pin 5 to GND.
 
+Owner rules from the shared `pcb-agent-commons` repo, adopted at R1 (the owner set them on 2026-10-06 for every board):
+- no component silkscreen;
+- every solder pad gets a legible function label;
+- no "Drone" text on the boards;
+- manufacturer and exact MPN on every BOM line;
+- 0201 passives by default, with minimal justified capacitance;
+- through vias only (consistent with D8);
+- KiCad features used properly: netclass directive labels, impedance stackup, diff pairs, custom DRU rules, keepouts, zone priorities;
+- independent critique rounds until no round finds a BLOCKER or MAJOR.
+
 Not done without the maintainer:
 - replacing the microSD with flash;
 - swapping the SX1281 receiver for the LR1121 "mono" sheet;
