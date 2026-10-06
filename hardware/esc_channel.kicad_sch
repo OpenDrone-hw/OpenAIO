@@ -5399,7 +5399,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -6013,7 +6013,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -6304,7 +6304,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -6897,7 +6897,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -7098,7 +7098,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -7406,7 +7406,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "NSIC"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -7774,7 +7774,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -8223,7 +8223,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -8531,7 +8531,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -8732,7 +8732,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -8933,7 +8933,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9134,7 +9134,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9336,7 +9336,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9538,7 +9538,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9739,7 +9739,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9941,7 +9941,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -10246,7 +10246,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -10447,7 +10447,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -10915,7 +10915,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -11205,7 +11205,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "DOINGTER"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -11535,7 +11535,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -11732,7 +11732,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -12040,7 +12040,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "DOINGTER"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -12234,7 +12234,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -12434,7 +12434,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "DOINGTER"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -12821,7 +12821,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -13345,7 +13345,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -13543,7 +13543,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -13743,7 +13743,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "DOINGTER"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -14079,7 +14079,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -14601,7 +14601,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -15122,7 +15122,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "DOINGTER"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -15314,7 +15314,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "DOINGTER"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)

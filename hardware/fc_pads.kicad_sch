@@ -2452,7 +2452,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 50.546 53.848 90)
 			(hide yes)
 			(show_name no)
@@ -2531,7 +2531,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "RX1"
 			(at 54.356 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -2610,7 +2610,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "SCL"
 			(at 78.994 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -2924,7 +2924,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "TX0"
 			(at 189.484 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -3212,7 +3212,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 135.636 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -3529,7 +3529,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "VTX"
 			(at 132.334 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -3608,7 +3608,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "LED"
 			(at 56.896 53.848 90)
 			(hide yes)
 			(show_name no)
@@ -3688,7 +3688,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "10V"
 			(at 199.644 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -3846,7 +3846,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "10V"
 			(at 141.986 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -3926,7 +3926,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "CAM"
 			(at 125.984 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -4005,7 +4005,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 83.566 24.638 90)
 			(hide yes)
 			(show_name no)
@@ -4163,7 +4163,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 62.484 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -4322,7 +4322,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "NC"
 			(at 179.324 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -4480,7 +4480,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "LED"
 			(at 89.916 24.638 90)
 			(hide yes)
 			(show_name no)
@@ -4717,7 +4717,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 110.236 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -5425,7 +5425,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 98.044 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -5504,7 +5504,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 156.464 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -5583,7 +5583,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "BUZ+"
 			(at 93.726 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -5742,7 +5742,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "NC"
 			(at 174.244 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -5821,7 +5821,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "BUZ-"
 			(at 87.376 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -5900,7 +5900,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "LED"
 			(at 56.896 24.638 90)
 			(hide yes)
 			(show_name no)
@@ -5979,7 +5979,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "ADC2"
 			(at 54.864 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -6058,7 +6058,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 50.546 24.638 90)
 			(hide yes)
 			(show_name no)
@@ -6137,7 +6137,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "4V5"
 			(at 150.114 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -6217,7 +6217,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 194.564 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -6296,7 +6296,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 67.056 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -6531,7 +6531,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "4V5"
 			(at 73.406 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -6765,7 +6765,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "TX1"
 			(at 60.706 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -6844,7 +6844,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 83.566 53.848 90)
 			(hide yes)
 			(show_name no)
@@ -7082,7 +7082,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "RX0"
 			(at 184.404 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -7319,7 +7319,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "PIO_TX0"
 			(at 162.814 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -7475,7 +7475,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "SDA"
 			(at 85.344 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -7711,7 +7711,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "PIO_RX0"
 			(at 169.164 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -7790,7 +7790,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "LED"
 			(at 89.916 53.848 90)
 			(hide yes)
 			(show_name no)

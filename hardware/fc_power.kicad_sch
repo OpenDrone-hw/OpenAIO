@@ -5549,7 +5549,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "AF0201FR-076K49L"
 			(at 195.58 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -5560,7 +5560,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 195.58 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -9116,7 +9116,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RTT012401FTH"
 			(at -116.84 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -9127,7 +9127,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "RALEC"
 			(at -116.84 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -9446,7 +9446,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "AF0201FR-076K49L"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9457,7 +9457,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9572,7 +9572,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0201FR-077K5L"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9583,7 +9583,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -10808,7 +10808,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RC0201FR-07510RL"
 			(at 0 16.51 0)
 			(hide yes)
 			(show_name no)
@@ -10819,7 +10819,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "YAGEO"
 			(at 0 16.51 0)
 			(hide yes)
 			(show_name no)

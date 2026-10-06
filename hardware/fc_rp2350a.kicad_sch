@@ -8904,7 +8904,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "RTT012401FTH"
 			(at 171.45 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -8915,7 +8915,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "RALEC"
 			(at 171.45 138.43 0)
 			(hide yes)
 			(show_name no)
