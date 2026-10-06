@@ -26,11 +26,83 @@
 # Only what this board needs and the line does not. Name every rule so the next
 # person can tell a real constraint from a copied one.
 #
-# The Core is 1 oz outer copper on JLCPCB's 0.8 mm 6-layer process and keeps
-# the line standard everywhere. Its bottom face is the LGA (J91) that solders
-# onto J90 of the Base; nothing else may sit on B.Cu.
+# The Core's bottom face is the LGA (J91) that solders onto J90 of the Base;
+# nothing else may sit on B.Cu.
 
 (rule "Core bottom is the LGA only"
   (constraint disallow footprint)
   (layer "B.Cu")
   (condition "A.Reference != 'J91'"))
+
+# NextPCB extreme tier, OpenAIO Core: 6L 0.8 mm, 1 oz finished outer, 0.5 oz
+# inner (NextPCB stack 6L-0.8mm-0.5oz-1080). Through vias only (D8, owner
+# rule): no microvia rule. Every number and its source: research/review-2026-10/
+# NEXTPCB.md section 2.1 and 3.2. KiCad: the LAST matching rule wins, per
+# constraint; general rules first, specific last.
+
+(rule "NPCB core: outer 1 oz track"
+  (layer outer)
+  (constraint track_width (min 0.076mm)))
+
+(rule "NPCB core: outer 1 oz clearance"
+  (layer outer)
+  (constraint clearance (min 0.076mm)))
+
+(rule "NPCB core: inner 0.5 oz track"
+  (layer inner)
+  (constraint track_width (min 0.064mm)))
+
+(rule "NPCB core: inner 0.5 oz clearance"
+  (layer inner)
+  (constraint clearance (min 0.076mm)))
+
+(rule "NPCB core: SMD pad to track or pour"
+  (layer outer)
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'SMD' && (B.Type == 'Track' || B.Type == 'Arc' || B.Type == 'Zone')")
+  (constraint clearance (min 0.10mm)))
+
+(rule "NPCB core: SMD pad to SMD pad"
+  (layer outer)
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD'")
+  (constraint clearance (min 0.15mm)))
+
+(rule "NPCB core: PTH pad to PTH pad"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'Through-hole' && B.Pad_Type == 'Through-hole'")
+  (constraint clearance (min 0.40mm)))
+
+# 0.15 mm drill is a Standard-order option for boards up to 1.2 mm (the Core is
+# 0.8 mm); 0.35 / 0.15 leaves the 0.10 mm ring NextPCB asks for.
+(rule "NPCB core: through via"
+  (condition "A.Type == 'Via' && A.Via_Type == 'Through'")
+  (constraint hole_size (min 0.15mm))
+  (constraint via_diameter (min 0.35mm))
+  (constraint annular_width (min 0.10mm))
+  (constraint hole_clearance (min 0.18mm)))
+
+(rule "NPCB core: PTH hole to copper"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+  (constraint hole_clearance (min 0.23mm))
+  (constraint annular_width (min 0.09mm)))
+
+(rule "NPCB core: NPTH hole to copper"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical'")
+  (constraint hole_clearance (min 0.20mm)))
+
+(rule "NPCB core: hole to hole, different nets (CAF)"
+  (condition "A.Net != B.Net")
+  (constraint hole_to_hole (min 0.30mm)))
+
+(rule "NPCB core: copper to routed edge"
+  (constraint edge_clearance (min 0.20mm)))
+
+# Reported under courtyards_overlap, which the project sets to "ignore" today;
+# raise that severity in the density pass to make this rule bite.
+(rule "NPCB core: body to body (courtyard drawn on the body)"
+  (constraint courtyard_clearance (min 0.20mm)))
+
+# Datasheet land pattern below the 0.15 mm pad-to-pad floor. Keep only after
+# NextPCB accepts a ganged mask on it (NEXTPCB.md 4.6, question 11).
+(rule "NPCB core: U9 X2SON-6 land pattern below 0.15"
+  (layer outer)
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U9') && B.memberOfFootprint('U9')")
+  (constraint clearance (min 0.076mm)))

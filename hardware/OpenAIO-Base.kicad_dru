@@ -26,19 +26,83 @@
 # Only what this board needs and the line does not. Name every rule so the next
 # person can tell a real constraint from a copied one.
 #
-# 2 oz outer copper, same as the ESC boards: four power stages on 25.5 mm.
-# Heavier copper etches with a wider taper, so the outer layers need 0.16 mm
-# where the line standard is 0.09 mm. Inner layers stay at 1 oz and keep the
-# standard. This is a rule and not a global minimum on purpose: raising the
-# board minimum would constrain the signal routing on the inner layers for no
-# reason. Anything narrower than 0.16 mm (USB pair, Analog, Default 0.09)
-# therefore routes on the inner layers or gets widened where it surfaces.
-# The Core (OpenAIO-Core.kicad_pcb) is 1 oz outer and has no such rule.
+# NextPCB extreme tier, OpenAIO Base: 8L 1.6 mm, 2 oz finished outer, 1 oz
+# inner, through vias with Non-Conductive Fill & Cap (IPC-4761 VII) where they
+# sit in pads. Through vias only (D8, owner rule): no microvia rule. Every
+# number and its source: research/review-2026-10/NEXTPCB.md sections 2.2 and
+# 3.3. These replace the earlier 0.16 mm "2 oz outer copper" pair. KiCad: the
+# LAST matching rule wins, per constraint; general rules first, specific last.
 
-(rule "2 oz outer copper, clearance"
-  (constraint clearance (min 0.16mm))
-  (layer outer))
+(rule "NPCB base: outer 2 oz track"
+  (layer outer)
+  (constraint track_width (min 0.14mm)))
 
-(rule "2 oz outer copper, track width"
-  (constraint track_width (min 0.16mm))
-  (layer outer))
+(rule "NPCB base: outer 2 oz clearance"
+  (layer outer)
+  (constraint clearance (min 0.14mm)))
+
+# TODO-R3: pours on the outer layers keep the 0.16 mm they were filled and
+# reviewed with. At 0.14 the highest-priority F.Cu +BATT pour (priority 32,
+# whole board) fits between the /1C motor pad and Q7's source pins and cuts the
+# phase-node pour (1 unconnected). R3 re-plans the power-stage pours and their
+# priorities (D3, D6); delete this rule there. Tracks and pads get 0.14.
+(rule "TODO-R3: outer pours keep 0.16 until the power-stage re-plan"
+  (layer outer)
+  (condition "A.Type == 'Zone' || B.Type == 'Zone'")
+  (constraint clearance (min 0.16mm)))
+
+(rule "NPCB base: inner 1 oz track"
+  (layer inner)
+  (constraint track_width (min 0.10mm)))
+
+(rule "NPCB base: inner 1 oz clearance"
+  (layer inner)
+  (constraint clearance (min 0.10mm)))
+
+(rule "NPCB base: SMD pad to SMD pad"
+  (layer outer)
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD'")
+  (constraint clearance (min 0.15mm)))
+
+(rule "NPCB base: PTH pad to PTH pad"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'Through-hole' && B.Pad_Type == 'Through-hole'")
+  (constraint clearance (min 0.40mm)))
+
+(rule "NPCB base: through via, 1.6 mm board"
+  (condition "A.Type == 'Via' && A.Via_Type == 'Through'")
+  (constraint hole_size (min 0.20mm))
+  (constraint via_diameter (min 0.43mm))
+  (constraint annular_width (min 0.115mm))
+  (constraint hole_clearance (min 0.18mm)))
+
+# TODO-R3: every Base via is still a 0.075 mm ring (1280 x 0.35/0.20, 47 x
+# 0.50/0.30, 4 x 0.45/0.25); NextPCB 2 oz wants 0.43/0.20 (0.115 ring). The R3
+# re-route resizes them with the stack re-plan (D3). Until then this rule holds
+# DRC at today's via so ~1330 known items do not bury new findings. It only
+# relaxes via_diameter and annular_width; hole size and hole clearance above
+# still apply. Delete this rule in R3.
+(rule "TODO-R3: Base vias stay 0.35/0.20 until the R3 re-route"
+  (condition "A.Type == 'Via' && A.Via_Type == 'Through'")
+  (constraint via_diameter (min 0.35mm))
+  (constraint annular_width (min 0.075mm)))
+
+(rule "NPCB base: PTH hole to copper"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+  (constraint hole_clearance (min 0.23mm))
+  (constraint annular_width (min 0.115mm)))
+
+(rule "NPCB base: NPTH hole to copper"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical'")
+  (constraint hole_clearance (min 0.20mm)))
+
+(rule "NPCB base: hole to hole, different nets (CAF)"
+  (condition "A.Net != B.Net")
+  (constraint hole_to_hole (min 0.30mm)))
+
+(rule "NPCB base: copper to routed edge"
+  (constraint edge_clearance (min 0.20mm)))
+
+# Reported under courtyards_overlap, which the project sets to "ignore" today;
+# raise that severity in the density pass to make this rule bite.
+(rule "NPCB base: body to body (courtyard drawn on the body)"
+  (constraint courtyard_clearance (min 0.20mm)))
