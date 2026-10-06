@@ -1,0 +1,265 @@
+
+### base /CSA+  (4 motors x 20 A; 118118 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| battery pad -> shunt | 0.522 | 0.3080 (8.80) | (62.9,45.5) | 0 | B 44%, In3 19%, In2 19%, In1 18% | 9% |
+scenario 80.00 A: max drop 41.8 mV, loss 3.340 W, vias >1 A: 24, >2 A: 17, top vias (A,x,y,drill,type) [(7.332, 67.48, 44.36, 3.0, 'pth'), (3.918, 61.61, 50.52, 0.2, 'via'), (3.475, 61.41, 50.87, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (70.8, 60.64, 51.34), 'In1.Cu': (425.4, 62.14, 46.28), 'In2.Cu': (428.1, 62.14, 46.28), 'In3.Cu': (432.2, 62.14, 46.28), 'In4.Cu': (55.3, 66.44, 45.64), 'In5.Cu': (38.6, 66.44, 45.64), 'In6.Cu': (131.0, 60.64, 51.34), 'B.Cu': (504.1, 62.14, 46.28)}
+
+### base +BATT  (phase A high side of each motor at 20 A (80 A); 476593 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q3 drain (M1 A) | 0.161 | 0.6020 (17.20) | (63.4,60.9) | 0 | F 52%, In2 24%, In5 24% | 4% |
+| Q9 drain (M2 A) | 0.738 | 0.1907 (5.45) | (67.6,71.6) | 0 | F 96%, In5 4% | 4% |
+| Q15 drain (M3 A) | 0.873 | 0.3325 (9.50) | (83.1,50.0) | 0 | F 100% | 7% |
+| Q21 drain (M4 A) | 0.973 | 0.3920 (11.20) | (85.5,57.2) | 0 | F 93%, In5 7% | 6% |
+| Q5 drain (M1 B) | 0.376 | 0.4602 (13.15) | (65.2,65.2) | 0 | F 99% | 4% |
+| Q7 drain (M1 C) | 0.532 | 0.4795 (13.70) | (65.4,68.9) | 0 | F 100% | 4% |
+| Q11 drain (M2 B) | 0.812 | 0.2608 (7.45) | (69.2,70.7) | 0 | F 95%, In5 5% | 4% |
+| Q13 drain (M2 C) | 0.879 | 0.3500 (10.00) | (71.2,71.9) | 0 | F 94%, In5 6% | 3% |
+| Q17 drain (M3 B) | 0.741 | 0.5250 (15.00) | (80.0,50.1) | 0 | F 83%, In5 17% | 7% |
+| Q19 drain (M3 C) | 0.664 | 0.6230 (17.80) | (64.2,57.1) | 0 | F 52%, In5 33%, In2 14% | 7% |
+| Q23 drain (M4 B) | 0.962 | 0.5373 (15.35) | (85.0,55.8) | 0 | F 94%, In5 6% | 6% |
+| Q25 drain (M4 C) | 1.033 | 0.4340 (12.40) | (83.1,53.1) | 0 | F 95%, In5 5% | 7% |
+scenario 80.00 A: max drop 40.4 mV, loss 2.304 W, vias >1 A: 66, >2 A: 4, top vias (A,x,y,drill,type) [(3.275, 67.97, 50.78, 0.2, 'via'), (2.284, 63.89, 62.91, 0.2, 'via'), (2.225, 63.54, 63.11, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (449.1, 61.93, 61.24), 'In1.Cu': (55.3, 62.48, 62.29), 'In2.Cu': (402.8, 61.93, 61.24), 'In3.Cu': (41.3, 76.33, 48.29), 'In4.Cu': (46.7, 76.33, 48.29), 'In5.Cu': (396.5, 61.93, 61.24), 'In6.Cu': (18.5, 76.33, 48.29), 'B.Cu': (541.5, 61.08, 57.64)}
+
+### base /1A  (20 A, HS conducting; 18836 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q3 source (HS on) | 0.065 | 0.1715 (4.90) | (60.1,62.8) | 0 | F 100% | 1% |
+| Q4 drain (LS on) | 0.115 | 0.2388 (6.82) | (59.3,62.9) | 19 | vias 100% | 6% |
+scenario 20.00 A: max drop 1.3 mV, loss 0.026 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.2, 60.12, 62.1, 0.2, 'via'), (0.015, 59.69, 62.12, 0.2, 'via'), (0.015, 60.0, 62.48, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (289.1, 60.29, 62.05), 'In1.Cu': (10.5, 59.89, 62.05), 'In2.Cu': (1.4, 59.89, 62.05), 'In3.Cu': (0.4, 59.89, 62.05), 'In4.Cu': (0.1, 59.89, 62.05), 'In5.Cu': (0.1, 59.89, 62.05), 'In6.Cu': (0.0, 59.89, 62.05), 'B.Cu': (0.0, 59.89, 62.1)}
+
+### base /1B  (20 A, HS conducting; 18541 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q5 source (HS on) | 0.086 | 0.1295 (3.70) | (60.2,66.5) | 0 | F 100% | 0% |
+| Q6 drain (LS on) | 0.115 | 0.2388 (6.82) | (59.3,66.8) | 19 | vias 100% | 5% |
+scenario 20.00 A: max drop 1.7 mV, loss 0.034 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.003, 59.73, 65.75, 0.2, 'via'), (0.003, 59.73, 66.45, 0.2, 'via'), (0.002, 59.73, 67.15, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (205.4, 60.23, 67.35), 'In1.Cu': (0.0, 59.73, 65.95), 'In2.Cu': (0.0, 59.73, 66.65), 'In3.Cu': (0.0, 59.73, 66.65), 'In4.Cu': (0.0, 59.63, 66.6), 'In5.Cu': (0.0, 59.63, 66.6), 'In6.Cu': (0.0, 59.63, 66.6), 'B.Cu': (0.0, 59.93, 67.05)}
+
+### base /1C  (20 A, HS conducting; 18556 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q7 source (HS on) | 0.094 | 0.1365 (3.90) | (60.2,70.0) | 0 | F 100% | 0% |
+| Q8 drain (LS on) | 0.123 | 0.2262 (6.46) | (59.2,70.3) | 18 | vias 100% | 6% |
+scenario 20.00 A: max drop 1.9 mV, loss 0.038 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.002, 59.65, 69.27, 0.2, 'via'), (0.0, 59.25, 69.31, 0.2, 'via'), (0.0, 59.45, 69.66, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (221.2, 60.28, 70.9), 'In1.Cu': (0.1, 59.58, 69.44), 'In2.Cu': (0.0, 59.58, 69.44), 'In3.Cu': (0.0, 59.58, 69.44), 'In4.Cu': (0.0, 59.58, 69.44), 'In5.Cu': (0.0, 59.43, 69.24), 'In6.Cu': (0.0, 59.43, 69.24), 'B.Cu': (0.0, 59.58, 69.44)}
+
+### base /2A  (20 A, HS conducting; 17817 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q9 source (HS on) | 0.068 | 0.1330 (3.80) | (65.6,76.2) | 0 | F 100% | 0% |
+| Q10 drain (LS on) | 0.114 | 0.2388 (6.82) | (66.0,77.0) | 19 | vias 100% | 5% |
+scenario 20.00 A: max drop 1.4 mV, loss 0.027 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.006, 65.62, 76.52, 0.2, 'via'), (0.005, 64.92, 76.52, 0.2, 'via'), (0.005, 66.32, 76.52, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (234.9, 64.94, 76.25), 'In1.Cu': (0.0, 66.44, 76.65), 'In2.Cu': (0.0, 65.74, 76.65), 'In3.Cu': (0.0, 65.74, 76.65), 'In4.Cu': (0.0, 65.8, 76.55), 'In5.Cu': (0.0, 66.44, 77.2), 'In6.Cu': (0.0, 66.1, 76.6), 'B.Cu': (0.0, 65.74, 76.65)}
+
+### base /2B  (20 A, HS conducting; 18853 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q11 source (HS on) | 0.073 | 0.1295 (3.70) | (69.2,76.2) | 0 | F 100% | 0% |
+| Q12 drain (LS on) | 0.114 | 0.2388 (6.82) | (69.5,77.0) | 19 | vias 100% | 5% |
+scenario 20.00 A: max drop 1.5 mV, loss 0.029 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.004, 68.49, 76.57, 0.2, 'via'), (0.002, 69.19, 76.57, 0.2, 'via'), (0.002, 69.89, 76.57, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (207.2, 68.33, 76.08), 'In1.Cu': (0.0, 68.58, 76.73), 'In2.Cu': (0.0, 70.08, 77.33), 'In3.Cu': (0.0, 69.73, 76.73), 'In4.Cu': (0.0, 69.73, 76.73), 'In5.Cu': (0.0, 69.63, 76.58), 'In6.Cu': (0.0, 69.63, 76.58), 'B.Cu': (0.0, 69.83, 76.33)}
+
+### base /2C  (20 A, HS conducting; 17890 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q13 source (HS on) | 0.067 | 0.1330 (3.80) | (72.7,76.1) | 0 | F 100% | 0% |
+| Q14 drain (LS on) | 0.114 | 0.2388 (6.82) | (73.1,76.9) | 19 | vias 100% | 5% |
+scenario 20.00 A: max drop 1.3 mV, loss 0.027 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.008, 72.09, 76.51, 0.2, 'via'), (0.004, 72.79, 76.51, 0.2, 'via'), (0.004, 73.49, 76.51, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (218.9, 71.98, 76.28), 'In1.Cu': (0.1, 72.04, 76.68), 'In2.Cu': (0.0, 72.28, 76.53), 'In3.Cu': (0.0, 72.64, 77.13), 'In4.Cu': (0.0, 72.64, 77.13), 'In5.Cu': (0.0, 72.64, 77.13), 'In6.Cu': (0.0, 72.64, 77.13), 'B.Cu': (0.0, 72.64, 77.13)}
+
+### base /3A  (20 A, HS conducting; 17852 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q15 source (HS on) | 0.064 | 0.1295 (3.70) | (85.2,45.6) | 0 | F 100% | 0% |
+| Q16 drain (LS on) | 0.114 | 0.2388 (6.82) | (84.9,44.8) | 19 | vias 100% | 5% |
+scenario 20.00 A: max drop 1.3 mV, loss 0.026 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.002, 85.97, 45.24, 0.2, 'via'), (0.002, 85.27, 45.24, 0.2, 'via'), (0.002, 84.57, 45.24, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (200.6, 85.9, 45.44), 'In1.Cu': (0.0, 84.35, 45.18), 'In2.Cu': (0.0, 85.1, 45.08), 'In3.Cu': (0.0, 85.1, 45.08), 'In4.Cu': (0.0, 84.75, 45.18), 'In5.Cu': (0.0, 84.7, 45.08), 'In6.Cu': (0.0, 84.7, 45.08), 'B.Cu': (0.0, 85.1, 45.08)}
+
+### base /3B  (20 A, HS conducting; 17487 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q17 source (HS on) | 0.071 | 0.1260 (3.60) | (81.7,45.6) | 0 | F 100% | 0% |
+| Q18 drain (LS on) | 0.120 | 0.2262 (6.46) | (81.4,44.8) | 18 | vias 100% | 6% |
+scenario 20.00 A: max drop 1.4 mV, loss 0.028 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.001, 82.37, 45.19, 0.2, 'via'), (0.0, 82.37, 44.79, 0.2, 'via'), (0.0, 82.02, 44.99, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (246.0, 82.47, 45.58), 'In1.Cu': (0.0, 82.12, 45.18), 'In2.Cu': (0.0, 81.82, 45.08), 'In3.Cu': (0.0, 81.12, 45.08), 'In4.Cu': (0.0, 81.12, 45.08), 'In5.Cu': (0.0, 81.12, 45.08), 'In6.Cu': (0.0, 81.12, 45.08), 'B.Cu': (0.0, 81.77, 45.38)}
+
+### base /3C  (20 A, HS conducting; 17783 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q19 source (HS on) | 0.072 | 0.1225 (3.50) | (78.1,45.5) | 0 | F 100% | 0% |
+| Q20 drain (LS on) | 0.114 | 0.2388 (6.82) | (77.7,44.8) | 19 | vias 100% | 5% |
+scenario 20.00 A: max drop 1.4 mV, loss 0.029 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.006, 78.71, 45.23, 0.2, 'via'), (0.002, 78.01, 45.23, 0.2, 'via'), (0.001, 77.31, 45.23, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (283.3, 78.77, 45.44), 'In1.Cu': (0.0, 78.47, 45.18), 'In2.Cu': (0.0, 78.12, 44.58), 'In3.Cu': (0.0, 78.12, 44.58), 'In4.Cu': (0.0, 78.22, 44.44), 'In5.Cu': (0.0, 78.22, 44.44), 'In6.Cu': (0.0, 78.22, 44.44), 'B.Cu': (0.0, 77.37, 45.44)}
+
+### base /4A  (20 A, HS conducting; 16902 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q21 source (HS on) | 0.083 | 0.1365 (3.90) | (90.5,58.8) | 0 | F 100% | 0% |
+| Q22 drain (LS on) | 0.130 | 0.2136 (6.10) | (91.6,58.6) | 17 | vias 100% | 6% |
+scenario 20.00 A: max drop 1.7 mV, loss 0.033 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.0, 91.17, 57.59, 0.2, 'via'), (0.0, 91.37, 57.94, 0.2, 'via'), (0.0, 91.57, 57.59, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (224.2, 90.49, 59.71), 'In1.Cu': (0.0, 91.34, 57.61), 'In2.Cu': (0.0, 91.34, 57.61), 'In3.Cu': (0.0, 91.34, 57.61), 'In4.Cu': (0.0, 91.34, 57.71), 'In5.Cu': (0.0, 91.34, 59.71), 'In6.Cu': (0.0, 91.34, 59.71), 'B.Cu': (0.0, 90.94, 58.41)}
+
+### base /4B  (20 A, HS conducting; 18655 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q23 source (HS on) | 0.077 | 0.1435 (4.10) | (90.6,55.3) | 0 | F 100% | 0% |
+| Q24 drain (LS on) | 0.121 | 0.2262 (6.46) | (91.6,55.0) | 18 | vias 100% | 6% |
+scenario 20.00 A: max drop 1.5 mV, loss 0.031 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.011, 90.92, 55.0, 0.2, 'via'), (0.001, 91.21, 54.68, 0.2, 'via'), (0.001, 91.21, 55.38, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (242.8, 90.7, 55.09), 'In1.Cu': (0.5, 91.1, 54.89), 'In2.Cu': (0.0, 91.1, 54.89), 'In3.Cu': (0.0, 91.1, 54.89), 'In4.Cu': (0.0, 91.1, 54.89), 'In5.Cu': (0.0, 91.04, 54.84), 'In6.Cu': (0.0, 91.04, 54.84), 'B.Cu': (0.0, 91.1, 54.89)}
+
+### base /4C  (20 A, HS conducting; 18449 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q25 source (HS on) | 0.066 | 0.1736 (4.96) | (90.8,51.8) | 1 | F 99% | 1% |
+| Q26 drain (LS on) | 0.120 | 0.2262 (6.46) | (91.5,51.5) | 18 | vias 100% | 6% |
+scenario 20.00 A: max drop 1.3 mV, loss 0.026 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.212, 90.62, 52.19, 0.2, 'via'), (0.017, 91.13, 52.53, 0.2, 'via'), (0.015, 91.53, 52.53, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (292.1, 90.82, 52.1), 'In1.Cu': (0.0, 91.27, 52.36), 'In2.Cu': (0.0, 91.27, 52.36), 'In3.Cu': (0.0, 91.27, 51.66), 'In4.Cu': (0.0, 91.27, 51.66), 'In5.Cu': (0.0, 91.17, 51.6), 'In6.Cu': (0.1, 91.17, 51.6), 'B.Cu': (4.1, 90.82, 52.1)}
+
+### base GND  (phase B low side of each motor at 20 A (80 A return); 1365813 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Q4 source (M1 A) | 0.498 | 0.3831 (10.95) | (61.8,62.6) | 5 | B 45%, In6 33%, vias 14%, In1 8% | 14% |
+| Q6 source (M1 B) | 0.516 | 0.5345 (15.27) | (61.7,65.4) | 8 | In6 55%, vias 21%, B 11%, In1 9%, In2 4% | 22% |
+| Q8 source (M1 C) | 0.540 | 0.4673 (13.35) | (61.7,69.2) | 0 | In6 56%, In1 32%, In2 12% | 16% |
+| Q10 source (M2 A) | 0.538 | 0.4585 (13.10) | (64.9,73.1) | 0 | In6 48%, In1 35%, In2 8%, B 8% | 26% |
+| Q12 source (M2 B) | 0.595 | 0.3501 (10.00) | (68.4,75.2) | 6 | In6 57%, vias 23%, B 9%, In1 7%, In2 4% | 19% |
+| Q14 source (M2 C) | 0.554 | 0.3651 (10.43) | (72.2,75.1) | 9 | In6 62%, vias 30%, In1 8% | 13% |
+| Q16 source (M3 A) | 0.397 | 0.4253 (12.15) | (86.2,48.5) | 0 | In6 56%, In1 40%, In2 4% | 35% |
+| Q18 source (M3 B) | 0.332 | 0.3613 (10.32) | (82.1,46.6) | 8 | In6 60%, vias 29%, In1 11% | 19% |
+| Q20 source (M3 C) | 0.227 | 0.3589 (10.25) | (78.4,46.5) | 6 | In6 40%, vias 29%, B 19% | 21% |
+| Q22 source (M4 A) | 0.342 | 0.8383 (23.95) | (73.9,48.6) | 0 | In6 42%, In1 40%, B 16%, In2 2% | 12% |
+| Q24 source (M4 B) | 0.406 | 0.4278 (12.22) | (89.2,56.2) | 8 | In6 54%, vias 21%, B 12%, In2 7%, In1 6% | 17% |
+| Q26 source (M4 C) | 0.400 | 0.4760 (13.60) | (88.7,52.4) | 0 | In6 60%, In1 36%, In2 4% | 13% |
+scenario 80.00 A: max drop 23.3 mV, loss 1.494 W, vias >1 A: 48, >2 A: 18, top vias (A,x,y,drill,type) [(4.877, 80.9, 46.69, 0.2, 'via'), (4.372, 81.31, 46.69, 0.2, 'via'), (3.993, 69.56, 75.08, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (76.8, 79.18, 46.68), 'In1.Cu': (356.7, 77.12, 46.78), 'In2.Cu': (302.0, 76.38, 45.54), 'In3.Cu': (37.5, 79.38, 46.44), 'In4.Cu': (31.7, 72.12, 46.74), 'In5.Cu': (43.0, 79.18, 46.68), 'In6.Cu': (444.1, 77.12, 46.78), 'B.Cu': (250.8, 61.42, 65.39)}
+
+### base +10V  (VTX 1.5 A via LGA + 4 x 20 mA drivers; 67252 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| U14.VCC | 10.164 | 0.0192 (0.55) | (70.8,67.4) | 0 | In5 100% | 100% |
+| U16.VCC | 10.104 | 0.0126 (0.36) | (75.5,71.7) | 1 | vias 100% | 100% |
+| U18.VCC | 3.815 | 0.0126 (0.36) | (73.7,52.1) | 1 | vias 100% | 100% |
+| U20.VCC | 6.299 | 0.0126 (0.36) | (81.5,52.3) | 1 | vias 100% | 100% |
+| LGA J90.7 (to core VTX) | 4.090 | 0.0251 (0.72) | (80.1,55.2) | 2 | vias 100% | 50% |
+| SH6 U12.1 (DJI) | 8.405 | 0.0507 (1.45) | (76.7,60.6) | 0 | In5 100% | 50% |
+scenario 1.58 A: max drop 6.4 mV, loss 0.010 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.753, 80.13, 54.93, 0.2, 'via'), (0.747, 80.11, 55.38, 0.2, 'via'), (0.553, 67.94, 58.06, 0.3, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (22.2, 80.28, 55.48), 'In1.Cu': (0.0, 78.18, 73.14), 'In2.Cu': (0.0, 78.18, 73.09), 'In3.Cu': (0.0, 78.18, 73.09), 'In4.Cu': (0.0, 78.18, 73.09), 'In5.Cu': (51.0, 69.93, 56.74), 'In6.Cu': (0.0, 78.18, 73.09), 'B.Cu': (1.9, 73.93, 52.18)}
+
+### base +5V  (1 A to core, 0.6 A to +4v5, 5 x 0.25 A pads; 236971 nodes, floating cells 1, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| LGA J90.14 | 1.683 | 0.0525 (1.50) | (69.7,57.7) | 0 | F 100% | 21% |
+| D2 anode (->+4v5) | 1.029 | 0.0565 (1.62) | (69.3,55.8) | 3 | vias 100% | 36% |
+| J15 pad | 6.321 | 0.0126 (0.36) | (65.0,48.9) | 1 | vias 100% | 100% |
+| J16 pad | 5.953 | 0.0126 (0.36) | (59.9,74.2) | 1 | vias 100% | 100% |
+| J24 pad | 7.178 | 0.0126 (0.36) | (91.1,47.8) | 1 | vias 100% | 100% |
+| J25 pad | 6.306 | 0.0126 (0.36) | (88.6,76.5) | 1 | vias 100% | 100% |
+| J33 pad | 6.215 | 0.0126 (0.36) | (90.1,61.0) | 1 | vias 100% | 100% |
+scenario 2.85 A: max drop 4.3 mV, loss 0.008 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.85, 65.15, 55.74, 0.3, 'via'), (0.844, 65.52, 55.3, 0.3, 'via'), (0.25, 88.62, 76.51, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (41.1, 68.2, 55.95), 'In1.Cu': (0.3, 65.3, 55.5), 'In2.Cu': (0.6, 65.3, 55.5), 'In3.Cu': (0.9, 65.3, 55.5), 'In4.Cu': (100.8, 63.6, 52.35), 'In5.Cu': (1.7, 65.3, 55.5), 'In6.Cu': (0.4, 65.3, 55.5), 'B.Cu': (13.9, 69.05, 56.4)}
+
+### base +4v5  (LDO input currents; 38030 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| U7.IN (FC 3.3 V LDO) | 0.538 | 0.0315 (0.90) | (70.4,54.1) | 0 | B 100% | 0% |
+| U23.IN (RX 3.3 V LDO) | 8.646 | 0.0251 (0.72) | (85.0,58.0) | 2 | vias 100% | 52% |
+| LGA J90.12 | 4.169 | 0.0251 (0.72) | (85.0,58.0) | 2 | vias 100% | 50% |
+scenario 0.80 A: max drop 4.4 mV, loss 0.002 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.233, 84.93, 58.17, 0.2, 'via'), (0.217, 85.11, 57.73, 0.2, 'via'), (0.202, 69.95, 53.95, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (3.3, 84.86, 57.67), 'In1.Cu': (0.0, 69.56, 53.77), 'In2.Cu': (0.2, 69.56, 53.77), 'In3.Cu': (26.9, 77.66, 54.97), 'In4.Cu': (0.1, 69.56, 53.77), 'In5.Cu': (0.0, 69.56, 53.77), 'In6.Cu': (0.0, 69.56, 53.77), 'B.Cu': (19.0, 84.21, 67.17)}
+
+### base +3V3  (ESP32-C3 0.35 A, SX1281 0.12 A, SD 0.1 A, others 5 mA/pin; 196929 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| Card1.4 | 4.426 | 0.0126 (0.36) | (69.5,66.0) | 1 | vias 100% | 100% |
+| U13.17 | 4.522 | 0.0126 (0.36) | (69.5,66.0) | 1 | vias 100% | 100% |
+| U15.17 | 6.830 | 0.0126 (0.36) | (84.1,69.7) | 1 | vias 100% | 100% |
+| U17.17 | 8.485 | 0.0105 (0.30) | (74.4,54.4) | 0 | B 100% | 100% |
+| U19.17 | 10.871 | 0.0123 (0.35) | (83.4,56.5) | 0 | In4 100% | 100% |
+| U21.11 | 2.508 | 0.0175 (0.50) | (84.3,68.4) | 0 | B 100% | 0% |
+| U21.15 | 4.566 | 0.0126 (0.36) | (84.1,69.7) | 1 | vias 100% | 100% |
+| U22.11 | 6.298 | 0.0126 (0.36) | (84.1,69.7) | 1 | vias 100% | 100% |
+| U22.17 | 5.487 | 0.0126 (0.36) | (84.1,69.7) | 1 | vias 100% | 100% |
+| U22.18 | 5.924 | 0.0126 (0.36) | (84.1,69.7) | 1 | vias 100% | 100% |
+| U22.31 | 4.830 | 0.0126 (0.36) | (84.1,69.7) | 1 | vias 100% | 100% |
+| U22.32 | 4.331 | 0.0126 (0.36) | (82.4,74.1) | 1 | vias 100% | 100% |
+| U25.3 | 12.325 | 0.0126 (0.36) | (84.1,69.7) | 1 | vias 100% | 100% |
+scenario 0.64 A: max drop 2.0 mV, loss 0.001 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.603, 84.09, 69.7, 0.2, 'via'), (0.18, 77.17, 67.9, 0.2, 'via'), (0.175, 82.42, 74.14, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (3.6, 69.29, 66.13), 'In1.Cu': (0.0, 82.59, 60.73), 'In2.Cu': (0.0, 84.34, 56.38), 'In3.Cu': (14.8, 84.19, 69.88), 'In4.Cu': (1.4, 76.79, 67.33), 'In5.Cu': (0.0, 69.54, 66.18), 'In6.Cu': (0.0, 65.19, 52.28), 'B.Cu': (28.7, 83.94, 69.18)}
+
+### base +3.3V  (core 150 mA; 24178 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| LGA J90.8 (whole FC) | 4.376 | 0.0251 (0.72) | (82.5,53.7) | 2 | vias 100% | 53% |
+scenario 0.15 A: max drop 0.7 mV, loss 0.000 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.079, 82.28, 53.76, 0.2, 'via'), (0.071, 82.76, 53.56, 0.2, 'via'), (0.056, 71.4, 52.38, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (3.0, 82.19, 53.96), 'In1.Cu': (0.1, 71.39, 52.16), 'In2.Cu': (0.7, 71.39, 52.16), 'In3.Cu': (8.2, 79.69, 53.46), 'In4.Cu': (0.5, 71.39, 52.16), 'In5.Cu': (0.4, 71.39, 52.16), 'In6.Cu': (1.7, 71.39, 52.16), 'B.Cu': (4.3, 71.49, 52.16)}
+
+### base +5V_USB  (USB 0.5 A; 23723 nodes, floating cells 0, layers F,In1,In2,In3,In4,In5,In6,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| D3 anode | 1.925 | 0.0377 (1.08) | (69.8,50.6) | 2 | vias 100% | 51% |
+scenario 0.50 A: max drop 1.0 mV, loss 0.000 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.257, 69.59, 50.59, 0.3, 'via'), (0.249, 70.1, 50.66, 0.3, 'via'), (0.133, 63.11, 53.76, 0.25, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (7.7, 63.63, 53.31), 'In1.Cu': (0.3, 62.98, 53.56), 'In2.Cu': (1.1, 69.83, 50.61), 'In3.Cu': (11.5, 63.33, 53.86), 'In4.Cu': (0.5, 69.83, 50.61), 'In5.Cu': (0.1, 62.98, 53.56), 'In6.Cu': (0.6, 69.83, 50.61), 'B.Cu': (7.0, 69.48, 50.31)}
+
+### core +10V  (VTX 1.5 A; 45710 nodes, floating cells 0, layers F,In1,In2,In3,In4,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| J41 VTX pad | 2.234 | 0.0700 (2.00) | (108.4,45.5) | 0 | In3 100% | 29% |
+| J51 VTX pad | 9.533 | 0.0262 (0.75) | (104.1,50.2) | 0 | In3 100% | 32% |
+scenario 1.50 A: max drop 8.6 mV, loss 0.009 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.442, 114.4, 46.87, 0.2, 'via'), (0.375, 114.38, 47.33, 0.2, 'via'), (0.368, 114.93, 46.84, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (7.4, 106.33, 45.2), 'In1.Cu': (0.0, 115.88, 60.86), 'In2.Cu': (0.0, 115.08, 60.86), 'In3.Cu': (48.9, 112.73, 46.7), 'In4.Cu': (0.0, 114.93, 61.0), 'B.Cu': (0.1, 114.28, 46.76)}
+
+### core +5V  (1 A; 22609 nodes, floating cells 0, layers F,In1,In2,In3,In4,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| J30 | 5.990 | 0.0367 (1.05) | (108.9,47.9) | 0 | In3 100% | 35% |
+| J37 | 10.577 | 0.0368 (1.05) | (108.8,47.9) | 0 | In3 100% | 35% |
+| R14 | 29.389 | 0.0087 (0.25) | (117.9,55.6) | 0 | In3 100% | 100% |
+scenario 1.00 A: max drop 7.6 mV, loss 0.006 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.352, 106.4, 49.46, 0.2, 'via'), (0.339, 106.14, 50.21, 0.2, 'via'), (0.337, 106.19, 49.81, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (6.3, 124.41, 55.7), 'In1.Cu': (0.0, 106.21, 49.56), 'In2.Cu': (0.1, 106.21, 49.56), 'In3.Cu': (50.6, 108.21, 48.4), 'In4.Cu': (0.3, 106.21, 49.56), 'B.Cu': (3.1, 106.36, 49.66)}
+
+### core +4v5  (; 13733 nodes, floating cells 0, layers F,In1,In2,In3,In4,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| U6.IN | 6.681 | 0.0227 (0.65) | (118.5,56.9) | 0 | F 100% | 49% |
+| J42 | 3.524 | 0.0367 (1.05) | (119.1,49.5) | 0 | In3 100% | 43% |
+| J52 | 0.369 | 0.0503 (1.44) | (119.1,48.4) | 4 | vias 100% | 38% |
+scenario 0.22 A: max drop 0.5 mV, loss 0.000 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.089, 118.43, 48.8, 0.2, 'via'), (0.053, 119.84, 48.8, 0.2, 'via'), (0.053, 120.37, 54.6, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (2.3, 120.31, 54.8), 'In1.Cu': (0.0, 120.86, 54.7), 'In2.Cu': (0.0, 117.31, 57.85), 'In3.Cu': (6.1, 120.11, 54.54), 'In4.Cu': (0.0, 115.96, 58.04), 'B.Cu': (2.9, 119.61, 48.9)}
+
+### core +3.3V  (150 mA total; 39256 nodes, floating cells 0, layers F,In1,In2,In3,In4,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| U10.5 | 15.374 | 0.0122 (0.35) | (107.7,50.9) | 0 | In3 100% | 100% |
+| U11.2 | 15.371 | 0.0087 (0.25) | (111.8,52.7) | 0 | F 100% | 87% |
+| U2.1 | 14.852 | 0.0087 (0.25) | (110.9,58.3) | 0 | F 100% | 100% |
+| U2.11 | 8.446 | 0.0339 (0.97) | (108.9,50.0) | 2 | vias 93% | 100% |
+| U2.20 | 8.634 | 0.0213 (0.61) | (111.5,52.9) | 1 | vias 87%, F 13% | 87% |
+| U2.26 | 10.344 | 0.0175 (0.50) | (109.9,52.3) | 0 | F 100% | 60% |
+| U2.30 | 8.440 | 0.0175 (0.50) | (109.2,51.2) | 0 | F 100% | 52% |
+| U2.38 | 10.224 | 0.0105 (0.30) | (108.0,55.7) | 0 | F 100% | 100% |
+| U2.44 | 9.615 | 0.0122 (0.35) | (107.7,58.1) | 0 | In3 100% | 100% |
+| U2.45 | 9.624 | 0.0122 (0.35) | (107.7,58.1) | 0 | In3 100% | 100% |
+| U2.49 | 9.283 | 0.0126 (0.36) | (109.1,58.4) | 1 | vias 100% | 100% |
+| U2.53 | 9.240 | 0.0126 (0.36) | (110.7,58.3) | 1 | vias 100% | 100% |
+| U2.54 | 10.067 | 0.0087 (0.25) | (110.7,58.5) | 0 | F 100% | 100% |
+| U8.5 | 10.883 | 0.0087 (0.25) | (115.0,54.3) | 0 | F 100% | 100% |
+| U9.5 | 21.643 | 0.0035 (0.10) | (114.6,50.1) | 0 | F 100% | 87% |
+scenario 0.23 A: max drop 1.8 mV, loss 0.000 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.117, 117.14, 47.28, 0.2, 'via'), (0.11, 117.14, 46.79, 0.2, 'via'), (0.104, 109.0, 49.87, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (6.7, 108.17, 51.22), 'In1.Cu': (1.6, 108.82, 49.96), 'In2.Cu': (15.7, 112.92, 46.72), 'In3.Cu': (6.4, 109.17, 49.96), 'In4.Cu': (0.5, 108.82, 49.96), 'B.Cu': (0.2, 108.82, 49.96)}
+
+### core GND  (VTX/cam return 1.5 A; 526224 nodes, floating cells 0, layers F,In1,In2,In3,In4,B)
+| sink | R mOhm | bottleneck mm2 (=1oz mm) | at (x,y) | vias in cut | layer share at cut | hottest via share |
+|---|---|---|---|---|---|---|
+| J43 GND pad | 0.119 | 0.3408 (9.74) | (121.1,53.1) | 4 | vias 48%, F 35%, In1 17% | 18% |
+| J35 GND pad | 0.120 | 0.2676 (7.65) | (124.6,53.3) | 5 | vias 55%, F 27%, In1 18% | 16% |
+| J50 GND pad | 0.141 | 0.2501 (7.15) | (117.5,61.5) | 5 | vias 73%, F 14%, In1 12% | 19% |
+| J40 GND pad | 0.233 | 0.3373 (9.64) | (108.0,45.0) | 4 | vias 62%, F 23%, In1 15% | 21% |
+| J34 GND pad | 0.242 | 0.3005 (8.59) | (114.0,45.0) | 4 | vias 66%, F 18%, In1 16% | 21% |
+| J53 GND pad | 0.172 | 0.2988 (8.54) | (118.9,50.5) | 4 | vias 52%, F 33%, In1 15% | 19% |
+scenario 1.50 A: max drop 0.1 mV, loss 0.000 W, vias >1 A: 0, >2 A: 0, top vias (A,x,y,drill,type) [(0.069, 108.76, 48.72, 0.2, 'via'), (0.067, 108.23, 49.23, 0.2, 'via'), (0.066, 110.61, 48.79, 0.2, 'via')]
+  peak in-plane J (A/mm2, x, y): {'F.Cu': (2.4, 121.53, 52.7), 'In1.Cu': (1.7, 113.58, 45.6), 'In2.Cu': (1.2, 121.98, 52.8), 'In3.Cu': (1.3, 121.98, 52.8), 'In4.Cu': (2.1, 110.73, 48.56), 'B.Cu': (3.9, 115.43, 55.3)}

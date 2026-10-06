@@ -1,0 +1,8 @@
+base Card1: model plan 60.04 mm2 bbox [65.32, 59.99, 70.82, 71.35] vs silk-hull body 63.19 mm2; gap model->R34 envelope 0.000 mm (overlap 0.367 mm2)
+base L2: model plan 8.98 mm2 bbox [65.16, 56.15, 68.17, 59.16] vs name-LxW body 9.00 mm2; gap model->L3 envelope 0.525 mm (overlap 0.000 mm2)
+base USB1: model plan 82.75 mm2 bbox [59.36, 49.84, 66.96, 61.18] vs silk-hull body 55.99 mm2; gap model->R3 envelope 0.000 mm (overlap 0.404 mm2)
+base U12: model plan 38.62 mm2 bbox [76.45, 72.85, 84.45, 77.8] vs silk-hull body 30.75 mm2; gap model->Q13 envelope 1.750 mm (overlap 0.000 mm2)
+base JP1: model plan 8.11 mm2 bbox [89.99, 67.78, 93.09, 70.78] vs silk-hull body 7.72 mm2; gap model->Q21 envelope 7.680 mm (overlap 0.000 mm2)
+core U10: model plan 8.28 mm2 bbox [103.95, 48.37, 106.85, 51.38] vs name-LxW body 5.10 mm2; gap model->C34 envelope 0.000 mm (overlap 0.212 mm2)
+core X1: model plan 5.08 mm2 bbox [109.34, 48.37, 111.83, 50.42] vs silk-hull body 4.56 mm2; gap model->C4 envelope 0.225 mm (overlap 0.000 mm2)
+core U8: model plan 7.50 mm2 bbox [115.26, 51.72, 118.26, 54.21] vs name-LxW body 7.50 mm2; gap model->C29 envelope 0.330 mm (overlap 0.000 mm2)

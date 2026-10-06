@@ -1,0 +1,9 @@
+U22 at (79.85, 71.6175) B | U21 at (88.375, 68.475) B
+  /RX/MOSI   routed  18.0 mm, direct 13.6 mm, vias 2, layers {'B': 0.7, 'In2': 17.3}
+  /RX/MISO   routed  15.0 mm, direct 12.9 mm, vias 2, layers {'B': 1.4, 'In2': 13.6}
+  /RX/SCK    routed  15.6 mm, direct 13.4 mm, vias 2, layers {'In2': 15.6}
+  /RX/NSS    routed  17.8 mm, direct 13.6 mm, vias 2, layers {'In2': 17.8}
+  /RX/BUSY   routed  10.8 mm, direct  9.3 mm, vias 2, layers {'In2': 10.8}
+  /RX/DIO1   routed   9.1 mm, direct  8.3 mm, vias 2, layers {'In2': 7.5, 'B': 1.6}
+  /RX/RST    routed  11.0 mm, direct 10.2 mm, vias 2, layers {'In2': 11.0}
+  total routed 97.3 mm vs direct 81.3 mm

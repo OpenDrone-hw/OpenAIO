@@ -1,0 +1,9 @@
+base: outline area 1126.5 mm2
+F.Cu    fill    600 mm2 ( 53%) | +BATT 460, GND 41, +5V 21, /1C 7, /4C 7, /4A 7, /4B 7, /1B 7, /1A 6, /2B 6, /3C 6, /2C 6, /2A 6, /3A 6, /3B 6 | tracks 132 mm, 27 signal nets
+In1.Cu  fill    942 mm2 ( 84%) | GND 851, /CSA+ 39, /1C 5, /4C 4, /1B 4, /4B 4, /4A 4, /2B 4, /2C 4, /3C 4, /2A 4, /1A 4, /3A 4, /3B 4 | tracks 0 mm, 0 signal nets
+In2.Cu  fill    748 mm2 ( 66%) | GND 520, +BATT 138, /CSA+ 38, /1C 5, /4C 4, /1B 4, /4B 4, /4A 4, /2B 4, /2C 4, /3C 4, /2A 4, /1A 4, /3A 4, /3B 4 | tracks 504 mm, 62 signal nets
+In3.Cu  fill    559 mm2 ( 50%) | +3V3 293, +4v5 80, +3.3V 52, +5V_USB 45, /CSA+ 39, /1C 5, /4C 4, /1B 4, /4B 4, /2B 4, /2C 4, /3C 4, /2A 4, /1A 4, /3A 4, /3B 4, /4A 3 | tracks 103 mm, 1 signal nets
+In4.Cu  fill    731 mm2 ( 65%) | +5V 535, +3V3 167, /2B 4, /4B 4, /1B 2, /3C 2, /3A 2, /2C 2, /2A 2, /1C 2, /3B 2, /1A 2, /4C 2, /4A 2 | tracks 10 mm, 0 signal nets
+In5.Cu  fill    550 mm2 ( 49%) | +BATT 408, +10V 142 | tracks 186 mm, 20 signal nets
+In6.Cu  fill    894 mm2 ( 79%) | GND 894 | tracks 0 mm, 0 signal nets
+B.Cu    fill    634 mm2 ( 56%) | GND 484, /CSA+ 39, +BATT 19, +5V 9, /1C 7, /1B 7, /1A 7, /4B 7, /4A 7, /3C 6, /4C 6, /2B 6, /2A 6, /3A 6, /2C 6, /3B 6, +3V3 3, Net-(U4-SW) 2 | tracks 430 mm, 171 signal nets

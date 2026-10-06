@@ -1,0 +1,8 @@
+Base F: 33 parts; under the Core outline: 1 [('Card1', 0.0)]
+Base B: 219 parts; under the Core outline: 109
+   ICs/heavy under the Core (B side): ['U19', 'L4', 'U17', 'U21', 'U13', 'U18', 'U16', 'X2', 'U20', 'U22', 'U7', 'U23', 'U15']
+Core: outline 363 mm2, est. mass 0.78 g (0.55 board + ~0.23 parts); LGA pad area 26.4 mm2 -> 29.6 mg/mm2 (guideline for a part hanging upside down: <= 46 mg/mm2 = 30 g/in2)
+Core tallest parts (mm above Core top): [(1.2, 'U10'), (0.95, 'L1'), (0.8, 'U6'), (0.66, 'U8')]
+Base F tallest (mm above Base top): [(3.08, 'USB1'), (2.9, 'U12'), (2.45, 'Card1'), (1.9, 'L3'), (1.9, 'L2'), (1.8, 'C106'), (1.8, 'C105'), (1.25, 'JP1')]
+Base B tallest (mm below Base bottom): [(1.35, 'C99'), (1.35, 'C98'), (1.35, 'C97'), (1.35, 'C96'), (1.35, 'C95'), (1.35, 'C94')]
+Core stack top above Base F surface: 2.07 mm (0.07 joint + 0.8 board + 1.20 part)

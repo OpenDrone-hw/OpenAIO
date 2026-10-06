@@ -1,0 +1,9 @@
+core copper coverage per layer (% of outline): {'F': 72, 'In1': 88, 'In2': 75, 'In3': 82, 'In4': 88, 'B': 77}
+base copper coverage per layer (% of outline): {'F': 76, 'In1': 88, 'In2': 76, 'In3': 63, 'In4': 79, 'In5': 66, 'In6': 86, 'B': 74}
+J90 pad -> +BATT F.Cu copper gap: min 0.000 mm; pads with gap < 0.25 mm: 29 of 34; median 0.160
+   signal pads ringed by +BATT: [('5', 'SPI0.MOSI', 0.16), ('28', 'GND', 0.16), ('32', 'LED_STRIP', 0.16), ('21', 'BUZZER-', 0.16), ('22', 'MOTOR1', 0.16), ('10', 'GND', 0.16), ('8', '+3.3V', 0.16), ('20', 'GND', 0.16), ('23', 'MOTOR3', 0.16), ('14', '+5V', 0.16), ('18', 'MOTOR4', 0.16), ('25', 'GND', 0.16), ('27', 'GND', 0.16), ('17', 'MOTOR2', 0.16), ('13', 'USB_D-', 0.16), ('4', 'SPI0.SCK', 0.16), ('6', 'FLASH_CS', 0.16), ('7', '+10V', 0.16), ('12', '+4v5', 0.16), ('3', 'SPI0.MISO', 0.16), ('33', 'UART1_RX', 0.161), ('11', 'GND', 0.161), ('34', 'UART1_TX', 0.161), ('19', 'GND', 0.161), ('24', 'GND', 0.161), ('29', 'GND', 0.161), ('1', '10V_ENABLE', 0.161), ('30', 'UART0_TX', 0.162)]
+Core B.Cu: 110.9 mm of tracks on 23 nets; non-GND nets: ['+3.3V', '+5V', '+BATT', '/OSD/VIDEO_IN', '/Pads/I2C0.SCL', '/Pads/I2C0.SDA', '10V_ENABLE', 'BUZZER-', 'CURR', 'FLASH_CS', 'LED_STRIP', 'MOTOR1', 'MOTOR2', 'MOTOR3', 'MOTOR4', 'SPI0.MISO', 'SPI0.MOSI', 'SPI0.SCK', 'UART1_RX', 'UART1_TX', 'USB_D+', 'USB_D-']
+Base F.Cu under the Core outline: +BATT 201 mm2 of 363 mm2 (55%); GND 26 mm2
+RF via (FL1->U.FL) at (91.44,69.69): GND vias within 0.8 mm: 2, within 1.2 mm: 7, nearest 0.69 mm
+core fiducials: none
+base fiducials: none

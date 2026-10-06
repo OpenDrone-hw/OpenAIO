@@ -1,0 +1,79 @@
+== core: power pads checked 56
+   not pour-connected and reached by <=1 via within 1.5 mm of track: 25
+     U11     2    VCC_2        +3.3V      F.Cu vias=0
+     U6      1    OUT_1        +1.8V_GYRO F.Cu vias=0
+     U6      4    EN_4         +4v5       F.Cu vias=1
+     U6      6    IN_6         +4v5       F.Cu vias=1
+     U8      5    Vdd_IO_5     +3.3V      F.Cu vias=0
+     U8      8    Vdd_8        +1.8V_GYRO F.Cu vias=0
+     U2      1    IOVDD_1      +3.3V      F.Cu vias=0
+     U2      6    DVDD_6       +1.1V      F.Cu vias=0
+     U2      11   IOVDD_11     +3.3V      F.Cu vias=1
+     U2      20   IOVDD_20     +3.3V      F.Cu vias=1
+     U2      23   DVDD_23      +1.1V      F.Cu vias=0
+     U2      26   RUN_26       +3.3V      F.Cu vias=0
+     U2      30   IOVDD_30     +3.3V      F.Cu vias=0
+     U2      38   IOVDD_38     +3.3V      F.Cu vias=1
+     U2      39   DVDD_39      +1.1V      F.Cu vias=0
+     U2      44   ADC_AVDD_44  +3.3V      F.Cu vias=1
+     U2      45   IOVDD_45     +3.3V      F.Cu vias=1
+     U2      49   VREG_VIN_49  +3.3V      F.Cu vias=1
+     U2      50   VREG_FB_50   +1.1V      F.Cu vias=0
+     U2      53   USB_OTP_VDD_ +3.3V      F.Cu vias=1
+     U2      54   QSPI_IOVDD_5 +3.3V      F.Cu vias=1
+     L1      1    1_1          +1.1V      F.Cu vias=0
+     U10     5    +VS_5        +3.3V      F.Cu vias=1
+     U9      2    GND_2        GND        F.Cu vias=1
+     U9      5    VCC_5        +3.3V      F.Cu vias=0
+   LGA J91 pad 7 +10V: pour False, vias within 1.5 mm 4
+   LGA J91 pad 8 +3.3V: pour False, vias within 1.5 mm 2
+   LGA J91 pad 12 +4v5: pour True, vias within 1.5 mm 4
+   LGA J91 pad 14 +5V: pour False, vias within 1.5 mm 3
+   LGA J91 pad 26 +BATT: pour False, vias within 1.5 mm 1
+   LGA GND pads: 11, pour-connected 11, mean vias 3.3
+== base: power pads checked 242
+   not pour-connected and reached by <=1 via within 1.5 mm of track: 38
+     U12     8    8_8          GND        F.Cu vias=1
+     Card1   4    VDD_4        +3V3       F.Cu vias=1
+     U19     17   VDD_17       +3V3       B.Cu vias=0
+     U17     17   VDD_17       +3V3       B.Cu vias=0
+     U25     3    VS_3         +3V3       B.Cu vias=1
+     U25     4    +IN_4        /CSA+      B.Cu vias=0
+     U25     5    -IN_5        +BATT      B.Cu vias=1
+     U21     11   VBAT_IO_11   +3V3       B.Cu vias=0
+     U21     15   VBAT_15      +3V3       B.Cu vias=1
+     U14     4    VCC_4        +10V       B.Cu vias=1
+     U14     12   VS3_12       /1C        B.Cu vias=1
+     U14     15   VS2_15       /1B        B.Cu vias=1
+     U14     18   VS1_18       /1A        B.Cu vias=1
+     U4      3    VIN_3        +BATT      B.Cu vias=1
+     U4      5    EN_5         +BATT      B.Cu vias=1
+     U13     17   VDD_17       +3V3       B.Cu vias=1
+     U18     4    VCC_4        +10V       B.Cu vias=1
+     U18     12   VS3_12       /3C        B.Cu vias=1
+     U18     15   VS2_15       /3B        B.Cu vias=1
+     U18     18   VS1_18       /3A        B.Cu vias=1
+     U16     4    VCC_4        +10V       B.Cu vias=0
+     U16     12   VS3_12       /2C        B.Cu vias=1
+     U16     15   VS2_15       /2B        B.Cu vias=1
+     U16     18   VS1_18       /2A        B.Cu vias=1
+     U20     4    VCC_4        +10V       B.Cu vias=1
+     U20     12   VS3_12       /4C        B.Cu vias=1
+     U20     15   VS2_15       /4B        B.Cu vias=1
+     U20     18   VS1_18       /4A        B.Cu vias=1
+     U22     11   VDD3P3_RTC_1 +3V3       B.Cu vias=0
+     U22     17   VDD3P3_CPU_1 +3V3       B.Cu vias=0
+     U22     18   VDD_SPI_18   +3V3       B.Cu vias=0
+     U22     31   VDDA_31      +3V3       B.Cu vias=1
+     U22     32   VDDA_32      +3V3       B.Cu vias=1
+     U7      4    EN_4         +4v5       B.Cu vias=0
+     U23     1    OUT_1        +3V3       B.Cu vias=1
+     U23     3    EN_3         +4v5       B.Cu vias=0
+     U23     4    IN_4         +4v5       B.Cu vias=0
+     U15     17   VDD_17       +3V3       B.Cu vias=0
+   LGA J90 pad 7 +10V: pour False, vias within 1.5 mm 2
+   LGA J90 pad 8 +3.3V: pour False, vias within 1.5 mm 0
+   LGA J90 pad 12 +4v5: pour False, vias within 1.5 mm 1
+   LGA J90 pad 14 +5V: pour True, vias within 1.5 mm 0
+   LGA J90 pad 26 +BATT: pour True, vias within 1.5 mm 1
+   LGA GND pads: 11, pour-connected 7, mean vias 4.3

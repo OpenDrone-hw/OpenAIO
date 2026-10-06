@@ -1,0 +1,4 @@
+current {'centroid_offset': 1.41, 'hull_cover': 0.75, 'sig_gnd_le2': 7, 'sig': 18, 'worst_gnd': 6.6}
+A1 {'centroid_offset': 1.41, 'hull_cover': 0.75, 'sig_gnd_le2': 16, 'sig': 18, 'worst_gnd': 2.83}
+B grid 40 {'centroid_offset': 2.15, 'hull_cover': 0.66, 'sig_gnd_le2': 18, 'sig': 18, 'worst_gnd': 2.0}
+B grid 34 {'centroid_offset': 3.07, 'hull_cover': 0.48, 'sig_gnd_le2': 17, 'sig': 18, 'worst_gnd': 2.83}

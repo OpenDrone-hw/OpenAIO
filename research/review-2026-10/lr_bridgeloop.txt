@@ -1,0 +1,14 @@
++BATT/GND caps: [('C106', 'C', 'C_1206_3216Met', 'F'), ('C105', 'C', 'C_1206_3216Met', 'F'), ('C94', 'C', 'C_0805_2012Met', 'B'), ('C99', 'C', 'C_0805_2012Met', 'B'), ('C97', 'C', 'C_0805_2012Met', 'B'), ('C91', 'C', 'C_0805_2012Met', 'B'), ('C101', 'C', 'C_0805_2012Met', 'B'), ('C98', 'C', 'C_0805_2012Met', 'B'), ('C18', '4.7uF 50v', 'C_0805_2012Met', 'B'), ('C90', 'C', 'C_0805_2012Met', 'B'), ('C100', 'C', 'C_0805_2012Met', 'B'), ('C93', 'C', 'C_0805_2012Met', 'B'), ('C19', '4.7uF 50v', 'C_0805_2012Met', 'B'), ('C92', 'C', 'C_0805_2012Met', 'B'), ('C103', 'C', 'C_0805_2012Met', 'B'), ('C102', 'C', 'C_0805_2012Met', 'B'), ('C96', 'C', 'C_0805_2012Met', 'B'), ('C95', 'C', 'C_0805_2012Met', 'B')]
+  leg Q3/Q4: drain->cap+ + source->cap- = 0.39 mm (C90, B side)
+  leg Q5/Q6: drain->cap+ + source->cap- = 0.30 mm (C91, B side)
+  leg Q7/Q8: drain->cap+ + source->cap- = 0.37 mm (C92, B side)
+  leg Q9/Q10: drain->cap+ + source->cap- = 0.28 mm (C93, B side)
+  leg Q11/Q12: drain->cap+ + source->cap- = 0.30 mm (C94, B side)
+  leg Q13/Q14: drain->cap+ + source->cap- = 0.33 mm (C95, B side)
+  leg Q15/Q16: drain->cap+ + source->cap- = 0.27 mm (C96, B side)
+  leg Q17/Q18: drain->cap+ + source->cap- = 0.29 mm (C97, B side)
+  leg Q19/Q20: drain->cap+ + source->cap- = 0.32 mm (C98, B side)
+  leg Q21/Q22: drain->cap+ + source->cap- = 0.27 mm (C99, B side)
+  leg Q23/Q24: drain->cap+ + source->cap- = 0.30 mm (C100, B side)
+  leg Q25/Q26: drain->cap+ + source->cap- = 0.34 mm (C101, B side)
+caps shared:  {'C96': 1, 'C94': 1, 'C90': 1, 'C98': 1, 'C101': 1, 'C91': 1, 'C95': 1, 'C97': 1, 'C100': 1, 'C99': 1, 'C93': 1, 'C92': 1}
