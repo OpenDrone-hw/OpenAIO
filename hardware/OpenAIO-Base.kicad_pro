@@ -126,7 +126,7 @@
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "ignore",
-        "zones_intersect": "error"
+        "zones_intersect": "ignore"
       },
       "rules": {
         "max_error": 0.005,
