@@ -4551,10 +4551,6 @@
 		(uuid "54fbc57d-2a22-4efb-b7a7-efeff737bc75")
 	)
 	(no_connect
-		(at 107.95 121.92)
-		(uuid "78c6ad66-61fc-4de5-ba81-66874b93a38c")
-	)
-	(no_connect
 		(at 118.11 187.96)
 		(uuid "811af91b-678f-4068-b129-df83393c0628")
 	)
@@ -4701,6 +4697,16 @@
 			(type default)
 		)
 		(uuid "15f10738-771f-415c-bbb7-8a0dffec1363")
+	)
+	(wire
+		(pts
+			(xy 107.95 121.92) (xy 105.41 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "186ced0b-705c-4ecc-8831-8c79179b4438")
 	)
 	(wire
 		(pts
@@ -6157,6 +6163,84 @@
 			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR0236")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 105.41 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0cfc5975-a811-445a-b431-073e34adf39d")
+		(property "Reference" "#PWR0288"
+			(at 105.41 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 105.41 127 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 105.41 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 105.41 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "39bc8ee7-fe1d-49c7-a430-67ee0795ad53")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#PWR0288")
 					(unit 1)
 				)
 			)

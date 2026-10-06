@@ -137,8 +137,8 @@
 			(front no)
 			(back no)
 		)
-		(capping no)
-		(filling no)
+		(capping yes)
+		(filling yes)
 		(aux_axis_origin 114.481924 53.275797)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
