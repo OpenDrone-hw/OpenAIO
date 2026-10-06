@@ -4067,7 +4067,7 @@
 				)
 			)
 		)
-		(property "Value" "22uF"
+		(property "Value" "4.7uF"
 			(at 0 1.16 0)
 			(layer "F.Fab")
 			(uuid "0c575205-3799-490e-9043-58496afe8eac")
@@ -4112,7 +4112,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C415703"
+		(property "LCSC" "C23733"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4125,7 +4125,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R60J226ME11D"
+		(property "MPN" "CL05A475MP5NRNC"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4138,7 +4138,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7173,7 +7173,7 @@
 			(at 1.17 0.25 180)
 			(size 0.6 0.27)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "GND")
+			(net "+3.3V")
 			(pinfunction "SDx/AH1/Qvar1_2")
 			(pintype "unspecified")
 			(uuid "0f7ed232-0cfe-4dc3-adc9-2e5a3b560e87")
@@ -7182,7 +7182,7 @@
 			(at 1.17 -0.25 180)
 			(size 0.6 0.27)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "GND")
+			(net "+3.3V")
 			(pinfunction "SCx/AH2/Qvar2_3")
 			(pintype "unspecified")
 			(uuid "4176d44f-fcee-4bf7-9ed4-054ba1f6cbb5")
@@ -8617,51 +8617,6 @@
 			(pinfunction "QSPI_IOVDD_54")
 			(pintype "unspecified")
 			(uuid "172e5eef-ee44-4591-842e-70d1a4878913")
-		)
-		(pad "55" smd rect
-			(at -0.8 -3.57 180)
-			(size 0.2 0.875)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "unconnected-(U2-QSPI_SD3-Pad55)")
-			(pinfunction "QSPI_SD3_55")
-			(pintype "unspecified+no_connect")
-			(uuid "13379d88-ff58-4a98-ad70-a58a76a17806")
-		)
-		(pad "56" smd rect
-			(at -1.2 -3.57 180)
-			(size 0.2 0.875)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "unconnected-(U2-QSPI_SCLK-Pad56)")
-			(pinfunction "QSPI_SCLK_56")
-			(pintype "unspecified+no_connect")
-			(uuid "1151faf9-b622-43bd-ba7e-8fac33a26eba")
-		)
-		(pad "57" smd rect
-			(at -1.6 -3.57 180)
-			(size 0.2 0.875)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "unconnected-(U2-QSPI_SD0-Pad57)")
-			(pinfunction "QSPI_SD0_57")
-			(pintype "unspecified+no_connect")
-			(uuid "9874ed54-6895-4cf2-99d4-49fe7e9a70a4")
-		)
-		(pad "58" smd rect
-			(at -2 -3.57 180)
-			(size 0.2 0.875)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "unconnected-(U2-QSPI_SD2-Pad58)")
-			(pinfunction "QSPI_SD2_58")
-			(pintype "unspecified+no_connect")
-			(uuid "c8473681-0d11-4a92-b74c-fec3ee7ae049")
-		)
-		(pad "59" smd rect
-			(at -2.4 -3.57 180)
-			(size 0.2 0.875)
-			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "unconnected-(U2-QSPI_SD1-Pad59)")
-			(pinfunction "QSPI_SD1_59")
-			(pintype "unspecified+no_connect")
-			(uuid "c875b15b-d629-42bf-b6b8-8b075c05a4de")
 		)
 		(pad "60" smd rect
 			(at -2.8 -3.57 180)
@@ -12276,7 +12231,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "1k"
 			(at 0 1.05 90)
 			(layer "F.Fab")
 			(uuid "df0aa39b-0bcb-4bf0-9a7e-2e00934669ee")
@@ -12321,7 +12276,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C106225"
+		(property "LCSC" "C270365"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12334,7 +12289,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0201FR-0710KL"
+		(property "MPN" "0201WMF1001TEE"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12347,7 +12302,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19850,14 +19805,6 @@
 		(uuid "e424d84c-b8d7-4664-86b9-910806168907")
 	)
 	(via
-		(at 115.61 52.98)
-		(size 0.35)
-		(drill 0.15)
-		(layers "F.Cu" "B.Cu")
-		(net "GND")
-		(uuid "e46cb651-ab59-4ffe-aa82-29cd51a1dac9")
-	)
-	(via
 		(at 119.56 59.72)
 		(size 0.35)
 		(drill 0.15)
@@ -20706,6 +20653,14 @@
 		(uuid "cc7392d8-972b-4e2b-b198-350a05b8b647")
 	)
 	(via
+		(at 115.61 52.98)
+		(size 0.35)
+		(drill 0.15)
+		(layers "F.Cu" "B.Cu")
+		(net "+3.3V")
+		(uuid "e46cb651-ab59-4ffe-aa82-29cd51a1dac9")
+	)
+	(via
 		(at 108.18 55.82)
 		(size 0.35)
 		(drill 0.15)
@@ -20920,6 +20875,14 @@
 		(layer "In3.Cu")
 		(net "+3.3V")
 		(uuid "4b765656-3452-4654-9f43-7d7ba62cb913")
+	)
+	(segment
+		(start 115.61 52.98)
+		(end 115 52.98)
+		(width 0.15)
+		(layer "In3.Cu")
+		(net "+3.3V")
+		(uuid "4bdb3280-49c9-495f-982f-0d2721118c78")
 	)
 	(segment
 		(start 105.43 48.05)

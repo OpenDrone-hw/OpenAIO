@@ -5149,7 +5149,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 106.045 167.0049 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5202,6 +5202,42 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C380366"
+			(at 106.045 167.0049 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "TCC1206X7R475K500HT"
+			(at 106.045 167.0049 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "CCTC"
+			(at 106.045 167.0049 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "2"
@@ -5866,7 +5902,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 69.85 184.7849 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5919,6 +5955,42 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 69.85 184.7849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 69.85 184.7849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 69.85 184.7849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "2"
@@ -6996,7 +7068,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "1uF"
 			(at 201.422 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7039,7 +7111,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C76939"
+		(property "LCSC" "C76935"
 			(at 198.12 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -7050,7 +7122,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM033R61E104KE14D"
+		(property "MPN" "GRM033R61A105ME44D"
 			(at 0 15.24 0)
 			(hide yes)
 			(show_name no)
@@ -7730,7 +7802,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 118.745 167.0049 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7783,6 +7855,42 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C380366"
+			(at 118.745 167.0049 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "TCC1206X7R475K500HT"
+			(at 118.745 167.0049 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "CCTC"
+			(at 118.745 167.0049 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "2"
@@ -7901,7 +8009,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 83.185 184.7849 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7954,6 +8062,42 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 83.185 184.7849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 83.185 184.7849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 83.185 184.7849 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "2"
@@ -8275,7 +8419,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF"
+		(property "Value" "4.7uF"
 			(at 231.14 68.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8319,7 +8463,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C415703"
+		(property "LCSC" "C23733"
 			(at 227.33 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -8330,7 +8474,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R60J226ME11D"
+		(property "MPN" "CL05A475MP5NRNC"
 			(at 7.62 2.54 0)
 			(hide yes)
 			(show_name no)
@@ -8341,7 +8485,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 7.62 2.54 0)
 			(hide yes)
 			(show_name no)
@@ -9121,7 +9265,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF"
+		(property "Value" "1uF"
 			(at 237.49 125.7299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9165,7 +9309,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C415703"
+		(property "LCSC" "C52923"
 			(at 233.68 124.46 0)
 			(hide yes)
 			(show_name no)
@@ -9176,7 +9320,7 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R60J226ME11D"
+		(property "MPN" "CL05A105KA5NQNC"
 			(at 0 15.24 0)
 			(hide yes)
 			(show_name no)
@@ -9187,7 +9331,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 15.24 0)
 			(hide yes)
 			(show_name no)

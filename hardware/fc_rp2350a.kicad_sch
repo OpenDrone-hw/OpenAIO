@@ -8272,7 +8272,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "1k"
 			(at 259.08 212.09 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8315,7 +8315,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C106225"
+		(property "LCSC" "C270365"
 			(at 259.08 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -8326,7 +8326,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0201FR-0710KL"
+		(property "MPN" "0201WMF1001TEE"
 			(at 71.12 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -8337,7 +8337,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 71.12 46.99 0)
 			(hide yes)
 			(show_name no)

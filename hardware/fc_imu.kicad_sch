@@ -1724,12 +1724,6 @@
 		(color 0 0 0 0)
 		(uuid "d510ee41-7dae-4f9f-ba0f-9c8b419506c8")
 	)
-	(junction
-		(at 45.72 81.28)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e9142d64-5034-4b4b-a170-6456079c91af")
-	)
 	(no_connect
 		(at 93.98 78.74)
 		(uuid "1550b8d4-b25d-4854-abcd-f7116da83d15")
@@ -1784,16 +1778,6 @@
 			(type default)
 		)
 		(uuid "1137341b-afcb-4cb8-8373-0a2546940b5c")
-	)
-	(wire
-		(pts
-			(xy 45.72 92.71) (xy 45.72 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19c3ce17-570d-4ad4-bb58-67e7673a1313")
 	)
 	(wire
 		(pts
@@ -2352,84 +2336,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 45.72 92.71 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3862b514-e5a5-4f1f-936b-1f28197f3c15")
-		(property "Reference" "#PWR076"
-			(at 45.72 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 45.72 97.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 45.72 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f703f040-0b11-45a9-87f6-eb12a724f992")
-		)
-		(instances
-			(project "OpenAIO-Base"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
-					(reference "#PWR076")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 83.82 50.8 0)
 		(unit 1)
 		(body_style 1)
@@ -2625,6 +2531,85 @@
 			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "C29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "+3.3V_1")
+		(lib_id "power:+3.3V")
+		(at 45.72 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9e2e4b89-dae4-4df6-8a41-cb37593efe2f")
+		(property "Reference" "#PWR0289"
+			(at 45.72 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 45.72 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 45.72 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e3f1975a-611e-4122-86cd-9a657945671c")
+		)
+		(instances
+			(project "OpenAIO-Base"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
+					(reference "#PWR0289")
 					(unit 1)
 				)
 			)

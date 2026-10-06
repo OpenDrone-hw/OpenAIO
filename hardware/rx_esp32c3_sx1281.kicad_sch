@@ -9236,6 +9236,28 @@
 				)
 			)
 		)
+		(property "MPN" "MLZ2012M150WT000"
+			(at 97.536 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "TDK"
+			(at 97.536 85.09 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "996ca7aa-3e44-4bb9-ada7-ba3f9df41648")
 		)
@@ -12831,6 +12853,39 @@
 				)
 			)
 		)
+		(property "MPN" "XL-1010RGBC-2812B"
+			(at 129.54 184.0798 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "XINGLIGHT"
+			(at 129.54 184.0798 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C5349953"
+			(at 129.54 184.0798 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7043cd66-03db-4ab0-b852-0a1148985f68")
 		)
@@ -13676,7 +13731,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ESP32-C3"
+		(property "Value" "ESP32-C3FH4"
 			(at 224.3933 248.92 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13698,7 +13753,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf"
+		(property "Datasheet" "${OPENDRONE_LIB}/datasheet/ESP32-C3FH4.pdf"
 			(at 222.758 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -13718,6 +13773,42 @@
 				(font
 					(size 1.27 1.27)
 				)
+			)
+		)
+		(property "MPN" "ESP32-C3FH4"
+			(at 224.3933 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "Espressif Systems"
+			(at 224.3933 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "LCSC" "C2858491"
+			(at 224.3933 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(pin "28"

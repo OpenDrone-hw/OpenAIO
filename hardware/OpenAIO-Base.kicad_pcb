@@ -3526,7 +3526,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 1.85 0)
 			(layer "F.Fab")
 			(uuid "45f30af5-4fbc-409f-a8d4-62ce666bd9d0")
@@ -3568,6 +3568,39 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C380366"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e333ea16-9360-46fa-86aa-c68829b2ee62")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TCC1206X7R475K500HT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a63eaf65-3044-4b65-8c83-69bb4f54d960")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "CCTC"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ef2b78f2-d29a-4f64-af21-d2da434acda1")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -8639,7 +8672,7 @@
 				)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 1.85 0)
 			(layer "F.Fab")
 			(uuid "57483c37-1363-4a08-9e8b-32149e84d658")
@@ -8681,6 +8714,39 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C380366"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9fcfb4b8-fc7b-444d-aee1-7ecd38347d70")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "TCC1206X7R475K500HT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b23ab24b-2929-495e-bf2a-fc7f4c29e688")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "CCTC"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "6e5ea43d-ee5e-4f85-92e1-1cf093d23704")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 			)
 		)
@@ -10520,16 +10586,6 @@
 			(pintype "unspecified")
 			(uuid "ae842ec9-e23d-44f9-98fa-534190ee2401")
 		)
-		(pad "3" smd roundrect
-			(at -1.89 0.399771 270)
-			(size 0.55 0.2)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U19-PF1{slash}OSC_OUT-Pad3)")
-			(pinfunction "PF1/OSC_OUT_3")
-			(pintype "unspecified+no_connect")
-			(uuid "76d03140-e804-4540-b88b-f582e0df4dc2")
-		)
 		(pad "4" smd roundrect
 			(at -1.89 0.000991 270)
 			(size 0.55 0.2)
@@ -10570,26 +10626,6 @@
 			(pintype "unspecified")
 			(uuid "6587a7f5-6358-4546-a837-29fb7bb2aa4d")
 		)
-		(pad "8" smd roundrect
-			(at -1.199975 -1.87 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U19-PA2-Pad8)")
-			(pinfunction "PA2_8")
-			(pintype "unspecified+no_connect")
-			(uuid "77c53c4c-19d9-4a63-9b0d-376e0fd1870c")
-		)
-		(pad "9" smd roundrect
-			(at -0.800178 -1.87 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U19-PA3-Pad9)")
-			(pinfunction "PA3_9")
-			(pintype "unspecified+no_connect")
-			(uuid "ee1e04ec-5762-4e8e-a6f6-0167d99d2214")
-		)
 		(pad "10" smd roundrect
 			(at -0.400127 -1.87 270)
 			(size 0.2 0.55)
@@ -10609,16 +10645,6 @@
 			(pinfunction "PA5_11")
 			(pintype "unspecified")
 			(uuid "b35f278e-6801-4efa-b793-42de4e274c19")
-		)
-		(pad "12" smd roundrect
-			(at 0.399721 -1.87 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U19-PA6-Pad12)")
-			(pinfunction "PA6_12")
-			(pintype "unspecified+no_connect")
-			(uuid "9e603854-d6ef-4f0a-83bd-3173dc72bb27")
 		)
 		(pad "13" smd roundrect
 			(at 0.800025 -1.87 270)
@@ -10720,16 +10746,6 @@
 			(pintype "unspecified")
 			(uuid "64f4200a-99fa-4088-b916-6971ccbb317f")
 		)
-		(pad "24" smd roundrect
-			(at 0.399721 1.88 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U19-PB3-Pad24)")
-			(pinfunction "PB3_24")
-			(pintype "unspecified+no_connect")
-			(uuid "aac91d78-ed72-4509-bb86-2a6a12a8e419")
-		)
 		(pad "25" smd roundrect
 			(at -0.000076 1.879746 270)
 			(size 0.2 0.55)
@@ -10739,36 +10755,6 @@
 			(pinfunction "PB4_25")
 			(pintype "unspecified")
 			(uuid "9da248ee-fd50-4db3-b173-d32faf91a9c3")
-		)
-		(pad "26" smd roundrect
-			(at -0.399873 1.88 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U19-PB5-Pad26)")
-			(pinfunction "PB5_26")
-			(pintype "unspecified+no_connect")
-			(uuid "be7f58e8-4d98-4d8c-8e56-232fbec36a93")
-		)
-		(pad "27" smd roundrect
-			(at -0.800178 1.88 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U19-PB6-Pad27)")
-			(pinfunction "PB6_27")
-			(pintype "unspecified+no_connect")
-			(uuid "8d591c3c-a690-47d8-a4da-c6c8ff0499bf")
-		)
-		(pad "28" smd roundrect
-			(at -1.199975 1.88 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U19-PB7-Pad28)")
-			(pinfunction "PB7_28")
-			(pintype "unspecified+no_connect")
-			(uuid "c718313f-4271-4a54-81a5-c8c37aa560c6")
 		)
 		(pad "29" smd roundrect
 			(at 0.000178 -0.000279 270)
@@ -12461,7 +12447,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "bac91efa-3e5d-4317-b06d-1ad8886c7b4c")
@@ -12506,6 +12492,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3cac14bf-8367-4b9e-95a5-f32f46a43876")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "95a2ea78-274c-4260-bc37-735eb8454ffb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9d8f21bc-3454-478a-82c0-873abb2189ec")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -12656,6 +12678,30 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "84ae9273-92d9-4d59-81b1-4a4ccf40f3b3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "MLZ2012M150WT000"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "604cb7ef-8e28-4188-8d2f-fd6e73582cde")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "TDK"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "20224784-23c8-4ed3-a2ea-785b638bcb89")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13211,16 +13257,6 @@
 			(pintype "unspecified")
 			(uuid "8b83f060-6755-4f45-ae4b-7ffb9f92cb28")
 		)
-		(pad "3" smd roundrect
-			(at -1.89 0.399771 270)
-			(size 0.55 0.2)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U17-PF1{slash}OSC_OUT-Pad3)")
-			(pinfunction "PF1/OSC_OUT_3")
-			(pintype "unspecified+no_connect")
-			(uuid "286efe1a-9463-47de-83b6-abc12b403e5e")
-		)
 		(pad "4" smd roundrect
 			(at -1.89 0.000991 270)
 			(size 0.55 0.2)
@@ -13261,26 +13297,6 @@
 			(pintype "unspecified")
 			(uuid "1a7a8489-ad9a-4333-ac8d-326cc6165a41")
 		)
-		(pad "8" smd roundrect
-			(at -1.199975 -1.87 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U17-PA2-Pad8)")
-			(pinfunction "PA2_8")
-			(pintype "unspecified+no_connect")
-			(uuid "136bf95f-c285-4278-9052-fa5a7a925a77")
-		)
-		(pad "9" smd roundrect
-			(at -0.800178 -1.87 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U17-PA3-Pad9)")
-			(pinfunction "PA3_9")
-			(pintype "unspecified+no_connect")
-			(uuid "a42cef72-87d2-42eb-9ce7-174a5136286b")
-		)
 		(pad "10" smd roundrect
 			(at -0.400127 -1.87 270)
 			(size 0.2 0.55)
@@ -13300,16 +13316,6 @@
 			(pinfunction "PA5_11")
 			(pintype "unspecified")
 			(uuid "da2383c1-5575-4143-825b-007d8fb69a45")
-		)
-		(pad "12" smd roundrect
-			(at 0.399721 -1.87 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U17-PA6-Pad12)")
-			(pinfunction "PA6_12")
-			(pintype "unspecified+no_connect")
-			(uuid "cdaad697-5b36-42bd-a686-4601d020f8e5")
 		)
 		(pad "13" smd roundrect
 			(at 0.800025 -1.87 270)
@@ -13411,26 +13417,6 @@
 			(pintype "unspecified")
 			(uuid "a9145034-971c-4aa7-a5c9-192d882a5fbf")
 		)
-		(pad "23" smd roundrect
-			(at 0.800025 1.88 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U17-PA15-Pad23)")
-			(pinfunction "PA15_23")
-			(pintype "unspecified+no_connect")
-			(uuid "97ad54a4-259c-4902-b871-05a5f1f96484")
-		)
-		(pad "24" smd roundrect
-			(at 0.399721 1.88 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U17-PB3-Pad24)")
-			(pinfunction "PB3_24")
-			(pintype "unspecified+no_connect")
-			(uuid "019731fd-707d-4eb0-bc59-2e8f0ae039ca")
-		)
 		(pad "25" smd roundrect
 			(at -0.000076 1.879746 270)
 			(size 0.2 0.55)
@@ -13440,36 +13426,6 @@
 			(pinfunction "PB4_25")
 			(pintype "unspecified")
 			(uuid "ebed6a8b-50ed-4582-9270-8e047c962405")
-		)
-		(pad "26" smd roundrect
-			(at -0.399873 1.88 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U17-PB5-Pad26)")
-			(pinfunction "PB5_26")
-			(pintype "unspecified+no_connect")
-			(uuid "9226d7a2-cd5d-4538-a299-9f62eb9cbea5")
-		)
-		(pad "27" smd roundrect
-			(at -0.800178 1.88 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U17-PB6-Pad27)")
-			(pinfunction "PB6_27")
-			(pintype "unspecified+no_connect")
-			(uuid "51f95bf2-416b-43ea-81d4-fa8da9c0b422")
-		)
-		(pad "28" smd roundrect
-			(at -1.199975 1.88 270)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U17-PB7-Pad28)")
-			(pinfunction "PB7_28")
-			(pintype "unspecified+no_connect")
-			(uuid "2bb56163-c6ad-4a35-96d0-ba30d1d91872")
 		)
 		(pad "29" smd roundrect
 			(at 0.000178 -0.000279 270)
@@ -13513,7 +13469,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 90)
 			(layer "B.Fab")
 			(uuid "9c67b11b-e5a2-444d-aafe-caed3c728efc")
@@ -13558,6 +13514,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1bbfd9d7-5157-432e-882c-3c0f7caa4c2c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cbc2fc8c-f2b1-4a0d-a089-d5010920a1b4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cae2a398-09f0-4b11-962f-e833818fe92e")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -15616,7 +15608,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "8a55c0f6-21ca-48e5-8891-5d5f8ebdfcc0")
@@ -15661,6 +15653,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f42ec35f-720a-4fd2-a404-afeae6bb91d9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1836d1a4-3d09-4b06-ba9b-fe4b618e512a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "91168b8b-dd3c-4194-900f-301047cd59ea")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -17053,15 +17081,6 @@
 			(pintype "passive")
 			(uuid "6a8f9008-40b2-4644-b264-c394ed21ace3")
 		)
-		(pad "6" smd oval
-			(at -2 -1.25)
-			(size 0.28 0.8)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net "unconnected-(U21-XTB-Pad6)")
-			(pinfunction "XTB_6")
-			(pintype "unspecified+no_connect")
-			(uuid "7554c50c-cb5d-443b-b866-ccdf4409441f")
-		)
 		(pad "7" smd oval
 			(at -1.25 -2 90)
 			(size 0.28 0.8)
@@ -17079,24 +17098,6 @@
 			(pinfunction "DIO1_8")
 			(pintype "unspecified")
 			(uuid "9f02a0f4-4514-458b-90df-502eed039528")
-		)
-		(pad "9" smd oval
-			(at -0.25 -2 90)
-			(size 0.28 0.8)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net "unconnected-(U21-DIO2-Pad9)")
-			(pinfunction "DIO2_9")
-			(pintype "unspecified+no_connect")
-			(uuid "16ea1c05-b8ea-4d70-9652-a6bdf23405ad")
-		)
-		(pad "10" smd oval
-			(at 0.25 -2 90)
-			(size 0.28 0.8)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(net "unconnected-(U21-DIO3-Pad10)")
-			(pinfunction "DIO3_10")
-			(pintype "unspecified+no_connect")
-			(uuid "23756a99-fdde-482b-955a-020ef285d768")
 		)
 		(pad "11" smd oval
 			(at 0.75 -2 90)
@@ -18796,16 +18797,6 @@
 			(pintype "unspecified")
 			(uuid "3328e719-b021-4724-848e-b4df6d762780")
 		)
-		(pad "5" smd roundrect
-			(at -1.92 -0.750064)
-			(size 0.55 0.28)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U14-NC-Pad5)")
-			(pinfunction "NC_5")
-			(pintype "unspecified+no_connect")
-			(uuid "d1e07846-b245-4fbe-b785-990d5eb8336c")
-		)
 		(pad "6" smd roundrect
 			(at -1.92 -1.249936)
 			(size 0.55 0.28)
@@ -18815,16 +18806,6 @@
 			(pinfunction "COM_6")
 			(pintype "unspecified")
 			(uuid "1b15ffde-3643-4627-a787-3b5d558fb31f")
-		)
-		(pad "8" smd roundrect
-			(at -0.750064 -1.91)
-			(size 0.28 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U14-NC-Pad8)")
-			(pinfunction "NC_8")
-			(pintype "unspecified+no_connect")
-			(uuid "0d4cb460-ba8d-49e2-a07f-40d0dc7dd965")
 		)
 		(pad "9" smd roundrect
 			(at -0.249936 -1.91)
@@ -18945,16 +18926,6 @@
 			(pinfunction "VB1_20")
 			(pintype "unspecified")
 			(uuid "a36cb957-3b8f-4c78-b5ff-eb7034dda0fe")
-		)
-		(pad "21" smd roundrect
-			(at 0.249936 1.9)
-			(size 0.28 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U14-NC-Pad21)")
-			(pinfunction "NC_21")
-			(pintype "unspecified+no_connect")
-			(uuid "b8ce7c9b-4b02-4f99-a0fe-09ab561c0b6e")
 		)
 		(pad "22" smd roundrect
 			(at -0.249936 1.9)
@@ -25727,16 +25698,6 @@
 			(pintype "unspecified")
 			(uuid "8cdf6a24-85f8-44df-956f-e82d6b842f21")
 		)
-		(pad "3" smd roundrect
-			(at -1.89 0.399771 90)
-			(size 0.55 0.2)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U13-PF1{slash}OSC_OUT-Pad3)")
-			(pinfunction "PF1/OSC_OUT_3")
-			(pintype "unspecified+no_connect")
-			(uuid "b605d63e-daa8-49c1-9c30-a05d7464ee77")
-		)
 		(pad "4" smd roundrect
 			(at -1.89 0.000991 90)
 			(size 0.55 0.2)
@@ -25777,26 +25738,6 @@
 			(pintype "unspecified")
 			(uuid "a47af1fc-6374-452b-9e47-32c3d16dddfc")
 		)
-		(pad "8" smd roundrect
-			(at -1.199975 -1.87 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U13-PA2-Pad8)")
-			(pinfunction "PA2_8")
-			(pintype "unspecified+no_connect")
-			(uuid "d6251541-c3a8-4b1e-986b-ce7202d64391")
-		)
-		(pad "9" smd roundrect
-			(at -0.800178 -1.87 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U13-PA3-Pad9)")
-			(pinfunction "PA3_9")
-			(pintype "unspecified+no_connect")
-			(uuid "9ba810c0-922e-404d-afb4-d2c62d336cd7")
-		)
 		(pad "10" smd roundrect
 			(at -0.400127 -1.87 90)
 			(size 0.2 0.55)
@@ -25816,16 +25757,6 @@
 			(pinfunction "PA5_11")
 			(pintype "unspecified")
 			(uuid "91a219b8-6736-4354-b478-1fcf6f95f09a")
-		)
-		(pad "12" smd roundrect
-			(at 0.399721 -1.87 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U13-PA6-Pad12)")
-			(pinfunction "PA6_12")
-			(pintype "unspecified+no_connect")
-			(uuid "6c6b8b0a-08da-4a26-8814-a3c4653d33dc")
 		)
 		(pad "13" smd roundrect
 			(at 0.800025 -1.87 90)
@@ -25927,16 +25858,6 @@
 			(pintype "unspecified")
 			(uuid "a5217c96-67db-493d-80a4-48d55ab00dc0")
 		)
-		(pad "24" smd roundrect
-			(at 0.399721 1.88 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U13-PB3-Pad24)")
-			(pinfunction "PB3_24")
-			(pintype "unspecified+no_connect")
-			(uuid "e7c3422e-db0f-4d04-abdb-30501428899d")
-		)
 		(pad "25" smd roundrect
 			(at -0.000076 1.879746 90)
 			(size 0.2 0.55)
@@ -25946,36 +25867,6 @@
 			(pinfunction "PB4_25")
 			(pintype "unspecified")
 			(uuid "de01e84a-5263-4bb5-b4e5-108bd6e326ad")
-		)
-		(pad "26" smd roundrect
-			(at -0.399873 1.88 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U13-PB5-Pad26)")
-			(pinfunction "PB5_26")
-			(pintype "unspecified+no_connect")
-			(uuid "37817b8c-2a9b-4ee3-bf52-c441f8fd2abe")
-		)
-		(pad "27" smd roundrect
-			(at -0.800178 1.88 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U13-PB6-Pad27)")
-			(pinfunction "PB6_27")
-			(pintype "unspecified+no_connect")
-			(uuid "07cbf305-9441-4951-b6b9-b343530873e5")
-		)
-		(pad "28" smd roundrect
-			(at -1.199975 1.88 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U13-PB7-Pad28)")
-			(pinfunction "PB7_28")
-			(pintype "unspecified+no_connect")
-			(uuid "58e0eee9-5aa1-4b80-a847-bf8a2ec7cefa")
 		)
 		(pad "29" smd roundrect
 			(at 0.000178 -0.000279 90)
@@ -26521,16 +26412,6 @@
 			(pintype "unspecified")
 			(uuid "49954fd3-62b8-4c15-8f89-79eef81486ea")
 		)
-		(pad "5" smd roundrect
-			(at -1.92 -0.750064 180)
-			(size 0.55 0.28)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U18-NC-Pad5)")
-			(pinfunction "NC_5")
-			(pintype "unspecified+no_connect")
-			(uuid "6b857cfe-25a1-49d1-8e20-1ad959535038")
-		)
 		(pad "6" smd roundrect
 			(at -1.92 -1.249936 180)
 			(size 0.55 0.28)
@@ -26540,26 +26421,6 @@
 			(pinfunction "COM_6")
 			(pintype "unspecified")
 			(uuid "6de9bc57-758b-4a3d-a1ca-78706a006c1c")
-		)
-		(pad "7" smd roundrect
-			(at -1.249936 -1.91 180)
-			(size 0.28 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U18-NC-Pad7)")
-			(pinfunction "NC_7")
-			(pintype "unspecified+no_connect")
-			(uuid "a23383ce-eb9b-40e7-adec-63c52eda3f09")
-		)
-		(pad "8" smd roundrect
-			(at -0.750064 -1.91 180)
-			(size 0.28 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U18-NC-Pad8)")
-			(pinfunction "NC_8")
-			(pintype "unspecified+no_connect")
-			(uuid "5d8dc2d0-bb12-4c87-a29d-0cab93b19af6")
 		)
 		(pad "9" smd roundrect
 			(at -0.249936 -1.91 180)
@@ -26681,16 +26542,6 @@
 			(pintype "unspecified")
 			(uuid "2392baeb-2cda-4522-89d0-3ea3264efc1e")
 		)
-		(pad "21" smd roundrect
-			(at 0.249936 1.9 180)
-			(size 0.28 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U18-NC-Pad21)")
-			(pinfunction "NC_21")
-			(pintype "unspecified+no_connect")
-			(uuid "69eb188d-8d1c-4b11-b51e-cee248641b84")
-		)
 		(pad "22" smd roundrect
 			(at -0.249936 1.9 180)
 			(size 0.28 0.55)
@@ -26763,7 +26614,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 90)
 			(layer "B.Fab")
 			(uuid "661fbb8a-b930-4874-a8f6-dc5a8795ec31")
@@ -26808,6 +26659,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "64121f7d-8908-4136-84d2-a7d175a01bab")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1b3eff98-a62a-4a62-a8cf-6c8cc8f98665")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f604e136-5a97-4254-9035-20f60ddf312d")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -28026,7 +27913,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 90)
 			(layer "B.Fab")
 			(uuid "082b4f5d-4c5d-42ed-b533-c256a25d3bee")
@@ -28071,6 +27958,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "00692809-27ce-4cac-aa84-87e68418c445")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "87aa6b8d-565d-400a-aaf6-729e1038ad63")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "dc92b5e3-c6d4-4484-9d8e-e6dcffb3d059")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -38226,7 +38149,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "1uF"
 			(at 0 -1.05 0)
 			(layer "B.Fab")
 			(uuid "7a221112-db52-4554-8f86-447235f70491")
@@ -38275,7 +38198,7 @@
 				(justify mirror)
 			)
 		)
-		(property "LCSC" "C76939"
+		(property "LCSC" "C76935"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -38289,7 +38212,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM033R61E104KE14D"
+		(property "MPN" "GRM033R61A105ME44D"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -40121,16 +40044,6 @@
 			(pintype "unspecified")
 			(uuid "a7d53690-20f4-41ae-b084-e6d7af231497")
 		)
-		(pad "5" smd roundrect
-			(at -1.92 -0.750064)
-			(size 0.55 0.28)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U16-NC-Pad5)")
-			(pinfunction "NC_5")
-			(pintype "unspecified+no_connect")
-			(uuid "32d45422-9cda-4aec-9251-16d0a1c6ebe3")
-		)
 		(pad "6" smd roundrect
 			(at -1.92 -1.249936)
 			(size 0.55 0.28)
@@ -40260,16 +40173,6 @@
 			(pinfunction "VB1_20")
 			(pintype "unspecified")
 			(uuid "063d150a-e0ba-42c6-bccb-d47d0e9382c8")
-		)
-		(pad "21" smd roundrect
-			(at 0.249936 1.9)
-			(size 0.28 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U16-NC-Pad21)")
-			(pinfunction "NC_21")
-			(pintype "unspecified+no_connect")
-			(uuid "f2b55a72-41ae-4a42-ad3b-ff0ebc404b15")
 		)
 		(pad "22" smd roundrect
 			(at -0.249936 1.9)
@@ -41384,7 +41287,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "c64c734a-2986-48f1-a183-3f59a8f18683")
@@ -41429,6 +41332,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ae61cf23-1546-4819-8e55-82bb8af4313e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3602869e-ba67-480f-b07b-6132f1bdc043")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6cd912ff-3e33-4c92-896c-962425b504ae")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -44071,7 +44010,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 90)
 			(layer "B.Fab")
 			(uuid "4716d3ec-d5bd-4935-99d0-8a2cda928917")
@@ -44116,6 +44055,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "239277e6-2e1f-40a3-8ed4-acd49aa9ee4b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8e969041-b768-4a29-8fae-c352f9dee926")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "73685a51-7ef9-4c0c-ad98-226e73380724")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -44481,16 +44456,6 @@
 			(pintype "unspecified")
 			(uuid "dc3ffced-a840-4527-b350-a99cd142bde8")
 		)
-		(pad "5" smd roundrect
-			(at -1.92 -0.750064 180)
-			(size 0.55 0.28)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U20-NC-Pad5)")
-			(pinfunction "NC_5")
-			(pintype "unspecified+no_connect")
-			(uuid "660d210b-d609-483f-9032-f58fee3cdbbe")
-		)
 		(pad "6" smd roundrect
 			(at -1.92 -1.249936 180)
 			(size 0.55 0.28)
@@ -44500,16 +44465,6 @@
 			(pinfunction "COM_6")
 			(pintype "unspecified")
 			(uuid "049f4f4d-2225-4bf8-a903-6b5f0758d952")
-		)
-		(pad "8" smd roundrect
-			(at -0.750064 -1.91 180)
-			(size 0.28 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U20-NC-Pad8)")
-			(pinfunction "NC_8")
-			(pintype "unspecified+no_connect")
-			(uuid "b351e543-7b37-4318-8b50-74092387be27")
 		)
 		(pad "9" smd roundrect
 			(at -0.249936 -1.91 180)
@@ -44631,16 +44586,6 @@
 			(pintype "unspecified")
 			(uuid "cc859b15-afb1-48e6-bf03-d60f5c3d74af")
 		)
-		(pad "21" smd roundrect
-			(at 0.249936 1.9 180)
-			(size 0.28 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.2)
-			(net "unconnected-(U20-NC-Pad21)")
-			(pinfunction "NC_21")
-			(pintype "unspecified+no_connect")
-			(uuid "dd219008-5562-4a70-8d7b-469139cb8ffa")
-		)
 		(pad "22" smd roundrect
 			(at -0.249936 1.9 180)
 			(size 0.28 0.55)
@@ -44713,7 +44658,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 90)
 			(layer "B.Fab")
 			(uuid "ee54e415-fd88-4a1a-8965-07ef05ef67c0")
@@ -44758,6 +44703,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f85ccd2d-22e1-447e-986b-05eb72ea1dc3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3795e735-b3e1-4e1f-9b85-0125103d0e96")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "caae6935-cdab-4e5b-a8bf-ed644390906c")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -46610,7 +46591,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "4abc862a-ba4f-4782-a40b-900f720bf0eb")
@@ -46655,6 +46636,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "42ba5046-4d3c-4df0-bd9f-0265c3d6a0b9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "87b9f299-b2d7-4d19-9eff-86acefec4d4e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6bfeec96-707b-44cc-8afb-8408aed71fae")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -46775,7 +46792,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "ESP32-C3"
+		(property "Value" "ESP32-C3FH4"
 			(at 0 -3.8 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -46788,7 +46805,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf"
+		(property "Datasheet" "${OPENDRONE_LIB}/datasheet/ESP32-C3FH4.pdf"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -46805,6 +46822,42 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "7c7b4dde-5c6a-4a3d-a1cc-c7421dde3f1e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "ESP32-C3FH4"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "61248ef5-40d4-4e9a-8042-8b8306e7673e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Espressif Systems"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e2f62659-a406-4710-b5f8-a3720a40ab5a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C2858491"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8bc2aadf-6814-4308-aeff-a2ada890ac12")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47310,56 +47363,6 @@
 			(pinfunction "VDD_SPI_18")
 			(pintype "power_out")
 			(uuid "cebcf7b1-a551-4412-b81e-58786e236fa7")
-		)
-		(pad "19" smd roundrect
-			(at 2.45 -0.75 90)
-			(size 0.8 0.25)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U22-SPIHD-Pad19)")
-			(pinfunction "SPIHD_19")
-			(pintype "bidirectional+no_connect")
-			(uuid "edb995d5-251d-436f-b69a-bca53ca230d9")
-		)
-		(pad "21" smd roundrect
-			(at 2.45 0.25 90)
-			(size 0.8 0.25)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U22-SPICS0-Pad21)")
-			(pinfunction "SPICS0_21")
-			(pintype "bidirectional+no_connect")
-			(uuid "d8a621ac-0b34-4e90-9e87-518690689662")
-		)
-		(pad "22" smd roundrect
-			(at 2.45 0.75 90)
-			(size 0.8 0.25)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U22-SPICLK-Pad22)")
-			(pinfunction "SPICLK_22")
-			(pintype "bidirectional+no_connect")
-			(uuid "80f3835c-d674-4b22-b49c-01098951d428")
-		)
-		(pad "23" smd roundrect
-			(at 2.45 1.25 90)
-			(size 0.8 0.25)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U22-SPID-Pad23)")
-			(pinfunction "SPID_23")
-			(pintype "bidirectional+no_connect")
-			(uuid "f2bc23c8-1d53-49f9-b31a-5c9e4a9a6448")
-		)
-		(pad "24" smd roundrect
-			(at 2.45 1.75 90)
-			(size 0.8 0.25)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U22-SPIQ-Pad24)")
-			(pinfunction "SPIQ_24")
-			(pintype "bidirectional+no_connect")
-			(uuid "6ba6725b-daef-4df1-b30d-c70196ddedf7")
 		)
 		(pad "25" smd roundrect
 			(at 1.75 2.45 90)
@@ -49490,7 +49493,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 90)
 			(layer "B.Fab")
 			(uuid "a551498f-fecc-4198-904f-872f1f9c6b46")
@@ -49535,6 +49538,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "78fa01bc-0133-48b4-929e-7d70e40aa087")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "68e0d9a2-706a-4d76-aeb0-439fee905e5a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ff4eef9e-5d15-42bf-9b94-deb11c173923")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -50391,16 +50430,6 @@
 			(pintype "power_out")
 			(uuid "d961c3ac-f6e2-48bc-992e-c28c3304fb4a")
 		)
-		(pad "2" smd roundrect
-			(at -0.8875 0 270)
-			(size 0.375 0.4)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U7-NC-Pad2)")
-			(pinfunction "NC_2")
-			(pintype "no_connect")
-			(uuid "3da54690-44f0-44bc-be46-381fbf182035")
-		)
 		(pad "3" smd roundrect
 			(at -0.8875 -0.65 270)
 			(size 0.375 0.4)
@@ -50484,7 +50513,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "480d6628-8490-4187-a4d4-8fa35068649b")
@@ -50529,6 +50558,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6da148c6-6394-4f27-9f9b-9ed1e86563ef")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "916b4fc7-68bc-4b81-9f3f-43108f818bbc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "143de588-9641-4a92-a64b-f2845a27f2d6")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -50694,6 +50759,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "XL-1010RGBC-2812B"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ee0c0141-ae73-45bd-b258-992761963390")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "XINGLIGHT"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "afb1a300-908c-4270-80d9-ec34887c0e8f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C5349953"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "813b8844-7a8b-4d39-9af9-12ebb1822f2e")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -51261,7 +51362,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "22uF"
+		(property "Value" "1uF"
 			(at 0 -1.16 0)
 			(layer "B.Fab")
 			(uuid "6ce84560-593a-409c-ae9d-648a7a5952e3")
@@ -51310,7 +51411,7 @@
 				(justify mirror)
 			)
 		)
-		(property "LCSC" "C415703"
+		(property "LCSC" "C52923"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -51324,7 +51425,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "GRM155R60J226ME11D"
+		(property "MPN" "CL05A105KA5NQNC"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -51338,7 +51439,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer" "Murata"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -52763,7 +52864,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "5386cb61-6450-429e-a93b-723b6eddc4fc")
@@ -52808,6 +52909,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7de6490b-0039-43de-8b45-524e0084e2c0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6056b689-e0b8-4a26-a4e8-897609f6e24d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d0f89002-be6f-4f0b-8e52-fb69b2584185")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -53192,7 +53329,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "0d1373a3-ca1c-4aca-81b6-b082e0c3134a")
@@ -53237,6 +53374,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "74751c7e-749a-4382-b954-962b2627686a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "88842bb6-af9b-44a8-aad2-cdb523c1d63d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "21b16b55-2be8-43a8-bc95-88d775ecd166")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -54982,7 +55155,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "d684417d-497a-4871-ac4e-b928c5fd6b5e")
@@ -55027,6 +55200,42 @@
 				(font
 					(size 1 1)
 					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "968b733b-669b-4e73-b81c-fe31a7301b0e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "eada4ac9-5915-463d-b5b7-5ed8d2a6c8e7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "388c01ee-cb2e-40bd-b673-f912ccf1ef66")
+			(effects
+				(font
+					(size 1.27 1.27)
 				)
 				(justify mirror)
 			)
@@ -59200,16 +59409,6 @@
 			(pintype "unspecified")
 			(uuid "a34ea538-08e4-4db2-baf6-f359021e1533")
 		)
-		(pad "3" smd roundrect
-			(at -1.89 0.399771 90)
-			(size 0.55 0.2)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U15-PF1{slash}OSC_OUT-Pad3)")
-			(pinfunction "PF1/OSC_OUT_3")
-			(pintype "unspecified+no_connect")
-			(uuid "bce76ce0-76b8-4f21-9f9f-3faa0af54856")
-		)
 		(pad "4" smd roundrect
 			(at -1.89 0.000991 90)
 			(size 0.55 0.2)
@@ -59250,26 +59449,6 @@
 			(pintype "unspecified")
 			(uuid "c88569f5-9d8b-499f-8a72-b969ecba2157")
 		)
-		(pad "8" smd roundrect
-			(at -1.199975 -1.87 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U15-PA2-Pad8)")
-			(pinfunction "PA2_8")
-			(pintype "unspecified+no_connect")
-			(uuid "3edc84db-c3ee-40a4-b652-08e656f1a5cd")
-		)
-		(pad "9" smd roundrect
-			(at -0.800178 -1.87 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U15-PA3-Pad9)")
-			(pinfunction "PA3_9")
-			(pintype "unspecified+no_connect")
-			(uuid "e2629e4a-d1a5-44fe-b37d-1a6a26b5398e")
-		)
 		(pad "10" smd roundrect
 			(at -0.400127 -1.87 90)
 			(size 0.2 0.55)
@@ -59289,16 +59468,6 @@
 			(pinfunction "PA5_11")
 			(pintype "unspecified")
 			(uuid "d2c907d8-4637-41c9-ba59-6e497c99df11")
-		)
-		(pad "12" smd roundrect
-			(at 0.399721 -1.87 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U15-PA6-Pad12)")
-			(pinfunction "PA6_12")
-			(pintype "unspecified+no_connect")
-			(uuid "9b4c3b10-4134-439a-ad6e-aa230180643a")
 		)
 		(pad "13" smd roundrect
 			(at 0.800025 -1.87 90)
@@ -59400,26 +59569,6 @@
 			(pintype "unspecified")
 			(uuid "6c108178-c5a5-4901-ac3f-e86480574205")
 		)
-		(pad "23" smd roundrect
-			(at 0.800025 1.88 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U15-PA15-Pad23)")
-			(pinfunction "PA15_23")
-			(pintype "unspecified+no_connect")
-			(uuid "a307c4b4-9f16-40f7-943a-eaad0f0e4def")
-		)
-		(pad "24" smd roundrect
-			(at 0.399721 1.88 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U15-PB3-Pad24)")
-			(pinfunction "PB3_24")
-			(pintype "unspecified+no_connect")
-			(uuid "e80d9aee-cae7-4063-bfff-ba717a3c8df3")
-		)
 		(pad "25" smd roundrect
 			(at -0.000076 1.879746 90)
 			(size 0.2 0.55)
@@ -59429,36 +59578,6 @@
 			(pinfunction "PB4_25")
 			(pintype "unspecified")
 			(uuid "ad8fe051-cff5-44ba-81cd-cc5bd959540e")
-		)
-		(pad "26" smd roundrect
-			(at -0.399873 1.88 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U15-PB5-Pad26)")
-			(pinfunction "PB5_26")
-			(pintype "unspecified+no_connect")
-			(uuid "1db894f9-a9e2-4dcc-ae84-294d52ac1c0d")
-		)
-		(pad "27" smd roundrect
-			(at -0.800178 1.88 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U15-PB6-Pad27)")
-			(pinfunction "PB6_27")
-			(pintype "unspecified+no_connect")
-			(uuid "e774e33e-108e-4dfe-ad75-5fea360fe87d")
-		)
-		(pad "28" smd roundrect
-			(at -1.199975 1.88 90)
-			(size 0.2 0.55)
-			(layers "B.Cu" "B.Mask" "B.Paste")
-			(roundrect_rratio 0.25)
-			(net "unconnected-(U15-PB7-Pad28)")
-			(pinfunction "PB7_28")
-			(pintype "unspecified+no_connect")
-			(uuid "22869d03-4287-4953-b195-77e5fbab79ce")
 		)
 		(pad "29" smd roundrect
 			(at 0.000178 -0.000279 90)
