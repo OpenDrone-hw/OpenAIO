@@ -4801,6 +4801,10 @@
 		(uuid "159749b7-e8ed-496e-854c-8cfc9941945f")
 	)
 	(no_connect
+		(at 321.31 250.19)
+		(uuid "252533b0-3d19-4f7d-b004-3ff0358ed641")
+	)
+	(no_connect
 		(at 270.51 196.85)
 		(uuid "6f66b967-50d8-4666-a5ff-a92ef1c8cddf")
 	)
@@ -5159,16 +5163,6 @@
 			(type default)
 		)
 		(uuid "37143c16-7151-4685-a762-3dd3571d6add")
-	)
-	(wire
-		(pts
-			(xy 334.01 250.19) (xy 321.31 250.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "37c617cf-e0d4-4926-b383-314f3c5ef5a4")
 	)
 	(wire
 		(pts
@@ -6545,17 +6539,6 @@
 				)
 			)
 		)
-	)
-	(hierarchical_label "10V_ENABLE"
-		(shape output)
-		(at 334.01 250.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0116a87f-0805-42d8-8169-74b0d1fcedf8")
 	)
 	(hierarchical_label "GYRO_CS"
 		(shape output)

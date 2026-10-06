@@ -726,6 +726,14 @@
 		)
 		(uuid "da48d166-aa5b-40b1-ab75-d1ff002e84b5")
 	)
+	(no_connect
+		(at 173.99 63.5)
+		(uuid "4eb07d81-8be7-4f7b-86a7-09b0c5c1e7f6")
+	)
+	(no_connect
+		(at 72.39 63.5)
+		(uuid "777c752b-9184-4a37-a437-c0484384ea9e")
+	)
 	(bus_entry
 		(at 52.07 76.2)
 		(size 2.54 -2.54)
@@ -949,16 +957,6 @@
 			(type default)
 		)
 		(uuid "5624fd2d-4ee1-41b0-828a-1a319397585e")
-	)
-	(wire
-		(pts
-			(xy 173.99 63.5) (xy 166.37 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "57c6063e-405d-4673-82f4-17dc0fbe8bcc")
 	)
 	(wire
 		(pts
@@ -1452,16 +1450,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 63.5) (xy 64.77 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4220150-5bf8-4837-8afc-a5c1ac53e731")
-	)
-	(wire
-		(pts
 			(xy 72.39 96.52) (xy 64.77 96.52)
 		)
 		(stroke
@@ -1552,28 +1540,6 @@
 		(uuid "02783725-418e-45a8-a1a6-fe39edf9a49c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 64.77 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "10V_ENABLE"
-		(shape bidirectional)
-		(at 166.37 63.5 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "05c57a9f-a2a0-43d4-9121-16f376c02e82")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 166.37 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1772,28 +1738,6 @@
 		(uuid "2f4929ab-eb8f-4c8d-bc09-e3248e29c7be")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 166.37 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "10V_ENABLE"
-		(shape bidirectional)
-		(at 64.77 63.5 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "31e1faa6-500b-4a46-b629-7a9c1204dff2")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 64.77 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3315,5 +3259,4 @@
 			(page "1")
 		)
 	)
-	(embedded_fonts no)
 )

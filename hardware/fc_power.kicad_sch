@@ -3197,6 +3197,12 @@
 		(uuid "8d6b7319-73a5-4555-ab00-7f65c1ce4920")
 	)
 	(junction
+		(at 57.15 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94895c4e-75f7-411e-bfa9-b09056f8be7d")
+	)
+	(junction
 		(at 41.91 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3652,7 +3658,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 40.64) (xy 59.69 40.64)
+			(xy 60.96 40.64) (xy 57.15 40.64)
 		)
 		(stroke
 			(width 0)
@@ -3729,6 +3735,16 @@
 			(type default)
 		)
 		(uuid "4a035b82-5582-4ffc-9e6b-29efe372658a")
+	)
+	(wire
+		(pts
+			(xy 57.15 38.1) (xy 57.15 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ace12b1-5073-4b64-ba0a-48c2d61ddf9d")
 	)
 	(wire
 		(pts
@@ -4202,6 +4218,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 38.1) (xy 60.96 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd44d576-b7c5-49eb-83b8-951f70b1d64a")
+	)
+	(wire
+		(pts
 			(xy 92.71 104.14) (xy 116.84 104.14)
 		)
 		(stroke
@@ -4362,7 +4388,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 38.1) (xy 60.96 38.1)
+			(xy 41.91 38.1) (xy 57.15 38.1)
 		)
 		(stroke
 			(width 0)
@@ -4441,17 +4467,6 @@
 			(justify right bottom)
 		)
 		(uuid "8ab9165f-c9df-41ea-94c5-15013266d999")
-	)
-	(hierarchical_label "10V_ENABLE"
-		(shape input)
-		(at 59.69 40.64 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "43cb8f0f-55ac-4a8d-8285-2f6783844f96")
 	)
 	(symbol
 		(lib_id "lib:DSK24_C64890")
