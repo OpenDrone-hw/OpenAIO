@@ -133,3 +133,19 @@
 # Not exempt, left for the owner (R3-E): JP1.1 (U.FL centre pad, 0.37 mm past
 # the 0.20 line), FL1.2 (2.4 GHz filter GND pad, 0.19 mm), U12.7/.8 (SM06B
 # shell tabs, 0.69 mm). Each needs a part move.
+
+# LGA J90 land (DFM-06, decision D2). Copper of another net next to a hidden
+# LGA joint cannot be inspected or reworked, and +BATT next to an FC signal is
+# the worst short on the board. Pours of every other net keep 0.30 mm from
+# every J90 pad, and +BATT keeps 0.30 mm with every item type (J90 carries no
+# +BATT pad). Measured on the refilled board, FB1: +BATT path resistance
+# unchanged within 0.005 mOhm (research/review-2026-10/lr_power.py method).
+(rule "LGA J90: other-net pours 0.30 from the land"
+  (layer "F.Cu")
+  (condition "A.memberOfFootprint('J90') && B.Type == 'Zone' && A.Net != B.Net")
+  (constraint clearance (min 0.30mm)))
+
+(rule "LGA J90: +BATT 0.30 from the land"
+  (layer "F.Cu")
+  (condition "A.memberOfFootprint('J90') && B.Net == '+BATT'")
+  (constraint clearance (min 0.30mm)))

@@ -119,3 +119,11 @@
   (constraint edge_clearance (min 0.20mm))
   (severity ignore)
   (condition "A.Type == 'Pad' && A.memberOfFootprint('lib:small_pad')"))
+
+# LGA J91 pads (DFM-06, same intent as the Base J90 rule): the B.Cu GND pour
+# keeps 0.30 mm from every J91 pad of another net, so a solder ball or mask
+# sliver under the hidden joint cannot short a signal to GND.
+(rule "LGA J91: other-net pours 0.30 from the pads"
+  (layer "B.Cu")
+  (condition "A.memberOfFootprint('J91') && B.Type == 'Zone' && A.Net != B.Net")
+  (constraint clearance (min 0.30mm)))
