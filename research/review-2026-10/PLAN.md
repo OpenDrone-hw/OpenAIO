@@ -65,6 +65,11 @@ Adopted from the other boards' lessons in the commons (gate R2):
 
 Owner decisions during the run (2026-10-07):
 - The +BATT bulk capacitance and hot-plug protection come from an external electrolytic capacitor on the battery leads. No on-board bulk capacitance is added. The per-leg 0805 ceramics stay as the HF bypass for each half-bridge.
+- **DRC must end clean on both boards.** The target is 0 errors.
+  - Intended departures (NextPCB capability, owner decisions, datasheet land patterns) become named DRU exceptions, each scoped to the pads, footprints or nets involved.
+  - No check is globally ignored.
+  - Real fabrication risks are fixed, not exempted.
+  - The exceptions table goes in the PR.
 
 Not done without the maintainer:
 - replacing the microSD with flash;
