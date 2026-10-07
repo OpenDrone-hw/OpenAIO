@@ -119,3 +119,27 @@
   (constraint edge_clearance (min 0.20mm))
   (severity ignore)
   (condition "A.Type == 'Pad' && A.memberOfFootprint('lib:small_pad')"))
+
+# LGA J91 pads (DFM-06, same intent as the Base J90 rule): the B.Cu GND pour
+# keeps 0.30 mm from every J91 pad of another net, so a solder ball or mask
+# sliver under the hidden joint cannot short a signal to GND.
+(rule "LGA J91: other-net pours 0.30 from the pads"
+  (layer "B.Cu")
+  (condition "A.memberOfFootprint('J91') && B.Type == 'Zone' && A.Net != B.Net")
+  (constraint clearance (min 0.30mm)))
+
+# Solder mask (DFM-12): expansion 0.04 mm and minimum web 0.09 mm (NextPCB
+# green) in board setup. A gang opening is allowed only inside a datasheet
+# land pattern whose pad gaps are below 0.17 mm (2 x 0.04 + 0.09); keep it only
+# after NextPCB accepts the gang (NEXTPCB.md 4.6, question 11). KiCad 10.0.6
+# evaluates bridged_mask on item A only (an A && B condition never matches),
+# so each rule names the footprint; FB1 checked that no bridge leaves it.
+(rule "Mask gang: U9 X2SON-6 land pattern"
+  (constraint bridged_mask)
+  (condition "A.memberOfFootprint('U9')")
+  (severity ignore))
+
+(rule "Mask gang: U11 X2SON-4 land pattern"
+  (constraint bridged_mask)
+  (condition "A.memberOfFootprint('U11')")
+  (severity ignore))
