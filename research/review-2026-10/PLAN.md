@@ -74,6 +74,15 @@ Owner decisions during the run (2026-10-07):
   - Real fabrication risks are fixed, not exempted.
   - The exceptions table goes in the PR.
 
+- **Compromise is expected.** Where a full fix needs a major placement change, take the best routing-only or small-nudge improvement instead.
+  - Record the remaining departure with its measured number.
+  - List the placement fix as an owner option.
+  - This covers:
+    - USB D+/D− coupling;
+    - the AE2 antenna ground clearance;
+    - sensitive nets left on the In4/In5 +BATT planes;
+    - the tracks left on In3.
+
 Not done without the maintainer:
 - replacing the microSD with flash;
 - swapping the SX1281 receiver for the LR1121 "mono" sheet;
