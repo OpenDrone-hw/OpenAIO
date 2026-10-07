@@ -192,3 +192,17 @@
 (rule "RF: +BATT keeps 0.80 mm from the RF chain"
   (condition "(A.NetName == 'Net-(FL1-OUT)' || A.NetName == 'Net-(FL1-IN)' || A.NetName == '/RX/WIFI' || A.NetName == 'Net-(U22-LNA_IN)') && B.NetName == '+BATT'")
   (constraint clearance (min 0.80mm)))
+
+# EMC E2 (FB4). AE2 (Johanson 2450AT18A100, ESP32-C3 WiFi) needs a copper-free
+# area: the datasheet layout keeps ground 1.6 mm from the feed pad and nothing
+# between the antenna and the board end. The rule area 'AE2 antenna' covers
+# the antenna lands (79.665-83.825) with margin, from the matching network
+# row down to the routed edge, on all layers. It forbids pours itself; this
+# rule forbids tracks and vias of every net except the antenna's own feed
+# trace (a KiCad keepout is not net-aware, so it would flag the feed).
+# Not met, owner placement: the GND planes stop 0.15 mm from the long side of
+# the antenna (the datasheet asks 1.6 mm from the feed end), L6/C75/C76 sit
+# 0.5 mm from the feed pad, and U12 (SH-6) covers the area on F.Cu.
+(rule "AE2 antenna: no tracks or vias in the antenna area"
+  (condition "A.intersectsArea('AE2 antenna') && (A.Type == 'Via' || A.NetName != '/RX/WIFI')")
+  (constraint disallow track via))
