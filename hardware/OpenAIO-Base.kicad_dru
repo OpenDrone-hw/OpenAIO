@@ -160,3 +160,23 @@
   (constraint bridged_mask)
   (condition "A.memberOfFootprint('U23')")
   (severity ignore))
+
+# DOY180N03T exposed pad (DFM-03, FB2b). The package EP is 2.15 x 2.75 mm
+# (DOY180N03T.pdf p.6); footprint lib:DOY180N03T_TDFN3333-8 carries it as the
+# rule area DOY_EP on the pad layer. The drain land covers only 70 % of it:
+# the HS/LS via arrays of the stacked FET pairs sit inside the EP outline, so
+# the land cannot grow further until the owner decides the FET stack offset.
+# Until then: other-net pours keep 0.40 mm from the drain land (covers the
+# uncovered source-side strip, 0.385 mm, and the end bands, 0.19 mm), and no
+# track or via of any net other than the via-array nets (GND, gate, +BATT,
+# phase) may enter the EP outline. A plain keepout cannot do this: it is not
+# net-aware and cut the +BATT drain pour (+0.057 mOhm, FB2b).
+(rule "DOY180N03T EP: other-net pours 0.40 from the drain land"
+  (layer outer)
+  (condition "A.memberOfFootprint('lib:DOY180N03T_TDFN3333-8') && A.Pad_Number == '3' && B.Type == 'Zone' && A.Net != B.Net")
+  (constraint clearance (min 0.40mm)))
+
+(rule "DOY180N03T EP: no other tracks or vias under the exposed pad"
+  (layer outer)
+  (condition "A.intersectsArea('DOY_EP') && A.NetName != 'GND' && A.NetName != '+BATT' && A.NetName != 'Net-(Q*-G)' && A.NetName != '/??'")
+  (constraint disallow track via))
