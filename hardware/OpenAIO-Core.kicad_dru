@@ -56,6 +56,20 @@
   (layer inner)
   (constraint clearance (min 0.076mm)))
 
+# Netclasses (EMC E4, FB4). Classes USB, RF, CSA, PHASE and POWER are set in
+# the project file by pattern. A netclass clearance is overridden by any
+# custom clearance rule, and the generic NPCB clearance rules above match
+# every item, so each class clearance is restated here. These rules sit right
+# after the generic ones: the specific rules further down (SMD pad, LGA
+# pads) still win where they match. Track widths are the class
+# defaults for the router; DRC floors per class follow these rules.
+(rule "POWER: +1.1V and +1.8V_GYRO track width"
+  (condition "A.NetName == '+1.1V' || A.NetName == '+1.8V_GYRO'")
+  (constraint track_width (min 0.17mm) (opt 0.20mm)))
+(rule "POWER: +4v5 track width"
+  (condition "A.NetName == '+4v5'")
+  (constraint track_width (min 0.12mm) (opt 0.20mm)))
+
 (rule "NPCB core: SMD pad to track or pour"
   (layer outer)
   (condition "A.Type == 'Pad' && A.Pad_Type == 'SMD' && (B.Type == 'Track' || B.Type == 'Arc' || B.Type == 'Zone')")

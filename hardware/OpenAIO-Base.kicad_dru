@@ -59,6 +59,46 @@
   (layer inner)
   (constraint clearance (min 0.10mm)))
 
+# Netclasses (EMC E4, FB4). Classes USB, RF, CSA, PHASE and POWER are set in
+# the project file by pattern. A netclass clearance is overridden by any
+# custom clearance rule, and the generic NPCB clearance rules above match
+# every item, so each class clearance is restated here. These rules sit right
+# after the generic ones: the specific rules further down (LGA land, FET EP,
+# RF keep-back) still win where they match. Track widths are the class
+# defaults for the router; DRC floors per class follow these rules.
+(rule "RF: clearance, outer"
+  (layer outer)
+  (condition "A.NetClass == 'RF' || B.NetClass == 'RF'")
+  (constraint clearance (min 0.15mm)))
+(rule "RF: clearance, inner"
+  (layer inner)
+  (condition "A.NetClass == 'RF' || B.NetClass == 'RF'")
+  (constraint clearance (min 0.15mm)))
+(rule "CSA: clearance, outer"
+  (layer outer)
+  (condition "A.NetClass == 'CSA' || B.NetClass == 'CSA'")
+  (constraint clearance (min 0.16mm)))
+(rule "CSA: clearance, inner"
+  (layer inner)
+  (condition "A.NetClass == 'CSA' || B.NetClass == 'CSA'")
+  (constraint clearance (min 0.12mm)))
+(rule "PHASE: clearance, outer"
+  (layer outer)
+  (condition "A.NetClass == 'PHASE' || B.NetClass == 'PHASE'")
+  (constraint clearance (min 0.15mm)))
+(rule "RF: track width"
+  (condition "A.NetClass == 'RF'")
+  (constraint track_width (min 0.16mm) (opt 0.16mm)))
+(rule "CSA: track width"
+  (condition "A.NetClass == 'CSA'")
+  (constraint track_width (min 0.15mm) (opt 0.15mm)))
+(rule "POWER: +BATT, +5V, +4v5, ESC vdda track width"
+  (condition "A.NetName == '+BATT' || A.NetName == '+5V' || A.NetName == '+4v5' || A.NetName == '/ESC?/vdda'")
+  (constraint track_width (min 0.15mm) (opt 0.30mm)))
+(rule "POWER: +5V_USB track width"
+  (condition "A.NetName == '+5V_USB'")
+  (constraint track_width (min 0.20mm) (opt 0.30mm)))
+
 (rule "NPCB base: SMD pad to SMD pad"
   (layer outer)
   (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD'")

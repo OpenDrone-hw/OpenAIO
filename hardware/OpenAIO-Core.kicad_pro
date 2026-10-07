@@ -525,6 +525,101 @@
         "via_diameter": 0.35,
         "via_drill": 0.15,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.09,
+        "diff_pair_gap": 0.1,
+        "diff_pair_via_gap": 0.1,
+        "diff_pair_width": 0.1,
+        "line_style": 0,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "USB",
+        "pcb_color": "rgb(30, 110, 255)",
+        "priority": 0,
+        "schematic_color": "rgb(30, 110, 255)",
+        "track_width": 0.1,
+        "tuning_profile": "",
+        "via_diameter": 0.35,
+        "via_drill": 0.15,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.09,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "RF",
+        "pcb_color": "rgb(200, 160, 0)",
+        "priority": 1,
+        "schematic_color": "rgb(200, 160, 0)",
+        "track_width": 0.15,
+        "tuning_profile": "",
+        "via_diameter": 0.35,
+        "via_drill": 0.15,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.09,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "CSA",
+        "pcb_color": "rgb(0, 160, 160)",
+        "priority": 2,
+        "schematic_color": "rgb(0, 160, 160)",
+        "track_width": 0.15,
+        "tuning_profile": "",
+        "via_diameter": 0.35,
+        "via_drill": 0.15,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.09,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "PHASE",
+        "pcb_color": "rgb(200, 0, 200)",
+        "priority": 3,
+        "schematic_color": "rgb(200, 0, 200)",
+        "track_width": 0.25,
+        "tuning_profile": "",
+        "via_diameter": 0.35,
+        "via_drill": 0.15,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.09,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "POWER",
+        "pcb_color": "rgb(255, 140, 0)",
+        "priority": 4,
+        "schematic_color": "rgb(255, 140, 0)",
+        "track_width": 0.2,
+        "tuning_profile": "",
+        "via_diameter": 0.35,
+        "via_drill": 0.15,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -534,24 +629,72 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "50Ohm",
-        "pattern": "/ELRS/WIFI_ESP"
+        "netclass": "USB",
+        "pattern": "USB_D?"
       },
       {
-        "netclass": "50Ohm",
-        "pattern": "/ELRS/WIFI_ANTENNA"
+        "netclass": "USB",
+        "pattern": "Net-(U2-USB_D?)"
       },
       {
-        "netclass": "50Ohm",
-        "pattern": "/ELRS/ELRS_ANT_SX"
+        "netclass": "RF",
+        "pattern": "Net-(FL1-*)"
       },
       {
-        "netclass": "50Ohm",
-        "pattern": "/ELRS/ELRS_ANT"
+        "netclass": "RF",
+        "pattern": "/RX/WIFI"
       },
       {
-        "netclass": "Default",
-        "pattern": "/ELRS/ANT_TRACE"
+        "netclass": "RF",
+        "pattern": "Net-(U22-LNA_IN)"
+      },
+      {
+        "netclass": "CSA",
+        "pattern": "/CSA+"
+      },
+      {
+        "netclass": "PHASE",
+        "pattern": "/[1-4][ABC]"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "+BATT"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "+10V"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "+5V_USB"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "+4v5"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "+3V3"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "+3.3V"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "+1.1V"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "+1.8V_GYRO"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/ESC?/vdda"
       }
     ]
   },
