@@ -180,3 +180,15 @@
   (layer outer)
   (condition "A.intersectsArea('DOY_EP') && A.NetName != 'GND' && A.NetName != '+BATT' && A.NetName != 'Net-(Q*-G)' && A.NetName != '/??'")
   (constraint disallow track via))
+
+# EMC E1 (FB4). The u.FL feed is a through via, JP1.1 (F) to FL1.3 (B),
+# Net-(FL1-OUT), and it crosses the In4/In5 +BATT planes. With the 0.10 mm
+# inner clearance the planes came to 0.105 mm of the barrel and the 2.4 GHz
+# link drove the In3-In4 and In5-In6 +BATT cavities. +BATT now keeps 0.80 mm
+# from the RF chain on every layer (only the via sits over +BATT copper). The
+# GND return vias cannot come closer than the existing ones at 0.70-0.76 mm:
+# JP1.1 and FL1.3 cover the via on three sides and the board edge is the
+# fourth, and JP1/FL1 stay where they are.
+(rule "RF: +BATT keeps 0.80 mm from the RF chain"
+  (condition "(A.NetName == 'Net-(FL1-OUT)' || A.NetName == 'Net-(FL1-IN)' || A.NetName == '/RX/WIFI' || A.NetName == 'Net-(U22-LNA_IN)') && B.NetName == '+BATT'")
+  (constraint clearance (min 0.80mm)))
