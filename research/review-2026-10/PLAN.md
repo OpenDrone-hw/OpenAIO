@@ -65,6 +65,8 @@ Adopted from the other boards' lessons in the commons (gate R2):
 
 Owner decisions during the run (2026-10-07):
 - The +BATT bulk capacitance and hot-plug protection come from an external electrolytic capacitor on the battery leads. No on-board bulk capacitance is added. The per-leg 0805 ceramics stay as the HF bypass for each half-bridge.
+- **LED strip (critique F1):** Q2 and its 2.4 k pull-up are replaced by a non-inverting 5 V buffer (74AHCT1G125 class). Betaflight's RP2350 LED driver cannot invert the signal.
+- **ESC MCU supply (critique F2):** the four AT32F421 run from a battery-only 3.3 V rail, a small LDO fed from the +5V buck. On USB-only power, AM32's startup tune then cannot drive unpowered NSG2065Q inputs.
 - **DRC must end clean on both boards.** The target is 0 errors.
   - Intended departures (NextPCB capability, owner decisions, datasheet land patterns) become named DRU exceptions, each scoped to the pads, footprints or nets involved.
   - No check is globally ignored.
