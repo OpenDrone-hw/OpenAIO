@@ -3938,9 +3938,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ba05f40e-0cd6-4ded-b665-ddc65035695c")
@@ -3955,7 +3955,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Core_LGA"
+		(property "Value" "OpenAIO-Core PCBA (consigned)"
 			(at 77.47 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3991,6 +3991,42 @@
 			)
 		)
 		(property "Description" "OpenAIO Base<->Core LGA interface"
+			(at 77.47 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "OpenDrone"
+			(at 77.47 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "MPN" "OpenAIO-Core PCBA"
+			(at 77.47 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "BOM note" "Consigned (C): the assembled Core from the Core order. CPL point = J90 origin (LGA pattern centre), top, 0 deg. Pick on U2 (RP2354A, flat 7x7 mm top) at -3.77, +2.25 mm from the CPL point; Core outline centre at -1.03, +0.23 mm."
 			(at 77.47 105.41 0)
 			(hide yes)
 			(show_name no)

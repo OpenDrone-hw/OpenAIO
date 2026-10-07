@@ -450,6 +450,69 @@ These are the UNCONFIRMED items above, phrased as questions:
 9. Turnkey attrition percentage?
 10. LCSC as a source?
 11. Ganged mask accepted on the X2SON land patterns?
+12. Are 0.5 mm local fiducials (1.0 mm mask opening) accepted on the Core
+    next to one 1.0 mm fiducial, with 1.0 mm fiducials on the panel rails?
+13. Can the Core be ordered with bow and twist of at most 0.10 mm over the
+    J91 pad field, and the Base top printed with a 0.12 mm stencil?
+14. Tabs narrower than 5 mm (1.5-3.0 mm) with router depanelling, and parts
+    0.5 mm from a router-cut tab (PANEL.md)?
+
+### 4.7 Order notes (DFM fix batch FB1)
+
+These go on the NextPCB order and in the fab notes. Each one comes from the
+critique round 1 DFM findings (DFM-xx).
+
+**Stencils (DFM-04, DFM-05).** One stencil per printed side:
+
+| Side | Thickness | Why |
+|---|---|---|
+| Core top (F) | 0.10 mm | 0.4 mm QFN-60 (U2); every aperture at area ratio >= 0.66 |
+| Base bottom (B) | 0.10 mm | 0.4 mm QFN-28 (U13/U15/U17/U19); every aperture at area ratio >= 0.66 |
+| Base top (F) | **0.12 mm** | J90 LGA land; the finest Base top apertures (0201 R34/C104, USB1) stay at area ratio >= 0.70 |
+
+A step-up on J90 alone is not possible: NextPCB needs a 2 mm transition zone
+and other Base top apertures sit 0.97 mm (U12, C105) from J90 pads. The
+uniform 0.12 mm top stencil does the same job. Fine-pitch parts carry
+footprint-level paste overrides (1:1 pins, exposed pads at the board default),
+so all apertures except J90 reach area ratio 0.66 at 0.10 mm.
+
+**LGA joint (DFM-05).** J90 prints a 1.1 mm round aperture on the 1.0 mm land
+(+0.05 mm overprint; area ratio 2.3 at 0.12 mm). J91 on the Core has no paste.
+Solder per joint, with paste at 50 % metal by volume and 90 % transfer:
+
+| J90 aperture / stencil | Paste | Solder | Joint height (column on a 0.785 mm2 pad) |
+|---|---|---|---|
+| 0.8 mm / 0.10 mm (before) | 0.045 mm3 | 0.023 mm3 | 0.029 mm |
+| 1.1 mm / 0.12 mm (now) | 0.103 mm3 | 0.051 mm3 | 0.065 mm |
+
+IPC-6012 bow and twist (0.75 %) over the J91 pad field (21 x 19 mm outer
+pad edges, 28.3 mm diagonal; the critique used 23.3 mm and got 0.17 mm)
+allows 0.21 mm. That is 3x the joint height, so the IPC default is not good
+enough. At placement the Core must touch every wet deposit (0.12 mm high), so
+the Core order asks for **bow and twist of at most 0.10 mm over the J91 pad
+field**, which leaves 0.02 mm for print height spread. After reflow the
+0.065 mm columns absorb roughly +-0.03 mm of local gap, so first articles get
+2.5D/oblique X-ray (DFM-14). For more margin, pre-bump J91 (paste print and
+reflow on the Core bottom), which roughly doubles the solder per joint.
+
+**Copper next to the LGA (DFM-06).** Pours of every other net keep 0.30 mm
+from every J90 and J91 pad, and +BATT keeps 0.30 mm from J90 with every item
+type (named rules in both `.kicad_dru` files). Still under mask at
+0.15-0.30 mm: 80 Base signal/power track and via pairs next to J90 pads, and
+49 Core via/track pairs next to J91 pads (closest 0.086 mm, a via beside a
+J91 pad). They need a local re-route (owner finish pass).
+
+**Solder mask (DFM-12).** Expansion 0.04 mm on both boards, minimum web
+0.09 mm (green). Ganged openings only inside datasheet land patterns that are
+too fine for a dam, each as a named `bridged_mask` rule.
+
+**Fiducials (DFM-08).** The Core carries FID1 (1.0 mm dot, 2.0 mm opening)
+and FID2/FID3 (0.5 mm dots, 1.0 mm openings) inside the outline; no Core top
+site leaves room for three 1.0 mm fiducials. The panel rails carry 1.0 mm
+fiducials (PANEL.md).
+
+**Panels (DFM-10).** See PANEL.md: Core 3 x 2, Base 2 x 2, 5 mm rails,
+solid tabs on the measured free edge runs, router depanel.
 
 ---
 

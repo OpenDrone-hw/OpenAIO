@@ -253,8 +253,11 @@ def footprint(name, mirror, layers, paste, descr):
     prop("Value", name, half_h + 1.0, "F.Fab")
     prop("Datasheet", "", 0, "F.Fab", True)
     prop("Description", descr, 0, "F.Fab", True)
-    L.append('\t(attr smd exclude_from_pos_files exclude_from_bom)')
-    if not mirror:
+    if mirror:
+        L.append('\t(attr smd exclude_from_pos_files exclude_from_bom)')
+    else:
+        # J90 stands for the consigned Core PCBA on the Base BOM and CPL (DFM-09)
+        L.append('\t(attr smd)')
         # LGA joint (DFM-05): 1.1 mm aperture on the 1.0 mm land (+0.05 mm
         # overprint), printed with the 0.12 mm Base top stencil, see
         # research/review-2026-10/NEXTPCB.md "Order notes"

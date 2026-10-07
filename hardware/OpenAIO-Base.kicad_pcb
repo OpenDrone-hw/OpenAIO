@@ -5322,7 +5322,7 @@
 				)
 			)
 		)
-		(property "Value" "Core_LGA"
+		(property "Value" "OpenAIO-Core PCBA (consigned)"
 			(at 0 11 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5360,12 +5360,48 @@
 				)
 			)
 		)
+		(property "Manufacturer" "OpenDrone"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dfeaa3e6-aa2c-4736-8ecb-3bebafd5627b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "MPN" "OpenAIO-Core PCBA"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f7b9bb46-75e6-4472-bac7-fa80f56effb6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "BOM note" "Consigned (C): the assembled Core from the Core order. CPL point = J90 origin (LGA pattern centre), top, 0 deg. Pick on U2 (RP2354A, flat 7x7 mm top) at -3.77, +2.25 mm from the CPL point; Core outline centre at -1.03, +0.23 mm."
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5c8e3a02-c551-4fc9-a5ad-8435f67c65d9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/0d0b26c5-e9b6-4ca3-8b9f-93c86665bc0c/ba05f40e-0cd6-4ded-b665-ddc65035695c")
 		(sheetname "/Core_Interface/")
 		(sheetfile "core_interface.kicad_sch")
 		(solder_paste_margin 0.05)
 		(solder_paste_margin_ratio 0)
-		(attr smd exclude_from_pos_files exclude_from_bom)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center -10.65 -9.65)
