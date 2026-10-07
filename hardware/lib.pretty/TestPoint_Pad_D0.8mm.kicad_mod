@@ -1,0 +1,88 @@
+(footprint "TestPoint_Pad_D0.8mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "SMD pad as test point, diameter 0.8mm (catalogue TestPoint_Pad_D1.0mm scaled; OpenAIO SWD test pads, R2a spec section 8)")
+	(tags "test point SMD pad")
+	(property "Reference" "REF**"
+		(at 0 -1.448 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "22423c0d-ea49-4fbf-8ac4-8d483fa82484")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TestPoint"
+		(at 0 1.55 0)
+		(layer "F.Fab")
+		(uuid "17ab0e30-898f-4d4b-8395-341646f0d67a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "08e020f0-7603-4a7a-ba74-8aae65886200")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "test point"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ffb6ee33-baaa-4526-9877-48897e84b6ac")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr exclude_from_pos_files)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 0.9 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "f1a8ded9-de51-4970-9b7d-773c3a2df6ea")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -1.45 0)
+		(layer "F.Fab")
+		(uuid "2274d397-a895-45d7-92bd-51ed564e7f99")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd circle
+		(at 0 0 180)
+		(size 0.8 0.8)
+		(layers "F.Cu" "F.Mask")
+		(uuid "26807927-cde7-4a0a-b241-edcfc32dd274")
+	)
+	(embedded_fonts no)
+)
