@@ -3310,6 +3310,8 @@
 				(pins "3" "4" "2" "5" "1")
 			)
 		)
+		(solder_paste_margin 0)
+		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -3474,6 +3476,8 @@
 			(net "GND")
 			(pinfunction "VEE_5")
 			(pintype "unspecified")
+			(solder_paste_margin 0.01)
+			(solder_paste_margin_ratio 0)
 			(uuid "3ec2679f-7e75-4b6d-919f-6df7760f5fc8")
 		)
 		(embedded_fonts no)
@@ -6865,6 +6869,8 @@
 				(pins "1" "2")
 			)
 		)
+		(solder_paste_margin 0.025)
+		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -7629,6 +7635,8 @@
 				(pins "1" "3" "2")
 			)
 		)
+		(solder_paste_margin 0)
+		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -8350,6 +8358,8 @@
 		(path "/01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2/c12ed9b8-f9d5-456e-bde3-f5d333450a9e")
 		(sheetname "/RP2354A/")
 		(sheetfile "fc_rp2350a.kicad_sch")
+		(solder_paste_margin 0)
+		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -8916,6 +8926,8 @@
 			(net "GND")
 			(pinfunction "EP_61")
 			(pintype "unspecified")
+			(solder_paste_margin -0.02)
+			(solder_paste_margin_ratio -0.08)
 			(uuid "eb34273d-4ff4-4448-9a66-cce257e77466")
 		)
 		(embedded_fonts no)
@@ -9584,6 +9596,8 @@
 				(pins "1" "3" "2")
 			)
 		)
+		(solder_paste_margin 0)
+		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
@@ -15791,6 +15805,8 @@
 				(pins "3" "1" "5" "2" "4" "6")
 			)
 		)
+		(solder_paste_margin 0)
+		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
