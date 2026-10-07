@@ -63,6 +63,9 @@ Adopted from the other boards' lessons in the commons (gate R2):
 - **Shared tools:** freeroute.py, sync_pcb.py, check_rules.py and silk_check.py from the commons.
 - **X-ray:** offset back-to-back exposed pads so 2D X-ray can read them. Mirrored high-side/low-side FET pairs are weighed against this in R3.
 
+Owner decisions during the run (2026-10-07):
+- The +BATT bulk capacitance and hot-plug protection come from an external electrolytic capacitor on the battery leads. No on-board bulk capacitance is added. The per-leg 0805 ceramics stay as the HF bypass for each half-bridge.
+
 Not done without the maintainer:
 - replacing the microSD with flash;
 - swapping the SX1281 receiver for the LR1121 "mono" sheet;
