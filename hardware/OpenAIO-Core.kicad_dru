@@ -95,8 +95,9 @@
 (rule "NPCB core: copper to routed edge"
   (constraint edge_clearance (min 0.20mm)))
 
-# Reported under courtyards_overlap, which the project sets to "ignore" today;
-# raise that severity in the density pass to make this rule bite.
+# Reported under courtyards_overlap, a warning in the project file since R3-E.
+# Courtyards here are still the library's padded ones, so most hits are not
+# real; the real check is the fab-body gap (review lr_density.py).
 (rule "NPCB core: body to body (courtyard drawn on the body)"
   (constraint courtyard_clearance (min 0.20mm)))
 
@@ -106,3 +107,15 @@
   (layer outer)
   (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U9') && B.memberOfFootprint('U9')")
   (constraint clearance (min 0.076mm)))
+
+# Intended edge pads (R3-E). copper_edge_clearance is an error in the project
+# file; these rules exempt only pads that are meant to sit at or over the routed
+# edge. Each condition starts with A.Type == 'Pad': the board owns the Edge.Cuts
+# outline, so a footprint-only condition would also match the edge itself and
+# switch the check off for the whole board. Everything else keeps the 0.20 mm
+# rule above.
+
+(rule "Edge pads: J* wire pads (lib:small_pad)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('lib:small_pad')"))

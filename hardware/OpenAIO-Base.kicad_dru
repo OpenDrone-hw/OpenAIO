@@ -102,7 +102,34 @@
 (rule "NPCB base: copper to routed edge"
   (constraint edge_clearance (min 0.20mm)))
 
-# Reported under courtyards_overlap, which the project sets to "ignore" today;
-# raise that severity in the density pass to make this rule bite.
+# Reported under courtyards_overlap, a warning in the project file since R3-E.
+# Courtyards here are still the library's padded ones, so most hits are not
+# real; the real check is the fab-body gap (review lr_density.py).
 (rule "NPCB base: body to body (courtyard drawn on the body)"
   (constraint courtyard_clearance (min 0.20mm)))
+
+# Intended edge pads (R3-E). copper_edge_clearance is an error in the project
+# file; these rules exempt only pads that are meant to sit at or over the routed
+# edge. Each condition starts with A.Type == 'Pad': U24 owns the Edge.Cuts
+# outline, so a footprint-only condition would also match the edge itself and
+# switch the check off for the whole board. Everything else keeps the 0.20 mm
+# rule above.
+
+(rule "Edge pads: U24 battery and motor solder pads"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('U24') && (A.Pad_Number == '1' || A.Pad_Number == '2' || A.Pad_Number == '12' || A.Pad_Number == '13' || A.Pad_Number == '14' || A.Pad_Number == '15' || A.Pad_Number == '16' || A.Pad_Number == '17' || A.Pad_Number == '18' || A.Pad_Number == '19' || A.Pad_Number == '20' || A.Pad_Number == '21' || A.Pad_Number == '22' || A.Pad_Number == '23')"))
+
+(rule "Edge pads: USB1 shell tabs (pad 0)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('USB1') && A.Pad_Number == '0'"))
+
+(rule "Edge pads: J15-J33 wire pads (lib:small_pad)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('lib:small_pad')"))
+
+# Not exempt, left for the owner (R3-E): JP1.1 (U.FL centre pad, 0.37 mm past
+# the 0.20 line), FL1.2 (2.4 GHz filter GND pad, 0.19 mm), U12.7/.8 (SM06B
+# shell tabs, 0.69 mm). Each needs a part move.
