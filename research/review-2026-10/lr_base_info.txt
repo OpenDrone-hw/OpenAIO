@@ -1,0 +1,295 @@
+  stack F.SilkS Top Silk Screen 
+  stack F.Paste Top Solder Paste 
+  stack F.Mask Top Solder Mask 0.01
+  stack F.Cu copper 0.035
+  stack dielectric 1 prepreg 0.1
+  stack In1.Cu copper 0.035
+  stack dielectric 2 core 0.3
+  stack In2.Cu copper 0.035
+  stack dielectric 3 prepreg 0.1
+  stack In3.Cu copper 0.035
+  stack dielectric 4 core 0.3
+  stack In4.Cu copper 0.035
+  stack dielectric 5 prepreg 0.1
+  stack In5.Cu copper 0.035
+  stack dielectric 6 core 0.3
+  stack In6.Cu copper 0.035
+  stack dielectric 7 prepreg 0.1
+  stack B.Cu copper 0.035
+  stack B.Mask Bottom Solder Mask 0.01
+  stack B.Paste Bottom Solder Paste 
+  stack B.SilkS Bottom Silk Screen 
+footprints 254
+Counter({'B.Cu': 219, 'F.Cu': 35})
+AE2      2450AT18A100E          OpenRX-Shared:ANT-SMD_L3.2-W1.6                         B.Cu    81.75   76.30 crt=  8.80 pads=2
+C100     C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    87.72   55.20 crt=  6.66 pads=2
+C101     C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    87.72   51.95 crt=  6.66 pads=2
+C102     C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    60.73   58.60 crt=  6.66 pads=2
+C103     C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    60.75   60.38 crt=  6.66 pads=2
+C104     100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    64.75   52.75 crt=  0.98 pads=4
+C105     C                      Capacitor_SMD:C_1206_3216Metric                         F.Cu    83.88   50.61 crt= 10.58 pads=2
+C106     C                      Capacitor_SMD:C_1206_3216Metric                         F.Cu    78.88   50.62 crt= 10.58 pads=2
+C18      4.7uF 50v              Capacitor_SMD:C_0805_2012Metric                         B.Cu    65.45   60.92 crt=  6.66 pads=2
+C19      4.7uF 50v              Capacitor_SMD:C_0805_2012Metric                         B.Cu    67.25   51.65 crt=  6.66 pads=2
+C20      100n                   Capacitor_SMD:C_0201_0603Metric                         B.Cu    67.42   57.45 crt=  0.98 pads=4
+C21      100n                   Capacitor_SMD:C_0201_0603Metric                         B.Cu    67.42   56.70 crt=  0.98 pads=4
+C23      22uF                   Capacitor_SMD:C_0603_1608Metric                         B.Cu    67.70   59.45 crt=  4.32 pads=2
+C24      22uF                   Capacitor_SMD:C_0603_1608Metric                         B.Cu    64.75   54.73 crt=  4.32 pads=2
+C26      100n                   Capacitor_SMD:C_0201_0603Metric                         B.Cu    71.80   54.98 crt=  0.98 pads=4
+C28      22uF                   Capacitor_SMD:C_0402_1005Metric                         B.Cu    71.92   51.40 crt=  1.67 pads=2
+C36      100n                   Capacitor_SMD:C_0201_0603Metric                         B.Cu    66.47   62.70 crt=  0.98 pads=4
+C37      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    67.92   61.53 crt=  0.98 pads=4
+C38      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    69.70   61.53 crt=  0.98 pads=4
+C39      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    66.46   65.68 crt=  0.98 pads=4
+C40      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    65.37   67.37 crt=  1.67 pads=2
+C41      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    65.37   69.08 crt=  1.67 pads=2
+C42      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    65.37   70.78 crt=  1.67 pads=2
+C43      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    70.50   71.96 crt=  0.98 pads=4
+C44      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    73.69   61.53 crt=  0.98 pads=4
+C45      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    75.47   61.53 crt=  0.98 pads=4
+C46      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    77.17   67.58 crt=  0.98 pads=4
+C47      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    71.67   67.35 crt=  1.67 pads=2
+C48      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    71.67   69.07 crt=  1.67 pads=2
+C49      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    71.67   70.77 crt=  1.67 pads=2
+C50      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    75.85   71.76 crt=  0.98 pads=4
+C51      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    77.20   60.25 crt=  0.98 pads=4
+C52      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    75.42   60.25 crt=  0.98 pads=4
+C53      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    73.72   54.21 crt=  0.98 pads=4
+C54      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    79.23   54.48 crt=  1.67 pads=2
+C55      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    79.23   52.76 crt=  1.67 pads=2
+C56      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    79.23   51.06 crt=  1.67 pads=2
+C57      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    73.72   51.83 crt=  0.98 pads=4
+C58      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    83.47   60.26 crt=  0.98 pads=4
+C59      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    81.69   60.26 crt=  0.98 pads=4
+C60      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    84.41   56.13 crt=  0.98 pads=4
+C61      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    85.49   54.44 crt=  1.67 pads=2
+C62      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    85.49   52.72 crt=  1.67 pads=2
+C63      100nF                  Capacitor_SMD:C_0402_WIDE                               B.Cu    85.49   51.02 crt=  1.67 pads=2
+C64      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    80.43   49.86 crt=  0.98 pads=4
+C65      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    84.83   76.40 crt=  0.98 pads=4
+C66      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    77.02   76.50 crt=  0.98 pads=4
+C67      10nF                   Capacitor_SMD:C_0201_0603Metric                         B.Cu    90.69   71.80 crt=  0.98 pads=4
+C68      470nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    85.47   66.55 crt=  0.98 pads=4
+C69      1nF                    Capacitor_SMD:C_0201_0603Metric                         B.Cu    86.53   71.92 crt=  0.98 pads=4
+C70      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    88.40   65.15 crt=  0.98 pads=4
+C71      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    85.45   68.08 crt=  0.98 pads=4
+C72      15pF                   Capacitor_SMD:C_0201_0603Metric                         B.Cu    85.08   72.85 crt=  0.98 pads=4
+C73      10nF                   Capacitor_SMD:C_0201_0603Metric                         B.Cu    90.69   71.08 crt=  0.98 pads=4
+C74      15pF                   Capacitor_SMD:C_0201_0603Metric                         B.Cu    83.33   71.78 crt=  0.98 pads=4
+C75      10uF                   Capacitor_SMD:C_0402_1005Metric                         B.Cu    78.32   76.80 crt=  1.67 pads=2
+C76      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    78.62   76.10 crt=  0.98 pads=4
+C77      1uF                    Capacitor_SMD:C_0201_0603Metric                         B.Cu    78.62   74.92 crt=  0.98 pads=4
+C78      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    78.30   67.30 crt=  0.98 pads=4
+C79      100nF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    76.42   73.10 crt=  0.98 pads=4
+C80      10nF                   Capacitor_SMD:C_0201_0603Metric                         B.Cu    83.44   73.56 crt=  0.98 pads=4
+C81      1uF                    Capacitor_SMD:C_0201_0603Metric                         B.Cu    78.30   68.00 crt=  0.98 pads=4
+C82      10uF                   Capacitor_SMD:C_0402_1005Metric                         B.Cu    81.30   67.92 crt=  1.67 pads=2
+C83      1uF                    Capacitor_SMD:C_0201_0603Metric                         B.Cu    83.44   74.24 crt=  0.98 pads=4
+C84      1uF                    Capacitor_SMD:C_0201_0603Metric                         B.Cu    76.14   75.06 crt=  0.98 pads=4
+C85      1uF                    Capacitor_SMD:C_0201_0603Metric                         B.Cu    82.65   68.17 crt=  0.98 pads=4
+C86      1uF                    Capacitor_SMD:C_0201_0603Metric                         B.Cu    83.78   69.45 crt=  0.98 pads=4
+C87      1.2pF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    83.41   74.95 crt=  0.98 pads=4
+C88      10uF                   Capacitor_SMD:C_0402_1005Metric                         B.Cu    83.98   70.25 crt=  1.67 pads=2
+C89      1.2pF                  Capacitor_SMD:C_0201_0603Metric                         B.Cu    80.61   74.95 crt=  0.98 pads=4
+C90      C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    63.15   63.27 crt=  6.66 pads=2
+C91      C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    63.15   66.47 crt=  6.66 pads=2
+C92      C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    63.15   69.72 crt=  6.66 pads=2
+C93      C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    66.45   73.28 crt=  6.66 pads=2
+C94      C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    69.65   73.28 crt=  6.66 pads=2
+C95      C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    72.90   73.28 crt=  6.66 pads=2
+C96      C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    84.45   48.50 crt=  6.66 pads=2
+C97      C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    81.25   48.50 crt=  6.66 pads=2
+C98      C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    78.00   48.50 crt=  6.66 pads=2
+C99      C                      Capacitor_SMD:C_0805_2012Metric                         B.Cu    87.72   58.40 crt=  6.66 pads=2
+Card1    TF-021B-H265           lib:TF-SMD_TF-021B-H265                                 F.Cu    67.72   65.92 crt=  0.00 pads=8
+D2       DSK24                  lib:SOD-123_L2.8-W1.8-LS3.7-RD                          B.Cu    69.78   56.02 crt=  5.04 pads=2
+D3       DSK24                  lib:SOD-123_L2.8-W1.8-LS3.7-RD                          B.Cu    69.78   51.73 crt=  5.04 pads=2
+D4       LED_1_Green            LED_SMD:LED_0402_1005Metric                             B.Cu    66.67   50.00 crt=  1.75 pads=2
+D5       LED_1_Green            LED_SMD:LED_0402_1005Metric                             B.Cu    71.22   56.78 crt=  1.75 pads=2
+D6       LED_1_Green            LED_SMD:LED_0402_1005Metric                             B.Cu    73.46   50.25 crt=  1.75 pads=2
+D9       XL-1010RGBC-WS2812B    OpenRX-Shared:LED-SMD_4P-L1.0-W1.0-TL_XL-1010RGBC-WS2812B B.Cu    75.91   76.49 crt=  2.56 pads=4
+FL1      2450FM07D0034T         OpenRX-Shared:FILTER-SMD_4P-L1.0-W0.5-L                 B.Cu    91.44   69.24 crt=  0.50 pads=4
+J15      5V                     lib:small_pad                                           F.Cu    61.90   44.67 crt=  0.00 pads=1
+J16      5V                     lib:small_pad                                           F.Cu    59.07   74.40 crt=  0.00 pads=1
+J17      5V                     lib:small_pad                                           F.Cu    60.20   45.80 crt=  0.00 pads=1
+J18      5V                     lib:small_pad                                           F.Cu    60.20   76.10 crt=  0.00 pads=1
+J20      5V                     lib:small_pad                                           F.Cu    59.07   47.50 crt=  0.00 pads=1
+J21      5V                     lib:small_pad                                           F.Cu    61.90   77.23 crt=  0.00 pads=1
+J24      5V                     lib:small_pad                                           F.Cu    91.73   47.50 crt=  0.00 pads=1
+J25      5V                     lib:small_pad                                           F.Cu    88.90   77.13 crt=  0.00 pads=1
+J27      5V                     lib:small_pad                                           F.Cu    90.60   45.80 crt=  0.00 pads=1
+J28      5V                     lib:small_pad                                           F.Cu    90.60   76.00 crt=  0.00 pads=1
+J29      5V                     lib:small_pad                                           B.Cu    91.17   63.61 crt=  0.00 pads=1
+J31      5V                     lib:small_pad                                           F.Cu    88.90   44.67 crt=  0.00 pads=1
+J32      5V                     lib:small_pad                                           F.Cu    91.73   74.30 crt=  0.00 pads=1
+J33      5V                     lib:small_pad                                           B.Cu    91.17   61.61 crt=  0.00 pads=1
+J90      Core_LGA               lib:Core_LGA_land                                       F.Cu    80.25   61.65 crt=430.98 pads=34
+JP1      U.FL-R-SMT-1(80)       OpenDrone:RF-SMD_FRF05002-JSS103M                       F.Cu    90.78   69.28 crt=  0.00 pads=3
+L2       XRTC303020D4R7MBCA     lib:IND-SMD_L3.0-W3.0_AFE303020S                        F.Cu    66.67   57.65 crt=  0.00 pads=2
+L3       XRTC303020D4R7MBCA     lib:IND-SMD_L3.0-W3.0_AFE303020S                        F.Cu    66.67   54.12 crt=  0.00 pads=2
+L4       15uH                   Inductor_SMD:L_0805_2012Metric                          B.Cu    86.55   65.12 crt=  4.35 pads=2
+L5       24nH                   Inductor_SMD:L_0201_0603Metric                          B.Cu    83.68   72.85 crt=  0.98 pads=4
+L6       2.0nH                  Inductor_SMD:L_0201_0603Metric                          B.Cu    78.62   75.53 crt=  0.98 pads=4
+L7       2.5nH                  Inductor_SMD:L_0201_0603Metric                          B.Cu    82.00   74.95 crt=  0.98 pads=4
+OSC1     OW7EL89CENUNFAYLC-52M  OpenRX-Shared:OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z            B.Cu    85.20   74.61 crt=  6.72 pads=4
+Q10      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    65.98   76.13 crt=  0.00 pads=13
+Q11      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    69.48   74.25 crt=  0.00 pads=13
+Q12      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    69.52   76.15 crt=  0.00 pads=13
+Q13      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    73.05   74.23 crt=  0.00 pads=13
+Q14      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    73.10   76.17 crt=  0.00 pads=13
+Q15      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    84.92   47.49 crt=  0.00 pads=13
+Q16      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    84.92   45.66 crt=  0.00 pads=13
+Q17      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    81.39   47.49 crt=  0.00 pads=13
+Q18      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    81.38   45.63 crt=  0.00 pads=13
+Q19      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    77.83   47.51 crt=  0.00 pads=13
+Q20      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    77.67   45.60 crt=  0.00 pads=13
+Q21      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    88.67   58.53 crt=  0.00 pads=13
+Q22      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    90.58   58.55 crt=  0.00 pads=13
+Q23      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    88.67   55.01 crt=  0.00 pads=13
+Q24      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    90.59   55.01 crt=  0.00 pads=13
+Q25      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    88.66   51.44 crt=  0.00 pads=13
+Q26      DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    90.62   51.43 crt=  0.00 pads=13
+Q3       DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    62.17   63.22 crt=  0.00 pads=13
+Q4       DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    60.29   63.17 crt=  0.00 pads=13
+Q5       DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    62.17   66.75 crt=  0.00 pads=13
+Q6       DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    60.27   66.79 crt=  0.00 pads=13
+Q7       DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    62.19   70.32 crt=  0.00 pads=13
+Q8       DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        B.Cu    60.24   70.37 crt=  0.00 pads=13
+Q9       DOY180N03T             Package_SON:Diodes_PowerDI3333-8                        F.Cu    65.95   74.25 crt=  0.00 pads=13
+R100     15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    86.36   50.75 crt=  0.98 pads=4
+R101     15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    81.72   49.84 crt=  0.98 pads=4
+R102     10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    79.74   60.26 crt=  0.98 pads=4
+R103     1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    81.12   60.26 crt=  0.98 pads=4
+R104     10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    80.54   60.26 crt=  0.98 pads=4
+R105     10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    78.73   59.13 crt=  0.98 pads=4
+R106     1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    78.73   57.70 crt=  0.98 pads=4
+R107     10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    78.73   58.53 crt=  0.98 pads=4
+R108     10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    78.73   56.52 crt=  0.98 pads=4
+R109     1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    78.73   57.10 crt=  0.98 pads=4
+R110     10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    78.72   55.95 crt=  0.98 pads=4
+R111     10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    77.34   75.06 crt=  0.98 pads=4
+R112     10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    75.47   75.05 crt=  0.98 pads=4
+R113     10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    75.72   73.10 crt=  0.98 pads=4
+R114     10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    76.75   75.06 crt=  0.98 pads=4
+R17      100k                   Resistor_SMD:R_0201_0603Metric                          B.Cu    68.62   58.75 crt=  0.98 pads=4
+R18      6.49k                  Resistor_SMD:R_0201_0603Metric                          B.Cu    68.62   60.10 crt=  0.98 pads=4
+R19      100k                   Resistor_SMD:R_0201_0603Metric                          B.Cu    63.70   54.95 crt=  0.98 pads=4
+R20      13.7k                  Resistor_SMD:R_0201_0603Metric                          B.Cu    63.70   53.65 crt=  0.98 pads=4
+R21      7.5k                   Resistor_SMD:R_0201_0603Metric                          B.Cu    68.33   49.90 crt=  0.98 pads=4
+R22      2.4k                   Resistor_SMD:R_0201_0603Metric                          B.Cu    71.15   58.43 crt=  0.98 pads=4
+R24      510R                   Resistor_SMD:R_0201_0603Metric                          B.Cu    71.78   50.40 crt=  0.98 pads=4
+R3       5.1k                   Resistor_SMD:R_0201_0603Metric                          B.Cu    63.30   56.23 crt=  0.98 pads=4
+R34      10k                    Resistor_SMD:R_0201_0603Metric                          F.Cu    69.97   70.90 crt=  0.98 pads=4
+R35      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    64.53   67.75 crt=  0.98 pads=4
+R36      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    66.54   71.96 crt=  0.98 pads=4
+R37      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    68.55   61.53 crt=  0.98 pads=4
+R38      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    67.35   61.53 crt=  0.98 pads=4
+R39      220R                   Resistor_SMD:R_0201_0603Metric                          B.Cu    66.47   64.19 crt=  0.98 pads=4
+R4       5.1k                   Resistor_SMD:R_0201_0603Metric                          B.Cu    63.30   57.48 crt=  0.98 pads=4
+R40      10R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    69.12   61.53 crt=  0.98 pads=4
+R41      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    64.51   69.42 crt=  0.98 pads=4
+R42      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    67.84   71.96 crt=  0.98 pads=4
+R43      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    64.51   71.05 crt=  0.98 pads=4
+R44      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    69.14   71.96 crt=  0.98 pads=4
+R45      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    71.65   61.52 crt=  0.98 pads=4
+R46      1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    70.28   61.52 crt=  0.98 pads=4
+R47      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    70.85   61.52 crt=  0.98 pads=4
+R48      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    72.26   62.92 crt=  0.98 pads=4
+R49      1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    72.25   64.12 crt=  0.98 pads=4
+R50      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    72.26   63.52 crt=  0.98 pads=4
+R51      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    72.25   65.30 crt=  0.98 pads=4
+R52      1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    72.25   64.72 crt=  0.98 pads=4
+R53      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    72.25   65.88 crt=  0.98 pads=4
+R54      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    70.83   67.74 crt=  0.98 pads=4
+R55      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    72.88   71.99 crt=  0.98 pads=4
+R56      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    74.32   61.53 crt=  0.98 pads=4
+R57      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    73.12   61.53 crt=  0.98 pads=4
+R58      220R                   Resistor_SMD:R_0201_0603Metric                          B.Cu    72.40   61.52 crt=  0.98 pads=4
+R59      10R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    74.89   61.53 crt=  0.98 pads=4
+R60      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    70.80   69.41 crt=  0.98 pads=4
+R61      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    74.18   71.99 crt=  0.98 pads=4
+R62      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    70.80   70.83 crt=  0.98 pads=4
+R63      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    75.03   73.10 crt=  0.98 pads=4
+R64      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    77.42   61.53 crt=  0.98 pads=4
+R65      1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    76.05   61.53 crt=  0.98 pads=4
+R66      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    76.62   61.53 crt=  0.98 pads=4
+R67      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    78.33   62.90 crt=  0.98 pads=4
+R68      1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    78.32   64.10 crt=  0.98 pads=4
+R69      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    78.33   63.50 crt=  0.98 pads=4
+R70      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    78.32   65.28 crt=  0.98 pads=4
+R71      1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    78.32   64.70 crt=  0.98 pads=4
+R72      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    78.33   65.85 crt=  0.98 pads=4
+R73      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    80.07   54.05 crt=  0.98 pads=4
+R74      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    78.02   49.80 crt=  0.98 pads=4
+R75      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    76.58   60.25 crt=  0.98 pads=4
+R76      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    77.78   60.25 crt=  0.98 pads=4
+R77      220R                   Resistor_SMD:R_0201_0603Metric                          B.Cu    78.54   60.24 crt=  0.98 pads=4
+R78      10R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    76.00   60.25 crt=  0.98 pads=4
+R79      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    80.09   52.37 crt=  0.98 pads=4
+R80      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    76.72   49.80 crt=  0.98 pads=4
+R81      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    80.10   51.02 crt=  0.98 pads=4
+R82      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    75.42   49.80 crt=  0.98 pads=4
+R83      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    73.45   60.27 crt=  0.98 pads=4
+R84      1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    74.85   60.26 crt=  0.98 pads=4
+R85      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    74.28   60.26 crt=  0.98 pads=4
+R86      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    72.56   58.88 crt=  0.98 pads=4
+R87      1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    72.58   57.68 crt=  0.98 pads=4
+R88      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    72.56   58.28 crt=  0.98 pads=4
+R89      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    72.58   56.51 crt=  0.98 pads=4
+R90      1k                     Resistor_SMD:R_0201_0603Metric                          B.Cu    72.58   57.08 crt=  0.98 pads=4
+R91      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    72.57   55.93 crt=  0.98 pads=4
+R92      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    86.33   54.05 crt=  0.98 pads=4
+R93      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    84.33   49.84 crt=  0.98 pads=4
+R94      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    82.84   60.26 crt=  0.98 pads=4
+R95      10k                    Resistor_SMD:R_0201_0603Metric                          B.Cu    84.04   60.26 crt=  0.98 pads=4
+R96      220R                   Resistor_SMD:R_0201_0603Metric                          B.Cu    84.39   57.61 crt=  0.98 pads=4
+R97      10R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    82.27   60.26 crt=  0.98 pads=4
+R98      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    86.36   52.38 crt=  0.98 pads=4
+R99      15R                    Resistor_SMD:R_0201_0603Metric                          B.Cu    83.03   49.84 crt=  0.98 pads=4
+Rsense2  0.2mR                  Resistor_SMD:R_2512_6332Metric                          B.Cu    60.95   53.77 crt= 29.57 pads=2
+TP1      TestPoint              TestPoint:TestPoint_Pad_D1.0mm                          B.Cu    65.12   65.45 crt=  0.00 pads=1
+TP2      TestPoint              TestPoint:TestPoint_Pad_D1.0mm                          B.Cu    65.12   62.91 crt=  0.00 pads=1
+TP3      TestPoint              TestPoint:TestPoint_Pad_D1.0mm                          B.Cu    72.30   60.02 crt=  0.00 pads=1
+TP4      TestPoint              TestPoint:TestPoint_Pad_D1.0mm                          B.Cu    69.76   60.02 crt=  0.00 pads=1
+TP5      TestPoint              TestPoint:TestPoint_Pad_D1.0mm                          B.Cu    78.55   61.75 crt=  0.00 pads=1
+TP6      TestPoint              TestPoint:TestPoint_Pad_D1.0mm                          B.Cu    81.09   61.75 crt=  0.00 pads=1
+TP7      TestPoint              TestPoint:TestPoint_Pad_D1.0mm                          B.Cu    85.75   56.42 crt=  0.00 pads=1
+TP8      TestPoint              TestPoint:TestPoint_Pad_D1.0mm                          B.Cu    85.75   58.97 crt=  0.00 pads=1
+TP9      BOOT                   OpenRX-Shared:SolderPad_1.2x2.0mm                       B.Cu    79.70   67.70 crt=  6.05 pads=1
+U12      SM06B-SRSS-TB(LF)(SN)  lib:CONN-SMD_SM06B-SRSS-TB-LF-SN                        F.Cu    80.45   75.06 crt=  0.00 pads=8
+U13      AT32F421G8U7           4in1ESC:QFN-28_L4.0-W4.0-P0.40-TL-EP2.4                 B.Cu    69.12   64.54 crt=  0.00 pads=27
+U14      NSG2065Q               4in1ESC:QFN-24_L4.0-W4.0-P0.50-TL-EP2.8                 B.Cu    68.09   69.28 crt=  0.00 pads=24
+U15      AT32F421G8U7           4in1ESC:QFN-28_L4.0-W4.0-P0.40-TL-EP2.4                 B.Cu    75.42   64.53 crt=  0.00 pads=28
+U16      NSG2065Q               4in1ESC:QFN-24_L4.0-W4.0-P0.50-TL-EP2.8                 B.Cu    74.38   69.26 crt=  0.00 pads=23
+U17      AT32F421G8U7           4in1ESC:QFN-28_L4.0-W4.0-P0.40-TL-EP2.4                 B.Cu    75.48   57.26 crt=  0.00 pads=28
+U18      NSG2065Q               4in1ESC:QFN-24_L4.0-W4.0-P0.50-TL-EP2.8                 B.Cu    76.51   52.52 crt=  0.00 pads=25
+U19      AT32F421G8U7           4in1ESC:QFN-28_L4.0-W4.0-P0.40-TL-EP2.4                 B.Cu    81.74   57.26 crt=  0.00 pads=27
+U20      NSG2065Q               4in1ESC:QFN-24_L4.0-W4.0-P0.50-TL-EP2.8                 B.Cu    82.78   52.53 crt=  0.00 pads=24
+U21      SX1281IMLTRT           OpenRX-Shared:QFN-24_L4.0-W4.0-P0.50-TL-EP2.6           B.Cu    88.38   68.47 crt=  0.00 pads=25
+U22      ESP32-C3               Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm     B.Cu    79.85   71.62 crt= 38.44 pads=32
+U23      TLV75533PDQNR          OpenRX-Shared:X2SON-4_L1.0-W1.0-P0.65-TL-EP             B.Cu    83.72   68.30 crt=  2.08 pads=5
+U24      AIO_outline            OpenDrone:AIO_outline                                   F.Cu    75.37   60.91 crt=  0.00 pads=34
+U25      INA186A3IDCKR          4in1ESC:SOT-363_SC-70-6                                 B.Cu    64.27   51.11 crt=  8.96 pads=6
+U3       LMR51430YFDDCR         lib:SOT-23-6_L2.9-W1.6-P0.95-LS2.9-BL                   B.Cu    65.26   58.15 crt=  0.00 pads=6
+U4       LMR51430YFDDCR         lib:SOT-23-6_L2.9-W1.6-P0.95-LS2.9-BL                   B.Cu    67.15   54.35 crt=  0.00 pads=6
+U7       LP5912-3.3DRVR         Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm          B.Cu    72.05   53.26 crt=  6.65 pads=9
+USB1     TYPE-C 16P QTWT        lib:USB-TYPE-C-SMD_TYPE-C-16P-QTWT                      F.Cu    61.88   55.51 crt=  0.00 pads=16
+X2       CJ17-400001010B20      OpenRX-Shared:CRYSTAL-SMD_4P-L1.6-W1.2-BL               B.Cu    84.72   71.67 crt=  3.57 pads=4
+segments 1811 by layer {'B.Cu': (969, 430), 'In2.Cu': (393, 504), 'F.Cu': (201, 132), 'In5.Cu': (170, 186), 'In3.Cu': (67, 103), 'In4.Cu': (11, 10)}
+track widths [(0.1, 329), (0.16, 755), (0.2, 360), (0.22, 2), (0.25, 258), (0.3, 20), (0.4, 37), (0.5, 36), (0.8, 5), (1, 5), (1.2, 4)]
+vias 1333
+   ('through', 0.35, 0.2, ('F.Cu', 'B.Cu')) 1282
+   ('through', 0.5, 0.3, ('F.Cu', 'B.Cu')) 47
+   ('through', 0.45, 0.25, ('F.Cu', 'B.Cu')) 4
+zones
+   ('', ('F.Cu',)) 8
+   ('', ('F.Cu', 'B.Cu')) 12
+   ('', ('F.Cu', 'B.Cu', 'In1.Cu', 'In2.Cu', 'In3.Cu', 'In4.Cu')) 12
+   ('', ('F.Cu', 'B.Cu', 'In1.Cu', 'In2.Cu', 'In3.Cu', 'In4.Cu', 'In5.Cu', 'In6.Cu')) 1
+   ('', ('B.Cu',)) 6
+   ('', ('B.Cu', 'In1.Cu', 'In2.Cu', 'In3.Cu')) 1
+   ('', ('B.Cu', 'In1.Cu', 'In2.Cu', 'In6.Cu')) 1
+   ('', ('In2.Cu',)) 1
+   ('', ('In3.Cu',)) 4
+   ('', ('In4.Cu',)) 2
+   ('', ('In5.Cu',)) 2

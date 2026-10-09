@@ -1,0 +1,38 @@
+
+== core F: 64 parts; board 363 mm2, bodies 96 mm2 (26%), bodies+pads 193 mm2; free (0.1 mm halo, 0.3 mm edge) 107 mm2, of which in pieces >=0.5 mm wide 83 mm2
+   nearest-neighbour body gap median 0.325 mm; histogram {'0.20-0.30': 21, '0.30-0.50': 37, '0.50-1.00': 4, '<0.10': 2}
+   pairs closer than 0.2 mm body-to-body: 1: [('C34', 'U10', 0.0, 0.097)]
+   largest free regions (mm2, cx, cy): [(40.25, 111.72, 47.02), (19.26, 118.84, 55.72), (9.18, 123.03, 55.25), (3.2, 106.26, 52.41), (2.32, 114.34, 59.97), (2.28, 106.1, 62.57), (1.93, 103.86, 50.02), (1.01, 106.94, 59.17)]
+
+== base F: 21 parts; board 1127 mm2, bodies 313 mm2 (28%), bodies+pads 392 mm2; free (0.1 mm halo, 0.3 mm edge, minus Core footprint) 185 mm2, of which in pieces >=0.5 mm wide 150 mm2
+   nearest-neighbour body gap median 0.270 mm; histogram {'0.20-0.30': 12, '0.50-1.00': 4, '<0.10': 2, '>=1.00': 2}
+   pairs closer than 0.2 mm body-to-body: 1: [('R34', 'Card1', 0.0, 0.121)]
+   largest free regions (mm2, cx, cy): [(55.36, 69.62, 49.41), (25.9, 86.34, 73.46), (9.05, 75.74, 74.33), (6.13, 60.94, 49.49), (4.17, 61.55, 60.92), (4.15, 63.37, 76.05), (3.87, 60.25, 73.01), (3.64, 87.45, 45.77)]
+
+== base B: 208 parts; board 1127 mm2, bodies 428 mm2 (38%), bodies+pads 550 mm2; free (0.1 mm halo, 0.3 mm edge) 332 mm2, of which in pieces >=0.5 mm wide 237 mm2
+   nearest-neighbour body gap median 0.420 mm; histogram {'0.20-0.30': 67, '0.30-0.50': 82, '0.50-1.00': 59}
+   pairs closer than 0.2 mm body-to-body: 0: []
+   largest free regions (mm2, cx, cy): [(101.08, 85.45, 65.76), (38.29, 67.07, 47.84), (12.3, 61.33, 75.01), (12.03, 89.52, 46.82), (7.86, 63.03, 59.74), (6.19, 58.73, 55.35), (5.03, 70.67, 59.28), (3.84, 64.99, 64.13)]
+
+== flip candidates on the Base (envelope + 0.1 mm halo free on the other side at the same XY)
+   B -> F: 10 parts: [('R82', '15R'), ('C72', '15pF'), ('R100', '15R'), ('R112', '10k'), ('R24', '510R'), ('R113', '10k'), ('D4', 'LED_1_Green'), ('C67', '10nF'), ('R21', '7.5k'), ('D6', 'LED_1_Green')]
+   F -> B: 0 parts: []
+
+== unused pads (no net / unconnected-* / single-pad net with no tracks), per ref
+  core: 10 unused pads on 2 parts
+     U2      RP2354A             7  24:unconnected-(U2-SWCLK-Pad24), 25:SWDIO_25, 55:QSPI_SD3_55, 56:QSPI_SCLK_56, 57:QSPI_SD0_57, 58:QSPI_SD2_58, 59:QSPI_SD1_59
+     U8      BMI270              3  9:INT2_9, 10:OCS_Aux_10, 11:SDO_Aux_11
+  base: 60 unused pads on 13 parts
+     U17     AT32F421G8U7        9  3:PF1/OSC_OUT_3, 8:PA2_8, 9:PA3_9, 12:PA6_12, 23:PA15_23, 24:PB3_24, 26:PB5_26, 27:PB6_27, 28:PB7_28
+     U15     AT32F421G8U7        9  3:PF1/OSC_OUT_3, 8:PA2_8, 9:PA3_9, 12:PA6_12, 23:PA15_23, 24:PB3_24, 26:PB5_26, 27:PB6_27, 28:PB7_28
+     U19     AT32F421G8U7        8  3:PF1/OSC_OUT_3, 8:PA2_8, 9:PA3_9, 12:PA6_12, 24:PB3_24, 26:PB5_26, 27:PB6_27, 28:PB7_28
+     U13     AT32F421G8U7        8  3:PF1/OSC_OUT_3, 8:PA2_8, 9:PA3_9, 12:PA6_12, 24:PB3_24, 26:PB5_26, 27:PB6_27, 28:PB7_28
+     U22     ESP32-C3            7  19:SPIHD_19, 21:SPICS0_21, 22:SPICLK_22, 23:SPID_23, 24:SPIQ_24, 25:GPIO18_25, 26:GPIO19_26
+     U21     SX1281IMLTRT        4  5:GND_5, 6:XTB_6, 9:DIO2_9, 10:DIO3_10
+     U18     NSG2065Q            4  5:NC_5, 7:NC_7, 8:NC_8, 21:NC_21
+     U14     NSG2065Q            3  5:NC_5, 8:NC_8, 21:NC_21
+     U20     NSG2065Q            3  5:NC_5, 8:NC_8, 21:NC_21
+     U16     NSG2065Q            2  5:NC_5, 21:NC_21
+     AE2     2450AT18A100E       1  2:unconnected-(AE2-Pad2)
+     U7      LP5912-3.3DRVR      1  2:NC_2
+     D9      XL-1010RGBC-WS2812  1  1:DOUT_1

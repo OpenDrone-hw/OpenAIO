@@ -1,0 +1,7 @@
+core: outline area 363.4 mm2
+F.Cu    fill    148 mm2 ( 41%) | GND 148 | tracks 193 mm, 55 signal nets
+In1.Cu  fill    305 mm2 ( 84%) | GND 305 | tracks 0 mm, 0 signal nets
+In2.Cu  fill    225 mm2 ( 62%) | GND 225 | tracks 193 mm, 23 signal nets
+In3.Cu  fill    232 mm2 ( 64%) | +10V 99, GND 72, +3.3V 61 | tracks 100 mm, 0 signal nets
+In4.Cu  fill    305 mm2 ( 84%) | GND 305 | tracks 0 mm, 0 signal nets
+B.Cu    fill    241 mm2 ( 66%) | GND 236, +4v5 5 | tracks 111 mm, 19 signal nets

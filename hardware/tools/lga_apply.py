@@ -77,7 +77,9 @@ def do_base(paths):
         r = f.GetReference()
         m = re.fullmatch(r"TP(\d+)", r)
         real_tp = m and int(m.group(1)) < lga_gen.MARKER_MIN
-        is_marker = str(f.GetFPID().GetLibItemName()).startswith("TestPoint") and not real_tp
+        # a test point with its own value (the SWD pads TP31/TP32: SWDIO, SWCLK) is real, not a marker
+        is_marker = (str(f.GetFPID().GetLibItemName()).startswith("TestPoint") and not real_tp
+                     and f.GetValue() == "TestPoint")
         if is_marker or f.GetFPID().GetLibItemName() == "Core_LGA_land":
             if f.GetFPID().GetLibItemName() == "Core_LGA_land":
                 old_j90 = f.GetPosition()

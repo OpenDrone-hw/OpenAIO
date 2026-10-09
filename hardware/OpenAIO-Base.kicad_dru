@@ -26,19 +26,296 @@
 # Only what this board needs and the line does not. Name every rule so the next
 # person can tell a real constraint from a copied one.
 #
-# 2 oz outer copper, same as the ESC boards: four power stages on 25.5 mm.
-# Heavier copper etches with a wider taper, so the outer layers need 0.16 mm
-# where the line standard is 0.09 mm. Inner layers stay at 1 oz and keep the
-# standard. This is a rule and not a global minimum on purpose: raising the
-# board minimum would constrain the signal routing on the inner layers for no
-# reason. Anything narrower than 0.16 mm (USB pair, Analog, Default 0.09)
-# therefore routes on the inner layers or gets widened where it surfaces.
-# The Core (OpenAIO-Core.kicad_pcb) is 1 oz outer and has no such rule.
+# NextPCB extreme tier, OpenAIO Base: 8L 1.6 mm, 2 oz finished outer, 1 oz
+# inner, through vias with Non-Conductive Fill & Cap (IPC-4761 VII) where they
+# sit in pads. Through vias only (D8, owner rule): no microvia rule. Every
+# number and its source: research/review-2026-10/NEXTPCB.md sections 2.2 and
+# 3.3. These replace the earlier 0.16 mm "2 oz outer copper" pair. KiCad: the
+# LAST matching rule wins, per constraint; general rules first, specific last.
 
-(rule "2 oz outer copper, clearance"
-  (constraint clearance (min 0.16mm))
-  (layer outer))
+(rule "NPCB base: outer 2 oz track"
+  (layer outer)
+  (constraint track_width (min 0.14mm)))
 
-(rule "2 oz outer copper, track width"
-  (constraint track_width (min 0.16mm))
-  (layer outer))
+(rule "NPCB base: outer 2 oz clearance"
+  (layer outer)
+  (constraint clearance (min 0.14mm)))
+
+# TODO-R3: pours on the outer layers keep the 0.16 mm they were filled and
+# reviewed with. At 0.14 the highest-priority F.Cu +BATT pour (priority 32,
+# whole board) fits between the /1C motor pad and Q7's source pins and cuts the
+# phase-node pour (1 unconnected). R3 re-plans the power-stage pours and their
+# priorities (D3, D6); delete this rule there. Tracks and pads get 0.14.
+(rule "TODO-R3: outer pours keep 0.16 until the power-stage re-plan"
+  (layer outer)
+  (condition "A.Type == 'Zone' || B.Type == 'Zone'")
+  (constraint clearance (min 0.16mm)))
+
+(rule "NPCB base: inner 1 oz track"
+  (layer inner)
+  (constraint track_width (min 0.10mm)))
+
+(rule "NPCB base: inner 1 oz clearance"
+  (layer inner)
+  (constraint clearance (min 0.10mm)))
+
+# Netclasses (EMC E4, FB4). Classes USB, RF, CSA, PHASE and POWER are set in
+# the project file by pattern. A netclass clearance is overridden by any
+# custom clearance rule, and the generic NPCB clearance rules above match
+# every item, so each class clearance is restated here. These rules sit right
+# after the generic ones: the specific rules further down (LGA land, FET EP,
+# RF keep-back) still win where they match. Track widths are the class
+# defaults for the router; DRC floors per class follow these rules.
+(rule "RF: clearance, outer"
+  (layer outer)
+  (condition "A.NetClass == 'RF' || B.NetClass == 'RF'")
+  (constraint clearance (min 0.15mm)))
+(rule "RF: clearance, inner"
+  (layer inner)
+  (condition "A.NetClass == 'RF' || B.NetClass == 'RF'")
+  (constraint clearance (min 0.15mm)))
+(rule "CSA: clearance, outer"
+  (layer outer)
+  (condition "A.NetClass == 'CSA' || B.NetClass == 'CSA'")
+  (constraint clearance (min 0.16mm)))
+(rule "CSA: clearance, inner"
+  (layer inner)
+  (condition "A.NetClass == 'CSA' || B.NetClass == 'CSA'")
+  (constraint clearance (min 0.12mm)))
+(rule "PHASE: clearance, outer"
+  (layer outer)
+  (condition "A.NetClass == 'PHASE' || B.NetClass == 'PHASE'")
+  (constraint clearance (min 0.15mm)))
+(rule "RF: track width"
+  (condition "A.NetClass == 'RF'")
+  (constraint track_width (min 0.16mm) (opt 0.16mm)))
+(rule "CSA: track width"
+  (condition "A.NetClass == 'CSA'")
+  (constraint track_width (min 0.15mm) (opt 0.15mm)))
+(rule "POWER: +BATT, +5V, +4v5, ESC vdda track width"
+  (condition "A.NetName == '+BATT' || A.NetName == '+5V' || A.NetName == '+4v5' || A.NetName == '/ESC?/vdda'")
+  (constraint track_width (min 0.15mm) (opt 0.30mm)))
+(rule "POWER: +5V_USB track width"
+  (condition "A.NetName == '+5V_USB'")
+  (constraint track_width (min 0.20mm) (opt 0.30mm)))
+
+(rule "NPCB base: SMD pad to SMD pad"
+  (layer outer)
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD'")
+  (constraint clearance (min 0.15mm)))
+
+(rule "NPCB base: PTH pad to PTH pad"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'Through-hole' && B.Pad_Type == 'Through-hole'")
+  (constraint clearance (min 0.40mm)))
+
+(rule "NPCB base: through via, 1.6 mm board"
+  (condition "A.Type == 'Via' && A.Via_Type == 'Through'")
+  (constraint hole_size (min 0.20mm))
+  (constraint via_diameter (min 0.43mm))
+  (constraint annular_width (min 0.115mm))
+  (constraint hole_clearance (min 0.18mm)))
+
+# TODO-R3: every Base via is still a 0.075 mm ring (1280 x 0.35/0.20, 47 x
+# 0.50/0.30, 4 x 0.45/0.25); NextPCB 2 oz wants 0.43/0.20 (0.115 ring). The R3
+# re-route resizes them with the stack re-plan (D3). Until then this rule holds
+# DRC at today's via so ~1330 known items do not bury new findings. It only
+# relaxes via_diameter and annular_width; hole size and hole clearance above
+# still apply. Delete this rule in R3.
+(rule "TODO-R3: Base vias stay 0.35/0.20 until the R3 re-route"
+  (condition "A.Type == 'Via' && A.Via_Type == 'Through'")
+  (constraint via_diameter (min 0.35mm))
+  (constraint annular_width (min 0.075mm)))
+
+(rule "NPCB base: PTH hole to copper"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+  (constraint hole_clearance (min 0.23mm))
+  (constraint annular_width (min 0.115mm)))
+
+(rule "NPCB base: NPTH hole to copper"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical'")
+  (constraint hole_clearance (min 0.20mm)))
+
+(rule "NPCB base: hole to hole, different nets (CAF)"
+  (condition "A.Net != B.Net")
+  (constraint hole_to_hole (min 0.30mm)))
+
+(rule "NPCB base: copper to routed edge"
+  (constraint edge_clearance (min 0.20mm)))
+
+# Courtyards are drawn at max(body, land) + 0.10 mm (FB5). With clearance 0
+# they may touch but not overlap, so courtyards_overlap (a warning in the
+# project file since R3-E) means two parts closer than 0.20 mm body to body
+# or land to land: the owner's 0.2 mm density target (FB8). NextPCB places
+# 0201 at 0.20-0.25 mm and 0402 at 0.25-0.30 mm pad spacing; the pairs closer
+# by land only are listed for FB7 (scratchpad fb8, courtyards_*.txt).
+(rule "NPCB base: body to body 0.20 mm (courtyards may touch)"
+  (constraint courtyard_clearance (min 0mm)))
+
+# Intended edge pads (R3-E). copper_edge_clearance is an error in the project
+# file; these rules exempt only pads that are meant to sit at or over the routed
+# edge. Each condition starts with A.Type == 'Pad': U24 owns the Edge.Cuts
+# outline, so a footprint-only condition would also match the edge itself and
+# switch the check off for the whole board. Everything else keeps the 0.20 mm
+# rule above.
+
+(rule "Edge pads: U24 battery and motor solder pads"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('U24') && (A.Pad_Number == '1' || A.Pad_Number == '2' || A.Pad_Number == '12' || A.Pad_Number == '13' || A.Pad_Number == '14' || A.Pad_Number == '15' || A.Pad_Number == '16' || A.Pad_Number == '17' || A.Pad_Number == '18' || A.Pad_Number == '19' || A.Pad_Number == '20' || A.Pad_Number == '21' || A.Pad_Number == '22' || A.Pad_Number == '23')"))
+
+(rule "Edge pads: USB1 shell tabs (pad 0)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('USB1') && A.Pad_Number == '0'"))
+
+(rule "Edge pads: J15-J33 wire pads (lib:small_pad)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('lib:small_pad')"))
+
+# Owner original pads at the routed edge (FB7 step 3). Measured on the
+# refilled board against the Edge.Cuts polygon; each needs an owner placement
+# decision (FINISH_PASS "Base edge"), so each is exempt per pad, not per part.
+# No pad trim: each land is the datasheet land and a trim would cut the
+# contact or the solder fillet.
+#  JP1.1  FRF05002 (u.FL type) centre pin land 1.00 x 1.05 overhangs the
+#         edge by 0.165 mm (0.165 of 1.05 mm2 outside the board).
+#  FL1.2  2.4 GHz filter GND land 0.30 x 0.30 (B.Cu), 0.010 mm inside.
+#  U12.7/.8  SM06B-SRSS-TB shell tabs 1.20 x 1.80 overhang by 0.493 mm
+#         (0.55 of 2.08 mm2 outside; the connector mouth hangs over the edge).
+# Fab note for the order: NextPCB pulls copper back 0.20 mm from a routed
+# edge in CAM unless told otherwise; ask them to keep these four lands.
+(rule "Edge pads: JP1.1 u.FL centre pad (owner original, decision listed)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('JP1') && A.Pad_Number == '1'"))
+
+(rule "Edge pads: FL1.2 filter GND pad (owner original, decision listed)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('FL1') && A.Pad_Number == '2'"))
+
+(rule "Edge pads: U12.7/.8 SH-6 shell tabs (owner original, decision listed)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('U12') && (A.Pad_Number == '7' || A.Pad_Number == '8')"))
+
+# LGA J90 land (DFM-06, decision D2). Copper of another net next to a hidden
+# LGA joint cannot be inspected or reworked, and +BATT next to an FC signal is
+# the worst short on the board. Pours of every other net keep 0.30 mm from
+# every J90 pad, and +BATT keeps 0.30 mm with every item type (J90 carries no
+# +BATT pad). Measured on the refilled board, FB1: +BATT path resistance
+# unchanged within 0.005 mOhm (research/review-2026-10/lr_power.py method).
+(rule "LGA J90: other-net pours 0.30 from the land"
+  (layer "F.Cu")
+  (condition "A.memberOfFootprint('J90') && B.Type == 'Zone' && A.Net != B.Net")
+  (constraint clearance (min 0.30mm)))
+
+(rule "LGA J90: +BATT 0.30 from the land"
+  (layer "F.Cu")
+  (condition "A.memberOfFootprint('J90') && B.Net == '+BATT'")
+  (constraint clearance (min 0.30mm)))
+
+# Solder mask (DFM-12): expansion 0.04 mm and minimum web 0.09 mm (NextPCB
+# green) in board setup. A gang opening is allowed only inside a datasheet
+# land pattern whose pad gaps are below 0.17 mm (2 x 0.04 + 0.09); keep it only
+# after NextPCB accepts the gang (NEXTPCB.md 4.6, question 11). KiCad 10.0.6
+# evaluates bridged_mask on item A only (an A && B condition never matches),
+# so each rule names the footprint; FB1 checked that no bridge leaves it.
+(rule "Mask gang: U23 X2SON-4 land pattern"
+  (constraint bridged_mask)
+  (condition "A.memberOfFootprint('U23')")
+  (severity ignore))
+
+# U27 (TLV75533 +3V3_ESC LDO, FB6 item 2): datasheet land pattern, same as U23.
+# Like U23 (c4ef88c) its diamond EP land is 0.42 mm per instance (library
+# 0.48), so pad-to-EP is 0.164 mm and passes the 0.15 SMD rule; only the
+# ganged mask opening inside the land needs this exception.
+(rule "Mask gang: U27 X2SON-4 land pattern"
+  (constraint bridged_mask)
+  (condition "A.memberOfFootprint('U27')")
+  (severity ignore))
+
+# DOY180N03T exposed pad (DFM-03, FB2b). The package EP is 2.15 x 2.75 mm
+# (DOY180N03T.pdf p.6); footprint lib:DOY180N03T_TDFN3333-8 carries it as the
+# rule area DOY_EP on the pad layer. The drain land covers only 70 % of it:
+# the HS/LS via arrays of the stacked FET pairs sit inside the EP outline, so
+# the land cannot grow further until the owner decides the FET stack offset.
+# Until then: other-net pours keep 0.40 mm from the drain land (covers the
+# uncovered source-side strip, 0.385 mm, and the end bands, 0.19 mm), and no
+# track or via of any net other than the via-array nets (GND, gate, +BATT,
+# phase) may enter the EP outline. A plain keepout cannot do this: it is not
+# net-aware and cut the +BATT drain pour (+0.057 mOhm, FB2b).
+(rule "DOY180N03T EP: other-net pours 0.40 from the drain land"
+  (layer outer)
+  (condition "A.memberOfFootprint('lib:DOY180N03T_TDFN3333-8') && A.Pad_Number == '3' && B.Type == 'Zone' && A.Net != B.Net")
+  (constraint clearance (min 0.40mm)))
+
+(rule "DOY180N03T EP: no other tracks or vias under the exposed pad"
+  (layer outer)
+  (condition "A.intersectsArea('DOY_EP') && A.NetName != 'GND' && A.NetName != '+BATT' && A.NetName != 'Net-(Q*-G)' && A.NetName != '/??'")
+  (constraint disallow track via))
+
+# EMC E1 (FB4). The u.FL feed is a through via, JP1.1 (F) to FL1.3 (B),
+# Net-(FL1-OUT), and it crosses the In4/In5 +BATT planes. With the 0.10 mm
+# inner clearance the planes came to 0.105 mm of the barrel and the 2.4 GHz
+# link drove the In3-In4 and In5-In6 +BATT cavities. +BATT now keeps 0.80 mm
+# from the RF chain on every layer (only the via sits over +BATT copper). The
+# GND return vias cannot come closer than the existing ones at 0.70-0.76 mm:
+# JP1.1 and FL1.3 cover the via on three sides and the board edge is the
+# fourth, and JP1/FL1 stay where they are.
+(rule "RF: +BATT keeps 0.80 mm from the RF chain"
+  (condition "(A.NetName == 'Net-(FL1-OUT)' || A.NetName == 'Net-(FL1-IN)' || A.NetName == '/RX/WIFI' || A.NetName == 'Net-(U22-LNA_IN)') && B.NetName == '+BATT'")
+  (constraint clearance (min 0.80mm)))
+
+# EMC E2 (FB4). AE2 (Johanson 2450AT18A100, ESP32-C3 WiFi) needs a copper-free
+# area: the datasheet layout keeps ground 1.6 mm from the feed pad and nothing
+# between the antenna and the board end. The rule area 'AE2 antenna' covers
+# the antenna lands (79.665-83.825) with margin, from the matching network
+# row down to the routed edge, on all layers. It forbids pours itself; this
+# rule forbids tracks and vias of every net except the antenna's own feed
+# trace (a KiCad keepout is not net-aware, so it would flag the feed).
+# Not met, owner placement: the GND planes stop 0.15 mm from the long side of
+# the antenna (the datasheet asks 1.6 mm from the feed end), L6/C75/C76 sit
+# 0.5 mm from the feed pad, and U12 (SH-6) covers the area on F.Cu.
+(rule "AE2 antenna: no tracks or vias in the antenna area"
+  (condition "A.intersectsArea('AE2 antenna') && (A.Type == 'Via' || A.NetName != '/RX/WIFI')")
+  (constraint disallow track via))
+
+# FB6 item 0 (LGA overlap). The Core hat solders onto J90 with LGA joints of
+# only ~0.03-0.065 mm; silk ink (~0.010-0.025 mm) under the hat can hold it
+# off the land. The rule area 'Core footprint' is the Core outline in Base
+# coordinates (Core Edge.Cuts + (-34.232, +8.374) mm, on F.Silkscreen only,
+# no keepout flags: intersectsArea() only sees items on the area's layers).
+# The J90 pad mask openings + 0.20 mm are holes in the area (silk there is a
+# silk_over_copper error, and an area over them is itself flagged as silk).
+# No visible F.Silkscreen text and no F.Silkscreen graphic may touch it;
+# hidden reference fields are not printed and are allowed. Keep new silk
+# 0.3 mm outside the area (not enforced by this rule).
+(rule "LGA overlap: no F.Silkscreen under the Core"
+  (layer "F.Silkscreen")
+  (condition "A.intersectsArea('Core footprint') && (A.Visible || A.Type == 'Graphic')")
+  (constraint disallow text graphic))
+
+# USB D+/D- (FB8c): limits set to what the FB8b route (USB1 -> J90, accepted
+# compromise) achieves. Coupled run gap 0.141-0.298. Widths as routed: F 0.14
+# with 0.16-0.20 pad stubs, In2 0.12. The USB1 pad escape (F.Cu stubs joining
+# A6/B6 and A7/B7, gap 0.34) is its own group: KiCad groups pair items by the
+# matching rule, so the escape gets its own gap and uncoupled limits.
+(rule "USB: D+/D- diff pair gap and uncoupled length"
+  (condition "A.NetName == 'USB_D+' || A.NetName == 'USB_D-'")
+  (constraint diff_pair_gap (min 0.14mm) (opt 0.15mm) (max 0.30mm))
+  (constraint diff_pair_uncoupled (max 9.9mm)))
+(rule "USB: D+/D- USB1 pad escape"
+  (layer F.Cu)
+  (condition "(A.NetName == 'USB_D+' || A.NetName == 'USB_D-') && A.intersectsCourtyard('USB1')")
+  (constraint diff_pair_gap (min 0.14mm) (max 0.35mm))
+  (constraint diff_pair_uncoupled (max 1.2mm)))
+(rule "USB: D+/D- track width, outer"
+  (layer outer)
+  (condition "A.NetName == 'USB_D+' || A.NetName == 'USB_D-'")
+  (constraint track_width (min 0.14mm) (opt 0.14mm) (max 0.20mm)))
+(rule "USB: D+/D- track width, inner"
+  (layer inner)
+  (condition "A.NetName == 'USB_D+' || A.NetName == 'USB_D-'")
+  (constraint track_width (min 0.12mm) (opt 0.12mm) (max 0.12mm)))

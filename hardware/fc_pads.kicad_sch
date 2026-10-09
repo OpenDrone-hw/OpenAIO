@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "3d403696-5f3b-4c37-bc16-6d0091475f12")
 	(paper "A4")
+	(title_block
+		(title "Pads")
+		(date "2026-10")
+		(rev "r2")
+	)
 	(lib_symbols
 		(symbol "+5V_1"
 			(power global)
@@ -2215,16 +2220,6 @@
 		)
 		(uuid "f63fe00a-709e-41d7-900f-a94a69041520")
 	)
-	(label "PU0RX"
-		(at 167.64 146.05 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0697446f-23e0-4e2f-b34e-87303f2fea8b")
-	)
 	(label "I2C0.SDA"
 		(at 83.82 146.05 90)
 		(effects
@@ -2234,16 +2229,6 @@
 			(justify left bottom)
 		)
 		(uuid "a5f2967c-2293-4c44-a4fb-8156f7207be0")
-	)
-	(label "U1RX"
-		(at 172.72 44.45 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bfe12f78-3a93-4fc7-950a-e42d386c7cc7")
 	)
 	(label "I2C0.SCL"
 		(at 77.47 146.05 90)
@@ -2264,6 +2249,50 @@
 			(justify left bottom)
 		)
 		(uuid "fd50a6c7-f9d3-40cd-85f8-6201a3c53ef8")
+	)
+	(global_label "PU0RX"
+		(shape bidirectional)
+		(at 172.72 44.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "43fb7049-0eee-4802-b10b-ff69a1a7fe27")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 172.72 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "PU0RX"
+		(shape bidirectional)
+		(at 167.64 146.05 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a9ed494c-ca28-44dd-b041-386d94d82dc0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 167.64 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 	)
 	(hierarchical_label "LED_STRIP"
 		(shape input)
@@ -2452,7 +2481,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 50.546 53.848 90)
 			(hide yes)
 			(show_name no)
@@ -2531,7 +2560,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "RX1"
 			(at 54.356 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -2610,7 +2639,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "SCL"
 			(at 78.994 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -2924,7 +2953,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "TX0"
 			(at 189.484 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -3212,7 +3241,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 135.636 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -3529,7 +3558,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "VTX"
 			(at 132.334 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -3608,7 +3637,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "LED"
 			(at 56.896 53.848 90)
 			(hide yes)
 			(show_name no)
@@ -3688,7 +3717,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 199.644 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -3700,7 +3729,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "lib:small_pad"
+		(property "Footprint" "lib:SolderPad_1.2x1.2mm"
 			(at 198.12 22.86 0)
 			(hide yes)
 			(show_name no)
@@ -3846,7 +3875,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "10V"
 			(at 141.986 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -3858,7 +3887,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "lib:small_pad"
+		(property "Footprint" "lib:SolderPad_1.2x1.2mm"
 			(at 143.51 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -3926,7 +3955,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "CAM"
 			(at 125.984 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -4005,7 +4034,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 83.566 24.638 90)
 			(hide yes)
 			(show_name no)
@@ -4163,7 +4192,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 62.484 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -4322,7 +4351,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "NC"
 			(at 179.324 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -4480,7 +4509,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "LED"
 			(at 89.916 24.638 90)
 			(hide yes)
 			(show_name no)
@@ -4717,7 +4746,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 110.236 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -5425,7 +5454,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 98.044 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -5504,7 +5533,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 156.464 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -5583,7 +5612,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "BUZ+"
 			(at 93.726 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -5742,7 +5771,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "NC"
 			(at 174.244 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -5821,7 +5850,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "BUZ-"
 			(at 87.376 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -5900,7 +5929,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "LED"
 			(at 56.896 24.638 90)
 			(hide yes)
 			(show_name no)
@@ -5979,7 +6008,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "ADC2"
 			(at 54.864 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -6058,7 +6087,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 50.546 24.638 90)
 			(hide yes)
 			(show_name no)
@@ -6137,7 +6166,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "4V5"
 			(at 150.114 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -6217,7 +6246,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 194.564 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -6296,7 +6325,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 67.056 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -6531,7 +6560,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "4V5"
 			(at 73.406 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -6667,8 +6696,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+12V")
-		(at 191.77 31.75 180)
+		(lib_id "power:GND")
+		(at 191.77 31.75 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6678,7 +6707,7 @@
 		(dnp no)
 		(uuid "cd44ab60-1f9f-4041-a732-9380252ce748")
 		(property "Reference" "#PWR0130"
-			(at 191.77 27.94 0)
+			(at 191.77 38.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6688,8 +6717,8 @@
 				)
 			)
 		)
-		(property "Value" "+10V"
-			(at 191.77 37.846 90)
+		(property "Value" "GND"
+			(at 191.77 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6720,7 +6749,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 			(at 191.77 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -6765,7 +6794,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "TX1"
 			(at 60.706 99.568 90)
 			(hide yes)
 			(show_name no)
@@ -6844,7 +6873,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "GND"
 			(at 83.566 53.848 90)
 			(hide yes)
 			(show_name no)
@@ -7082,7 +7111,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "RX0"
 			(at 184.404 19.558 90)
 			(hide yes)
 			(show_name no)
@@ -7319,7 +7348,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "PIO_TX0"
 			(at 162.814 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -7475,7 +7504,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "SDA"
 			(at 85.344 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -7711,7 +7740,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "PIO_RX0"
 			(at 169.164 154.432 90)
 			(hide yes)
 			(show_name no)
@@ -7790,7 +7819,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "5V"
+		(property "Value" "LED"
 			(at 89.916 53.848 90)
 			(hide yes)
 			(show_name no)

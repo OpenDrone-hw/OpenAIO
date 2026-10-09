@@ -1,0 +1,2 @@
+U3 B VIN (64.31, 59.3) -> nearest input caps (pin-to-pad path mm, ref, value, side, loop mm2): [(3.27, 'C18', '4.7uF 50v', 'B', 3.09), (9.04, 'C90', 'C', 'B', 5.79), (9.2, 'C102', 'C', 'B', 0.33)]
+U4 B VIN (68.1, 53.2) -> nearest input caps (pin-to-pad path mm, ref, value, side, loop mm2): [(3.11, 'C19', '4.7uF 50v', 'B', 2.95), (16.25, 'C18', '4.7uF 50v', 'B', 3.67), (16.79, 'C102', 'C', 'B', 10.26)]

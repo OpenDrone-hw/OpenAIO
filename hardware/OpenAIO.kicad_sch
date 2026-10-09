@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "fb88b6f9-ee39-4640-a9d4-04a17ceeac64")
 	(paper "A4")
+	(title_block
+		(title "OpenAIO (Core + Base)")
+		(date "2026-10")
+		(rev "r2")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers
@@ -3823,12 +3828,6 @@
 		)
 	)
 	(junction
-		(at 68.58 61.595)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "181b582a-b991-42c7-bc2d-b1f410cae4c3")
-	)
-	(junction
 		(at 151.765 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4043,16 +4042,6 @@
 			(type default)
 		)
 		(uuid "2438ddfa-355e-40eb-a769-3e291da6ef07")
-	)
-	(wire
-		(pts
-			(xy 62.23 61.595) (xy 68.58 61.595)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2503ae5a-8929-4edf-a3bc-a25aabd3654c")
 	)
 	(wire
 		(pts
@@ -4436,16 +4425,6 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 61.595) (xy 78.74 61.595)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea1a2e09-f0cd-4e48-ab44-0dc3d0cae7a9")
-	)
-	(wire
-		(pts
 			(xy 64.77 56.515) (xy 78.74 56.515)
 		)
 		(stroke
@@ -4822,28 +4801,6 @@
 		(uuid "5acdec9c-8f29-433d-9e8f-6b950d3f528d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 67.945 110.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "10V_ENABLE"
-		(shape bidirectional)
-		(at 68.58 61.595 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7e053bf8-a55b-4bd8-a8aa-0cf3150f0c89")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 68.58 61.595 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5392,6 +5349,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.5882 105.9179 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5471,6 +5429,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.67 91.9479 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5797,6 +5756,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.035 22.0979 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5876,6 +5836,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 154.305 46.8629 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5955,6 +5916,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 74.295 108.4579 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6132,7 +6094,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Murata Electronics"
 			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
@@ -6205,6 +6167,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 72.39 102.1079 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6343,9 +6306,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8d4437a1-0938-4f9c-9171-98b1cc307271")
@@ -6481,6 +6444,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.67 133.8579 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6638,6 +6602,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 66.675 54.4829 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6771,85 +6736,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 68.58 61.595 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cc446076-22a2-45a0-aa7c-92e20524220b")
-		(property "Reference" "TP14"
-			(at 70.485 57.0229 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 70.485 59.5629 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 73.66 61.595 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 73.66 61.595 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 68.58 61.595 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ff579e24-7965-4ad2-a1f0-0d31bb0ebff8")
-		)
-		(instances
-			(project "OpenAIO-Base"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(reference "TP14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 236.22 94.615 0)
 		(unit 1)
@@ -6952,6 +6838,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 152.4 30.9879 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7031,6 +6918,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 154.305 44.3229 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7189,6 +7077,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.67 119.8879 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7279,16 +7168,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
-			)
-		)
-		(pin "10V_ENABLE" output
-			(at 78.74 61.595 180)
-			(uuid "0af19949-4364-4afc-bf89-32bd1e3e2455")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "BUZZER-" output
@@ -8255,16 +8134,6 @@
 				(justify left top)
 			)
 		)
-		(pin "10V_ENABLE" input
-			(at 62.23 61.595 0)
-			(uuid "42e863e6-8da5-457c-9078-c4db3d80d410")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "CURR" input
 			(at 62.23 56.515 0)
 			(uuid "11a6d4cf-d47a-4a5d-b6b3-7ab50e5f5766")
@@ -8460,5 +8329,4 @@
 			(page "1")
 		)
 	)
-	(embedded_fonts no)
 )

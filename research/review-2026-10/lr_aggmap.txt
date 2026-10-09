@@ -1,0 +1,4 @@
+phase nodes total track mm by layer: {'B.Cu': 19.3, 'In2.Cu': 170.5, 'In5.Cu': 58.2} | under the Core: {'B.Cu': 12.6, 'In2.Cu': 95.1, 'In5.Cu': 4.6}
+gate drive total track mm by layer: {'F.Cu': 7.6, 'B.Cu': 71.9, 'In5.Cu': 79.4, 'In2.Cu': 80.4} | under the Core: {'B.Cu': 27.6, 'In5.Cu': 6.3, 'In2.Cu': 4.6}
+buck SW total track mm by layer: {'B.Cu': 7.6} | under the Core: {'B.Cu': 1.4}
+BEMF/comparator total track mm by layer: {'B.Cu': 39.5, 'In2.Cu': 12.8} | under the Core: {'B.Cu': 37.7, 'In2.Cu': 12.8}

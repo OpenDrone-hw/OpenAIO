@@ -1,0 +1,376 @@
+# FB8 T0: courtyards_overlap with DRU courtyard_clearance 0 (courtyards = max(body, land) + 0.10 mm, so an overlap means
+# closer than 0.20 mm body to body or land to land). Counted with pcbnew courtyards + shapely (kicad-cli caps the list at 199).
+# Core 80 overlapping pairs + 3 touching = DRC 83 (was 132 at 0.20). Base 266 pairs (was >= 199 capped, FB5 ~498 measured).
+# Classes (body = fab outline, land = copper pads on the mounting side, lr_common.body_envelope):
+#  a: body >= 0.20, land < 0.20. Owner's dense placement; NextPCB places 0201 at 0.20-0.25 mm pad spacing. FB7: scoped exception.
+#  b: body < 0.20 (real). Fix when the parts move; else listed.
+#  c: body and land >= 0.20: the courtyard is drawn larger than max(body, land) + 0.10 (library courtyard, pin-1 marks). Not a
+#     placement problem; FB7 may redraw those courtyards.
+#  d: part vs J90 (its courtyard is the convex hull of the Core; the FETs sit in the Core outline notches). Only Card1 overlaps
+#     the real Core outline (0.18 mm2, owner's original).
+# Summary: Core F a 8, b 4, c 68. Base B a 59, b 6, c 178. Base F a 1, b 4, c 10, d 8.
+# side class refA refB courtyard_overlap_mm2 body_overlap_mm2 body_gap land_gap body_src
+Core F a C109 C108 0.0759 0.0 0.48 0.18 fab-poly/fab-poly 
+Core F a C109 R7 0.12 0.0 0.27 0.17 fab-poly/fab-hull 
+Core F a C16 C15 0.1991 0.0 0.3 0.18 fab-hull/fab-hull 
+Core F a C17 R10 0.138 0.0 0.3 0.19 fab-hull/fab-hull 
+Core F a C5 C9 0.1311 0.0 0.295 0.195 fab-hull/fab-hull 
+Core F a C8 C2 0.1297 0.0 0.295 0.195 fab-hull/fab-hull 
+Core F a R13 Q1 0.1461 0.0 0.22 0.125 fab-hull/name-LxW 
+Core F a R15 R10 0.0655 0.0 0.495 0.195 fab-hull/fab-hull 
+Core F b C34 U10 0.8038 0.097 0.0 0.45 fab-hull/name-LxW 
+Core F b J39 FID1 0.1072 0.0 0.155 0.704 pads-hull/fab-hull 
+Core F b J40 FID1 0.1077 0.0 0.155 0.704 pads-hull/fab-hull 
+Core F b U26 R115 0.0064 0.0 0.185 0.185 fab-poly/fab-poly 
+Core F c C1 C13 0.0328 0.0 0.542 0.242 fab-hull/fab-hull 
+Core F c C1 R23 0.0899 0.0 0.325 0.225 fab-hull/fab-hull 
+Core F c C108 R11 0.0333 0.0 0.358 0.258 fab-poly/fab-hull 
+Core F c C12 C13 0.1247 0.0 0.3 0.2 fab-hull/fab-hull 
+Core F c C12 R11 0.09 0.0 0.325 0.225 fab-hull/fab-hull 
+Core F c C14 R115 0.0243 0.0 0.557 0.24 fab-hull/fab-poly 
+Core F c C17 C15 0.0546 0.0 0.55 0.23 fab-hull/fab-hull 
+Core F c C17 C16 0.0546 0.0 0.55 0.23 fab-hull/fab-hull 
+Core F c C17 L1 0.0436 0.0 0.508 0.248 fab-hull/name-LxW 
+Core F c C26 R32 0.0213 0.0 0.712 0.253 fab-hull/fab-hull 
+Core F c C26 U10 0.0115 0.0 0.825 0.209 fab-hull/name-LxW 
+Core F c C27 C29 0.0685 0.0 0.35 0.24 fab-hull/fab-hull 
+Core F c C27 C30 0.0193 0.0 0.543 0.264 fab-hull/fab-hull 
+Core F c C28 X1 0.0436 0.0 1.289 0.223 fab-hull/fab-hull 
+Core F c C3 C6 0.0347 0.0 0.375 0.265 fab-hull/fab-hull 
+Core F c C3 X1 0.0129 0.0 3.598 0.235 fab-hull/fab-hull 
+Core F c C31 U9 0.9591 0.0 0.636 0.545 fab-hull/fab-hull 
+Core F c C32 R29 0.0476 0.0 0.52 0.22 fab-hull/fab-hull 
+Core F c C32 U9 0.9591 0.0 0.2 0.22 fab-hull/fab-hull 
+Core F c C33 U9 1.6471 0.0 0.34 0.32 fab-hull/fab-hull 
+Core F c C4 R6 0.0621 0.0 0.7 0.2 fab-hull/fab-hull 
+Core F c C4 X1 0.0209 0.0 2.259 0.225 fab-hull/fab-hull 
+Core F c C5 C11 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Core F c C7 C3 0.0683 0.0 0.525 0.215 fab-hull/fab-hull 
+Core F c C8 R10 0.0099 0.0 0.693 0.352 fab-hull/fab-hull 
+Core F c C9 R5 0.1177 0.0 0.305 0.205 fab-hull/fab-hull 
+Core F c D1 L1 0.0063 0.0 1.009 0.229 fab-hull/name-LxW 
+Core F c D8 U9 0.3336 0.0 1.516 1.607 name-LxW/fab-hull 
+Core F c FID2 C109 0.0075 0.0 0.411 0.532 fab-hull/fab-poly 
+Core F c FID3 U9 0.3648 0.0 1.245 1.585 fab-hull/fab-hull 
+Core F c J23 U7 0.0433 0.0 0.24 0.44 pads-hull/fab-hull 
+Core F c R10 R16 0.0621 0.0 0.5 0.2 fab-hull/fab-hull 
+Core F c R12 C12 0.0003 0.0 0.85 0.445 fab-hull/fab-hull 
+Core F c R12 R11 0.0069 0.0 0.78 0.28 fab-hull/fab-hull 
+Core F c R13 C11 0.0313 0.0 0.542 0.242 fab-hull/fab-hull 
+Core F c R15 C8 0.0554 0.0 0.35 0.25 fab-hull/fab-hull 
+Core F c R15 R16 0.1246 0.0 0.3 0.2 fab-hull/fab-hull 
+Core F c R2 C2 0.1181 0.0 0.305 0.205 fab-hull/fab-hull 
+Core F c R2 R1 0.1247 0.0 0.3 0.2 fab-hull/fab-hull 
+Core F c R23 C13 0.0379 0.0 0.535 0.235 fab-hull/fab-hull 
+Core F c R26 C31 0.0417 0.0 0.36 0.26 fab-hull/fab-hull 
+Core F c R26 U9 0.9591 0.0 0.55 0.37 fab-hull/fab-hull 
+Core F c R27 U9 0.9591 0.0 0.37 0.36 fab-hull/fab-hull 
+Core F c R28 C32 0.0483 0.0 0.52 0.22 fab-hull/fab-hull 
+Core F c R28 R29 0.0556 0.0 0.35 0.25 fab-hull/fab-hull 
+Core F c R28 U9 0.6661 0.0 1.02 0.84 fab-hull/fab-hull 
+Core F c R29 U9 0.6661 0.0 1.02 0.84 fab-hull/fab-hull 
+Core F c R30 U9 0.9591 0.0 0.56 0.38 fab-hull/fab-hull 
+Core F c R31 U7 0.0638 0.0 0.447 0.452 fab-hull/fab-hull 
+Core F c R33 U10 0.1859 0.0 0.766 0.316 fab-hull/name-LxW 
+Core F c R5 R1 0.1224 0.0 0.3 0.2 fab-hull/fab-hull 
+Core F c R6 C3 0.0285 0.0 0.759 0.249 fab-hull/fab-hull 
+Core F c R6 X1 0.0209 0.0 2.732 0.225 fab-hull/fab-hull 
+Core F c R9 C14 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Core F c R9 R8 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Core F c U11 U9 0.5651 0.0 0.855 0.771 fab-hull/fab-hull 
+Core F c U2 U9 0.4205 0.0 1.261 1.48 fab-hull/fab-hull 
+Core F c U6 C13 0.0454 0.0 0.448 0.422 fab-hull/fab-hull 
+Core F c U6 R23 0.2102 0.0 0.239 0.389 fab-hull/fab-hull 
+Core F c U7 C10 0.0638 0.0 0.498 0.498 fab-hull/fab-hull 
+Core F c U7 C26 0.345 0.0 0.285 0.2 fab-hull/fab-hull 
+Core F c U7 C28 0.345 0.0 0.285 0.2 fab-hull/fab-hull 
+Core F c U7 J40 0.0278 0.0 0.27 0.47 fab-hull/pads-hull 
+Core F c U7 R32 0.0207 0.0 0.489 0.508 fab-hull/fab-hull 
+Core F c U7 X1 0.0764 0.0 2.122 0.422 fab-hull/fab-hull 
+Core F c U8 R27 0.028 0.0 0.419 0.545 name-LxW/fab-hull 
+Core F c U8 U9 2.2098 0.0 0.845 0.956 name-LxW/fab-hull 
+Core F c X1 C10 0.0486 0.0 2.734 0.205 fab-hull/fab-hull 
+Base B a C107 U4 0.2743 0.0 0.45 0.0 fab-poly/name-LxW 
+Base B a C38 R46 0.1593 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a C41 C40 0.0865 0.0 0.715 0.195 fab-hull/fab-hull 
+Base B a C42 C41 0.1001 0.0 0.7 0.18 fab-hull/fab-hull 
+Base B a C45 R78 0.0478 0.0 0.683 0.188 fab-hull/fab-hull 
+Base B a C47 C48 0.0864 0.0 0.715 0.195 fab-hull/fab-hull 
+Base B a C49 C48 0.1001 0.0 0.7 0.18 fab-hull/fab-hull 
+Base B a C51 R64 0.0461 0.0 0.678 0.19 fab-hull/fab-hull 
+Base B a C51 R66 0.0444 0.0 0.678 0.193 fab-hull/fab-hull 
+Base B a C52 R78 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a C52 R84 0.1593 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a C54 C55 0.0864 0.0 0.715 0.195 fab-hull/fab-hull 
+Base B a C55 C56 0.1001 0.0 0.7 0.18 fab-hull/fab-hull 
+Base B a C58 R95 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a C59 R103 0.1593 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a C59 R97 0.1599 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a C62 C61 0.0864 0.0 0.715 0.195 fab-hull/fab-hull 
+Base B a C62 C63 0.1001 0.0 0.7 0.18 fab-hull/fab-hull 
+Base B a C76 C75 0.13 0.0 0.3 0.19 fab-hull/fab-hull 
+Base B a L6 C76 0.1599 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a OSC1 C80 0.0897 0.0 1.947 0.16 fab-hull/fab-hull 
+Base B a OSC1 C83 0.0897 0.0 1.327 0.173 fab-hull/fab-hull 
+Base B a R101 C64 0.064 0.0 0.695 0.195 fab-hull/fab-hull 
+Base B a R104 R103 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R108 R110 0.1593 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R109 R108 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R18 R17 0.132 0.0 0.39 0.09 fab-hull/fab-hull 
+Base B a R18 R3 0.0638 0.0 0.579 0.139 fab-hull/fab-hull 
+Base B a R18 U3 0.0355 0.0 0.738 0.117 fab-hull/name-LxW 
+Base B a R20 R19 0.0759 0.0 0.68 0.18 fab-hull/fab-hull 
+Base B a R38 C37 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R40 C38 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R40 R37 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R47 R46 0.1599 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R52 R51 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R53 R51 0.1593 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R57 C44 0.1599 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R57 R83 0.0617 0.0 0.68 0.18 fab-hull/fab-hull 
+Base B a R59 R56 0.1599 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R59 R84 0.0725 0.0 0.678 0.178 fab-hull/fab-hull 
+Base B a R63 C36 0.1225 0.0 0.295 0.195 fab-hull/fab-hull 
+Base B a R65 C45 0.1593 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R65 R66 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R65 R75 0.05 0.0 0.678 0.183 fab-hull/fab-hull 
+Base B a R66 R64 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R70 R71 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R70 R72 0.1593 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R75 R78 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R76 C51 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R76 R64 0.0444 0.0 0.678 0.193 fab-hull/fab-hull 
+Base B a R85 C44 0.0432 0.0 0.678 0.195 fab-hull/fab-hull 
+Base B a R85 R56 0.0415 0.0 0.678 0.198 fab-hull/fab-hull 
+Base B a R89 R90 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R91 R89 0.1593 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a R97 R94 0.1598 0.0 0.275 0.175 fab-hull/fab-hull 
+Base B a U22 C80 0.1045 0.0 0.794 0.193 fab-hull/fab-hull 
+Base B a U4 C21 0.5219 0.0 0.62 0.184 name-LxW/fab-hull 
+Base B a U4 R19 0.1249 0.0 0.522 0.055 name-LxW/fab-hull 
+Base B a U4 R20 0.2571 0.0 0.52 0.055 name-LxW/fab-hull 
+Base F a U25 C19 0.4977 0.0 1.22 0.17 fab-poly/fab-hull 
+Base B b C79 C36 0.2709 0.0 0.18 0.08 fab-hull/fab-hull 
+Base B b D2 R19 0.1182 0.0 0.055 0.701 fab-hull/fab-hull 
+Base B b FID3 Q8 0.9016 0.241 0.0 0.759 fab-hull/fab-poly 
+Base B b R20 D2 0.0795 0.0 0.055 0.38 fab-hull/fab-hull 
+Base B b TP5 TP32 0.8693 0.0 0.191 0.191 pads-hull/pads-hull 
+Base B b U18 TP31 0.5464 0.0 0.19 0.242 name-LxW/pads-hull 
+Base F b C104 U25 0.4726 0.0 0.15 0.35 fab-hull/fab-poly 
+Base F b J41 U12 0.7506 0.439 0.0 1.35 pads-hull/fab-hull 
+Base F b J51 U12 0.7506 0.439 0.0 0.654 pads-hull/fab-hull 
+Base F b L3 U25 0.9204 0.0 0.115 0.365 name-LxW/fab-poly 
+Base B c C100 Q24 0.1651 0.0 0.595 0.295 fab-hull/fab-poly 
+Base B c C101 C100 0.273 0.0 1.25 0.35 fab-hull/fab-hull 
+Base B c C101 Q24 0.0214 0.0 0.724 0.665 fab-hull/fab-poly 
+Base B c C101 Q26 0.0743 0.0 0.62 0.32 fab-hull/fab-poly 
+Base B c C103 C102 0.5889 0.0 0.525 0.325 fab-hull/fab-hull 
+Base B c C110 R21 0.0076 0.0 0.695 0.345 fab-poly/fab-hull 
+Base B c C18 C90 0.1168 0.0 0.994 0.424 fab-hull/fab-hull 
+Base B c C20 U3 0.09 0.0 1.065 0.4 fab-hull/name-LxW 
+Base B c C21 C24 0.2641 0.0 0.33 0.205 fab-hull/fab-hull 
+Base B c C23 C18 0.1658 0.0 0.851 0.325 fab-hull/fab-hull 
+Base B c C23 C37 0.0621 0.0 0.98 0.305 fab-hull/fab-hull 
+Base B c C23 R37 0.0198 0.0 1.025 0.483 fab-hull/fab-hull 
+Base B c C24 Rsense2 0.2367 0.0 0.586 1.645 fab-hull/fab-hull 
+Base B c C37 R37 0.0903 0.0 0.325 0.225 fab-hull/fab-hull 
+Base B c C38 TP4 0.1118 0.0 0.709 0.459 fab-hull/pads-hull 
+Base B c C39 TP1 0.0012 0.0 0.687 0.637 fab-hull/pads-hull 
+Base B c C42 U14 0.0198 0.0 0.442 0.231 fab-hull/name-LxW 
+Base B c C43 R44 0.0241 0.0 0.755 0.255 fab-hull/fab-hull 
+Base B c C44 R83 0.027 0.0 0.695 0.256 fab-hull/fab-hull 
+Base B c C46 U16 0.3045 0.0 0.658 0.392 fab-hull/name-LxW 
+Base B c C47 U13 0.0498 0.0 0.394 0.791 fab-hull/fab-hull 
+Base B c C47 U16 0.015 0.0 0.442 0.228 fab-hull/name-LxW 
+Base B c C49 U16 0.0198 0.0 0.442 0.231 fab-hull/name-LxW 
+Base B c C51 R75 0.0903 0.0 0.325 0.225 fab-hull/fab-hull 
+Base B c C52 C45 0.0387 0.0 0.683 0.205 fab-hull/fab-hull 
+Base B c C57 U18 0.3302 0.0 0.658 0.392 fab-hull/name-LxW 
+Base B c C58 R94 0.0903 0.0 0.325 0.225 fab-hull/fab-hull 
+Base B c C59 TP6 0.0316 0.0 0.776 0.559 fab-hull/pads-hull 
+Base B c C62 U20 0.0214 0.0 0.442 0.228 fab-hull/name-LxW 
+Base B c C66 D9 0.0382 0.0 0.439 0.267 fab-hull/fab-hull 
+Base B c C72 X2 0.0208 0.0 0.389 0.275 fab-hull/fab-hull 
+Base B c C81 TP9 0.2691 0.0 0.5 0.25 fab-hull/pads-hull 
+Base B c C83 C80 0.0209 0.0 0.375 0.275 fab-hull/fab-hull 
+Base B c C84 D9 0.0397 0.0 1.58 0.237 fab-hull/fab-hull 
+Base B c C87 OSC1 0.0655 0.0 0.804 0.215 fab-hull/fab-hull 
+Base B c C90 Q4 0.22 0.0 0.58 0.28 fab-hull/fab-poly 
+Base B c C91 C90 0.3705 0.0 1.2 0.3 fab-hull/fab-hull 
+Base B c C91 C92 0.273 0.0 1.25 0.35 fab-hull/fab-hull 
+Base B c C91 Q4 0.012 0.0 0.875 0.857 fab-hull/fab-poly 
+Base B c C91 Q6 0.1429 0.0 0.6 0.3 fab-hull/fab-poly 
+Base B c C92 Q6 0.025 0.0 0.664 0.571 fab-hull/fab-poly 
+Base B c C92 Q8 0.0569 0.0 0.625 0.325 fab-hull/fab-poly 
+Base B c C93 Q10 0.1963 0.0 0.58 0.28 fab-hull/fab-poly 
+Base B c C93 Q12 0.0189 0.0 1.305 0.674 fab-hull/fab-poly 
+Base B c C93 R42 0.0038 0.0 0.549 0.391 fab-hull/fab-hull 
+Base B c C94 C43 0.0052 0.0 0.541 0.391 fab-hull/fab-hull 
+Base B c C94 C93 0.3705 0.0 1.2 0.3 fab-hull/fab-hull 
+Base B c C94 C95 0.273 0.0 1.25 0.35 fab-hull/fab-hull 
+Base B c C94 Q12 0.1512 0.0 0.6 0.3 fab-hull/fab-poly 
+Base B c C94 Q14 0.0008 0.0 1.591 1.003 fab-hull/fab-poly 
+Base B c C94 R42 0.0022 0.0 0.744 0.415 fab-hull/fab-hull 
+Base B c C94 R44 0.0052 0.0 0.541 0.391 fab-hull/fab-hull 
+Base B c C95 Q12 0.005 0.0 0.945 0.93 fab-hull/fab-poly 
+Base B c C97 C96 0.3705 0.0 1.2 0.3 fab-hull/fab-hull 
+Base B c C97 C98 0.273 0.0 1.25 0.35 fab-hull/fab-hull 
+Base B c C97 Q18 0.1851 0.0 0.59 0.29 fab-hull/fab-poly 
+Base B c C98 Q20 0.0789 0.0 0.62 0.32 fab-hull/fab-poly 
+Base B c C99 C100 0.3705 0.0 1.2 0.3 fab-hull/fab-hull 
+Base B c C99 Q22 0.2336 0.0 0.575 0.275 fab-hull/fab-poly 
+Base B c C99 Q24 0.0051 0.0 1.525 0.934 fab-hull/fab-poly 
+Base B c L4 C68 0.0104 0.0 0.675 0.275 fab-hull/fab-hull 
+Base B c L6 C77 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c L7 U22 0.0715 0.0 0.72 0.282 fab-hull/fab-hull 
+Base B c Q12 Q10 0.1935 0.0 0.24 1.17 fab-poly/fab-poly 
+Base B c Q14 C95 0.0658 0.0 0.625 0.325 fab-poly/fab-hull 
+Base B c Q14 Q12 0.0386 0.0 0.28 1.21 fab-poly/fab-poly 
+Base B c Q16 C96 0.2269 0.0 0.57 0.27 fab-poly/fab-hull 
+Base B c Q16 Q18 0.1935 0.0 0.24 1.17 fab-poly/fab-poly 
+Base B c Q18 C96 0.0228 0.0 1.301 0.672 fab-poly/fab-hull 
+Base B c Q18 C98 0.0063 0.0 0.935 0.921 fab-poly/fab-hull 
+Base B c Q22 C100 0.0096 0.0 0.908 0.894 fab-poly/fab-hull 
+Base B c Q22 Q24 0.1935 0.0 0.24 1.17 fab-poly/fab-poly 
+Base B c Q26 Q24 0.0386 0.0 0.28 1.21 fab-poly/fab-poly 
+Base B c Q8 Q6 0.0386 0.0 0.28 1.21 fab-poly/fab-poly 
+Base B c R101 R99 0.0621 0.0 0.7 0.2 fab-hull/fab-hull 
+Base B c R102 TP32 0.2771 0.0 0.452 0.203 fab-hull/pads-hull 
+Base B c R104 TP32 0.0166 0.0 0.777 0.609 fab-hull/pads-hull 
+Base B c R104 TP6 0.042 0.0 0.756 0.532 fab-hull/pads-hull 
+Base B c R107 R105 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R109 R106 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R111 U22 0.0015 0.0 0.587 0.463 fab-hull/fab-hull 
+Base B c R112 C84 0.0208 0.0 0.375 0.275 fab-hull/fab-hull 
+Base B c R112 D9 0.0362 0.0 1.757 0.243 fab-hull/fab-hull 
+Base B c R113 C82 0.1042 0.0 0.325 0.215 fab-hull/fab-hull 
+Base B c R113 U22 0.6568 0.0 0.267 0.939 fab-hull/fab-hull 
+Base B c R114 C84 0.1246 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R114 D9 0.0189 0.0 1.581 0.246 fab-hull/fab-hull 
+Base B c R114 R111 0.1247 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R18 C24 0.117 0.0 0.411 0.275 fab-hull/fab-hull 
+Base B c R3 Rsense2 0.0319 0.0 0.555 1.31 fab-hull/fab-hull 
+Base B c R36 C93 0.0052 0.0 0.541 0.415 fab-hull/fab-hull 
+Base B c R36 R42 0.0621 0.0 0.7 0.2 fab-hull/fab-hull 
+Base B c R38 C18 0.1491 0.0 0.75 0.25 fab-hull/fab-hull 
+Base B c R38 C23 0.0621 0.0 0.98 0.305 fab-hull/fab-hull 
+Base B c R4 C102 0.0371 0.0 1.025 0.353 fab-hull/fab-hull 
+Base B c R4 C103 0.0266 0.0 1.031 0.447 fab-hull/fab-hull 
+Base B c R40 TP4 0.023 0.0 0.799 0.586 fab-hull/pads-hull 
+Base B c R44 R42 0.0621 0.0 0.7 0.2 fab-hull/fab-hull 
+Base B c R45 TP3 0.0223 0.0 0.8 0.589 fab-hull/pads-hull 
+Base B c R46 TP4 0.0437 0.0 0.758 0.529 fab-hull/pads-hull 
+Base B c R49 R50 0.1242 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R50 R48 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R52 R49 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R55 C95 0.0442 0.0 0.513 0.401 fab-hull/fab-hull 
+Base B c R56 C44 0.0904 0.0 0.325 0.225 fab-hull/fab-hull 
+Base B c R58 TP3 0.1128 0.0 0.704 0.454 fab-hull/pads-hull 
+Base B c R59 C52 0.0172 0.0 0.72 0.306 fab-hull/fab-hull 
+Base B c R60 U14 0.4299 0.0 0.587 0.32 fab-hull/name-LxW 
+Base B c R61 C95 0.0354 0.0 0.513 0.363 fab-hull/fab-hull 
+Base B c R61 R55 0.0621 0.0 0.7 0.2 fab-hull/fab-hull 
+Base B c R62 U14 0.4299 0.0 0.587 0.32 fab-hull/name-LxW 
+Base B c R64 TP5 0.2348 0.0 0.424 0.374 fab-hull/pads-hull 
+Base B c R65 R78 0.0405 0.0 0.678 0.2 fab-hull/fab-hull 
+Base B c R67 R69 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R67 U15 0.0171 0.0 0.565 0.986 fab-hull/fab-hull 
+Base B c R68 R69 0.1242 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R68 R71 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R68 U15 0.024 0.0 0.555 0.205 fab-hull/fab-hull 
+Base B c R69 U15 0.0171 0.0 0.565 0.451 fab-hull/fab-hull 
+Base B c R70 U15 0.024 0.0 0.555 0.205 fab-hull/fab-hull 
+Base B c R71 U15 0.024 0.0 0.555 0.207 fab-hull/fab-hull 
+Base B c R72 U15 0.0205 0.0 0.56 0.21 fab-hull/fab-hull 
+Base B c R73 U20 0.4369 0.0 0.582 0.315 fab-hull/name-LxW 
+Base B c R74 C98 0.0303 0.0 0.523 0.412 fab-hull/fab-hull 
+Base B c R75 R66 0.0405 0.0 0.678 0.2 fab-hull/fab-hull 
+Base B c R76 TP5 0.0077 0.0 0.855 0.651 fab-hull/pads-hull 
+Base B c R79 R81 0.0251 0.0 0.753 0.253 fab-hull/fab-hull 
+Base B c R79 U20 0.4716 0.0 0.557 0.29 fab-hull/name-LxW 
+Base B c R80 C98 0.0242 0.0 0.523 0.373 fab-hull/fab-hull 
+Base B c R80 R74 0.0621 0.0 0.7 0.2 fab-hull/fab-hull 
+Base B c R80 R82 0.0621 0.0 0.7 0.2 fab-hull/fab-hull 
+Base B c R84 R56 0.018 0.0 0.716 0.302 fab-hull/fab-hull 
+Base B c R86 R88 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R86 TP3 0.149 0.0 0.498 0.448 fab-hull/pads-hull 
+Base B c R87 R88 0.1242 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R87 R90 0.1251 0.0 0.3 0.2 fab-hull/fab-hull 
+Base B c R99 R93 0.0621 0.0 0.7 0.2 fab-hull/fab-hull 
+Base B c TP3 R57 0.0028 0.0 0.886 0.683 pads-hull/fab-hull 
+Base B c TP3 R83 0.3783 0.0 0.304 0.254 pads-hull/fab-hull 
+Base B c TP31 C54 0.3383 0.0 0.286 0.203 pads-hull/fab-hull 
+Base B c TP31 R110 0.3621 0.0 0.259 0.203 pads-hull/fab-hull 
+Base B c TP32 R77 0.0024 0.0 0.851 0.689 pads-hull/fab-hull 
+Base B c TP32 TP6 0.25 0.0 0.654 0.654 pads-hull/pads-hull 
+Base B c TP5 R67 0.1424 0.0 0.508 0.458 pads-hull/fab-hull 
+Base B c TP5 R77 0.1083 0.0 0.716 0.466 pads-hull/fab-hull 
+Base B c TP6 R103 0.1237 0.0 0.693 0.443 pads-hull/fab-hull 
+Base B c TP9 C78 0.2691 0.0 0.5 0.25 pads-hull/fab-hull 
+Base B c TP9 C82 0.364 0.0 0.5 0.24 pads-hull/fab-hull 
+Base B c TP9 R113 0.2001 0.0 0.731 0.531 pads-hull/fab-hull 
+Base B c TP9 U22 1.2538 0.0 0.767 0.751 pads-hull/fab-hull 
+Base B c U14 C40 0.015 0.0 0.442 0.228 name-LxW/fab-hull 
+Base B c U14 C41 0.0214 0.0 0.442 0.228 name-LxW/fab-hull 
+Base B c U14 R54 0.3952 0.0 0.612 0.345 name-LxW/fab-hull 
+Base B c U16 C48 0.0214 0.0 0.442 0.228 name-LxW/fab-hull 
+Base B c U16 C50 0.1764 0.0 0.389 0.578 name-LxW/fab-hull 
+Base B c U16 U22 0.6303 0.0 0.938 0.422 name-LxW/fab-hull 
+Base B c U17 R86 0.0171 0.0 0.565 0.986 fab-hull/fab-hull 
+Base B c U17 R87 0.024 0.0 0.555 0.205 fab-hull/fab-hull 
+Base B c U17 R88 0.0171 0.0 0.565 0.451 fab-hull/fab-hull 
+Base B c U17 R89 0.024 0.0 0.555 0.205 fab-hull/fab-hull 
+Base B c U17 R90 0.024 0.0 0.555 0.207 fab-hull/fab-hull 
+Base B c U17 R91 0.0205 0.0 0.56 0.21 fab-hull/fab-hull 
+Base B c U17 TP31 0.1782 0.0 0.398 0.683 fab-hull/pads-hull 
+Base B c U18 C53 0.3045 0.0 0.658 0.392 name-LxW/fab-hull 
+Base B c U18 C54 0.0083 0.0 0.447 0.233 name-LxW/fab-hull 
+Base B c U18 C55 0.0123 0.0 0.447 0.233 name-LxW/fab-hull 
+Base B c U18 C56 0.0117 0.0 0.447 0.233 name-LxW/fab-hull 
+Base B c U18 D6 0.2607 0.0 0.577 0.613 name-LxW/fab-hull 
+Base B c U19 C54 0.0663 0.0 0.351 0.757 fab-hull/fab-hull 
+Base B c U20 C61 0.015 0.0 0.442 0.228 name-LxW/fab-hull 
+Base B c U20 C63 0.0198 0.0 0.442 0.231 name-LxW/fab-hull 
+Base B c U20 R81 0.483 0.0 0.549 0.282 name-LxW/fab-hull 
+Base B c U21 C73 0.2058 0.0 0.476 0.427 name-LxW/fab-hull 
+Base B c U22 C77 0.1842 0.0 0.608 0.257 fab-hull/fab-hull 
+Base B c U22 C89 0.1494 0.0 0.632 0.282 fab-hull/fab-hull 
+Base B c U27 C111 0.0424 0.0 0.45 0.24 name-LxW/fab-poly 
+Base B c U4 Rsense2 0.1335 0.0 0.604 0.381 name-LxW/fab-hull 
+Base B c X2 L5 0.0104 0.0 1.543 0.275 fab-hull/fab-hull 
+Base F c C104 C19 0.0759 0.0 0.98 0.28 fab-hull/fab-hull 
+Base F c Q11 Q13 0.0774 0.0 0.27 1.2 fab-poly/fab-poly 
+Base F c Q11 Q9 0.2334 0.0 0.23 1.16 fab-poly/fab-poly 
+Base F c Q15 Q17 0.2334 0.0 0.23 1.16 fab-poly/fab-poly 
+Base F c Q19 Q17 0.0774 0.0 0.27 1.2 fab-poly/fab-poly 
+Base F c Q21 Q23 0.2334 0.0 0.23 1.16 fab-poly/fab-poly 
+Base F c Q23 Q25 0.0774 0.0 0.27 1.2 fab-poly/fab-poly 
+Base F c Q5 Q3 0.2334 0.0 0.23 1.16 fab-poly/fab-poly 
+Base F c Q7 Q5 0.0774 0.0 0.27 1.2 fab-poly/fab-poly 
+Base F c USB1 Card1 0.421 0.0 3.247 0.2 fab-hull/fab-hull 
+Base F d C106 J90 0.5279 0.0 0.225 2.879 fab-hull/fab-hull noncomp
+Base F d J90 C105 0.459 0.0 0.24 0.978 fab-hull/fab-hull noncomp
+Base F d J90 Card1 6.5253 10.818 0.0 1.793 fab-hull/fab-hull noncomp
+Base F d J90 JP1 10.1156 0.0 0.265 1.889 fab-hull/fab-hull noncomp
+Base F d J90 Q23 13.9651 10.55 0.0 2.0 fab-hull/fab-poly noncomp
+Base F d J90 Q25 6.1267 4.395 0.0 1.822 fab-hull/fab-poly noncomp
+Base F d J90 R34 0.9591 0.18 0.0 1.834 fab-hull/fab-hull noncomp
+Base F d Q21 J90 13.9651 10.55 0.0 2.109 fab-poly/fab-hull noncomp
+#
+# FB8e status of class b (re-measured on body = fab body, lr_common.body_envelope; target body gap >= 0.20):
+# FIXED (nudges, track ends dragged, DRC/unconnected/power unchanged):
+#   Base B C79-C36 0.18 -> 0.205 (C36 -0.018 x, C79 +0.007 x)
+#   Base B D2-R19, R20-D2 0.055 -> 0.205 (D2 +0.15 x; D5 +0.105/+0.07 keeps D2-D5 0.205)
+#   Base B FID3-Q8 overlap 0.24 -> gap 0.205 (FID3 -0.10/+0.46; J16.1 +5V via moved out of the clear zone)
+#   Base B TP5-TP32 0.191 -> 0.21 (TP32 +0.02 x); U18-TP31 0.19 -> 0.205 (TP31 +0.01/+0.015)
+#   Base F L3-U25 0.115 -> 0.215 (U25 -0.10 y); C104-U25 0.15 -> 0.21 (C104 -0.16 y)
+#   Core F U26-R115 0.185 -> 0.205 (R115 +0.02 y)
+# NOT A BODY OVERLAP:
+#   Core F C34-U10: U10 has no fab body, and the name-LxW fallback took the wrong orientation. The real SOT-23-5 body
+#     (2.9 x 1.6, long side along the pin pitch) clears C34, which sits in the empty pin-6 slot, by about 0.30-0.37 mm.
+# FOR FB7 (cascade):
+#   Base F J41/J51-U12 0.44 overlap: the 1.2 mm VTX +10V/GND wire pads sit under the U12 SH-6 body (U12 may not move).
+#     To the west is Q13 (+BATT drain vias at x 74.22-74.42 and its body). The Q13-U12 space is 1.36 mm; a 1.2 mm pad
+#     needs 1.6. Fix: 1.0 mm pads, relocate the pads, or accept them as an either/or with U12.
+#   Core F J39/J40-FID1 0.155: the fiducial 2 mm clear zone sits between the VTX/GND wire pads (2.4 mm apart). The pad
+#     copper is 0.2 mm outside the mask opening. No placed body is involved. Fix: smaller fiducial (0.75/1.5) or move it.

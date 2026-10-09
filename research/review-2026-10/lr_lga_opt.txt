@@ -1,0 +1,43 @@
+A0 current assignment: total geo length 374.8 mm (signals 285.5), penalty 88.8
+A1 optimised on current pads: total 296.9 mm (signals 224.8), penalty 5.2; saves 77.9 mm total, 60.7 mm signals
+  pad: current -> proposed
+    ('1', '10V_ENABLE', '+3.3V')
+    ('3', 'SPI0.MISO', '10V_ENABLE')
+    ('4', 'SPI0.SCK', 'GND')
+    ('5', 'SPI0.MOSI', 'GND')
+    ('6', 'FLASH_CS', '+4v5')
+    ('7', '+10V', 'MOTOR4')
+    ('8', '+3.3V', 'GND')
+    ('9', 'USB_D+', 'GND')
+    ('10', 'GND', 'SPI0.SCK')
+    ('11', 'GND', 'MOTOR3')
+    ('12', '+4v5', '+5V')
+    ('13', 'USB_D-', 'SPI0.MISO')
+    ('14', '+5V', '+10V')
+    ('18', 'MOTOR4', 'SPI0.MOSI')
+    ('20', 'GND', 'UART1_RX')
+    ('22', 'MOTOR1', 'GND')
+    ('23', 'MOTOR3', 'USB_D-')
+    ('24', 'GND', 'USB_D+')
+    ('25', 'GND', 'UART0_RX')
+    ('26', '+BATT', 'MOTOR1')
+    ('27', 'GND', 'FLASH_CS')
+    ('28', 'GND', '+BATT')
+    ('29', 'GND', 'UART1_TX')
+    ('30', 'UART0_TX', 'GND')
+    ('31', 'UART0_RX', 'LED_STRIP')
+    ('32', 'LED_STRIP', 'GND')
+    ('33', 'UART1_RX', 'GND')
+    ('34', 'UART1_TX', 'UART0_TX')
+B grid 2.0 mm (79 sites), 34 pads used=34, 11 GND: total 260.5 mm (signals 194.0), penalty 3.3; vs current saves 114.3 mm total, 91.6 mm signals
+B grid 2.0 mm (79 sites), 34 pads used=36, 13 GND: total 263.6 mm (signals 196.9), penalty 0.0; vs current saves 111.2 mm total, 88.6 mm signals
+B grid 2.0 mm (79 sites), 40 pads used=40, 17 GND: total 263.8 mm (signals 196.5), penalty 0.0; vs current saves 111.0 mm total, 89.0 mm signals
+B grid 2.0 mm (79 sites), 46 pads used=46, 23 GND: total 263.1 mm (signals 196.4), penalty 0.0; vs current saves 111.7 mm total, 89.1 mm signals
+B grid 1.6 mm (120 sites), 34 pads used=34, 11 GND: total 252.7 mm (signals 189.5), penalty 0.0; vs current saves 122.1 mm total, 96.0 mm signals
+B grid 1.6 mm (120 sites), 34 pads used=36, 13 GND: total 253.0 mm (signals 187.5), penalty 0.0; vs current saves 121.8 mm total, 98.0 mm signals
+B grid 1.6 mm (120 sites), 40 pads used=40, 17 GND: total 252.5 mm (signals 188.0), penalty 0.0; vs current saves 122.3 mm total, 97.5 mm signals
+B grid 1.6 mm (120 sites), 46 pads used=46, 23 GND: total 251.9 mm (signals 187.1), penalty 0.0; vs current saves 122.9 mm total, 98.4 mm signals
+B grid 1.5 mm (132 sites), 34 pads used=34, 11 GND: total 249.9 mm (signals 186.4), penalty 0.0; vs current saves 124.9 mm total, 99.1 mm signals
+B grid 1.5 mm (132 sites), 34 pads used=36, 13 GND: total 250.3 mm (signals 186.7), penalty 0.0; vs current saves 124.5 mm total, 98.8 mm signals
+B grid 1.5 mm (132 sites), 40 pads used=40, 17 GND: total 249.3 mm (signals 185.9), penalty 0.0; vs current saves 125.4 mm total, 99.6 mm signals
+B grid 1.5 mm (132 sites), 46 pads used=46, 23 GND: total 249.6 mm (signals 186.1), penalty 0.0; vs current saves 125.2 mm total, 99.4 mm signals

@@ -1,0 +1,2 @@
+core: 162 of 246 vias are in SMD pads: other (pads, conn, L, X) 90 (23 parts), LGA land 23 (1 parts), IC (QFN/LGA/SOT) 20 (6 parts), 0201 passive 16 (15 parts), 0402+ passive 8 (7 parts), MOSFET / small FET 5 (2 parts)
+base: 668 of 1333 vias are in SMD pads: IC (QFN/LGA/SOT) 223 (16 parts), MOSFET / small FET 181 (21 parts), 0402+ passive 128 (32 parts), other (pads, conn, L, X) 59 (23 parts), 0201 passive 56 (51 parts), LGA land 21 (1 parts)

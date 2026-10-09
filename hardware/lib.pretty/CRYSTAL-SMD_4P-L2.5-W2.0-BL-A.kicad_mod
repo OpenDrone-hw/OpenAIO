@@ -1,12 +1,12 @@
 (footprint "CRYSTAL-SMD_4P-L2.5-W2.0-BL-A"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
 		(at 0 -4.78 0)
 		(layer "F.SilkS")
-		(uuid "8157a220-d950-4314-ae5e-ed9d8b86ef31")
+		(uuid "6e973cd6-2626-45a9-9aae-ab21b72920e9")
 		(effects
 			(font
 				(size 1 1)
@@ -17,7 +17,7 @@
 	(property "Value" "CRYSTAL-SMD_4P-L2.5-W2.0-BL-A"
 		(at 0 4.78 0)
 		(layer "F.Fab")
-		(uuid "b7c5a230-bb8d-4de9-a1cb-c3f3a65af760")
+		(uuid "6023928f-ed57-408b-aac1-22d9118d12db")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +29,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "6bd4caee-339b-43ce-b5a8-65965341da0d")
+		(uuid "cc52901d-5d60-4bc5-921e-4f3ea4b854f7")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,7 +41,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "c421b075-2260-46d8-a413-b79138366e36")
+		(uuid "7bd05022-5927-4b6e-b338-d82da367bc94")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -50,6 +50,7 @@
 		)
 	)
 	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_rect
 		(start -1.25 -1)
 		(end 1.25 1)
@@ -59,7 +60,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "1086e481-30f7-4967-9530-152b69b1e51b")
+		(uuid "79cec918-eda5-4403-8b76-1b87413fea79")
 	)
 	(fp_circle
 		(center -0.98 0.73)
@@ -70,7 +71,19 @@
 		)
 		(fill no)
 		(layer "Cmts.User")
-		(uuid "f4ec83bb-e18d-43e3-979f-a693e2997835")
+		(uuid "ffcde941-b90e-4a75-8fea-94d84445498f")
+	)
+	(fp_poly
+		(pts
+			(xy -1.405433 -1.125) (xy 1.375 -1.125) (xy 1.375 1.155433) (xy -1.405433 1.155433)
+		)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "a4796944-7ea1-4897-83aa-9e4dfbd5340e")
 	)
 	(fp_circle
 		(center -1.25 1)
@@ -81,12 +94,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "4dcb24fe-ef76-41a2-bb4b-54b076ac9709")
+		(uuid "172c8e1b-953a-49f1-b2ea-e1ac08e881a6")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "6e7cfb4e-332b-47fc-916f-abfffce69e6c")
+		(uuid "dfcf4c40-1dd3-49e6-8bf3-e42bb14672ba")
 		(effects
 			(font
 				(size 1 1)
@@ -98,25 +111,25 @@
 		(at -0.825 0.625)
 		(size 0.9 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "64debaf0-777c-43c8-ad72-8577c3bd78c7")
+		(uuid "ba224eef-65a3-47da-ab92-82bdd0be4843")
 	)
 	(pad "2" smd rect
 		(at 0.825 0.625)
 		(size 0.9 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "01e529c5-a96e-49dc-ae20-006196f864fc")
+		(uuid "e0b078a3-8032-4046-969a-a242818e63e2")
 	)
 	(pad "3" smd rect
 		(at 0.825 -0.625)
 		(size 0.9 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "97a9e232-43ea-4ba0-9441-cc765fc90422")
+		(uuid "6790e91c-53ef-4727-ae5d-2dc8e6f67275")
 	)
 	(pad "4" smd rect
 		(at -0.825 -0.625)
 		(size 0.9 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "f87fcf91-1617-4ddf-a57c-7377d0a26818")
+		(uuid "faf6d044-921e-40dd-b2f2-4f57b891cb41")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/lib.3dshapes/CRYSTAL-SMD_4P-L2.5-W2.0-BL-A.wrl"

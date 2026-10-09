@@ -26,11 +26,145 @@
 # Only what this board needs and the line does not. Name every rule so the next
 # person can tell a real constraint from a copied one.
 #
-# The Core is 1 oz outer copper on JLCPCB's 0.8 mm 6-layer process and keeps
-# the line standard everywhere. Its bottom face is the LGA (J91) that solders
-# onto J90 of the Base; nothing else may sit on B.Cu.
+# The Core's bottom face is the LGA (J91) that solders onto J90 of the Base;
+# nothing else may sit on B.Cu.
 
 (rule "Core bottom is the LGA only"
   (constraint disallow footprint)
   (layer "B.Cu")
   (condition "A.Reference != 'J91'"))
+
+# NextPCB extreme tier, OpenAIO Core: 6L 0.8 mm, 1 oz finished outer, 0.5 oz
+# inner (NextPCB stack 6L-0.8mm-0.5oz-1080). Through vias only (D8, owner
+# rule): no microvia rule. Every number and its source: research/review-2026-10/
+# NEXTPCB.md section 2.1 and 3.2. KiCad: the LAST matching rule wins, per
+# constraint; general rules first, specific last.
+
+(rule "NPCB core: outer 1 oz track"
+  (layer outer)
+  (constraint track_width (min 0.076mm)))
+
+(rule "NPCB core: outer 1 oz clearance"
+  (layer outer)
+  (constraint clearance (min 0.076mm)))
+
+(rule "NPCB core: inner 0.5 oz track"
+  (layer inner)
+  (constraint track_width (min 0.064mm)))
+
+(rule "NPCB core: inner 0.5 oz clearance"
+  (layer inner)
+  (constraint clearance (min 0.076mm)))
+
+# Netclasses (EMC E4, FB4). Classes USB, RF, CSA, PHASE and POWER are set in
+# the project file by pattern. A netclass clearance is overridden by any
+# custom clearance rule, and the generic NPCB clearance rules above match
+# every item, so each class clearance is restated here. These rules sit right
+# after the generic ones: the specific rules further down (SMD pad, LGA
+# pads) still win where they match. Track widths are the class
+# defaults for the router; DRC floors per class follow these rules.
+(rule "POWER: +1.1V and +1.8V_GYRO track width"
+  (condition "A.NetName == '+1.1V' || A.NetName == '+1.8V_GYRO'")
+  (constraint track_width (min 0.17mm) (opt 0.20mm)))
+(rule "POWER: +4v5 track width"
+  (condition "A.NetName == '+4v5'")
+  (constraint track_width (min 0.12mm) (opt 0.20mm)))
+
+(rule "NPCB core: SMD pad to track or pour"
+  (layer outer)
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'SMD' && (B.Type == 'Track' || B.Type == 'Arc' || B.Type == 'Zone')")
+  (constraint clearance (min 0.10mm)))
+
+(rule "NPCB core: SMD pad to SMD pad"
+  (layer outer)
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD'")
+  (constraint clearance (min 0.15mm)))
+
+(rule "NPCB core: PTH pad to PTH pad"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'Through-hole' && B.Pad_Type == 'Through-hole'")
+  (constraint clearance (min 0.40mm)))
+
+# 0.15 mm drill is a Standard-order option for boards up to 1.2 mm (the Core is
+# 0.8 mm); 0.35 / 0.15 leaves the 0.10 mm ring NextPCB asks for.
+(rule "NPCB core: through via"
+  (condition "A.Type == 'Via' && A.Via_Type == 'Through'")
+  (constraint hole_size (min 0.15mm))
+  (constraint via_diameter (min 0.35mm))
+  (constraint annular_width (min 0.10mm))
+  (constraint hole_clearance (min 0.18mm)))
+
+(rule "NPCB core: PTH hole to copper"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
+  (constraint hole_clearance (min 0.23mm))
+  (constraint annular_width (min 0.09mm)))
+
+(rule "NPCB core: NPTH hole to copper"
+  (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical'")
+  (constraint hole_clearance (min 0.20mm)))
+
+(rule "NPCB core: hole to hole, different nets (CAF)"
+  (condition "A.Net != B.Net")
+  (constraint hole_to_hole (min 0.30mm)))
+
+(rule "NPCB core: copper to routed edge"
+  (constraint edge_clearance (min 0.20mm)))
+
+# Courtyards are drawn at max(body, land) + 0.10 mm (FB5). With clearance 0
+# they may touch but not overlap, so courtyards_overlap (a warning in the
+# project file since R3-E) means two parts closer than 0.20 mm body to body
+# or land to land: the owner's 0.2 mm density target (FB8). NextPCB places
+# 0201 at 0.20-0.25 mm and 0402 at 0.25-0.30 mm pad spacing; the pairs closer
+# by land only are listed for FB7 (scratchpad fb8, courtyards_*.txt).
+(rule "NPCB core: body to body 0.20 mm (courtyards may touch)"
+  (constraint courtyard_clearance (min 0mm)))
+
+# Datasheet land pattern below the 0.15 mm pad-to-pad floor. Keep only after
+# NextPCB accepts a ganged mask on it (NEXTPCB.md 4.6, question 11).
+(rule "NPCB core: U9 X2SON-6 land pattern below 0.15"
+  (layer outer)
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U9') && B.memberOfFootprint('U9')")
+  (constraint clearance (min 0.076mm)))
+
+# Intended edge pads (R3-E). copper_edge_clearance is an error in the project
+# file; these rules exempt only pads that are meant to sit at or over the routed
+# edge. Each condition starts with A.Type == 'Pad': the board owns the Edge.Cuts
+# outline, so a footprint-only condition would also match the edge itself and
+# switch the check off for the whole board. Everything else keeps the 0.20 mm
+# rule above.
+
+(rule "Edge pads: J* wire pads (lib:small_pad)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('lib:small_pad')"))
+
+# LGA J91 pads (DFM-06, same intent as the Base J90 rule): the B.Cu GND pour
+# keeps 0.30 mm from every J91 pad of another net, so a solder ball or mask
+# sliver under the hidden joint cannot short a signal to GND.
+(rule "LGA J91: other-net pours 0.30 from the pads"
+  (layer "B.Cu")
+  (condition "A.memberOfFootprint('J91') && B.Type == 'Zone' && A.Net != B.Net")
+  (constraint clearance (min 0.30mm)))
+
+# Solder mask (DFM-12): expansion 0.04 mm and minimum web 0.09 mm (NextPCB
+# green) in board setup. A gang opening is allowed only inside a datasheet
+# land pattern whose pad gaps are below 0.17 mm (2 x 0.04 + 0.09); keep it only
+# after NextPCB accepts the gang (NEXTPCB.md 4.6, question 11). KiCad 10.0.6
+# evaluates bridged_mask on item A only (an A && B condition never matches),
+# so each rule names the footprint; FB1 checked that no bridge leaves it.
+(rule "Mask gang: U9 X2SON-6 land pattern"
+  (constraint bridged_mask)
+  (condition "A.memberOfFootprint('U9')")
+  (severity ignore))
+
+(rule "Mask gang: U11 X2SON-4 land pattern"
+  (constraint bridged_mask)
+  (condition "A.memberOfFootprint('U11')")
+  (severity ignore))
+
+# FB6 item 0 (LGA overlap). The whole Core bottom faces the Base under the
+# LGA: no B.Silkscreen at all. Identity marks on the bottom are knockout
+# text / copper shapes on B.Cu (zero added height) or B.Fab.
+(rule "LGA overlap: no B.Silkscreen on the Core"
+  (layer "B.Silkscreen")
+  (condition "A.Visible || A.Type == 'Graphic'")
+  (constraint disallow text graphic))

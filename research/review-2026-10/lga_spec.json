@@ -1,0 +1,2312 @@
+{
+ "source": {
+  "baseline": "d81e559",
+  "core_board": "OpenAIO-Core.kicad_pcb",
+  "base_board": "OpenAIO-Base.kicad_pcb",
+  "offset_base_minus_core": [
+   -34.232,
+   8.374
+  ],
+  "core_origin_J91": [
+   114.481924,
+   53.275797
+  ],
+  "base_origin_J90": [
+   80.25,
+   61.65
+  ],
+  "note": "core_xy/base_xy are absolute board coordinates. j90_local = footprint-local for the Base land (F.Cu, rot 0). j91_lib_local = footprint-local as stored in the library for the Core pads footprint, which is placed on B.Cu at rot 180 (flip mirrors x): board position = J91 origin + (x, y) of j90_local."
+ },
+ "grid": {
+  "pitch": 2.0,
+  "pad_diameter": 1.0,
+  "edge_clearance_min": 0.35,
+  "offset_from_origin": [
+   0.25,
+   1.25
+  ],
+  "sites_inside": 79
+ },
+ "pads": [
+  {
+   "pad": "1",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    104.7319,
+    44.5258
+   ],
+   "base_xy": [
+    70.4999,
+    52.8998
+   ],
+   "j90_local": [
+    -9.75,
+    -8.75
+   ],
+   "j91_lib_local": [
+    9.75,
+    -8.75
+   ],
+   "row": 1,
+   "col": 1,
+   "anchor": [
+    "TL"
+   ],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [
+    "D3"
+   ],
+   "base_vias_to_clear": [
+    "+10V"
+   ],
+   "core_userpad_within_0.3mm": [
+    "J39"
+   ]
+  },
+  {
+   "pad": "2",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    118.7319,
+    44.5258
+   ],
+   "base_xy": [
+    84.4999,
+    52.8998
+   ],
+   "j90_local": [
+    4.25,
+    -8.75
+   ],
+   "j91_lib_local": [
+    -4.25,
+    -8.75
+   ],
+   "row": 1,
+   "col": 8,
+   "anchor": [
+    "TR"
+   ],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "BLOCKED: move B.Cu part",
+   "base_bcu_under": [
+    "U20"
+   ],
+   "base_via_blockers": [
+    "U20.15",
+    "U20.16",
+    "U20.17"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": [
+    "J54"
+   ]
+  },
+  {
+   "pad": "3",
+   "net": "+4v5",
+   "role": "PWR",
+   "core_xy": [
+    104.7319,
+    46.5258
+   ],
+   "base_xy": [
+    70.4999,
+    54.8998
+   ],
+   "j90_local": [
+    -9.75,
+    -6.75
+   ],
+   "j91_lib_local": [
+    9.75,
+    -6.75
+   ],
+   "row": 2,
+   "col": 1,
+   "core_end": "U7.6 (new LP5912-3.3 IN)",
+   "base_end": "D2.1/D3.1 (OR)",
+   "core_end_xy_core": [
+    107.862,
+    47.75
+   ],
+   "base_end_xy_base": [
+    69.775,
+    53.875
+   ],
+   "core_leg_mm": 3.36,
+   "base_leg_mm": 1.26,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "D2"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "4",
+   "net": "+4v5",
+   "role": "PWR",
+   "core_xy": [
+    106.7319,
+    46.5258
+   ],
+   "base_xy": [
+    72.4999,
+    54.8998
+   ],
+   "j90_local": [
+    -7.75,
+    -6.75
+   ],
+   "j91_lib_local": [
+    7.75,
+    -6.75
+   ],
+   "row": 2,
+   "col": 2,
+   "core_end": "U7.6 (new LP5912-3.3 IN)",
+   "base_end": "D2.1/D3.1 (OR)",
+   "core_end_xy_core": [
+    107.862,
+    47.75
+   ],
+   "base_end_xy_base": [
+    69.775,
+    53.875
+   ],
+   "core_leg_mm": 1.67,
+   "base_leg_mm": 2.91,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "C26"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "5",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    108.7319,
+    46.5258
+   ],
+   "base_xy": [
+    74.4999,
+    54.8998
+   ],
+   "j90_local": [
+    -5.75,
+    -6.75
+   ],
+   "j91_lib_local": [
+    5.75,
+    -6.75
+   ],
+   "row": 2,
+   "col": 3,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U17",
+    "U18"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "6",
+   "net": "+5V",
+   "role": "PWR",
+   "core_xy": [
+    114.7319,
+    46.5258
+   ],
+   "base_xy": [
+    80.4999,
+    54.8998
+   ],
+   "j90_local": [
+    0.25,
+    -6.75
+   ],
+   "j91_lib_local": [
+    -0.25,
+    -6.75
+   ],
+   "row": 2,
+   "col": 6,
+   "core_end": "J30 (5 V user pad)",
+   "base_end": "L3.2 (U4 out)",
+   "core_end_xy_core": [
+    116.0,
+    44.68
+   ],
+   "base_end_xy_base": [
+    65.725,
+    54.125
+   ],
+   "core_leg_mm": 2.24,
+   "base_leg_mm": 14.8,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U19",
+    "R73",
+    "U20"
+   ],
+   "base_vias_to_clear": [
+    "+10V"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "7",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    116.7319,
+    46.5258
+   ],
+   "base_xy": [
+    82.4999,
+    54.8998
+   ],
+   "j90_local": [
+    2.25,
+    -6.75
+   ],
+   "j91_lib_local": [
+    -2.25,
+    -6.75
+   ],
+   "row": 2,
+   "col": 7,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "BLOCKED: move B.Cu part",
+   "base_bcu_under": [
+    "U19",
+    "U20"
+   ],
+   "base_via_blockers": [
+    "U19.19",
+    "U19.20",
+    "U19.21",
+    "U20.21",
+    "U20.22",
+    "U20.23"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "8",
+   "net": "CURR",
+   "role": "SIG",
+   "core_xy": [
+    110.7319,
+    48.5258
+   ],
+   "base_xy": [
+    76.4999,
+    56.8998
+   ],
+   "j90_local": [
+    -3.75,
+    -4.75
+   ],
+   "j91_lib_local": [
+    3.75,
+    -4.75
+   ],
+   "row": 3,
+   "col": 4,
+   "core_end": "R5.1",
+   "base_end": "U25.6 (INA186 out)",
+   "core_end_xy_core": [
+    105.496,
+    56.943
+   ],
+   "base_end_xy_base": [
+    63.32,
+    50.46
+   ],
+   "core_leg_mm": 9.91,
+   "base_leg_mm": 14.67,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U17"
+   ],
+   "base_vias_to_clear": [
+    "GND",
+    "Net-(U17-PA13)"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "9",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    112.7319,
+    48.5258
+   ],
+   "base_xy": [
+    78.4999,
+    56.8998
+   ],
+   "j90_local": [
+    -1.75,
+    -4.75
+   ],
+   "j91_lib_local": [
+    1.75,
+    -4.75
+   ],
+   "row": 3,
+   "col": 5,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "on same-net B.Cu pad",
+   "base_bcu_under": [
+    "R109",
+    "R108"
+   ],
+   "base_vias_to_clear": [
+    "/ESC4/FBCOMMON"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "10",
+   "net": "SWDIO",
+   "role": "SIG",
+   "core_xy": [
+    114.7319,
+    48.5258
+   ],
+   "base_xy": [
+    80.4999,
+    56.8998
+   ],
+   "j90_local": [
+    0.25,
+    -4.75
+   ],
+   "j91_lib_local": [
+    -0.25,
+    -4.75
+   ],
+   "row": 3,
+   "col": 6,
+   "core_end": "U2.25",
+   "base_end": "test pad (new)",
+   "core_end_xy_core": [
+    109.911,
+    51.955
+   ],
+   "base_end_xy_base": null,
+   "core_leg_mm": 5.92,
+   "base_leg_mm": 0.0,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U19"
+   ],
+   "base_vias_to_clear": [
+    "/ESC4/CL",
+    "GND"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "11",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    104.7319,
+    50.5258
+   ],
+   "base_xy": [
+    70.4999,
+    58.8998
+   ],
+   "j90_local": [
+    -9.75,
+    -2.75
+   ],
+   "j91_lib_local": [
+    9.75,
+    -2.75
+   ],
+   "row": 4,
+   "col": 1,
+   "anchor": [
+    "L"
+   ],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [
+    "R22"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "12",
+   "net": "SPI0.SCK",
+   "role": "SIG",
+   "core_xy": [
+    106.7319,
+    50.5258
+   ],
+   "base_xy": [
+    72.4999,
+    58.8998
+   ],
+   "j90_local": [
+    -7.75,
+    -2.75
+   ],
+   "j91_lib_local": [
+    7.75,
+    -2.75
+   ],
+   "row": 4,
+   "col": 2,
+   "core_end": "U2.29 (GPIO18)",
+   "base_end": "Card1.5",
+   "core_end_xy_core": [
+    108.311,
+    51.955
+   ],
+   "base_end_xy_base": [
+    68.97,
+    65.29
+   ],
+   "core_leg_mm": 2.13,
+   "base_leg_mm": 7.3,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "BLOCKED: move B.Cu part",
+   "base_bcu_under": [
+    "R86",
+    "TP3",
+    "R88"
+   ],
+   "base_via_blockers": [
+    "R86.1",
+    "R86.2",
+    "R88.1",
+    "R88.2",
+    "TP3.1"
+   ],
+   "base_vias_to_clear": [
+    "/ESC3/FBCOMMON"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "13",
+   "net": "SPI0.MOSI",
+   "role": "SIG",
+   "core_xy": [
+    110.7319,
+    50.5258
+   ],
+   "base_xy": [
+    76.4999,
+    58.8998
+   ],
+   "j90_local": [
+    -3.75,
+    -2.75
+   ],
+   "j91_lib_local": [
+    3.75,
+    -2.75
+   ],
+   "row": 4,
+   "col": 4,
+   "core_end": "U2.31 (GPIO19)",
+   "base_end": "Card1.3",
+   "core_end_xy_core": [
+    107.131,
+    52.725
+   ],
+   "base_end_xy_base": [
+    68.97,
+    67.5
+   ],
+   "core_leg_mm": 4.22,
+   "base_leg_mm": 11.43,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U17"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "14",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    112.7319,
+    50.5258
+   ],
+   "base_xy": [
+    78.4999,
+    58.8998
+   ],
+   "j90_local": [
+    -1.75,
+    -2.75
+   ],
+   "j91_lib_local": [
+    1.75,
+    -2.75
+   ],
+   "row": 4,
+   "col": 5,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "BLOCKED: move B.Cu part",
+   "base_bcu_under": [
+    "R107",
+    "R105"
+   ],
+   "base_via_blockers": [
+    "R105.1",
+    "R105.2",
+    "R107.1",
+    "R107.2"
+   ],
+   "base_vias_to_clear": [
+    "/4B",
+    "/ESC4/FBCOMMON"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "15",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    114.7319,
+    50.5258
+   ],
+   "base_xy": [
+    80.4999,
+    58.8998
+   ],
+   "j90_local": [
+    0.25,
+    -2.75
+   ],
+   "j91_lib_local": [
+    -0.25,
+    -2.75
+   ],
+   "row": 4,
+   "col": 6,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "BLOCKED: move B.Cu part",
+   "base_bcu_under": [
+    "U19"
+   ],
+   "base_via_blockers": [
+    "U19.6",
+    "U19.7",
+    "U19.8"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "16",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    116.7319,
+    50.5258
+   ],
+   "base_xy": [
+    82.4999,
+    58.8998
+   ],
+   "j90_local": [
+    2.25,
+    -2.75
+   ],
+   "j91_lib_local": [
+    -2.25,
+    -2.75
+   ],
+   "row": 4,
+   "col": 7,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U19"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "17",
+   "net": "SPI0.MISO",
+   "role": "SIG",
+   "core_xy": [
+    106.7319,
+    52.5258
+   ],
+   "base_xy": [
+    72.4999,
+    60.8998
+   ],
+   "j90_local": [
+    -7.75,
+    -0.75
+   ],
+   "j91_lib_local": [
+    7.75,
+    -0.75
+   ],
+   "row": 5,
+   "col": 2,
+   "core_end": "U2.32 (GPIO20)",
+   "base_end": "Card1.7",
+   "core_end_xy_core": [
+    107.131,
+    53.125
+   ],
+   "base_end_xy_base": [
+    68.97,
+    63.1
+   ],
+   "core_leg_mm": 0.72,
+   "base_leg_mm": 4.16,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "R58",
+    "TP3",
+    "R57"
+   ],
+   "base_vias_to_clear": [
+    "MOTOR2",
+    "Net-(U15-PA13)"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "18",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    108.7319,
+    52.5258
+   ],
+   "base_xy": [
+    74.4999,
+    60.8998
+   ],
+   "j90_local": [
+    -5.75,
+    -0.75
+   ],
+   "j91_lib_local": [
+    5.75,
+    -0.75
+   ],
+   "row": 5,
+   "col": 3,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "BLOCKED: move B.Cu part",
+   "base_bcu_under": [
+    "R59",
+    "R85",
+    "R84",
+    "R56"
+   ],
+   "base_via_blockers": [
+    "R56.2",
+    "R59.2",
+    "R85.1"
+   ],
+   "base_vias_to_clear": [
+    "+3V3",
+    "/3A"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "19",
+   "net": "MOTOR3",
+   "role": "SIG",
+   "core_xy": [
+    112.7319,
+    52.5258
+   ],
+   "base_xy": [
+    78.4999,
+    60.8998
+   ],
+   "j90_local": [
+    -1.75,
+    -0.75
+   ],
+   "j91_lib_local": [
+    1.75,
+    -0.75
+   ],
+   "row": 5,
+   "col": 5,
+   "core_end": "U2.35 (GPIO23)",
+   "base_end": "R77.1",
+   "core_end_xy_core": [
+    107.131,
+    54.325
+   ],
+   "base_end_xy_base": [
+    78.537,
+    60.558
+   ],
+   "core_leg_mm": 5.88,
+   "base_leg_mm": 0.34,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "on same-net B.Cu pad",
+   "base_bcu_under": [
+    "TP5",
+    "R77"
+   ],
+   "base_vias_to_clear": [
+    "GND",
+    "Net-(U17-PA13)"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "20",
+   "net": "SWCLK",
+   "role": "SIG",
+   "core_xy": [
+    114.7319,
+    52.5258
+   ],
+   "base_xy": [
+    80.4999,
+    60.8998
+   ],
+   "j90_local": [
+    0.25,
+    -0.75
+   ],
+   "j91_lib_local": [
+    -0.25,
+    -0.75
+   ],
+   "row": 5,
+   "col": 6,
+   "core_end": "U2.24",
+   "base_end": "test pad (new)",
+   "core_end_xy_core": [
+    110.311,
+    51.955
+   ],
+   "base_end_xy_base": null,
+   "core_leg_mm": 4.46,
+   "base_leg_mm": 0.0,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "R104",
+    "TP6",
+    "R103"
+   ],
+   "base_vias_to_clear": [
+    "/4A",
+    "Net-(U17-PA14)"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "21",
+   "net": "MOTOR4",
+   "role": "SIG",
+   "core_xy": [
+    116.7319,
+    52.5258
+   ],
+   "base_xy": [
+    82.4999,
+    60.8998
+   ],
+   "j90_local": [
+    2.25,
+    -0.75
+   ],
+   "j91_lib_local": [
+    -2.25,
+    -0.75
+   ],
+   "row": 5,
+   "col": 7,
+   "core_end": "U2.34 (GPIO22)",
+   "base_end": "R96.1",
+   "core_end_xy_core": [
+    107.131,
+    53.925
+   ],
+   "base_end_xy_base": [
+    84.39,
+    57.931
+   ],
+   "core_leg_mm": 9.7,
+   "base_leg_mm": 3.52,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "R97",
+    "R94"
+   ],
+   "base_vias_to_clear": [
+    "+3V3"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "22",
+   "net": "+5V",
+   "role": "PWR",
+   "core_xy": [
+    118.7319,
+    52.5258
+   ],
+   "base_xy": [
+    84.4999,
+    60.8998
+   ],
+   "j90_local": [
+    4.25,
+    -0.75
+   ],
+   "j91_lib_local": [
+    -4.25,
+    -0.75
+   ],
+   "row": 5,
+   "col": 8,
+   "core_end": "J37 (5 V user pad)",
+   "base_end": "L3.2 (U4 out)",
+   "core_end_xy_core": [
+    124.99,
+    55.19
+   ],
+   "base_end_xy_base": [
+    65.725,
+    54.125
+   ],
+   "core_leg_mm": 6.8,
+   "base_leg_mm": 19.96,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "R95"
+   ],
+   "base_vias_to_clear": [
+    "GND"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "23",
+   "net": "MOTOR2",
+   "role": "SIG",
+   "core_xy": [
+    106.7319,
+    54.5258
+   ],
+   "base_xy": [
+    72.4999,
+    62.8998
+   ],
+   "j90_local": [
+    -7.75,
+    1.25
+   ],
+   "j91_lib_local": [
+    7.75,
+    1.25
+   ],
+   "row": 6,
+   "col": 2,
+   "core_end": "U2.36 (GPIO24)",
+   "base_end": "R58.1",
+   "core_end_xy_core": [
+    107.131,
+    54.725
+   ],
+   "base_end_xy_base": [
+    72.4,
+    61.205
+   ],
+   "core_leg_mm": 0.45,
+   "base_leg_mm": 1.7,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "on same-net pad",
+   "base_via": "BLOCKED: move B.Cu part",
+   "base_bcu_under": [
+    "R50",
+    "R48"
+   ],
+   "base_via_blockers": [
+    "R48.1",
+    "R48.2",
+    "R50.1",
+    "R50.2"
+   ],
+   "base_vias_to_clear": [
+    "/1B",
+    "/ESC1/FBCOMMON"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "24",
+   "net": "MOTOR1",
+   "role": "SIG",
+   "core_xy": [
+    108.7319,
+    54.5258
+   ],
+   "base_xy": [
+    74.4999,
+    62.8998
+   ],
+   "j90_local": [
+    -5.75,
+    1.25
+   ],
+   "j91_lib_local": [
+    5.75,
+    1.25
+   ],
+   "row": 6,
+   "col": 3,
+   "core_end": "U2.37 (GPIO25)",
+   "base_end": "R39.1",
+   "core_end_xy_core": [
+    107.131,
+    55.125
+   ],
+   "base_end_xy_base": [
+    66.475,
+    63.872
+   ],
+   "core_leg_mm": 1.71,
+   "base_leg_mm": 8.08,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U15"
+   ],
+   "base_vias_to_clear": [
+    "MOTOR2"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "25",
+   "net": "UART1_RX",
+   "role": "SIG",
+   "core_xy": [
+    114.7319,
+    54.5258
+   ],
+   "base_xy": [
+    80.4999,
+    62.8998
+   ],
+   "j90_local": [
+    0.25,
+    1.25
+   ],
+   "j91_lib_local": [
+    -0.25,
+    1.25
+   ],
+   "row": 6,
+   "col": 6,
+   "core_end": "U2.10 (GPIO7)",
+   "base_end": "U22.28",
+   "core_end_xy_core": [
+    114.291,
+    54.725
+   ],
+   "base_end_xy_base": [
+    82.3,
+    71.368
+   ],
+   "core_leg_mm": 0.48,
+   "base_leg_mm": 8.66,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [],
+   "base_vias_to_clear": [
+    "GND"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "26",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    118.7319,
+    54.5258
+   ],
+   "base_xy": [
+    84.4999,
+    62.8998
+   ],
+   "j90_local": [
+    4.25,
+    1.25
+   ],
+   "j91_lib_local": [
+    -4.25,
+    1.25
+   ],
+   "row": 6,
+   "col": 8,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "27",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    124.7319,
+    54.5258
+   ],
+   "base_xy": [
+    90.4999,
+    62.8998
+   ],
+   "j90_local": [
+    10.25,
+    1.25
+   ],
+   "j91_lib_local": [
+    -10.25,
+    1.25
+   ],
+   "row": 6,
+   "col": 10,
+   "anchor": [
+    "EAR_T"
+   ],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "BLOCKED: move B.Cu part",
+   "base_bcu_under": [
+    "J33",
+    "J29"
+   ],
+   "base_via_blockers": [
+    "J29.1",
+    "J33.1"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": [
+    "J37",
+    "J35"
+   ]
+  },
+  {
+   "pad": "28",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    106.7319,
+    56.5258
+   ],
+   "base_xy": [
+    72.4999,
+    64.8998
+   ],
+   "j90_local": [
+    -7.75,
+    3.25
+   ],
+   "j91_lib_local": [
+    7.75,
+    3.25
+   ],
+   "row": 7,
+   "col": 2,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "on same-net B.Cu pad",
+   "base_bcu_under": [
+    "R52",
+    "R51"
+   ],
+   "base_vias_to_clear": [
+    "/ESC1/FBCOMMON"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "29",
+   "net": "FLASH_CS",
+   "role": "SIG",
+   "core_xy": [
+    108.7319,
+    56.5258
+   ],
+   "base_xy": [
+    74.4999,
+    64.8998
+   ],
+   "j90_local": [
+    -5.75,
+    3.25
+   ],
+   "j91_lib_local": [
+    5.75,
+    3.25
+   ],
+   "row": 7,
+   "col": 3,
+   "core_end": "U2.33 (GPIO21)",
+   "base_end": "Card1.2",
+   "core_end_xy_core": [
+    107.131,
+    53.525
+   ],
+   "base_end_xy_base": [
+    68.97,
+    68.59
+   ],
+   "core_leg_mm": 3.4,
+   "base_leg_mm": 6.65,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U15"
+   ],
+   "base_vias_to_clear": [
+    "GND",
+    "MOTOR1",
+    "Net-(U15-PB4)"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "30",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    110.7319,
+    56.5258
+   ],
+   "base_xy": [
+    76.4999,
+    64.8998
+   ],
+   "j90_local": [
+    -3.75,
+    3.25
+   ],
+   "j91_lib_local": [
+    3.75,
+    3.25
+   ],
+   "row": 7,
+   "col": 4,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U15"
+   ],
+   "base_vias_to_clear": [
+    "MOTOR3"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "31",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    112.7319,
+    56.5258
+   ],
+   "base_xy": [
+    78.4999,
+    64.8998
+   ],
+   "j90_local": [
+    -1.75,
+    3.25
+   ],
+   "j91_lib_local": [
+    1.75,
+    3.25
+   ],
+   "row": 7,
+   "col": 5,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "on same-net B.Cu pad",
+   "base_bcu_under": [
+    "R70",
+    "R71"
+   ],
+   "base_vias_to_clear": [
+    "/2B",
+    "/ESC2/FBCOMMON"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "32",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    114.7319,
+    56.5258
+   ],
+   "base_xy": [
+    80.4999,
+    64.8998
+   ],
+   "j90_local": [
+    0.25,
+    3.25
+   ],
+   "j91_lib_local": [
+    -0.25,
+    3.25
+   ],
+   "row": 7,
+   "col": 6,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "33",
+   "net": "UART1_TX",
+   "role": "SIG",
+   "core_xy": [
+    116.7319,
+    56.5258
+   ],
+   "base_xy": [
+    82.4999,
+    64.8998
+   ],
+   "j90_local": [
+    2.25,
+    3.25
+   ],
+   "j91_lib_local": [
+    -2.25,
+    3.25
+   ],
+   "row": 7,
+   "col": 7,
+   "core_end": "U2.9 (GPIO6)",
+   "base_end": "U22.27",
+   "core_end_xy_core": [
+    114.291,
+    55.125
+   ],
+   "base_end_xy_base": [
+    82.3,
+    70.868
+   ],
+   "core_leg_mm": 2.81,
+   "base_leg_mm": 5.97,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "34",
+   "net": "BUZZER-",
+   "role": "SIG",
+   "core_xy": [
+    118.7319,
+    56.5258
+   ],
+   "base_xy": [
+    84.4999,
+    64.8998
+   ],
+   "j90_local": [
+    4.25,
+    3.25
+   ],
+   "j91_lib_local": [
+    -4.25,
+    3.25
+   ],
+   "row": 7,
+   "col": 8,
+   "core_end": "Q1.3 (drain)",
+   "base_end": "J29",
+   "core_end_xy_core": [
+    106.11,
+    54.51
+   ],
+   "base_end_xy_base": [
+    91.17,
+    63.61
+   ],
+   "core_leg_mm": 12.78,
+   "base_leg_mm": 6.79,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "35",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    124.7319,
+    56.5258
+   ],
+   "base_xy": [
+    90.4999,
+    64.8998
+   ],
+   "j90_local": [
+    10.25,
+    3.25
+   ],
+   "j91_lib_local": [
+    -10.25,
+    3.25
+   ],
+   "row": 7,
+   "col": 10,
+   "anchor": [
+    "EAR_B"
+   ],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [
+    "J29"
+   ],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": [
+    "J37",
+    "J38"
+   ]
+  },
+  {
+   "pad": "36",
+   "net": "+BATT",
+   "role": "PWR",
+   "core_xy": [
+    106.7319,
+    58.5258
+   ],
+   "base_xy": [
+    72.4999,
+    66.8998
+   ],
+   "j90_local": [
+    -7.75,
+    5.25
+   ],
+   "j91_lib_local": [
+    7.75,
+    5.25
+   ],
+   "row": 8,
+   "col": 2,
+   "core_end": "R1.2 (VBAT divider)",
+   "base_end": "In4/In5 +BATT plane",
+   "core_end_xy_core": [
+    105.466,
+    57.542
+   ],
+   "base_end_xy_base": null,
+   "core_leg_mm": 1.6,
+   "base_leg_mm": 0.0,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U16"
+   ],
+   "base_vias_to_clear": [
+    "/1C"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "37",
+   "net": "USB_D-",
+   "role": "SIG",
+   "core_xy": [
+    110.7319,
+    58.5258
+   ],
+   "base_xy": [
+    76.4999,
+    66.8998
+   ],
+   "j90_local": [
+    -3.75,
+    5.25
+   ],
+   "j91_lib_local": [
+    3.75,
+    5.25
+   ],
+   "row": 8,
+   "col": 4,
+   "core_end": "R8.1",
+   "base_end": "USB1.A7",
+   "core_end_xy_core": [
+    110.116,
+    60.682
+   ],
+   "base_end_xy_base": [
+    64.19,
+    55.76
+   ],
+   "core_leg_mm": 2.24,
+   "base_leg_mm": 16.6,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U16",
+    "U15"
+   ],
+   "base_vias_to_clear": [
+    "/ESC2/AL",
+    "/ESC2/BL",
+    "GND"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "38",
+   "net": "UART0_TX",
+   "role": "SIG",
+   "core_xy": [
+    112.7319,
+    58.5258
+   ],
+   "base_xy": [
+    78.4999,
+    66.8998
+   ],
+   "j90_local": [
+    -1.75,
+    5.25
+   ],
+   "j91_lib_local": [
+    1.75,
+    5.25
+   ],
+   "row": 8,
+   "col": 5,
+   "core_end": "U2.2 (GPIO0)",
+   "base_end": "U12.3",
+   "core_end_xy_core": [
+    114.291,
+    57.925
+   ],
+   "base_end_xy_base": [
+    79.95,
+    73.123
+   ],
+   "core_leg_mm": 1.67,
+   "base_leg_mm": 6.39,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "C78"
+   ],
+   "base_vias_to_clear": [
+    "/2C",
+    "GND"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "39",
+   "net": "UART0_RX",
+   "role": "SIG",
+   "core_xy": [
+    114.7319,
+    58.5258
+   ],
+   "base_xy": [
+    80.4999,
+    66.8998
+   ],
+   "j90_local": [
+    0.25,
+    5.25
+   ],
+   "j91_lib_local": [
+    -0.25,
+    5.25
+   ],
+   "row": 8,
+   "col": 6,
+   "core_end": "U2.3 (GPIO1)",
+   "base_end": "U12.4",
+   "core_end_xy_core": [
+    114.291,
+    57.525
+   ],
+   "base_end_xy_base": [
+    80.95,
+    73.123
+   ],
+   "core_leg_mm": 1.09,
+   "base_leg_mm": 6.24,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "TP9"
+   ],
+   "base_vias_to_clear": [
+    "GND"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "40",
+   "net": "PU0RX",
+   "role": "SIG",
+   "core_xy": [
+    116.7319,
+    58.5258
+   ],
+   "base_xy": [
+    82.4999,
+    66.8998
+   ],
+   "j90_local": [
+    2.25,
+    5.25
+   ],
+   "j91_lib_local": [
+    -2.25,
+    5.25
+   ],
+   "row": 8,
+   "col": 7,
+   "core_end": "U2.5 (GPIO3)",
+   "base_end": "U12.6",
+   "core_end_xy_core": [
+    114.291,
+    56.725
+   ],
+   "base_end_xy_base": [
+    82.95,
+    73.123
+   ],
+   "core_leg_mm": 3.03,
+   "base_leg_mm": 6.24,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [],
+   "base_vias_to_clear": [
+    "GND"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "41",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    118.7319,
+    58.5258
+   ],
+   "base_xy": [
+    84.4999,
+    66.8998
+   ],
+   "j90_local": [
+    4.25,
+    5.25
+   ],
+   "j91_lib_local": [
+    -4.25,
+    5.25
+   ],
+   "row": 8,
+   "col": 8,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [],
+   "base_vias_to_clear": [],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "42",
+   "net": "USB_D+",
+   "role": "SIG",
+   "core_xy": [
+    110.7319,
+    60.5258
+   ],
+   "base_xy": [
+    76.4999,
+    68.8998
+   ],
+   "j90_local": [
+    -3.75,
+    7.25
+   ],
+   "j91_lib_local": [
+    3.75,
+    7.25
+   ],
+   "row": 9,
+   "col": 4,
+   "core_end": "R9.2",
+   "base_end": "USB1.A6",
+   "core_end_xy_core": [
+    110.716,
+    60.682
+   ],
+   "base_end_xy_base": [
+    64.19,
+    55.26
+   ],
+   "core_leg_mm": 0.16,
+   "base_leg_mm": 18.37,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "on same-net pad",
+   "base_via": "BLOCKED: move B.Cu part",
+   "base_bcu_under": [
+    "U16"
+   ],
+   "base_via_blockers": [
+    "U16.2",
+    "U16.3",
+    "U16.4"
+   ],
+   "base_vias_to_clear": [
+    "/ESC2/BL"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "43",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    120.7319,
+    60.5258
+   ],
+   "base_xy": [
+    86.4999,
+    68.8998
+   ],
+   "j90_local": [
+    6.25,
+    7.25
+   ],
+   "j91_lib_local": [
+    -6.25,
+    7.25
+   ],
+   "row": 9,
+   "col": 9,
+   "anchor": [
+    "BR"
+   ],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "BLOCKED: move B.Cu part",
+   "base_bcu_under": [
+    "U21"
+   ],
+   "base_via_blockers": [
+    "U21.10",
+    "U21.8",
+    "U21.9"
+   ],
+   "base_vias_to_clear": [
+    "/RX/BUSY"
+   ],
+   "core_userpad_within_0.3mm": [
+    "J48",
+    "J44",
+    "J49"
+   ]
+  },
+  {
+   "pad": "44",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    106.7319,
+    62.5258
+   ],
+   "base_xy": [
+    72.4999,
+    70.8998
+   ],
+   "j90_local": [
+    -7.75,
+    9.25
+   ],
+   "j91_lib_local": [
+    7.75,
+    9.25
+   ],
+   "row": 10,
+   "col": 2,
+   "anchor": [
+    "BL"
+   ],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U16"
+   ],
+   "base_vias_to_clear": [
+    "LED_STRIP"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "45",
+   "net": "GND",
+   "role": "GND",
+   "core_xy": [
+    110.7319,
+    62.5258
+   ],
+   "base_xy": [
+    76.4999,
+    70.8998
+   ],
+   "j90_local": [
+    -3.75,
+    9.25
+   ],
+   "j91_lib_local": [
+    3.75,
+    9.25
+   ],
+   "row": 10,
+   "col": 4,
+   "anchor": [],
+   "core_via": "not needed (B.Cu GND pour)",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U16"
+   ],
+   "base_vias_to_clear": [
+    "/RX/NSS"
+   ],
+   "core_userpad_within_0.3mm": []
+  },
+  {
+   "pad": "46",
+   "net": "LED_STRIP",
+   "role": "SIG",
+   "core_xy": [
+    112.7319,
+    62.5258
+   ],
+   "base_xy": [
+    78.4999,
+    70.8998
+   ],
+   "j90_local": [
+    -1.75,
+    9.25
+   ],
+   "j91_lib_local": [
+    1.75,
+    9.25
+   ],
+   "row": 10,
+   "col": 5,
+   "core_end": "Q2.3 (drain)",
+   "base_end": "J20/J21/J31/J32 (nearest)",
+   "core_end_xy_core": [
+    112.78,
+    60.69
+   ],
+   "base_end_xy_base": [
+    91.731,
+    74.303
+   ],
+   "core_leg_mm": 1.84,
+   "base_leg_mm": 13.66,
+   "nearest_gnd_mm": 2.0,
+   "anchor": [],
+   "core_via": "free",
+   "base_via": "free",
+   "base_bcu_under": [
+    "U22"
+   ],
+   "base_vias_to_clear": [
+    "/RX/LED"
+   ],
+   "core_userpad_within_0.3mm": []
+  }
+ ],
+ "gpio": {
+  "map": {
+   "UART0_TX": 0,
+   "UART0_RX": 1,
+   "UART1_TX": 6,
+   "UART1_RX": 7,
+   "SPI0.SCK": 18,
+   "SPI0.MOSI": 19,
+   "SPI0.MISO": 20,
+   "FLASH_CS": 21,
+   "MOTOR4": 22,
+   "MOTOR3": 23,
+   "MOTOR2": 24,
+   "MOTOR1": 25
+  },
+  "led0": 26,
+  "changes": {},
+  "spare_in_pool": [
+   27
+  ]
+ },
+ "u7": {
+  "center_core": [
+   108.75,
+   47.1
+  ],
+  "rot_search": 90,
+  "pins": {
+   "U7": [
+    108.75,
+    47.1
+   ],
+   "COUT": [
+    110.335,
+    47.39
+   ],
+   "CIN": [
+    107.165,
+    47.39
+   ],
+   "OUT": [
+    109.638,
+    47.75
+   ],
+   "IN": [
+    107.862,
+    47.75
+   ],
+   "EN": [
+    107.862,
+    46.45
+   ],
+   "GND5": [
+    107.862,
+    47.1
+   ]
+  },
+  "block_bounds": [
+   106.855,
+   46.05,
+   110.645,
+   48.15
+  ],
+  "kicad": {
+   "U7": {
+    "part": "LP5912-3.3DRVR (C524780), WSON-6-1EP 2x2",
+    "at": [
+     108.75,
+     47.1
+    ],
+    "rot": 180,
+    "pin1_OUT": [
+     109.638,
+     47.75
+    ],
+    "pin6_IN": [
+     107.862,
+     47.75
+    ],
+    "pin4_EN": [
+     107.862,
+     46.45
+    ],
+    "note": "EN (pin 4) tied to IN as today; EP to GND"
+   },
+   "CIN": {
+    "part": "1 uF 25 V 0402 CL05A105KA5NQNC (C52923)",
+    "at": [
+     107.165,
+     47.39
+    ],
+    "rot": 90,
+    "pad1": "+4v5 (next to pin 6)",
+    "pad2": "GND"
+   },
+   "COUT": {
+    "part": "1 uF 25 V 0402 CL05A105KA5NQNC (C52923); C15 4.7 uF at VREG_VIN stays",
+    "at": [
+     110.335,
+     47.39
+    ],
+    "rot": 90,
+    "pad1": "+3.3V (next to pin 1)",
+    "pad2": "GND"
+   }
+  }
+ },
+ "swd_testpads_base": {
+  "SWDIO": [
+   78.32,
+   55.15,
+   2.79
+  ],
+  "SWCLK": [
+   79.88,
+   61.41,
+   0.8
+  ]
+ },
+ "metrics": {
+  "today": {
+   "pads": 34,
+   "gnd": 11,
+   "sig17": 260.6874909292959,
+   "gnd_le_pitch": 7,
+   "gnd_le_pitch_of": 17,
+   "gnd_le_pitch_18": 7,
+   "worst_gnd": 5.372020104206602,
+   "centroid_off": 1.4065730138490709,
+   "hull": 0.7503670502998896
+  },
+  "new": {
+   "pads": 46,
+   "gnd": 21,
+   "sig17": 201.74316312733717,
+   "sig17_fixgpio": 201.74316312733717,
+   "sig20": 221.38847949652404,
+   "new3": {
+    "PU0RX": 9.272050054420932,
+    "SWDIO": 5.9159174320218515,
+    "SWCLK": 4.457348882744086
+   },
+   "gnd_le_pitch": 20,
+   "orth_gnd": 20,
+   "nsig": 20,
+   "worst_gnd": 2.0,
+   "centroid_off": 0.6972916517684081,
+   "hull": 0.8090101012185968,
+   "centroid": [
+    112.77537826086957,
+    53.69971304347826
+   ]
+  },
+  "lower_bound17": 170.24881418948158,
+  "per_net": {
+   "CURR": {
+    "today": 18.425782802114597,
+    "new": 24.581300387169907,
+    "new_fixgpio": 24.581300387169907,
+    "direct": 16.847157039468122
+   },
+   "SPI0.MISO": {
+    "today": 14.43221334452203,
+    "new": 4.879540046325983,
+    "new_fixgpio": 4.879540046325983,
+    "direct": 4.242900725034698
+   },
+   "SPI0.SCK": {
+    "today": 16.119028780541107,
+    "new": 9.43034605203886,
+    "new_fixgpio": 9.43034605203886,
+    "direct": 7.121513642653511
+   },
+   "SPI0.MOSI": {
+    "today": 20.82144688634057,
+    "new": 15.649926708506158,
+    "new_fixgpio": 15.649926708506158,
+    "direct": 7.5107793578629325
+   },
+   "FLASH_CS": {
+    "today": 24.680482043345524,
+    "new": 10.049122031985375,
+    "new_fixgpio": 10.049122031985375,
+    "direct": 7.759412771756637
+   },
+   "USB_D+": {
+    "today": 19.790616029492128,
+    "new": 18.530769470345227,
+    "new_fixgpio": 18.530769470345227,
+    "direct": 18.47950203096664
+   },
+   "USB_D-": {
+    "today": 18.313826715611356,
+    "new": 18.844922441842662,
+    "new_fixgpio": 18.844922441842662,
+    "direct": 17.707410745574858
+   },
+   "MOTOR1": {
+    "today": 10.689068328715837,
+    "new": 9.792754188800023,
+    "new_fixgpio": 9.792754188800023,
+    "direct": 6.4351266565130585
+   },
+   "MOTOR2": {
+    "today": 4.6970728372624935,
+    "new": 2.144016399269576,
+    "new_fixgpio": 2.144016399269576,
+    "direct": 1.9586951172911036
+   },
+   "MOTOR3": {
+    "today": 9.956050043606766,
+    "new": 6.226232324036838,
+    "new_fixgpio": 6.226232324036838,
+    "direct": 6.0304405135441
+   },
+   "MOTOR4": {
+    "today": 13.489161136203016,
+    "new": 13.221566337937569,
+    "new_fixgpio": 13.221566337937569,
+    "direct": 12.293035410415607
+   },
+   "BUZZER-": {
+    "today": 19.310611748663568,
+    "new": 19.575514823887648,
+    "new_fixgpio": 19.575514823887648,
+    "direct": 19.305655648021904
+   },
+   "LED_STRIP": {
+    "today": 18.697566886904724,
+    "new": 15.498538720489226,
+    "new_fixgpio": 15.498538720489226,
+    "direct": 14.186183600911729
+   },
+   "UART0_TX": {
+    "today": 12.496388000347329,
+    "new": 8.06051500836899,
+    "new_fixgpio": 8.06051500836899,
+    "direct": 6.8243745363586354
+   },
+   "UART0_RX": {
+    "today": 15.271572795132311,
+    "new": 7.332471157136602,
+    "new_fixgpio": 7.332471157136602,
+    "direct": 7.278213229392233
+   },
+   "UART1_TX": {
+    "today": 10.273574285885706,
+    "new": 8.785121189675694,
+    "new_fixgpio": 8.785121189675694,
+    "direct": 7.701672079003366
+   },
+   "UART1_RX": {
+    "today": 13.223028264606867,
+    "new": 9.14050583952083,
+    "new_fixgpio": 9.14050583952083,
+    "direct": 8.566741084712437
+   }
+  },
+  "cost": {
+   "total": 348.01285221881307,
+   "wl": 289.53993570112897,
+   "sig": 234.14541525336833,
+   "pen": {
+    "base_via": 30.0,
+    "heat_gnd": 7.5,
+    "base_via_gnd": 14.0,
+    "batt_diag": 3.0,
+    "centroid": 3.9729165176840815,
+    "gpio_change": 0.0
+   },
+   "centroid_off": 0.6972916517684081
+  },
+  "rules": {
+   "signals_with_orth_GND": "20/20",
+   "power_with_orth_GND": "5/5",
+   "usb_pair_adjacent": true,
+   "usb_gnd_both_ends": true,
+   "motor_orth_to_CURR_USB_BATT": [],
+   "motor_diag_to_CURR_USB_BATT": [],
+   "batt_orth_neighbours": [
+    "GND"
+   ],
+   "batt_diag_neighbours": [
+    "FLASH_CS"
+   ],
+   "4v5_pads_adjacent": true,
+   "anchors": {
+    "1": [
+     "TL"
+    ],
+    "2": [
+     "TR"
+    ],
+    "27": [
+     "EAR_T"
+    ],
+    "35": [
+     "EAR_B"
+    ],
+    "43": [
+     "BR"
+    ],
+    "44": [
+     "BL"
+    ],
+    "11": [
+     "L"
+    ]
+   },
+   "gnd_ratio": "21/46",
+   "signals_core_via_blocked": [],
+   "pads_base_via_blocked": [
+    "2:GND",
+    "7:GND",
+    "12:SPI0.SCK",
+    "14:GND",
+    "15:GND",
+    "18:GND",
+    "23:MOTOR2",
+    "27:GND",
+    "42:USB_D+",
+    "43:GND"
+   ],
+   "pads_within_0.3mm_of_core_userpad": [
+    "1:GND@J39",
+    "2:GND@J54",
+    "27:GND@J37/J35",
+    "35:GND@J37/J38",
+    "43:GND@J48/J44/J49"
+   ]
+  }
+ },
+ "vtx_pads_base": {
+  "p10": [
+   75.7,
+   73.35,
+   1.2,
+   1.2
+  ],
+  "gnd": [
+   75.7,
+   74.9,
+   1.2,
+   1.2
+  ],
+  "vias_to_move": [
+   [
+    76.41,
+    73.42,
+    "GND"
+   ],
+   [
+    75.52,
+    73.85,
+    "/RX/BOOT"
+   ],
+   [
+    75.55,
+    74.74,
+    "+3V3"
+   ]
+  ],
+  "hole_keepout_mm": 2.8,
+  "dist_p10_to_U12pin1": 2.26,
+  "pocket": [
+   73.67,
+   71.67,
+   87.0,
+   77.18
+  ],
+  "note": "Base F.Cu, rounded-rect SMD pads with mask opening; +10V fed from the +10V net (U12.1 / gate-drive rail) on an inner layer"
+ }
+}

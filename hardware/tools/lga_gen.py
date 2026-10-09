@@ -36,49 +36,67 @@ HW = os.path.dirname(HERE)
 # marker test points (see read_markers_from_base) from OpenAIO-Base.kicad_pcb
 # and rewrites the block between PINS-BEGIN and PINS-END in this file. Pins
 # are numbered in reading order, top row first, left to right.
+# R2 (October 2026): the table below is the R2a pattern, 46 pads on a 2.0 mm
+# grid (21 GND), set from research/review-2026-10/lga_spec.json (LGA_SPEC.md),
+# not from markers. Re-running --from-base reads the J90 on the board, so it
+# keeps this pattern unless markers move pads.
 PAD = 1.0          # mm, round pad diameter, same as the marker test points
 MARKER_MIN = 10    # TP references below this are real test points, not markers
 MOVE_R = 1.0       # mm, a marker this close to an existing pin moves (with net) or deletes (no net) it
 # PINS-BEGIN
 ORIGIN = (80.25, 61.65)   # absolute Base position of J90 (and of J91 relative to the Core)
 PINS = [
-    (1, "10V_ENABLE", "SIG", -10.45, -8.87),
-    (2, "CURR", "SIG", -10.45, -6.87),
-    (3, "SPI0.MISO", "BUS", -7.8, -6.18),
-    (4, "SPI0.SCK", "BUS", -5.8, -6.18),
-    (5, "SPI0.MOSI", "BUS", -3.8, -6.18),
-    (6, "FLASH_CS", "SIG", -1.8, -6.18),
-    (7, "+10V", "PWR", 0.2, -6.18),
-    (8, "+3.3V", "PWR", 2.2, -6.18),
-    (9, "USB_D+", "SIG", -10.45, -4.87),
-    (10, "GND", "PWR", -5.8, -4.18),
-    (11, "GND", "PWR", -3.8, -4.18),
-    (12, "+4v5", "PWR", 4.2, -4.18),
-    (13, "USB_D-", "SIG", -10.45, -2.87),
-    (14, "+5V", "PWR", -8.45, -2.88),
-    (15, "GND", "PWR", 8.45, 0.01),
-    (16, "GND", "PWR", 10.45, 0.01),
-    (17, "MOTOR2", "SIG", -5.82, 1.9),
-    (18, "MOTOR4", "SIG", -3.82, 1.9),
-    (19, "GND", "PWR", -1.82, 1.9),
-    (20, "GND", "PWR", 0.18, 1.9),
-    (21, "BUZZER-", "SIG", 10.45, 2.01),
-    (22, "MOTOR1", "SIG", -5.82, 3.9),
-    (23, "MOTOR3", "SIG", -3.82, 3.9),
-    (24, "GND", "PWR", -1.82, 3.9),
-    (25, "GND", "PWR", 0.18, 3.9),
-    (26, "+BATT", "PWR", -8.3, 4.01),
-    (27, "GND", "PWR", -7.13, 6.86),
-    (28, "GND", "PWR", -4.12, 6.86),
-    (29, "GND", "PWR", 2.97, 8.56),
-    (30, "UART0_TX", "SIG", 4.97, 8.56),
-    (31, "UART0_RX", "SIG", 6.97, 8.56),
-    (32, "LED_STRIP", "SIG", -7.13, 8.86),
-    (33, "UART1_RX", "SIG", -3.13, 8.86),
-    (34, "UART1_TX", "SIG", -1.13, 8.86),
+    (1, "GND", "PWR", -9.75, -8.75),
+    (2, "GND", "PWR", 4.25, -8.75),
+    (3, "+4v5", "PWR", -9.75, -6.75),
+    (4, "+4v5", "PWR", -7.75, -6.75),
+    (5, "GND", "PWR", -5.75, -6.75),
+    (6, "+5V", "PWR", 0.25, -6.75),
+    (7, "GND", "PWR", 2.25, -6.75),
+    (8, "CURR", "SIG", -3.75, -4.75),
+    (9, "GND", "PWR", -1.75, -4.75),
+    (10, "SWDIO", "SIG", 0.25, -4.75),
+    (11, "GND", "PWR", -9.75, -2.75),
+    (12, "SPI0.SCK", "BUS", -7.75, -2.75),
+    (13, "SPI0.MOSI", "BUS", -3.75, -2.75),
+    (14, "GND", "PWR", -1.75, -2.75),
+    (15, "GND", "PWR", 0.25, -2.75),
+    (16, "GND", "PWR", 2.25, -2.75),
+    (17, "SPI0.MISO", "BUS", -7.75, -0.75),
+    (18, "GND", "PWR", -5.75, -0.75),
+    (19, "MOTOR3", "SIG", -1.75, -0.75),
+    (20, "SWCLK", "SIG", 0.25, -0.75),
+    (21, "MOTOR4", "SIG", 2.25, -0.75),
+    (22, "+5V", "PWR", 4.25, -0.75),
+    (23, "MOTOR2", "SIG", -7.75, 1.25),
+    (24, "MOTOR1", "SIG", -5.75, 1.25),
+    (25, "UART1_RX", "SIG", 0.25, 1.25),
+    (26, "GND", "PWR", 4.25, 1.25),
+    (27, "GND", "PWR", 10.25, 1.25),
+    (28, "GND", "PWR", -7.75, 3.25),
+    (29, "FLASH_CS", "SIG", -5.75, 3.25),
+    (30, "GND", "PWR", -3.75, 3.25),
+    (31, "GND", "PWR", -1.75, 3.25),
+    (32, "GND", "PWR", 0.25, 3.25),
+    (33, "UART1_TX", "SIG", 2.25, 3.25),
+    (34, "BUZZER-", "SIG", 4.25, 3.25),
+    (35, "GND", "PWR", 10.25, 3.25),
+    (36, "+BATT", "PWR", -7.75, 5.25),
+    (37, "USB_D-", "SIG", -3.75, 5.25),
+    (38, "UART0_TX", "SIG", -1.75, 5.25),
+    (39, "UART0_RX", "SIG", 0.25, 5.25),
+    (40, "PU0RX", "SIG", 2.25, 5.25),
+    (41, "GND", "PWR", 4.25, 5.25),
+    (42, "USB_D+", "SIG", -3.75, 7.25),
+    (43, "GND", "PWR", 6.25, 7.25),
+    (44, "GND", "PWR", -7.75, 9.25),
+    (45, "GND", "PWR", -3.75, 9.25),
+    (46, "LED_STRIP", "SIG", -1.75, 9.25),
 ]
 # PINS-END
 BUS_LABEL = "SPI0{SCK,MOSI,MISO}"
+# project name in the symbol instances, the one every other sheet of the design uses
+PROJECT = "OpenAIO-Base"
 
 
 def N():
@@ -152,8 +170,8 @@ def read_markers_from_base():
         if not str(f.GetFPID().GetLibItemName()).startswith("TestPoint"):
             continue
         m = re.fullmatch(r"TP(\d+)", ref)
-        if m and int(m.group(1)) < MARKER_MIN:
-            continue
+        if (m and int(m.group(1)) < MARKER_MIN) or f.GetValue() != "TestPoint":
+            continue   # a real test point: TP1..TP9, or one with its own value (SWDIO, SWCLK)
         pos = f.GetPosition()
         x, y = round(pcbnew.ToMM(pos.x), 3), round(pcbnew.ToMM(pos.y), 3)
         nets = {p.GetNetname() for p in f.Pads()} - {""}
@@ -235,7 +253,16 @@ def footprint(name, mirror, layers, paste, descr):
     prop("Value", name, half_h + 1.0, "F.Fab")
     prop("Datasheet", "", 0, "F.Fab", True)
     prop("Description", descr, 0, "F.Fab", True)
-    L.append('\t(attr smd exclude_from_pos_files exclude_from_bom)')
+    if mirror:
+        L.append('\t(attr smd exclude_from_pos_files exclude_from_bom)')
+    else:
+        # J90 stands for the consigned Core PCBA on the Base BOM and CPL (DFM-09)
+        L.append('\t(attr smd)')
+        # LGA joint (DFM-05): 1.1 mm aperture on the 1.0 mm land (+0.05 mm
+        # overprint), printed with the 0.12 mm Base top stencil, see
+        # research/review-2026-10/NEXTPCB.md "Order notes"
+        L.append('\t(solder_paste_margin 0.05)')
+        L.append('\t(solder_paste_margin_ratio 0)')
     # courtyard and fab outline
     for layer, w in (("F.CrtYd", 0.05), ("F.Fab", 0.1)):
         L.append(f'\t(fp_rect (start {-half_w} {-half_h}) (end {half_w} {half_h})'
@@ -268,8 +295,8 @@ def footprint(name, mirror, layers, paste, descr):
 def write_footprints():
     d = os.path.join(HW, "lib.pretty")
     land = footprint("Core_LGA_land", False, ["F.Cu", "F.Mask", "F.Paste"], True,
-                     f"OpenAIO Core LGA land pattern on the Base, {N()} pads, {PAD} mm, positions from the marker "
-                     "test points. Paste. Generated by tools/lga_gen.py --from-base")
+                     f"OpenAIO Core LGA land pattern on the Base, {N()} pads, {PAD} mm, pin table in tools/lga_gen.py "
+                     "(R2a pattern, 2.0 mm grid). Paste. Generated by tools/lga_gen.py")
     pads = footprint("Core_LGA_pads", True, ["F.Cu", "F.Mask"], False,
                      "OpenAIO Core LGA pads on the Core bottom. Place on B.Cu: X is pre-mirrored so the flipped "
                      "footprint overlays Core_LGA_land pad for pad. No paste. Generated by tools/lga_gen.py")
@@ -413,7 +440,7 @@ def sheet_file(root_uuid, sheet_uuid, sym_uuids):
         for n, _, _, _, _ in PINS:
             L.append(f'\t\t(pin "{n}" (uuid "{u()}"))')
         L.append('\t\t(instances')
-        L.append('\t\t\t(project "OpenAIO"')
+        L.append(f'\t\t\t(project "{PROJECT}"')
         L.append(f'\t\t\t\t(path "{inst_path}"')
         L.append(f'\t\t\t\t\t(reference "{ref}")')
         L.append('\t\t\t\t\t(unit 1)')

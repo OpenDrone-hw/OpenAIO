@@ -1340,6 +1340,30 @@
 				(justify left)
 			)
 		)
+		(property "MPN" "TF-021B-H265"
+			(at 72.39 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Manufacturer" "SOFNG"
+			(at 72.39 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(pin "1"
 			(uuid "ac26fef0-90a5-47d7-877b-b20edae8939c")
 		)
@@ -1827,5 +1851,4 @@
 			(page "1")
 		)
 	)
-	(embedded_fonts no)
 )

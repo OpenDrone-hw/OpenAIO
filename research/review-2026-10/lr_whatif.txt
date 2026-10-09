@@ -1,0 +1,10 @@
+as routed                       : R shunt->drain mOhm min 0.161 max 1.033 mean 0.729; 80 A loss 2.30 W; floating cells 0
+F.Cu +BATT removed under Core   : R shunt->drain mOhm min 0.166 max 2.180 mean 1.130; 80 A loss 3.21 W; floating cells 2105
+per-FET change %: [('Q3', 3.3), ('Q5', 5.6), ('Q7', 8.7), ('Q9', 24.2), ('Q11', 37.1), ('Q13', 51.4), ('Q15', 46.2), ('Q17', 44.5), ('Q19', 37.1), ('Q21', 124.0), ('Q23', 111.5), ('Q25', 54.0)]
+In4 +BATT plane added               : R min 0.134 max 0.609 mean 0.433 mOhm; 80 A loss 1.42 W
+F under Core -> GND, In4 +BATT plane: R min 0.136 max 0.783 mean 0.508 mOhm; 80 A loss 1.58 W
+In5 full +BATT (keep +10V island)   : R min 0.155 max 0.820 mean 0.572 mOhm; 80 A loss 1.89 W; vias >1 A 68, >2 A 3
+...and F under Core -> GND          : R min 0.158 max 1.373 mean 0.782 mOhm; 80 A loss 2.39 W; vias >1 A 49, >2 A 2
+PROPOSED +BATT In4+In5 planes       : R min 0.131 max 0.541 mean 0.387 mOhm; 80 A loss 1.29 W; vias >1 A 49, >2 A 1
+GND as routed                       : R min 0.227 max 0.595 mean 0.445 mOhm; 80 A loss 1.49 W; vias >1 A 48, >2 A 18, max 4.88 A
+GND + In3 plane                     : R min 0.188 max 0.431 mean 0.325 mOhm; 80 A loss 1.06 W; vias >1 A 43, >2 A 15, max 5.37 A

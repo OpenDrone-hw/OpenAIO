@@ -1,0 +1,107 @@
+== Core: unconnected_items 0, schematic_parity 201, violations 52
+   warning  lib_footprint_issues             52
+   parity: {'missing_footprint': 199, 'net_conflict': 1, 'footprint_symbol_field_mismatch': 1}
+   PAR missing_footprint Missing footprint C104 (100nF) | 
+   PAR missing_footprint Missing footprint Rsense2 (0.2mR) | 
+   PAR missing_footprint Missing footprint U24 (AIO_outline) | 
+   PAR missing_footprint Missing footprint U25 (INA186A3IDCKR) | 
+   PAR missing_footprint Missing footprint R3 (5.1k) | 
+   PAR missing_footprint Missing footprint R4 (5.1k) | 
+   PAR missing_footprint Missing footprint USB1 (TYPE-C 16P QTWT) | 
+   PAR missing_footprint Missing footprint C18 (4.7uF 50v) | 
+   PAR missing_footprint Missing footprint C19 (4.7uF 50v) | 
+   PAR missing_footprint Missing footprint C20 (100n) | 
+   PAR missing_footprint Missing footprint C21 (100n) | 
+   PAR missing_footprint Missing footprint C23 (22uF) | 
+== Base: unconnected_items 0, schematic_parity 103, violations 446
+   error    clearance                        4
+   error    annular_width                    2
+   warning  solder_mask_bridge               199
+   warning  lib_footprint_issues             199
+   warning  lib_footprint_mismatch           29
+   warning  connection_width                 7
+   warning  copper_sliver                    3
+   warning  padstack                         2
+   warning  holes_co_located                 1
+   parity: {'missing_footprint': 87, 'net_conflict': 16}
+   ERR clearance: Clearance violation (rule '2 oz outer copper, clearance' cle | Pad 1 [+3V3] of U23 on B.Cu @(84.05,68.73); Pad 5 [GND] of U23 on B.Cu @(83.72,68.30)
+   ERR clearance: Clearance violation (rule '2 oz outer copper, clearance' cle | Pad 3 [+4v5] of U23 on B.Cu @(83.41,67.87); Pad 5 [GND] of U23 on B.Cu @(83.72,68.30)
+   ERR clearance: Clearance violation (rule '2 oz outer copper, clearance' cle | Pad 4 [+4v5] of U23 on B.Cu @(84.05,67.87); Pad 5 [GND] of U23 on B.Cu @(83.72,68.30)
+   ERR clearance: Clearance violation (rule '2 oz outer copper, clearance' cle | PTH pad [<no net>] of USB1 @(63.10,58.40); Pad 2 [Net-(USB1-CC2)] of R4 on B.Cu @(63.30,57.80)
+   ERR annular_width: Annular width (board setup constraints min annular width 0.0 | PTH pad [<no net>] of USB1 @(63.10,52.62)
+   ERR annular_width: Annular width (board setup constraints min annular width 0.0 | PTH pad [<no net>] of USB1 @(63.10,58.40)
+   PAR missing_footprint Missing footprint C1 (100n) | 
+   PAR missing_footprint Missing footprint C2 (100n) | 
+   PAR missing_footprint Missing footprint C3 (4.7uF) | 
+   PAR missing_footprint Missing footprint C4 (20p) | 
+   PAR missing_footprint Missing footprint C5 (100n) | 
+   PAR missing_footprint Missing footprint C6 (100n) | 
+   PAR missing_footprint Missing footprint C7 (100n) | 
+   PAR missing_footprint Missing footprint C8 (100n) | 
+   PAR missing_footprint Missing footprint C9 (100n) | 
+   PAR missing_footprint Missing footprint C10 (20p) | 
+   PAR missing_footprint Missing footprint C11 (100n) | 
+   PAR missing_footprint Missing footprint C12 (100n) | 
+
+== detail
+Core PAR net_conflict No pad found for pin 2 in schematic | Footprint U6
+Core PAR footprint_symbol_field_mismatch Field 'Description' differs (PCB: 'OpenAIO Core LGA pads on the Core bottom. Place on B.Cu | Footprint J91
+Base PAR net_conflict No pad found for pin A8 in schematic | Footprint USB1
+Base PAR net_conflict No pad found for pin B8 in schematic | Footprint USB1
+Base PAR net_conflict No pad found for pin 8 in schematic | Footprint Card1
+Base PAR net_conflict No pad found for pin 1 in schematic | Footprint Card1
+Base PAR net_conflict No pad found for pin 23 in schematic | Footprint U13
+Base PAR net_conflict No pad found for pin 2 in schematic | Footprint U13
+Base PAR net_conflict No pad found for pin 7 in schematic | Footprint U14
+Base PAR net_conflict No pad found for pin 2 in schematic | Footprint U15
+Base PAR net_conflict No pad found for pin 7 in schematic | Footprint U16
+Base PAR net_conflict No pad found for pin 8 in schematic | Footprint U16
+Base PAR net_conflict No pad found for pin 2 in schematic | Footprint U17
+Base PAR net_conflict No pad found for pin 23 in schematic | Footprint U19
+Base PAR net_conflict No pad found for pin 2 in schematic | Footprint U19
+Base PAR net_conflict No pad found for pin 7 in schematic | Footprint U20
+Base PAR net_conflict No pad found for pin 20 in schematic | Footprint U22
+Base PAR net_conflict No pad found for pin 4 in schematic | Footprint U22
+Base connection_width | Via [GND] on F.Cu - B.Cu @(65.45,60.39); Via [GND] on F.Cu - B.Cu @(65.86,60.10)
+Base connection_width | Pad 1 [Net-(U3-FB)] of R18 on B.Cu @(68.62,59.78); Track [Net-(U3-FB)] on B.Cu, length 0.7100 mm @(68.62,59.78)
+Base connection_width | Pad 2 [GND] of JP1 on F.Cu @(90.02,70.75); Via [GND] on F.Cu - B.Cu @(90.24,70.47)
+Base connection_width | Via [GND] on F.Cu - B.Cu @(65.45,60.39); Via [GND] on F.Cu - B.Cu @(65.86,60.10)
+Base connection_width | Via [GND] on F.Cu - B.Cu @(65.45,60.39); Via [GND] on F.Cu - B.Cu @(65.86,60.10)
+Base connection_width | Zone [+BATT] on In5.Cu, priority 0 @(56.00,42.00)
+Base connection_width | Zone [+5V] on In4.Cu, priority 37 @(54.00,40.00)
+Base copper_sliver | 
+Base copper_sliver | 
+Base copper_sliver | 
+Base holes_co_located | Via [GND] on F.Cu - B.Cu @(80.43,64.01); Via [GND] on F.Cu - B.Cu @(80.43,64.01)
+Base padstack | PTH pad [<no net>] of USB1 @(63.10,52.62)
+Base padstack | PTH pad [<no net>] of USB1 @(63.10,58.40)
+Base lib_footprint_mismatch | Footprint J20 @(59.07,47.50)
+Base lib_footprint_mismatch | Footprint J16 @(59.07,74.40)
+Base lib_footprint_mismatch | Footprint U24 @(75.37,60.91)
+Base lib_footprint_mismatch | Footprint J24 @(91.73,47.50)
+Base lib_footprint_mismatch | Footprint J27 @(90.60,45.80)
+Base lib_footprint_mismatch | Footprint J31 @(88.90,44.67)
+Base lib_footprint_mismatch | Footprint USB1 @(61.88,55.51)
+Base lib_footprint_mismatch | Footprint J15 @(61.90,44.67)
+Base lib_footprint_mismatch | Footprint J17 @(60.20,45.80)
+Base lib_footprint_mismatch | Footprint J18 @(60.20,76.10)
+Base lib_footprint_mismatch | Footprint J28 @(90.60,76.00)
+Base lib_footprint_mismatch | Footprint J21 @(61.90,77.23)
+Base lib_footprint_mismatch | Footprint Card1 @(67.72,65.92)
+Base lib_footprint_mismatch | Footprint J25 @(88.90,77.13)
+Base lib_footprint_mismatch | Footprint J32 @(91.73,74.30)
+Base lib_footprint_mismatch | Footprint U19 @(81.74,57.26)
+Base lib_footprint_mismatch | Footprint J33 @(91.17,61.61)
+Base lib_footprint_mismatch | Footprint U17 @(75.48,57.26)
+Base lib_footprint_mismatch | Footprint U21 @(88.38,68.47)
+Base lib_footprint_mismatch | Footprint U13 @(69.12,64.54)
+Base lib_footprint_mismatch | Footprint U18 @(76.51,52.52)
+Base lib_footprint_mismatch | Footprint OSC1 @(85.20,74.61)
+Base lib_footprint_mismatch | Footprint J29 @(91.17,63.61)
+Base lib_footprint_mismatch | Footprint FL1 @(91.44,69.24)
+Base lib_footprint_mismatch | Footprint TP9 @(79.70,67.70)
+Base lib_footprint_mismatch | Footprint U16 @(74.38,69.26)
+Base lib_footprint_mismatch | Footprint X2 @(84.72,71.67)
+Base lib_footprint_mismatch | Footprint U23 @(83.72,68.30)
+Base lib_footprint_mismatch | Footprint U15 @(75.42,64.53)
+Base solder_mask_bridge by item: [('PCB', 199), ('Via', 101), ('U15', 45), ('R70', 10), ('R71', 10), ('R72', 10), ('R68', 7), ('Track', 5), ('R69', 5), ('Zone', 4), ('R67', 2)]

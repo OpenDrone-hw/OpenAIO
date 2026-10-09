@@ -1,0 +1,6 @@
+U25 at 64.27 51.11 B [('1', 'GND', 65.22, 50.46), ('2', 'GND', 65.22, 51.11), ('3', '+3V3', 65.22, 51.76), ('4', '/CSA+', 63.32, 51.76), ('5', '+BATT', 63.32, 51.11), ('6', 'CURR', 63.32, 50.46)]
+/CSA+: shunt pad1 mean -41.75 mV (span -43.66..-40.20), U25.+IN -43.54 mV -> +IN picks up -1.79 mV vs pad mean
++BATT: shunt pad2 0 mV (Dirichlet), U25.-IN -9.17 mV
+true shunt drop 16.0 mV; INA186 sees 23.37 mV -> copper error +7.37 mV = +46.1 % (phase-A HS of all 4 motors at 20 A)
+-IN pick-up per amp drawn by each high-side FET (mOhm, vs 0.2 mOhm shunt): [('Q3', 0.0348), ('Q5', 0.0476), ('Q7', 0.0548), ('Q9', 0.0718), ('Q11', 0.081), ('Q13', 0.0897), ('Q15', 0.189), ('Q17', 0.1983), ('Q19', 0.2097), ('Q21', 0.1627), ('Q23', 0.1672), ('Q25', 0.1788)]
+range 0.035..0.210 mOhm = 17..105 % of the shunt: the reading depends on which phase conducts
