@@ -173,9 +173,32 @@
   (severity ignore)
   (condition "A.Type == 'Pad' && A.memberOfFootprint('lib:small_pad')"))
 
-# Not exempt, left for the owner (R3-E): JP1.1 (U.FL centre pad, 0.37 mm past
-# the 0.20 line), FL1.2 (2.4 GHz filter GND pad, 0.19 mm), U12.7/.8 (SM06B
-# shell tabs, 0.69 mm). Each needs a part move.
+# Owner original pads at the routed edge (FB7 step 3). Measured on the
+# refilled board against the Edge.Cuts polygon; each needs an owner placement
+# decision (FINISH_PASS "Base edge"), so each is exempt per pad, not per part.
+# No pad trim: each land is the datasheet land and a trim would cut the
+# contact or the solder fillet.
+#  JP1.1  FRF05002 (u.FL type) centre pin land 1.00 x 1.05 overhangs the
+#         edge by 0.165 mm (0.165 of 1.05 mm2 outside the board).
+#  FL1.2  2.4 GHz filter GND land 0.30 x 0.30 (B.Cu), 0.010 mm inside.
+#  U12.7/.8  SM06B-SRSS-TB shell tabs 1.20 x 1.80 overhang by 0.493 mm
+#         (0.55 of 2.08 mm2 outside; the connector mouth hangs over the edge).
+# Fab note for the order: NextPCB pulls copper back 0.20 mm from a routed
+# edge in CAM unless told otherwise; ask them to keep these four lands.
+(rule "Edge pads: JP1.1 u.FL centre pad (owner original, decision listed)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('JP1') && A.Pad_Number == '1'"))
+
+(rule "Edge pads: FL1.2 filter GND pad (owner original, decision listed)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('FL1') && A.Pad_Number == '2'"))
+
+(rule "Edge pads: U12.7/.8 SH-6 shell tabs (owner original, decision listed)"
+  (constraint edge_clearance (min 0.20mm))
+  (severity ignore)
+  (condition "A.Type == 'Pad' && A.memberOfFootprint('U12') && (A.Pad_Number == '7' || A.Pad_Number == '8')"))
 
 # LGA J90 land (DFM-06, decision D2). Copper of another net next to a hidden
 # LGA joint cannot be inspected or reworked, and +BATT next to an FC signal is
