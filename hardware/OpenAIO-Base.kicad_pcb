@@ -2488,7 +2488,7 @@
 	(footprint "Capacitor_SMD:C_0201_0603Metric"
 		(layer "F.Cu")
 		(uuid "1a61549d-ed15-4ed4-b4ea-a14bd60d585f")
-		(at 67.75 50.01 180)
+		(at 67.75 49.85 180)
 		(descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C104"
@@ -4053,7 +4053,7 @@
 	(footprint "4in1ESC:SOT-363_SC-70-6"
 		(layer "F.Cu")
 		(uuid "21a4a449-f2c8-4cd9-a50e-53419d4bc7c5")
-		(at 67.135 51.41 180)
+		(at 67.135 51.31 180)
 		(descr "SOT-363, SC-70-6, SC-88")
 		(tags "SOT-363 SC-70-6 SC-88")
 		(property "Reference" "U25"
@@ -25721,7 +25721,7 @@
 	(footprint "LED_SMD:LED_0402_1005Metric"
 		(layer "B.Cu")
 		(uuid "4355aa8f-8844-4b0f-a6de-d309f002267d")
-		(at 71.225 56.78 -90)
+		(at 71.33 56.85 -90)
 		(descr "LED SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf)")
 		(tags "LED")
 		(property "Reference" "D5"
@@ -36473,7 +36473,7 @@
 	(footprint "lib:SOD-123_L2.8-W1.8-LS3.7-RD"
 		(layer "B.Cu")
 		(uuid "7a909935-664d-4d19-9eb0-125f6d96314f")
-		(at 69.775 56.025 -90)
+		(at 69.925 56.025 -90)
 		(descr "DSK24 K24")
 		(property "Reference" "D2"
 			(at 0 4 90)
@@ -37358,7 +37358,7 @@
 	(footprint "lib:TestPoint_Pad_D0.8mm"
 		(layer "B.Cu")
 		(uuid "7d63e3b7-82d8-4ba0-9cf0-687efa78f6e6")
-		(at 78.32 55.15)
+		(at 78.33 55.165)
 		(descr "SMD pad as test point, diameter 0.8mm (catalogue TestPoint_Pad_D1.0mm scaled; OpenAIO SWD test pads, R2a spec section 8)")
 		(tags "test point SMD pad")
 		(property "Reference" "TP31"
@@ -47793,7 +47793,7 @@
 	(footprint "lib:TestPoint_Pad_D0.8mm"
 		(layer "B.Cu")
 		(uuid "aeea0b71-3063-4a30-b548-2ae01df5058f")
-		(at 79.58 61.41)
+		(at 79.6 61.41)
 		(descr "SMD pad as test point, diameter 0.8mm (catalogue TestPoint_Pad_D1.0mm scaled; OpenAIO SWD test pads, R2a spec section 8)")
 		(tags "test point SMD pad")
 		(property "Reference" "TP32"
@@ -47891,7 +47891,7 @@
 	(footprint "Fiducial:Fiducial_1mm_Mask2mm"
 		(layer "B.Cu")
 		(uuid "afd11e17-8a5e-4b71-9aee-fafc65ca5e4a")
-		(at 59.9 72.81 180)
+		(at 59.8 73.27 180)
 		(descr "Fiducial, circular marking, 1mm bare copper, 2mm soldermask opening (Level A)")
 		(tags "fiducial")
 		(property "Reference" "FID3"
@@ -50946,7 +50946,7 @@
 	(footprint "Capacitor_SMD:C_0201_0603Metric"
 		(layer "B.Cu")
 		(uuid "be8b8147-b6a4-4f87-8a53-df3eadf130b8")
-		(at 76.1 73.1 90)
+		(at 76.107 73.1 90)
 		(descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C79"
@@ -57389,7 +57389,7 @@
 	(footprint "Capacitor_SMD:C_0201_0603Metric"
 		(layer "B.Cu")
 		(uuid "e389ce9a-939d-464d-963f-9da0aa2ed233")
-		(at 75.62 73.2 90)
+		(at 75.602 73.2 90)
 		(descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C36"
@@ -68064,7 +68064,7 @@
 	)
 	(segment
 		(start 65.461699 51.55)
-		(end 66.185 51.41)
+		(end 66.185 51.31)
 		(width 0.15)
 		(layer "F.Cu")
 		(net "+BATT")
@@ -71839,14 +71839,6 @@
 		(uuid "4829230d-b14b-49b4-963e-6de92edb64bb")
 	)
 	(via
-		(at 59.88 74.17)
-		(size 0.35)
-		(drill 0.2)
-		(layers "F.Cu" "B.Cu")
-		(net "+5V")
-		(uuid "4e2cc6b7-79a2-45b0-8253-e7fe524d62ae")
-	)
-	(via
 		(at 85.825 55.497056)
 		(size 0.35)
 		(drill 0.2)
@@ -71877,6 +71869,14 @@
 		(layers "F.Cu" "B.Cu")
 		(net "+5V")
 		(uuid "7cfce671-3d8c-474b-ac35-418f6281bdfc")
+	)
+	(via
+		(at 59.5 74.65)
+		(size 0.35)
+		(drill 0.2)
+		(layers "F.Cu" "B.Cu")
+		(net "+5V")
+		(uuid "8741473e-784e-4f75-8f7a-3d64eb983b09")
 	)
 	(via
 		(at 80.05 54.95)
@@ -71967,7 +71967,7 @@
 		(uuid "12fcbee8-54f0-4945-a17a-c78043dc2b69")
 	)
 	(segment
-		(start 70.25 57.95)
+		(start 70.4 57.95)
 		(end 70.72 58.42)
 		(width 0.16)
 		(layer "B.Cu")
@@ -72205,6 +72205,14 @@
 		(layer "In1.Cu")
 		(net "+5V")
 		(uuid "55c8fbec-f5c9-4173-9456-e3ac1a9a3c6a")
+	)
+	(segment
+		(start 59.5 74.65)
+		(end 59.875 74.15)
+		(width 0.3)
+		(layer "In1.Cu")
+		(net "+5V")
+		(uuid "571b5089-bf81-40c5-91a2-2ad2b6b7c1de")
 	)
 	(segment
 		(start 90.025 49.472056)
@@ -73791,8 +73799,8 @@
 		(uuid "7b876ecc-9e80-40af-bf6b-d060c204ba66")
 	)
 	(segment
-		(start 67.919999 50.135)
-		(end 67.904999 50.635)
+		(start 67.919999 49.975)
+		(end 67.904999 50.535)
 		(width 0.15)
 		(layer "F.Cu")
 		(net "+3V3")
@@ -73853,14 +73861,6 @@
 		(layer "F.Cu")
 		(net "+3V3")
 		(uuid "98d56ab9-17d8-48b7-9c2f-2123932930e9")
-	)
-	(segment
-		(start 67.935 50.81)
-		(end 67.435 51.25)
-		(width 0.15)
-		(layer "F.Cu")
-		(net "+3V3")
-		(uuid "9e4af887-7b33-4ca7-8276-a578171688de")
 	)
 	(segment
 		(start 70.388189 69.559924)
@@ -73927,6 +73927,14 @@
 		(uuid "d63e19f1-1848-4dd0-8396-49c1595dfe4e")
 	)
 	(segment
+		(start 67.55 50.66)
+		(end 67.435 51.25)
+		(width 0.15)
+		(layer "F.Cu")
+		(net "+3V3")
+		(uuid "dacce93f-4539-4b02-92f4-69ebaecb7917")
+	)
+	(segment
 		(start 77.01 56.01)
 		(end 77.01 56.16)
 		(width 0.15)
@@ -73981,6 +73989,14 @@
 		(layer "F.Cu")
 		(net "+3V3")
 		(uuid "ef24e178-235c-49ef-b792-5c4c160099e6")
+	)
+	(segment
+		(start 67.935 50.66)
+		(end 67.55 50.66)
+		(width 0.15)
+		(layer "F.Cu")
+		(net "+3V3")
+		(uuid "f17ea3dd-74e6-4781-b632-cf908852c1fd")
 	)
 	(segment
 		(start 85.795 74.64)
@@ -74407,7 +74423,7 @@
 		(uuid "7d658ea3-9f64-472b-b468-0e6a709b5c8a")
 	)
 	(segment
-		(start 76.1 73.42)
+		(start 76.107 73.42)
 		(end 76.1 74.15)
 		(width 0.16)
 		(layer "B.Cu")
@@ -74512,7 +74528,7 @@
 	)
 	(segment
 		(start 76.6 73.42)
-		(end 76.1 73.42)
+		(end 76.107 73.42)
 		(width 0.16)
 		(layer "B.Cu")
 		(net "+3V3")
@@ -74551,8 +74567,8 @@
 		(uuid "d6abd219-6c37-47c3-8b32-450c515e46a7")
 	)
 	(segment
-		(start 75.62 73.52)
-		(end 76.1 73.52)
+		(start 75.602 73.52)
+		(end 76.107 73.52)
 		(width 0.16)
 		(layer "B.Cu")
 		(net "+3V3")
@@ -74591,7 +74607,7 @@
 		(uuid "e78d54e3-f8e3-4b75-836b-c1b1e1fd386e")
 	)
 	(segment
-		(start 76.22 73.3925)
+		(start 76.227 73.3925)
 		(end 76.52 73.1925)
 		(width 0.3)
 		(layer "B.Cu")
@@ -74919,7 +74935,7 @@
 		(uuid "35f616ec-312f-451f-8a4d-3c12a5b7ca0e")
 	)
 	(segment
-		(start 67.35 50.16)
+		(start 67.35 50)
 		(end 66.83 50.82)
 		(width 0.15)
 		(layer "F.Cu")
@@ -74927,8 +74943,8 @@
 		(uuid "3f442006-5bd2-499e-a6ee-d07160fc63cf")
 	)
 	(segment
-		(start 68.215 51.51)
-		(end 68.215 51.9)
+		(start 68.215 51.41)
+		(end 68.215 51.8)
 		(width 0.2)
 		(layer "F.Cu")
 		(net "GND")
@@ -75064,7 +75080,7 @@
 	)
 	(segment
 		(start 66.83 52.2)
-		(end 67.835 52.06)
+		(end 67.835 51.96)
 		(width 0.15)
 		(layer "F.Cu")
 		(net "GND")
@@ -80259,7 +80275,7 @@
 		(uuid "33f17d2d-a85f-4242-ba7a-1ef7048d6aa1")
 	)
 	(segment
-		(start 71.225 56.295)
+		(start 71.33 56.365)
 		(end 72.011226 57.081226)
 		(width 0.16)
 		(layer "B.Cu")
@@ -80331,7 +80347,7 @@
 		(uuid "46adb3e5-80a5-4528-9fcc-b31c52dfc315")
 	)
 	(segment
-		(start 76.1 72.78)
+		(start 76.107 72.78)
 		(end 76.15 71.9)
 		(width 0.16)
 		(layer "B.Cu")
@@ -81236,7 +81252,7 @@
 	)
 	(segment
 		(start 65.543204 50.781649)
-		(end 66.185 50.76)
+		(end 66.185 50.66)
 		(width 0.15)
 		(layer "F.Cu")
 		(net "/CSA+")
@@ -83819,6 +83835,14 @@
 		(uuid "41a5d1e2-df86-415c-ad21-c15841fde894")
 	)
 	(segment
+		(start 65.985 52.18)
+		(end 66.05 52)
+		(width 0.14)
+		(layer "F.Cu")
+		(net "CURR")
+		(uuid "6d424ca7-e425-4934-852f-853ace22adc4")
+	)
+	(segment
 		(start 76.15 55.8)
 		(end 76.3 56.45)
 		(width 0.15)
@@ -84435,7 +84459,7 @@
 		(uuid "83b6754b-327e-4204-b7c5-7c73d4a31b1e")
 	)
 	(segment
-		(start 70.175 54.64)
+		(start 70.325 54.64)
 		(end 70.625 55.09)
 		(width 0.3)
 		(layer "B.Cu")
@@ -93444,15 +93468,15 @@
 	)
 	(segment
 		(start 71.15 58.11)
-		(end 71.15 57.34)
+		(end 71.255 57.41)
 		(width 0.4)
 		(layer "B.Cu")
 		(net "Net-(D5-A)")
 		(uuid "44782a49-a687-4018-aa71-ac762062d33d")
 	)
 	(segment
-		(start 71.15 57.34)
-		(end 71.225 57.265)
+		(start 71.255 57.41)
+		(end 71.33 57.335)
 		(width 0.4)
 		(layer "B.Cu")
 		(net "Net-(D5-A)")
