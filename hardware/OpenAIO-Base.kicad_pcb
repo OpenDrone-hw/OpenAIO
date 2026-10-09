@@ -20753,7 +20753,7 @@
 	(footprint "Resistor_SMD:R_0201_0603Metric"
 		(layer "B.Cu")
 		(uuid "2fc49e49-83da-4315-83f0-16c3f1296ea9")
-		(at 63.75 55.92 90)
+		(at 63.63 55.92 90)
 		(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
 		(tags "resistor")
 		(property "Reference" "R18"
@@ -36585,7 +36585,7 @@
 	(footprint "Resistor_SMD:R_0201_0603Metric"
 		(layer "B.Cu")
 		(uuid "77c6a49e-16a5-4c35-8c19-1830567b3d13")
-		(at 68.62 54.87 90)
+		(at 68.74 55.87 90)
 		(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
 		(tags "resistor")
 		(property "Reference" "R20"
@@ -36793,7 +36793,7 @@
 	(footprint "Capacitor_SMD:C_0201_0603Metric"
 		(layer "B.Cu")
 		(uuid "785691c6-25b4-4293-a380-be4adce1560f")
-		(at 65.58 54.39 -90)
+		(at 65.34 54.39 -90)
 		(descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C21"
@@ -37266,7 +37266,7 @@
 	(footprint "lib:SOD-123_L2.8-W1.8-LS3.7-RD"
 		(layer "B.Cu")
 		(uuid "7a909935-664d-4d19-9eb0-125f6d96314f")
-		(at 69.925 56.025 -90)
+		(at 69.995 56.025 -90)
 		(descr "DSK24 K24")
 		(property "Reference" "D2"
 			(at 0 4 90)
@@ -37491,7 +37491,7 @@
 	(footprint "Resistor_SMD:R_0201_0603Metric"
 		(layer "B.Cu")
 		(uuid "7bf7494f-4347-4c09-9ca0-2dab436632ed")
-		(at 62.91 56.3 180)
+		(at 62.79 56.3 180)
 		(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
 		(tags "resistor")
 		(property "Reference" "R17"
@@ -43910,7 +43910,7 @@
 	(footprint "Resistor_SMD:R_0201_0603Metric"
 		(layer "B.Cu")
 		(uuid "971e2559-6bf6-4975-9d6a-4a8f109e592c")
-		(at 68.62 56.15 -90)
+		(at 68.74 57.15 -90)
 		(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf)")
 		(tags "resistor")
 		(property "Reference" "R19"
@@ -47167,7 +47167,7 @@
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "a9f8a48e-ecf6-45e2-b7dd-c3d8c6c17a83")
-		(at 64.7 54.725 90)
+		(at 64.48 54.725 90)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C24"
@@ -74934,7 +74934,7 @@
 		(uuid "2e78bf97-db53-426b-b77c-335889a79216")
 	)
 	(segment
-		(start 65.58 54.1)
+		(start 65.34 54.1)
 		(end 66.75 54.1)
 		(width 0.25)
 		(layer "B.Cu")
@@ -81802,6 +81802,14 @@
 		(uuid "66051faa-a0c7-4532-904f-3a25360a096c")
 	)
 	(segment
+		(start 68.74 54.4)
+		(end 68.74 55.55)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "GND")
+		(uuid "660d49f0-0fcf-41e7-a6a2-12629628e5e7")
+	)
+	(segment
 		(start 83.435 70.255)
 		(end 83.5 70.255)
 		(width 0.16)
@@ -82098,6 +82106,14 @@
 		(uuid "90e5428c-4eba-48ee-9756-c2bfd9cd5984")
 	)
 	(segment
+		(start 63.775 55.45)
+		(end 63.775 54.25)
+		(width 0.14)
+		(layer "B.Cu")
+		(net "GND")
+		(uuid "95a78982-9ba4-486d-ac9a-55ad963906f0")
+	)
+	(segment
 		(start 72.3 53)
 		(end 72.59 53.29)
 		(width 0.16)
@@ -82208,6 +82224,14 @@
 		(layer "B.Cu")
 		(net "GND")
 		(uuid "ab6ea58e-affa-467b-a5ea-4a6cd5c7d142")
+	)
+	(segment
+		(start 68.62 54.05)
+		(end 68.74 54.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "GND")
+		(uuid "ab9634ab-47a6-4324-8962-36bb7b5c9b80")
 	)
 	(segment
 		(start 73.725 54.526226)
@@ -82354,14 +82378,6 @@
 		(uuid "c9d2d127-03aa-48c6-a73b-159cdaad4101")
 	)
 	(segment
-		(start 68.62 54.05)
-		(end 68.62 54.55)
-		(width 0.2)
-		(layer "B.Cu")
-		(net "GND")
-		(uuid "ca67c506-ba21-44be-ac7f-0471c6e9af7e")
-	)
-	(segment
 		(start 72.01 53.02)
 		(end 71.56 53.47)
 		(width 0.16)
@@ -82496,6 +82512,14 @@
 		(layer "B.Cu")
 		(net "GND")
 		(uuid "eda9972b-18d1-45df-a25a-4cbe2296a8bc")
+	)
+	(segment
+		(start 63.775 54.25)
+		(end 64.099999 54.05)
+		(width 0.14)
+		(layer "B.Cu")
+		(net "GND")
+		(uuid "ede5f991-2d70-49ad-981e-0f8a9684622d")
 	)
 	(segment
 		(start 72.255 57.681226)
@@ -93802,6 +93826,14 @@
 		(uuid "2f36db47-bc8b-43f8-8a2e-36f291670839")
 	)
 	(segment
+		(start 63.73 56.3)
+		(end 63.85 56.35)
+		(width 0.16)
+		(layer "B.Cu")
+		(net "Net-(U3-FB)")
+		(uuid "8600d87d-c96d-4b5f-a455-1d4b30bc7d37")
+	)
+	(segment
 		(start 63.85 56.35)
 		(end 64.2 56.7)
 		(width 0.16)
@@ -94090,24 +94122,24 @@
 		(uuid "f87612f5-c8fe-4ff2-8067-f799b2181a52")
 	)
 	(segment
-		(start 68.62 55.19)
-		(end 68.62 55.83)
+		(start 68.1 55.9)
+		(end 68.74 56.19)
 		(width 0.2)
 		(layer "B.Cu")
 		(net "Net-(U4-FB)")
-		(uuid "484c4413-4276-432d-b5f1-a8fa697499a5")
+		(uuid "5814c031-b4d9-4b1d-93cf-c155735f917b")
 	)
 	(segment
-		(start 68.15 55.5)
-		(end 68.62 55.5)
+		(start 68.74 56.19)
+		(end 68.74 56.83)
 		(width 0.2)
 		(layer "B.Cu")
 		(net "Net-(U4-FB)")
-		(uuid "f0e4efee-32ec-4355-857b-551207f27732")
+		(uuid "a90fd5ce-5d44-4d19-bc0d-e994f2406ed0")
 	)
 	(segment
 		(start 65.95 55.05)
-		(end 65.58 54.75)
+		(end 65.34 54.75)
 		(width 0.16)
 		(layer "B.Cu")
 		(net "Net-(U4-CB)")
