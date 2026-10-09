@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "b32fe6d4-53a8-46c8-8568-84ff85c3a590")
 	(paper "A4")
+	(title_block
+		(title "Power")
+		(date "2026-10")
+		(rev "r2")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers
@@ -7430,6 +7435,7 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 198.12 124.46 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8544,6 +8550,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 27.813 140.97 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10398,25 +10405,25 @@
 		(fields_autoplaced yes)
 		(uuid "d9cdf249-8190-4882-b82c-79792d01756f")
 		(property "Reference" "C19"
-			(at 45.72 91.4399 0)
+			(at 40.64 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "4.7uF 50v"
-			(at 45.72 93.9799 0)
+			(at 40.64 93.9799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"

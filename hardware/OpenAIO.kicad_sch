@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "fb88b6f9-ee39-4640-a9d4-04a17ceeac64")
 	(paper "A4")
+	(title_block
+		(title "OpenAIO (Core + Base)")
+		(date "2026-10")
+		(rev "r2")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers
@@ -5344,6 +5349,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.5882 105.9179 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5423,6 +5429,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.67 91.9479 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5749,6 +5756,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.035 22.0979 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5828,6 +5836,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 154.305 46.8629 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5907,6 +5916,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 74.295 108.4579 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6157,6 +6167,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 72.39 102.1079 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6433,6 +6444,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.67 133.8579 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6590,6 +6602,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 66.675 54.4829 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6825,6 +6838,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 152.4 30.9879 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6904,6 +6918,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 154.305 44.3229 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7062,6 +7077,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.67 119.8879 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

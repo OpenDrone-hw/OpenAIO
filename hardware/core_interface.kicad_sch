@@ -6,7 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "OpenAIO Base <-> Core LGA interface")
-		(rev "1")
+		(date "2026-10")
+		(rev "r2")
 		(comment 1 "J90 = land pattern on Base, J91 = pads on Core bottom. Pin table: tools/lga_gen.py")
 	)
 	(lib_symbols

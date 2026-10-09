@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "57f8060d-d631-40d6-8133-ff553c8c0dcc")
 	(paper "A2")
+	(title_block
+		(title "RP2354A flight controller")
+		(date "2026-10")
+		(rev "r2")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers
@@ -11175,6 +11180,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 97.028 170.18 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12363,6 +12369,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 326.39 180.8479 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12568,6 +12575,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 326.39 188.4679 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12646,6 +12654,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 249.428 187.325 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13004,6 +13013,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 249.428 185.42 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13284,6 +13294,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 326.3418 185.9279 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14527,6 +14538,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 3.302 3.5616 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15786,6 +15798,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 326.3418 183.3879 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "9e014c51-20c0-47ba-9266-885dc9800335")
 	(paper "A4")
+	(title_block
+		(title "ESC channel")
+		(date "2026-10")
+		(rev "r2")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers
@@ -5698,6 +5703,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 30.988 70.612 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14287,6 +14293,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 30.988 72.898 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
