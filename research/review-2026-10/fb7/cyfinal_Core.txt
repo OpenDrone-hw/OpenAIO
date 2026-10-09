@@ -1,0 +1,10 @@
+# Core DRC courtyards_overlap pairs (courtyard_clearance 0). k: E exempt (body>=0.20, land>=0.15, land-to-body>=0.15), S same-net lands <0.15 (owner list), B body <0.20 (owner list)
+# k refA refB body_gap land_gap closest_lands_net diffnet_land_gap land_to_body body_src
+E C108 C109 0.48 0.18 same 0.264 0.23 fab-poly/fab-poly
+E C109 R7 0.27 0.17 diff 0.17 0.22 fab-poly/fab-hull
+E C15 C16 0.3 0.18 diff 0.18 0.24 fab-hull/fab-hull
+E C17 R10 0.3 0.19 diff 0.19 0.24 fab-hull/fab-hull
+E C32 U9 0.2 0.22 diff 0.22 0.15 fab-hull/fab-hull
+E R23 U6 0.239 0.389 same 0.439 0.189 fab-hull/fab-hull
+E R27 U8 0.419 0.545 diff 0.545 0.223 fab-hull/name-axis
+S Q1 R13 0.22 0.125 same 0.17 0.17 name-axis/fab-hull
