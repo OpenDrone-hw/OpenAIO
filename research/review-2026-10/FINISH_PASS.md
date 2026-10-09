@@ -83,3 +83,29 @@ U27 TLV75533 (IN = EN = +5V) feeds `+3V3_ESC` to the four AT32 VDD pins. The che
   - Every through-via site in x 73.0–74.0, y 63.4–65.4 sits in the pair's approach to the gap. The nearest free site, (73.275, 66.35) with a 0.09 mm margin, is unreachable on B because of the PA14 via.
   - Past the gap, the pair has 0.748 mm between J90.29 and the U15-PA13 via (73.87, 66.17). A 0.14/0.15 pair at 0.147 mm clearance needs 0.724 mm.
   - **Fix needs a part move:** shift the ESC1 FB divider column R48–R53, or move U15 with its PA13/PA14 vias by about 0.3 mm east. Then route both USB tracks through the gap.
+
+## FB8b notes (T1 USB exit: candidate built, not committed)
+
+T1 does not pass, so no board change is committed. Candidate board: scratchpad `fb8b/w3/OpenAIO-Base.kicad_pcb` (spec `fb8b/d8b.json` → `s8b.json` + `sb.json`, applied with `fb8b/rt8.py`).
+
+- **FBCOMMON blocker cleared without moving a part.** Only the U15-PA14 fan-out via moves, (73.233, 65.755) → (73.45, 65.85); U15, the R48–R53 column and the PA13 via stay. This opens a B.Cu channel at x 73.03 between R53.1 and the PA14 via (0.155 / 0.175 mm). /ESC1/FBCOMMON then runs R51.1 → B (73.03, 65.3–66.1) → new via (73.275, 66.35) → In2 (72.57, 66.25). The via at (73.68, 65.02) and its In2 stubs are removed. Islands, DRC and parity are unchanged.
+- **Pair route (candidate):** reuses the FB4b In2 descent, then an F pair (0.14 wide, 0.15 gap) through the J90 23/28 gap, the 28/29 gap and the J90.29/PA13 passage to J90.37 / .42.
+  - **Lengths:** D+ 26.94 mm (was 27.84), D− 24.39 mm (was 26.67).
+  - **Coupling:** 21.4 mm coupled at a 0.141–0.298 mm gap.
+  - **Distance from SW, L2 and L3:** route copper at least 1.285 mm.
+  - **Layer changes:** D+ 2, D− 3.
+  - **GND return vias:** (62.25, 54.34), (61.79, 55.98), (65.985, 61.291), (66.062, 62.673) and (63.52, 59.85).
+  - **J90.36:** the pocket pour is fed by a +BATT via at (74.15, 67.45); the F pair cuts it off otherwise.
+  - **Checks:** DRC errors equal to baseline (clearance 15, copper_edge 4, via_dangling 1, parity non-missing 70); 0 unconnected; GND 0.356 mΩ.
+- **Remaining blockers (exact):**
+  1. **+BATT 0.584 mΩ against 0.577 (+0.007, limit +0.005).** The F pair cuts the F +BATT pour between y 62 and 64.4 for x 65.4–72. Before the extra vias it was 0.588. Four extra +BATT stitching vias, (64.5, 64.05), (67.45, 63.1), (65.6, 64.0) and (74.1, 67.0), recover 0.004. North of the cut there is no via site in both the F and the In3/In4 +BATT fill.
+     - Next to try: revert the In3 LED_STRIP move to x 61.70, which may cut In3 +BATT near the battery. Measure per FET with `pw2.py`.
+  2. **GND reference.** D+ has 2.74 mm and D− 2.02 mm with no adjacent GND plane; the old route had 3.81 / 4.36 mm.
+     - All of it is in the USB1 escape: the F stubs sit over the In1 +5V branch to the +5V via (65.15, 55.74), and the In2 D− link (62.785, 54.845)–(62.765, 55.748) has neither In1 nor In3 GND under it.
+     - Fix: re-run the In1 +5V branch away from under the D pads (y 54.6–56.4).
+  3. **USB1 D pads to the L2.1 SW pad: 0.37 mm.** The Core outline (rule area 'Core footprint') starts at x 68.868, and the L2 body (3.0 × 3.0 mm, 2 mm tall) ends at 68.165.
+     - An east move of 0.50 mm keeps the 0.20 mm body gap and gives 0.87 mm, not 1.0.
+     - FB8a's 0.65 mm move leaves the body 0.05 mm from the Core edge.
+     - Either move also needs the U3 EN +BATT via (66.65, 57.91) moved, because it would sit inside the new L2.1. The only site is about (65.2, 56.35) on U3.5. SW F strips from the vias (65.23–65.26, 58.2–59.3) to L2.1 are needed too.
+     - **Owner decision:** accept 0.87 mm, or rotate or replace L2.
+- DRU diff-pair rules were not set, because there is no committed route. With the candidate they would be `diff_pair_gap` 0.14–0.30 and `diff_pair_uncoupled` max about 5.6 mm (D+ 26.94 total − 21.4 coupled, mostly the USB1 escape and the J90.42 tail).
