@@ -157,3 +157,11 @@
   (constraint bridged_mask)
   (condition "A.memberOfFootprint('U11')")
   (severity ignore))
+
+# FB6 item 0 (LGA overlap). The whole Core bottom faces the Base under the
+# LGA: no B.Silkscreen at all. Identity marks on the bottom are knockout
+# text / copper shapes on B.Cu (zero added height) or B.Fab.
+(rule "LGA overlap: no B.Silkscreen on the Core"
+  (layer "B.Silkscreen")
+  (condition "A.Visible || A.Type == 'Graphic'")
+  (constraint disallow text graphic))

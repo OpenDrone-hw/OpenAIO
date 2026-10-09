@@ -246,3 +246,19 @@
 (rule "AE2 antenna: no tracks or vias in the antenna area"
   (condition "A.intersectsArea('AE2 antenna') && (A.Type == 'Via' || A.NetName != '/RX/WIFI')")
   (constraint disallow track via))
+
+# FB6 item 0 (LGA overlap). The Core hat solders onto J90 with LGA joints of
+# only ~0.03-0.065 mm; silk ink (~0.010-0.025 mm) under the hat can hold it
+# off the land. The rule area 'Core footprint' is the Core outline in Base
+# coordinates (Core Edge.Cuts + (-34.232, +8.374) mm, on F.Silkscreen only,
+# no keepout flags: intersectsArea() only sees items on the area's layers).
+# The J90 pad mask openings + 0.20 mm are holes in the area (silk there is a
+# silk_over_copper error, and an area over them is itself flagged as silk).
+# No visible F.Silkscreen text and no F.Silkscreen graphic may touch it;
+# hidden reference fields are not printed and are allowed. Keep new silk
+# 0.3 mm outside the area (not enforced by this rule).
+(rule "LGA overlap: no F.Silkscreen under the Core"
+  (layer "F.Silkscreen")
+  (condition "A.intersectsArea('Core footprint') && (A.Visible || A.Type == 'Graphic')")
+  (constraint disallow text graphic))
+

@@ -49,7 +49,7 @@ printed next to each pad; port names follow `config.h`.
 **Orientation.** Forward is the SH-6 (U12) edge of the Base, battery pads at
 the rear. Edge names in the Base table are for the top view with the forward
 arrow pointing up (the KiCad view turned 180 degrees). An arrow on the Base top (next to the motor map) and on the Core
-bottom points forward. This matches `GYRO_1_ALIGN CW180_DEG`; confirm it in
+bottom (B.Cu copper: no silkscreen may sit in the LGA overlap) points forward. This matches `GYRO_1_ALIGN CW180_DEG`; confirm it in
 the configurator Setup tab at bring-up.
 
 ### Core, top pads (reachable with the Core fitted)
