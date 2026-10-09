@@ -1,5 +1,29 @@
 # Finish pass: routing left for the owner
 
+## Status at the end of the run (d665bae)
+
+Rows below were measured as each batch ran. These rows have since been resolved:
+
+| row | resolved by |
+|---|---|
+| Base clearance (16) | 8415dcc: inner-layer gaps nudged to at least 0.106 mm; Base DRC 0 errors |
+| Base edge (4) | e7464d7: per-pad DRU exceptions for JP1.1, FL1.2, U12.7, U12.8 (owner decision still open) |
+| Core: I2C0, UART0/PU0RX corner, other dangling vias | 68c2f77: all 28 dangling vias deleted; Core DRC 0 errors. The routes themselves are still worth a finish pass |
+| Core: +5V to R14 | cdb8534: Q2/R14 replaced by U26 TXU0101 + R115 |
+| Core silk | FB5 (2f4b57a to 70cf507): stroke-font pad labels; no silk errors |
+| USB 1/2 | 9f71f9f: coupled pair, departures in the USB rows |
+| E13 J90 GND pads | b27fb75, d7eb5d1: 6 of 10 pads have vias. Pad 14's via was reverted in 49882dc so R107 clears U19. Pads 2, 5, 14 and 44 are left |
+
+Added at the end of the run:
+
+| item | net/ref | location (x,y) mm | problem (measured) | suggested fix |
+|---|---|---|---|---|
+| USB1 peg under Rsense2 | USB1 NPTH, Rsense2 (B) | NPTH (63.10, 52.62), 0.6 mm; Rsense2 at (63.26, 51.95), pads (65.90, 50.60) / (60.62, 53.29) | The connector's locating-peg hole sits under the shunt body on the bottom side. Kept as a per-item DRC exclusion (npth_inside_courtyard). | Check that the USB1 peg is shorter than the 1.6 mm board, or move Rsense2 off the hole |
+| Grommet holes in courtyards | Q15, USB1 | per-item DRC exclusions (pth_inside_courtyard) | Owner's mechanical holes inside part courtyards | Confirm the clearance, or move the hole |
+| +10V output capacitance | C23, C112, C113 | beside U3 on B | 9.2 µF effective at 9.84 V; target 10.9 µF | One more CL10A226MO7JZNC, at a new site |
+| Base identity | "OpenAIO Base", rev | B.Fab only | Not printed (no free B.Silk spot) | Place on B.Silk after any compaction |
+| Unused pads | per LAYOUT_REVIEW §5.3 | — | Base 70 and Core 7 pads already removed (parity "no pad for pin"); more are listed in §5.3 | Remove more where a route needs the room |
+
 Boards at be152bb (KiCad files identical to 5cd1898). All numbers were measured on these boards after a zone refill (pcbnew dump, FB4b). Coordinates are in board mm.
 - Base: `hardware/OpenAIO-Base.kicad_pcb`.
 - Core: `hardware/OpenAIO-Core.kicad_pcb`.
