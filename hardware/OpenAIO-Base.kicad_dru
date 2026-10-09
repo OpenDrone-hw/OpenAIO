@@ -201,6 +201,15 @@
   (condition "A.memberOfFootprint('U23')")
   (severity ignore))
 
+# U27 (TLV75533 +3V3_ESC LDO, FB6 item 2): datasheet land pattern, same as U23.
+# Like U23 (c4ef88c) its diamond EP land is 0.42 mm per instance (library
+# 0.48), so pad-to-EP is 0.164 mm and passes the 0.15 SMD rule; only the
+# ganged mask opening inside the land needs this exception.
+(rule "Mask gang: U27 X2SON-4 land pattern"
+  (constraint bridged_mask)
+  (condition "A.memberOfFootprint('U27')")
+  (severity ignore))
+
 # DOY180N03T exposed pad (DFM-03, FB2b). The package EP is 2.15 x 2.75 mm
 # (DOY180N03T.pdf p.6); footprint lib:DOY180N03T_TDFN3333-8 carries it as the
 # rule area DOY_EP on the pad layer. The drain land covers only 70 % of it:

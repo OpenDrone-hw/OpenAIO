@@ -10048,7 +10048,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+3V3_ESC"
 			(at 29.21 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12928,7 +12928,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+3V3_ESC"
 			(at 92.71 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)

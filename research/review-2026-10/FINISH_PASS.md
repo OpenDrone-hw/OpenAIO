@@ -54,3 +54,21 @@ Phase nets are /1A to /4C. "No GND plane" means no GND fill on either neighbouri
   - Precheck of every new copper item against other-net copper.
   - The candidate was applied with pcbnew and checked with KiCad DRC (refill, parity), the DC solver and an island check.
   - The scripts are in the FB4b scratchpad (`fb4b/py/pair.py`, `build.py`, `usbm.py`, `fp.py`).
+
+## FB6 item 2 notes (battery-only `+3V3_ESC`, owner polish)
+
+U27 TLV75533 (IN = EN = +5V) feeds `+3V3_ESC` to the four AT32 VDD pins. The checks below were run on the committed boards after a zone refill.
+- **Checks:**
+  - Base DRC: 20 errors (clearance 15, copper_edge 4, via_dangling 1), with no new type. Parity: 70 non-missing.
+  - Core DRC: 27/7. ERC: 31. Unconnected: 0/0.
+  - +BATT: 0.577 mΩ, pw2 mean (0.573 at 1700c87). GND: 0.356 mΩ. +5V: 56.4 mV.
+- **SD card +3V3 feed:** Card1.4 runs to via (69.12, 69.30), then 8.2 mm of 0.15 mm track on In5 to via (76.55, 72.23), then to B.Cu.
+  - The In5 run stays inside the +10V pour outline, so it cuts the +10V pour and not +BATT.
+  - When it ran on In4 it cut the +BATT plane: +BATT measured 0.596 there, against 0.577 on In5, In2 or B.Cu, or with the feed removed.
+  - Owner: widen or shorten it.
+- **U25 INA186 +3V3 feed:** pad 3 at (68.08, 50.76) is fed by a chain of 0.15 mm segments on F, In1 and In2 (about 13.8 mm), through vias (67.44, 51.25), (71.71, 51.45) and (74.61, 51.78). Owner: shorten or widen it.
+- **C36 (+3V3 bypass for the SD card):** C36 is on B at (75.62, 73.20), about 8.5 mm along the rail from the SD feed via (69.12, 69.30). Within 8 mm of that via there was no free B spot. Owner: move it closer to Card1 when that area is reworked.
+- **Base identity:** "OpenAIO Base" and "r2 2026-10" are on **B.Fab only** (not fabricated), at their 1700c87 spot (83.4–84.5, 64.2).
+  - No B.Cu GND pour area fits 0.5 mm knockout text (the Core style, about 4.2 × 0.9 mm) at ≥ 0.3 mm from pads with the pour kept connected. The only fit is under the Rsense2 body.
+  - F.Silk under Card1 is not acceptable.
+  - Owner: place the identity on copper when an area is freed.
