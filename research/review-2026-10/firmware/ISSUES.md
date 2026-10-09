@@ -20,7 +20,7 @@
 |---|---|---|---|
 | I1 | MAJOR | SBUS cannot run on a PIO UART, so PU0RX on PIOUART0 does not work | **Worked around in `config.h`**: hardware UART0 moved to GPIO2/3 |
 | I2 | BLOCKER (LED strip) | LED-strip stage still inverting (Q2) at be152bb | **Fixed in `cdb8534`** (U26 TXU0101 + R115 200R, OE = VCCB = +5V) |
-| I3 | MAJOR | AT32 ESC MCUs powered from USB while gate-driver VCC = 0 V | Owner fix decided (battery-only LDO), **not yet in the netlist** |
+| I3 | MAJOR | AT32 ESC MCUs powered from USB while gate-driver VCC = 0 V | **Fixed in `05537a3`** (U27 TLV75533 on +5V makes `+3V3_ESC` for the AT32 VDD pins) |
 | I4 | MINOR | TLV7031 delay shifts the PIO OSD about 22 px right, with no firmware offset | Open |
 | I5 | MINOR | FC cannot reset or strap the ESP32-C3 | Open |
 | I6 | NIT | No USB VBUS detect | Open, harmless |
@@ -88,7 +88,9 @@ J44 "PIO_TX0" is on `/Pads/PIOUART0_TX` (GPIO2). PLAN.md decision B2 routed SH-6
 - **OE tied enabled.**
 - **Idle low at reset.** RP2350 pads reset with the pull-down on (PADS_BANK0 GPIOx.PDE reset = 1, RP2350.pdf p788), so GPIO8 idles low before firmware runs. Do not add a pull-up on the A side.
 
-## I3: AT32 ESC MCUs powered from USB while gate-driver VCC = 0 V (MAJOR, fix decided, not yet in the netlist)
+## I3: AT32 ESC MCUs powered from USB while gate-driver VCC = 0 V (MAJOR, fixed in `05537a3`)
+
+**Status: fixed in `05537a3`.** U27 TLV75533PDQNR (IN = EN = +5V, C110/C111 1 uF) makes `+3V3_ESC` for U13/U15/U17/U19 pin 17 VDD and their ESC-side pull-ups and decoupling. `+3V3` and the USB `+4v5` path no longer reach the ESC MCUs, so they are off without a battery. The text below describes the state before the fix.
 
 **Netlist:**
 - U13/U15/U17/U19 pin 17 VDD = `+3V3`.
