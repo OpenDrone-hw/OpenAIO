@@ -109,11 +109,14 @@
 (rule "NPCB core: copper to routed edge"
   (constraint edge_clearance (min 0.20mm)))
 
-# Reported under courtyards_overlap, a warning in the project file since R3-E.
-# Courtyards here are still the library's padded ones, so most hits are not
-# real; the real check is the fab-body gap (review lr_density.py).
-(rule "NPCB core: body to body (courtyard drawn on the body)"
-  (constraint courtyard_clearance (min 0.20mm)))
+# Courtyards are drawn at max(body, land) + 0.10 mm (FB5). With clearance 0
+# they may touch but not overlap, so courtyards_overlap (a warning in the
+# project file since R3-E) means two parts closer than 0.20 mm body to body
+# or land to land: the owner's 0.2 mm density target (FB8). NextPCB places
+# 0201 at 0.20-0.25 mm and 0402 at 0.25-0.30 mm pad spacing; the pairs closer
+# by land only are listed for FB7 (scratchpad fb8, courtyards_*.txt).
+(rule "NPCB core: body to body 0.20 mm (courtyards may touch)"
+  (constraint courtyard_clearance (min 0mm)))
 
 # Datasheet land pattern below the 0.15 mm pad-to-pad floor. Keep only after
 # NextPCB accepts a ganged mask on it (NEXTPCB.md 4.6, question 11).
