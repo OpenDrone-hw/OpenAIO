@@ -16151,17 +16151,6 @@
 		(sheetfile "core_interface.kicad_sch")
 		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
-		(fp_circle
-			(center 10.65 9.525)
-			(end 10.8 9.525)
-			(stroke
-				(width 0.15)
-				(type default)
-			)
-			(fill yes)
-			(layer "B.SilkS")
-			(uuid "4f7e1b50-6aeb-4843-836a-aae94575eb1c")
-		)
 		(fp_rect
 			(start -11 10)
 			(end 11 -10)
@@ -16194,6 +16183,17 @@
 			(fill yes)
 			(layer "B.Fab")
 			(uuid "2f0dfa39-1bee-42b7-bb89-e1a8d1c222af")
+		)
+		(fp_circle
+			(center 10.65 9.525)
+			(end 10.8 9.525)
+			(stroke
+				(width 0.15)
+				(type default)
+			)
+			(fill yes)
+			(layer "B.Fab")
+			(uuid "4f7e1b50-6aeb-4843-836a-aae94575eb1c")
 		)
 		(pad "1" smd circle
 			(at 9.75 8.75 180)
