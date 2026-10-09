@@ -19,7 +19,7 @@
 | ID | Severity | Topic | Status |
 |---|---|---|---|
 | I1 | MAJOR | SBUS cannot run on a PIO UART, so PU0RX on PIOUART0 does not work | **Worked around in `config.h`**: hardware UART0 moved to GPIO2/3 |
-| I2 | BLOCKER (LED strip) | LED-strip stage still inverting (Q2) at be152bb | Owner fix decided (TXU0101), **not yet in the netlist** |
+| I2 | BLOCKER (LED strip) | LED-strip stage still inverting (Q2) at be152bb | **Fixed in `cdb8534`** (U26 TXU0101 + R115 200R, OE = VCCB = +5V) |
 | I3 | MAJOR | AT32 ESC MCUs powered from USB while gate-driver VCC = 0 V | Owner fix decided (battery-only LDO), **not yet in the netlist** |
 | I4 | MINOR | TLV7031 delay shifts the PIO OSD about 22 px right, with no firmware offset | Open |
 | I5 | MINOR | FC cannot reset or strap the ESP32-C3 | Open |
@@ -70,6 +70,8 @@ J44 "PIO_TX0" is on `/Pads/PIOUART0_TX` (GPIO2). PLAN.md decision B2 routed SH-6
 **Board fix (optional, no electrical change):** relabel J44/J45 as "TX0/RX0 (SBUS)" and J48/J49 as "PTX/PRX", or rename the nets to match.
 
 ## I2: LED-strip stage still inverting at be152bb (BLOCKER for the LED strip until the planned change lands)
+
+**Status: fixed in `cdb8534`.** Q2/R14 are gone. GPIO8 drives U26 TXU0101DRYR A (VCCA = +3.3V); BY drives `LED_STRIP` through R115 200R. OE = VCCB = +5V, so the stage is always enabled and non-inverting. No pull-up on the A side. The text below describes be152bb.
 
 **Netlist:**
 - Q2 AP1606 (N-FET): G = `/RP2354A/LED_STRIP_L` (U2.12, GPIO8), S = GND, D = `LED_STRIP`.
