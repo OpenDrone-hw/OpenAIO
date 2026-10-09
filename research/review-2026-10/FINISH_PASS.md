@@ -72,3 +72,14 @@ U27 TLV75533 (IN = EN = +5V) feeds `+3V3_ESC` to the four AT32 VDD pins. The che
   - No B.Cu GND pour area fits 0.5 mm knockout text (the Core style, about 4.2 × 0.9 mm) at ≥ 0.3 mm from pads with the pour kept connected. The only fit is under the Rsense2 body.
   - F.Silk under Card1 is not acceptable.
   - Owner: place the identity on copper when an area is freed.
+
+## FB8a notes (T0 courtyards, T1 USB exit)
+
+- **Courtyard rule:** the DRU courtyard clearance is now 0 on both boards (courtyards touch, not overlap), so `courtyards_overlap` means two parts closer than 0.20 mm body or land. Pair list with classes: `fb8/courtyard_classes_fb7.txt`.
+- **USB 2 (J90 entry), FB8a finding: the /ESC1/FBCOMMON via at (73.68, 65.02) has no other site.** R51.1 (B, 72.57, 65.30) is boxed in:
+  - On F, J90.28 GND land sits above it, so a via-in-pad is not possible.
+  - On B, R52.1 GND is to the north, R53.1 (/1C via-in-pad at 72.58, 65.88) to the south, R51.2 FBC to the west, and the U15-PA14 via (73.23, 65.76) with U15.22 to the east.
+  - The only exit is the present north-east one, and it ends inside the 28/29 gap. The /1B track (R50.1 to via 73.78, 63.525) blocks a B link north to R48.1 along x ≈ 73.04.
+  - Every through-via site in x 73.0–74.0, y 63.4–65.4 sits in the pair's approach to the gap. The nearest free site, (73.275, 66.35) with a 0.09 mm margin, is unreachable on B because of the PA14 via.
+  - Past the gap, the pair has 0.748 mm between J90.29 and the U15-PA13 via (73.87, 66.17). A 0.14/0.15 pair at 0.147 mm clearance needs 0.724 mm.
+  - **Fix needs a part move:** shift the ESC1 FB divider column R48–R53, or move U15 with its PA13/PA14 vias by about 0.3 mm east. Then route both USB tracks through the gap.
