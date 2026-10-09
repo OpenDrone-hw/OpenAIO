@@ -60,7 +60,20 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "pth_inside_courtyard|88150000|48160000|2a2f0938-87e2-4c1a-98f0-1280b5582b7f|05eb81a9-750d-46a8-95ea-ebe5dd1b5dfa",
+          "X1 owner placement (d81e559): U24.11 NE grommet hole (3.0 drill) vs Q15 courtyard, courtyard 0.02 mm into the drill, Q15 body/land outside the drill. Owner item."
+        ],
+        [
+          "pth_inside_courtyard|62650000|48160000|b71f352c-e744-4f47-9c47-9a69e5aa033c|7acd7b70-a2a0-4635-8207-c90e3473420a",
+          "X2 owner placement (d81e559): U24.11 NW grommet hole (3.0 drill) vs USB1 courtyard, courtyard 0.19 mm into the drill. Owner item."
+        ],
+        [
+          "npth_inside_courtyard|63100000|52620000|a952b81a-86fc-4c80-83fd-bb42436521ae|cc0b2979-c774-47d8-a67d-ad050f7ca3a4",
+          "X3 intended (R3-2b turned shunt): USB1 0.6 mm locating-peg NPTH under the B-side Rsense2 body; the peg is ~0.8 mm long in a 1.6 mm board and does not reach Rsense2; no copper within 0.20 mm of the hole."
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -78,10 +91,10 @@
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
-        "footprint_filters_mismatch": "ignore",
+        "footprint_filters_mismatch": "warning",
         "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
-        "footprint_type_mismatch": "ignore",
+        "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_to_hole": "error",
         "holes_co_located": "warning",
@@ -100,9 +113,9 @@
         "missing_tuning_profile": "warning",
         "net_conflict": "warning",
         "nonmirrored_text_on_back_layer": "warning",
-        "npth_inside_courtyard": "ignore",
+        "npth_inside_courtyard": "error",
         "padstack": "warning",
-        "pth_inside_courtyard": "ignore",
+        "pth_inside_courtyard": "error",
         "shorting_items": "error",
         "silk_edge_clearance": "error",
         "silk_over_copper": "error",
@@ -117,12 +130,12 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
-        "track_not_centered_on_via": "ignore",
+        "track_not_centered_on_via": "error",
         "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
-        "tuning_profile_track_geometries": "ignore",
+        "tuning_profile_track_geometries": "error",
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "error",
