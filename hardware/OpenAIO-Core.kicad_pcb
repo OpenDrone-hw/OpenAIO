@@ -16384,7 +16384,7 @@
 	(footprint "Resistor_SMD:R_0201_0603Metric"
 		(layer "F.Cu")
 		(uuid "f8e79cef-4001-48ac-b121-b71dba6d9873")
-		(at 112.3 60.97)
+		(at 112.3 60.99)
 		(descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R115"
@@ -24735,7 +24735,7 @@
 		(uuid "cdde5da3-05ac-48ca-9ede-085ff6f7c814")
 	)
 	(segment
-		(start 112.62 60.97)
+		(start 112.62 60.99)
 		(end 112.62 61.35)
 		(width 0.15)
 		(layer "F.Cu")
@@ -25264,7 +25264,7 @@
 	)
 	(segment
 		(start 111.97 60.435)
-		(end 111.98 60.97)
+		(end 111.98 60.99)
 		(width 0.1)
 		(layer "F.Cu")
 		(net "Net-(U26-BY)")
