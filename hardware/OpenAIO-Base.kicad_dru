@@ -274,3 +274,25 @@
   (condition "A.intersectsArea('Core footprint') && (A.Visible || A.Type == 'Graphic')")
   (constraint disallow text graphic))
 
+# USB D+/D- (FB8c): limits set to what the FB8b route (USB1 -> J90, accepted
+# compromise) achieves. Coupled run gap 0.141-0.298. Widths as routed: F 0.14
+# with 0.16-0.20 pad stubs, In2 0.12. The USB1 pad escape (F.Cu stubs joining
+# A6/B6 and A7/B7, gap 0.34) is its own group: KiCad groups pair items by the
+# matching rule, so the escape gets its own gap and uncoupled limits.
+(rule "USB: D+/D- diff pair gap and uncoupled length"
+  (condition "A.NetName == 'USB_D+' || A.NetName == 'USB_D-'")
+  (constraint diff_pair_gap (min 0.14mm) (opt 0.15mm) (max 0.30mm))
+  (constraint diff_pair_uncoupled (max 9.9mm)))
+(rule "USB: D+/D- USB1 pad escape"
+  (layer F.Cu)
+  (condition "(A.NetName == 'USB_D+' || A.NetName == 'USB_D-') && A.intersectsCourtyard('USB1')")
+  (constraint diff_pair_gap (min 0.14mm) (max 0.35mm))
+  (constraint diff_pair_uncoupled (max 1.2mm)))
+(rule "USB: D+/D- track width, outer"
+  (layer outer)
+  (condition "A.NetName == 'USB_D+' || A.NetName == 'USB_D-'")
+  (constraint track_width (min 0.14mm) (opt 0.14mm) (max 0.20mm)))
+(rule "USB: D+/D- track width, inner"
+  (layer inner)
+  (condition "A.NetName == 'USB_D+' || A.NetName == 'USB_D-'")
+  (constraint track_width (min 0.12mm) (opt 0.12mm) (max 0.12mm)))
