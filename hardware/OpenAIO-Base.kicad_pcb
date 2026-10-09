@@ -360,6 +360,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "a66e5b5e-48e2-4393-a967-c8647d003ee5")
+		)
 		(fp_line
 			(start 1.65 1.65)
 			(end 1.65 -1.65)
@@ -814,6 +826,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "b436f01d-e3a7-408c-bac5-3e41fb4d0228")
+		)
 		(fp_line
 			(start -1.65 1.65)
 			(end 1.65 1.65)
@@ -1184,6 +1208,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.200001 -0.900001) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.200001 0.900001)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "4419ce38-e8a0-4eda-9301-7ad6df372d8e")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 315)
 			(unlocked yes)
@@ -1276,6 +1312,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.200001 -0.900001) (xy 1.200001 -0.900001) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "be73a587-3606-468d-b191-1c98f0698a15")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 45)
 			(unlocked yes)
@@ -1452,6 +1500,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.799999) (xy -1.95 1.799999)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "398ba86d-6a7e-4b6d-b7df-ca81cf9b7a48")
+		)
 		(fp_line
 			(start -1.65 -0.825)
 			(end -1.65 1.65)
@@ -1906,6 +1966,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.949999 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.949999 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "020f1e7e-1857-4d08-8e00-03add8ef47b1")
+		)
 		(fp_line
 			(start 1.65 -1.65)
 			(end -0.825 -1.65)
@@ -2308,6 +2380,18 @@
 		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.655433 -1.6) (xy 1.65 -1.6) (xy 1.65 1.655433) (xy -1.655433 1.655433)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "217b5af0-0725-4654-85bb-7364f92b64ab")
+		)
 		(fp_circle
 			(center -1.5 1.5)
 			(end -1.47 1.5)
@@ -2664,7 +2748,7 @@
 		(path "/8d4437a1-0938-4f9c-9171-98b1cc307271")
 		(sheetname "/")
 		(sheetfile "OpenAIO.kicad_sch")
-		(attr through_hole exclude_from_pos_files exclude_from_bom)
+		(attr through_hole exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -17.47 -2.85)
@@ -4583,6 +4667,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "df7ba75d-cda2-430f-934f-69457c03bf13")
+		)
 		(fp_line
 			(start 1.65 -1.65)
 			(end -0.825 -1.65)
@@ -5037,6 +5133,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "bd6f4626-e354-4a24-954c-d75d3ef0c982")
+		)
 		(fp_line
 			(start -1.65 1.65)
 			(end 1.65 1.65)
@@ -5978,6 +6086,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.200001 0.900001) (xy -1.200001 0.900001)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "058de9e5-7cf0-493d-bd18-a2b10f0c86c6")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 225)
 			(unlocked yes)
@@ -6100,6 +6220,18 @@
 		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -2.095 -1.96) (xy 2.095 -1.96) (xy 2.095 1.384999) (xy -2.095 1.384999)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "05d285e6-8aab-4d5d-9a75-03b12c07d1d8")
+		)
 		(fp_circle
 			(center 1.5 0.79)
 			(end 1.53 0.79)
@@ -6313,6 +6445,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "ef272567-0b02-42d6-abc7-7587148f47b1")
+		)
 		(fp_line
 			(start -1.65 1.65)
 			(end 1.65 1.65)
@@ -6683,6 +6827,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.200001 -0.899999) (xy 1.2 -0.9) (xy 1.200001 0.900001) (xy -1.200001 0.900001)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e02db8d8-b402-42a1-9024-e672e75cbe8c")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 225)
 			(unlocked yes)
@@ -6859,6 +7015,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "c41b0312-d516-48b2-96a4-d3d714609ed1")
+		)
 		(fp_line
 			(start 1.65 1.65)
 			(end 1.65 -1.65)
@@ -7421,6 +7589,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.200001 0.900001) (xy -1.200001 0.900001)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "f629a254-6631-4b56-bcad-4693bc40c17d")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 225)
 			(unlocked yes)
@@ -7545,6 +7725,18 @@
 		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.655433 -1.6) (xy 1.65 -1.6) (xy 1.65 1.655433) (xy -1.655433 1.655433)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "d40bc206-4772-40af-876f-3775a0e8824d")
+		)
 		(fp_circle
 			(center -1.5 1.5)
 			(end -1.47 1.5)
@@ -7660,6 +7852,18 @@
 		(sheetfile "fc_pads.kicad_sch")
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -0.7 -0.7) (xy 0.699999 -0.7) (xy 0.699999 0.7) (xy -0.7 0.7)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "44f6c987-c49e-4e16-8208-24018a68a09e")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.2 0)
 			(unlocked yes)
@@ -7807,6 +8011,18 @@
 			(fill no)
 			(layer "Cmts.User")
 			(uuid "2d173c34-1666-43fe-9d4f-00386769d651")
+		)
+		(fp_poly
+			(pts
+				(xy -5.995433 -2.959999) (xy 5.9 -2.959999) (xy 5.9 3.16) (xy -5.995433 3.16)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "d7fb5622-916e-4fdd-8839-9455e2628d57")
 		)
 		(fp_line
 			(start -1.14 -0.06)
@@ -8228,6 +8444,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.949999 -1.8) (xy 1.949999 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e8ea6a63-eda1-419b-a30f-5e4060b56b1d")
+		)
 		(fp_line
 			(start -1.65 -0.825)
 			(end -1.65 1.65)
@@ -8593,6 +8821,18 @@
 		(sheetfile "fc_pads.kicad_sch")
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -0.7 -0.7) (xy 0.699999 -0.7) (xy 0.699999 0.7) (xy -0.7 0.7)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "f480d7c7-7a83-45cc-a80a-44e899f34ead")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.2 0)
 			(unlocked yes)
@@ -8685,6 +8925,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.200001 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.200001 0.900001)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "d7fe88fe-d8fe-40b4-86ec-ce404bef6b93")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 315)
 			(unlocked yes)
@@ -8777,6 +9029,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.200001 -0.900001) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.200001 0.900001)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "b68f58e0-fb82-4cc7-b0a4-cf4d0498a3d4")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 315)
 			(unlocked yes)
@@ -8869,6 +9133,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.200001 -0.900001) (xy 1.200001 -0.900001) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "1790c2fd-0c09-4aa7-a949-96a44bf01b35")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 45)
 			(unlocked yes)
@@ -8961,6 +9237,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.199999 -0.900001) (xy 1.200001 -0.900001) (xy 1.200001 0.900001) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "3db90b23-53c3-4b4e-b636-5ea4b0818a21")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 135)
 			(unlocked yes)
@@ -9087,6 +9375,41 @@
 		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -4.6 -2.815) (xy 4.6 -2.815) (xy 4.6 2.94) (xy -4.6 2.94)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "9fef7093-bb01-4f34-9c2b-630e15eaf901")
+		)
+		(fp_circle
+			(center -2.5 -3.115001)
+			(end -2.35 -3.115001)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Fab")
+			(uuid "0bd1af5b-0e70-4598-bf56-e35558f14ac6")
+		)
+		(fp_poly
+			(pts
+				(xy -4.500001 -2.715) (xy 4.499999 -2.715) (xy 4.499999 2.84) (xy -4.500001 2.84)
+			)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "897fb1a7-8142-4239-b54c-abc3365aeb4f")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
 			(layer "F.Fab")
@@ -9258,6 +9581,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.200001 -0.900001) (xy 1.200001 -0.900001) (xy 1.2 0.9) (xy -1.200001 0.899999)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "9c89db2d-b536-4812-9a94-19311d0e5877")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 45)
 			(unlocked yes)
@@ -9787,6 +10122,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.949999 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.949999 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "30c32f2d-7084-46c4-959c-a3658d7cc32f")
+		)
 		(fp_line
 			(start 1.65 1.65)
 			(end 1.65 -1.65)
@@ -10241,6 +10588,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.949999 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.949999 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "9e2c7e39-36ac-4430-bc54-6a9e4de66d94")
+		)
 		(fp_line
 			(start 1.65 -1.65)
 			(end -0.825 -1.65)
@@ -10853,6 +11212,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.200001 -0.9) (xy 1.200001 0.900001) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "60708508-016f-4231-91e2-07d611909e01")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 135)
 			(unlocked yes)
@@ -10945,6 +11316,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.200001 -0.900001) (xy 1.200001 0.900001) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "7840cf45-7f26-404a-aedb-ded316cac296")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 135)
 			(unlocked yes)
@@ -11121,6 +11504,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.949999 -1.8) (xy 1.949999 1.799999) (xy -1.95 1.799999)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "0c200c80-e47b-4add-bf16-0d5c46a90e49")
+		)
 		(fp_line
 			(start -1.65 -0.825)
 			(end -1.65 1.65)
@@ -11853,6 +12248,41 @@
 		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -2.265 -2.245) (xy 2.245 -2.245) (xy 2.245 2.254999) (xy -2.265 2.254999)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "00db0549-aa74-441a-aafc-bc79a151cbbf")
+		)
+		(fp_circle
+			(center -1.38 1.375)
+			(end -1.38 1.525)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "B.Fab")
+			(uuid "281a821b-1da5-44f6-9a8c-1ab2d6b808ce")
+		)
+		(fp_poly
+			(pts
+				(xy -2.01 -1.995001) (xy 1.99 -1.995) (xy 1.99 2.004999) (xy -2.01 2.004999)
+			)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "3a1f823d-2174-4b1d-b967-e3747f73eee2")
+		)
 		(pad "1" smd roundrect
 			(at -1.89 1.199873 270)
 			(size 0.55 0.2)
@@ -12625,6 +13055,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.199999 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.199999 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "4298ce0c-e22f-4634-ab93-3b0ed6091820")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 -2.5 0)
 			(unlocked yes)
@@ -14054,6 +14496,41 @@
 		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -2.265 -2.245) (xy 2.245 -2.245) (xy 2.245 2.255) (xy -2.265 2.255)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "596557c4-a975-4299-a9f9-27739c25e077")
+		)
+		(fp_circle
+			(center -1.38 1.375)
+			(end -1.38 1.525)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "B.Fab")
+			(uuid "49f205a2-0c09-4452-8273-7c24afccd945")
+		)
+		(fp_poly
+			(pts
+				(xy -2.01 -1.995) (xy 1.99 -1.995) (xy 1.99 2.005) (xy -2.01 2.005)
+			)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "12573031-2625-415b-9fdf-231901b613f3")
+		)
 		(pad "1" smd roundrect
 			(at -1.89 1.199873 270)
 			(size 0.55 0.2)
@@ -14602,6 +15079,28 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "11e5b21d-bd76-45dc-81dd-5ccd0c1fe24e")
+		)
+		(fp_line
+			(start -1.05 -0.9)
+			(end -1.05 0.9)
+			(stroke
+				(width 0.15)
+				(type default)
+			)
+			(layer "B.Fab")
+			(uuid "34a26c2b-a381-4be3-a11d-84f559bf55f3")
+		)
+		(fp_poly
+			(pts
+				(xy -1.4 -0.9) (xy 1.4 -0.9) (xy 1.4 0.9) (xy -1.4 0.9)
+			)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "6d299fb1-8a99-41bb-820d-6bbafce0e188")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
@@ -16832,6 +17331,18 @@
 			(layer "Cmts.User")
 			(uuid "7f20313c-b99e-44bd-9645-48c2ed97ebc7")
 		)
+		(fp_poly
+			(pts
+				(xy -2.49731 -2.49731) (xy 2.49731 -2.49731) (xy 2.49731 2.49731) (xy -2.49731 2.49731)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "be1e53ea-1477-4186-8804-bc44b49dbddd")
+		)
 		(fp_circle
 			(center -2 2)
 			(end -1.97 2)
@@ -18158,6 +18669,18 @@
 		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -2.684345 -2.284999) (xy 2.275 -2.284999) (xy 2.275 2.275) (xy -2.684345 2.275)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "a108918d-3358-42c8-8354-f3e80bcb85eb")
+		)
 		(fp_circle
 			(center -2.388113 1.882906)
 			(end -2.288037 1.882906)
@@ -22398,6 +22921,18 @@
 			(layer "Cmts.User")
 			(uuid "b311fa1d-fbd2-49cf-aa46-7925484f8040")
 		)
+		(fp_poly
+			(pts
+				(xy -1.605433 -1.785) (xy 1.314999 -1.785) (xy 1.314999 1.785) (xy -1.605433 1.785)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "55d6bbf8-91df-4d1c-b6b1-e9da5b87251c")
+		)
 		(fp_circle
 			(center -1.45 -1.45)
 			(end -1.42 -1.45)
@@ -23433,6 +23968,41 @@
 		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -2.265 -2.244999) (xy 2.245 -2.244999) (xy 2.245 2.255) (xy -2.265 2.255)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "b8b4b8f9-52f3-40c6-987b-26bcee72f71e")
+		)
+		(fp_circle
+			(center -1.38 1.375)
+			(end -1.38 1.225)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "B.Fab")
+			(uuid "8b00d1ed-b36d-4596-9b92-e70750fb981f")
+		)
+		(fp_poly
+			(pts
+				(xy -2.01 -1.994999) (xy 1.99 -1.995) (xy 1.99 2.005001) (xy -2.01 2.005001)
+			)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "f94ca728-cf27-4095-9548-2c4d63ba93ca")
+		)
 		(pad "1" smd roundrect
 			(at -1.89 1.199873 90)
 			(size 0.55 0.2)
@@ -24063,6 +24633,18 @@
 		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -2.684345 -2.285) (xy 2.275 -2.285) (xy 2.275 2.275) (xy -2.684345 2.275)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "2f8ccea6-dfc5-4b4b-a907-366617e33cc3")
+		)
 		(fp_circle
 			(center -2.388113 1.882906)
 			(end -2.288037 1.882906)
@@ -25978,6 +26560,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.800001) (xy 1.95 -1.800001) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "e32f5054-ea53-415b-8106-118a28e58bdc")
+		)
 		(fp_line
 			(start -1.65 -1.65)
 			(end 1.65 -1.65)
@@ -26554,6 +27148,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.199999 -0.899999) (xy 1.2 -0.899999) (xy 1.2 0.9) (xy -1.199999 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "6196942c-cc57-4e09-b7aa-a816a408d70b")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 -2.5 0)
 			(unlocked yes)
@@ -27904,6 +28510,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.799999) (xy -1.95 1.799999)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "6b34a814-222c-4814-baa8-30b12fc1136b")
+		)
 		(fp_line
 			(start 1.65 -1.65)
 			(end 1.65 1.65)
@@ -28567,6 +29185,29 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "d5f02ce3-3715-4b67-8b9b-a9f345453714")
+		)
+		(fp_circle
+			(center -4.284 -0.233999)
+			(end -4.284 -0.342)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "B.Fab")
+			(uuid "07aebd23-cd55-47d1-a567-ee855ea954a0")
+		)
+		(fp_poly
+			(pts
+				(xy -4.5 -0.45) (xy 4.5 -0.45) (xy 4.5 0.45) (xy -4.5 0.45)
+			)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "b40bf7dd-cc90-43f6-b1e2-4a1d6b87cb37")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
@@ -33669,6 +34310,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.950001 -1.8) (xy 1.950001 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "2d3785ee-29c2-4376-8d83-5f62696d3462")
+		)
 		(fp_line
 			(start 1.65 -1.65)
 			(end 1.65 1.65)
@@ -35050,6 +35703,28 @@
 			)
 			(layer "B.CrtYd")
 			(uuid "a4240459-8e67-45b0-9eaf-611fef968e1c")
+		)
+		(fp_line
+			(start -1.05 -0.9)
+			(end -1.05 0.9)
+			(stroke
+				(width 0.15)
+				(type default)
+			)
+			(layer "B.Fab")
+			(uuid "77c70865-4eb6-4a2e-bdbd-974484205c20")
+		)
+		(fp_poly
+			(pts
+				(xy -1.4 -0.9) (xy 1.4 -0.9) (xy 1.4 0.9) (xy -1.4 0.9)
+			)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "96e8db65-0816-4660-8609-99ed3b3b8ecc")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 90)
@@ -37046,6 +37721,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.949999 -1.8) (xy 1.949999 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "7e69c9c6-520a-4447-a5a3-e49ebf35dfc0")
+		)
 		(fp_line
 			(start -1.65 -1.65)
 			(end 1.65 -1.65)
@@ -38483,6 +39170,18 @@
 			(layer "Cmts.User")
 			(uuid "f01642bf-61b2-4c59-8dbf-25433cf2c90f")
 		)
+		(fp_poly
+			(pts
+				(xy -1.605432 -1.785) (xy 1.315 -1.785) (xy 1.315 1.785) (xy -1.605432 1.785)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "efb7e495-bf0b-44cd-929d-82542da83e28")
+		)
 		(fp_circle
 			(center -1.45 -1.45)
 			(end -1.42 -1.45)
@@ -38942,6 +39641,18 @@
 		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -2.684345 -2.285) (xy 2.275 -2.285) (xy 2.275 2.275) (xy -2.684345 2.275)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "5d835e28-6108-4acc-985a-4153e375b3ed")
+		)
 		(fp_circle
 			(center -2.388113 1.882906)
 			(end -2.288037 1.882906)
@@ -40866,6 +41577,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.799999) (xy 1.95 -1.799999) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "279b00be-1d32-49f4-a141-ccfde7130cc8")
+		)
 		(fp_line
 			(start -0.825 1.65)
 			(end -1.65 0.825)
@@ -43735,6 +44458,18 @@
 		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -2.684345 -2.285001) (xy 2.275 -2.285001) (xy 2.275 2.275) (xy -2.684345 2.275)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "ac31df31-1c39-425d-aad8-829e13d44f8b")
+		)
 		(fp_circle
 			(center -2.388113 1.882906)
 			(end -2.288037 1.882906)
@@ -44772,6 +45507,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "89304588-6e40-4a88-a022-780b76e9aff4")
+		)
 		(fp_line
 			(start 1.65 1.65)
 			(end -0.825 1.65)
@@ -52552,6 +53299,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.799999) (xy -1.95 1.799999)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "9396646f-2ab0-4a30-92bd-19e5a5f19833")
+		)
 		(fp_line
 			(start 1.65 -1.65)
 			(end 1.65 1.65)
@@ -53864,6 +54623,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.799999) (xy 1.95 -1.799999) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "1c7c37f7-c2d7-4806-b757-ba82ac79a9bf")
+		)
 		(fp_line
 			(start 1.65 1.65)
 			(end -0.825 1.65)
@@ -57504,6 +58275,41 @@
 		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -2.265 -2.245) (xy 2.244999 -2.245) (xy 2.244999 2.255) (xy -2.265 2.255)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "14aff188-595b-49e3-9dc4-c5bbabe1df2a")
+		)
+		(fp_circle
+			(center -1.38 1.375)
+			(end -1.38 1.225)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "B.Fab")
+			(uuid "902a2634-ab8e-4192-a6ff-bfe909ce1b5f")
+		)
+		(fp_poly
+			(pts
+				(xy -2.01 -1.995) (xy 1.99 -1.995) (xy 1.99 2.005) (xy -2.01 2.005)
+			)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "B.Fab")
+			(uuid "0cda773b-0f00-49f2-a21d-50e6a2684d4e")
+		)
 		(pad "1" smd roundrect
 			(at -1.89 1.199873 90)
 			(size 0.55 0.2)
@@ -60414,6 +61220,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.799999) (xy 1.95 -1.799999) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "22521416-e764-495f-87ce-9c89a992d819")
+		)
 		(fp_line
 			(start 1.65 1.65)
 			(end -0.825 1.65)
@@ -60880,6 +61698,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "001a17bd-df4e-4f1c-b492-995778dda4c0")
+		)
 		(fp_line
 			(start -0.825 1.65)
 			(end -1.65 0.825)
@@ -63490,6 +64320,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.949999 -1.8) (xy 1.949999 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "930f0cc9-056e-4dad-9a08-576fb06de175")
+		)
 		(fp_line
 			(start -1.65 -1.65)
 			(end 1.65 -1.65)
@@ -64471,6 +65313,18 @@
 		(sheetfile "esc_channel.kicad_sch")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.8) (xy 1.95 -1.8) (xy 1.95 1.8) (xy -1.95 1.8)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "B.CrtYd")
+			(uuid "a728c159-3cfe-429b-a7b2-efb0f96366ec")
+		)
 		(fp_line
 			(start -0.825 1.65)
 			(end -1.65 0.825)
@@ -98876,54 +99730,6 @@
 		)
 	)
 	(zone
-		(net "+BATT")
-		(layer "B.Cu")
-		(uuid "380cd363-476d-4603-9db5-fcd693168190")
-		(hatch edge 0.5)
-		(priority 61)
-		(connect_pads yes
-			(clearance 0.16)
-		)
-		(min_thickness 0.16)
-		(fill yes
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-			(island_removal_mode 0)
-		)
-		(polygon
-			(pts
-				(xy 58.35 57.9) (xy 62.3 57.9) (xy 62.3 55.127727) (xy 62.255711 55.150293) (xy 60.141031 51) (xy 58.35 51)
-			)
-		)
-		(filled_polygon
-			(layer "B.Cu")
-			(pts
-				(xy 60.143399 51.018482) (xy 60.163009 51.043135) (xy 62.204758 55.050294) (xy 62.211343 55.10393)
-				(xy 62.181911 55.149251) (xy 62.173869 55.154574) (xy 62.160129 55.162507) (xy 62.097665 55.224971)
-				(xy 62.053496 55.301473) (xy 62.053495 55.301476) (xy 62.030632 55.386804) (xy 62.030632 55.475143)
-				(xy 62.053495 55.560471) (xy 62.053496 55.560474) (xy 62.097665 55.636976) (xy 62.097666 55.636978)
-				(xy 62.160128 55.69944) (xy 62.16013 55.699441) (xy 62.236634 55.74361) (xy 62.241445 55.744899)
-				(xy 62.285711 55.775892) (xy 62.3 55.821207) (xy 62.3 55.951657) (xy 62.281518 56.002437) (xy 62.276864 56.007516)
-				(xy 62.27219 56.012189) (xy 62.214615 56.098357) (xy 62.214614 56.098358) (xy 62.1995 56.174346)
-				(xy 62.1995 56.425653) (xy 62.214614 56.501641) (xy 62.214615 56.501642) (xy 62.272188 56.587808)
-				(xy 62.276859 56.592478) (xy 62.299699 56.641453) (xy 62.3 56.648342) (xy 62.3 57.502159) (xy 62.281518 57.552939)
-				(xy 62.276861 57.55802) (xy 62.246116 57.588764) (xy 62.246114 57.588766) (xy 62.2095 57.677163)
-				(xy 62.2095 57.821) (xy 62.191018 57.87178) (xy 62.144218 57.8988) (xy 62.140464 57.899128) (xy 62.139584 57.9)
-				(xy 60.413258 57.9) (xy 60.362478 57.881518) (xy 60.357397 57.876861) (xy 60.269296 57.78876) (xy 60.230846 57.769169)
-				(xy 60.153433 57.729725) (xy 60.153429 57.729724) (xy 60.153426 57.729723) (xy 60.057318 57.714501)
-				(xy 60.05731 57.7145) (xy 60.057307 57.7145) (xy 60.057302 57.7145) (xy 59.492696 57.7145) (xy 59.414656 57.72686)
-				(xy 59.396567 57.729725) (xy 59.339698 57.7587) (xy 59.280703 57.78876) (xy 59.192603 57.876861)
-				(xy 59.143627 57.899699) (xy 59.136742 57.9) (xy 58.429 57.9) (xy 58.37822 57.881518) (xy 58.3512 57.834718)
-				(xy 58.35 57.821) (xy 58.35 57.57) (xy 58.35 52.4395) (xy 58.368482 52.38872) (xy 58.415282 52.3617)
-				(xy 58.429 52.3605) (xy 58.455594 52.3605) (xy 58.455598 52.360499) (xy 58.468994 52.360499) (xy 58.604328 52.333579)
-				(xy 58.60433 52.333578) (xy 58.731811 52.280774) (xy 58.846542 52.204113) (xy 58.944113 52.106542)
-				(xy 59.020774 51.991811) (xy 59.073579 51.864328) (xy 59.100499 51.728994) (xy 59.100499 51.715598)
-				(xy 59.1005 51.715593) (xy 59.1005 51.079) (xy 59.118982 51.02822) (xy 59.165782 51.0012) (xy 59.1795 51)
-				(xy 60.092619 51)
-			)
-		)
-	)
-	(zone
 		(net "/CSA+")
 		(layer "B.Cu")
 		(uuid "380cd363-476d-4603-9db5-fcd693168190")
@@ -98973,6 +99779,54 @@
 				(xy 64.362148 48.891058) (xy 64.366131 48.878612) (xy 64.399205 48.798767) (xy 64.435714 48.758925)
 				(xy 64.472191 48.75) (xy 65.4 48.75) (xy 65.4 47.679) (xy 65.418482 47.62822) (xy 65.465282 47.6012)
 				(xy 65.479 47.6) (xy 69.471 47.6)
+			)
+		)
+	)
+	(zone
+		(net "+BATT")
+		(layer "B.Cu")
+		(uuid "380cd363-476d-4603-9db5-fcd693168190")
+		(hatch edge 0.5)
+		(priority 61)
+		(connect_pads yes
+			(clearance 0.16)
+		)
+		(min_thickness 0.16)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 58.35 57.9) (xy 62.3 57.9) (xy 62.3 55.127727) (xy 62.255711 55.150293) (xy 60.141031 51) (xy 58.35 51)
+			)
+		)
+		(filled_polygon
+			(layer "B.Cu")
+			(pts
+				(xy 60.143399 51.018482) (xy 60.163009 51.043135) (xy 62.204758 55.050294) (xy 62.211343 55.10393)
+				(xy 62.181911 55.149251) (xy 62.173869 55.154574) (xy 62.160129 55.162507) (xy 62.097665 55.224971)
+				(xy 62.053496 55.301473) (xy 62.053495 55.301476) (xy 62.030632 55.386804) (xy 62.030632 55.475143)
+				(xy 62.053495 55.560471) (xy 62.053496 55.560474) (xy 62.097665 55.636976) (xy 62.097666 55.636978)
+				(xy 62.160128 55.69944) (xy 62.16013 55.699441) (xy 62.236634 55.74361) (xy 62.241445 55.744899)
+				(xy 62.285711 55.775892) (xy 62.3 55.821207) (xy 62.3 55.951657) (xy 62.281518 56.002437) (xy 62.276864 56.007516)
+				(xy 62.27219 56.012189) (xy 62.214615 56.098357) (xy 62.214614 56.098358) (xy 62.1995 56.174346)
+				(xy 62.1995 56.425653) (xy 62.214614 56.501641) (xy 62.214615 56.501642) (xy 62.272188 56.587808)
+				(xy 62.276859 56.592478) (xy 62.299699 56.641453) (xy 62.3 56.648342) (xy 62.3 57.502159) (xy 62.281518 57.552939)
+				(xy 62.276861 57.55802) (xy 62.246116 57.588764) (xy 62.246114 57.588766) (xy 62.2095 57.677163)
+				(xy 62.2095 57.821) (xy 62.191018 57.87178) (xy 62.144218 57.8988) (xy 62.140464 57.899128) (xy 62.139584 57.9)
+				(xy 60.413258 57.9) (xy 60.362478 57.881518) (xy 60.357397 57.876861) (xy 60.269296 57.78876) (xy 60.230846 57.769169)
+				(xy 60.153433 57.729725) (xy 60.153429 57.729724) (xy 60.153426 57.729723) (xy 60.057318 57.714501)
+				(xy 60.05731 57.7145) (xy 60.057307 57.7145) (xy 60.057302 57.7145) (xy 59.492696 57.7145) (xy 59.414656 57.72686)
+				(xy 59.396567 57.729725) (xy 59.339698 57.7587) (xy 59.280703 57.78876) (xy 59.192603 57.876861)
+				(xy 59.143627 57.899699) (xy 59.136742 57.9) (xy 58.429 57.9) (xy 58.37822 57.881518) (xy 58.3512 57.834718)
+				(xy 58.35 57.821) (xy 58.35 57.57) (xy 58.35 52.4395) (xy 58.368482 52.38872) (xy 58.415282 52.3617)
+				(xy 58.429 52.3605) (xy 58.455594 52.3605) (xy 58.455598 52.360499) (xy 58.468994 52.360499) (xy 58.604328 52.333579)
+				(xy 58.60433 52.333578) (xy 58.731811 52.280774) (xy 58.846542 52.204113) (xy 58.944113 52.106542)
+				(xy 59.020774 51.991811) (xy 59.073579 51.864328) (xy 59.100499 51.728994) (xy 59.100499 51.715598)
+				(xy 59.1005 51.715593) (xy 59.1005 51.079) (xy 59.118982 51.02822) (xy 59.165782 51.0012) (xy 59.1795 51)
+				(xy 60.092619 51)
 			)
 		)
 	)

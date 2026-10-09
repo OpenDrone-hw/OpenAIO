@@ -635,6 +635,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e50efc76-32bf-4005-925f-3587c6e89a9d")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 0)
 			(unlocked yes)
@@ -727,6 +739,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "79dd13af-1b81-437b-86f8-9bb567c8f074")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 0)
 			(unlocked yes)
@@ -1312,6 +1336,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "be926aeb-c9ae-4827-a5dd-a0e95e3cd04a")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 180)
 			(unlocked yes)
@@ -1404,6 +1440,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.899999) (xy -1.2 0.899999)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "3ab3b8fd-78ac-42f7-92fe-8474ea29961f")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 90)
 			(unlocked yes)
@@ -1496,6 +1544,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "73e5f89b-b6c3-4dde-a62d-54da9986df20")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 0)
 			(unlocked yes)
@@ -2537,6 +2597,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.899999) (xy 1.2 -0.899999) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "d06307fd-348e-475d-911c-a5aeca5574bd")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 270)
 			(unlocked yes)
@@ -2629,6 +2701,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "6277e2fc-4982-4504-9111-157a7be5ad70")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 90)
 			(unlocked yes)
@@ -3380,6 +3464,29 @@
 			)
 			(layer "F.CrtYd")
 			(uuid "1952fb71-28dd-4085-a60e-ac4de9570ca4")
+		)
+		(fp_circle
+			(center -0.218004 -0.207988)
+			(end -0.122004 -0.207988)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Fab")
+			(uuid "1cd80a49-372f-45c6-9b86-b878486741f4")
+		)
+		(fp_poly
+			(pts
+				(xy -0.410004 -0.399988) (xy 0.389996 -0.399988) (xy 0.389996 0.400012) (xy -0.410004 0.400012)
+			)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "3e1c51f5-36ce-4f8f-ba98-07126a33b61c")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
@@ -5520,6 +5627,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e3f13ddd-ae42-41bf-b28e-fd0776c8f6d8")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 0)
 			(unlocked yes)
@@ -5612,6 +5731,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.899999) (xy 1.2 -0.899999) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "63c7c98a-06c9-447d-9a5d-c42f5a148d48")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 270)
 			(unlocked yes)
@@ -6896,6 +7027,18 @@
 		(solder_paste_margin_ratio 0)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -0.465432 -0.25) (xy 0.4 -0.25) (xy 0.4 0.315434) (xy -0.465432 0.315434)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "b06119d3-f025-4bff-b3b5-b0cb1e5b4001")
+		)
 		(fp_circle
 			(center -0.31 0.16)
 			(end -0.28 0.16)
@@ -7398,6 +7541,18 @@
 			(layer "Cmts.User")
 			(uuid "e6249262-42ce-4447-a439-19720a17f6bc")
 		)
+		(fp_poly
+			(pts
+				(xy -1.57 -1.32) (xy 1.655433 -1.32) (xy 1.655433 1.405433) (xy -1.57 1.405433)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "5d88f96c-6632-4867-b9dc-430f2dd20ae2")
+		)
 		(fp_circle
 			(center 1.5 1.25)
 			(end 1.53 1.25)
@@ -7672,6 +7827,18 @@
 			(fill no)
 			(layer "Cmts.User")
 			(uuid "9bc275f3-02bd-4558-893b-bf3ace7c1a89")
+		)
+		(fp_poly
+			(pts
+				(xy -0.615 -0.445) (xy 0.665433 -0.445) (xy 0.665433 0.455433) (xy -0.615 0.455433)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "b693182d-441b-4e73-82d8-6c5009606988")
 		)
 		(fp_circle
 			(center 0.51 0.3)
@@ -8435,6 +8602,29 @@
 			)
 			(layer "F.CrtYd")
 			(uuid "13fb4c95-cf01-484d-8db7-36fa69ed4757")
+		)
+		(fp_circle
+			(center -2.51 -2.51)
+			(end -2.66 -2.51)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Fab")
+			(uuid "ec899b71-caa9-4ec8-b856-0d0f57693491")
+		)
+		(fp_poly
+			(pts
+				(xy -3.5 -3.5) (xy 3.5 -3.5) (xy 3.5 3.5) (xy -3.5 3.5)
+			)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "62f2c2f6-c1fa-40a3-ad45-023e5209182c")
 		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
@@ -9211,6 +9401,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.899999) (xy -1.2 0.899999)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "72cad94c-4597-4810-a629-16491a7e7cf1")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 90)
 			(unlocked yes)
@@ -9303,6 +9505,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.900001) (xy -1.2 0.900001)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "afdc482b-c2ff-4ce3-a5fd-59ae20ef53e0")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 180)
 			(unlocked yes)
@@ -9634,6 +9848,18 @@
 			(layer "Cmts.User")
 			(uuid "1cbcffe9-685e-474f-876e-eb7365e9c2bd")
 		)
+		(fp_poly
+			(pts
+				(xy -0.615 -0.445) (xy 0.665433 -0.445) (xy 0.665433 0.455433) (xy -0.615 0.455433)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "503f004f-44d6-42c3-8dc3-559b7141a647")
+		)
 		(fp_circle
 			(center 0.51 0.3)
 			(end 0.54 0.3)
@@ -9955,6 +10181,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "4bb86ec5-87ab-4187-9795-918006a189e7")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 0)
 			(unlocked yes)
@@ -10225,6 +10463,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "42cf817e-cd25-47d3-b677-bce7c1f1ba65")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 0)
 			(unlocked yes)
@@ -10509,6 +10759,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "2a0c1835-c0c3-4298-bfd2-028dbb1ffbfc")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 180)
 			(unlocked yes)
@@ -10989,6 +11251,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.899999) (xy 1.2 -0.899999) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "994c2a86-8da8-4944-8bcb-5db046fc42fa")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 270)
 			(unlocked yes)
@@ -11113,6 +11387,18 @@
 		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.155433) (xy 1.95 -1.155433) (xy 1.95 0.82) (xy -1.95 0.82)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "d1131330-2d57-40aa-bc9c-a0f6d64da65c")
+		)
 		(fp_circle
 			(center -1.75 -1)
 			(end -1.72 -1)
@@ -11251,6 +11537,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.899999) (xy 1.2 -0.899999) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e76eadf4-b296-4f77-b24e-1fe850668bd7")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 270)
 			(unlocked yes)
@@ -11386,6 +11684,18 @@
 			(layer "Cmts.User")
 			(uuid "84f4543e-61d1-42fb-9e5e-1502c0ee06f0")
 		)
+		(fp_poly
+			(pts
+				(xy -1.6 -0.9) (xy 1.6 -0.9) (xy 1.6 0.955433) (xy -1.6 0.955433)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "9171ddc9-3f72-4f5b-9451-026d89a3c091")
+		)
 		(fp_circle
 			(center -1 0.8)
 			(end -0.97 0.8)
@@ -11506,6 +11816,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "5bb76f73-d0db-4c68-ad17-54f5461eeffe")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 0)
 			(unlocked yes)
@@ -11598,6 +11920,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.899999) (xy -1.2 0.899999)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "e3829c81-9d48-4410-becb-cfe66317025d")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 90)
 			(unlocked yes)
@@ -14098,6 +14432,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.899999) (xy 1.2 -0.899999) (xy 1.2 0.9) (xy -1.2 0.9)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "ad5b3194-7b6a-422f-a3e9-9783fda1cb44")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 270)
 			(unlocked yes)
@@ -14232,6 +14578,18 @@
 			(fill no)
 			(layer "Cmts.User")
 			(uuid "b2fc5526-d077-4775-8963-32a71537dd36")
+		)
+		(fp_poly
+			(pts
+				(xy -1.95 -1.349999) (xy 1.95 -1.349999) (xy 1.95 1.605433) (xy -1.95 1.605433)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "57190a9b-9b9d-426e-b162-562016b3a30f")
 		)
 		(fp_circle
 			(center 1.4 1.45)
@@ -14619,6 +14977,18 @@
 			(fill no)
 			(layer "Cmts.User")
 			(uuid "c1a65f44-5b75-4c1f-be19-7bd1f2d45a84")
+		)
+		(fp_poly
+			(pts
+				(xy -1.405433 -1.125) (xy 1.375 -1.125) (xy 1.375 1.155433) (xy -1.405433 1.155433)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "5d87af77-22af-4365-9266-d1ef16977c84")
 		)
 		(fp_circle
 			(center -1.25 1)
@@ -15735,6 +16105,18 @@
 		)
 		(attr smd exclude_from_bom dnp)
 		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.2 -0.9) (xy 1.2 -0.9) (xy 1.2 0.900001) (xy -1.2 0.900001)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "ec525a4e-e2dc-48c9-9627-760b42185359")
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 2.5 180)
 			(unlocked yes)
@@ -15871,6 +16253,18 @@
 			(fill no)
 			(layer "Cmts.User")
 			(uuid "0e221f36-0593-4ba8-a278-918259422afe")
+		)
+		(fp_poly
+			(pts
+				(xy -2.165376 -2.19) (xy 2.17 -2.19) (xy 2.17 2.19) (xy -2.165376 2.19)
+			)
+			(stroke
+				(width 0.05)
+				(type default)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "ed62cf49-62ef-4be8-bc41-1e3393d2f2e5")
 		)
 		(fp_line
 			(start -0.57 -0.59)
