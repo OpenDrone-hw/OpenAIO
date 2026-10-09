@@ -356,3 +356,21 @@ Base F d J90 Q23 13.9651 10.55 0.0 2.0 fab-hull/fab-poly noncomp
 Base F d J90 Q25 6.1267 4.395 0.0 1.822 fab-hull/fab-poly noncomp
 Base F d J90 R34 0.9591 0.18 0.0 1.834 fab-hull/fab-hull noncomp
 Base F d Q21 J90 13.9651 10.55 0.0 2.109 fab-poly/fab-hull noncomp
+#
+# FB8e status of class b (re-measured on body = fab body, lr_common.body_envelope; target body gap >= 0.20):
+# FIXED (nudges, track ends dragged, DRC/unconnected/power unchanged):
+#   Base B C79-C36 0.18 -> 0.205 (C36 -0.018 x, C79 +0.007 x)
+#   Base B D2-R19, R20-D2 0.055 -> 0.205 (D2 +0.15 x; D5 +0.105/+0.07 keeps D2-D5 0.205)
+#   Base B FID3-Q8 overlap 0.24 -> gap 0.205 (FID3 -0.10/+0.46; J16.1 +5V via moved out of the clear zone)
+#   Base B TP5-TP32 0.191 -> 0.21 (TP32 +0.02 x); U18-TP31 0.19 -> 0.205 (TP31 +0.01/+0.015)
+#   Base F L3-U25 0.115 -> 0.215 (U25 -0.10 y); C104-U25 0.15 -> 0.21 (C104 -0.16 y)
+#   Core F U26-R115 0.185 -> 0.205 (R115 +0.02 y)
+# NOT A BODY OVERLAP:
+#   Core F C34-U10: U10 has no fab body, and the name-LxW fallback took the wrong orientation. The real SOT-23-5 body
+#     (2.9 x 1.6, long side along the pin pitch) clears C34, which sits in the empty pin-6 slot, by about 0.30-0.37 mm.
+# FOR FB7 (cascade):
+#   Base F J41/J51-U12 0.44 overlap: the 1.2 mm VTX +10V/GND wire pads sit under the U12 SH-6 body (U12 may not move).
+#     To the west is Q13 (+BATT drain vias at x 74.22-74.42 and its body). The Q13-U12 space is 1.36 mm; a 1.2 mm pad
+#     needs 1.6. Fix: 1.0 mm pads, relocate the pads, or accept them as an either/or with U12.
+#   Core F J39/J40-FID1 0.155: the fiducial 2 mm clear zone sits between the VTX/GND wire pads (2.4 mm apart). The pad
+#     copper is 0.2 mm outside the mask opening. No placed body is involved. Fix: smaller fiducial (0.75/1.5) or move it.
