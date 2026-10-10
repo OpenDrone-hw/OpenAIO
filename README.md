@@ -22,7 +22,7 @@ those connectors are where builds fail.
 The parts are proven separately, so this is an integration problem rather than
 a research one. The only 6S AIO with onboard serial ELRS on the market is
 closed and digital-only; an open one with analog OSD and blackbox has a place,
-see the market research below.
+see the market research linked below.
 
 ## Specifications
 
@@ -61,8 +61,8 @@ The three designs this merges, all manufactured and flying:
 
 Research so far, reference rather than decisions:
 
-- [research/MARKET-RESEARCH-2026-06.md](research/MARKET-RESEARCH-2026-06.md): competing toothpick and whoop AIOs, June 2026
-- [research/ALTERNATIVES.md](research/ALTERNATIVES.md): ESC-stage part alternatives, gate driver and FET options, March 2026
+- [Market research](https://app.notion.com/p/3f5fe06764e1818e9158c512edd58138): competing toothpick and whoop AIOs, June 2026
+- [Part alternatives](https://app.notion.com/p/3f5fe06764e1819eade0dc5bfbfdff7c): ESC-stage part alternatives, gate driver and FET options, March 2026
 - The stitched design reset in August 2026 is in the git history before #9; reference for the thinking, not a design to continue from.
 
 ## Design questions
