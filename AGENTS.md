@@ -1,119 +1,22 @@
 # OpenAIO
 
-All-in-one board for toothpick-class FPV, 2-6S: 4x AM32 ESC, power, pads and
-ExpressLRS 2.4 GHz receiver on 25.5 x 25.5 mm, with the flight controller
-(MCU, IMU, baro, OSD, blackbox) on the shared OpenFC-Core module, reflowed onto
-this board as a 52 pad LGA (J1). The ESC and RX sheets come from OpenESC-20x20
-and OpenRX-Lite, the pads from OpenFC-Lite-Mini, wired on the root sheet.
+All-in-one board for toothpick-class FPV, 2-6S: 4x AM32 ESC, power, pads and ExpressLRS receiver, with the flight controller on the OpenFC-Core module.
 
-## Architecture
+Validate: `kicad-cli sch erc hardware/OpenAIO.kicad_sch && kicad-cli pcb drc --schematic-parity --refill-zones hardware/OpenAIO.kicad_pcb`
 
-One board. The flight controller is not designed here: it is the OpenFC-Core
-module, placed as J1 (`lib:OpenDrone-Core`, footprint
-`OpenDrone-Core_LGA_land`, 52 pads of 1.0 mm on a 2.0 mm grid, 15 x 15 mm)
-and reflowed onto the top side like any other part. Everything the core needs
-from this board crosses that land: `+4v5` and `+BATT` in, `MOTOR1..4` out to
-the four `esc_channel` sheets, `UART0`/`UART1` and `PIOUART0`/`PIOUART1` to
-the RX sheet and the pads, `CURR` from the current sense amplifier,
-`10V_ENABLE` to the power sheet, `BUZZER-`, `LED_STRIP`, `VIDEO_IN`/`OUT`,
-USB `D+`/`D-` to the Type-C. Pad names are the core's net names; the pin map
-and land are defined by the core's vendored symbol and footprint. They are not
-edited in this repo.
+## Boundaries
 
-## Voltage envelope
+- Sourcing (suppliers, prices, quotes, RFQs, contacts) never lives in OpenDrone repositories.
+- Never text-edit `.kicad_sch`, `.kicad_pcb` or `.kicad_dru`: use KiCad, or kicad-skip / the pcbnew API with KiCad closed. `.kicad_pro` is JSON and may be edited for metadata.
+- Agents write metadata fields only (MPN, Manufacturer, LCSC, Datasheet, text variables), never nets, wiring, routing, placement, footprint assignment or circuit values.
+- KiCad libraries stay project-local; import parts with `easyeda2kicad` only.
+- KiCad files do not merge: one person holds a board layout at a time.
 
-2S-6S, 6.0 to 25.2 V. The ceiling is the MOSFET: DOY180N03T is 30 V VDSS, the
-same part and the same NSG2065Q topology OpenESC-20x20 flies at 6S. The 40 V
-SP40N01GHNK that takes OpenESC-30x30 to 8S is PDFN-8L 5x6 and four channels of
-it do not fit on 25.5 mm, so 6S is the ceiling here, not 8S.
+## Board boundaries
 
-At the bottom of the range the +10V gate rail is not regulated: the buck runs
-in pass-through and the drivers see roughly +BATT, which at 2S is about 5.9 V,
-above the NSG2065Q 4.5 V UVLO and inside its 5-20 V supply range. The board
-runs, but gate drive is about half, so the continuous-current rating at 2S is
-lower than at 6S; neither figure is published without a measurement.
+- The `OpenDrone-Core` symbol and `OpenDrone-Core_LGA_land` footprint in `lib` are vendored from OpenFC-Core: never edit them here; move the core only by moving J1.
 
-## Layout rules
+## Pointers
 
-- Nothing may stand under J1 on the top side: the core's bottom is flat
-  copper on the land. Bottom side parts under it are fine.
-- J1 keeps every pad, unused ones stay open; delete pads per instance only for
-  routing room. Ground pads tie into the plane.
-- Move the core only by moving J1; never edit the footprint here.
-
-## Repo
-
-| | |
-|---|---|
-| Maintainer | @Just4Stan (Discord: juststan_) |
-| Status | See the `status-*` topic on the repo. Never written here. |
-| Designed in | KiCad 10 |
-| KiCad project | `hardware/OpenAIO.kicad_pro` |
-| Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_pads` (OpenFC-Lite-Mini), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite). The core is the symbol `lib:OpenDrone-Core`, J1, on the root |
-| Board | `hardware/OpenAIO.kicad_pcb`, 6 layers, 1.6 mm, 2 oz outer |
-| Core module | OpenFC-Core, one symbol and one footprint (`OpenDrone-Core_LGA_land`) vendored into `lib`; never edit them here |
-| Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib`. Seeded with the OpenFC-Lite-Mini local library so the copied sheets resolve; the lib tables also alias `components`, `4in1ESC` and `OpenRX-Shared` onto the catalogue for the same reason |
-| Shared library | `hardware/KiCad-Library/`, pinned submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), nickname `OpenDrone`; 3D models and exact component datasheets resolve through `OPENDRONE_LIB` |
-| Design rules | `hardware/OpenAIO.kicad_dru`: canonical block plus 2 oz outer copper (0.16 mm clearance and track) |
-| Fab config | `hardware/fabrication-toolkit-options.json` |
-| Board setup | 6 layers, 1.6 mm, 2 oz outer, 0.16 mm clearance and track, via 0.35 on 0.20 drill |
-| License | CERN-OHL-S-2.0 |
-
-## Environment
-
-```sh
-# schematic and board checks
-kicad-cli sch erc hardware/OpenAIO.kicad_sch
-kicad-cli pcb drc --schematic-parity --refill-zones hardware/OpenAIO.kicad_pcb
-
-# netlist, for scripted analysis
-kicad-cli sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/OpenAIO.kicad_sch
-```
-
-On macOS `kicad-cli` is at
-`/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, and `pcbnew` imports
-only under KiCad's bundled Python. Reusable scripts for renders, STEP export,
-and packaging art come from Incutec hardware tooling. The OpenDrone release
-standard is
-[RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md).
-Board-specific scripts, where a board has any, live in `hardware/tools/`.
-`KPY` is KiCad's bundled Python, on macOS
-`/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3`.
-
-## Rules
-
-Identical in every OpenDrone board repo. Do not edit here; edit the template.
-
-- **Never text-edit** `.kicad_sch`, `.kicad_pcb` or `.kicad_dru`. Use KiCad, or
-  kicad-skip / the pcbnew API for scripted changes. `.kicad_pro` is JSON and may
-  be edited directly for metadata.
-- **Metadata yes, connections no.** An agent may write BOM and documentation
-  fields (MPN, Manufacturer, LCSC, Cost, Datasheet, text variables). An agent
-  may not change nets, wiring, routing, placement, footprint assignment, or any
-  value that changes the circuit.
-- **Close KiCad before any write to a KiCad file.** KiCad caches library tables
-  at process start and overwrites files on save.
-- **Reuse before you draw.** Check the `OpenDrone` library and its
-  `PARTS-USED.md` first. If the part is there we have already sourced,
-  footprinted and shipped it, and its symbol links to the exact committed
-  datasheet: place it from `OpenDrone`. Draw a new part into `lib` only when
-  the catalogue has nothing that fits, imported with
-  `easyeda2kicad` from its LCSC number. Pulling a newer catalogue is a
-  deliberate, reviewed commit: `git submodule update --remote
-  hardware/KiCad-Library`, then DRC.
-- **One person holds a board layout at a time.** KiCad files do not merge. Say
-  on Discord that you are taking it. See [CONTRIBUTING.md](CONTRIBUTING.md).
-- **Run ERC and DRC before every pull request.** Existing approved findings
-  may remain; a new type or increased count must be reviewed before merge.
-  Commands are in Environment above.
-
-## By task
-
-Board-specific paths are in Environment above. `KPY` is KiCad's bundled
-Python named there.
-
-- Check the design: run the ERC and DRC commands in Environment before every pull request.
-- Add a part: place it from the `OpenDrone` library if `hardware/KiCad-Library/PARTS-USED.md` lists it; otherwise import it into `lib` with `$KPY <hardware-tooling>/hardware/kicad/import_part.py` (read `--help` first), KiCad closed.
-- Render the board for the README: `$KPY <hardware-tooling>/hardware/kicad/render_board.py hardware/OpenAIO.kicad_pcb --outdir images`, KiCad closed.
-- Analyse the netlist: export it with the netlist command in Environment, then read it with a script; never hand-write a second BOM.
-- Update the shared library: `git submodule update --remote hardware/KiCad-Library`, run DRC, commit as its own reviewed change.
+- Shared parts catalogue: `hardware/KiCad-Library/PARTS-USED.md`
+- Release standard: https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md
