@@ -1,10 +1,11 @@
 # OpenAIO
 
 All-in-one board for toothpick-class FPV, 2-6S: 4x AM32 ESC, power, pads and
-ExpressLRS 2.4 GHz receiver on 25.5 x 25.5 mm, with the flight controller
+ExpressLRS dual band (LR1121) receiver on 25.5 x 25.5 mm, with the flight controller
 (MCU, IMU, baro, OSD, blackbox) on the shared OpenFC-Core module, reflowed onto
-this board as a 52 pad LGA (J1). The ESC and RX sheets come from OpenESC-20x20
-and OpenRX-Lite, the pads from OpenFC-Lite-Mini, wired on the root sheet.
+this board as a 52 pad LGA (J1). The ESC sheet comes from OpenESC-20x20, the RX sheet
+(`esp32c3_lr1121_mono`: ESP32-C3FH4, LR1121, RFX2401C, SKY13373, one U.FL) from
+OpenRX-Mono, the pads from OpenFC-Lite-Mini, wired on the root sheet.
 
 ## Architecture
 
@@ -27,11 +28,36 @@ same part and the same NSG2065Q topology OpenESC-20x20 flies at 6S. The 40 V
 SP40N01GHNK that takes OpenESC-30x30 to 8S is PDFN-8L 5x6 and four channels of
 it do not fit on 25.5 mm, so 6S is the ceiling here, not 8S.
 
-At the bottom of the range the +10V gate rail is not regulated: the buck runs
-in pass-through and the drivers see roughly +BATT, which at 2S is about 5.9 V,
-above the NSG2065Q 4.5 V UVLO and inside its 5-20 V supply range. The board
-runs, but gate drive is about half, so the continuous-current rating at 2S is
-lower than at 6S; neither figure is published without a measurement.
+At the bottom of the range the +10V gate rail is not regulated. The 10 V buck
+(U8, LMR51430, FB divider for 9.85 V) drops out near 10.3 V input and runs in
+pass-through below that, so the drivers see roughly +BATT. At 2S (about 5.9 V
+at 3.0 V/cell, 8.4 V full) that is above the NSG2065Q UVLO (4.9 V max) but
+below its recommended VCC range of 8 to 20 V (datasheet section 8.5; an earlier
+revision of this file said 5 to 20 V). The board runs, but gate drive is
+reduced, so the continuous-current rating at 2S is lower than at 6S; neither
+figure is published without a measurement. The gate drive is outside the recommended
+range whenever +BATT is below about 10.3 V (all of 2S, and 3S below about 3.4 V
+per cell).
+
+## Battery lead
+
+- No reverse polarity protection: a reversed battery destroys the board.
+- Required: a 330 to 470 uF low-ESR 35 V capacitor at the battery lead, as
+  OpenESC-20x20 uses. The on-board bank is ceramic only; a hot-plugged 6S pack
+  can ring above the 30 V FETs and the 38 V buck absolute maximum, and a TVS
+  does not fix that.
+
+## Betaflight target settings
+
+| Item | Value | Source |
+|---|---|---|
+| Shunt | Rsense2 0.2 mOhm, INA186A3 gain 100 V/V = 20 mV/A | `hardware/OpenAIO.kicad_sch` |
+| `ibata_scale` | 200 (units of 0.1 mV/A) | 20 mV/A |
+| Current full scale | about 162 A | 3.3 V output span at 20 mV/A |
+| Zero offset | calibrate after assembly; up to about 0.25 A | INA186 datasheet |
+| Gate rail | off until PINIO/USER1 is set permanent ON for `10V_ENABLE` (J1 pad 23 through 100 k to U8 EN) | `fc_power` |
+| `CURR` | includes the 5 V buck input current (U9 is downstream of the shunt) | `fc_power` |
+| LED and 5 V pads | live only with a battery connected, not from USB | `fc_power` |
 
 ## Layout rules
 
@@ -49,7 +75,7 @@ lower than at 6S; neither figure is published without a measurement.
 | Status | See the `status-*` topic on the repo. Never written here. |
 | Designed in | KiCad 10 |
 | KiCad project | `hardware/OpenAIO.kicad_pro` |
-| Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_pads` (OpenFC-Lite-Mini), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite). The core is the symbol `lib:OpenDrone-Core`, J1, on the root |
+| Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_pads` (OpenFC-Lite-Mini), `esc_channel` x4 (OpenESC-20x20), `esp32c3_lr1121_mono` (OpenRX-Mono). The core is the symbol `lib:OpenDrone-Core`, J1, on the root |
 | Board | `hardware/OpenAIO.kicad_pcb`, 8 layer HDI 1+6+1, 1.6 mm, 1 oz copper on all layers |
 | Core module | OpenFC-Core, one symbol and one footprint (`OpenDrone-Core_LGA_land`) vendored into `lib`; never edit them here |
 | Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib`. Seeded with the OpenFC-Lite-Mini local library so the copied sheets resolve; the lib tables also alias `components`, `4in1ESC` and `OpenRX-Shared` onto the catalogue for the same reason |

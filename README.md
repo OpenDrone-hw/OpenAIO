@@ -35,8 +35,14 @@ From the design files. Not manufactured yet.
 | Input | 2-6S LiPo (6.0-25.2 V) |
 | Flight controller | OpenFC-Core module: RP2350-class MCU, IMU, barometer, analog OSD, microSD blackbox; USB-C on this board |
 | ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |
-| Receiver | ExpressLRS 2.4 GHz, ESP32-C3 + SX1281 |
+| Receiver | ExpressLRS dual band, ESP32-C3FH4 + LR1121, from OpenRX-Mono |
 | Assembly | Chosen per release; see production/. LCSC basic parts preferred |
+
+## Battery lead
+
+No reverse polarity protection: a reversed battery destroys the board. Fit a
+330 to 470 uF low-ESR 35 V capacitor at the battery lead; the on-board bank is
+ceramic only and a hot-plugged 6S pack can ring above the 30 V FETs.
 
 ## Constraints
 
@@ -57,7 +63,7 @@ The three designs this merges, all manufactured and flying:
 
 - [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini): the RP2354A flight controller
 - [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20): the AM32 4-in-1 power stage
-- [OpenRX Lite](https://github.com/OpenDrone-hw/OpenRX-Lite): the ELRS receiver
+- [OpenRX-Mono](https://github.com/OpenDrone-hw/OpenRX-Mono): the dual band LR1121 ELRS receiver
 
 Research so far, reference rather than decisions:
 

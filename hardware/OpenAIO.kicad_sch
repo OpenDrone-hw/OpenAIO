@@ -5637,12 +5637,6 @@
 		)
 	)
 	(junction
-		(at 151.765 177.165)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1dd9aa37-fb2a-4be1-ac1b-24253fa692fb")
-	)
-	(junction
 		(at 121.285 158.115)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5692,6 +5686,10 @@
 		(at 88.9 78.74)
 		(uuid "c7517a49-b828-4112-803c-e910c2dcd2f2")
 	)
+	(no_connect
+		(at 88.9 55.88)
+		(uuid "fcf71efd-82b9-4967-b47c-0c7b06a3302f")
+	)
 	(wire
 		(pts
 			(xy 41.275 179.07) (xy 46.355 179.07)
@@ -5731,16 +5729,6 @@
 			(type default)
 		)
 		(uuid "0f00d4c7-5b51-4ffa-9e85-bb3085879d95")
-	)
-	(wire
-		(pts
-			(xy 131.445 177.165) (xy 137.795 177.165)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "14ff8a41-907d-4fde-8886-b2fe91f420b0")
 	)
 	(wire
 		(pts
@@ -5814,6 +5802,16 @@
 	)
 	(wire
 		(pts
+			(xy 131.445 177.165) (xy 154.305 177.165)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23c30c42-24f3-4e0f-9682-d966f3f57f0b")
+	)
+	(wire
+		(pts
 			(xy 119.38 76.2) (xy 132.715 76.2)
 		)
 		(stroke
@@ -5871,26 +5869,6 @@
 			(type default)
 		)
 		(uuid "3921ffe1-8e59-4884-8f94-1d2de742c0a8")
-	)
-	(wire
-		(pts
-			(xy 73.66 48.26) (xy 81.28 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3939a8bc-700a-49ab-8cec-ec3708e828c5")
-	)
-	(wire
-		(pts
-			(xy 81.28 48.26) (xy 88.9 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3c8600dd-66f5-415f-b0de-d309202ccb1c")
 	)
 	(wire
 		(pts
@@ -6154,16 +6132,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.305 177.165) (xy 151.765 177.165)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "aab2f67f-f887-4efc-a8bb-e2b26c243fc5")
-	)
-	(wire
-		(pts
 			(xy 80.645 172.085) (xy 107.315 172.085)
 		)
 		(stroke
@@ -6241,16 +6209,6 @@
 			(type default)
 		)
 		(uuid "bf8291d7-9fe4-4c45-8866-23d81c48875c")
-	)
-	(wire
-		(pts
-			(xy 151.765 177.165) (xy 147.955 177.165)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c1165d58-90bd-470c-9467-5189ed2a45d2")
 	)
 	(wire
 		(pts
@@ -6402,7 +6360,7 @@
 		)
 		(uuid "fe82b409-c24f-4f67-ac59-524545f38bcf")
 	)
-	(label "D-"
+	(label "D+"
 		(at 119.38 55.88 0)
 		(effects
 			(font
@@ -6682,7 +6640,7 @@
 		)
 		(uuid "cf90a5fd-f55f-4ec6-80ab-5b50f9c13784")
 	)
-	(label "D+"
+	(label "D-"
 		(at 119.38 53.34 0)
 		(effects
 			(font
@@ -7654,166 +7612,6 @@
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "USB1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ESCLibrary:GRM033R61C104KE84D")
-		(at 151.765 180.975 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "31221c82-14b1-4ee4-9b15-7dc7c3157809")
-		(property "Reference" "C94"
-			(at 147.701 185.039 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100nF"
-			(at 145.923 186.055 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
-			(at 141.605 180.975 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "https://item.szlcsc.com/360022.html"
-			(at 151.892 178.689 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" ""
-			(at 151.765 180.975 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C181043"
-			(at 151.765 180.975 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Farnell" ""
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser" ""
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digi-Key" ""
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Cost" "0.008457"
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "muRata"
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "GRM033R6YA104KE14D"
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dc9e4469-39cc-4679-97ce-1e9086d3bb67")
-		)
-		(pin "2"
-			(uuid "695b3bb8-e66e-4104-b243-924ff81192d9")
-		)
-		(instances
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(reference "C94")
 					(unit 1)
 				)
 			)
@@ -9107,7 +8905,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
 			(at 97.155 175.895 0)
 			(hide yes)
 			(show_name no)
@@ -9119,7 +8917,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://item.szlcsc.com/360022.html"
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Murata-Electronics-GRM033R61A105ME44D_C76935.pdf"
 			(at 107.442 173.609 0)
 			(hide yes)
 			(show_name no)
@@ -9142,7 +8940,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C7500381"
+		(property "LCSC" "C76935"
 			(at 107.315 175.895 0)
 			(hide yes)
 			(show_name no)
@@ -9186,7 +8984,7 @@
 				)
 			)
 		)
-		(property "Cost" "0.003257"
+		(property "Cost" "0.025"
 			(at 38.735 346.075 0)
 			(hide yes)
 			(show_name no)
@@ -9197,7 +8995,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "Murata Electronics"
 			(at 38.735 346.075 0)
 			(hide yes)
 			(show_name no)
@@ -9208,7 +9006,7 @@
 				)
 			)
 		)
-		(property "MPN" "CC0402KRX7R6BB105"
+		(property "MPN" "GRM033R61A105ME44D"
 			(at 38.735 346.075 0)
 			(hide yes)
 			(show_name no)
@@ -9463,244 +9261,6 @@
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 151.765 184.785 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c6b350e4-cd13-4a48-8371-6cf2f4e8c815")
-		(property "Reference" "#PWR0218"
-			(at 151.765 191.135 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 151.765 189.865 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 151.765 184.785 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 151.765 184.785 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 151.765 184.785 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f6bad7ae-1182-4350-893a-0e7f98a31933")
-		)
-		(instances
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(reference "#PWR0218")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ESCLibrary:0201_1kR")
-		(at 142.875 177.165 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c9521c24-699d-43ae-851e-60e4d8bb9b6b")
-		(property "Reference" "R95"
-			(at 142.875 170.815 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1k"
-			(at 142.875 174.625 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "4in1ESC:R_0201_0603Metric"
-			(at 142.875 167.005 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "https://item.szlcsc.com/239136.html"
-			(at 145.161 177.292 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" ""
-			(at 142.875 177.165 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C270365"
-			(at 142.875 177.165 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Farnell" ""
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser" ""
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digi-Key" ""
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Cost" "0.0006"
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "UNI-ROYAL"
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0201WMF1001TEE"
-			(at -202.565 36.195 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "b8ac8bcb-b734-43f5-bcc8-929d06f108ff")
-		)
-		(pin "1"
-			(uuid "0f58a590-b971-41e7-9c37-a01175f8af71")
-		)
-		(instances
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(reference "R95")
 					(unit 1)
 				)
 			)
@@ -10205,7 +9765,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 73.66 161.925 0)
 			(hide yes)
 			(show_name no)
@@ -10600,7 +10160,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
 			(at 100.33 169.545 0)
 			(hide yes)
 			(show_name no)
@@ -10795,7 +10355,7 @@
 				(justify left)
 			)
 		)
-		(pin "PIOUART0_RX" output
+		(pin "UART0_TX" output
 			(at 73.66 55.88 0)
 			(uuid "3dcbc0c7-3f91-49ce-b9b4-f1ae759cd611")
 			(effects
@@ -10805,7 +10365,7 @@
 				(justify right)
 			)
 		)
-		(pin "PIOUART0_TX" input
+		(pin "UART0_RX" input
 			(at 73.66 58.42 0)
 			(uuid "f6fe79ab-2c00-46d3-a3c2-11d5b24ea341")
 			(effects
@@ -10815,17 +10375,7 @@
 				(justify right)
 			)
 		)
-		(pin "UART0_RX" output
-			(at 73.66 48.26 0)
-			(uuid "2c1e524a-421c-4660-82df-773ed029b16d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "UART0_TX" input
+		(pin "PIOUART0_TX" input
 			(at 73.66 53.34 0)
 			(uuid "2a63c043-4df6-47bf-a295-08a363555969")
 			(effects
@@ -10845,7 +10395,7 @@
 				(justify left)
 			)
 		)
-		(pin "UART1_TX" output
+		(pin "PIOUART0_RX" output
 			(at 73.66 50.8 0)
 			(uuid "1f777b5f-c85a-4a93-a418-70efca1004f8")
 			(effects
@@ -10855,7 +10405,7 @@
 				(justify right)
 			)
 		)
-		(pin "UART1_RX" input
+		(pin "PIOUART1_RX" input
 			(at 73.66 45.72 0)
 			(uuid "4ad228f3-f3a9-471f-82f2-fb736cdc4a13")
 			(effects
@@ -10911,7 +10461,7 @@
 				(justify left top)
 			)
 		)
-		(pin "A" output
+		(pin "MotorA" output
 			(at 187.325 93.345 0)
 			(uuid "d4135315-6781-42a7-9a79-761c6cb82f07")
 			(effects
@@ -10921,7 +10471,7 @@
 				(justify right)
 			)
 		)
-		(pin "B" output
+		(pin "MotorB" output
 			(at 187.325 95.885 0)
 			(uuid "ca9edde9-0a60-4b98-8ac4-ef9c37103eb8")
 			(effects
@@ -10931,7 +10481,7 @@
 				(justify right)
 			)
 		)
-		(pin "C" output
+		(pin "MotorC" output
 			(at 187.325 98.425 0)
 			(uuid "1e7431f4-1bab-4cdb-8fc8-6a0f68597329")
 			(effects
@@ -10997,7 +10547,7 @@
 				(justify left top)
 			)
 		)
-		(pin "A" output
+		(pin "MotorA" output
 			(at 187.325 79.375 0)
 			(uuid "78122dc0-d30f-439f-bd7f-1f83162e09fb")
 			(effects
@@ -11007,7 +10557,7 @@
 				(justify right)
 			)
 		)
-		(pin "B" output
+		(pin "MotorB" output
 			(at 187.325 81.915 0)
 			(uuid "b233075f-1ba4-46d1-91dc-c1a5e1efe17b")
 			(effects
@@ -11017,7 +10567,7 @@
 				(justify right)
 			)
 		)
-		(pin "C" output
+		(pin "MotorC" output
 			(at 187.325 84.455 0)
 			(uuid "11beb1be-b8a2-4987-898c-7dcb094509dc")
 			(effects
@@ -11225,7 +10775,7 @@
 				(justify left top)
 			)
 		)
-		(pin "A" output
+		(pin "MotorA" output
 			(at 187.325 107.315 0)
 			(uuid "de655c5d-3813-48ac-884a-bbbb63b0a834")
 			(effects
@@ -11235,7 +10785,7 @@
 				(justify right)
 			)
 		)
-		(pin "B" output
+		(pin "MotorB" output
 			(at 187.325 109.855 0)
 			(uuid "b5f5ce8f-749a-44d3-a7f3-b038ff6c4091")
 			(effects
@@ -11245,7 +10795,7 @@
 				(justify right)
 			)
 		)
-		(pin "C" output
+		(pin "MotorC" output
 			(at 187.325 112.395 0)
 			(uuid "11015857-2e1b-46e1-85b1-a7f1e68f0680")
 			(effects
@@ -11311,7 +10861,7 @@
 				(justify left top)
 			)
 		)
-		(pin "A" output
+		(pin "MotorA" output
 			(at 187.325 65.405 0)
 			(uuid "236cf13d-b36b-4db2-b7b7-ebbedd15380c")
 			(effects
@@ -11321,7 +10871,7 @@
 				(justify right)
 			)
 		)
-		(pin "B" output
+		(pin "MotorB" output
 			(at 187.325 67.945 0)
 			(uuid "19f91d99-9f02-4810-9c03-7549fa06d5d7")
 			(effects
@@ -11331,7 +10881,7 @@
 				(justify right)
 			)
 		)
-		(pin "C" output
+		(pin "MotorC" output
 			(at 187.325 70.485 0)
 			(uuid "553bd72f-f207-42c2-a8b2-25bb12dddf19")
 			(effects
@@ -11364,5 +10914,4 @@
 			(page "1")
 		)
 	)
-	(embedded_fonts no)
 )

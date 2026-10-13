@@ -4109,12 +4109,6 @@
 		(uuid "e59e2d0c-97e7-4afa-96f9-ce136b93cc8f")
 	)
 	(junction
-		(at 45.72 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ece48477-7e82-48ee-a2b4-0eb1f8613682")
-	)
-	(junction
 		(at 39.37 153.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4157,6 +4151,10 @@
 	(no_connect
 		(at 143.51 91.44)
 		(uuid "9b03b552-56db-4f15-9e4f-e42a83fbc25d")
+	)
+	(no_connect
+		(at 54.61 60.96)
+		(uuid "a412a2c5-d395-4165-8b51-57ad0ea3b0d8")
 	)
 	(no_connect
 		(at 143.51 88.9)
@@ -4514,16 +4512,6 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 63.5) (xy 45.72 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f37470d-20bb-4c74-9930-4246e219b73b")
-	)
-	(wire
-		(pts
 			(xy 205.74 95.25) (xy 205.74 99.06)
 		)
 		(stroke
@@ -4671,16 +4659,6 @@
 			(type default)
 		)
 		(uuid "c459f707-b2e7-4739-9dcc-69811ba0a673")
-	)
-	(wire
-		(pts
-			(xy 29.21 54.61) (xy 29.21 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5726502-7a4a-43cf-9040-a5da06da7978")
 	)
 	(wire
 		(pts
@@ -5232,7 +5210,7 @@
 		)
 		(uuid "fed3428d-4cba-48b9-816d-cf8573bfbdea")
 	)
-	(hierarchical_label "B"
+	(hierarchical_label "MotorB"
 		(shape output)
 		(at 123.19 153.67 0)
 		(effects
@@ -5243,7 +5221,7 @@
 		)
 		(uuid "56014427-46cc-4c3c-a846-09346d0589a0")
 	)
-	(hierarchical_label "C"
+	(hierarchical_label "MotorC"
 		(shape output)
 		(at 187.96 152.4 0)
 		(effects
@@ -5254,7 +5232,7 @@
 		)
 		(uuid "78fe3d56-6f7e-4d67-8b85-23d4ecddfa2c")
 	)
-	(hierarchical_label "A"
+	(hierarchical_label "MotorA"
 		(shape output)
 		(at 67.31 153.67 0)
 		(effects
@@ -5288,7 +5266,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0207287f-a170-402e-9442-21b3044af211")
-		(property "Reference" "R32"
+		(property "Reference" "R69"
 			(at 234.95 93.1978 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5489,7 +5467,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "023ab7c7-1ae1-49e1-823a-da723031d52d")
-		(property "Reference" "#PWR0130"
+		(property "Reference" "#PWR0180"
 			(at 234.95 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -5579,7 +5557,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03a9c797-51ec-4a52-a32e-84c5fc227279")
-		(property "Reference" "#PWR0115"
+		(property "Reference" "#PWR093"
 			(at 72.39 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -5686,7 +5664,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "16ecf559-69f0-4983-8452-63808a379217")
-		(property "Reference" "TP3"
+		(property "Reference" "TP7"
 			(at 25.146 74.422 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5793,7 +5771,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1b088461-2863-4244-b0f0-8cd81dc2f3c1")
-		(property "Reference" "#PWR0134"
+		(property "Reference" "#PWR0105"
 			(at 254 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -5901,7 +5879,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "20ede2b2-d3bc-42b3-baca-562998e89377")
-		(property "Reference" "R31"
+		(property "Reference" "R68"
 			(at 234.95 111.7599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6103,7 +6081,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "22627c00-04c1-48b9-ab89-c91f960565dc")
-		(property "Reference" "#PWR0133"
+		(property "Reference" "#PWR0183"
 			(at 245.745 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -6192,7 +6170,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "26ebf752-bc8e-4e2a-a796-cb73df12a260")
-		(property "Reference" "C43"
+		(property "Reference" "C80"
 			(at 41.656 69.596 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6394,7 +6372,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "27b20d01-8951-4b8a-9fbb-5f65eb3a72cb")
-		(property "Reference" "#PWR0111"
+		(property "Reference" "#PWR090"
 			(at 39.37 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -6502,7 +6480,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2963aff8-312e-4907-9e61-11a3759d1865")
-		(property "Reference" "#PWR0118"
+		(property "Reference" "#PWR095"
 			(at 99.06 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -6610,7 +6588,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2a670bc3-ff69-46d7-ba92-24e8f8ff5446")
-		(property "Reference" "#PWR0127"
+		(property "Reference" "#PWR0177"
 			(at 223.52 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -6700,7 +6678,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e0a9a19-e5b1-4339-a3be-e844973b7ec0")
-		(property "Reference" "#PWR0131"
+		(property "Reference" "#PWR0181"
 			(at 234.95 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -6789,7 +6767,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "308997bb-528a-4cea-b845-511c6dbad964")
-		(property "Reference" "R17"
+		(property "Reference" "R55"
 			(at 29.21 142.494 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6986,7 +6964,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "30a756ea-91b9-430d-a47d-8b27cd18f4da")
-		(property "Reference" "C47"
+		(property "Reference" "C35"
 			(at 159.004 61.976 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7188,7 +7166,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "37883ce9-3ba2-4263-a26a-c25b41383d43")
-		(property "Reference" "#PWR0119"
+		(property "Reference" "#PWR096"
 			(at 99.06 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -7296,7 +7274,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "392d35f8-1fb3-4b69-b279-a01430056712")
-		(property "Reference" "U12"
+		(property "Reference" "U11"
 			(at 133.35 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7554,7 +7532,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3cd7b13d-63b0-42f4-baed-fbf4c1e83e30")
-		(property "Reference" "#PWR0126"
+		(property "Reference" "#PWR0103"
 			(at 205.74 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -7662,7 +7640,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3d572661-719d-4838-b033-bd66f97a6615")
-		(property "Reference" "R27"
+		(property "Reference" "R64"
 			(at 210.82 90.1699 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7864,7 +7842,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "408ed278-6f83-4191-8dfc-88276e654a61")
-		(property "Reference" "C52"
+		(property "Reference" "C72"
 			(at 248.92 38.0999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7875,7 +7853,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 248.92 40.6399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7910,6 +7888,39 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 245.745 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 246.7102 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 246.7102 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 246.7102 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7968,7 +7979,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "43ce57ca-c919-43f7-9b19-8f4cd4fa9045")
-		(property "Reference" "#PWR0114"
+		(property "Reference" "#PWR086"
 			(at 62.23 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -8076,7 +8087,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "45a65dcf-d4e0-4466-b87e-77261c8d9a31")
-		(property "Reference" "R29"
+		(property "Reference" "R66"
 			(at 210.82 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8276,7 +8287,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "48da86fc-a9f7-47d5-94eb-29b25f7b494a")
-		(property "Reference" "#PWR0120"
+		(property "Reference" "#PWR097"
 			(at 116.84 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -8383,7 +8394,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "49a04e93-8604-4afb-b9c4-740388e8d1e6")
-		(property "Reference" "C45"
+		(property "Reference" "C79"
 			(at 80.264 35.814 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8575,207 +8586,6 @@
 	)
 	(symbol
 		(lib_id "ESCLibrary:0201_10kR")
-		(at 49.53 60.96 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4b80351d-58f5-4946-ab60-c5514cb8ebb2")
-		(property "Reference" "R20"
-			(at 49.53 54.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 49.53 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 49.53 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "https://item.szlcsc.com/239136.html"
-			(at 51.816 61.087 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" ""
-			(at 49.53 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C106225"
-			(at 49.53 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Farnell" ""
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser" ""
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digi-Key" ""
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Cost" "0.0007714"
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0201FR-0710KL"
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 49.53 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "de865302-1bec-4309-ad15-e1392a99d37c")
-		)
-		(pin "1"
-			(uuid "9ab4953a-280a-4827-a235-65cf14130adc")
-		)
-		(instances
-			(project "4in1-mini"
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3"
-					(reference "R58")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9"
-					(reference "R4")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16"
-					(reference "R40")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1"
-					(reference "R19")
-					(unit 1)
-				)
-			)
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
-					(reference "R58")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
-					(reference "R39")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
-					(reference "R77")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
-					(reference "R20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ESCLibrary:0201_10kR")
 		(at 259.08 99.06 180)
 		(unit 1)
 		(body_style 1)
@@ -8786,7 +8596,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4dcb51a7-8f21-4346-bfe7-f0ca37ca8014")
-		(property "Reference" "R35"
+		(property "Reference" "R72"
 			(at 259.08 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8986,7 +8796,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4ffb9b21-0044-4ca9-a90f-69e20c34aff9")
-		(property "Reference" "C44"
+		(property "Reference" "C78"
 			(at 58.166 39.116 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9188,7 +8998,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "50c60d97-4209-47ee-a259-e385d2b100a6")
-		(property "Reference" "R28"
+		(property "Reference" "R65"
 			(at 210.82 111.7599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9390,7 +9200,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5d777ac9-ee6a-4111-baf4-d69234a742df")
-		(property "Reference" "R33"
+		(property "Reference" "R70"
 			(at 256.54 90.1699 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9591,7 +9401,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5eb14246-b401-47f9-959e-6f096790a60d")
-		(property "Reference" "C46"
+		(property "Reference" "C83"
 			(at 148.844 59.436 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9793,7 +9603,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64bce399-bf33-46c3-89eb-ab22631eb2be")
-		(property "Reference" "R30"
+		(property "Reference" "R67"
 			(at 232.41 90.1699 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9984,114 +9794,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 29.21 54.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "679ba691-79a2-40fb-895f-c76dc4fb8f36")
-		(property "Reference" "#PWR0110"
-			(at 29.21 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 29.21 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 29.21 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 29.21 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 29.21 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8c604c85-b5f5-4769-82ef-6a3a35492041")
-		)
-		(instances
-			(project "4in1-mini"
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3"
-					(reference "#PWR087")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9"
-					(reference "#PWR022")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16"
-					(reference "#PWR066")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1"
-					(reference "#PWR027")
-					(unit 1)
-				)
-			)
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
-					(reference "#PWR0160")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
-					(reference "#PWR0135")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
-					(reference "#PWR0185")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
-					(reference "#PWR0110")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "PCM_Resistor_AKL:R_0402")
 		(at 88.9 162.56 90)
 		(unit 1)
@@ -10102,7 +9804,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6db4f592-2c0f-45a7-adb9-5ce48ca48a8d")
-		(property "Reference" "R24"
+		(property "Reference" "R61"
 			(at 88.9 157.734 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10299,7 +10001,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6e92df75-7edf-4574-97f6-e0e9b80bcd18")
-		(property "Reference" "C49"
+		(property "Reference" "C88"
 			(at 183.896 28.956 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10500,7 +10202,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "718f5ec9-d88b-4b82-b61e-f023eec71dc8")
-		(property "Reference" "U11"
+		(property "Reference" "U10"
 			(at 71.882 73.152 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10771,7 +10473,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "76d1d8ca-f263-4744-b56b-6b61bbd29994")
-		(property "Reference" "R26"
+		(property "Reference" "R63"
 			(at 149.86 156.464 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10969,7 +10671,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "788be35c-0cc4-4d35-b5b2-508a5cd99040")
-		(property "Reference" "#PWR0128"
+		(property "Reference" "#PWR0178"
 			(at 223.52 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -11059,7 +10761,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7a614b05-edaf-45dd-b454-62f750565c5a")
-		(property "Reference" "Q3"
+		(property "Reference" "Q21"
 			(at 102.87 144.7799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11251,7 +10953,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7e452976-17c6-4f45-b776-8046af86c07d")
-		(property "Reference" "C51"
+		(property "Reference" "C71"
 			(at 238.125 38.0999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11262,7 +10964,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 238.125 40.6399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11297,6 +10999,39 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 234.95 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 235.9152 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 235.9152 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 235.9152 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11355,7 +11090,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8bc6297c-b0cc-476c-b5e4-3b63308d9121")
-		(property "Reference" "R25"
+		(property "Reference" "R62"
 			(at 149.86 141.224 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11552,7 +11287,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8e4076ab-c104-40fd-aae4-f8fb13c1588f")
-		(property "Reference" "R23"
+		(property "Reference" "R60"
 			(at 88.9 142.494 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11750,7 +11485,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "91b34538-5e75-41b4-af67-1cffacb8e83b")
-		(property "Reference" "#PWR0124"
+		(property "Reference" "#PWR059"
 			(at 187.96 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -11858,7 +11593,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b65e2be7-47e1-4bb9-82c6-27d434f8d677")
-		(property "Reference" "Q2"
+		(property "Reference" "Q20"
 			(at 43.18 160.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12050,7 +11785,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b7f2632a-37c3-45ff-83c3-f9088547e792")
-		(property "Reference" "R34"
+		(property "Reference" "R71"
 			(at 259.08 111.7599 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12252,7 +11987,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b81d2055-72dd-4f80-8595-bad8791ff875")
-		(property "Reference" "Q5"
+		(property "Reference" "Q23"
 			(at 163.83 143.5099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12444,7 +12179,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bced1852-aff7-4a36-8611-bd5bceac7e1d")
-		(property "Reference" "#PWR0129"
+		(property "Reference" "#PWR0104"
 			(at 229.87 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -12552,7 +12287,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3dc90c7-0c37-4caf-be43-01773e5eda25")
-		(property "Reference" "#PWR0132"
+		(property "Reference" "#PWR0182"
 			(at 245.745 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -12641,7 +12376,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ce2b3565-8c3a-47a6-a3df-025cfef0ee9f")
-		(property "Reference" "R18"
+		(property "Reference" "R56"
 			(at 29.21 157.734 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12839,7 +12574,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ced00908-aa48-4a1c-9c42-f75eea75c367")
-		(property "Reference" "#PWR0117"
+		(property "Reference" "#PWR0114"
 			(at 92.71 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -12946,7 +12681,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cf1a5f0c-b6cb-4e5e-b1be-36fb15edf64d")
-		(property "Reference" "#PWR0125"
+		(property "Reference" "#PWR0102"
 			(at 187.96 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -13054,7 +12789,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d09ea843-e489-4c7a-b5ef-1840fa329d59")
-		(property "Reference" "#PWR0122"
+		(property "Reference" "#PWR0101"
 			(at 143.51 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -13161,7 +12896,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d6c613f0-b29a-453b-88ee-8c6b8443abd9")
-		(property "Reference" "C48"
+		(property "Reference" "C39"
 			(at 169.164 64.516 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13363,7 +13098,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d765bdf0-71c7-42f4-a633-7eb74ba7ddd2")
-		(property "Reference" "R22"
+		(property "Reference" "R77"
 			(at 71.12 26.67 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13561,7 +13296,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e1c307e0-da1e-4199-993c-565dacc1988b")
-		(property "Reference" "Q1"
+		(property "Reference" "Q19"
 			(at 43.18 144.7799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13753,7 +13488,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e25955d6-cedd-4b4a-857c-685f9946d3b1")
-		(property "Reference" "C50"
+		(property "Reference" "C70"
 			(at 226.695 38.0999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13764,7 +13499,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "4.7uF 50v"
 			(at 226.695 40.6399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13799,6 +13534,39 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 223.52 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 224.4852 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL21A475KBQNNNE"
+			(at 224.4852 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C98192"
+			(at 224.4852 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13858,7 +13626,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec7f2106-44a9-41c0-9d71-940acdd19990")
-		(property "Reference" "R21"
+		(property "Reference" "R59"
 			(at 49.7944 85.09 90)
 			(hide yes)
 			(show_name no)
@@ -14060,7 +13828,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "efc6443a-6623-4556-a8ae-15d833f084fe")
-		(property "Reference" "#PWR0121"
+		(property "Reference" "#PWR098"
 			(at 116.84 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -14167,7 +13935,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f00611af-956f-4432-8234-bac8d0476ced")
-		(property "Reference" "TP4"
+		(property "Reference" "TP8"
 			(at 25.146 76.708 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14274,7 +14042,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f3d0f2cb-b08e-4f62-8fe2-1bea57687fc8")
-		(property "Reference" "#PWR0123"
+		(property "Reference" "#PWR0100"
 			(at 160.02 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -14371,314 +14139,6 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_10kR")
-		(at 34.29 63.5 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f7a7859e-b3c9-4b3f-bed4-9b63cee0a8fc")
-		(property "Reference" "R19"
-			(at 34.29 57.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 34.29 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
-			(at 34.29 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "https://item.szlcsc.com/239136.html"
-			(at 36.576 63.627 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" ""
-			(at 34.29 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C106225"
-			(at 34.29 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Farnell" ""
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mouser" ""
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Digi-Key" ""
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Cost" "0.0007714"
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0201FR-0710KL"
-			(at 0 0 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 34.29 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "f7ae6dba-43fb-4c23-ad60-c3500b126626")
-		)
-		(pin "1"
-			(uuid "f83145ca-0398-40bb-8ec0-b82ec230d618")
-		)
-		(instances
-			(project "4in1-mini"
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3"
-					(reference "R57")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9"
-					(reference "R3")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16"
-					(reference "R39")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1"
-					(reference "R18")
-					(unit 1)
-				)
-			)
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
-					(reference "R57")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
-					(reference "R38")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
-					(reference "R76")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
-					(reference "R19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 44.45 60.96 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f82b9073-21b4-45e2-b111-0e79f084e605")
-		(property "Reference" "#PWR0112"
-			(at 38.1 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 40.894 61.214 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 44.45 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 44.45 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 44.45 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2c3bcf0c-ae99-4ded-aa66-898b098d8818")
-		)
-		(instances
-			(project "4in1-mini"
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/0f1ac7ef-71be-4cf4-81ac-90268323e1b3"
-					(reference "#PWR091")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/3fa70197-fd52-4922-8368-62c7feb267b9"
-					(reference "#PWR049")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/6061fcc0-8b26-44e0-b078-a202b47fdd16"
-					(reference "#PWR070")
-					(unit 1)
-				)
-				(path "/612d09d9-c556-41af-8a15-92be360f8e81/f870c78f-43b6-4f66-afe4-21d85c4907b1"
-					(reference "#PWR031")
-					(unit 1)
-				)
-			)
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6a76a238-9289-499d-aa08-95fd7cfd4af9"
-					(reference "#PWR0162")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6df3c64b-9042-4802-8151-ba4261464fb0"
-					(reference "#PWR0137")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/db3cdd4a-035f-42d3-8f2e-6db113113326"
-					(reference "#PWR0187")
-					(unit 1)
-				)
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/ed03c608-7402-46a1-8e98-baf93a4f0edb"
-					(reference "#PWR0112")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 83.82 40.64 0)
 		(unit 1)
@@ -14689,7 +14149,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f9be6bf0-40d7-45eb-9105-a374905585c8")
-		(property "Reference" "#PWR0116"
+		(property "Reference" "#PWR089"
 			(at 83.82 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -14796,7 +14256,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fbabe502-72f3-40da-80af-b353f6f1a94a")
-		(property "Reference" "#PWR0113"
+		(property "Reference" "#PWR092"
 			(at 45.72 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -14904,7 +14364,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "feada041-3f26-4ed6-b8f5-d6b054d8a23f")
-		(property "Reference" "Q4"
+		(property "Reference" "Q22"
 			(at 102.87 160.0199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15096,7 +14556,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fef311bf-17a1-48c9-b5cb-13c108cf7b12")
-		(property "Reference" "Q6"
+		(property "Reference" "Q24"
 			(at 163.83 158.7499 0)
 			(show_name no)
 			(do_not_autoplace no)
