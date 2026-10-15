@@ -1,17 +1,16 @@
 # OpenAIO
 
-An all-in-one for toothpick-class 6S FPV: flight controller, 4-in-1 ESC and
+An all-in-one for toothpick-class FPV on 2 to 6 cells: flight controller, 4-in-1 ESC and
 ExpressLRS receiver on 25.5 x 25.5 mm mounting, on one PCB. It merges three
 boards OpenDrone already makes: OpenFC-Lite-Mini (RP2354A flight controller),
-OpenESC-20x20 (AM32 4-in-1) and OpenRX (ELRS receiver). An earlier revision
+OpenESC-20x20 (AM32 4-in-1) and OpenRX Lite (ELRS receiver). An earlier revision
 split it into a Base and a Core hat joined by an LGA; since 2026-10-15 both
 are one 8-layer HDI board on the OpenAIO-Whoop stackup.
 
 [![Status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project)
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/v3sWmTcx3R)
 
-Held by @stancoene. Layout in progress on the branch `feat/one-board`:
-the Base and Core layouts sit side by side in `hardware/OpenAIO.kicad_pcb`
+Held by @Just4Stan. Layout in progress: the Base and Core layouts sit side by side in `hardware/OpenAIO.kicad_pcb`
 with their routing kept, and the Core still has to move into the Base outline
 ([research/ROUTING.md](research/ROUTING.md)). Nothing has been manufactured.
 
@@ -25,7 +24,7 @@ those connectors are where builds fail.
 The parts are proven separately, so this is an integration problem rather than
 a research one. The only 6S AIO with onboard serial ELRS on the market is
 closed and digital-only; an open one with analog OSD and blackbox has a place,
-see the market research below.
+see the market research linked below.
 
 ## Specifications
 
@@ -35,11 +34,11 @@ From the design files. Not manufactured yet.
 |---|---|
 | Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm |
 | Stack | One board: 8-layer HDI 1+6+1, 0.997 mm, 1 oz copper on all layers, ENIG, laser microvias L1-L2 and L7-L8, buried vias L2-L7 (OpenAIO-Whoop stackup). Board rev r3, 2026-10 |
-| Input | 3S-6S LiPo (9.0-25.2 V), with a low-ESR capacitor of at least 35 V and 220 uF at the battery lead (see Battery lead) |
+| Input | 2-6S LiPo (6.0-25.2 V), with a low-ESR capacitor of at least 35 V and 220 uF at the battery lead (see Battery lead) |
 | Flight controller | RP2354A, BMI270 IMU, DPS368 barometer, analog PIO OSD, microSD blackbox, USB-C |
 | ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |
 | Receiver | ExpressLRS 2.4 GHz, ESP32-C3 + SX1281 |
-| Assembly | NextPCB turnkey by MPN; DFM kept compatible with JLCPCB |
+| Assembly | Chosen per release; see production/. LCSC basic parts preferred |
 
 ## Pinout
 
@@ -125,8 +124,8 @@ Betaflight's motor direction instead of rewiring.
   on the receiver. No forks.
 - Reuses the manufactured circuits of OpenFC-Lite-Mini, OpenESC-20x20 and
   OpenRX where they fit; parts come from the shared library first.
-- NextPCB turnkey assembly by manufacturer part number; stay DFM-compatible
-  with JLCPCB.
+- Assembly from LCSC parts, extended parts kept to a minimum; assembly house
+  chosen per release, see production/.
 - Do not start from the three schematics stitched together. That was tried,
   and it produced a board that looked finished and was not (recoverable at the
   `pre-reset-2026-08-13` tag). Start from the requirements.
@@ -137,12 +136,12 @@ The three designs this merges, all manufactured and flying:
 
 - [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini): the RP2354A flight controller
 - [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20): the AM32 4-in-1 power stage
-- [OpenRX](https://github.com/OpenDrone-hw/OpenRX): the ELRS receiver
+- [OpenRX Lite](https://github.com/OpenDrone-hw/OpenRX-Lite): the ELRS receiver
 
 Research so far, reference rather than decisions:
 
-- [research/MARKET-RESEARCH-2026-06.md](research/MARKET-RESEARCH-2026-06.md): competing toothpick and whoop AIOs, June 2026
-- [research/ALTERNATIVES.md](research/ALTERNATIVES.md): ESC-stage part alternatives, gate driver and FET options, March 2026
+- [Market research](https://app.notion.com/p/3f5fe06764e1818e9158c512edd58138): competing toothpick and whoop AIOs, June 2026
+- [Part alternatives](https://app.notion.com/p/3f5fe06764e1819eade0dc5bfbfdff7c): ESC-stage part alternatives, gate driver and FET options, March 2026
 - The stitched design reset in August 2026 is in the git history before #9; reference for the thinking, not a design to continue from.
 
 ## Open questions

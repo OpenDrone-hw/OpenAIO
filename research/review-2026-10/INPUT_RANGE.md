@@ -82,5 +82,5 @@ A sentence for the text:
 > 2S is not supported. The NSG2065Q gate drivers need VCC ≥ 8 V (datasheet §8.5), and the +10V rail that feeds
 > them and the VTX follows the pack below about 10 V.
 
-`research/ALTERNATIVES.md` lists the NSG2065Q VCC as "5-20V supply" (the p1 bullet). It should cite §8.5 instead: 8-20 V
+The [Part alternatives](https://app.notion.com/p/3f5fe06764e1819eade0dc5bfbfdff7c) note lists the NSG2065Q VCC as "5-20V supply" (the p1 bullet). It should cite §8.5 instead: 8-20 V
 recommended. The current AGENTS.md no longer quotes a range.

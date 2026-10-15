@@ -1,6 +1,6 @@
 # Routing the one-board OpenAIO
 
-State on 2026-10-15 (branch `feat/one-board`). Start here before routing.
+State on 2026-10-15 (merged to main from `feat/one-board`, PR #25). Start here before routing.
 
 ## What the board file holds
 
