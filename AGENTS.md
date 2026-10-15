@@ -35,10 +35,10 @@ no continuous-current figure is published at 2S or 6S without a measurement.
 
 ## Layout rules
 
-- Layer use as routed (from the two-board layouts, not yet re-planned): Base
-  In1-In4 carry the phase-node copper of the power stages, In5 `+BATT` and
-  `+10V`, In6 GND, B.Cu and In2 most Base signal routing; the Core used In1,
-  In2 and In4 as GND, In2/In3 for signals and `+3.3V`. The OpenAIO-Whoop plan (L2 and L7 solid GND,
+- Layer use: Base In1-In4 carry the phase-node copper of the power stages, In5
+  `+BATT` and `+10V`, In6 GND, B.Cu and In2 most Base signal routing. The Core
+  is remapped to stay off the Base's B.Cu and In2: In1 and In6 GND, signals on
+  In3 and In4, old LGA escapes on In5 (`research/ROUTING.md`). The OpenAIO-Whoop plan (L2 and L7 solid GND,
   power planes on L4/L5) is the target when the layers are re-planned.
 - The Core was routed on the 0.09 line standard with the Default class only.
   The rule area `Core layout` keeps that inside the Core; move it with the
@@ -60,7 +60,7 @@ no continuous-current figure is published at 2S or 6S without a measurement.
 | Netclasses | The Base's (`OpenAIO.kicad_pro`): VBAT, Phase, Gate, Power, Analog, RF, USB, Default |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
 | Stackup | 8-layer HDI 1+6+1, 0.997 mm, 1 oz on all layers, ENIG, copied from OpenAIO-Whoop (`hardware/tools` of that repo, `stackup.json`): 1080 0.077 / 1080 0.077 / core 0.127 / 2116 0.125 / core 0.127 / 1080 0.077 / 1080 0.077 |
-| Vias | Fab form: laser microvia F.Cu-In1.Cu and In6.Cu-B.Cu 0.25/0.10, buried In1.Cu-In6.Cu 0.33/0.15, stacked allowed. Edit form: one through via per stack (0.35/0.15-0.20), a DRC warning, converted by `tools/hdi_via_pass.py` |
+| Vias | Through vias where F.Cu and B.Cu copper meet them (owner, 2026-10-15), at the routed size; elsewhere laser microvia F.Cu-In1.Cu / In6.Cu-B.Cu 0.25/0.10 (the routed land where 0.25 would lose a pad) stacked on a buried via In1.Cu-In6.Cu (routed land, drill 0.15-0.25, ring 0.09). Typed by `tools/via_types.py`; `hdi_via_pass.py` only with `--allow-through` |
 | Shared library | `hardware/KiCad-Library/`, pinned submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library). Not referenced by the lib tables: every part used is copied into `lib` |
 | License | CERN-OHL-S-2.0 |
 
@@ -96,7 +96,7 @@ deliberate changes.
 
 Board tools in `hardware/tools/`, from OpenAIO-Whoop, each with its usage in
 the docstring: `hdi_via_pass.py` (edit form <-> fab form vias, `--collapse`),
-`sync_pcb.py`, `pad_vias.py`, `gnd_stitch.py`, `track_to_pour.py`,
+`via_types.py` (via type from the layers each via connects), `sync_pcb.py`, `pad_vias.py`, `gnd_stitch.py`, `track_to_pour.py`,
 `track_widen.py`, `via_declutter.py`, `via_relocate.py`, `inner_router.py`,
 `loop_resistance.py`. They were written for the Whoop's net and class names
 (`Power`, `Gate`, `Phase`), which this board shares; it also has `VBAT`,

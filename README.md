@@ -34,7 +34,7 @@ From the design files. Not manufactured yet.
 | | |
 |---|---|
 | Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm |
-| Stack | One board: 8-layer HDI 1+6+1, 0.997 mm, 1 oz copper on all layers, ENIG, laser microvias L1-L2 and L7-L8, buried vias L2-L7 (OpenAIO-Whoop stackup) |
+| Stack | One board: 8-layer HDI 1+6+1, 0.997 mm, 1 oz copper on all layers, ENIG, through vias, laser microvias L1-L2 and L7-L8, buried vias L2-L7 (OpenAIO-Whoop stackup) |
 | Input | 2-6S LiPo (6.0-25.2 V), with a low-ESR capacitor of at least 35 V and 220 uF at the battery lead (see Battery lead) |
 | Flight controller | RP2354A, BMI270 IMU, BMP580 barometer, analog PIO OSD, microSD blackbox, USB-C |
 | ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |

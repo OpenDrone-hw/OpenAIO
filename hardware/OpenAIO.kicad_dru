@@ -58,12 +58,8 @@
   (constraint annular_width (min 0.09mm))
   (condition "A.Via_Type == 'Buried'"))
 
-# Through vias are the edit form while routing (the merged boards are routed with 0.35/0.20 and
-# 0.35/0.15 through vias). hdi_via_pass.py turns each into the minimum microvia/buried stack.
-# Warning, not error, so DRC stays readable in the edit form.
-(rule "HDI 1+6+1: no through vias"
-  (severity warning)
-  (constraint disallow through_via))
+# Through vias are allowed (owner, 2026-10-15): a via that joins F.Cu and B.Cu copper stays a
+# mechanical through via at its routed size; every other via is a microvia and/or buried stack.
 
 (rule "HDI buried via: mechanical hole 0.15 to 0.25"
   (constraint hole_size (min 0.15mm) (max 0.25mm))
