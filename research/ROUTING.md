@@ -11,8 +11,8 @@ dropped on cost). The Core sits inside the Base outline (owner's placement). Sta
 | Through via | 0.35/0.20 (power 0.5/0.3) only where F.Cu and B.Cu copper both connect |
 | Microvia | 0.25/0.10, L1-L2 and L7-L8, in pad, filled and capped |
 | Buried via | 0.33/0.15, L2-L7 (0.74 mm span at NextPCB's 5:1) |
-| Price, NextPCB calculator data in Notion (OpenESC-30x30 panel basis, via-in-pad, rank 1) | 20 pcs about 248 USD per order; 250 pcs about 2.00 USD per board; 1000 pcs about 1.26 USD per board; one-time 198 USD |
-| Rank 2 risk | 766 sites have a microvia stacked on its buried via: NextPCB prices that as HDI rank 2, +0.34 USD per board at 1000 and a 388-547 USD order fee. Staggering them 0.25 mm keeps rank 1 |
+| Price, NextPCB calculator data in Notion (OpenESC-30x30 panel basis, via-in-pad, 1 oz, rank 2 = stacked) | 20 pcs about 394 USD per order; 250 pcs about 2.88 USD per board; 1000 pcs about 1.60 USD per board; one-time 198 USD |
+| Stacked microvias | Owner decision 2026-10-15: microvias stack on their same-net buried via (as OpenAIO-Whoop D124). NextPCB prices that as HDI rank 2: vs staggered (rank 1) +146 USD per 20-piece order, +0.86 USD per board at 250, +0.34 at 1000, +3 to 7 days. Microvia on microvia stays forbidden |
 
 ## Layers
 
@@ -86,7 +86,7 @@ Signals:
 
 Vias:
 
-11. Stagger microvias 0.25 mm from their buried via wherever there is room (rank 1 price), and run
+11. Microvias stay stacked on their buried via (owner decision, rank 2). Run
     `tools/via_types.py --buried-size 0.33/0.15` and `tools/via_nudge.py` after each session.
 
 ## Tools
