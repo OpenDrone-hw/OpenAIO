@@ -1,4 +1,4 @@
-"""Give every through via the via type its connections need, in place: no via or track moves.
+"""Give every through (and edit-form blind) via the via type its connections need, in place: no via or track moves.
 
 Run with KiCad closed, using KiCad's bundled Python:
   $KPY hardware/tools/via_types.py hardware/OpenAIO.kicad_pcb [--buried-size 0.33/0.15 | --buried-drill 0.20] [--dry-run]
@@ -30,7 +30,7 @@ pads_by_net=collections.defaultdict(list)
 for fp in b.GetFootprints():
     for pad in fp.Pads(): pads_by_net[pad.GetNetCode()].append(pad)
 for v in vias:
-    if v.GetViaType()!=P.VIATYPE_THROUGH: continue
+    if v.GetViaType() not in (P.VIATYPE_THROUGH, P.VIATYPE_BLIND): continue  # edit form: one via per connection
     used=H.used_layers(b,v,tracks)
     # Pads by shape overlap, not a centre hit test: a via off the pad centre whose land overlaps the pad
     # still connects it (U21.19 was missed by the hit test).

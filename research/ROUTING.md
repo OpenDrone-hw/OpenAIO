@@ -92,6 +92,23 @@ Vias:
 11. Microvias stay stacked on their buried via (owner decision, rank 2). Run
     `tools/via_types.py --buried-size 0.33/0.15` and `tools/via_nudge.py` after each session.
 
+## Routing workflow (edit form)
+
+Route with one via per connection: since 2026-10-15 every microvia + buried stack is collapsed into a single
+0.33/0.15 via (through, or blind L1-L7 / L2-L8 where the stack did not reach the far side). Keys: V via, Shift+V
+cycle layer pairs, 1-8 layers, D / G drag (via shoving is off in the router settings). The blind vias show as
+`items_not_allowed` warnings until the final pass. When routing is done, run once:
+
+```sh
+$KPY hardware/tools/via_types.py hardware/OpenAIO.kicad_pcb --buried-size 0.33/0.15   # stacks back, through where F and B meet
+$KPY hardware/tools/via_min.py hardware/OpenAIO.kicad_pcb
+$KPY hardware/tools/via_nudge.py hardware/OpenAIO.kicad_pcb 0.25
+$KPY hardware/tools/drc_zero.py hardware/OpenAIO.kicad_pcb                              # deletes what still conflicts: review
+```
+
+`tools/cleanup.py` removes dead vias (orphans, escapes whose other side is gone) and dangling track ends; run it
+until it reports nothing.
+
 ## Tools
 
 KiCad closed for every script; each has `--dry-run` or only reads.
