@@ -2184,7 +2184,7 @@
 			(uuid "a817a78d-6b74-4128-960d-43396a6e158a")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "R25")
 					(unit 1)
@@ -2262,7 +2262,7 @@
 			(uuid "27d6ad48-8d7f-4d94-885f-1dc86b52aca5")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "#PWR080")
 					(unit 1)
@@ -2341,7 +2341,7 @@
 			(uuid "4de607dc-6185-4d92-872b-948a96324859")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "#PWR082")
 					(unit 1)
@@ -2419,7 +2419,7 @@
 			(uuid "f703f040-0b11-45a9-87f6-eb12a724f992")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "#PWR076")
 					(unit 1)
@@ -2497,7 +2497,7 @@
 			(uuid "2a4de27f-a8c7-4a5f-abee-748676438a9c")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "#PWR081")
 					(unit 1)
@@ -2621,7 +2621,7 @@
 			(uuid "9f9ba8c8-ef42-44e2-a471-cc1e2b836ebb")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "C29")
 					(unit 1)
@@ -2699,7 +2699,7 @@
 			(uuid "97e90b59-1a2d-47d4-b892-e49d36ef82ac")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "#PWR077")
 					(unit 1)
@@ -2847,7 +2847,7 @@
 			(uuid "82938ce3-46a6-4621-a11d-a132a422c2d4")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "U8")
 					(unit 1)
@@ -2925,7 +2925,7 @@
 			(uuid "95e9ddf4-1944-4358-ad33-19e9a50e1bcb")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "#PWR078")
 					(unit 1)
@@ -3003,7 +3003,7 @@
 			(uuid "ab44b0af-ebe2-4f35-a920-6329ad7701c0")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "#PWR079")
 					(unit 1)
@@ -3127,7 +3127,7 @@
 			(uuid "c1606cb2-7648-4079-9ef6-e5caf5f8ab3d")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/067dfe4f-0feb-4fee-b449-2d51932eecf1"
 					(reference "C30")
 					(unit 1)

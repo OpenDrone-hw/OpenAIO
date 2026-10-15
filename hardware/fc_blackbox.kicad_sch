@@ -1253,7 +1253,7 @@
 			(uuid "8080a90c-0ea6-4752-9185-4b04d5e63f15")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "R34")
 					(unit 1)
@@ -1272,7 +1272,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1ec1adf4-cd1a-492a-816f-22ff8bdb6a5a")
-		(property "Reference" "Card2"
+		(property "Reference" "Card1"
 			(at 72.39 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -1377,7 +1377,7 @@
 					(unit 1)
 				)
 			)
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "Card1")
 					(unit 1)
@@ -1456,7 +1456,7 @@
 			(uuid "a2ea993a-35d1-48b1-9646-dd9fb2a02102")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "#PWR0102")
 					(unit 1)
@@ -1534,7 +1534,7 @@
 			(uuid "78234105-2f85-4134-b9dc-6153ff9e1afc")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "#PWR0104")
 					(unit 1)
@@ -1658,7 +1658,7 @@
 			(uuid "10e658bf-f8c7-48bd-a635-3fe5c0028a6d")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "C36")
 					(unit 1)
@@ -1736,7 +1736,7 @@
 			(uuid "b318f444-97c2-4b70-bdcf-5fd1976b75a3")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "#PWR0286")
 					(unit 1)
@@ -1814,7 +1814,7 @@
 			(uuid "4348ae5c-7334-4a42-8b07-dc76f451ad18")
 		)
 		(instances
-			(project "OpenAIO-Base"
+			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/92d80a6e-4bd9-4df0-920d-da7b8cdc2925"
 					(reference "#PWR0287")
 					(unit 1)
