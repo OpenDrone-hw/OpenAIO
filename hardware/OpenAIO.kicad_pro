@@ -81,7 +81,16 @@
           "width": 0.12
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "annular_width|63100000|52620000|a952b81a-86fc-4c80-83fd-bb42436521ae|00000000-0000-0000-0000-000000000000",
+          "Footprint-intrinsic (drc_zero.py 2026-10-15): PTH pad [<no net>] of USB1"
+        ],
+        [
+          "annular_width|63100000|58400000|f454bf1c-e9a4-46e0-87ba-ea449d9266da|00000000-0000-0000-0000-000000000000",
+          "Footprint-intrinsic (drc_zero.py 2026-10-15): PTH pad [<no net>] of USB1"
+        ]
+      ],
       "meta": {
         "version": 2
       },
