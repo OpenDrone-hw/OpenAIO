@@ -57,7 +57,7 @@ no continuous-current figure is published at 2S or 6S without a measurement.
 | Netclasses | The Base's (`OpenAIO.kicad_pro`): VBAT, Phase, Gate, Power, Analog, RF, USB, Default |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
 | Stackup | 8-layer HDI 1+6+1, 1.0 mm (0.997 with mask), 1 oz on all layers, ENIG: the OpenAIO-Whoop stackup (NextPCB-confirmed, D123). 12 layers was tried on 2026-10-15 and dropped on cost. Layer plan and power paths in `research/ROUTING.md` |
-| Vias | Through 0.35/0.20 (power 0.5/0.3) where F.Cu and B.Cu copper meet them; elsewhere laser microvia F.Cu-In1.Cu / In6.Cu-B.Cu 0.25/0.10 and buried In1.Cu-In6.Cu 0.33/0.15. A microvia stacked on its buried via is HDI rank 2 at NextPCB; stagger 0.25 mm to stay rank 1. Typed by `tools/via_types.py --buried-size 0.33/0.15` |
+| Vias | Through 0.35/0.20 (power 0.5/0.3) where F.Cu and B.Cu copper meet them; elsewhere laser microvia F.Cu-In1.Cu / In6.Cu-B.Cu 0.25/0.10 and buried In1.Cu-In6.Cu 0.33/0.15. Microvias stack on their same-net buried via (owner decision 2026-10-15, HDI rank 2 at NextPCB, as OpenAIO-Whoop D124). Typed by `tools/via_types.py --buried-size 0.33/0.15` |
 | Shared library | `hardware/KiCad-Library/`, pinned submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library). Not referenced by the lib tables: every part used is copied into `lib` |
 | License | CERN-OHL-S-2.0 |
 
