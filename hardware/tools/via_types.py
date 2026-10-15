@@ -1,9 +1,10 @@
 """Give every through via the via type its connections need, in place: no via or track moves.
 
 Run with KiCad closed, using KiCad's bundled Python:
-  $KPY hardware/tools/via_types.py hardware/OpenAIO.kicad_pcb [--buried-drill 0.20] [--dry-run]
+  $KPY hardware/tools/via_types.py hardware/OpenAIO.kicad_pcb [--buried-size 0.33/0.15 | --buried-drill 0.20] [--dry-run]
 
 Works for any 1+N+1 layer count: microvias F.Cu-In1.Cu and In(N).Cu-B.Cu, buried In1.Cu-In(N).Cu.
+--buried-size LAND/DRILL sets every buried via to that size (0.33/0.15 on the 8L Whoop stackup).
 --buried-drill is the minimum buried drill (span thickness / NextPCB's 5:1 limit; 0.20 for the 12L build).
 
 used = layers where the via's own net touches its land (track, pad, filled zone), as hdi_via_pass.used_layers.
@@ -20,6 +21,7 @@ n_inner=b.GetCopperLayerCount()-2
 H.I6=getattr(P,'In%d_Cu'%n_inner)                                  # last inner layer: bottom microvia target
 H.INNER={getattr(P,'In%d_Cu'%i) for i in range(2,n_inner)}
 MINB=MM(float(sys.argv[sys.argv.index('--buried-drill')+1])) if '--buried-drill' in sys.argv else MM(0.15)
+FIXB=[MM(float(x)) for x in sys.argv[sys.argv.index('--buried-size')+1].split('/')] if '--buried-size' in sys.argv else None
 P.ZONE_FILLER(b).Fill(b.Zones())
 tracks=[t for t in b.GetTracks() if t.GetClass()!='PCB_VIA']
 vias=[t for t in b.GetTracks() if t.GetClass()=='PCB_VIA']
@@ -42,6 +44,7 @@ for v in vias:
     parts=H.plan(used)
     landw=v.GetWidth(v.TopLayer()); drill=v.GetDrillValue()
     bdrill=max(MINB,min(MM(0.25),landw-MM(0.18),drill)); bland=max(landw,bdrill+MM(0.18))
+    if FIXB: bland,bdrill=FIXB
     for p in parts:
         n=P.PCB_VIA(b); b.Add(n); n.SetPosition(v.GetPosition()); n.SetNet(v.GetNet())
         if p=='buried':
