@@ -105,7 +105,7 @@
         "footprint_type_mismatch": "ignore",
         "hole_clearance": "error",
         "hole_to_hole": "error",
-        "holes_co_located": "warning",
+        "holes_co_located": "ignore",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
