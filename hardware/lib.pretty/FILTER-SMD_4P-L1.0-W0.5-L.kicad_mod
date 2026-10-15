@@ -254,7 +254,7 @@
 		(uuid "f599f049-9b67-447b-8ad2-a0f38f5ebc3e")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/FILTER-SMD_4P-L1.0-W0.5-H0.4-L.wrl"
+	(model "${KIPRJMOD}/lib.3dshapes/FILTER-SMD_4P-L1.0-W0.5-H0.4-L.step"
 		(offset
 			(xyz 0 0 0)
 		)

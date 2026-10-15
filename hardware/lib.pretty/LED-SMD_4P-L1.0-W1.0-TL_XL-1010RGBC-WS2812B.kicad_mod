@@ -118,7 +118,7 @@
 		(uuid "2ae9aed6-1f07-470c-b93a-28ccf8c1c706")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/LED-SMD_4P-L1.0-W1.0-TL_XL-1010RGBC-WS2812B.wrl"
+	(model "${KIPRJMOD}/lib.3dshapes/LED-SMD_4P-L1.0-W1.0-TL_XL-1010RGBC-WS2812B.step"
 		(offset
 			(xyz 0 -0 -0)
 		)

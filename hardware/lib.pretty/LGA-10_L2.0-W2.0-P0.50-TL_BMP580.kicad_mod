@@ -265,7 +265,7 @@
 		(uuid "7ca3b863-e3a2-4255-806b-a98e5f58e442")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/lib.3dshapes/LGA-10_L2.0-W2.0-P0.50-TL_BMP580.wrl"
+	(model "${KIPRJMOD}/lib.3dshapes/LGA-10_L2.0-W2.0-P0.50-TL_BMP580.step"
 		(offset
 			(xyz 0 0 0)
 		)

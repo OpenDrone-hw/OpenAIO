@@ -349,7 +349,7 @@
 		(uuid "48c4172d-5eaf-4b13-ac6f-32cd7d8f63ba")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/QFN-28_L4.0-W4.0-P0.40-TL-EP2.4.step"
+	(model "${KIPRJMOD}/lib.3dshapes/QFN-28_L4.0-W4.0-P0.40-TL-EP2.4.step"
 		(offset
 			(xyz 0 0 0)
 		)

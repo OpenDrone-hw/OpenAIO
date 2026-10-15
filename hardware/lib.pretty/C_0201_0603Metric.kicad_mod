@@ -92,7 +92,7 @@
 		(roundrect_rratio 0.25)
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0201_0603Metric.step"
+	(model "${KIPRJMOD}/lib.3dshapes/C_0201_0603Metric.step"
 		(offset
 			(xyz 0 0 0)
 		)

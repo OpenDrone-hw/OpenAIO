@@ -281,7 +281,7 @@
 		(uuid "de43f0e9-fd60-4ccc-ad5d-b685bdc2d42c")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/X2SON-4_L1.0-W1.0-H0.4-P0.65-TL-EPSLDPRT.wrl"
+	(model "${KIPRJMOD}/lib.3dshapes/X2SON-4_L1.0-W1.0-H0.4-P0.65-TL-EPSLDPRT.step"
 		(offset
 			(xyz -0 -0 -0)
 		)

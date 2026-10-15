@@ -168,7 +168,7 @@
 		(uuid "1d4fe9bd-6471-4816-9d8e-fb84d6f33075")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/CRYSTAL-SMD_4P-L1.6-W1.2-BL.wrl"
+	(model "${KIPRJMOD}/lib.3dshapes/CRYSTAL-SMD_4P-L1.6-W1.2-BL.step"
 		(offset
 			(xyz 0 -0 -0)
 		)

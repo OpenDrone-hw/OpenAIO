@@ -55,7 +55,7 @@ no continuous-current figure is published at 2S or 6S without a measurement.
 | KiCad project | `hardware/OpenAIO.kicad_pro`, one schematic and one board |
 | Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_rp2350a`, `fc_imu`, `fc_osd`, `fc_blackbox`, `fc_pads` (OpenFC-Lite-Mini, plus the BMP580 baro U26), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite) |
 | Board | `hardware/OpenAIO.kicad_pcb`, 35.4 x 35.4 mm. While the merge is open, the Core layout sits right of the Base outline with its own Edge.Cuts; see `research/ROUTING.md` |
-| Library | Project-local only: `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/` (nickname `lib`). KiCad 10 stock `Device`, `power`, `Connector`, `Connector_Generic` and `MCU_Espressif` symbols cover the rest. No `OPENDRONE_LIB` paths in the tables |
+| Library | Project-local only: every symbol is `lib:` in `hardware/lib.kicad_sym` (the stock `Device`, `power`, `Connector` ones included), every footprint in `hardware/lib.pretty/`, every 3D model in `hardware/lib.3dshapes/` as `${KIPRJMOD}/lib.3dshapes/...` on the board and in `lib.pretty`. No `OPENDRONE_LIB` or `KICAD*_3DMODEL_DIR` path anywhere. Keep it so with `tools/localise_symbols.py` and `tools/localise_models.py` |
 | Design rules | `hardware/OpenAIO.kicad_dru`: canonical block, the HDI 1+6+1 via rules from OpenAIO-Whoop, and the `Core layout` clearance rule. The Base's 2 oz outer and the Core's LGA rules are gone with the 2 oz copper and the LGA |
 | Netclasses | The Base's (`OpenAIO.kicad_pro`): VBAT, Phase, Gate, Power, Analog, RF, USB, Default |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
@@ -96,7 +96,7 @@ deliberate changes.
 
 Board tools in `hardware/tools/`, from OpenAIO-Whoop, each with its usage in
 the docstring: `hdi_via_pass.py` (edit form <-> fab form vias, `--collapse`),
-`via_types.py` (via type from the layers each via connects), `sync_pcb.py`, `pad_vias.py`, `gnd_stitch.py`, `track_to_pour.py`,
+`via_types.py` (via type from the layers each via connects), `localise_models.py` and `localise_symbols.py` (keep the library project-local), `sync_pcb.py`, `pad_vias.py`, `gnd_stitch.py`, `track_to_pour.py`,
 `track_widen.py`, `via_declutter.py`, `via_relocate.py`, `inner_router.py`,
 `loop_resistance.py`. They were written for the Whoop's net and class names
 (`Power`, `Gate`, `Phase`), which this board shares; it also has `VBAT`,
@@ -136,7 +136,7 @@ Board-specific paths are in Environment above. `KPY` is KiCad's bundled
 Python named there.
 
 - Check the design: run the ERC and DRC commands in Environment before every pull request.
-- Add a part: place it from the `OpenDrone` library if `hardware/KiCad-Library/PARTS-USED.md` lists it; otherwise import it into `lib` with `$KPY <hardware-tooling>/hardware/kicad/import_part.py` (read `--help` first), KiCad closed.
+- Add a part: place it from the `OpenDrone` library if `hardware/KiCad-Library/PARTS-USED.md` lists it; otherwise import it into `lib` with `$KPY <hardware-tooling>/hardware/kicad/import_part.py` (read `--help` first), KiCad closed. Then `python3 hardware/tools/localise_symbols.py hardware --prune` and `$KPY hardware/tools/localise_models.py hardware/OpenAIO.kicad_pcb --prune`, and prove the schematic change with an ERC and a netlist diff.
 - Render the board for the README: `$KPY <hardware-tooling>/hardware/kicad/render_board.py hardware/OpenAIO.kicad_pcb --outdir images`, KiCad closed.
 - Analyse the netlist: export it with the netlist command in Environment, then read it with a script; never hand-write a second BOM.
 - Update the shared library: `git submodule update --remote hardware/KiCad-Library`, run DRC, commit as its own reviewed change.

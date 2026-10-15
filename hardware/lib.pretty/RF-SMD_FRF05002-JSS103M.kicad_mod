@@ -200,7 +200,7 @@
 		(uuid "8933572e-ebc8-452d-affa-4136ab602737")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/RF-SMD_FRF05002-JSS103M.wrl"
+	(model "${KIPRJMOD}/lib.3dshapes/RF-SMD_FRF05002-JSS103M.step"
 		(offset
 			(xyz 0 0.76 -0)
 		)

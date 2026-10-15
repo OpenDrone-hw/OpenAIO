@@ -371,7 +371,7 @@
 		(uuid "8ca64450-c7a5-4b4f-9a6e-18c78b792b34")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/QFN-24_L4.0-W4.0-P0.50-TL-EP2.8.step"
+	(model "${KIPRJMOD}/lib.3dshapes/QFN-24_L4.0-W4.0-P0.50-TL-EP2.8.step"
 		(offset
 			(xyz 0 0 0)
 		)

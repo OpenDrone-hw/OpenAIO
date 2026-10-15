@@ -135,7 +135,7 @@
 		(uuid "4533c87b-6189-4ec7-a5df-67816e6ba349")
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/RF_Antenna.3dshapes/Johanson_2450AT18x100.step"
+	(model "${KIPRJMOD}/lib.3dshapes/Johanson_2450AT18x100.step"
 		(offset
 			(xyz 0 0 0)
 		)
