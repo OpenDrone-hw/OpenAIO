@@ -4,9 +4,10 @@
 	(generator_version "10.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at 0 -4 0)
+		(at 0 -4 180)
 		(layer "F.SilkS")
-		(uuid "1c7f32c8-b12d-4ef8-93ef-480a5c5a1c26")
+		(hide yes)
+		(uuid "b7f58bf7-8b54-4b39-ab6c-b75139931cd4")
 		(effects
 			(font
 				(size 1 1)
@@ -14,10 +15,10 @@
 			)
 		)
 	)
-	(property "Value" "X3-DFN0603-2_L0.6-W0.3-RD"
-		(at 0 4 0)
+	(property "Value" "SDM02U30LP3-7B"
+		(at 0 4 180)
 		(layer "F.Fab")
-		(uuid "6c64635a-0908-4502-a141-7a476e6894a4")
+		(uuid "d599afa9-5a3b-4d31-8a59-e17cabd6f575")
 		(effects
 			(font
 				(size 1 1)
@@ -25,11 +26,11 @@
 			)
 		)
 	)
-	(property "Datasheet" ""
-		(at 0 0 0)
+	(property "Datasheet" "https://lcsc.com/product-detail/Schottky-Barrier-Diodes-SBD_Diodes-Incorporated-SDM02U30LP3-7B_C151629.html"
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "0758eba8-d467-47ce-8433-f2bd6bd23d88")
+		(uuid "c95b86c2-792f-4294-b197-6f88ae0a6d27")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -37,16 +38,57 @@
 		)
 	)
 	(property "Description" ""
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "cc7a739a-c18f-4610-aa13-6362b6c688ac")
+		(uuid "7b4e16e5-c9a8-4b67-b5f0-c65d32a9b3d0")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
+	(property "LCSC" "C151629"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "55a84482-9743-4ef4-bea4-57b712673f30")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "SDM02U30LP3-7B"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "28728c67-711f-4245-9da2-3f80689af009")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Diodes Incorporated"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f05306a1-9f8d-48ba-8816-4b030aad7514")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/OSD/")
+	(sheetfile "fc_osd.kicad_sch")
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
@@ -57,7 +99,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "6e9943ee-3c14-4177-8a22-78116c49a4c5")
+		(uuid "5380abff-1e87-47c6-be07-ddfd8528544b")
 	)
 	(fp_line
 		(start -0.55 -0.3)
@@ -67,7 +109,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "ba640fc1-435e-48c7-a6d2-f7f376581e0c")
+		(uuid "7c24c431-f8fb-46b6-8729-48ba4bb33dc5")
 	)
 	(fp_line
 		(start -0.55 0.3)
@@ -77,7 +119,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "ed333df9-bd4b-4ef2-ba35-e8aa5f79a98e")
+		(uuid "cd0057a6-7d69-40ca-9a59-230f9430233d")
 	)
 	(fp_line
 		(start -0.43 -0.3)
@@ -87,7 +129,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "7265ed6b-528d-459d-bffa-8626a44cfbb1")
+		(uuid "c89d98c1-3964-4614-af81-552b30ee6ba5")
 	)
 	(fp_line
 		(start 0.46 -0.3)
@@ -97,19 +139,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "1203988c-f7ac-4298-a915-09b3a697b9b5")
-	)
-	(fp_poly
-		(pts
-			(xy -0.465433 -0.25) (xy 0.4 -0.25) (xy 0.4 0.315433) (xy -0.465433 0.315433)
-		)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill no)
-		(layer "F.CrtYd")
-		(uuid "b1224050-2e05-4ab3-9ca4-bb8a152b4bd3")
+		(uuid "a4a49978-8ddf-44ed-9e67-4029155a2170")
 	)
 	(fp_circle
 		(center -0.31 0.16)
@@ -120,12 +150,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "065768c1-4021-4d13-917f-fddb4f7b7278")
+		(uuid "4115974e-091a-458e-9064-e4a8b2186fe3")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
-		(uuid "89195c17-a076-488e-96e1-7566c442fe61")
+		(uuid "13053f95-e642-434b-b4ee-374d407a98e9")
 		(effects
 			(font
 				(size 1 1)
@@ -137,13 +167,13 @@
 		(at -0.2 0 180)
 		(size 0.2 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "49bee4dc-a7aa-447a-82d2-8935c263431c")
+		(uuid "cab3d582-b53e-4db4-bd7b-4ab911d8dd91")
 	)
 	(pad "2" smd rect
 		(at 0.2 0 180)
 		(size 0.2 0.3)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "b4d7c0b0-89d0-489d-b34f-327469871f75")
+		(uuid "8ed1c686-14c6-4f09-94a0-39c346a678c7")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/lib.3dshapes/X3-DFN0603-2_L0.6-W0.3-H0.3-RD.wrl"

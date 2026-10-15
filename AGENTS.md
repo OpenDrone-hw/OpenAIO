@@ -1,21 +1,22 @@
 # OpenAIO
 
 All-in-one board for toothpick-class FPV, 2-6S, on one PCB: RP2354A flight
-controller (BMI270, DPS368 baro, PIO analog OSD, microSD blackbox), 4x AM32 ESC
+controller (BMI270, BMP580 baro, PIO analog OSD, microSD blackbox), 4x AM32 ESC
 (AT32F421 + NSG2065Q + DOY180N03T) and an ExpressLRS 2.4 GHz receiver
 (ESP32-C3 + SX1281). The sub-sheets come from the manufactured
 OpenFC-Lite-Mini, OpenESC-20x20 and OpenRX-Lite designs. The layout is the
-routed Base and Core boards of the earlier two-board revision (8fa8d7b), merged
-into one file on the OpenAIO-Whoop 8-layer HDI stackup.
+owner's hand-routed Base and Core boards of 2026-08-22 (d81e559, plus the
+always-on +10V of 9aba717), merged into one file on the OpenAIO-Whoop 8-layer
+HDI stackup.
 
 ## Architecture
 
 One schematic, one board. The Base and Core boards of the previous revision
-were joined by a 46-pad LGA (J90 on the Base, J91 on the Core) whose pads
+were joined by a 34-pad LGA (J90 on the Base, J91 on the Core) whose pads
 carried identical nets; both footprints and the `core_interface` sheet are
 gone, so every former LGA net is now a plain net between the two layouts and
-shows as a ratsnest line. The Core's escape vias that went down to J91 are
-left as routing anchors (via_dangling until routed).
+shows as a ratsnest line. The escape stubs that went to J90/J91 are left as
+routing anchors (track_dangling until routed).
 
 ## Voltage envelope
 
@@ -36,12 +37,12 @@ no continuous-current figure is published at 2S or 6S without a measurement.
 
 - Layer use as routed (from the two-board layouts, not yet re-planned): Base
   In1-In4 carry the phase-node copper of the power stages, In5 `+BATT` and
-  `+10V`, In6 GND, In2 most Base signal routing; the Core used In1/In4 as GND,
-  In2/In3 for signals and `+3.3V`. The OpenAIO-Whoop plan (L2 and L7 solid GND,
+  `+10V`, In6 GND, B.Cu and In2 most Base signal routing; the Core used In1,
+  In2 and In4 as GND, In2/In3 for signals and `+3.3V`. The OpenAIO-Whoop plan (L2 and L7 solid GND,
   power planes on L4/L5) is the target when the layers are re-planned.
-- RF: `+BATT` keeps 0.80 mm from the 2.4 GHz chain; no tracks or vias in the
-  `AE2 antenna` area except the antenna feed.
-- DOY180N03T exposed pads: no other-net copper inside `DOY_EP`.
+- The Core was routed on the 0.09 line standard with the Default class only.
+  The rule area `Core layout` keeps that inside the Core; move it with the
+  Core. Outside it the Base netclasses apply.
 - Keep the USB1 locating peg check: the board is now 0.997 mm thick.
 
 ## Repo
@@ -52,10 +53,11 @@ no continuous-current figure is published at 2S or 6S without a measurement.
 | Status | See the `status-*` topic on the repo. Never written here. |
 | Designed in | KiCad 10 |
 | KiCad project | `hardware/OpenAIO.kicad_pro`, one schematic and one board |
-| Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_rp2350a`, `fc_imu`, `fc_osd`, `fc_blackbox`, `fc_pads` (OpenFC-Lite-Mini, plus the DPS368 baro U28), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite) |
+| Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_rp2350a`, `fc_imu`, `fc_osd`, `fc_blackbox`, `fc_pads` (OpenFC-Lite-Mini, plus the BMP580 baro U26), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite) |
 | Board | `hardware/OpenAIO.kicad_pcb`, 35.4 x 35.4 mm. While the merge is open, the Core layout sits right of the Base outline with its own Edge.Cuts; see `research/ROUTING.md` |
 | Library | Project-local only: `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/` (nickname `lib`). KiCad 10 stock `Device`, `power`, `Connector`, `Connector_Generic` and `MCU_Espressif` symbols cover the rest. No `OPENDRONE_LIB` paths in the tables |
-| Design rules | `hardware/OpenAIO.kicad_dru`: canonical block, the HDI 1+6+1 via rules from OpenAIO-Whoop, and the Base/Core rules that still apply (RF, CSA, PHASE, USB, DOY180N03T EP, AE2 antenna, edge pads, mask gangs) |
+| Design rules | `hardware/OpenAIO.kicad_dru`: canonical block, the HDI 1+6+1 via rules from OpenAIO-Whoop, and the `Core layout` clearance rule. The Base's 2 oz outer and the Core's LGA rules are gone with the 2 oz copper and the LGA |
+| Netclasses | The Base's (`OpenAIO.kicad_pro`): VBAT, Phase, Gate, Power, Analog, RF, USB, Default |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
 | Stackup | 8-layer HDI 1+6+1, 0.997 mm, 1 oz on all layers, ENIG, copied from OpenAIO-Whoop (`hardware/tools` of that repo, `stackup.json`): 1080 0.077 / 1080 0.077 / core 0.127 / 2116 0.125 / core 0.127 / 1080 0.077 / 1080 0.077 |
 | Vias | Fab form: laser microvia F.Cu-In1.Cu and In6.Cu-B.Cu 0.25/0.10, buried In1.Cu-In6.Cu 0.33/0.15, stacked allowed. Edit form: one through via per stack (0.35/0.15-0.20), a DRC warning, converted by `tools/hdi_via_pass.py` |
@@ -97,9 +99,9 @@ the docstring: `hdi_via_pass.py` (edit form <-> fab form vias, `--collapse`),
 `sync_pcb.py`, `pad_vias.py`, `gnd_stitch.py`, `track_to_pour.py`,
 `track_widen.py`, `via_declutter.py`, `via_relocate.py`, `inner_router.py`,
 `loop_resistance.py`. They were written for the Whoop's net and class names
-(`Power`, `Gate`, `Phase`); this board's classes are `POWER`, `PHASE`, `CSA`,
-`RF`, `USB`. Read the class and net constants at the top of a tool before
-running it here.
+(`Power`, `Gate`, `Phase`), which this board shares; it also has `VBAT`,
+`Analog`, `RF` and `USB`. Read the class and net constants at the top of a tool
+before running it here.
 
 ## Rules
 
@@ -143,4 +145,4 @@ Python named there.
 
 | Rev | Date | Change |
 |---|---|---|
-| r3 | 2026-10-15 | One board: Base and Core merged, OpenAIO-Whoop 8L HDI stackup, DPS368 baro, schematic review fixes. Not routed as one board. |
+| r3 | 2026-10-15 | One board from the owner's 2026-08-22 Base and Core (d81e559 + always-on +10V), OpenAIO-Whoop 8L HDI stackup, BMP580 baro. Not routed as one board. |

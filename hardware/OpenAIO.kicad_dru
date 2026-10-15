@@ -23,12 +23,14 @@
 
 # --- board-specific rules below this line ------------------------------------
 #
-# OpenAIO, one board (2026-10-15): the Base and Core boards of 8fa8d7b merged into one
-# 8-layer HDI 1+6+1 board on the OpenAIO-Whoop stackup (1.0 mm, 0.997 mm with mask, 1 oz on all
-# layers, ENIG). The Core layout sits right of the Base outline with its routing kept; it moves
-# into the Base outline where the J90 LGA land was. Rules kept from OpenAIO-Base.kicad_dru and
-# OpenAIO-Core.kicad_dru keep their names; the LGA, 2 oz outer and 1.6 mm through-via rules are
-# gone. Via rules come from OpenAIO-Whoop.kicad_dru. KiCad: the LAST matching rule wins.
+# Only what this board needs and the line does not. Name every rule so the next
+# person can tell a real constraint from a copied one.
+#
+# OpenAIO, one board: the hand-routed Base and Core of 2026-08-22 (d81e559, plus the always-on
+# +10V of 9aba717) merged into one 8-layer HDI 1+6+1 board on the OpenAIO-Whoop stackup
+# (0.997 mm, 1 oz on all layers, ENIG). The 2 oz outer rules of OpenAIO-Base.kicad_dru and the
+# LGA rule of OpenAIO-Core.kicad_dru are gone with the 2 oz copper and the LGA. Via rules come
+# from OpenAIO-Whoop.kicad_dru. KiCad: the LAST matching rule wins.
 
 # ---- HDI 1+6+1 vias (NextPCB, from OpenAIO-Whoop) ----
 (rule "HDI 1+6+1: no mechanical blind vias"
@@ -79,165 +81,10 @@
   (constraint hole_to_hole (min 0.25mm))
   (condition "A.Net != B.Net && ((A.Via_Type == 'Micro' && B.Via_Type == 'Buried') || (A.Via_Type == 'Buried' && B.Via_Type == 'Micro'))"))
 
-# ---- copper: 1 oz on every layer, NextPCB 0.09 minimum lives in the .kicad_pro ----
-(rule "RF: clearance, outer"
-  (layer outer)
-  (condition "A.NetClass == 'RF' || B.NetClass == 'RF'")
-  (constraint clearance (min 0.15mm)))
-(rule "RF: clearance, inner"
-  (layer inner)
-  (condition "A.NetClass == 'RF' || B.NetClass == 'RF'")
-  (constraint clearance (min 0.15mm)))
-(rule "CSA: clearance, outer"
-  (layer outer)
-  (condition "A.NetClass == 'CSA' || B.NetClass == 'CSA'")
-  (constraint clearance (min 0.16mm)))
-(rule "CSA: clearance, inner"
-  (layer inner)
-  (condition "A.NetClass == 'CSA' || B.NetClass == 'CSA'")
-  (constraint clearance (min 0.12mm)))
-(rule "PHASE: clearance, outer"
-  (layer outer)
-  (condition "A.NetClass == 'PHASE' || B.NetClass == 'PHASE'")
-  (constraint clearance (min 0.15mm)))
-(rule "RF: track width"
-  (condition "A.NetClass == 'RF'")
-  (constraint track_width (min 0.16mm) (opt 0.16mm)))
-(rule "CSA: track width"
-  (condition "A.NetClass == 'CSA'")
-  (constraint track_width (min 0.15mm) (opt 0.15mm)))
-(rule "POWER: +BATT, +5V, +4v5, ESC vdda track width"
-  (condition "A.NetName == '+BATT' || A.NetName == '+5V' || A.NetName == '+4v5' || A.NetName == '/ESC?/vdda'")
-  (constraint track_width (min 0.15mm) (opt 0.30mm)))
-(rule "POWER: +5V_USB track width"
-  (condition "A.NetName == '+5V_USB'")
-  (constraint track_width (min 0.20mm) (opt 0.30mm)))
-
-(rule "POWER: +1.1V and +1.8V_GYRO track width"
-  (condition "A.NetName == '+1.1V' || A.NetName == '+1.8V_GYRO'")
-  (constraint track_width (min 0.17mm) (opt 0.20mm)))
-(rule "POWER: +4v5 track width"
-  (condition "A.NetName == '+4v5'")
-  (constraint track_width (min 0.12mm) (opt 0.20mm)))
-
-(rule "NPCB base: SMD pad to SMD pad"
-  (layer outer)
-  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'SMD' && B.Pad_Type == 'SMD'")
-  (constraint clearance (min 0.15mm)))
-
-(rule "NPCB core: U9 X2SON-6 land pattern below 0.15"
-  (layer outer)
-  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U9') && B.memberOfFootprint('U9')")
-  (constraint clearance (min 0.076mm)))
-
-(rule "NPCB base: PTH pad to PTH pad"
-  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Pad_Type == 'Through-hole' && B.Pad_Type == 'Through-hole'")
-  (constraint clearance (min 0.40mm)))
-
-(rule "NPCB base: PTH hole to copper"
-  (condition "A.Type == 'Pad' && A.Pad_Type == 'Through-hole'")
-  (constraint hole_clearance (min 0.23mm))
-  (constraint annular_width (min 0.115mm)))
-
-(rule "NPCB base: NPTH hole to copper"
-  (condition "A.Type == 'Pad' && A.Pad_Type == 'NPTH, mechanical'")
-  (constraint hole_clearance (min 0.20mm)))
-
-(rule "NPCB base: hole to hole, different nets (CAF)"
-  (condition "A.Net != B.Net")
-  (constraint hole_to_hole (min 0.30mm)))
-
-(rule "NPCB base: copper to routed edge"
-  (constraint edge_clearance (min 0.20mm)))
-
-(rule "NPCB base: body to body 0.20 mm (courtyards may touch)"
-  (constraint courtyard_clearance (min 0mm)))
-
-(rule "Edge pads: U24 battery and motor solder pads"
-  (constraint edge_clearance (min 0.20mm))
-  (severity ignore)
-  (condition "A.Type == 'Pad' && A.memberOfFootprint('U24') && (A.Pad_Number == '1' || A.Pad_Number == '2' || A.Pad_Number == '12' || A.Pad_Number == '13' || A.Pad_Number == '14' || A.Pad_Number == '15' || A.Pad_Number == '16' || A.Pad_Number == '17' || A.Pad_Number == '18' || A.Pad_Number == '19' || A.Pad_Number == '20' || A.Pad_Number == '21' || A.Pad_Number == '22' || A.Pad_Number == '23')"))
-
-(rule "Edge pads: USB1 shell tabs (pad 0)"
-  (constraint edge_clearance (min 0.20mm))
-  (severity ignore)
-  (condition "A.Type == 'Pad' && A.memberOfFootprint('USB1') && A.Pad_Number == '0'"))
-
-(rule "Edge pads: J15-J33 wire pads (lib:small_pad)"
-  (constraint edge_clearance (min 0.20mm))
-  (severity ignore)
-  (condition "A.Type == 'Pad' && A.memberOfFootprint('lib:small_pad')"))
-
-(rule "Edge pads: JP1.1 u.FL centre pad (owner original, decision listed)"
-  (constraint edge_clearance (min 0.20mm))
-  (severity ignore)
-  (condition "A.Type == 'Pad' && A.memberOfFootprint('JP1') && A.Pad_Number == '1'"))
-
-(rule "Edge pads: FL1.2 filter GND pad (owner original, decision listed)"
-  (constraint edge_clearance (min 0.20mm))
-  (severity ignore)
-  (condition "A.Type == 'Pad' && A.memberOfFootprint('FL1') && A.Pad_Number == '2'"))
-
-(rule "Edge pads: U12.7/.8 SH-6 shell tabs (owner original, decision listed)"
-  (constraint edge_clearance (min 0.20mm))
-  (severity ignore)
-  (condition "A.Type == 'Pad' && A.memberOfFootprint('U12') && (A.Pad_Number == '7' || A.Pad_Number == '8')"))
-
-(rule "Mask gang: U23 X2SON-4 land pattern"
-  (constraint bridged_mask)
-  (condition "A.memberOfFootprint('U23')")
-  (severity ignore))
-
-(rule "Mask gang: U27 X2SON-4 land pattern"
-  (constraint bridged_mask)
-  (condition "A.memberOfFootprint('U27')")
-  (severity ignore))
-
-(rule "Mask gang: U9 X2SON-6 land pattern"
-  (constraint bridged_mask)
-  (condition "A.memberOfFootprint('U9')")
-  (severity ignore))
-
-(rule "Mask gang: U11 X2SON-4 land pattern"
-  (constraint bridged_mask)
-  (condition "A.memberOfFootprint('U11')")
-  (severity ignore))
-
-(rule "DOY180N03T EP: other-net pours 0.40 from the drain land"
-  (layer outer)
-  (condition "A.memberOfFootprint('lib:DOY180N03T_TDFN3333-8') && A.Pad_Number == '3' && B.Type == 'Zone' && A.Net != B.Net")
-  (constraint clearance (min 0.40mm)))
-
-(rule "DOY180N03T EP: no other tracks or vias under the exposed pad"
-  (layer outer)
-  (condition "A.intersectsArea('DOY_EP') && A.NetName != 'GND' && A.NetName != '+BATT' && A.NetName != 'Net-(Q*-G)' && A.NetName != '/??'")
-  (constraint disallow track via))
-
-(rule "RF: +BATT keeps 0.80 mm from the RF chain"
-  (condition "(A.NetName == 'Net-(FL1-OUT)' || A.NetName == 'Net-(FL1-IN)' || A.NetName == '/RX/WIFI' || A.NetName == 'Net-(U22-LNA_IN)') && B.NetName == '+BATT'")
-  (constraint clearance (min 0.80mm)))
-
-(rule "AE2 antenna: no tracks or vias in the antenna area"
-  (condition "A.intersectsArea('AE2 antenna') && (A.Type == 'Via' || A.NetName != '/RX/WIFI')")
-  (constraint disallow track via))
-
-(rule "USB: D+/D- diff pair gap and uncoupled length"
-  (condition "A.NetName == 'USB_D+' || A.NetName == 'USB_D-'")
-  (constraint diff_pair_gap (min 0.14mm) (opt 0.15mm) (max 0.30mm))
-  (constraint diff_pair_uncoupled (max 9.9mm)))
-
-(rule "USB: D+/D- USB1 pad escape"
-  (layer F.Cu)
-  (condition "(A.NetName == 'USB_D+' || A.NetName == 'USB_D-') && A.intersectsCourtyard('USB1')")
-  (constraint diff_pair_gap (min 0.14mm) (max 0.35mm))
-  (constraint diff_pair_uncoupled (max 1.2mm)))
-
-(rule "USB: D+/D- track width, outer"
-  (layer outer)
-  (condition "A.NetName == 'USB_D+' || A.NetName == 'USB_D-'")
-  (constraint track_width (min 0.14mm) (opt 0.14mm) (max 0.20mm)))
-
-(rule "USB: D+/D- track width, inner"
-  (layer inner)
-  (condition "A.NetName == 'USB_D+' || A.NetName == 'USB_D-'")
-  (constraint track_width (min 0.12mm) (opt 0.12mm) (max 0.12mm)))
+# ---- Core layout ----
+# The Core was routed by hand on the 0.09 line standard with the Default class only
+# (OpenAIO-Core.kicad_pro). The rule area "Core layout" covers it; inside it the Base netclass
+# clearances (Power 0.10, Analog/RF/USB 0.12) do not apply. Move the rule area with the Core.
+(rule "Core layout: line standard clearance 0.09"
+  (constraint clearance (min 0.09mm))
+  (condition "A.intersectsArea('Core layout') && B.intersectsArea('Core layout')"))

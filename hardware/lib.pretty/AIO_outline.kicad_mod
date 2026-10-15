@@ -8,7 +8,7 @@
 		(unlocked yes)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "7b3e0542-7091-4f45-9bac-1c2db61c4e95")
+		(uuid "8a9543fd-b0a3-41da-b694-d38c80d86225")
 		(effects
 			(font
 				(size 1 1)
@@ -20,7 +20,7 @@
 		(at 0 1 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "a73aaf17-6b68-488b-bc37-4c9e614f872e")
+		(uuid "cf021b20-fc5a-48a8-95ec-9983f41bb4f1")
 		(effects
 			(font
 				(size 1 1)
@@ -33,7 +33,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "93326fed-9e11-43e3-a619-72da002ecd07")
+		(uuid "ca6a1a3e-d556-4417-ab52-429e6ee8307a")
 		(effects
 			(font
 				(size 1 1)
@@ -46,7 +46,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "d567eac2-f586-41fc-8830-3d62fdba8ae2")
+		(uuid "b3e7ba1d-830a-45f7-8ee4-b09e5e52d2d4")
 		(effects
 			(font
 				(size 1 1)
@@ -56,7 +56,7 @@
 	)
 	(sheetname "/")
 	(sheetfile "OpenAIO.kicad_sch")
-	(attr through_hole exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
+	(attr through_hole)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -17.47 -2.85)

@@ -8,7 +8,8 @@
 	(property "Reference" "REF**"
 		(at 0 -1.7 0)
 		(layer "F.SilkS")
-		(uuid "8ff4425d-eb76-47e3-8d67-0164e65c00d7")
+		(hide yes)
+		(uuid "5e944d14-4ee6-4732-a124-bf292fbbc975")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -16,10 +17,10 @@
 			)
 		)
 	)
-	(property "Value" "SolderPad"
+	(property "Value" "BOOT"
 		(at 0 1.7 0)
 		(layer "F.Fab")
-		(uuid "8ff66bb9-5b53-45db-b8e8-6cded162557e")
+		(uuid "a3f95fcc-c564-4e7b-9d45-ff251bc069e1")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -31,24 +32,27 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "3d61b901-da52-4c6f-bb41-d9e330446483")
+		(uuid "68161694-cf48-4a43-a253-b7feb111e609")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "test point"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5479b2fc-8aab-430c-8363-60dae9c7729a")
+		(uuid "b9ddb2c0-2e62-4e2d-8591-be4c0f9a6665")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
+	(property ki_fp_filters "Pin* Test*")
+	(sheetname "/RX/")
+	(sheetfile "rx_esp32c3_sx1281.kicad_sch")
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_rect
@@ -60,48 +64,14 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "c3e82aa5-ed08-47f2-bba7-07b33a27fd8b")
+		(uuid "40e661aa-4ea8-41d4-9d01-4ae11f352989")
 	)
-	(pad "1" thru_hole circle
-		(at -0.5 -0.7)
-		(size 0.6 0.6)
-		(drill 0.4)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "99f26a90-9b3b-4081-af71-bcb0fed6bfee")
-	)
-	(pad "1" thru_hole circle
-		(at -0.5 0.7)
-		(size 0.6 0.6)
-		(drill 0.4)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "cfeb80ed-0128-46cd-81d0-688a248f001e")
-	)
-	(pad "1" thru_hole roundrect
+	(pad "1" smd roundrect
 		(at 0 0)
-		(size 1.9 2.5)
-		(drill 0.5)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(size 1.2 1.2)
+		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.25)
-		(uuid "81794917-cf78-484f-bd95-eeb800687e92")
-	)
-	(pad "1" thru_hole circle
-		(at 0.5 -0.7)
-		(size 0.6 0.6)
-		(drill 0.4)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "15d2384d-e391-478d-b732-daa655af8862")
-	)
-	(pad "1" thru_hole circle
-		(at 0.5 0.7)
-		(size 0.6 0.6)
-		(drill 0.4)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
-		(uuid "bfcf367b-796b-4624-a98d-2ece52fe217c")
+		(uuid "94960306-8355-4799-b1a6-37cfb71b75c8")
 	)
 	(embedded_fonts no)
 )

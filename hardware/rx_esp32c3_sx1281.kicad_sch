@@ -3481,121 +3481,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(polyline
 		(pts
@@ -4666,6 +4551,10 @@
 		(uuid "54fbc57d-2a22-4efb-b7a7-efeff737bc75")
 	)
 	(no_connect
+		(at 107.95 121.92)
+		(uuid "78c6ad66-61fc-4de5-ba81-66874b93a38c")
+	)
+	(no_connect
 		(at 118.11 187.96)
 		(uuid "811af91b-678f-4068-b129-df83393c0628")
 	)
@@ -4812,16 +4701,6 @@
 			(type default)
 		)
 		(uuid "15f10738-771f-415c-bbb7-8a0dffec1363")
-	)
-	(wire
-		(pts
-			(xy 107.95 121.92) (xy 105.41 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "186ced0b-705c-4ecc-8831-8c79179b4438")
 	)
 	(wire
 		(pts
@@ -6284,84 +6163,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 105.41 121.92 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0cfc5975-a811-445a-b431-073e34adf39d")
-		(property "Reference" "#PWR0288"
-			(at 105.41 128.27 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 105.41 127 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 105.41 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 105.41 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 105.41 121.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "39bc8ee7-fe1d-49c7-a430-67ee0795ad53")
-		)
-		(instances
-			(project "OpenAIO-Base"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
-					(reference "#PWR0288")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 273.05 99.06 0)
 		(unit 1)
@@ -6447,30 +6248,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "GRM033R61A105ME44D"
-			(at 277.114 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 277.114 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "1"
@@ -6655,30 +6432,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "U.FL-R-SMT-1(80)"
-			(at 189.23 116.8399 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Hirose"
-			(at 189.23 116.8399 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "3"
@@ -6954,28 +6707,6 @@
 				)
 			)
 		)
-		(property "MPN" "LQP03TN24NH02D"
-			(at 179.324 240.03 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 179.324 240.03 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "c11d46a9-7d3f-4c97-bf40-94b7bdd6499d")
 		)
@@ -7086,30 +6817,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM033R61A103KA01J"
-			(at 157.48 76.1999 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 157.48 76.1999 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "1"
 			(uuid "b8029130-f685-46dd-b32f-e16b4ca31608")
 		)
@@ -7137,9 +6844,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "21bdf0a4-0d45-4d1b-8050-4665c7155828")
 		(property "Reference" "TP5"
@@ -7301,30 +7008,6 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A106MQ5NUNC"
-			(at 265.176 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 265.176 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "1"
 			(uuid "6a6bd91b-f7d1-44fb-8b01-eda292f83479")
 		)
@@ -7434,30 +7117,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "GRM033R61A105ME44D"
-			(at 198.12 184.1499 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 198.12 184.1499 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "1"
@@ -7730,30 +7389,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM155R60J106ME44D"
-			(at 165.1 184.1499 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 165.1 184.1499 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "2"
 			(uuid "84f08afb-3b1b-40cc-9786-66930f094cb2")
 		)
@@ -7862,30 +7497,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "GRM033R61E104KE14D"
-			(at 113.03 57.1499 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 113.03 57.1499 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "1"
@@ -8334,30 +7945,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM033R61E104KE14D"
-			(at 60.96 110.4899 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 60.96 110.4899 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "1"
 			(uuid "5a6d117f-f3bc-4bce-8073-e134d144e363")
 		)
@@ -8457,28 +8044,6 @@
 		)
 		(property "LCSC" "C2861882"
 			(at 92.71 -17.78 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "TLV75533PDQNR"
-			(at 288.29 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 288.29 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8625,7 +8190,7 @@
 				)
 			)
 		)
-		(property "Value" "+4v5"
+		(property "Value" "+3V3"
 			(at 104.14 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8847,28 +8412,6 @@
 		)
 		(property "LCSC Part" "C2168164"
 			(at 53.34 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "GRM033R61A103KA01J"
-			(at 86.36 66.802 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 86.36 66.802 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9238,28 +8781,6 @@
 				)
 			)
 		)
-		(property "MPN" "CJ17-400001010B20"
-			(at 144.526 229.362 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Jiangsu Changjing Electronics"
-			(at 144.526 229.362 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "3"
 			(uuid "74905893-ce8c-46aa-b233-ae146508aefb")
 		)
@@ -9375,30 +8896,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "GRM033R61A103KA01J"
-			(at 246.38 185.4199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 246.38 185.4199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "1"
@@ -9655,39 +9152,6 @@
 				)
 			)
 		)
-		(property "LCSC" "C383402"
-			(at 100.33 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "MLZ2012M150WT000"
-			(at 97.536 85.09 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "TDK"
-			(at 97.536 85.09 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "996ca7aa-3e44-4bb9-ada7-ba3f9df41648")
 		)
@@ -9786,28 +9250,6 @@
 		)
 		(property "LCSC Part" "C85926"
 			(at 50.8 386.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "GRM033R60J474KE90D"
-			(at 87.122 83.566 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 87.122 83.566 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9926,30 +9368,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM0335C1H150JA01D"
-			(at 125.73 238.506 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 125.73 238.506 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "1"
 			(uuid "24eb8772-ec76-4992-b260-d0fcec5822b8")
 		)
@@ -10049,28 +9467,6 @@
 		)
 		(property "LCSC Part" "C66942"
 			(at -144.78 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "0201B102K500NT"
-			(at 95.25 114.3 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "FH (Guangdong Fenghua)"
-			(at 95.25 114.3 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10187,30 +9583,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "GRM033R61A105ME44D"
-			(at 295.91 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 295.91 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "1"
@@ -10491,28 +9863,6 @@
 				)
 			)
 		)
-		(property "MPN" "SX1281IMLTRT"
-			(at 125.73 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Semtech"
-			(at 125.73 106.68 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "25"
 			(uuid "4b40c576-5a20-4d0b-bb7c-5274c1117707")
 		)
@@ -10774,28 +10124,6 @@
 				)
 			)
 		)
-		(property "MPN" "2450AT18A100E"
-			(at 335.28 205.994 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "JOHANSON(约翰逊)"
-			(at 335.28 205.994 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "f03ca46f-84af-4ed1-ba0c-1a632202e386")
 		)
@@ -10988,30 +10316,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "GRM033R61E104KE14D"
-			(at 247.65 163.8299 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 247.65 163.8299 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "1"
@@ -11377,30 +10681,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM033R61E104KE14D"
-			(at 100.33 57.1499 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 100.33 57.1499 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "1"
 			(uuid "616112ca-fa6a-4231-8c6b-60ad049002b4")
 		)
@@ -11497,30 +10777,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "GRM0335C1H1R2BA01D"
-			(at 307.34 208.2799 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 307.34 208.2799 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "2"
@@ -11801,30 +11057,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM033R61A105ME44D"
-			(at 267.97 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 267.97 210.8199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "1"
 			(uuid "e6b6e5cb-3e04-455b-95e6-9dac79e441d6")
 		)
@@ -11841,82 +11073,6 @@
 			(project "OpenAIO-Base"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "C84")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 201.93 179.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b063eb96-392b-4155-a7e3-d9b43feb9b74")
-		(property "Reference" "#FLG0937"
-			(at 201.93 177.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 201.93 175.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 201.93 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 201.93 179.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "de0edb5e-f7ee-4293-b580-8d21a34d10bb")
-		)
-		(instances
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
-					(reference "#FLG0937")
 					(unit 1)
 				)
 			)
@@ -11999,28 +11155,6 @@
 		)
 		(property "LCSC Part" "C106225"
 			(at 124.46 353.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0201FR-0710KL"
-			(at 182.626 203.454 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 182.626 203.454 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12223,30 +11357,6 @@
 				)
 			)
 		)
-		(property "MPN" "CL05A106MQ5NUNC"
-			(at 306.07 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 306.07 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "1"
 			(uuid "1ebb7735-f2ea-4bee-a292-e2621d83dec2")
 		)
@@ -12441,30 +11551,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "GRM033R61A105ME44D"
-			(at 260.35 185.4199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 260.35 185.4199 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "1"
@@ -12797,30 +11883,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM0335C1H150JA01D"
-			(at 160.02 238.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 160.02 238.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "1"
 			(uuid "6f1ff9fb-82d2-442d-a1c6-b5245bf13023")
 		)
@@ -12920,28 +11982,6 @@
 		)
 		(property "LCSC" "C22434896"
 			(at -144.78 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "OW7EL89CENUNFAYLC-52M"
-			(at 71.12 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "TXC"
-			(at 71.12 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13054,28 +12094,6 @@
 				)
 			)
 		)
-		(property "MPN" "LQP03TN2N0B02D"
-			(at 187.2747 176.784 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 187.2747 176.784 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "01cf77a0-90aa-4209-adae-3b0ca694b2f4")
 		)
@@ -13174,30 +12192,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM0335C1H1R2BA01D"
-			(at 320.04 208.2799 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 320.04 208.2799 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "2"
 			(uuid "a36adbcb-ec1c-4b1b-9c0f-cb879823340b")
 		)
@@ -13286,28 +12280,6 @@
 		)
 		(property "LCSC" "C206435"
 			(at 309.88 200.66 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "LQP03TN2N5C02D"
-			(at 307.086 198.374 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 307.086 198.374 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13594,28 +12566,6 @@
 				)
 			)
 		)
-		(property "MPN" "RC0201FR-0710KL"
-			(at 182.626 198.374 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 182.626 198.374 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "2"
 			(uuid "615002df-cbd5-496c-9960-77daf288523a")
 		)
@@ -13788,39 +12738,6 @@
 		)
 		(property "LCSC Part" "C5349953"
 			(at 107.95 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "XL-1010RGBC-2812B"
-			(at 129.54 184.0798 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "XINGLIGHT"
-			(at 129.54 184.0798 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C5349953"
-			(at 129.54 184.0798 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14030,30 +12947,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM033R61A105ME44D"
-			(at 260.35 163.8299 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 260.35 163.8299 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "1"
 			(uuid "e74539a2-dd7f-4d21-b01c-bbd0c6339847")
 		)
@@ -14165,30 +13058,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM033R61E104KE14D"
-			(at 77.47 193.0399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 77.47 193.0399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "1"
 			(uuid "c5c05d3b-54d2-4f77-b9c6-baa9cdd2f1d5")
 		)
@@ -14287,28 +13156,6 @@
 		)
 		(property "LCSC Part" "C106225"
 			(at 124.46 358.14 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0201FR-0710KL"
-			(at 182.626 208.534 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 182.626 208.534 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14428,30 +13275,6 @@
 				)
 			)
 		)
-		(property "MPN" "GRM033R61E104KE14D"
-			(at 234.95 163.8299 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 234.95 163.8299 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "1"
 			(uuid "87105615-d5d1-4825-a926-e68c624422a9")
 		)
@@ -14561,30 +13384,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "GRM033R61E104KE14D"
-			(at 177.8 184.1499 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 177.8 184.1499 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "1"
@@ -14793,7 +13592,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "ESP32-C3FH4"
+		(property "Value" "ESP32-C3"
 			(at 224.3933 248.92 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14815,7 +13614,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${OPENDRONE_LIB}/datasheet/ESP32-C3FH4.pdf"
+		(property "Datasheet" "https://www.espressif.com/sites/default/files/documentation/esp32-c3_datasheet_en.pdf"
 			(at 222.758 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -14835,42 +13634,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "MPN" "ESP32-C3FH4"
-			(at 224.3933 248.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Espressif Systems"
-			(at 224.3933 248.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "LCSC" "C2858491"
-			(at 224.3933 248.92 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "28"
@@ -15064,28 +13827,6 @@
 		)
 		(property "LCSC Part" "C106225"
 			(at 217.17 353.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RC0201FR-0710KL"
-			(at 275.336 203.454 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "YAGEO"
-			(at 275.336 203.454 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

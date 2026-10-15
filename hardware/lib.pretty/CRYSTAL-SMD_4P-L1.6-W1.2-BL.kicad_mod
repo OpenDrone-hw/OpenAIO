@@ -6,7 +6,8 @@
 	(property "Reference" "REF**"
 		(at 0 -4.4 0)
 		(layer "F.SilkS")
-		(uuid "d39ea660-b506-4356-9671-205ec72b52a7")
+		(hide yes)
+		(uuid "8113fa74-81db-4253-9131-a1d9112002b2")
 		(effects
 			(font
 				(size 1 1)
@@ -14,10 +15,11 @@
 			)
 		)
 	)
-	(property "Value" "CRYSTAL-SMD_4P-L1.6-W1.2-BL"
+	(property "Value" "CJ17-400001010B20"
 		(at 0 4.4 0)
 		(layer "F.Fab")
-		(uuid "fe46fb0e-5a52-48a4-9794-6d7130eabda3")
+		(hide yes)
+		(uuid "53d4d4e1-dbee-4ef1-b61a-c7acdd1be027")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +31,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "66772f84-9c29-464a-a226-c87614077e2d")
+		(uuid "d54cb6a3-f19a-468f-8cab-f6a62bac3c15")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,34 +42,62 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "6d19f50a-0e01-462a-9ae8-9d3ed146f653")
+		(uuid "0a2f3909-45c5-449c-a8a4-57ac8569d93c")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
+	(property "LCSC Part" "C2875272"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "94d6ed65-2260-417b-85a4-98573d1113cb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C2875272"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c70350f6-6cac-4193-a98f-11cab31e96d7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/RX/")
+	(sheetfile "rx_esp32c3_sx1281.kicad_sch")
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
-		(start -1.05 0.2)
-		(end -1.05 0.85)
+		(start -1.1 0.2)
+		(end -1.1 0.85)
 		(stroke
 			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "4c614ec2-f8c1-444f-a968-fdd1a7d21a98")
+		(uuid "c6e77a16-8118-4f76-8612-ea2e875e92c1")
 	)
 	(fp_line
-		(start -1.05 0.85)
-		(end -0.35 0.85)
+		(start -1.1 0.85)
+		(end -0.4 0.85)
 		(stroke
 			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "4117eb8b-a0b5-4a24-95f3-6a2b38be19e1")
+		(uuid "3359575d-4f01-41ce-aa8b-4fee4be3045b")
 	)
 	(fp_circle
 		(center -0.6 0.45)
@@ -78,7 +108,7 @@
 		)
 		(fill no)
 		(layer "Cmts.User")
-		(uuid "632e58c2-f03b-4117-938d-0201a11bb8ff")
+		(uuid "bb931c48-1c65-4c7d-903b-8266caadf506")
 	)
 	(fp_rect
 		(start -1.05 -0.85)
@@ -89,7 +119,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "98565043-04bc-4ded-8147-ffbbb39b3e43")
+		(uuid "a57902bb-948d-4cf1-b1a3-a443a55c47c2")
 	)
 	(fp_circle
 		(center -0.8 0.6)
@@ -100,12 +130,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "f0cc3987-81d5-43cc-8c4c-72a8cf7359dd")
+		(uuid "961377bd-f017-4509-954b-cc54f580abf5")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "6887b442-4d94-4b7d-a608-88e7a6d0bb9f")
+		(uuid "c28d47fd-4bff-4d83-a2e7-1d4896761fef")
 		(effects
 			(font
 				(size 1 1)
@@ -117,30 +147,30 @@
 		(at -0.55 0.4)
 		(size 0.73 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "a90cd1f9-9c64-4269-96cb-ca4760d68762")
+		(uuid "07cb958e-f7c1-4a61-b964-17e10cb8c92b")
 	)
 	(pad "2" smd rect
 		(at 0.55 0.4)
 		(size 0.73 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "37d91782-8a7d-47ee-8f21-c1532963b2de")
+		(uuid "2c9bd5f1-261e-4433-8255-9ab0b1c960bc")
 	)
 	(pad "3" smd rect
 		(at 0.55 -0.4)
 		(size 0.73 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "b982a48d-d5a7-4d27-acb1-99c942013d43")
+		(uuid "0bc81eb3-b174-447c-b5e0-136fc3cef4e3")
 	)
 	(pad "4" smd rect
 		(at -0.55 -0.4)
 		(size 0.73 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "8d8cb0e5-8603-4ba5-8357-c37501913b43")
+		(uuid "1d4fe9bd-6471-4816-9d8e-fb84d6f33075")
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/Crystal.3dshapes/Crystal_SMD_WE_IQXC-26-4Pin_1.6x1.2mm.step"
+	(model "${OPENDRONE_LIB}/3dmodel/CRYSTAL-SMD_4P-L1.6-W1.2-BL.wrl"
 		(offset
-			(xyz 0 0 0)
+			(xyz 0 -0 -0)
 		)
 		(scale
 			(xyz 1 1 1)
