@@ -1293,146 +1293,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "OpenDrone:U.FL-R-SMT-1(80)"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "JP"
-				(at 0 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "U.FL-R-SMT-1(80)"
-				(at 0 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "OpenDrone:RF-SMD_FRF05002-JSS103M"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://lcsc.com/product-detail/Connectors_HRS_U-FL-R-SMT-1-80_3310472280-IPE-XBoard-end-IPXConnector-SMD_C88374.html"
-				(at 0 -15.24 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC Part" "C88374"
-				(at 0 -17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "U.FL-R-SMT-1(80)_0_1"
-				(rectangle
-					(start -7.62 5.08)
-					(end 7.62 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin unspecified line
-					(at 0 -5.08 90)
-					(length 5.08)
-					(name "SIG"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at -12.7 2.54 0)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 12.7 2.54 180)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "OpenRX-Shared:2450AT18A100E"
+		(symbol "lib:2450AT18A100E"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1603,7 +1464,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "OpenRX-Shared:2450FM07D0034T"
+		(symbol "lib:2450FM07D0034T"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1804,7 +1665,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "OpenRX-Shared:CJ17-400001010B20"
+		(symbol "lib:CJ17-400001010B20"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2031,7 +1892,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "OpenRX-Shared:OW7EL89CENUNFAYLC-52M"
+		(symbol "lib:OW7EL89CENUNFAYLC-52M"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2199,7 +2060,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "OpenRX-Shared:SX1281IMLTRT"
+		(symbol "lib:SX1281IMLTRT"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2734,7 +2595,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "OpenRX-Shared:TLV75533PDQNR"
+		(symbol "lib:TLV75533PDQNR"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2920,7 +2781,146 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "OpenRX-Shared:XL-1010RGBC-WS2812B"
+		(symbol "lib:U.FL-R-SMT-1(80)"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "JP"
+				(at 0 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "U.FL-R-SMT-1(80)"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "OpenDrone:RF-SMD_FRF05002-JSS103M"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Connectors_HRS_U-FL-R-SMT-1-80_3310472280-IPE-XBoard-end-IPXConnector-SMD_C88374.html"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C88374"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "U.FL-R-SMT-1(80)_0_1"
+				(rectangle
+					(start -7.62 5.08)
+					(end 7.62 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin unspecified line
+					(at 0 -5.08 90)
+					(length 5.08)
+					(name "SIG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -12.7 2.54 0)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 12.7 2.54 180)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lib:XL-1010RGBC-WS2812B"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -3476,6 +3476,121 @@
 								(size 1.27 1.27)
 							)
 						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -6012,7 +6127,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "056f1234-0145-4f81-a095-b7fe67cef070")
-		(property "Reference" "#PWR0213"
+		(property "Reference" "#PWR08"
 			(at 81.28 191.77 0)
 			(hide yes)
 			(show_name no)
@@ -6096,7 +6211,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "060bfd6a-6214-4bb7-bfb4-2508f53d23cb")
-		(property "Reference" "#PWR0236"
+		(property "Reference" "#PWR014"
 			(at 256.54 172.72 0)
 			(hide yes)
 			(show_name no)
@@ -6257,7 +6372,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "12873075-aaa9-46a7-ba3f-e1f9c79e9ff3")
-		(property "Reference" "C85"
+		(property "Reference" "C10"
 			(at 277.114 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6279,7 +6394,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 274.0152 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -6392,7 +6507,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "12935f6f-1597-4f9d-95e1-faa87984cd18")
-		(property "Reference" "#PWR0245"
+		(property "Reference" "#PWR028"
 			(at 316.23 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -6465,7 +6580,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OpenDrone:U.FL-R-SMT-1(80)")
+		(lib_id "lib:U.FL-R-SMT-1(80)")
 		(at 182.88 115.57 270)
 		(unit 1)
 		(body_style 1)
@@ -6498,7 +6613,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "OpenDrone:RF-SMD_FRF05002-JSS103M"
+		(property "Footprint" "lib:RF-SMD_FRF05002-JSS103M"
 			(at 170.18 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -6596,7 +6711,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "140bceac-322e-4801-96be-123b1ae8b171")
-		(property "Reference" "#PWR0218"
+		(property "Reference" "#PWR021"
 			(at 109.22 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -6680,7 +6795,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "17d4402e-2ea0-424d-b890-8b7d918662a1")
-		(property "Reference" "#PWR0228"
+		(property "Reference" "#PWR035"
 			(at 180.34 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -6764,7 +6879,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1b3b324b-4dc7-4ef0-b8de-ebbd2e788da0")
-		(property "Reference" "L5"
+		(property "Reference" "L1"
 			(at 179.324 237.49 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6784,7 +6899,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0201_0603Metric"
+		(property "Footprint" "lib:L_0201_0603Metric"
 			(at 176.53 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -6894,7 +7009,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1bd6f498-ed0c-4eac-852b-66666736060e")
-		(property "Reference" "C73"
+		(property "Reference" "C27"
 			(at 157.48 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6916,7 +7031,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 154.6352 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -7027,7 +7142,7 @@
 		(in_pos_files no)
 		(dnp no)
 		(uuid "21bdf0a4-0d45-4d1b-8050-4665c7155828")
-		(property "Reference" "TP9"
+		(property "Reference" "TP5"
 			(at 186.69 216.408 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7047,7 +7162,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OpenRX-Shared:SolderPad_1.2x2.0mm"
+		(property "Footprint" "lib:SolderPad_1.2x2.0mm"
 			(at 181.61 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -7109,7 +7224,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "24d164ce-496a-4897-bbd7-3a0515fa5496")
-		(property "Reference" "C82"
+		(property "Reference" "C8"
 			(at 265.176 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7131,7 +7246,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "lib:C_0402_1005Metric"
 			(at 262.5852 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -7244,7 +7359,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "282e8b23-653a-4aa2-afe3-d1f215efe83b")
-		(property "Reference" "C77"
+		(property "Reference" "C25"
 			(at 198.12 181.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7266,7 +7381,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 200.9648 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -7378,7 +7493,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3569af4e-a6ad-48e3-b143-00411f9bf520")
-		(property "Reference" "#PWR0231"
+		(property "Reference" "#PWR010"
 			(at 190.5 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -7463,7 +7578,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3641535f-5dda-4bdd-99d0-f1045cbb1c39")
-		(property "Reference" "#PWR0212"
+		(property "Reference" "#PWR034"
 			(at 71.12 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -7549,7 +7664,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "38f4a8e7-5621-44b1-8e5c-78c3a3e30bed")
-		(property "Reference" "C75"
+		(property "Reference" "C11"
 			(at 165.1 181.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7571,7 +7686,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "lib:C_0402_1005Metric"
 			(at 167.9448 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -7672,7 +7787,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "395a7d68-d201-483c-a575-d54d77abfc94")
-		(property "Reference" "C71"
+		(property "Reference" "C17"
 			(at 113.03 54.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7694,7 +7809,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 110.1852 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -7806,7 +7921,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39c5f4fa-2286-4d4e-aa06-e963b7bac036")
-		(property "Reference" "#PWR0240"
+		(property "Reference" "#PWR039"
 			(at 264.16 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -7890,7 +8005,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f39b6fd-361d-4d6d-aa93-3cbc216fe2b1")
-		(property "Reference" "#PWR0224"
+		(property "Reference" "#PWR026"
 			(at 158.75 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -7975,7 +8090,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3fa6887a-30e7-4d07-b3cd-1369844722b9")
-		(property "Reference" "#PWR0227"
+		(property "Reference" "#PWR032"
 			(at 168.91 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -8059,7 +8174,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4245d16c-88f9-43d4-a5e5-0b6c65a1e75b")
-		(property "Reference" "#PWR0222"
+		(property "Reference" "#PWR025"
 			(at 153.67 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -8142,7 +8257,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "42f50f2d-fe66-4349-b7f4-bfe81cc49b09")
-		(property "Reference" "C65"
+		(property "Reference" "C13"
 			(at 60.96 107.9499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8164,7 +8279,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 58.1152 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -8265,7 +8380,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OpenRX-Shared:TLV75533PDQNR")
+		(lib_id "lib:TLV75533PDQNR")
 		(at 289.56 96.52 0)
 		(unit 1)
 		(body_style 1)
@@ -8276,7 +8391,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "498b970b-9b97-4830-a358-7e3e1e084e98")
-		(property "Reference" "U23"
+		(property "Reference" "U2"
 			(at 288.29 86.36 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8296,7 +8411,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OpenRX-Shared:X2SON-4_L1.0-W1.0-P0.65-TL-EP"
+		(property "Footprint" "lib:X2SON-4_L1.0-W1.0-P0.65-TL-EP"
 			(at 289.56 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -8415,7 +8530,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f9cddac-b46a-4a6a-b597-064c32743a53")
-		(property "Reference" "#PWR0242"
+		(property "Reference" "#PWR016"
 			(at 288.29 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -8499,7 +8614,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "570a73da-36fc-4f98-bbd8-5d5e60b41585")
-		(property "Reference" "#PWR0216"
+		(property "Reference" "#PWR07"
 			(at 104.14 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -8510,7 +8625,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+4v5"
 			(at 104.14 177.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8583,7 +8698,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "58020da6-d99f-4f1d-9edf-51fbaf35deda")
-		(property "Reference" "#PWR0215"
+		(property "Reference" "#PWR022"
 			(at 83.82 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -8666,7 +8781,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5c82c2d3-aeb1-4fc6-8e9e-c6f97818da3c")
-		(property "Reference" "C67"
+		(property "Reference" "C26"
 			(at 80.772 66.802 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8686,7 +8801,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 87.63 70.1548 0)
 			(hide yes)
 			(show_name no)
@@ -8796,7 +8911,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f9bce29-1930-45e6-a4bf-80aeacf5a7b3")
-		(property "Reference" "#PWR0221"
+		(property "Reference" "#PWR01"
 			(at 124.46 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -8881,7 +8996,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "614a60df-7a75-4296-828d-e83871874ed0")
-		(property "Reference" "#PWR0229"
+		(property "Reference" "#PWR036"
 			(at 180.34 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -8965,7 +9080,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "64ddcd17-9684-4740-9fd5-61dc94b4a3d6")
-		(property "Reference" "#PWR0223"
+		(property "Reference" "#PWR02"
 			(at 157.48 247.65 0)
 			(hide yes)
 			(show_name no)
@@ -9038,7 +9153,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OpenRX-Shared:CJ17-400001010B20")
+		(lib_id "lib:CJ17-400001010B20")
 		(at 149.86 236.22 0)
 		(unit 1)
 		(body_style 1)
@@ -9048,7 +9163,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "65d62411-02aa-4166-95f9-62519eb3ce48")
-		(property "Reference" "X2"
+		(property "Reference" "X1"
 			(at 157.48 229.362 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9068,7 +9183,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OpenRX-Shared:CRYSTAL-SMD_4P-L1.6-W1.2-BL"
+		(property "Footprint" "lib:CRYSTAL-SMD_4P-L1.6-W1.2-BL"
 			(at 149.86 246.38 0)
 			(hide yes)
 			(show_name no)
@@ -9185,7 +9300,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68076e7c-5410-4a4a-92aa-47604ccd7a84")
-		(property "Reference" "C80"
+		(property "Reference" "C24"
 			(at 246.38 182.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9207,7 +9322,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 249.2248 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -9319,7 +9434,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "69b1c222-f462-4fde-871f-03241420bf4c")
-		(property "Reference" "#PWR0230"
+		(property "Reference" "#PWR037"
 			(at 180.34 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -9404,7 +9519,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6ce755f5-e12a-4964-b737-20e97b671156")
-		(property "Reference" "#PWR0233"
+		(property "Reference" "#PWR03"
 			(at 222.25 252.73 0)
 			(hide yes)
 			(show_name no)
@@ -9507,7 +9622,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0805_2012Metric"
+		(property "Footprint" "lib:L_0805_2012Metric"
 			(at 100.33 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -9530,6 +9645,17 @@
 			)
 		)
 		(property "Description" "Inductor"
+			(at 100.33 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C383402"
 			(at 100.33 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -9594,7 +9720,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "790fed94-68a6-4b49-83a2-aa7cb0d61f47")
-		(property "Reference" "C68"
+		(property "Reference" "C20"
 			(at 81.28 83.566 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9614,7 +9740,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 87.63 86.6648 0)
 			(hide yes)
 			(show_name no)
@@ -9723,7 +9849,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7aa15c2a-4082-4303-b4c4-55e795e82265")
-		(property "Reference" "C72"
+		(property "Reference" "C1"
 			(at 125.73 235.966 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9745,7 +9871,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 132.3848 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -9857,7 +9983,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7aeaf8bc-f30d-4e5d-bb72-ecde28292ab1")
-		(property "Reference" "C69"
+		(property "Reference" "C19"
 			(at 95.25 111.76 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9877,7 +10003,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 99.06 118.4148 0)
 			(hide yes)
 			(show_name no)
@@ -9986,7 +10112,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8978ec5a-02df-4702-9a9f-71d99b2c66bf")
-		(property "Reference" "C86"
+		(property "Reference" "C15"
 			(at 295.91 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10008,7 +10134,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 304.4952 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -10121,7 +10247,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ead13fb-bc8e-4301-ad29-202437b8b904")
-		(property "Reference" "#PWR0234"
+		(property "Reference" "#PWR030"
 			(at 250.19 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -10206,7 +10332,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "91b49f1a-937f-45a7-a269-d0a45b1ac7a9")
-		(property "Reference" "#PWR0232"
+		(property "Reference" "#PWR031"
 			(at 201.93 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -10279,7 +10405,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OpenRX-Shared:SX1281IMLTRT")
+		(lib_id "lib:SX1281IMLTRT")
 		(at 125.73 85.09 0)
 		(unit 1)
 		(body_style 1)
@@ -10290,7 +10416,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "92a124af-ec8a-4c42-b178-88c22a2f6b57")
-		(property "Reference" "U21"
+		(property "Reference" "U3"
 			(at 125.73 104.14 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10310,7 +10436,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OpenRX-Shared:QFN-24_L4.0-W4.0-P0.50-TL-EP2.6"
+		(property "Footprint" "lib:QFN-24_L4.0-W4.0-P0.50-TL-EP2.6"
 			(at 125.73 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -10489,7 +10615,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "94455fa0-f7ef-4f0f-8334-e89b72afdc0b")
-		(property "Reference" "#PWR0220"
+		(property "Reference" "#PWR024"
 			(at 125.73 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -10562,7 +10688,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OpenRX-Shared:2450AT18A100E")
+		(lib_id "lib:2450AT18A100E")
 		(at 335.28 200.66 270)
 		(mirror x)
 		(unit 1)
@@ -10573,7 +10699,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "96ef32de-64ac-46bb-bff4-e7a64bda7d68")
-		(property "Reference" "AE2"
+		(property "Reference" "AE1"
 			(at 335.28 203.454 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10593,7 +10719,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OpenRX-Shared:ANT-SMD_L3.2-W1.6"
+		(property "Footprint" "lib:ANT-SMD_L3.2-W1.6"
 			(at 322.58 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -10703,7 +10829,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9b85d17f-708b-4cc1-b1ba-40f5cba117eb")
-		(property "Reference" "#PWR0239"
+		(property "Reference" "#PWR06"
 			(at 264.16 194.31 0)
 			(hide yes)
 			(show_name no)
@@ -10787,7 +10913,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9ead1339-b797-4d6d-b3d6-6344915fd2b2")
-		(property "Reference" "C79"
+		(property "Reference" "C6"
 			(at 247.65 161.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10809,7 +10935,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 244.8052 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -10921,7 +11047,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a02039cd-04c2-4adc-a088-f450b0ff7031")
-		(property "Reference" "#PWR0244"
+		(property "Reference" "#PWR019"
 			(at 313.69 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -11005,7 +11131,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a0622045-682f-4592-9951-4570f01fe0e6")
-		(property "Reference" "#PWR0214"
+		(property "Reference" "#PWR09"
 			(at 81.28 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -11089,7 +11215,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a1159368-0cff-46dc-a07f-a8a39ec363a6")
-		(property "Reference" "#PWR0209"
+		(property "Reference" "#PWR017"
 			(at 48.26 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -11174,7 +11300,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a322cd1c-784f-4340-83dc-ab5daf6f1ac3")
-		(property "Reference" "C70"
+		(property "Reference" "C14"
 			(at 100.33 54.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11196,7 +11322,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 97.4852 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -11307,7 +11433,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a4abdded-a85d-41a4-9447-78f9714923a8")
-		(property "Reference" "C87"
+		(property "Reference" "C22"
 			(at 307.34 205.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11329,7 +11455,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 304.4952 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -11430,7 +11556,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a4debba1-02bf-4a2d-908b-7e3759f6eca6")
-		(property "Reference" "#PWR0219"
+		(property "Reference" "#PWR04"
 			(at 113.03 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -11514,7 +11640,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "aa73549f-180a-4721-ae63-4c9146cd890c")
-		(property "Reference" "#PWR0210"
+		(property "Reference" "#PWR018"
 			(at 48.26 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -11598,7 +11724,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "aba60d69-4126-4ab6-b6fa-bf7952bcb772")
-		(property "Reference" "C84"
+		(property "Reference" "C28"
 			(at 267.97 208.2799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11620,7 +11746,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 265.1252 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -11721,6 +11847,82 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 201.93 179.07 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b063eb96-392b-4155-a7e3-d9b43feb9b74")
+		(property "Reference" "#FLG0937"
+			(at 201.93 177.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 201.93 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 201.93 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 201.93 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "de0edb5e-f7ee-4293-b580-8d21a34d10bb")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "#FLG0937")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 180.34 205.74 90)
 		(unit 1)
@@ -11731,7 +11933,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b193d712-83ad-427f-9d85-746c6644fe2c")
-		(property "Reference" "R112"
+		(property "Reference" "R3"
 			(at 178.308 203.454 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11751,7 +11953,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 180.34 207.518 90)
 			(hide yes)
 			(show_name no)
@@ -11861,7 +12063,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bc752bf4-d0ec-4f62-a09b-3dd42dde3784")
-		(property "Reference" "#PWR0235"
+		(property "Reference" "#PWR013"
 			(at 256.54 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -11944,7 +12146,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "be144202-4512-44a0-8751-ec7203efc7f7")
-		(property "Reference" "C88"
+		(property "Reference" "C16"
 			(at 306.07 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11966,7 +12168,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "lib:C_0402_1005Metric"
 			(at 314.6552 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -12078,7 +12280,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c11f017d-710c-438a-a108-b3465fea13eb")
-		(property "Reference" "#PWR0241"
+		(property "Reference" "#PWR038"
 			(at 273.05 205.74 0)
 			(hide yes)
 			(show_name no)
@@ -12164,7 +12366,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c68b4f58-2070-4bdc-9f19-1048f8c9afe2")
-		(property "Reference" "C83"
+		(property "Reference" "C4"
 			(at 260.35 182.8799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12186,7 +12388,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 263.1948 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -12299,7 +12501,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c8db5576-ce78-47ab-acef-3d1534f3f424")
-		(property "Reference" "#PWR0238"
+		(property "Reference" "#PWR05"
 			(at 264.16 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -12372,7 +12574,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OpenRX-Shared:2450FM07D0034T")
+		(lib_id "lib:2450FM07D0034T")
 		(at 158.75 116.84 0)
 		(unit 1)
 		(body_style 1)
@@ -12403,7 +12605,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OpenRX-Shared:FILTER-SMD_4P-L1.0-W0.5-L"
+		(property "Footprint" "lib:FILTER-SMD_4P-L1.0-W0.5-L"
 			(at 158.75 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -12518,7 +12720,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cd207571-f3a1-413d-b01b-f3109c1afa9b")
-		(property "Reference" "C74"
+		(property "Reference" "C3"
 			(at 160.02 236.22 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12540,7 +12742,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 168.6052 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -12641,7 +12843,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OpenRX-Shared:OW7EL89CENUNFAYLC-52M")
+		(lib_id "lib:OW7EL89CENUNFAYLC-52M")
 		(at 71.12 118.11 0)
 		(unit 1)
 		(body_style 1)
@@ -12672,7 +12874,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OpenRX-Shared:OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z"
+		(property "Footprint" "lib:OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z"
 			(at 71.12 127 0)
 			(hide yes)
 			(show_name no)
@@ -12788,7 +12990,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d6d9e6df-806c-4d9e-ae25-69d8ecd60bed")
-		(property "Reference" "L6"
+		(property "Reference" "L3"
 			(at 192.1007 176.784 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12808,7 +13010,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0201_0603Metric"
+		(property "Footprint" "lib:L_0201_0603Metric"
 			(at 190.0687 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -12906,7 +13108,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d866df18-ff65-402e-800d-b44d43738964")
-		(property "Reference" "C89"
+		(property "Reference" "C21"
 			(at 320.04 205.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12928,7 +13130,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 317.1952 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -13029,7 +13231,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "db50c759-9503-4776-92be-bd88ea0cd35b")
-		(property "Reference" "L7"
+		(property "Reference" "L2"
 			(at 311.912 198.374 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13049,7 +13251,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_0201_0603Metric"
+		(property "Footprint" "lib:L_0201_0603Metric"
 			(at 309.88 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -13148,7 +13350,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dccfcc0a-458d-4845-9b81-58714b490409")
-		(property "Reference" "#PWR0211"
+		(property "Reference" "#PWR023"
 			(at 69.85 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -13234,7 +13436,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd101cfb-88d2-4164-a0b9-0039deb3f3e1")
-		(property "Reference" "#PWR0243"
+		(property "Reference" "#PWR029"
 			(at 303.53 217.17 0)
 			(hide yes)
 			(show_name no)
@@ -13317,7 +13519,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dda0505a-c0c5-46da-92ab-da1a4e77f5f1")
-		(property "Reference" "R111"
+		(property "Reference" "R2"
 			(at 178.562 198.374 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13337,7 +13539,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 180.34 202.438 90)
 			(hide yes)
 			(show_name no)
@@ -13447,7 +13649,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "de2be130-700c-4832-aada-bc914f52ec32")
-		(property "Reference" "#PWR0225"
+		(property "Reference" "#PWR027"
 			(at 158.75 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -13520,7 +13722,7 @@
 		)
 	)
 	(symbol
-		(lib_id "OpenRX-Shared:XL-1010RGBC-WS2812B")
+		(lib_id "lib:XL-1010RGBC-WS2812B")
 		(at 107.95 191.77 0)
 		(unit 1)
 		(body_style 1)
@@ -13530,7 +13732,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e004317e-644b-4552-95be-fb8156887882")
-		(property "Reference" "D9"
+		(property "Reference" "D1"
 			(at 113.792 183.896 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13551,7 +13753,7 @@
 				)
 			)
 		)
-		(property "Footprint" "OpenRX-Shared:LED-SMD_4P-L1.0-W1.0-TL_XL-1010RGBC-WS2812B"
+		(property "Footprint" "lib:LED-SMD_4P-L1.0-W1.0-TL_XL-1010RGBC-WS2812B"
 			(at 107.95 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -13667,7 +13869,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e03cfcfd-35f2-43a3-ad69-c281cc8f48cd")
-		(property "Reference" "#PWR0217"
+		(property "Reference" "#PWR020"
 			(at 109.22 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -13751,7 +13953,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e6a43ccc-9ee5-4946-8c61-3c9d89f8a328")
-		(property "Reference" "C81"
+		(property "Reference" "C23"
 			(at 260.35 161.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13773,7 +13975,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 257.5052 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -13886,7 +14088,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e709d9e5-cb1b-4c56-a3a0-d11a1cdfde3a")
-		(property "Reference" "C66"
+		(property "Reference" "C12"
 			(at 77.47 190.4999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13908,7 +14110,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 80.3148 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -14019,7 +14221,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f823fa11-b59b-420e-a216-08ed2add6209")
-		(property "Reference" "R113"
+		(property "Reference" "R4"
 			(at 178.308 208.534 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14039,7 +14241,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 180.34 212.598 90)
 			(hide yes)
 			(show_name no)
@@ -14149,7 +14351,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f9eff039-32bf-4a3e-bc74-a2c74d2e5ec6")
-		(property "Reference" "C78"
+		(property "Reference" "C5"
 			(at 234.95 161.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14171,7 +14373,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 232.1052 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -14284,7 +14486,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa768b2a-bd5e-4a1c-aa3d-9f1fa07d11aa")
-		(property "Reference" "C76"
+		(property "Reference" "C9"
 			(at 177.8 181.6099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14306,7 +14508,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 180.6448 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -14497,7 +14699,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fdfdff24-9d26-4ffc-a547-faa7626c173e")
-		(property "Reference" "#PWR0226"
+		(property "Reference" "#PWR033"
 			(at 168.91 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -14580,7 +14782,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fe37efc9-18d2-430e-86f3-c02e985babde")
-		(property "Reference" "U22"
+		(property "Reference" "U1"
 			(at 224.3933 246.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14602,7 +14804,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm"
+		(property "Footprint" "lib:QFN-32-1EP_5x5mm_P0.5mm_EP3.7x3.7mm"
 			(at 222.758 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -14796,7 +14998,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fe8d88bb-4010-4c48-8bee-fe69b661368d")
-		(property "Reference" "R114"
+		(property "Reference" "R5"
 			(at 271.018 203.454 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14816,7 +15018,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 273.05 207.518 90)
 			(hide yes)
 			(show_name no)

@@ -1,17 +1,19 @@
 # OpenAIO
 
 An all-in-one for toothpick-class 6S FPV: flight controller, 4-in-1 ESC and
-ExpressLRS receiver on 25.5 x 25.5 mm mounting. It merges three boards
-OpenDrone already makes. Two PCBs, no connector: the **Base** carries the ESC
-power stages, power, receiver and all pads, and the **Core**, a 23 x 20 mm hat
-with the RP2354A, IMU, OSD and blackbox, is soldered flat onto it as an
-interior LGA.
+ExpressLRS receiver on 25.5 x 25.5 mm mounting, on one PCB. It merges three
+boards OpenDrone already makes: OpenFC-Lite-Mini (RP2354A flight controller),
+OpenESC-20x20 (AM32 4-in-1) and OpenRX (ELRS receiver). An earlier revision
+split it into a Base and a Core hat joined by an LGA; since 2026-10-15 both
+are one 8-layer HDI board on the OpenAIO-Whoop stackup.
 
 [![Status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project)
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/v3sWmTcx3R)
 
-Held by @stancoene. Layout in progress on the branch
-`claude/openaio-split-reroute`; nothing has been manufactured.
+Held by @stancoene. Layout in progress on the branch `feat/one-board`:
+the Base and Core layouts sit side by side in `hardware/OpenAIO.kicad_pcb`
+with their routing kept, and the Core still has to move into the Base outline
+([research/ROUTING.md](research/ROUTING.md)). Nothing has been manufactured.
 
 ## Why
 
@@ -31,17 +33,17 @@ From the design files. Not manufactured yet.
 
 | | |
 |---|---|
-| Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm (Base) |
-| Stack | Base 8 copper layers, 1.6 mm, 35.4 x 35.4 mm; Core hat 23.1 x 20.2 mm, 6 copper layers, 0.8 mm, soldered on as a 46-pad LGA (interface R2a). Board rev r2, 2026-10 |
-| Input | 6S |
-| Flight controller | RP2354A, BMI270 IMU, analog OSD, microSD blackbox, USB-C |
+| Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm |
+| Stack | One board: 8-layer HDI 1+6+1, 0.997 mm, 1 oz copper on all layers, ENIG, laser microvias L1-L2 and L7-L8, buried vias L2-L7 (OpenAIO-Whoop stackup). Board rev r3, 2026-10 |
+| Input | 3S-6S LiPo (9.0-25.2 V), with a low-ESR capacitor of at least 35 V and 220 uF at the battery lead (see Battery lead) |
+| Flight controller | RP2354A, BMI270 IMU, DPS368 barometer, analog PIO OSD, microSD blackbox, USB-C |
 | ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |
 | Receiver | ExpressLRS 2.4 GHz, ESP32-C3 + SX1281 |
 | Assembly | NextPCB turnkey by MPN; DFM kept compatible with JLCPCB |
 
 ## Pinout
 
-Measured from `OpenAIO-Core.kicad_pcb` and `OpenAIO-Base.kicad_pcb` (pad nets)
+Measured from `hardware/OpenAIO.kicad_pcb` (pad nets)
 and the Betaflight target in `research/review-2026-10/firmware/` (`config.h`,
 `PINOUT.md` has the full GPIO map). The silkscreen codes below are the ones
 printed next to each pad; port names follow `config.h`.
@@ -52,7 +54,7 @@ arrow pointing up (the KiCad view turned 180 degrees). An arrow on the Base top 
 bottom (B.Cu copper: no silkscreen may sit in the LGA overlap) points forward. This matches `GYRO_1_ALIGN CW180_DEG`; confirm it in
 the configurator Setup tab at bring-up.
 
-### Core, top pads (reachable with the Core fitted)
+### FC pads (the former Core top pads; their place on the one board is not decided yet)
 
 | Pad | Silk | Net | Function |
 |---|---|---|---|
@@ -61,7 +63,7 @@ the configurator Setup tab at bring-up.
 | J30, J37 | 5V | `+5V` | 5 V out |
 | J42, J52 | 4V5 (`4.5` at J52) | `+4v5` | 4.5 V rail |
 | J34, J35, J40, J43, J50, J53 | GND (`G` where short) | `GND` | Ground |
-| J26 | SDA | `/Pads/I2C0.SDA` | I2C0 SDA, GPIO4 (external mag or baro) |
+| J26 | SDA | `/Pads/I2C0.SDA` | I2C0 SDA, GPIO4 (external mag; the onboard DPS368 shares the bus at 0x76) |
 | J23 | (legend) SCL | `/Pads/I2C0.SCL` | I2C0 SCL, GPIO5 |
 | J44 | TX0 | `/Pads/PIOUART0_TX` | Betaflight UART0 TX, GPIO2 |
 | J45 | RX0 | `PU0RX` | Betaflight UART0 RX, GPIO3: SBUS from the air unit (also SH-6 pin 6) |
@@ -87,7 +89,7 @@ SBUS on a PIO UART (firmware ISSUES I1).
 | J15, J16, J24, J25 | 5V | `+5V` | 5 V for the LED strip, one per corner |
 | J17, J18, J27, J28 | GND (bottom) | `GND` | Ground, one per corner |
 | J20, J21, J31, J32 | LED (`L` at J20) | `LED_STRIP` | WS2812 data, GPIO8 |
-| J41 | (legend) 10V | `+10V` | VTX / air-unit power, switched by GPIO27 (`10V_ENABLE`) |
+| J41 | (legend) 10V | `+10V` | VTX / air-unit power, always on with a battery (U3 EN is tied to +BATT) |
 | J51 | (legend) GND | `GND` | VTX ground |
 | U12 | DJI | SH-6 | 1 `+10V`, 2 `GND`, 3 PIOUART0 TX, 4 PIOUART0 RX, 5 `GND`, 6 UART0 RX (SBUS) |
 | J33 | BZ+ (bottom) | `+5V` | Buzzer + |
@@ -107,6 +109,14 @@ TP32 SWC, TP2 SC1, TP5 SD3, TP7 SD4. Motor phase letters
 are not printed: within each motor group the pads carry phases A, B, C (nets
 above); swapping any two reverses the motor, so set direction in AM32 or with
 Betaflight's motor direction instead of rewiring.
+
+## Battery lead
+
+- No reverse polarity protection: a reversed battery destroys the board.
+- Required: a low-ESR capacitor of at least 35 V (50 V preferred) and 220 uF
+  or more at the battery pads. The on-board bank is ceramic only, and a
+  hot-plugged 6S pack can ring above the 30 V FETs, the 38 V buck and the 42 V
+  current-sense amplifier ([INPUT_RANGE.md](research/review-2026-10/INPUT_RANGE.md)).
 
 ## Constraints
 
@@ -141,8 +151,8 @@ Still open while the layout is drawn. Answering them is a real contribution
 that needs no KiCad.
 
 - **Thermal.** Four power stages next to an MCU and a radio on 25.5 mm square,
-  with no airflow guarantee. What is the continuous current budget on 2 oz
-  outer copper?
+  with no airflow guarantee. What is the continuous current budget on 1 oz
+  copper on all eight layers?
 - **RF isolation.** A 2.4 GHz receiver next to four switching power stages.
   Antenna placement, ground plane, shield can or not.
 

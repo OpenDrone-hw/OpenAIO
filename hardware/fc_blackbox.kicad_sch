@@ -1127,7 +1127,7 @@
 		)
 		(uuid "98c5dbd0-8797-47c0-ac78-56f8ebecbae9")
 	)
-	(hierarchical_label "FLASH_CS"
+	(hierarchical_label "SD_CS"
 		(shape input)
 		(at 100.33 64.77 0)
 		(effects
@@ -1169,7 +1169,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 90.932 60.96 90)
 			(hide yes)
 			(show_name no)
@@ -1272,7 +1272,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1ec1adf4-cd1a-492a-816f-22ff8bdb6a5a")
-		(property "Reference" "Card1"
+		(property "Reference" "Card2"
 			(at 72.39 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -1395,7 +1395,7 @@
 			(uuid "649871ac-cc79-4c50-a788-23907ee8c4c3")
 		)
 		(instances
-			(project "BLACKBOX"
+			(project ""
 				(path "/7bc7eb1e-1a25-4797-98f3-e49fc3746593"
 					(reference "Card2")
 					(unit 1)
@@ -1599,7 +1599,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 59.69 51.7652 0)
 			(hide yes)
 			(show_name no)
@@ -1713,7 +1713,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+3.3V"
 			(at 92.71 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1791,7 +1791,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+3.3V"
 			(at 72.39 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)

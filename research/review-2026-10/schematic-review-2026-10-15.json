@@ -1,0 +1,389 @@
+[
+ {
+  "group": "mcu",
+  "finished": true,
+  "summary": "fc_rp2350a.kicad_sch has no blockers and no majors. It is electrically correct and finished enough for fab, and every item below is minor.\n\nWhat I checked against the netlist and the RP2350 datasheet:\n- **Pin map:** all 60 pins plus the EP of U2 match the QFN-60 table (RP2350.pdf Table 1431/1432 and \u00a714.8).\n- **Power:**\n  - DVDD pins 6/23/39 and VREG_FB 50 are all on +1.1V.\n  - L1 (AOTA-B201610S3R3, Isat 2.4 A, DCR 140 mOhm max) meets the \u00a76.3.8.2 limits of 1.5 A and 250 mOhm.\n  - COUT is 2x 4.7 uF (C3, C16) and CIN is C15 4.7 uF on VREG_VIN.\n  - VREG_AVDD is filtered by R10 30R + C17 4.7 uF (Pico 2 uses 33R).\n  - IOVDD 1/11/20/30/38/45, QSPI_IOVDD 54, USB_OTP_VDD 53, ADC_AVDD 44 and VREG_VIN 49 are all on +3.3V. RP2354 needs QSPI_IOVDD = 3.3 V, so that is correct.\n  - The DVDD decoupling (2x 100n + 4.7 uF) meets \u00a76.1.3, so the old review's O3 \"add 100n on DVDD\" is not needed.\n- **Boot and debug:**\n  - RUN is tied to +3.3V.\n  - QSPI_SS goes through R7 1k to U1 to GND. This is the correct BOOTSEL circuit, and the old S5 (10k) is fixed.\n  - QSPI_SD0-3 and SCLK are NC, which \u00a714.3 allows for RP2354.\n  - SWCLK and SWDIO go to TP32 and TP31.\n- **USB:**\n  - R8 and R9 are in the right polarity: pin 51 DM to R8 to USB_D-, pin 52 DP to R9 to USB_D+.\n  - CC1 and CC2 each have a 5.1k to GND.\n  - The USB1 symbol pins match the footprint pads.\n  - Both A6/B6 and A7/B7 are tied, which is correct.\n- **Crystal:** X1 pin 1 is XIN, pin 3 goes through R6 1k to XOUT, pins 2/4 are GND, with C4 and C10 at 20p.\n- **LED strip:** U26 TXU0101DRY pinout (1 VCCA, 2 GND, 3 A, 4 BY, 5 OE, 6 VCCB) matches TI SCES940A. OE on +5V is allowed (OE is 6.5 V abs max, can be referenced to either supply). The A input has an internal pull-down.\n- **Peripherals and BOM:**\n  - Q1 AP1606: pin 3 is the DFN drain pad, the footprint is consistent, and R13 100k is the pull-down.\n  - The LCSC and MPN fields match the values on every passive. Only the test pads lack an LCSC number, which is fine.\n  - No parts in the sheet are DNP.\n- **Firmware:**\n  - All 29 GPIO assignments in config.h match the netlist pin for pin.\n  - Function legality is confirmed in the RP2350 function table:\n    - SPI0 on 18/19/20/21.\n    - SPI1 on 10/11/12/13.\n    - I2C0 on 4/5.\n    - UART0 F11 AUX on GPIO2/3 and UART1 F11 AUX on GPIO6/7.\n    - ADC0-3 on GPIO26-29.\n    - OSD_W/EN/SYNC consecutive on 14/15/16.\n  - GPIO27 is the only free pin, and it is NC by design.\n  - vbat_scale 110 is correct (divider 11:1, 2.29 V at 25.2 V).\n\nDeleting J90/J91 and core_interface is safe for this sheet:\n- All 46 J90 pads have the identical net on the matching J91 pad.\n- After deleting both symbols, every one of those nets still has at least 2 other nodes. Nothing dangles.\n- The PU0RX, UART0, UART1, SPI0, MOTOR1-4, SWD, CURR and LED_STRIP nets stay joined through their global names.\n\nA few minor items concern the single-board rework. The ERC errors in this sheet are cosmetic, and the pins and passives are otherwise right. The routing-relevant notes are in the layout item: L1 polarity, the C17/R10 ground via, VREG_LX keepout, and where each supply cap goes.",
+  "findings": [
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "USB1, R8, R9, nets USB_D+, USB_D-, +5V_USB",
+    "problem": "No ESD or TVS protection on the USB-C data lines or VBUS. USB1 is the only user-facing connector on the sheet and the RP2350 USB pads have no on-chip clamp beyond standard HBM.",
+    "evidence": "Netlist: USB_D+ = {USB1.A6, USB1.B6, R9.2, J90/J91.42}, USB_D- = {USB1.A7, USB1.B7, R8.1, J90/J91.37}, +5V_USB = {D3.2, USB1.A4, USB1.A9}. No TVS, ESD or varistor part exists anywhere in the netlist (regex over values and fields). Old review O2 is still open.",
+    "fix": "Add a 2-line USB ESD array (low-capacitance, 5 V standoff) at USB1 on D+/D-, placed before R8/R9. Add a 5 V TVS on +5V_USB. Both are optional-assembly 0201/DFN parts."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "X1, C4, C10, R6, schematic note",
+    "problem": "The crystal load capacitance (CL) is not confirmed. C4 and C10 at 20p give about 10 pF plus about 3 pF stray, so about 13 pF. The ordering code 'XTM25012000JT00351001' does not state CL, and the series sheet lists options from 6 to 20 pF. The RP2350 reference (ABM8-272-T3) is CL = 10 pF with 15 pF class caps, and \u00a78.2.1.1 warns that other crystals need temperature testing. The schematic note says '10pF loading plus some stray ~12pF', which is inconsistent with the 20p parts.",
+    "evidence": "Netlist: C4 20p on XIN, C10 20p on the X1.3/R6 node, R6 1k from XOUT. XTM-2520 datasheet in the library: CL options 6/8/9/10/12/15/20 pF, ESR 100 ohm max at 12-16 MHz. RP2350.pdf p555, Table 597.",
+    "fix": "Confirm CL with the vendor (TONGJING) or measure the XIN frequency. If CL = 10 pF, change C4 and C10 to 15p, as on Pico 2. If CL = 12 pF, 20p is about right. Update the note. The USB tolerance (0.25 %) is wide, so this is a risk item, not a failure."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "C6, C7, C8, C11, C12, C13, C14 (C108 is at U26), C15; U2 pins 1, 11, 20, 30, 38, 44, 45, 53, 54",
+    "problem": "There are 7 x 100 nF for 9 supply pins on +3.3V (IOVDD x6, ADC_AVDD, USB_OTP_VDD, QSPI_IOVDD) plus 4.7 uF at VREG_VIN. \u00a76.1.4, \u00a76.1.5 and \u00a714.3 explicitly ask for 100 nF at USB_OTP_VDD and ADC_AVDD. QSPI_IOVDD also feeds the in-package W25Q16JV die, so it carries extra high-frequency current.",
+    "evidence": "Netlist +3.3V net has C6, C7, C8, C11-C14, C108 as 100 nF on the sheet, and C108 is at (416.6, 177.8), next to U26 at (425.5, 190.5), so it is U26's VCCA cap. RP2350.pdf p441-442, p1330.",
+    "fix": "Add 2 more 100 nF on +3.3V so pins 44, 53 and 54 each have their own cap (about 0.2 mm^2 each). Optionally add 1 uF at pin 54. In the layout, put each cap within 2 mm of its pin."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "C15, C3, C16, C17 (CL05A475MP5NRNC 4.7 uF 0402)",
+    "problem": "The regulator caps are 0402 X5R 4.7 uF. \u00a76.3.8.2 requires CIN of at least 4.7 uF and COUT of 4.7 uF +/-20 %. At 3.3 V bias, 0402 X5R loses a large part of its capacitance, so CIN and the C17 filter cap may be effectively about 3 uF.",
+    "evidence": "Netlist: C15 on VREG_VIN (+3.3V), C17 on VREG_AVDD, C3 and C16 on +1.1V, all C23733. RP2350.pdf p455 \u00a76.3.8.2. Pico 2 uses the same 0402 4.7 uF, so risk is low. I did not verify the Samsung DC-bias curve for this part.",
+    "fix": "Check the DC-bias curve for CL05A475MP5NRNC at 3.3 V. If under 4.7 uF, use 0603 10 V 4.7-10 uF at C15 and C17, or add C6-class parallel capacity. COUT is fine at 1.1 V bias."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "L1, U2.48 VREG_LX, C17, R10, C3, C15",
+    "problem": "Layout-critical placement and orientation items for the DC-DC. L1 is polarity-marked and Pico 2's layout must be copied.",
+    "evidence": "RP2350.pdf \u00a76.3.8.1 and Fig. 25: the inductor must be placed as in Fig. 23, with no copper under L1/LX, CFILT with its own GND via, COUT between VREG_VIN and VREG_PGND, and a second 4.7 uF at DVDD pin 23. Netlist: L1.1 = +1.1V, L1.2 = LX. Fix the orientation to match the marking.",
+    "fix": "At route time: cut inner-layer copper under L1 and LX, keep C3 at pins 6/48/50 and C16 at pin 23, give C17 its own GND via to the EP, and orient L1 with the orientation dot as in Fig. 25. Pin 1 (+1.1V) must be the correct end."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "R1 (0201WMF1003TEE, 100k), +BATT",
+    "problem": "R1 sits across +BATT (25.2 V on 6S, higher with ringing). Typical 0201 resistors are rated about 25 V working voltage. The divider drop at 6S is about 22.9 V, so margin is thin once the BEMF spikes arrive. Old review S12 is still open.",
+    "evidence": "Netlist: R1 {ADC_VBAT, +BATT} on the 0201 footprint (C270364). I did not read the Uniroyal 0201 datasheet; the 25 V figure is the typical rating and must be confirmed.",
+    "fix": "Use an 0402 100k 1 % (50 V class) at R1 and re-check the divider tolerance. R2 10k is unaffected. No change in vbat_scale (110)."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "U2 pin 5 GPIO3 / net PU0RX, J45, U12.6",
+    "problem": "RP2350 A2 errata E9: with input enabled and the pad between VIL and VIH, a pad leaks about 120 uA and holds it near 2.2 V. A pad pull-down cannot overcome this. Betaflight enables an RX pull-down on the inverted SBUS port (config.h: UART0 on GPIO2/3), so if the SBUS source goes high-impedance (air unit disconnected or off) the pin can latch high.",
+    "evidence": "RP2350.pdf p1366-1367, RP2350-E9: 'Affects RP2350 A2'; a 8.2 kohm or lower pull overcomes it. config.h cites uart_hw.c:261-265 for the pull-down. The stepping of the RP2354A in the C41378174 reel is not stated.",
+    "fix": "If the parts are stepping A2, add an 8.2k pull-down on PU0RX (DNP-able 0201 is fine). The SBUS source drives it strongly, so the load is small. Otherwise ignore."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "TP31 SWDIO, TP32 SWCLK, TP10",
+    "problem": "SWD is two bare test pads, with no GND or +3.3V pad next to them on this sheet, and the dangling TP10 'TestPoint' is still there (ERC error pin_not_connected, on_board no). In the single-board design the SWD pads will no longer be on the Base B.Cu.",
+    "evidence": "Netlist: SWCLK = {U2.24, TP32, J90/J91.20}, SWDIO = {U2.25, TP31, J90/J91.10}. ERC /RP2354A/ pin_not_connected: Symbol TP10 Pin 1. TP31/TP32 are on_board yes, in_bom no.",
+    "fix": "Delete TP10. Add a GND pad (and optionally +3.3V and RUN) beside TP31/TP32, or fit a Tag-Connect or 1.0 mm pad group. Place it in the layout where the new board has room, since USB BOOTSEL is the only other recovery path."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "#PWR01 (+1.1V), #PWR03 (+BATT), #PWR015 (+5V_USB)",
+    "problem": "Three real ERC errors power_pin_not_driven on this sheet, from missing PWR_FLAGs. They are cosmetic, but a clean ERC is needed to prove the merge.",
+    "evidence": "ERC /RP2354A/: power_pin_not_driven at #PWR01, #PWR03 and #PWR015. +1.1V is fed by L1 (passive), +BATT by a sheet pin, +5V_USB by USB1 (unspecified pin).",
+    "fix": "Add PWR_FLAG on +1.1V, +5V_USB and +BATT. The one in /RX (U22 VDD3P3) and /Power errors are other sheets."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "net /RP2354A/LED_STRIP_L, nets UART0_TX/UART0_RX vs /Pads/PIOUART0_TX, PU0RX, hierarchical labels PIOUART0_TX/RX, J44/J45/J48/J49 text, config.h header and LED strip comments, PINOUT.md",
+    "problem": "Naming and docs are stale or crossed. LED_STRIP_L is a leftover of the inverting Q2 stage. The net names UART0_* (GPIO0/1) are Betaflight PIOUART0 while /Pads/PIOUART0_TX (GPIO2) is Betaflight UART0. config.h still says 'two boards', 'LGA pad (J91 Core = J90 Base)', and that the TXU0101 stage is 'NOT YET IN THE NETLIST at be152bb' (U26 and R115 are in the netlist). PINOUT.md still carries LGA pad columns.",
+    "evidence": "Netlist: /RP2354A/LED_STRIP_L = {U2.12, U26.3}; U2.4 on /Pads/PIOUART0_TX with J44; U2.2/U2.3 on UART0_TX/RX. ISSUES I2 states 'Fixed in cdb8534'. All 29 config.h pins still match the netlist.",
+    "fix": "Rename LED_STRIP_L to LED_STRIP_IN. Optionally rename the UART nets to match the firmware (SH6_TX/RX for GPIO0/1, SBUS_UART0_TX/RX for GPIO2/3) or just relabel J44/J45/J48/J49. After the merge regenerate PINOUT.md without the LGA columns and fix the config.h comments (single board, U26 stage present, J90/J91 gone)."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a",
+    "refs": "L1 AOTA-B201610S3R3-101-T (C42411119)",
+    "problem": "Sourcing risk: the RP235x-approved inductor is an extended LCSC part with low stock at the time of check. jlcsearch listed 119 pcs on 2026-10-15, so a production run of more than about 100 boards could stall.",
+    "evidence": "jlcsearch API: C42411119 AOTA-B201610S3R3-101-T 0806 ext, stock 119. Datasheet in the library confirms 3.3 uH, Isat 2.4 A max, DCR 140 mOhm max, 20 V. The stock figure is third-party and may differ on the JLC live page.",
+    "fix": "Re-check the stock on the JLCPCB parts page before releasing the BOM. Do not substitute another inductor without the RP2350 \u00a76.3.8.2 limits (3.3 uH +/-20 %, DCR 250 mOhm max, Isat 1.5 A min, marked polarity)."
+   }
+  ]
+ },
+ {
+  "group": "fc-periph",
+  "finished": true,
+  "summary": "Scope fc_imu, fc_osd, fc_blackbox: no blocker. IMU and OSD are electrically correct. Open items: the blackbox is a microSD card (there is no SPI NOR on this board), and it is powered from the wrong 3.3 V rail.\n\nChecked against the netlist and datasheets, all OK:\n- BMI270 (U8) pins match BMI270 Tables 17 and 22. SDO/SDx/SCx are on GPIO12/11/10 (SPI1 MISO/MOSI/SCK) and CS is on GPIO13. INT1 goes to GPIO9, and INT2 (pin 9) is left open as the datasheet asks.\n- BMI270 supply and straps: VDD is 1.8 V and VDDIO is 3.3 V, each with 100 nF. ASDx/ASCx are on VDDIO, so the earlier GND finding is fixed. CSB has a 10k pull-up (R25), which keeps it in I2C mode until the firmware's CSB rising edge or dummy read. OCSB/OSDO are open. SPI1 has only the IMU on it, so there is no bus conflict.\n- SPI0 (GPIO18/19/20) and CS on GPIO21 are legal RP2350 pin functions and match the Betaflight target. Only the SD card is on SPI0.\n- OSD GPIO14/15/16 (W, EN, SYNC) are consecutive, as Betaflight's osd_pico requires.\n- U9 (SN74LVC1G3157, pins 1-6 = B2/GND/B1/A/VCC/S) matches TI's DTB pinout. EN low selects B1 = VIDEO_IN, and GPIO15 resets low, so pass-through is the default.\n- OSD DAC: with R27 3.9k, R28 12k and R29 1.4k, OSD_LVL is 0.261 V with W low and 1.064 V with W high.\n- U10 (COS8051) pinout is standard. Gain is 1+510/510 = 2, and 75R output into a 75R load gives unity at the VTX. It is rail-to-rail with 100 MHz GBW. R26 gives the 75R input termination.\n- U11 (TLV7031, X2SON): the footprint numbers the pads differently from TI (corners 1-4 plus centre pad 5). I checked it pad by pad against TI Fig 4-4: OUT = TL, VCC = BL, IN- = BR, IN+ = TR, VEE = centre. The schematic connections are physically correct.\n- Decoupling is 100 nF on every IC in these sheets (C29, C30, C32, C34, C35, C36). Rail voltages are well within the capacitor ratings. LCSC and MPN fields are filled on every part.\n- None of these parts is DNP, and none should be.\n- ERC: the only warnings on these sheets are unspecified-pin-type pin_to_pin noise and lib_symbol_mismatch on U9/U10/U11. There are no ERC errors.\n\nNothing here is a blocker. The two major items (F1, F2) need a decision or a one-net move before layout. F3 needs a camera test. I could not verify the LCSC-to-MPN mapping of the passives and BMI270 offline. The jlcsearch API did return a match for COS8051, 3157, TF-021B and SDM02U30.",
+  "findings": [
+   {
+    "severity": "major",
+    "sheet": "fc_blackbox",
+    "refs": "Card1 TF-021B-H265, R34, C36, nets SPI0.*, FLASH_CS",
+    "problem": "The blackbox is a microSD socket in SPI mode, not a SPI NOR flash. There is no WP/HOLD and no NOR part on the board. The net FLASH_CS is only a historical name for the SD chip select. The review brief and any docs that say NOR do not match the schematic.",
+    "evidence": "Netlist: Card1.2 CD/DAT3 = FLASH_CS (U2.33 GPIO21, R34 10k pull-up). Card1.3 CMD = SPI0.MOSI, Card1.5 CLK = SPI0.SCK, Card1.7 DAT0 = SPI0.MISO. The sheet has no flash IC. Betaflight config.h defines USE_SDCARD_SPI, and the earlier CIRCUIT_REVIEW section 7 only recommended a NOR on the Core as an option.",
+    "fix": "Confirm that microSD is the intended blackbox for the single board. If a NOR is wanted instead (e.g. W25Q128JV), that is a new circuit: CS pull-up, 100 nF, WP/HOLD tied high or to IO2/IO3 per the part, and a Betaflight FLASH config change. For the SD route, rename FLASH_CS to SD_CS in the netlist and docs, and update the README."
+   },
+   {
+    "severity": "major",
+    "sheet": "fc_blackbox",
+    "refs": "Card1.4 VDD, R34, C36 on +3V3; U23 TLV75533PDQNR",
+    "problem": "The SD card VDD and its CS pull-up sit on the +3V3 rail (the radio-side TLV75533), while the SPI host IO (U2 IOVDD) is on +3.3V (the FC-side LP5912). The card's load of 50-100 mA write peaks adds to a TLV75533 that the earlier review (S3) already found over budget. This is still unfixed (I15, S3).",
+    "evidence": "Netlist: +3V3 includes Card1.4, R34.1, C36.1, U21, U22, U23 OUT, U25 and D9. +3.3V includes U2 IOVDD, U7 OUT, U8, U9, U10 and U11. U23 is 500 mA in an X2SON 1x1. After J90/J91 are removed nothing separates the two rails except the SPI0 signals crossing between them.",
+    "fix": "Move Card1.4, R34.1 and C36.1 from +3V3 to +3.3V. In the merged board this costs nothing, and the card then shares the same supply as its SPI host. Add a 4.7 \u00b5F 0402/0603 (C23733) on Card1 VDD (S3/O7); C36 100 nF alone is too little for the 100 mA write bursts. Separately resolve S3 (TLV76733 or a split of the +3V3 rail)."
+   },
+   {
+    "severity": "major",
+    "sheet": "fc_osd",
+    "refs": "J38 VIDEO_IN, R26, U9.B1 (pin 3), U9.A, U10.IN+ (pin 3)",
+    "problem": "The pass-through video path VIDEO_IN to U9 to U10 has no DC restore or clamp. Only the sync-detect branch (C33/D8) is clamped. This is still open from the previous review (O8). A camera whose sync tip goes below about -0.1 V, such as an AC-coupled output centred around 0 V, gets clipped or distorted. The VTX would see a damaged sync.",
+    "evidence": "Netlist: VIDEO_IN has J38.1, R26 (75R to GND), R30 and U9.B1 only. COS8051 datasheet Table 3.3: input CMR is -0.1 V to +5.6 V, and the absolute-maximum input is -Vs-0.5 V. The SN74LVC1G3157 switch signal range is 0 V to VCC. The OSD_LVL levels (0.26 V / 1.06 V) are absolute DC values that assume a sync tip at about 0 V.",
+    "fix": "Before releasing the layout, test with the target cameras (Caddx and Runcam output a DC-coupled signal; some others are AC-coupled). If any is AC-coupled, add a series coupling cap (about 10 \u00b5F) after R26 and a Schottky clamp to GND (SDM02U30LP3-7B) on the U9.B1 node, then take the sync-detect branch from the clamped node. If every camera is DC-coupled with the tip at or above 0 V, document that requirement in the README and keep the circuit as is."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_osd",
+    "refs": "U11 IN+ (VID_DC), D8, C33",
+    "problem": "The TLV7031 sync input sits at the edge of its input range. D8 clamps the sync tip to about -Vf (-0.1 to -0.25 V), which is below VEE. The earlier review said the TLV7031 VCM \"extends 0.1 V past VEE\", but the electrical table says VCM = VEE to VCC+0.1.",
+    "evidence": "TLV7031 datasheet section 5.7: VCM min = VEE. The recommended input voltage range is VEE-0.1 V, the absolute maximum is VEE-0.3 V, and the internal diodes conduct below VEE. IN- = GND, so the threshold is 0 V. Blanking is about +0.1 to +0.2 V, which gives about 100 mV margin over the \u00b18 mV offset and 17 mV hysteresis.",
+    "fix": "No change needed for fab. Correct the review note. On the first board, check the OSD_SYNC edges on a scope. If the sync pulse is marginal, bias IN- to about +50 mV (for example 316k to +3.3V with 10k to GND, with a 100 nF cap), which moves the threshold inside the clamp swing."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_blackbox",
+    "refs": "Card1.1 DAT2, Card1.8 DAT1, Card1.3 CMD, Card1.7 DAT0, SPI0.SCK/MOSI/CS",
+    "problem": "The SD signal lines are minimal. DAT1 and DAT2 float. CMD (MOSI) and DAT0 (MISO) have no pull-ups. There are no series resistors on SCK, MOSI or CS. It will probably work, since many FCs ship this way, but it is the first place to look if cards fail to initialise (I14).",
+    "evidence": "Netlist: unconnected-(Card1-DAT1-Pad8), unconnected-(Card1-DAT2-Pad1). Only DAT3/CS has R34 10k. The SD specification recommends pull-ups on every line in SPI mode.",
+    "fix": "Optional, cheap, 0201: 47k pull-ups on DAT1 and DAT2 to the card rail. 10k to +3.3V on MISO and MOSI (or enable the RP2350 internal pull-ups in firmware). Optionally 33R in series on SCK and MOSI near U2. Since the board is now one PCB the routing is short, so the series resistors are not needed unless EMI testing shows a problem."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_osd",
+    "refs": "J38 VIDEO_IN, J39 VIDEO_OUT, U9, U10, R33",
+    "problem": "The video pads have no ESD or overvoltage protection. VIDEO_IN goes straight to the U9 switch pin (absolute maximum VCC+0.5 V) and VIDEO_OUT is DC-coupled from the COS8051 output.",
+    "evidence": "Netlist: VIDEO_IN has no series element on the U9.B1 branch. VIDEO_OUT = J39.1 and R33.2 only, with no TVS or DC-block cap. The pads are hand-soldered camera and VTX leads that can touch the 5 V and VBAT pads.",
+    "fix": "Optional: a low-capacitance TVS or Schottky pair on VIDEO_IN and VIDEO_OUT, and a 10 \u03a9-47 \u03a9 series resistor on the U9.B1 branch. Check the VTX input: if it does not AC-couple internally, add a 100-220 \u00b5F series cap on VIDEO_OUT, or document it."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_osd",
+    "refs": "U9, U10, U11 (lib_symbol_mismatch)",
+    "problem": "ERC reports that the schematic copies of U9, U10 and U11 do not match the project library 'lib'. The schematic and library definitions of these three parts have drifted apart, so a later symbol update may change their pin names or numbers.",
+    "evidence": "ERC: lib_symbol_mismatch warnings for SN74LVC1G3157DTBR, COS8051SOT and TLV7031DPWR. I verified the netlist pin assignments of all three against the datasheets (see summary), so the current wiring is right.",
+    "fix": "Update the symbols from the library in KiCad (Tools > Update Symbols from Library) and re-run ERC and the netlist diff. Check that the pin connections of U9/U10/U11 are unchanged."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_blackbox",
+    "refs": "nets +3V3 vs +3.3V, FLASH_CS",
+    "problem": "Two 3.3 V rails with near-identical names (+3V3 on the radio side, +3.3V on the FC side) will sit on one PCB. One mistyped label or a wrong power symbol in the new merged sheet would silently tie or cross them. FLASH_CS is also misleading.",
+    "evidence": "Netlist: +3V3 has 34 nodes (U21, U22, U23, U25, D9, SD card and so on). +3.3V has 38 nodes (U2, U7, U8, U9, U10, U11 and so on). The two nets are not connected anywhere.",
+    "fix": "Before routing, rename +3V3 to +3V3_RX (or similar) and FLASH_CS to SD_CS everywhere, including the net classes in the .kicad_pro and the DRU files. After deleting J90/J91, run an ERC and a netlist diff to confirm that no other net was merged."
+   }
+  ]
+ },
+ {
+  "group": "power",
+  "finished": true,
+  "summary": "fc_power (plus its root-sheet parts Rsense2, U25, C104) has no blocker: it is functionally correct and can go to routing. I checked every power-sheet part against the netlist (root.net) and the datasheets. Both buck feedback dividers, EN/IN wiring, the pin maps, the +4v5 diode-OR and the CURR gain (20 mV/A, matching config.h scale 200) all verify. Five major items remain. First, the 6S hot-plug and ringing exposure: no on-board bulk or clamp, and the README does not tell the user to fit the external electrolytic the design relies on. Second, the DOY180N03T 30 V FET margin. Third, no dedicated HF input cap at U3. Fourth, parts footprints that resolve only through external libraries. Fifth, stale 10V_ENABLE and 6S docs. The rest is ERC hygiene and minor items.\n\nVerified correct, no action needed:\n- FB dividers: U3 = 0.6 V x (1 + 100k/6.49k) = 9.845 V, U4 = 0.6 V x (1 + 100k/13.7k) = 4.98 V. VREF is 0.6 V per LMR51430 section 9.2.2.2, and R19/R20 match TI's own 5 V example.\n- U3/U4 pin map matches datasheet Table 6-1 (GND 1, SW 2, VIN 3, FB 4, EN 5, CB 6). EN is tied to +BATT, which is legal (EN <= VIN + 0.3 V). No 10V_ENABLE net exists any more, and U2.41 (GPIO27) is a single-node no-connect.\n- Inductor ripple: L2/L3 4.7 uH (Isat min 4.0 A) gives about 1.16 A pk-pk on the 10 V rail at 25.2 V, so about 3.6 A peak at 3 A load. That is below the 3.67 A minimum high-side current limit. 5 V ripple is about 0.8 A.\n- Bootstrap caps C20/C21 are 25 V parts on a CB-SW limit of 5.5 V.\n- U6 and U7 (LP5912): EN and IN are tied to +4v5 (4.4 to 5.25 V against a 6.5 V maximum). Output caps are in the 0.7 to 10 uF window: +3.3V has about 6.8 uF nominal, +1.8V_GYRO has 4.8 uF. PG on U6 drives the LED pull-up network (R23, D7) correctly.\n- U27 (TLV75533 DQN): OUT 1, GND 2, EN 3, IN 4, EP 5 all match. IN and EN sit on +5V, which is under the 5.5 V limit.\n- D2/D3: K on +4v5, A on +5V and +5V_USB. USB-only power cannot back-feed +5V or +BATT. With battery and USB both present, D3 blocks back-feed into the host.\n- U25 (INA186A3 SC70): REF 1 = GND, GND 2, VS 3 = +3V3, IN+ 4 = /CSA+ (battery side), IN- 5 = +BATT (load side), OUT 6 = CURR. Gain 100 V/V x 0.2 mOhm gives 20 mV/A, so scale 200 in config.h line 188 is right. Full scale is about 163 A. R5/C9 (1k / 100n) at the ADC is correct.\n- All 40 Power-sheet parts and the 4 root parts have LCSC and MPN. No part carries a DNP flag.\n- Input cap ratings follow TI's 2x rule: 50 V parts on 25.2 V.\n\nKnown and still open, not repeated as findings: the +10V output capacitance is 9.2 uF effective against 10.9 uF needed (FINISH_PASS).",
+  "findings": [
+   {
+    "severity": "major",
+    "sheet": "fc_power + root (U24 battery pads), README",
+    "refs": "+BATT net: C18, C19, C102, C103, C105, C106, C90-C101 (16 x 4.7 uF ceramic only); U3/U4 VIN; U25 IN+/IN-; Q3-Q26; README Specifications row 'Input | 6S'",
+    "problem": "There is no on-board bulk capacitor, TVS or hot-plug damping on +BATT. A 6S plug-in into a ceramic-only bus can ring to roughly 2x the pack voltage (50 V or more). That exceeds the LMR51430 VIN and SW abs max (38 V), the INA186 IN+/IN- abs max (42 V), and the FET Vds (30 V). The design relies on a low-ESR electrolytic on the battery leads (INPUT_RANGE.md, decision of 2026-10-07), but the README does not require it.",
+    "evidence": "Netlist: +BATT has only ceramics (16 x 4.7 uF/50 V, 1 x 100 nF) and no TVS, bulk cap or series damping. LMR51430 section 7.1: VIN and SW 38 V abs max. INA186 section 6.1: VIN+/VIN- 42 V abs max, 40 V recommended. DOY180N03T VDS 30 V. INPUT_RANGE.md says 'A 6S build without that capacitor has no margin left'. README says only 'Input | 6S' and does not mention the capacitor.",
+    "fix": "Put the requirement into the README: 3S-6S, with a low-ESR capacitor of at least 35 V (50 V preferred) and 220 uF or more fitted at the battery pads, as INPUT_RANGE.md recommends. Better, add two PTH or SMD pads for that capacitor next to the U24 + and - pads so it is part of the assembly. Optionally add a bidirectional TVS across the pads, for example SMBJ28CA, accepting that its clamp voltage is above the FET rating."
+   },
+   {
+    "severity": "major",
+    "sheet": "esc_channel (cross-check from fc_power ratings review)",
+    "refs": "Q3-Q26 DOY180N03T (VDS 30 V) on +BATT",
+    "problem": "The FET voltage margin at 6S is thin: 25.2 V full, 26.1 V for LiHV, plus regen bus rise and phase ringing. INPUT_RANGE.md budgets only about 2.8 V after an estimated 2 V overshoot. That estimate has not been measured.",
+    "evidence": "INPUT_RANGE.md ceiling table: 'About 2.8 V margin after an estimated 2 V turn-off overshoot (critique PW11)'. DOY180N03T datasheet: VDS 30 V. At 26.1 V the margin falls to about 1.9 V. There is no snubber footprint in the schematic.",
+    "fix": "Accept only with a first-article scope measurement of the phase-node peak at 6S full charge with a regen brake. Ideally add RC snubber pads per half-bridge as DNP. Alternatively move to a 40 V FET. Do not claim LiHV (4.35 V per cell) support until measured."
+   },
+   {
+    "severity": "major",
+    "sheet": "fc_power",
+    "refs": "U3 VIN pins 3 and 5; C107 (100 nF 50 V, the only HF cap on +BATT in the Power sheet); C18, C19, C102, C103, C105, C106",
+    "problem": "U3 (+10V buck) has no dedicated 100 nF input cap. C107 is the only 100 nF on +BATT in this sheet and it abuts U4.3, so it effectively serves U4. TI requires a 0.1 uF cap at each device's VIN and GND pins.",
+    "evidence": "LMR51430 section 9.2.2.6: 'Include a capacitor with a value of 0.1 uF ... place it as close as possible to the device pins.' Netlist shows one 100 nF (C107) for two converters. Round-2 review already notes 'U3 HF cap not placed'.",
+    "fix": "Add a second 100 nF 50 V 0402 (CL05B104KB54PNC, C307331) between +BATT and GND at U3 pins 3 and 5 / GND pin 1. Place it before routing the one-board layout so it is not squeezed in later."
+   },
+   {
+    "severity": "major",
+    "sheet": "fc_power + root",
+    "refs": "U25 (4in1ESC:SOT-363_SC-70-6), U27 (OpenRX-Shared:X2SON-4_L1.0-W1.0-P0.65-TL-EP), U24 (OpenDrone:AIO_outline), U7 (Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm); stock-library links on C*, R*, D4-D7, Rsense2 (Capacitor_SMD, Resistor_SMD, LED_SMD)",
+    "problem": "Footprints resolve through libraries outside the project. The three nicknames OpenDrone, 4in1ESC and OpenRX-Shared all point at ${OPENDRONE_LIB}/footprint/OpenDrone.pretty, and the stock KiCad libs are global. This breaks the self-contained local-library rule. Importing netlist or footprints into the new one-board PCB fails or silently drops footprints unless the environment is set up identically.",
+    "evidence": "kicad-cli ERC: footprint_link_issues 'The current configuration does not include the footprint library OpenDrone / 4in1ESC / OpenRX-Shared' for U24, U25, U27 and others (the same warning also covers other sheets' parts). fp-lib-table lists only lib and the three env-var aliases. Netlist footprint fields use the stock Capacitor_SMD, Resistor_SMD, LED_SMD and Package_SON nicknames, and those files do not exist in lib.pretty.",
+    "fix": "Copy every footprint used by the unified design into hardware/lib.pretty and relink the symbols to lib:. Cover U24 outline, U25 SOT-363, U27 X2SON-4, U7 WSON-6, 0201/0402/0603/0805/1206 chip parts, LED 0402 and R_2512. Remove the three env-var aliases from fp-lib-table. Do this before importing into the single PCB."
+   },
+   {
+    "severity": "minor",
+    "sheet": "README / AGENTS.md (docs vs fc_power)",
+    "refs": "README.md line 90 (J41), README.md Specifications row 'Input', AGENTS.md line 118, U3.EN, U2.41",
+    "problem": "Docs still describe a GPIO-switched +10V rail and a 6S-only input. In the schematic, U3.EN (pin 5) is tied to +BATT and GPIO27 is unconnected, so +10V is on whenever a pack is connected (VTX power cannot be switched by firmware). INPUT_RANGE.md recommends stating 3S-6S, but the README says '6S'.",
+    "evidence": "Netlist: U3 pins 3 and 5 are both on +BATT; no net named 10V_ENABLE; U2.41 is a single-node net. README line 90: 'switched by GPIO27 (10V_ENABLE)'. AGENTS.md line 118 lists 10V_ENABLE among LGA signals. INPUT_RANGE.md: 'Recommended README statement: Input 3S-6S LiPo (9.0-25.2 V)'.",
+    "fix": "Edit README J41 to '+10V, always on with battery'. Remove 10V_ENABLE from AGENTS.md and from the interface description when core_interface is deleted. Set the README input row to '3S-6S LiPo (9.0-25.2 V), fit a >=35 V low-ESR capacitor on the battery leads'."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_power + root (ERC)",
+    "refs": "Root sheet pin 'CURR' on the Power sheet symbol; U24 pin 1 VBAT; #PWR052 (+5V), #PWR054 (+4v5), #PWR066 (+10V), #PWR072 (+1.8V_GYRO); U7 pins 3/5; #PWR053/#PWR067 (+5V_BUCK)",
+    "problem": "Seven ERC errors in the root and Power sheets are cosmetic, but they stay red. (1) The root Power sheet symbol has a dangling sheet pin 'CURR' with no matching label inside (hier_label_mismatch). (2) PWR_FLAGs are missing, so power_pin_not_driven fires on +5V, +4v5, +10V, +1.8V_GYRO and on U24.1 (/CSA+). (3) The U7 symbol has pin names swapped (3 = GND, 5 = PG) against the datasheet (PG = 3, GND = 5), which causes a pin_to_pin error. Both pads are grounded, so the circuit is correct. (4) '+5V_BUCK' alias power symbols are attached to the +5V net and cause multiple_net_names.",
+    "evidence": "kicad-cli sch erc on OpenAIO.kicad_sch: /Power/ power_pin_not_driven x4, pin_to_pin error 'U7 Pin 5 [PG, Open collector] to U24 Pin 11 [Power output]', multiple_net_names '+5V and +5V_BUCK'; root hier_label_mismatch CURR and power_pin_not_driven U24.1. LP5912 datasheet p3: PG = pin 3, GND = pin 5. Netlist: U7.3 and U7.5 are both on GND. The CURR net itself is intact (U25.6, R5.1, J90/J91 pin 8).",
+    "fix": "Delete the CURR sheet pin from the Power sheet symbol. Add PWR_FLAGs on +5V, +4v5, +10V, +1.8V_GYRO and /CSA+, or set the L2/L3/D2/D3/U6 output pin types to power output. Rename the U7 symbol pins to PG 3 / GND 5. Remove the +5V_BUCK alias symbols. Do this together with the J90/J91 deletion so the clean ERC baseline is taken once."
+   },
+   {
+    "severity": "minor",
+    "sheet": "root (U25, Rsense2) / firmware config",
+    "refs": "U25 INA186A3 REF (pin 1 to GND), IN+/IN- direct to Rsense2, config.h DEFAULT_CURRENT_METER_OFFSET 0, README",
+    "problem": "The CURR scale is correct, but three small gaps remain. (a) REF is tied to GND, so the output is unidirectional and its zero-current offset (VZL, up to 10 mV, about 0.5 A at 20 mV/A) is not compensated in config.h (offset 0). That makes the mAh counter drift when idle. (b) There is no differential RC filter on IN+/IN-, so PWM edge noise on the 0.2 mOhm shunt reaches the 35 kHz-class amplifier. (c) The README does not state the shunt, gain or scale value.",
+    "evidence": "INA186 datasheet 6.1/6.3: VCM and VIN 40 V recommended, 42 V abs max; REF = GND is unidirectional and the part has VZL offset. config.h line 188: scale 200 = 20 mV/A, which is correct for 0.2 mOhm x 100 V/V. Netlist: U25.4 on /CSA+ and U25.5 on +BATT with no series R or C. Round-1 review O5 noted the 'differential input filter' as worth copying.",
+    "fix": "Optional input filter: 1k in each sense line plus 100 nF across IN+/IN- (watch the 0.2 mOhm source impedance error: 1k + 1k with INA186 input bias is small but check). Calibrate the offset at bring-up and set DEFAULT_CURRENT_METER_OFFSET. Add one README line: '0.2 mOhm shunt, INA186A3 100 V/V, 20 mV/A, Betaflight ibata_scale 200'."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_power + RX (+3V3 and +4v5 rails)",
+    "refs": "U23 TLV75533 (+3V3, 500 mA), D9 XL-1010RGBC VDD on +3V3, Card1.4, C82 (10 uF 6.3 V on +4v5), C110 (1 uF 10 V 0201 on +5V), C25 (4.7 uF 10 V on +4v5)",
+    "problem": "Rail margins are tight in three places. (1) +3V3 (U23, 500 mA) feeds the ESP32-C3, SX1281, TCXO, microSD, INA186 and the WS2812 D9. D9 VDD is 3.3 V, below its 3.5 V minimum (open item I11), and the ESP32 TX peak plus an SD write can approach the 500 mA limit. (2) C82 is a 6.3 V 0402 on +4v5 (up to 5.25 V from USB), roughly 80 percent of its rating, with heavy DC-bias loss. (3) U27's 1 uF 0201 input cap (C110, 10 V) is derated at 5 V, though C24 (22 uF) is close by.",
+    "evidence": "Netlist: D9.2 (VDD_2) on +3V3; Card1.4 on +3V3; U23 IN/EN on +4v5; TLV75533 datasheet ICL min 560 mA, IOUT max 500 mA; XL-1010RGBC VDD 3.5-5.5 V (CIRCUIT_REVIEW S10). C82 = CL05A106MQ5NUNC (6.3 V). Total +4v5 cap is about 16.7 uF nominal.",
+    "fix": "Move D9 VDD to +4v5 (keep the 3.3 V data line, which still meets VIH). Change C82 to a 10 V part (for example CL05A106MPQ5NUNC) or add a second 10 V cap in parallel. Keep the 1 uF at U27 IN but confirm the effective capacitance exceeds 0.47 uF with C24 in range. Check peak +3V3 current at bring-up with WiFi plus an SD write."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_rp2350a / root (USB path, battery input)",
+    "refs": "USB1 VBUS pins A4/A9 (+5V_USB), D+/D- (USB_D+, USB_D-), D3, +BATT input at U24.1/U24.2",
+    "problem": "No ESD or TVS protection exists on the USB connector (VBUS, D+, D-), and there is no reverse-polarity protection on the battery input. Reversed battery current would flow through the FET body diodes with no limit. About 16.7 uF sits behind D3 on +4v5, above the USB 10 uF plug-in limit.",
+    "evidence": "Netlist search for TVS, ESD, USBLC, SMBJ, PTC and fuse parts returns nothing. USB_D+ and USB_D- go only to USB1 and the 30R resistors R8/R9. +5V_USB goes only to D3. +BATT connects directly from Rsense2 to every load. CIRCUIT_REVIEW O2 noted the missing ESD.",
+    "fix": "Add a 2-line USB ESD array (USBLC6-2P6 or similar) near USB1 and a 5 V TVS on VBUS if space allows. Document 'no reverse protection' in the README warnings, since a P-FET on a 100 A bus does not fit. Accept the USB inrush for a hobby board or add a small series bead."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_power + root (BOM and bring-up)",
+    "refs": "Rsense2 (C695806, ASR-S-3-0.2F, Manufacturer and Datasheet empty), D4-D7 (MPN 'XL-1005UGC ' with a trailing space), +3.3V, +3V3, +3V3_ESC, CURR (no test points), D7/R23",
+    "problem": "BOM metadata is incomplete: the shunt has no manufacturer or datasheet field, and D4-D7 carry a trailing space in the MPN, which can break MPN matching for turnkey assembly. The rails +3.3V, +3V3, +3V3_ESC and CURR have no test points. D7 (PG LED) runs at about 0.3 mA from 4.6 V through 6.49 k, so it will be dim.",
+    "evidence": "Netlist properties: Rsense2 Manufacturer '' and Datasheet ''. D4-D7 MPN 'XL-1005UGC ' (trailing space). R23 6.49k from +4v5 to the PG net with D7 to GND. Pads exist only for +5V, +10V, +4v5, +BATT (via U24).",
+    "fix": "Fill Rsense2 Manufacturer and Datasheet, and verify the part is a true 0.2 mOhm 2512 rated at least 3 W (2 W dissipated at 100 A). Strip the MPN space on D4-D7. Add TPs for +3.3V, +3V3_ESC and CURR on the one-board layout. Reduce R23 to about 2.4k (like R22) if D7 should be visible."
+   }
+  ]
+ },
+ {
+  "group": "esc",
+  "finished": true,
+  "summary": "esc_channel is electrically correct as drawn, so I found no blockers. I parsed root.net with sexpdata and checked all four instances (ESC1 U13/U14, ESC2 U15/U16, ESC3 U17/U19... precisely U15/U16, U17/U18, U19/U20).\n\n- **Instance consistency:** after normalising the per-instance net names, ESC2, ESC3 and ESC4 are identical to ESC1 in parts, values, footprints, LCSC and MPN fields, and pin-to-net connections.\n- **AT32F421G8U7:** the QFN28 pin map matches the datasheet pinout (Figure 5). Decoupling matches Figure 8, which asks for 100 nF per supply pin.\n  - Supply and reset: VDD is +3V3_ESC from U27, powered from +5V (battery buck), with 100 nF. VDDA goes through 10R plus 100 nF. NRST has a 10k pull-up and 100 nF. BOOT0 has a 10k pull-down. SWD pads PA13/PA14 are TP1-TP8.\n  - Pin use: PA2, PA3, PA6, PA15, PB3, PB5-7 and PF0/PF1 are left unconnected, which matches the NO_VOLTAGE_SENSE and NO_CURRENT_SENSE target.\n- **Firmware map vs AM32 OPENESC_20_F421:** I pulled targets.h from AM32 main. HARDWARE_GROUP_AT_B matches the netlist: input PB4 on pin 25 via 220R, phase A = PA10/PB1, B = PA9/PB0, C = PA8/PA7. HARDWARE_GROUP_AT_045 also matches: comparator A = PA0 (FBA), B = PA4 (FBB), C = PA5 (FBC), common = PA1 (FBCOMMON).\n- **NSG2065Q:** every pin matches the datasheet table 7-1. VS1/2/3 go to /nA, /nB, /nC, with VB caps to the right VBx and HO/LO on the matching gate nets. COM pins 6 and 25 are GND, and VCC is +10V. NC pins 5, 7, 8 and 21 are left open. The datasheet block diagram (p8) shows 200k input pull-downs and 40k gate pull-downs inside the driver, so no external pull-downs are needed.\n- **FETs:** DOY180N03T pads match the footprint (1 = source x3, 2 = gate, 3 = drain). High side is source on the phase and drain on +BATT; low side is source on GND and drain on the phase. Gate nets map to the correct channel, and the Base PCB pad nets match the netlist for all ESC parts that have pads.\n- **Fields:** all ESC parts have LCSC and MPN fields, and none are DNP. Stock checks on jlcsearch: C49441966, C41414478, C2765098, C181043, C307331 and C98192 all have stock. I could not confirm stock for the Uniroyal/Yageo 0201 resistors because the search does not return them.\n\nThe open items are in the findings below. The first two (30 V FETs at 6S, and Miller shoot-through) are the ones that could damage hardware, so I would settle them before fab.\n\n**Known issues from the earlier review, still open and not re-reported:**\n- S1: 2S is out of range for the +10V rail and NSG2065Q VCC.\n- I7: the U24 motor pad names run in reverse of ESC1-4 (ESC1 drives pads \"4A/4B/4C\", ESC4 drives \"1A/1B/1C\"), and the phase letters are cyclically permuted on ESC2 and ESC3. This is harmless because motor direction is set in software.\n- I18: there is no NRST or VTref pad for SWD.\n\n**Merge advice for keeping the existing Base routing:** deleting J90/J91 and core_interface does not touch anything in this sheet. MOTORn already reaches U2 GPIO25/24/23/22 directly, and the phase nets /1A to /4C land only on U24.\n\n**Not checked:** I did not run a fresh ERC. I used the existing erc.json, which shows no real errors on the ESC sheets beyond the symbol pin-type issue below.",
+  "findings": [
+   {
+    "severity": "major",
+    "sheet": "esc_channel (x4)",
+    "refs": "Q3-Q8, Q9-Q14, Q15-Q20, Q21-Q26 (DOY180N03T, LCSC C49441966); +BATT net",
+    "problem": "The power FETs are 30 V parts on a 2-6S (25.2 V, 26.1 V at HV) bus. No on-board clamp or snubber exists, and a TVS cannot fix it. This is the previous PW11 / INPUT_RANGE item and it is not closed in the netlist. The only mitigation is the owner decision that the user fits an external low-ESR electrolytic.",
+    "evidence": "DOY180N03T datasheet p1-2: VDS = 30 V, BVDSS min 30 V at 250 uA. The +BATT net has only ceramic bulk (C90-C101 and C18/19/102/103/105/106, 4.7 uF 50 V X5R 0805, about 1.3 uF each at 25 V) and no TVS or electrolytic (net member list checked). Full-charge 6S is 25.2 V (26.1 V at 4.35 V/cell), leaving 3.9-4.8 V for turn-off overshoot and hot-plug ringing. A ceramic-only hot-plug through lead inductance can ring toward 2x Vbat, which is above BVDSS on all 24 FETs. A TVS cannot protect a 30 V FET: SMBJ26A has VBR 28.9 V and VC 42 V, above BVDSS.",
+    "fix": "Preferred: swap to a 40 V (or higher) SGT FET in the same 3.3x3.3 mm footprint. Fallbacks: (a) require and photograph the >=35 V low-ESR electrolytic at the battery pads in README and silk; (b) add one 35-50 V electrolytic or polymer cap footprint at the battery pads; (c) state the supported range as 3S-5S if neither applies. Escalate to blocker if 6S is advertised without (a) or (b)."
+   },
+   {
+    "severity": "major",
+    "sheet": "esc_channel (x4)",
+    "refs": "Low-side gate resistors R36, R40... precisely R36, R42, R44 (ESC1); R55, R61, R63 (ESC2); R74, R80, R82 (ESC3); R93, R99, R101 (ESC4); high-side R35, R41, R43 etc.; Q4/Q6/Q8 and equivalents",
+    "problem": "There is a risk of Miller-induced turn-on (shoot-through) of the low-side FET when the high side turns on. The low-side gate is held off only through 15R plus the driver sink resistance, with no faster discharge path. This was not covered in the earlier review, which only addressed gate R for switching loss.",
+    "evidence": "Netlist: LO1-3 (U14 pins 11/10/9) go through one 15R to the gate, with no diode and no extra pull-down. The driver sink is 1.5 A (about 7 ohm at 10 V). DOY180N03T: Qgd = 5.9 nC, Ciss = 2900 pF, Qgs = 8 nC, VGS(th) = 0.9 V min / 1.3 V typ at 25 C and lower when hot. A 5.9 nC Miller charge sweeping in about 25 ns through about 22 ohm gives a roughly 1-2 V gate bump, above Vth. Qgd is about 1.5x the charge needed to reach threshold (about 3.8 nC), which is the usual immunity criterion. This is an analytic estimate, not a measurement.",
+    "fix": "Value-only change that keeps the 0201 footprints and routing: low-side gate resistors to 4.7R, keep the high-side 15R (it limits dV/dt). Better, if space allows: an anti-parallel fast diode (gate to LO pin) across each low-side gate resistor. Confirm on first boards with a scope on a low-side VGS during high-side turn-on at 6S, and with a thermal check at no-load spin."
+   },
+   {
+    "severity": "major",
+    "sheet": "esc_channel (x4)",
+    "refs": "BEMF top resistors R47, R50, R53 (ESC1); R66, R69, R72 (ESC2); R85, R88, R91 (ESC3); R104, R107, R110 (ESC4)",
+    "problem": "The 10k BEMF top resistors are 0201 parts carrying the full phase-node voltage. At 6S plus ringing they exceed the 25 V working voltage typical of 0201 resistors. This is the previous S12 item, still open.",
+    "evidence": "Netlist: R47 pin 1 = /1A (phase node), pin 2 = FBA, footprint Resistor_SMD:R_0201_0603Metric, MPN RC0201FR-0710KL, LCSC C106225. The phase swings 0 to Vbat every PWM cycle. The divider is 10k/(10k+1k) in series with the 10k common, so about 23 V falls across the top resistor at 25.2 V, and ringing goes above 25 V. 0201 working voltage is 25 V for Yageo RC_L and Uniroyal 0201 series. I recalled that from the series datasheets; it is not in the library datasheet folder, so verify before committing.",
+    "fix": "Change the 12 top resistors to 0402 10k 1% (50 V, for example LCSC basic C25744, check the number before use). Keep R45/R48/R51 and the 1k bottoms in 0201. If the 0402 does not fit the routed area, use two 0201 5k in series per divider."
+   },
+   {
+    "severity": "major",
+    "sheet": "esc_channel (x4)",
+    "refs": "C40-C42, C47-C49, C54-C56, C61-C63 (footprint Capacitor_SMD:C_0402_WIDE); U13/U15/U17/U19 (4in1ESC:QFN-28...), U14/U16/U18/U20 (4in1ESC:QFN-24...); symbol library ESCLibrary",
+    "problem": "The schematic is not self-contained, which breaks the project-local library rule. C_0402_WIDE exists in no configured library. The 4in1ESC and OpenDrone footprint libraries resolve only through the external ${OPENDRONE_LIB} variable, and the symbol library ESCLibrary is not in sym-lib-table.",
+    "evidence": "Netlist: the 12 bootstrap caps reference Capacitor_SMD:C_0402_WIDE. KiCad 10 stock Capacitor_SMD has no C_0402_WIDE, and the OpenDrone catalogue has none either. It exists only at OpenESC-Single/hardware/lib.pretty/C_0402_WIDE.kicad_mod. fp-lib-table: 4in1ESC points to ${OPENDRONE_LIB}/footprint/OpenDrone.pretty, and OPENDRONE_LIB is empty in this environment. erc.json lists footprint_link_issues (OpenDrone) and lib_symbol_issues (ESCLibrary). The Base PCB embeds C_0402_WIDE (12 instances), so existing boards load, but Update PCB from Schematic on the single board will not find it.",
+    "fix": "Copy C_0402_WIDE.kicad_mod and the QFN-28_L4.0-W4.0-P0.40-TL-EP2.4 and QFN-24_L4.0-W4.0-P0.50-TL-EP2.8 footprints into the project lib.pretty. Relink the footprint fields to lib:. Move the ESC symbols (AT32F421G8U7, NSG2065Q, the GRM033... cap, 2N6660 DOY180N03T) into the project lib.kicad_sym and drop the ESCLibrary reference."
+   },
+   {
+    "severity": "minor",
+    "sheet": "esc_channel (x4)",
+    "refs": "U13, U15, U17, U19 (QFN-28) and U14, U16, U18, U20 (QFN-24) in OpenAIO-Base.kicad_pcb",
+    "problem": "Routing-preservation warning for the merge. The embedded QFN footprints in the Base PCB have the unused pads deleted, and they differ from the catalogue footprints. Refreshing them from the library re-adds pads and can collide with existing copper.",
+    "evidence": "pcbnew read of OpenAIO-Base.kicad_pcb: U13 has pads 1, 4, 5, 6, 7, 10, 11, 13-22, 25 and 29 only. Pads 2, 3, 8, 9, 12, 23, 24 and 26-28 are absent, which are exactly the 10 unconnected pins. U14 has no pads 5, 7, 8 or 21. The catalogue QFN-28 has all 29 pads and the catalogue QFN-24 has pads 5, 8 and 21 (no 7). Every connected pad net matches the netlist.",
+    "fix": "When merging Core and Base, copy the footprints from the PCB and do not use Update footprints from library or Reset on these eight ICs. After switching the footprint fields to the project-local copies, make the library copies match (delete the NC pads) so a later update is a no-op."
+   },
+   {
+    "severity": "minor",
+    "sheet": "esc_channel (x4)",
+    "refs": "C37, C40, C41, C42 pin type (and equivalents C44, C47-C49, C51, C54-C56, C58, C61-C63); Q3-Q26 Description field",
+    "problem": "ERC and BOM metadata hygiene. 16 real ERC errors come from a capacitor symbol with an Input pin type. The DOY180N03T Description field is wrong: it says 40 V, 75 A, 2.9 mohm, 26 nC, which could lead someone to think the FETs are 40 V.",
+    "evidence": "erc.json, /ESC1-4/: 4 pin_not_driven errors each, on C37 pin 1 and C40, C41, C42 pin 2 (Input type). Net names: MotorA/A multiple_net_names warnings are harmless. Q3 field Description = '1.5V@250uA 1.675nF 2.9mR@10V 26nC@20V 31pF 395pF 40V 55W 75A'. The datasheet and the current LCSC listing for C49441966 say 30 V, 180 A, 1.0 mohm, 39.8 nC.",
+    "fix": "Set the pin type of the shared GRM033... capacitor symbol to passive (this clears the 16 errors). Rewrite the Q3-Q26 Description to '30V 180A 1.0mR@10V Qg 39.8nC N-ch TDFN3333-8PL'."
+   },
+   {
+    "severity": "minor",
+    "sheet": "esc_channel (x4)",
+    "refs": "C43, C50, C57, C64 (NSG2065Q VCC); R35-type gate resistors; C37-C39 and equivalents",
+    "problem": "Part-name and value mismatches between symbol, MPN and footprint, plus thin gate-driver VCC decoupling. The mismatches are cosmetic but misleading for BOM audits. The VCC decoupling is the previous S7, which the owner has accepted and deliberately left unchanged.",
+    "evidence": "The symbol and library part GRM033R61C104KE84D (16 V) conflicts with the MPN field GRM033R6YA104KE14D (35 V, LCSC C181043, confirmed on jlcsearch). R35 and similar have symbol name R_0402, but the footprint is R_0201 and the MPN is 0201WMF150JTEE. VCC of each NSG2065Q has a single 100 nF 0201, roughly 55 nF effective at 10 V. Each commutation needs about 40 nC for the low-side gate plus about 40 nC for bootstrap recharge, about 1.4 V local dip. The datasheet gives no value for C1 (Figure 10-2).",
+    "fix": "Rename the symbols so the name matches the fitted value and MPN. For VCC, replace the 0201 with a 1 uF 25 V 0402 (the catalogue part CL05A105KA5NQNC) if board space allows, or leave as accepted."
+   }
+  ]
+ },
+ {
+  "group": "rx-pads",
+  "finished": true,
+  "summary": "Scope reviewed: RX sheet (ESP32-C3, SX1281, TCXO, RF chain, LDO), Pads sheet, root sheet and core_interface. No blocker found. The RX radio, strap pins, UART cross-wiring and LED-strip translator are correct, and I verified each against datasheets and the netlist. There are 2 major issues (L4 has no LCSC part number, buzzer has no flyback diode) and 6 minor ones.\n\nSTALE INPUT: root.net predates the working tree. The tree already has J90/J91 and the Core_Interface sheet removed from OpenAIO.kicad_sch, and it already has DPS368 U28/C114/C115. I re-exported a netlist from a scratch copy of the current files (/private/tmp/claude-501/scratch/new.net, ERC in scratch/erc_new.json). Against root.net, the only change is the DPS368 addition and the removal of J90/J91. There are still 324 nets, and every net has the same non-J pins (verified by script). Nothing was lost when the J pads went away. This holds even for nets that only had core_interface labels (+4v5, +5V, +BATT, CURR, SWDIO, SWCLK, USB_D+, USB_D-, PU0RX).\n\nJ90/J91 CROSSING NETS: driver and load check, all OK once J90/J91 are deleted\n- +4v5: driven by D2 (from +5V) and D3 (from USB VBUS); loads U23, U6, U7, R23.\n- +5V: driven by the U4/L3 buck; loads U26, U27, pads, D2.\n- +BATT and GND: unchanged.\n- MOTOR1-4: driven by U2.37/36/35/34; loads are the 220R resistors R39/R58/R77/R96 into the ESC MCUs.\n- UART1_TX: U2.9 (GPIO6) drives U22.27 (U0RXD). UART1_RX: U22.28 (U0TXD) drives U2.10 (GPIO7). TX goes to RX in both directions.\n- UART0_TX: U2.2 drives U12.3 and J49. UART0_RX: U12.4 and J48 drive U2.3.\n- PU0RX: U2.5 is the only on-board pin, an input. The drivers are external (U12.6 air-unit SBUS, J45). This is by design.\n- SPI0.SCK/MOSI/MISO, FLASH_CS: U2 drives Card1; Card1 DAT0 drives U2.32; R34 pulls CS up.\n- LED_STRIP: U26 drives it through R115 to the four pads.\n- BUZZER-: Q1 drain; the load is the external buzzer on J29 and J33.\n- CURR: U25.6 drives R5.1.\n- SWDIO/SWCLK: U2 to TP31/TP32 (debug pads).\n- USB_D+/-: USB1 to R9/R8 to U2.\n- GND: the J90 and J91 GND pins are the same net.\n\nCHECKED AND CORRECT, NOT REPEATED\n- ESP32-C3 pin map matches the datasheet.\n- Strap pins: GPIO2 has R111 pull-up (shared with SX1281 NRESET), GPIO8 has R112 pull-up, and GPIO9 has R113 pull-up plus TP9 BOOT pad.\n- CHIP_EN has R114 10k and C84 1uF (10 ms).\n- VDD_SPI on 3V3 is valid for the FH4 (backup supply for the in-package flash).\n- 40 MHz crystal X2 with CL 10 pF and 15 pF load caps is plausible.\n- SX1281:\n  - VDD_IN is tied to DCC_FB, with L4 15uH, C67 10nF and C68 470nF, as in the Semtech reference design.\n  - VR_PA has 10nF.\n  - Pin 5 is now GND.\n  - XTA is AC-coupled (C69 1nF) to a TCXO, and XTB is NC, as in datasheet 15.2.\n  - DIO2/DIO3 are NC.\n  - RFIO goes straight to FL1. The Johanson 2450FM07D0034 is an internally DC-blocked front end pre-matched to the SX1280/81, so no external match is needed. The SX1281 has no PA/LNA control pins.\n  - FL1 pin 1 (IN) faces the chip and pin 3 (OUT) faces JP1, which is correct.\n- SX1281 to ESP32 SPI, DIO1, BUSY and NRESET match the ELRS Generic C3 2400 pin list.\n- TXU0101 (U26): I downloaded the TI datasheet. The OE pin may be tied to VCCB (+5V). Absolute maximum on OE is 6.5 V. \"BY\" is the real name of the B output pin. The device is a non-inverting, fixed-direction A to B translator. Abs-max and operating ranges are fine, and R115 200R in series is fine.\n- The LED strip pads (J20, J21, J31, J32) are all on LED_STRIP.\n- Q1 AP1606: Vgs max \u00b18 V and Ron 210 mohm at 2.5 V, so 3.3 V drive is fine. R13 gives a gate pull-down.\n- RP2350 UART1 TX/RX on GPIO6/7 is function F11, per the datasheet GPIO table. SPI0 on GPIO18/19/20, SPI1 on GPIO10/11/12 and I2C0 on GPIO4/5 are valid.\n- INA186A3 (U25): REF and GND are tied, IN+ is on the battery side of Rsense2, IN- is on the load side, and VS is 3V3. The high-side polarity is correct.\n- The DNP solder pads are all in_bom=no, so they do not reach the BOM.\n\nNOT VERIFIED\n- DJI SH-6 pin 3/4 direction. U12.3 is FC TX (UART0_TX) and U12.4 is FC RX; this matches the README, but I could not confirm it against the DJI harness. Check once against the DJI O3 manual.\n- ESP32-C3 series inductors L5 (24 nH) and L6 (2 nH), and the RF match L7/C87/C89. The Espressif hardware-design guide is not in the library.",
+  "findings": [
+   {
+    "severity": "major",
+    "sheet": "rx_esp32c3_sx1281",
+    "refs": "L4 (15uH, MLZ2012M150WT000)",
+    "problem": "The SX1281 DC-DC inductor has an MPN but no LCSC or LCSC Part field. The JLCPCB assembly BOM will have an unsourced line. This was already listed in B3 of CIRCUIT_REVIEW and is still open.",
+    "evidence": "In the fresh netlist L4 props are only MPN, Manufacturer and Sheetname. Every other in-BOM part in my scope has an LCSC field. The MPN matches the Semtech reference BOM (datasheet table 15-1, L4 MLZ2012M150W 0805).",
+    "fix": "Import the part with easyeda2kicad and set the LCSC field. Use TDK MLZ2012M150WT000 if stocked at LCSC. Otherwise pick a 15 uH, 0805, shielded, 10-20 percent inductor with a DC-DC current rating of at least 100 mA, and add the LCSC code."
+   },
+   {
+    "severity": "major",
+    "sheet": "fc_pads / fc_rp2350a",
+    "refs": "Q1 AP1606, net BUZZER-, pads J29 and J33",
+    "problem": "The buzzer low-side driver has no flyback or clamp diode. The standard 5 V FPV buzzer is a magnetic (inductive) coil, so turning Q1 off lets the drain spike well above +5V.",
+    "evidence": "The BUZZER- net contains only J29, Q1 pin 3 and the former J90/J91 pins, with no diode. AP1606 datasheet: V(BR)DSS is 20 V, ID is 0.7 A, in a DFN1006 package. J33 BUZ+ is directly on +5V. CIRCUIT_REVIEW O6 recommended a flyback diode and it is still not drawn.",
+    "fix": "Add a Schottky diode with anode on BUZZER- and cathode on +5V. Reuse SDM02U30LP3-7B (C151629, already used as D8), placed next to J29/J33 on the Pads sheet. Also add a note that an active (self-driven) buzzer is the alternative."
+   },
+   {
+    "severity": "minor",
+    "sheet": "rx_esp32c3_sx1281",
+    "refs": "D9 (XL-1010RGBC), net +3V3",
+    "problem": "The ELRS status LED runs below its minimum supply voltage. It is not guaranteed to light, and the radio link is not affected.",
+    "evidence": "XL-1010RGBC datasheet: VDD range 3.5-5.5 V, VIH 2.8 V, VDI max VDD+0.4 V. D9.2 is on +3V3 (3.3 V). ISSUES I11 is still open.",
+    "fix": "Move D9 pin 2 from +3V3 to +4v5. U23 is already on +4v5 on this sheet. DIN at 3.3 V still meets VIH, and DIN is below VDD+0.4. Keep 100nF (C66) at D9 VDD."
+   },
+   {
+    "severity": "minor",
+    "sheet": "rx_esp32c3_sx1281",
+    "refs": "OSC1 (OW7EL89CENUNFAYLC-52M), pins 1 and 2",
+    "problem": "OSC1 pin 1 is tied to GND, and the library datasheet for the part is the wrong document.",
+    "evidence": "KiCad-Library/datasheet/TXC-OW-Series.pdf is actually a YXC YSO510TP datasheet. The manifest's LCSC source URL returns the same PDF. In that document the clipped-sine pin 1 is No Connect: 'keep the NC pin floating, do not connect it to any network'. The OSC1 symbol has pins 1 and 2 both on GND, so the TXC pin 1 function (NC or control voltage) is unverified. Datasheet 15.2 requires a 0.8 V clipped-sine TCXO.",
+    "fix": "Get the real TXC OW7E datasheet, confirm pin 1 (NC versus Vc) and the clipped-sine output type, and replace the PDF in the library. If pin 1 is NC or a voltage control, leave it unconnected."
+   },
+   {
+    "severity": "minor",
+    "sheet": "rx_esp32c3_sx1281",
+    "refs": "U23 TLV75533PDQNR (1x1 mm X2SON), net +3V3",
+    "problem": "The +3V3 rail is tight for a 500 mA LDO in a tiny package. Loads are the ESP32-C3, SX1281, microSD, INA186, WS2812 and TCXO. The four AT32 MCUs have already moved to +3V3_ESC (U27), which helped.",
+    "evidence": "U23 is fed from +4v5 (about 4.6 V), so dropout is about 1.3 V. The ESP32-C3 asks for at least 0.5 A (datasheet table 5-2), and WiFi TX peaks at about 335 mA. Adding an SD write of about 100 mA gives a peak near the 500 mA limit. The 1x1 mm package has Rth,JA of about 168 C/W. This is S3 in CIRCUIT_REVIEW, still open.",
+    "fix": "Swap U23 for TLV76733DRVR (C2848334, 1 A, 2x2 mm WSON), or accept the risk and document that WiFi and SD writes should not run at the same time."
+   },
+   {
+    "severity": "minor",
+    "sheet": "fc_pads / README",
+    "refs": "J44, J45, J48, J49, and the README table",
+    "problem": "Pad Value labels in the schematic differ from the README legend and from the firmware port names.",
+    "evidence": "Schematic Values: J44 'PIO_TX0' on GPIO2, J45 'PIO_RX0' on GPIO3, J48 'RX0' on GPIO1, J49 'TX0' on GPIO0. The README lists J45 as RX0, J49 as PTX and J48 as PRX. In config.h, GPIO2/3 are hardware UART0, and GPIO0/1 are PIOUART0 (ISSUES I1).",
+    "fix": "Make the schematic Values, the silkscreen and the README agree. Suggested names: J44/J45 'TX0/RX0 (SBUS)' and J49/J48 'PTX/PRX'. No electrical change."
+   },
+   {
+    "severity": "minor",
+    "sheet": "root / fc_power",
+    "refs": "Power sheet pin CURR, ERC hier_label_mismatch",
+    "problem": "The Power sheet has a dangling sheet pin CURR, so ERC reports an error. It is not a connectivity fault: the CURR net is joined by the root global label, and the net is intact in the netlist.",
+    "evidence": "The fresh ERC has 31 errors. All are cosmetic or benign: the dangling CURR pin, 3 bus_to_net conflicts, missing PWR_FLAGs (U24.1, U22 VDD3P3 behind L6, #PWR pins), pin_not_driven on the ESC capacitor symbols, pin_to_pin PG on U7, and TP10 not connected. Nothing in them breaks a net.",
+    "fix": "Delete the CURR pin from the Power sheet symbol, and add PWR_FLAGs on +BATT, +5V and +3V3. Leave the rest unless a clean ERC is wanted for release."
+   },
+   {
+    "severity": "minor",
+    "sheet": "project",
+    "refs": "sym-lib-table and fp-lib-table entries OpenDrone, components, OpenRX-Shared (${OPENDRONE_LIB})",
+    "problem": "The project resolves its symbol libraries through the external path variable OPENDRONE_LIB. The project rule says libraries must be project-local so the repo is self-contained for open sourcing.",
+    "evidence": "sym-lib-table lines for OpenDrone, components and OpenRX-Shared point to ${OPENDRONE_LIB}/symbol/OpenDrone.kicad_sym. Only 'lib' is under ${KIPRJMOD}. My ERC and netlist run only worked after setting the variable to the KiCad-Library checkout.",
+    "fix": "Before release, copy the used symbols into lib.kicad_sym and drop the OPENDRONE_LIB entries. Alternatively document the requirement in the README. The sheet datasheet fields also use ${OPENDRONE_LIB}."
+   }
+  ]
+ }
+]

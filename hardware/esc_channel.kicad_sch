@@ -428,7 +428,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ESCLibrary:0201_10kR"
+		(symbol "lib:0201_10kR"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -573,7 +573,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ESCLibrary:0201_1kR"
+		(symbol "lib:0201_1kR"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -718,7 +718,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ESCLibrary:0201_220R"
+		(symbol "lib:0201_220R"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -863,7 +863,284 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ESCLibrary:AT32F421G8U7"
+		(symbol "lib:2N6660"
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "2N6660"
+				(at 5.08 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "PCM_Package_TO_SOT_THT_AKL:TO-39-3_SGD"
+				(at 5.08 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.tme.eu/Document/5ed933c46c767af29b5a52c786b35e4a/2N6660.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "enchancement mosfet nmosfet n-mosfet nmos n-mos emos emosfet 2N6660"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "2N6660_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 -1.27) (xy -2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 2.54 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.1778)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "2N6660_1_1"
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -3.81 -1.27 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lib:AT32F421G8U7"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1496,7 +1773,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ESCLibrary:GRM033R61C104KE84D"
+		(symbol "lib:GRM033R61C104KE84D"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1628,7 +1905,7 @@
 						(type none)
 					)
 				)
-				(pin input line
+				(pin passive line
 					(at -3.81 0 0)
 					(length 2.54)
 					(name "1"
@@ -1646,7 +1923,7 @@
 						)
 					)
 				)
-				(pin input line
+				(pin passive line
 					(at 3.81 0 180)
 					(length 2.54)
 					(name "2"
@@ -1667,503 +1944,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "PCM_Resistor_AKL:R_0402"
-			(body_styles demorgan)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 2.54 1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "R_0402"
-				(at 2.54 -1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "PCM_Resistor_SMD_AKL:R_0402_1005Metric"
-				(at 0 -11.43 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R res resistor eu smd 0402"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_0402_0_1"
-				(rectangle
-					(start -1.016 2.54)
-					(end 1.016 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_0402_0_2"
-				(polyline
-					(pts
-						(xy -2.54 -2.54) (xy -1.524 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 1.524) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.524 1.524) (xy 0.889 2.159) (xy -2.159 -0.889) (xy -0.889 -2.159) (xy 2.159 0.889) (xy 1.524 1.524)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_0402_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "R_0402_1_2"
-				(pin passive line
-					(at 2.54 2.54 180)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -2.54 -2.54 0)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "PCM_Transistor_MOSFET_AKL:2N6660"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "2N6660"
-				(at 5.08 -1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "PCM_Package_TO_SOT_THT_AKL:TO-39-3_SGD"
-				(at 5.08 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.tme.eu/Document/5ed933c46c767af29b5a52c786b35e4a/2N6660.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "TO-39 N-MOSFET enchancement mode transistor, 60V, 410mA, 6.25W, Alternate KiCAD Library"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "enchancement mosfet nmosfet n-mosfet nmos n-mos emos emosfet 2N6660"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "2N6660_0_1"
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 -1.27) (xy -2.54 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 2.54 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.1778)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "2N6660_1_1"
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -3.81 -1.27 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "components:NSG2065Q"
+		(symbol "lib:NSG2065Q"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2715,6 +2496,225 @@
 						(effects
 							(font
 								(size 1 1)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lib:R_0402"
+			(body_styles demorgan)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.54 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R_0402"
+				(at 2.54 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "PCM_Resistor_SMD_AKL:R_0402_1005Metric"
+				(at 0 -11.43 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "SMD 0402 Chip Resistor, European Symbol, Alternate KiCad Library"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor eu smd 0402"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0402_0_1"
+				(rectangle
+					(start -1.016 2.54)
+					(end 1.016 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_0402_0_2"
+				(polyline
+					(pts
+						(xy -2.54 -2.54) (xy -1.524 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 1.524) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.524 1.524) (xy 0.889 2.159) (xy -2.159 -0.889) (xy -0.889 -2.159) (xy 2.159 0.889) (xy 1.524 1.524)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_0402_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "R_0402_1_2"
+				(pin passive line
+					(at 2.54 2.54 180)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -2.54 -2.54 0)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -5282,7 +5282,7 @@
 		(uuid "90f81e18-6b58-4d95-b0e1-9ad7f189a681")
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_10kR")
+		(lib_id "lib:0201_10kR")
 		(at 234.95 99.06 180)
 		(unit 1)
 		(body_style 1)
@@ -5314,7 +5314,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 234.95 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -5712,7 +5712,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "lib:TestPoint_Pad_D1.0mm"
 			(at 34.29 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -5896,7 +5896,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_1kR")
+		(lib_id "lib:0201_1kR")
 		(at 229.87 111.76 90)
 		(unit 1)
 		(body_style 1)
@@ -5929,7 +5929,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 240.03 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -6188,7 +6188,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:GRM033R61C104KE84D")
+		(lib_id "lib:GRM033R61C104KE84D")
 		(at 45.72 67.31 270)
 		(unit 1)
 		(body_style 1)
@@ -6220,7 +6220,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 35.56 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -6785,7 +6785,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Resistor_AKL:R_0402")
+		(lib_id "lib:R_0402")
 		(at 29.21 147.32 90)
 		(unit 1)
 		(body_style 1)
@@ -6815,7 +6815,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 40.64 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -6982,7 +6982,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:GRM033R61C104KE84D")
+		(lib_id "lib:GRM033R61C104KE84D")
 		(at 161.29 66.04 180)
 		(unit 1)
 		(body_style 1)
@@ -7014,7 +7014,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_WIDE"
+		(property "Footprint" "lib:C_0402_WIDE"
 			(at 161.29 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -7291,7 +7291,7 @@
 		)
 	)
 	(symbol
-		(lib_id "components:NSG2065Q")
+		(lib_id "lib:NSG2065Q")
 		(at 133.35 74.93 0)
 		(unit 1)
 		(body_style 1)
@@ -7322,7 +7322,7 @@
 				)
 			)
 		)
-		(property "Footprint" "4in1ESC:QFN-24_L4.0-W4.0-P0.50-TL-EP2.8"
+		(property "Footprint" "lib:QFN-24_L4.0-W4.0-P0.50-TL-EP2.8"
 			(at 133.35 85.09 0)
 			(hide yes)
 			(show_name no)
@@ -7657,7 +7657,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_10kR")
+		(lib_id "lib:0201_10kR")
 		(at 205.74 90.17 90)
 		(unit 1)
 		(body_style 1)
@@ -7690,7 +7690,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 215.9 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -7892,7 +7892,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "lib:C_0805_2012Metric"
 			(at 246.7102 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -8107,7 +8107,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_10kR")
+		(lib_id "lib:0201_10kR")
 		(at 210.82 99.06 180)
 		(unit 1)
 		(body_style 1)
@@ -8139,7 +8139,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 210.82 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -8415,7 +8415,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:GRM033R61C104KE84D")
+		(lib_id "lib:GRM033R61C104KE84D")
 		(at 83.82 36.83 270)
 		(unit 1)
 		(body_style 1)
@@ -8447,7 +8447,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 73.66 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -8616,7 +8616,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_10kR")
+		(lib_id "lib:0201_10kR")
 		(at 49.53 60.96 180)
 		(unit 1)
 		(body_style 1)
@@ -8648,7 +8648,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 49.53 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -8817,7 +8817,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_10kR")
+		(lib_id "lib:0201_10kR")
 		(at 259.08 99.06 180)
 		(unit 1)
 		(body_style 1)
@@ -8849,7 +8849,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 259.08 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -9018,7 +9018,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:GRM033R61C104KE84D")
+		(lib_id "lib:GRM033R61C104KE84D")
 		(at 62.23 36.83 270)
 		(unit 1)
 		(body_style 1)
@@ -9050,7 +9050,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 52.07 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -9219,7 +9219,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_1kR")
+		(lib_id "lib:0201_1kR")
 		(at 205.74 111.76 90)
 		(unit 1)
 		(body_style 1)
@@ -9252,7 +9252,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 215.9 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -9421,7 +9421,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_10kR")
+		(lib_id "lib:0201_10kR")
 		(at 254 90.17 270)
 		(unit 1)
 		(body_style 1)
@@ -9454,7 +9454,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 243.84 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -9623,7 +9623,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:GRM033R61C104KE84D")
+		(lib_id "lib:GRM033R61C104KE84D")
 		(at 151.13 63.5 180)
 		(unit 1)
 		(body_style 1)
@@ -9655,7 +9655,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_WIDE"
+		(property "Footprint" "lib:C_0402_WIDE"
 			(at 151.13 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -9824,7 +9824,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_10kR")
+		(lib_id "lib:0201_10kR")
 		(at 229.87 90.17 270)
 		(unit 1)
 		(body_style 1)
@@ -9857,7 +9857,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 219.71 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -10134,7 +10134,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Resistor_AKL:R_0402")
+		(lib_id "lib:R_0402")
 		(at 88.9 162.56 90)
 		(unit 1)
 		(body_style 1)
@@ -10164,7 +10164,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 100.33 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -10331,7 +10331,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:GRM033R61C104KE84D")
+		(lib_id "lib:GRM033R61C104KE84D")
 		(at 187.96 26.67 270)
 		(unit 1)
 		(body_style 1)
@@ -10363,7 +10363,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" "lib:C_0201_0603Metric"
 			(at 177.8 26.67 0)
 			(hide yes)
 			(show_name no)
@@ -10532,7 +10532,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:AT32F421G8U7")
+		(lib_id "lib:AT32F421G8U7")
 		(at 72.39 69.85 0)
 		(unit 1)
 		(body_style 1)
@@ -10564,7 +10564,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "4in1ESC:QFN-28_L4.0-W4.0-P0.40-TL-EP2.4"
+		(property "Footprint" "lib:QFN-28_L4.0-W4.0-P0.40-TL-EP2.4"
 			(at 72.39 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -10803,7 +10803,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Resistor_AKL:R_0402")
+		(lib_id "lib:R_0402")
 		(at 149.86 161.29 90)
 		(unit 1)
 		(body_style 1)
@@ -10833,7 +10833,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 161.29 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -11090,7 +11090,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Transistor_MOSFET_AKL:2N6660")
+		(lib_id "lib:2N6660")
 		(at 96.52 146.05 0)
 		(unit 1)
 		(body_style 1)
@@ -11145,7 +11145,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
+		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
 			(at 96.52 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -11315,7 +11315,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "lib:C_0805_2012Metric"
 			(at 235.9152 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -11423,7 +11423,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Resistor_AKL:R_0402")
+		(lib_id "lib:R_0402")
 		(at 149.86 146.05 90)
 		(unit 1)
 		(body_style 1)
@@ -11453,7 +11453,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 161.29 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -11620,7 +11620,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Resistor_AKL:R_0402")
+		(lib_id "lib:R_0402")
 		(at 88.9 147.32 90)
 		(unit 1)
 		(body_style 1)
@@ -11650,7 +11650,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 100.33 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -11925,7 +11925,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Transistor_MOSFET_AKL:2N6660")
+		(lib_id "lib:2N6660")
 		(at 36.83 161.29 0)
 		(unit 1)
 		(body_style 1)
@@ -11980,7 +11980,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
+		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
 			(at 36.83 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -12117,7 +12117,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_1kR")
+		(lib_id "lib:0201_1kR")
 		(at 254 111.76 90)
 		(unit 1)
 		(body_style 1)
@@ -12150,7 +12150,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 264.16 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -12319,7 +12319,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Transistor_MOSFET_AKL:2N6660")
+		(lib_id "lib:2N6660")
 		(at 157.48 144.78 0)
 		(unit 1)
 		(body_style 1)
@@ -12374,7 +12374,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
+		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
 			(at 157.48 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -12709,7 +12709,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Resistor_AKL:R_0402")
+		(lib_id "lib:R_0402")
 		(at 29.21 162.56 90)
 		(unit 1)
 		(body_style 1)
@@ -12739,7 +12739,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 40.64 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -13229,7 +13229,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:GRM033R61C104KE84D")
+		(lib_id "lib:GRM033R61C104KE84D")
 		(at 171.45 68.58 180)
 		(unit 1)
 		(body_style 1)
@@ -13261,7 +13261,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_WIDE"
+		(property "Footprint" "lib:C_0402_WIDE"
 			(at 171.45 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -13461,7 +13461,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 71.12 34.798 90)
 			(hide yes)
 			(show_name no)
@@ -13628,7 +13628,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Transistor_MOSFET_AKL:2N6660")
+		(lib_id "lib:2N6660")
 		(at 36.83 146.05 0)
 		(unit 1)
 		(body_style 1)
@@ -13683,7 +13683,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
+		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
 			(at 36.83 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -13853,7 +13853,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "lib:C_0805_2012Metric"
 			(at 224.4852 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -13961,7 +13961,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_220R")
+		(lib_id "lib:0201_220R")
 		(at 49.53 80.01 0)
 		(unit 1)
 		(body_style 1)
@@ -13995,7 +13995,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 49.53 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -14302,7 +14302,7 @@
 				)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+		(property "Footprint" "lib:TestPoint_Pad_D1.0mm"
 			(at 34.29 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -14486,7 +14486,7 @@
 		)
 	)
 	(symbol
-		(lib_id "ESCLibrary:0201_10kR")
+		(lib_id "lib:0201_10kR")
 		(at 34.29 63.5 180)
 		(unit 1)
 		(body_style 1)
@@ -14518,7 +14518,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+		(property "Footprint" "lib:R_0201_0603Metric"
 			(at 34.29 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -15008,7 +15008,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Transistor_MOSFET_AKL:2N6660")
+		(lib_id "lib:2N6660")
 		(at 96.52 161.29 0)
 		(unit 1)
 		(body_style 1)
@@ -15063,7 +15063,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
+		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
 			(at 96.52 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -15200,7 +15200,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Transistor_MOSFET_AKL:2N6660")
+		(lib_id "lib:2N6660")
 		(at 157.48 160.02 0)
 		(unit 1)
 		(body_style 1)
@@ -15255,7 +15255,7 @@
 				)
 			)
 		)
-		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
+		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
 			(at 157.48 160.02 0)
 			(hide yes)
 			(show_name no)
