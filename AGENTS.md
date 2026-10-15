@@ -67,14 +67,26 @@ no continuous-current figure is published at 2S or 6S without a measurement.
 ```sh
 KPY=/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3
 CLI=/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli
+# schematic and board checks
 $CLI sch erc hardware/OpenAIO.kicad_sch
 $CLI pcb drc --schematic-parity --refill-zones hardware/OpenAIO.kicad_pcb
+
+# netlist, for scripted analysis
 $CLI sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/OpenAIO.kicad_sch
 
 # Update PCB from Schematic without the GUI (KiCad closed); new parts park right of the board
 $CLI sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/OpenAIO.kicad_sch
 $KPY hardware/tools/sync_pcb.py hardware/OpenAIO.kicad_pcb --netlist /tmp/OpenAIO.net
 ```
+
+On macOS `kicad-cli` is at
+`/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, and `pcbnew` imports
+only under KiCad's bundled Python. Reusable scripts for renders, STEP export,
+and packaging art come from Incutec hardware tooling. The OpenDrone release
+standard is
+[RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md).
+`KPY` is KiCad's bundled Python, on macOS
+`/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3`.
 
 `sync_pcb.py` needs the `kicad-cli` path or `--netlist`. A pcbnew save rewrites
 `OpenAIO.kicad_pro`; check `git diff` on it after every script and keep only

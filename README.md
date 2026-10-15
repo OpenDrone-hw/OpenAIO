@@ -10,9 +10,9 @@ are one 8-layer HDI board on the OpenAIO-Whoop stackup.
 [![Status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project)
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/v3sWmTcx3R)
 
-Held by @Just4Stan. Layout in progress: the Base and Core layouts sit side by side in `hardware/OpenAIO.kicad_pcb`
-with their routing kept, and the Core still has to move into the Base outline
-([research/ROUTING.md](research/ROUTING.md)). Nothing has been manufactured.
+The KiCad implementation lives in `hardware/`. Use Git for branch state and
+manufacturing or test evidence for maturity claims. Layout hand-over:
+[research/ROUTING.md](research/ROUTING.md).
 
 ## Why
 
@@ -144,10 +144,9 @@ Research so far, reference rather than decisions:
 - [Part alternatives](https://app.notion.com/p/3f5fe06764e1819eade0dc5bfbfdff7c): ESC-stage part alternatives, gate driver and FET options, March 2026
 - The stitched design reset in August 2026 is in the git history before #9; reference for the thinking, not a design to continue from.
 
-## Open questions
+## Design questions
 
-Still open while the layout is drawn. Answering them is a real contribution
-that needs no KiCad.
+Resolve these only as part of user-requested design work:
 
 - **Thermal.** Four power stages next to an MCU and a radio on 25.5 mm square,
   with no airflow guarantee. What is the continuous current budget on 1 oz
