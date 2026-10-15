@@ -26,24 +26,24 @@
 # Only what this board needs and the line does not. Name every rule so the next
 # person can tell a real constraint from a copied one.
 #
-# OpenAIO, one board: the hand-routed Base and Core of 2026-08-22 (d81e559, plus the always-on
+# 12 layers, HDI 1+10+1, about 1.25 mm, 1 oz outer / 0.5 oz inner (2026-10-15). OpenAIO, one board: the hand-routed Base and Core of 2026-08-22 (d81e559, plus the always-on
 # +10V of 9aba717) merged into one 8-layer HDI 1+6+1 board on the OpenAIO-Whoop stackup
 # (0.997 mm, 1 oz on all layers, ENIG). The 2 oz outer rules of OpenAIO-Base.kicad_dru and the
 # LGA rule of OpenAIO-Core.kicad_dru are gone with the 2 oz copper and the LGA. Via rules come
 # from OpenAIO-Whoop.kicad_dru. KiCad: the LAST matching rule wins.
 
 # ---- HDI 1+6+1 vias (NextPCB, from OpenAIO-Whoop) ----
-(rule "HDI 1+6+1: no mechanical blind vias"
+(rule "HDI 1+10+1: no mechanical blind vias"
   (severity warning)
   (constraint disallow blind_via))
 
-(rule "HDI 1+6+1: microvias F.Cu-In1.Cu and In6.Cu-B.Cu only"
+(rule "HDI 1+10+1: microvias F.Cu-In1.Cu and In10.Cu-B.Cu only"
   (constraint disallow micro_via)
-  (condition "!((A.Layer_Top == 'F.Cu' && A.Layer_Bottom == 'In1.Cu') || (A.Layer_Top == 'In6.Cu' && A.Layer_Bottom == 'B.Cu'))"))
+  (condition "!((A.Layer_Top == 'F.Cu' && A.Layer_Bottom == 'In1.Cu') || (A.Layer_Top == 'In10.Cu' && A.Layer_Bottom == 'B.Cu'))"))
 
-(rule "HDI 1+6+1: buried vias In1.Cu-In6.Cu only"
+(rule "HDI 1+10+1: buried vias In1.Cu-In10.Cu only"
   (constraint disallow buried_via)
-  (condition "!(A.Layer_Top == 'In1.Cu' && A.Layer_Bottom == 'In6.Cu')"))
+  (condition "!(A.Layer_Top == 'In1.Cu' && A.Layer_Bottom == 'In10.Cu')"))
 
 (rule "HDI microvia: laser hole 0.10 to 0.125"
   (constraint hole_size (min 0.10mm) (max 0.125mm))
@@ -61,8 +61,9 @@
 # Through vias are allowed (owner, 2026-10-15): a via that joins F.Cu and B.Cu copper stays a
 # mechanical through via at its routed size; every other via is a microvia and/or buried stack.
 
-(rule "HDI buried via: mechanical hole 0.15 to 0.25"
-  (constraint hole_size (min 0.15mm) (max 0.25mm))
+# The L2-L11 sub-lamination is about 1.0 mm: NextPCB's 5:1 buried-via limit (D123) gives a 0.20 mm minimum drill.
+(rule "HDI buried via: mechanical hole 0.20 to 0.25"
+  (constraint hole_size (min 0.20mm) (max 0.25mm))
   (condition "A.Via_Type == 'Buried'"))
 
 (rule "same-net via array 0.20"
