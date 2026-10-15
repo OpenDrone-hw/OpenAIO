@@ -25,10 +25,12 @@ SP40N01GHNK that takes OpenESC-30x30 to 8S is PDFN-8L 5x6 and four channels of
 it do not fit on 25.5 mm, so 6S is the ceiling here, not 8S.
 
 At the bottom of the range the +10V gate rail is not regulated: the buck runs
-in pass-through and the drivers see roughly +BATT, which at 2S is about 5.9 V,
-above the NSG2065Q 4.5 V UVLO and inside its 5-20 V supply range. The board
-runs, but gate drive is about half, so the continuous-current rating at 2S is
-lower than at 6S; neither figure is published without a measurement.
+in pass-through and the drivers see roughly +BATT, 5.6-8.2 V over a 2S flight.
+That clears the NSG2065Q UVLO (4.5 V typ, 4.9 V max) but sits below the 8-20 V
+VCC of its recommended operating conditions (datasheet section 8.5; the 5-20 V
+on page 1 is the feature list), see `research/review-2026-10/INPUT_RANGE.md`.
+2S is outside the driver's specified range until a bench run says otherwise;
+no continuous-current figure is published at 2S or 6S without a measurement.
 
 ## Layout rules
 
