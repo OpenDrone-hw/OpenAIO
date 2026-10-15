@@ -11,7 +11,8 @@ Run with KiCad closed (the board is only read):
   -inc NOROUTE so their pads stay obstacles and their links stay for the pours
 - every class may use only the through via 0.33/0.15 (the edit form); the structure lists no other via. With
   --blind also the blind L1-L7 and L2-L8 0.33/0.15 (the edit-form via where a through via does not fit)
-- the GND plane layers L2 and L7 become (type power): no signal is routed on them
+- the GND plane layers L2 and L7 become (type power): no signal is routed on them; --power L4.BATT,L5.Rails adds
+  more (Freerouting does not treat a foreign plane as an obstacle, so it routes straight through the +BATT planes)
 Run Freerouting on the result with tools/fr_run.sh.
 """
 import os
@@ -108,7 +109,8 @@ def main():
     s0 = t.index("(via ", t.index("(structure"))
     s1 = t.index(")", s0)
     t = t[:s0] + "(via " + " ".join(vias) + t[s1:]
-    for name in ("L2.GND", "L7.GND"):
+    for name in ["L2.GND", "L7.GND"] + (sys.argv[sys.argv.index("--power") + 1].split(",")
+                                        if "--power" in sys.argv else []):
         t = re.sub(r"(\(layer " + re.escape(name) + r"\s+\(type )signal", r"\1power", t)
     open(dst, "w").write(t)
     print("protected wires", t.count("(type protect)"), "| skipped nets", len(skip))

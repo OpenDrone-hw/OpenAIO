@@ -125,6 +125,50 @@ $KPY hardware/tools/track_widths.py hardware/OpenAIO.kicad_pcb
 $KPY hardware/tools/power_paths.py hardware/OpenAIO.kicad_pcb --esc 15
 ```
 
+## Overnight pass 2026-10-16
+
+| Step | Unconnected | DRC errors |
+|---|---|---|
+| Start (f549edb) | 141 | 2 (USB1 pegs) |
+| Via cleanup `tools/via_norm.py` | 141 | 2 |
+| Power copper `tools/power_opt.py` | 117 | 2 |
+| Freerouting + escape vias | 59 | 2 |
+| USB1 pegs NPTH | 59 | 0 |
+
+Vias: non-GND is one through 0.33/0.15 while routing (blind L1-L7 / L2-L8 only where a through land hits far-side
+parts); GND is a microvia into the nearest plane, through where top and bottom GND meet.
+
+Power, `tools/power_paths_v2.py --esc 15` (61 A, includes commutation; v1 `power_paths.py` under-reports and missed
+that +BATT was open in 20 islands):
+
+| Path | Start | After power_opt | After routing |
+|---|---|---|---|
+| /CSA+ | 0.385 mOhm, 1.43 W | 0.151, 0.56 W | 0.185, 0.69 W |
+| +BATT | open | 0.445, 1.66 W | 0.574, 2.14 W |
+| GND | 0.208, 0.77 W | 0.221, 0.82 W | 0.234, 0.87 W |
+| Phases (each) | 0.283, 0.25 W | 0.235, 0.21 W | 0.235, 0.21 W |
+
+Freerouting ignores foreign planes: it laid 113 mm each on L4/L5 through the +BATT planes (+0.5 W). Rerunning with
+`fr_prep.py --power L4.BATT` gives +BATT 1.83 W but 67 unconnected instead of 59. Rip up signal tracks on L4 by hand
+where they split the plane.
+
+Freerouting workflow (KiCad closed):
+
+```sh
+$KPY tools/fr_prep.py OpenAIO.kicad_pcb run.dsn [--power L4.BATT]
+zsh tools/fr_run.sh run.dsn run.ses 1
+$KPY tools/fr_import.py OpenAIO.kicad_pcb run.ses
+kicad-cli pcb drc --severity-all --format json -o drc.json OpenAIO.kicad_pcb
+$KPY tools/fr_prune.py OpenAIO.kicad_pcb drc.json run.ses.new.txt
+$KPY tools/cleanup.py OpenAIO.kicad_pcb    # repeat until it deletes nothing
+$KPY tools/esc_vias.py OpenAIO.kicad_pcb drc.json --blind
+```
+
+Left for hand routing: U2 (RP2354) pins MOTOR1-4, LED0, FLASH_CS, OSD_EN/SYNC, I2C0, UART1 (U22), USB_D+/-, SPI0.SCK,
+LED_STRIP; +3.3V 22 links (an L5 pour would close most); /1B, /1C, /3A sense resistors boxed in.
+Flags: the "AIO" text on B.Mask exposes bottom copper of several nets (solder_mask_bridge warnings, includes new
+vias); JLC inner layers default to 0.5 oz, the numbers assume 1 oz.
+
 ## Known circuit issues kept on purpose
 
 The owner chose the 2026-08-22 circuit plus the always-on `+10V` only (2026-10-15). These
