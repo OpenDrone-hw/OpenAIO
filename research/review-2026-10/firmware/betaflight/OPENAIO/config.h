@@ -91,7 +91,7 @@
 #define SPI0_SDI_PIN         PA20         // SPI0.MISO | U2.32 | LGA 17 | Card1.7 DAT0
 #define SPI0_SDO_PIN         PA19         // SPI0.MOSI | U2.31 | LGA 13 | Card1.3 CMD
 #define SDCARD_SPI_INSTANCE  SPI0
-#define SDCARD_SPI_CS_PIN    PA21         // SD_CS     | U2.33 | Card1.2 CD/DAT3, R34 10k pull-up to +3.3V (card on the FC rail since 2026-10-15).
+#define SDCARD_SPI_CS_PIN    PA21         // FLASH_CS  | U2.33 | Card1.2 CD/DAT3, R34 10k pull-up to +3V3 (the net name is historical: SD card CS).
 #define SDCARD_DETECT_PIN    NONE         // no card-detect switch is wired
 #define DEFAULT_BLACKBOX_DEVICE BLACKBOX_DEVICE_SDCARD
 
@@ -159,16 +159,16 @@
 #define PIO_LEDSTRIP_INDEX   1
 
 // ---------------------------------------------------------------------------
-// I2C0: onboard DPS368 barometer U28 (0x76, SDO to GND; Betaflight DPS310 driver) plus the external
+// I2C0: onboard BMP580 barometer U26 (0x47, SDO to VDDIO: the BMP5xx driver default, no baro_i2c_address needed) plus the external
 // magnetometer pads J23/J26.
 // [BF src/main/pg/bus_i2c.c:44-48,120; CFG configs/RASP/RASPBERRY_PI_UAVFC/config.h:149-154]
 // ---------------------------------------------------------------------------
-#define I2C0_SDA_PIN         PA4          // /Pads/I2C0.SDA | U2.7 | U28.3, J26 "SDA", R12 5.1k pull-up to +3.3V
-#define I2C0_SCL_PIN         PA5          // /Pads/I2C0.SCL | U2.8 | U28.4, J23 "SCL", R11 5.1k pull-up to +3.3V
+#define I2C0_SDA_PIN         PA4          // /Pads/I2C0.SDA | U2.7 | U26.4 SDI, J26 "SDA", R12 5.1k pull-up to +3.3V
+#define I2C0_SCL_PIN         PA5          // /Pads/I2C0.SCL | U2.8 | U26.2 SCK, J23 "SCL", R11 5.1k pull-up to +3.3V
 #define MAG_I2C_INSTANCE     I2CDEV_0
 #define BARO_I2C_INSTANCE    I2CDEV_0
 #define USE_BARO
-#define USE_BARO_DPS310                   // DPS368 is register compatible with the DPS310 driver
+#define USE_BARO_BMP580                   // Betaflight 2026.6+, src/main/drivers/barometer/barometer_bmp5xx.c
 
 // ---------------------------------------------------------------------------
 // ADC. RP2350A: GPIO26..29 = ADC0..3 [BF src/platform/PICO/adc_pico.c:81-85]; ADC_AVDD = +3.3V (U7),

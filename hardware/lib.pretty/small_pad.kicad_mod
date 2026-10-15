@@ -7,7 +7,8 @@
 		(at 0 -0.5 0)
 		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "cbea4ec3-e969-4e6f-91e5-0f0d005455b1")
+		(hide yes)
+		(uuid "c04ababc-fbbb-4160-8a85-98c4839ecb9a")
 		(effects
 			(font
 				(size 1 1)
@@ -15,11 +16,11 @@
 			)
 		)
 	)
-	(property "Value" "small_pad"
+	(property "Value" "5V"
 		(at 0 1 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "2f785f72-0096-41d2-afa5-73bb1341a03d")
+		(uuid "318bb9ce-d509-417d-aab0-acc38c7091b9")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +33,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "2e6b4365-05ce-4254-9052-c25188307bb3")
+		(uuid "a2c3c056-3d34-4066-bd2e-225638edb576")
 		(effects
 			(font
 				(size 1 1)
@@ -40,12 +41,12 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"
 		(at 0 0 0)
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "0834b537-1de9-4291-9cd9-00a5dd37d94c")
+		(uuid "67165eaa-bba4-4fa5-aad7-4c5c132f47a6")
 		(effects
 			(font
 				(size 1 1)
@@ -53,25 +54,16 @@
 			)
 		)
 	)
-	(attr smd)
+	(property ki_fp_filters "Connector*:*_1x??_*")
+	(sheetname "/Pads/")
+	(sheetfile "fc_pads.kicad_sch")
+	(attr smd exclude_from_bom dnp)
 	(duplicate_pad_numbers_are_jumpers no)
-	(fp_poly
-		(pts
-			(xy -1.25 -0.799999) (xy 1.25 -0.799999) (xy 1.25 0.799999) (xy -1.25 0.799999)
-		)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill no)
-		(layer "F.CrtYd")
-		(uuid "81a13c23-c63e-4477-a463-1bd075433f18")
-	)
 	(fp_text user "${REFERENCE}"
 		(at 0 2.5 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "c5a90061-1e3b-4b9c-b5c0-533573952abf")
+		(uuid "8c568e7c-2402-4105-a11f-4a4d70ac136f")
 		(effects
 			(font
 				(size 1 1)
@@ -81,11 +73,11 @@
 	)
 	(pad "1" smd roundrect
 		(at 0 0)
-		(size 2.3 1.4)
+		(size 2.2 1.6)
 		(property pad_prop_testpoint)
 		(layers "F.Cu" "F.Mask")
 		(roundrect_rratio 0.3)
-		(uuid "058642f9-bef6-4521-9bf5-7be2a0ed0839")
+		(uuid "dfa2f665-7152-43b2-8f16-3c76a487b9dd")
 	)
 	(embedded_fonts no)
 )

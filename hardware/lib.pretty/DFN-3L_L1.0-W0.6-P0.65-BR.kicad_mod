@@ -6,7 +6,8 @@
 	(property "Reference" "REF**"
 		(at 0 -4.22 0)
 		(layer "F.SilkS")
-		(uuid "925b42e5-d158-4f1f-af27-80d7a5f6493f")
+		(hide yes)
+		(uuid "bbf47019-8292-4d92-8b44-ced6418d2949")
 		(effects
 			(font
 				(size 1 1)
@@ -14,10 +15,10 @@
 			)
 		)
 	)
-	(property "Value" "DFN-3L_L1.0-W0.6-P0.65-BR"
+	(property "Value" "AP1606"
 		(at 0 4.22 0)
 		(layer "F.Fab")
-		(uuid "0d69a42d-d0ad-4cdd-bd12-5cee4551263a")
+		(uuid "cd4e7b3d-ef23-4472-8429-91ad2d8aa764")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +30,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "2146eaab-0bff-4639-99f6-dcb2cf2f4ad8")
+		(uuid "08ebbe53-cebd-4ffc-9ba5-b1011f8c7cff")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,7 +42,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "0a8cad6e-7bbe-4549-b0c0-5c1fb95a2e7b")
+		(uuid "e68ade3d-7cab-43ee-94f8-39edfd38fb23")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -49,6 +50,47 @@
 			)
 		)
 	)
+	(property "LCSC" "C2849580"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5336cc10-3400-407f-9d15-d7d1003d1a08")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "AP1606"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "789a8d2e-ac7f-4537-8a5e-97cdf1b116b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Diodes Incorporated"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "49c0a2b5-1277-4881-adcc-ac2952d7d7d8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/RP2354A/")
+	(sheetfile "fc_rp2350a.kicad_sch")
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_rect
@@ -60,7 +102,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "aeb8a50b-31c0-446e-b0de-9313caa3ce77")
+		(uuid "7a7f2bf5-c85a-4078-9913-d0d86def8dbc")
 	)
 	(fp_circle
 		(center 0.65 0.25)
@@ -71,19 +113,7 @@
 		)
 		(fill no)
 		(layer "Cmts.User")
-		(uuid "ca416a78-9ae5-4361-a3b6-b4bb9eb375e6")
-	)
-	(fp_poly
-		(pts
-			(xy -0.615 -0.444999) (xy 0.665432 -0.444999) (xy 0.665432 0.455433) (xy -0.615 0.455433)
-		)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(fill no)
-		(layer "F.CrtYd")
-		(uuid "b76894ff-ca55-49b0-9066-9324c6e50ab2")
+		(uuid "435b4e73-8819-420c-945d-5957824ff7a2")
 	)
 	(fp_circle
 		(center 0.51 0.3)
@@ -94,12 +124,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "6cbff35d-fee3-431d-9aa2-38998fb303ef")
+		(uuid "f25d8762-7213-4982-86f4-aec751c7d767")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "fbcf9284-86fb-4b08-857f-05ae984b35bd")
+		(uuid "e938e48f-592a-42be-acf8-04f72c700b15")
 		(effects
 			(font
 				(size 1 1)
@@ -111,19 +141,19 @@
 		(at 0.34 0.22 90)
 		(size 0.25 0.35)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "27667878-5f5e-48ae-89a5-51803f626f3a")
+		(uuid "84ca8ed9-f197-4a5d-a501-b5d01ffe0dec")
 	)
 	(pad "2" smd rect
 		(at 0.34 -0.22 90)
 		(size 0.25 0.35)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "107140ce-4d83-4f2b-b573-ec6a8bc106bb")
+		(uuid "67bb8fa4-2ca5-4541-a739-0f2490b92582")
 	)
 	(pad "3" smd rect
 		(at -0.34 0 270)
 		(size 0.6 0.35)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "fdd72394-0c26-4a31-a418-3f522559a13a")
+		(uuid "1b4dbdf3-0ece-4840-a93f-0eef9a04f7fa")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/lib.3dshapes/DFN-3L_L1.0-W0.6-H0.5-P0.65-BR.wrl"

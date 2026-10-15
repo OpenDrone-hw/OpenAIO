@@ -4,11 +4,6 @@
 	(generator_version "10.0")
 	(uuid "fb88b6f9-ee39-4640-a9d4-04a17ceeac64")
 	(paper "A4")
-	(title_block
-		(title "OpenAIO")
-		(date "2026-10")
-		(rev "r2")
-	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers
@@ -2748,7 +2743,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin power_out line
 					(at -2.54 0 90)
 					(length 2.54)
 					(name "Hole"
@@ -3826,121 +3821,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(junction
 		(at 151.765 135.89)
@@ -4058,7 +3938,7 @@
 		)
 		(uuid "0582c18c-74d4-48e7-8371-81db901399ae")
 	)
-	(bus
+	(wire
 		(pts
 			(xy 145.415 35.56) (xy 170.815 35.56)
 		)
@@ -4118,7 +3998,7 @@
 		)
 		(uuid "142907a5-35a2-4a79-aec4-0a4b22f9d908")
 	)
-	(bus
+	(wire
 		(pts
 			(xy 62.23 95.25) (xy 78.74 95.25)
 		)
@@ -4418,7 +4298,7 @@
 		)
 		(uuid "ac76f065-c5e1-4f8c-b830-c2bf8a4ccf21")
 	)
-	(bus
+	(wire
 		(pts
 			(xy 145.415 62.865) (xy 170.815 62.865)
 		)
@@ -4507,6 +4387,16 @@
 			(type default)
 		)
 		(uuid "d0340f30-0f6e-4897-bab0-cc553e61634f")
+	)
+	(wire
+		(pts
+			(xy 62.23 56.515) (xy 64.77 56.515)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dca57835-73fc-4c45-8d53-d068ad8063c8")
 	)
 	(wire
 		(pts
@@ -5114,7 +5004,7 @@
 			)
 		)
 	)
-	(global_label "SD_CS"
+	(global_label "FLASH_CS"
 		(shape bidirectional)
 		(at 167.355 60.325 90)
 		(effects
@@ -5454,7 +5344,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.5882 105.9179 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5534,7 +5423,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.67 91.9479 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5584,82 +5472,6 @@
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
 					(reference "TP20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 236.22 112.395 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "26693c96-45a7-408f-b7b7-ab558f2fdffc")
-		(property "Reference" "#FLG0943"
-			(at 236.22 110.495 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 236.22 108.585 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 236.22 112.395 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 236.22 112.395 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 236.22 112.395 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b335f08f-1c63-4907-ac0e-9f29331c49ab")
-		)
-		(instances
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64"
-					(reference "#FLG0943")
 					(unit 1)
 				)
 			)
@@ -5937,7 +5749,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.035 22.0979 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6017,7 +5828,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 154.305 46.8629 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6097,7 +5907,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 74.295 108.4579 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6275,7 +6084,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics"
+		(property "Manufacturer" ""
 			(at -58.42 -3.81 0)
 			(hide yes)
 			(show_name no)
@@ -6348,7 +6157,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 72.39 102.1079 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6487,9 +6295,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
-		(in_pos_files no)
+		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8d4437a1-0938-4f9c-9171-98b1cc307271")
@@ -6625,7 +6433,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.67 133.8579 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6783,7 +6590,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 66.675 54.4829 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7019,7 +6825,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 152.4 30.9879 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7099,7 +6904,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 154.305 44.3229 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7258,7 +7062,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 153.67 119.8879 0)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7371,7 +7174,7 @@
 				(justify left)
 			)
 		)
-		(pin "SD_CS" output
+		(pin "FLASH_CS" output
 			(at 145.415 60.325 0)
 			(uuid "d8477ac5-a292-4390-9908-4bd86590195a")
 			(effects
@@ -8203,7 +8006,7 @@
 				(justify left top)
 			)
 		)
-		(pin "SD_CS" input
+		(pin "FLASH_CS" input
 			(at 170.815 60.325 180)
 			(uuid "0d0f2c6d-7164-4c87-882a-e841d2fedd02")
 			(effects
@@ -8267,6 +8070,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(pin "CURR" input
+			(at 62.23 56.515 0)
+			(uuid "11a6d4cf-d47a-4a5d-b6b3-7ab50e5f5766")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances

@@ -4,11 +4,6 @@
 	(generator_version "10.0")
 	(uuid "9e014c51-20c0-47ba-9266-885dc9800335")
 	(paper "A4")
-	(title_block
-		(title "ESC channel")
-		(date "2026-10")
-		(rev "r2")
-	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers
@@ -1905,7 +1900,7 @@
 						(type none)
 					)
 				)
-				(pin passive line
+				(pin input line
 					(at -3.81 0 0)
 					(length 2.54)
 					(name "1"
@@ -1923,7 +1918,7 @@
 						)
 					)
 				)
-				(pin passive line
+				(pin input line
 					(at 3.81 0 180)
 					(length 2.54)
 					(name "2"
@@ -5404,7 +5399,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -5703,7 +5698,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 30.988 70.612 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6019,7 +6013,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "UNI-ROYAL"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -6310,7 +6304,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -6903,7 +6897,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "UNI-ROYAL"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -7104,7 +7098,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -7412,7 +7406,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "NSIC"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -7780,7 +7774,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -7881,7 +7875,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7uF 50v"
+		(property "Value" "C"
 			(at 248.92 40.6399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7934,42 +7928,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "LCSC" "C98192"
-			(at 248.92 40.6399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "MPN" "CL21A475KBQNNNE"
-			(at 248.92 40.6399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 248.92 40.6399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "2"
@@ -8229,7 +8187,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -8537,7 +8495,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -8738,7 +8696,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -8939,7 +8897,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9140,7 +9098,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9342,7 +9300,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "UNI-ROYAL"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9544,7 +9502,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9745,7 +9703,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -9947,7 +9905,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -10048,7 +10006,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3_ESC"
+		(property "Value" "+3V3"
 			(at 29.21 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10252,7 +10210,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "UNI-ROYAL"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -10453,7 +10411,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -10921,7 +10879,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "UNI-ROYAL"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -11123,7 +11081,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "lib:DOY180N03T_TDFN3333-8"
+		(property "Footprint" "lib:Diodes_PowerDI3333-8"
 			(at 101.6 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -11145,7 +11103,7 @@
 				)
 			)
 		)
-		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
+		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
 			(at 96.52 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -11211,7 +11169,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "DOINGTER"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -11304,7 +11262,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7uF 50v"
+		(property "Value" "C"
 			(at 238.125 40.6399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11357,42 +11315,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "LCSC" "C98192"
-			(at 238.125 40.6399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "MPN" "CL21A475KBQNNNE"
-			(at 238.125 40.6399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 238.125 40.6399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "2"
@@ -11541,7 +11463,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "UNI-ROYAL"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -11738,7 +11660,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "UNI-ROYAL"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -11958,7 +11880,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "lib:DOY180N03T_TDFN3333-8"
+		(property "Footprint" "lib:Diodes_PowerDI3333-8"
 			(at 41.91 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -11980,7 +11902,7 @@
 				)
 			)
 		)
-		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
+		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
 			(at 36.83 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -12046,7 +11968,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "DOINGTER"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -12240,7 +12162,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "UNI-ROYAL"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -12352,7 +12274,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "lib:DOY180N03T_TDFN3333-8"
+		(property "Footprint" "lib:Diodes_PowerDI3333-8"
 			(at 162.56 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -12374,7 +12296,7 @@
 				)
 			)
 		)
-		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
+		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
 			(at 157.48 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -12440,7 +12362,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "DOINGTER"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -12827,7 +12749,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "UNI-ROYAL"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -12928,7 +12850,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3_ESC"
+		(property "Value" "+3V3"
 			(at 92.71 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13351,7 +13273,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -13549,7 +13471,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -13661,7 +13583,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "lib:DOY180N03T_TDFN3333-8"
+		(property "Footprint" "lib:Diodes_PowerDI3333-8"
 			(at 41.91 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -13683,7 +13605,7 @@
 				)
 			)
 		)
-		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
+		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
 			(at 36.83 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -13749,7 +13671,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "DOINGTER"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -13842,7 +13764,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7uF 50v"
+		(property "Value" "C"
 			(at 226.695 40.6399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13895,42 +13817,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "LCSC" "C98192"
-			(at 226.695 40.6399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "MPN" "CL21A475KBQNNNE"
-			(at 226.695 40.6399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 226.695 40.6399 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 		(pin "2"
@@ -14085,7 +13971,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -14293,7 +14179,6 @@
 		)
 		(property "Value" "TestPoint"
 			(at 30.988 72.898 90)
-			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14608,7 +14493,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -15041,7 +14926,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "lib:DOY180N03T_TDFN3333-8"
+		(property "Footprint" "lib:Diodes_PowerDI3333-8"
 			(at 101.6 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -15063,7 +14948,7 @@
 				)
 			)
 		)
-		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
+		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
 			(at 96.52 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -15129,7 +15014,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "DOINGTER"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -15233,7 +15118,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "lib:DOY180N03T_TDFN3333-8"
+		(property "Footprint" "lib:Diodes_PowerDI3333-8"
 			(at 162.56 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -15255,7 +15140,7 @@
 				)
 			)
 		)
-		(property "Description" "N-channel MOSFET 30 V, TDFN3333-8 (DOY180N03T datasheet)"
+		(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
 			(at 157.48 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -15321,7 +15206,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "DOINGTER"
+		(property "Manufacturer" ""
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)

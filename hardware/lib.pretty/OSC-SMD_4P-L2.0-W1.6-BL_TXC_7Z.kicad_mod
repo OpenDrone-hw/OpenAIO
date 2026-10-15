@@ -6,7 +6,8 @@
 	(property "Reference" "REF**"
 		(at 0 -4.6 0)
 		(layer "F.SilkS")
-		(uuid "6e673144-da93-4074-bd3c-a2d0bcc883f6")
+		(hide yes)
+		(uuid "4bf9e04c-91f8-4850-8ffa-0f9c864506da")
 		(effects
 			(font
 				(size 1 1)
@@ -14,10 +15,11 @@
 			)
 		)
 	)
-	(property "Value" "OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z"
+	(property "Value" "OW7EL89CENUNFAYLC-52M"
 		(at 0 4.6 0)
 		(layer "F.Fab")
-		(uuid "bc953fdb-7f0d-412e-a435-b4763a59c780")
+		(hide yes)
+		(uuid "3d697de6-3a11-4da6-85b4-cb3b1fb1f03f")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +31,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "db117c78-cab9-472a-b009-d38444f83aca")
+		(uuid "086fd1ed-0bcd-45b5-a07b-6e9849913cdc")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -40,66 +42,43 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "84954d3c-dc6e-4662-badb-5c1fbc7a8c97")
+		(uuid "fe7010b1-b9e7-4270-bc89-8409a3c2f1d8")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
+	(property "LCSC Part" "C22434896"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f072f0bb-cca5-4639-b6bb-1b179e5900fb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C22434896"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f2ca6dd3-adb4-4ac4-882d-11df5ca35b54")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/RX/")
+	(sheetfile "rx_esp32c3_sx1281.kicad_sch")
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
-	(fp_line
-		(start -1.5 -0.9)
-		(end -1.5 0.9)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "d5828044-88cd-4f56-87a7-6c3205019ec5")
-	)
-	(fp_line
-		(start -0.32 -0.9)
-		(end 0.31 -0.9)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "953b08d3-66f3-415c-87ca-f3b2f0783983")
-	)
-	(fp_line
-		(start -0.32 0.9)
-		(end 0.31 0.9)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "bfea9b03-499b-464e-abd8-5c660b82b4c5")
-	)
-	(fp_line
-		(start 1.5 -0.9)
-		(end 1.5 0.9)
-		(stroke
-			(width 0.25)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "d92d272f-787f-4d33-a780-883a648581f5")
-	)
-	(fp_circle
-		(center -1.5 1.4)
-		(end -1.38 1.4)
-		(stroke
-			(width 0.24)
-			(type solid)
-		)
-		(fill no)
-		(layer "F.SilkS")
-		(uuid "3917a3bc-bcf5-4804-9440-af333e5dbcda")
-	)
 	(fp_circle
 		(center -0.9 1)
 		(end -0.78 1)
@@ -109,7 +88,18 @@
 		)
 		(fill no)
 		(layer "Cmts.User")
-		(uuid "17224619-4376-40f0-bcae-2fd377596a7f")
+		(uuid "da9979d1-c023-44c1-b712-7ab7660bcdce")
+	)
+	(fp_rect
+		(start -1.4 -1.2)
+		(end 1.4 1.2)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e7f44363-3fa1-450a-a7d8-53fa1706aa89")
 	)
 	(fp_circle
 		(center -1 0.8)
@@ -120,12 +110,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "c6bda955-d491-48e0-8af0-ea22984bca02")
+		(uuid "aaabc2b0-472a-4013-ab5a-bddd3d9a16fe")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "4d30df78-b550-4927-9532-09735718f370")
+		(uuid "4d96187c-d938-41d9-8577-e1ed821bfb4d")
 		(effects
 			(font
 				(size 1 1)
@@ -137,25 +127,25 @@
 		(at -0.9 0.6 270)
 		(size 0.9 0.7)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "a1f46a50-c921-4396-bfe7-9bf0b441e1ff")
+		(uuid "def9471b-8873-4520-aa5a-d733c23c9190")
 	)
 	(pad "2" smd rect
 		(at 0.9 0.6 270)
 		(size 0.9 0.7)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "3072ef14-25c9-4cec-939b-a72fa2eef400")
+		(uuid "82a3082d-134a-4a53-9427-f4013727ee53")
 	)
 	(pad "3" smd rect
 		(at 0.9 -0.6 270)
 		(size 0.9 0.7)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "d2ce7ca7-846e-47b4-9dee-5d7dad9fd8fe")
+		(uuid "6b4dd131-202e-419b-b742-4121ca675a7e")
 	)
 	(pad "4" smd rect
 		(at -0.9 -0.6 270)
 		(size 0.9 0.7)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "4291b9e5-9ef0-4611-8f9a-110a92460cf2")
+		(uuid "69514af7-b357-4c57-b437-73537739facd")
 	)
 	(embedded_fonts no)
 	(model "${OPENDRONE_LIB}/3dmodel/OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z.wrl"

@@ -19,8 +19,8 @@
 | ID | Severity | Topic | Status |
 |---|---|---|---|
 | I1 | MAJOR | SBUS cannot run on a PIO UART, so PU0RX on PIOUART0 does not work | **Worked around in `config.h`**: hardware UART0 moved to GPIO2/3 |
-| I2 | BLOCKER (LED strip) | LED-strip stage still inverting (Q2) at be152bb | **Fixed in `cdb8534`** (U26 TXU0101 + R115 200R, OE = VCCB = +5V) |
-| I3 | MAJOR | AT32 ESC MCUs powered from USB while gate-driver VCC = 0 V | **Fixed in `05537a3`** (U27 TLV75533 on +5V makes `+3V3_ESC` for the AT32 VDD pins) |
+| I2 | BLOCKER (LED strip) | LED-strip stage inverting (Q2/R14) | **Open again on the one board**: it is built from the 2026-08-22 circuit (d81e559 + 9aba717); the `cdb8534` fix (TXU0101) was not carried (owner, 2026-10-15) |
+| I3 | MAJOR | AT32 ESC MCUs powered from USB while gate-driver VCC = 0 V | **Open again on the one board**: 2026-08-22 circuit; the `05537a3` fix (U27 `+3V3_ESC`) was not carried (owner, 2026-10-15) |
 | I4 | MINOR | TLV7031 delay shifts the PIO OSD about 22 px right, with no firmware offset | Open |
 | I5 | MINOR | FC cannot reset or strap the ESP32-C3 | Open |
 | I6 | NIT | No USB VBUS detect | Open, harmless |
@@ -71,7 +71,7 @@ J44 "PIO_TX0" is on `/Pads/PIOUART0_TX` (GPIO2). PLAN.md decision B2 routed SH-6
 
 ## I2: LED-strip stage still inverting at be152bb (BLOCKER for the LED strip until the planned change lands)
 
-**Status: fixed in `cdb8534`.** Q2/R14 are gone. GPIO8 drives U26 TXU0101DRYR A (VCCA = +3.3V); BY drives `LED_STRIP` through R115 200R. OE = VCCB = +5V, so the stage is always enabled and non-inverting. No pull-up on the A side. The text below describes be152bb.
+**Status: open on the one board (2026-08-22 circuit). It was fixed in `cdb8534` on the two-board branch; that fix was not carried.** Q2/R14 are gone. GPIO8 drives U26 TXU0101DRYR A (VCCA = +3.3V); BY drives `LED_STRIP` through R115 200R. OE = VCCB = +5V, so the stage is always enabled and non-inverting. No pull-up on the A side. The text below describes be152bb.
 
 **Netlist:**
 - Q2 AP1606 (N-FET): G = `/RP2354A/LED_STRIP_L` (U2.12, GPIO8), S = GND, D = `LED_STRIP`.
@@ -90,7 +90,7 @@ J44 "PIO_TX0" is on `/Pads/PIOUART0_TX` (GPIO2). PLAN.md decision B2 routed SH-6
 
 ## I3: AT32 ESC MCUs powered from USB while gate-driver VCC = 0 V (MAJOR, fixed in `05537a3`)
 
-**Status: fixed in `05537a3`.** U27 TLV75533PDQNR (IN = EN = +5V, C110/C111 1 uF) makes `+3V3_ESC` for U13/U15/U17/U19 pin 17 VDD and their ESC-side pull-ups and decoupling. `+3V3` and the USB `+4v5` path no longer reach the ESC MCUs, so they are off without a battery. The text below describes the state before the fix.
+**Status: open on the one board (2026-08-22 circuit). It was fixed in `05537a3` on the two-board branch; that fix was not carried.** U27 TLV75533PDQNR (IN = EN = +5V, C110/C111 1 uF) makes `+3V3_ESC` for U13/U15/U17/U19 pin 17 VDD and their ESC-side pull-ups and decoupling. `+3V3` and the USB `+4v5` path no longer reach the ESC MCUs, so they are off without a battery. The text below describes the state before the fix.
 
 **Netlist:**
 - U13/U15/U17/U19 pin 17 VDD = `+3V3`.

@@ -1,0 +1,387 @@
+(footprint "Diodes_PowerDI3333-8"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Diodes Incorporated PowerDI3333-8, Plastic Dual Flat No Lead Package, 3.3x3.3x0.8mm Body, https://www.diodes.com/assets/Package-Files/PowerDI3333-8.pdf")
+	(tags "PowerDI 0.65")
+	(property "Reference" "REF**"
+		(at 0 -2.65 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "def14b6c-7a83-4769-b114-9b5249d2050f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "DOY180N03T"
+		(at 0 2.65 180)
+		(layer "F.Fab")
+		(uuid "a025060e-0cf8-4f2c-b511-d70d038b14c8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "61f5fab8-23ee-44cf-834f-13a1effff80b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "-55℃~+150℃ 1.5V@250uA 1.675nF 2.9mΩ@10V 26nC@20V 31pF 395pF 40V 55W 75A N-Channel PDFN-8L(3x3) MOSFETs ROHS"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a29acc56-8255-4085-8e0d-1637067a7ff9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C49441966"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "76a00c58-eafe-4dd8-b85c-9ecf97c69548")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Farnell" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f138572a-5f59-4fdf-aa2a-d59a729b951d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Mouser" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "24a13f46-14c0-45e5-bb95-0a3326c5ea0e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Digi-Key" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5b75fa71-2755-4c64-ac8e-2b725de2cfe8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Cost" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4a1f2b26-f8af-4d7c-ad44-80289583a5e2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e01a77e0-c9ab-403b-abbe-f587c44f5b65")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "DOY180N03T"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b839bb26-1f85-45f4-b183-da68f271ecfc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/ESC3/")
+	(sheetfile "esc_channel.kicad_sch")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -1.65 -1.65)
+		(end 1.65 1.65)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "c5beda5f-bba4-4aa4-b3a3-6ac57aa6da1b")
+	)
+	(fp_poly
+		(pts
+			(xy -1.76 -1.45) (xy -2.24 -1.45) (xy -1.76 -1.93) (xy -1.76 -1.45)
+		)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "a5ef8435-3bde-4174-8533-bfc1ee9dafd8")
+	)
+	(fp_line
+		(start -1.65 -0.825)
+		(end -1.65 1.65)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c831afb8-0eb7-4daa-b8a0-85aa0b93bd42")
+	)
+	(fp_line
+		(start -1.65 1.65)
+		(end 1.65 1.65)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d8d61364-fb9c-444b-8f20-25ca8a977ea1")
+	)
+	(fp_line
+		(start -0.825 -1.65)
+		(end -1.65 -0.825)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "31bd4bb2-de80-45a6-bb66-860f9fe78a55")
+	)
+	(fp_line
+		(start 1.65 -1.65)
+		(end -0.825 -1.65)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "cb1b932f-3b77-495e-8334-70d78d7d3182")
+	)
+	(fp_line
+		(start 1.65 1.65)
+		(end 1.65 -1.65)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6a244b89-5408-4e97-a650-39b72a83d658")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "aa845065-b30a-4128-8dc5-b70f2527a77e")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.1)
+			)
+		)
+	)
+	(pad "" smd roundrect
+		(at 0.02 -0.565)
+		(size 0.6 1)
+		(layers "F.Paste")
+		(roundrect_rratio 0.25)
+		(solder_paste_margin_ratio -0.2)
+		(uuid "1dac7883-750b-47e9-9c21-3d4eb69a7222")
+	)
+	(pad "" smd roundrect
+		(at 0.02 0.565)
+		(size 0.6 1)
+		(layers "F.Paste")
+		(roundrect_rratio 0.25)
+		(solder_paste_margin_ratio -0.2)
+		(uuid "7e21dbcd-60d8-4553-af9c-9c9b684bdaaf")
+	)
+	(pad "" smd roundrect
+		(at 0.73 -0.565)
+		(size 0.6 1)
+		(layers "F.Paste")
+		(roundrect_rratio 0.25)
+		(solder_paste_margin_ratio -0.2)
+		(uuid "13f09b0a-a202-4cac-b2a4-d78cd9dcb5e7")
+	)
+	(pad "" smd roundrect
+		(at 0.73 0.565)
+		(size 0.6 1)
+		(layers "F.Paste")
+		(roundrect_rratio 0.25)
+		(solder_paste_margin_ratio -0.2)
+		(uuid "9caa6793-1820-4534-9c28-19f21fd492ae")
+	)
+	(pad "" smd roundrect
+		(at 1.5 -0.975)
+		(size 0.7 0.42)
+		(layers "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "38701423-f5af-4124-8839-e2c2ab895dab")
+	)
+	(pad "" smd roundrect
+		(at 1.5 -0.325)
+		(size 0.7 0.42)
+		(layers "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "2a84184f-d67f-47f1-851c-e73c3865aaa8")
+	)
+	(pad "" smd roundrect
+		(at 1.5 0.325)
+		(size 0.7 0.42)
+		(layers "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "268d034a-d8c4-4f2d-9fcc-e8cbaa777d87")
+	)
+	(pad "" smd roundrect
+		(at 1.5 0.975)
+		(size 0.7 0.42)
+		(layers "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "cbbb0348-3905-4547-9c37-c6a353d272c0")
+	)
+	(pad "1" smd roundrect
+		(at -1.5 -0.975)
+		(size 0.7 0.42)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "f7d0e312-9b18-4958-aa86-f70163b65ad6")
+	)
+	(pad "1" smd roundrect
+		(at -1.5 -0.325)
+		(size 0.7 0.42)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "c787934f-b729-4267-95c2-f7ebc318e7ce")
+	)
+	(pad "1" smd roundrect
+		(at -1.5 0.325)
+		(size 0.7 0.42)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "d43d0430-5b2f-48a8-abb6-7d8eabbae590")
+	)
+	(pad "2" smd roundrect
+		(at -1.5 0.975)
+		(size 0.7 0.42)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "08947f5e-cad1-41d4-82fa-274104e87c1b")
+	)
+	(pad "3" smd custom
+		(at 0.455 0)
+		(size 1.71 1.71)
+		(layers "F.Cu" "F.Mask")
+		(options
+			(clearance outline)
+			(anchor circle)
+		)
+		(primitives
+			(gr_poly
+				(pts
+					(xy -0.855 -0.9285) (xy -0.835475 -1.026658) (xy -0.779873 -1.109873) (xy -0.696658 -1.165475)
+					(xy -0.5985 -1.185) (xy 0.5985 -1.185) (xy 0.696658 -1.165475) (xy 0.779873 -1.109873) (xy 0.835475 -1.026658)
+					(xy 0.855 -0.9285) (xy 0.855 0.9285) (xy 0.835475 1.026658) (xy 0.779873 1.109873) (xy 0.696658 1.165475)
+					(xy 0.5985 1.185) (xy -0.5985 1.185) (xy -0.696658 1.165475) (xy -0.779873 1.109873) (xy -0.835475 1.026658)
+					(xy -0.855 0.9285)
+				)
+				(width 0)
+				(fill yes)
+			)
+			(gr_poly
+				(pts
+					(xy 1.395 -0.765) (xy 0.465 -0.765) (xy 0.465 -1.185) (xy 1.395 -1.185)
+				)
+				(width 0)
+				(fill yes)
+			)
+			(gr_poly
+				(pts
+					(xy 1.395 -0.115) (xy 0.155 -0.115) (xy 0.155 -0.535) (xy 1.395 -0.535)
+				)
+				(width 0)
+				(fill yes)
+			)
+			(gr_poly
+				(pts
+					(xy 1.395 0.535) (xy 0.225 0.535) (xy 0.225 0.115) (xy 1.395 0.115)
+				)
+				(width 0)
+				(fill yes)
+			)
+			(gr_poly
+				(pts
+					(xy 1.395 1.185) (xy 0.185 1.185) (xy 0.185 0.765) (xy 1.395 0.765)
+				)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "d734035c-f21b-4eae-9a7a-7e5744d39309")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Package_SON.3dshapes/Diodes_PowerDI3333-8.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

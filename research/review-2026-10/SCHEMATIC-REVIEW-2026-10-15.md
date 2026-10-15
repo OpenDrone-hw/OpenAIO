@@ -6,6 +6,9 @@ against the netlist and datasheets, before the one-board merge. Raw findings:
 
 ## Applied
 
+Applied to the 8fa8d7b-based one board (PR #25). The board on main since PR #26 is built from the
+2026-08-22 circuit and carries none of these; it adds only the BMP580 barometer (see `research/ROUTING.md`).
+
 | Change | Sheet | Netlist effect |
 |---|---|---|
 | J90/J91 and `core_interface` deleted | root | 46 LGA nets keep every other node |
