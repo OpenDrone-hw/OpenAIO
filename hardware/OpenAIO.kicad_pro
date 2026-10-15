@@ -225,11 +225,8 @@
       ],
       "track_widths": [
         0.0,
-        0.09,
         0.1,
-        0.105,
-        0.14,
-        0.2,
+        0.25,
         0.3,
         0.5,
         1.0
@@ -571,8 +568,8 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.09,
         "tuning_profile": "",
-        "via_diameter": 0.35,
-        "via_drill": 0.2,
+        "via_diameter": 0.33,
+        "via_drill": 0.15,
         "wire_width": 6
       },
       {
@@ -589,13 +586,13 @@
         "schematic_color": "rgb(0, 160, 160)",
         "track_width": 0.12,
         "tuning_profile": "",
-        "via_diameter": 0.35,
-        "via_drill": 0.2,
+        "via_diameter": 0.33,
+        "via_drill": 0.15,
         "wire_width": 6
       },
       {
         "bus_width": 12,
-        "clearance": 0.12,
+        "clearance": 0.09,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
@@ -607,13 +604,13 @@
         "schematic_color": "rgb(0, 150, 60)",
         "track_width": 0.2,
         "tuning_profile": "",
-        "via_diameter": 0.35,
-        "via_drill": 0.2,
+        "via_diameter": 0.33,
+        "via_drill": 0.15,
         "wire_width": 6
       },
       {
         "bus_width": 12,
-        "clearance": 0.12,
+        "clearance": 0.09,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
@@ -625,8 +622,8 @@
         "schematic_color": "rgb(200, 0, 200)",
         "track_width": 1.0,
         "tuning_profile": "",
-        "via_diameter": 0.5,
-        "via_drill": 0.3,
+        "via_diameter": 0.33,
+        "via_drill": 0.15,
         "wire_width": 12
       },
       {
@@ -643,8 +640,8 @@
         "schematic_color": "rgb(255, 140, 0)",
         "track_width": 0.3,
         "tuning_profile": "",
-        "via_diameter": 0.45,
-        "via_drill": 0.25,
+        "via_diameter": 0.33,
+        "via_drill": 0.15,
         "wire_width": 8
       },
       {
@@ -661,8 +658,8 @@
         "schematic_color": "rgb(200, 160, 0)",
         "track_width": 0.2,
         "tuning_profile": "",
-        "via_diameter": 0.35,
-        "via_drill": 0.2,
+        "via_diameter": 0.33,
+        "via_drill": 0.15,
         "wire_width": 6
       },
       {
@@ -679,13 +676,13 @@
         "schematic_color": "rgb(30, 110, 255)",
         "track_width": 0.13,
         "tuning_profile": "",
-        "via_diameter": 0.35,
-        "via_drill": 0.2,
+        "via_diameter": 0.33,
+        "via_drill": 0.15,
         "wire_width": 6
       },
       {
         "bus_width": 12,
-        "clearance": 0.12,
+        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_width": 0.2,
         "line_style": 0,
@@ -697,8 +694,8 @@
         "schematic_color": "rgb(220, 40, 40)",
         "track_width": 1.0,
         "tuning_profile": "",
-        "via_diameter": 0.5,
-        "via_drill": 0.3,
+        "via_diameter": 0.33,
+        "via_drill": 0.15,
         "wire_width": 12
       }
     ],
@@ -711,14 +708,6 @@
       {
         "netclass": "VBAT",
         "pattern": "+BATT"
-      },
-      {
-        "netclass": "Phase",
-        "pattern": "/ESC?/Motor?"
-      },
-      {
-        "netclass": "Phase",
-        "pattern": "*/Motor?"
       },
       {
         "netclass": "Power",
@@ -755,14 +744,6 @@
       {
         "netclass": "Power",
         "pattern": "/ESC?/vdda"
-      },
-      {
-        "netclass": "Gate",
-        "pattern": "/ESC?/GH?"
-      },
-      {
-        "netclass": "Gate",
-        "pattern": "/ESC?/GL?"
       },
       {
         "netclass": "USB",
@@ -827,6 +808,62 @@
       {
         "netclass": "Analog",
         "pattern": "*/XTAL_?"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/1A"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/1B"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/1C"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/2A"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/2B"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/2C"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/3A"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/3B"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/3C"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/4A"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/4B"
+      },
+      {
+        "netclass": "Phase",
+        "pattern": "/4C"
+      },
+      {
+        "netclass": "Gate",
+        "pattern": "Net-(Q*-G)"
+      },
+      {
+        "netclass": "Gate",
+        "pattern": "/ESC?/G[HL]?"
       }
     ]
   },
