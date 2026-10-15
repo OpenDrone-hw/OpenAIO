@@ -93,7 +93,7 @@ deliberate changes.
 
 Board tools in `hardware/tools/`, from OpenAIO-Whoop, each with its usage in
 the docstring: `hdi_via_pass.py` (edit form <-> fab form vias, `--collapse`),
-`via_types.py` (via type from the layers each via connects), `via_nudge.py` (move conflicting vias), `track_widths.py` (standard widths), `power_paths.py` (resistance and loss of the high-current paths), `localise_models.py` and `localise_symbols.py` (keep the library project-local), `sync_pcb.py`, `pad_vias.py`, `gnd_stitch.py`, `track_to_pour.py`,
+`via_types.py` (via type from the layers each via connects), `via_min.py` (every via to the stackup minimum), `via_nudge.py` (move conflicting vias), `track_widths.py` (standard widths), `power_paths.py` (resistance and loss of the high-current paths), `localise_models.py` and `localise_symbols.py` (keep the library project-local), `sync_pcb.py`, `pad_vias.py`, `gnd_stitch.py`, `track_to_pour.py`,
 `track_widen.py`, `via_declutter.py`, `via_relocate.py`, `inner_router.py`,
 `loop_resistance.py`. They were written for the Whoop's net and class names
 (`Power`, `Gate`, `Phase`), which this board shares; it also has `VBAT`,
