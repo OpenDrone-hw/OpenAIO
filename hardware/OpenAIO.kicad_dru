@@ -27,12 +27,12 @@
 # person can tell a real constraint from a copied one.
 #
 # 12 layers, HDI 1+10+1, about 1.25 mm, 1 oz outer / 0.5 oz inner (2026-10-15). OpenAIO, one board: the hand-routed Base and Core of 2026-08-22 (d81e559, plus the always-on
-# +10V of 9aba717) merged into one 8-layer HDI 1+6+1 board on the OpenAIO-Whoop stackup
+# +10V of 9aba717) merged into one board, now 12-layer HDI 1+10+1
 # (0.997 mm, 1 oz on all layers, ENIG). The 2 oz outer rules of OpenAIO-Base.kicad_dru and the
 # LGA rule of OpenAIO-Core.kicad_dru are gone with the 2 oz copper and the LGA. Via rules come
 # from OpenAIO-Whoop.kicad_dru. KiCad: the LAST matching rule wins.
 
-# ---- HDI 1+6+1 vias (NextPCB, from OpenAIO-Whoop) ----
+# ---- HDI 1+10+1 vias (NextPCB; from OpenAIO-Whoop, re-spanned for 12 layers) ----
 (rule "HDI 1+10+1: no mechanical blind vias"
   (severity warning)
   (constraint disallow blind_via))
