@@ -30,6 +30,9 @@ Start here before routing.
 | L11 | In10.Cu | GND plane (microvia target) |
 | L12 | B.Cu | parts (ESC side), Base signals |
 
+In the board, the copper layers carry these names (L1.Top ... L12.Bottom), the plan and the via cheat sheet are on Cmts.User
+right of the outline, and Route > Set Layer Pair offers Micro L1-L2, Buried L2-L11 and Micro L11-L12.
+
 Core and Base tracks no longer share an inner layer. Every buried via still spans L2-L11, so where a Core via and
 a Base via land on each other they collide on every inner layer; those are positional and need a via move.
 

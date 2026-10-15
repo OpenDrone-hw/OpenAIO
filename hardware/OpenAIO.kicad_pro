@@ -276,7 +276,26 @@
       "mpn": "",
       "sch_revision": ""
     },
-    "layer_pairs": [],
+    "layer_pairs": [
+      {
+        "bottomLayer": 22,
+        "enabled": true,
+        "name": "Buried L2-L11",
+        "topLayer": 4
+      },
+      {
+        "bottomLayer": 4,
+        "enabled": true,
+        "name": "Micro L1-L2",
+        "topLayer": 0
+      },
+      {
+        "bottomLayer": 2,
+        "enabled": true,
+        "name": "Micro L11-L12",
+        "topLayer": 22
+      }
+    ],
     "layer_presets": [],
     "viewports": []
   },
