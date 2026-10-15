@@ -148,7 +148,7 @@
 		(uuid "69514af7-b357-4c57-b437-73537739facd")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z.wrl"
+	(model "${KIPRJMOD}/lib.3dshapes/OSC-SMD_4P-L2.0-W1.6-BL_TXC_7Z.step"
 		(offset
 			(xyz 0 -0 -0)
 		)

@@ -373,7 +373,7 @@
 		(uuid "d734035c-f21b-4eae-9a7a-7e5744d39309")
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/Package_SON.3dshapes/Diodes_PowerDI3333-8.step"
+	(model "${KIPRJMOD}/lib.3dshapes/Diodes_PowerDI3333-8.step"
 		(offset
 			(xyz 0 0 0)
 		)

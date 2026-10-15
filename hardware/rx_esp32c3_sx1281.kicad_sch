@@ -5,12 +5,13 @@
 	(uuid "488293bf-a361-4959-9226-e5baf7b91769")
 	(paper "A3")
 	(lib_symbols
-		(symbol "Connector:TestPoint"
+		(symbol "lib:+3V3"
+			(power global)
 			(pin_numbers
 				(hide yes)
 			)
 			(pin_names
-				(offset 0.762)
+				(offset 0)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -18,18 +19,19 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
+				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
+			(property "Value" "+3V3"
+				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -39,7 +41,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 5.08 0 0)
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -50,17 +52,6 @@
 				)
 			)
 			(property "Datasheet" ""
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "test point"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -71,7 +62,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "test point tp"
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -82,7 +73,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Pin* Test*"
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -93,10 +84,35 @@
 					)
 				)
 			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
+			(symbol "+3V3_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -106,11 +122,11 @@
 					)
 				)
 			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
+			(symbol "+3V3_1_1"
+				(pin power_in line
 					(at 0 0 90)
-					(length 2.54)
-					(name "1"
+					(length 0)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -128,7 +144,518 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:C"
+		(symbol "lib:+5V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+5V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lib:2450AT18A100E"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "AE1"
+				(at -2.794 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "2450AT18A100E"
+				(at -5.334 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "OpenRX-Shared:ANT-SMD_L3.2-W1.6"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/RF-Antenna_JOHANSON_2450AT18A100E_2450AT18A100E_C89334.html"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C89334"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC" "C89334"
+				(at 92.71 77.47 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "2450AT18A100E_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "2450AT18A100E_1_1"
+				(pin unspecified line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 3.81 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lib:2450FM07D0034T"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "FL"
+				(at 0 17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "2450FM07D0034T"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "OpenRX-Shared:FILTER-SMD_4P-L1.0-W0.5-L"
+				(at 0 -20.32 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.lcsc.com/datasheet/C2651081.pdf"
+				(at 0 -22.86 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "JOHANSON(约翰逊)"
+				(at 0 -25.4 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "MPN" "2450FM07D0034T"
+				(at 0 -27.94 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part" "C2651081"
+				(at 0 -30.48 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "LCSC Part_1" "C2651081"
+				(at 0 -35.56 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "RF Filters"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "2450FM07D0034T_0_1"
+				(rectangle
+					(start -6.35 6.35)
+					(end 6.35 -6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin unspecified line
+					(at -11.43 0 0)
+					(length 5.08)
+					(name "IN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -11.43 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 11.43 0 180)
+					(length 5.08)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 11.43 270)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lib:C"
 			(pin_numbers
 				(hide yes)
 			)
@@ -283,21 +810,14 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:L"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
+		(symbol "lib:CJ17-400001010B20"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "L"
-				(at -1.27 0 90)
+			(property "Reference" "X"
+				(at 0 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -306,8 +826,8 @@
 					)
 				)
 			)
-			(property "Value" "L"
-				(at 1.905 0 90)
+			(property "Value" "CJ17-400001010B20"
+				(at 0 -7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -316,8 +836,8 @@
 					)
 				)
 			)
-			(property "Footprint" ""
-				(at 0 0 0)
+			(property "Footprint" "OpenRX-Shared:CRYSTAL-SMD_4P-L1.6-W1.2-BL"
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -338,7 +858,7 @@
 					)
 				)
 			)
-			(property "Description" "Inductor"
+			(property "Description" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -349,8 +869,8 @@
 					)
 				)
 			)
-			(property "ki_keywords" "inductor choke coil reactor magnetic"
-				(at 0 0 0)
+			(property "LCSC Part" "C2875272"
+				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -360,22 +880,22 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
+			(symbol "CJ17-400001010B20_0_1"
+				(rectangle
+					(start -5.08 5.08)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
 					)
 				)
-			)
-			(symbol "L_0_1"
-				(arc
-					(start 0 2.54)
-					(mid 0.6323 1.905)
-					(end 0 1.27)
+				(polyline
+					(pts
+						(xy -5.08 -2.54) (xy -2.54 -2.54) (xy -2.54 0) (xy -1.27 0)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -384,10 +904,9 @@
 						(type none)
 					)
 				)
-				(arc
-					(start 0 1.27)
-					(mid 0.6323 0.635)
-					(end 0 0)
+				(circle
+					(center -3.81 -3.81)
+					(radius 0.38)
 					(stroke
 						(width 0)
 						(type default)
@@ -396,10 +915,10 @@
 						(type none)
 					)
 				)
-				(arc
-					(start 0 0)
-					(mid 0.6323 -0.635)
-					(end 0 -1.27)
+				(polyline
+					(pts
+						(xy -1.27 -1.78) (xy -1.27 1.78)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -408,10 +927,21 @@
 						(type none)
 					)
 				)
-				(arc
-					(start 0 -1.27)
-					(mid 0.6323 -1.905)
-					(end 0 -2.54)
+				(rectangle
+					(start -0.51 1.78)
+					(end 0.51 -1.78)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.78) (xy 1.27 1.78)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -420,11 +950,21 @@
 						(type none)
 					)
 				)
-			)
-			(symbol "L_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 2.54 2.54) (xy 2.54 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
 					(name "1"
 						(effects
 							(font
@@ -440,10 +980,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "2"
+				(pin input line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -458,121 +998,17 @@
 						)
 					)
 				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:R"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 2.032 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "R"
-				(at 0 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at -1.778 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R res resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name ""
+				(pin input line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "3"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -580,17 +1016,17 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name ""
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -601,7 +1037,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "MCU_Espressif:ESP32-C3"
+		(symbol "lib:ESP32-C3"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1293,34 +1729,22 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "lib:2450AT18A100E"
+		(symbol "lib:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "AE1"
-				(at -2.794 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "2450AT18A100E"
-				(at -5.334 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "OpenRX-Shared:ANT-SMD_L3.2-W1.6"
-				(at 0 -12.7 0)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1330,369 +1754,18 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://lcsc.com/product-detail/RF-Antenna_JOHANSON_2450AT18A100E_2450AT18A100E_C89334.html"
-				(at 0 -15.24 0)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
-				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Footprint" ""
 				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC Part" "C89334"
-				(at 0 -17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC" "C89334"
-				(at 92.71 77.47 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "2450AT18A100E_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy -2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "2450AT18A100E_1_1"
-				(pin unspecified line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 3.81 270)
-					(length 2.54)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "lib:2450FM07D0034T"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "FL"
-				(at 0 17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "2450FM07D0034T"
-				(at 0 -17.78 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "OpenRX-Shared:FILTER-SMD_4P-L1.0-W0.5-L"
-				(at 0 -20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.lcsc.com/datasheet/C2651081.pdf"
-				(at 0 -22.86 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Manufacturer" "JOHANSON(约翰逊)"
-				(at 0 -25.4 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "MPN" "2450FM07D0034T"
-				(at 0 -27.94 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC Part" "C2651081"
-				(at 0 -30.48 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "LCSC Part_1" "C2651081"
-				(at 0 -35.56 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "RF Filters"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "2450FM07D0034T_0_1"
-				(rectangle
-					(start -6.35 6.35)
-					(end 6.35 -6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin unspecified line
-					(at -11.43 0 0)
-					(length 5.08)
-					(name "IN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 -11.43 90)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 11.43 0 180)
-					(length 5.08)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 0 11.43 270)
-					(length 5.08)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "lib:CJ17-400001010B20"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "X"
-				(at 0 7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "CJ17-400001010B20"
-				(at 0 -7.62 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "OpenRX-Shared:CRYSTAL-SMD_4P-L1.6-W1.2-BL"
-				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1713,7 +1786,7 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1724,8 +1797,8 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C2875272"
-				(at 0 -12.7 0)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1735,21 +1808,10 @@
 					)
 				)
 			)
-			(symbol "CJ17-400001010B20_0_1"
-				(rectangle
-					(start -5.08 5.08)
-					(end 5.08 -5.08)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
+			(symbol "GND_0_1"
 				(polyline
 					(pts
-						(xy -5.08 -2.54) (xy -2.54 -2.54) (xy -2.54 0) (xy -1.27 0)
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
 					)
 					(stroke
 						(width 0)
@@ -1759,9 +1821,122 @@
 						(type none)
 					)
 				)
-				(circle
-					(center -3.81 -3.81)
-					(radius 0.38)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lib:L"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "L"
+				(at -1.27 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "L"
+				(at 1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Inductor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "L_0_1"
+				(arc
+					(start 0 2.54)
+					(mid 0.6323 1.905)
+					(end 0 1.27)
 					(stroke
 						(width 0)
 						(type default)
@@ -1770,10 +1945,10 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -1.27 -1.78) (xy -1.27 1.78)
-					)
+				(arc
+					(start 0 1.27)
+					(mid 0.6323 0.635)
+					(end 0 0)
 					(stroke
 						(width 0)
 						(type default)
@@ -1782,21 +1957,10 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start -0.51 1.78)
-					(end 0.51 -1.78)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.78) (xy 1.27 1.78)
-					)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
 					(stroke
 						(width 0)
 						(type default)
@@ -1805,10 +1969,10 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 2.54 2.54) (xy 2.54 0) (xy 1.27 0)
-					)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
 					(stroke
 						(width 0)
 						(type default)
@@ -1817,9 +1981,11 @@
 						(type none)
 					)
 				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
+			)
+			(symbol "L_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
 					(name "1"
 						(effects
 							(font
@@ -1835,10 +2001,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name "GND"
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1846,42 +2012,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2050,6 +2180,146 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "lib:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2781,6 +3051,129 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "lib:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "lib:U.FL-R-SMT-1(80)"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3078,399 +3471,6 @@
 						)
 					)
 					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "power:+3V3"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "+3V3"
-				(at 0 3.556 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3V3\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+3V3_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3V3_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "power:+5V"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "+5V"
-				(at 0 3.556 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+5V\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+5V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+5V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "power:GND"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "GND"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "GND_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "GND_1_1"
-				(pin power_in line
-					(at 0 0 270)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5995,7 +5995,7 @@
 		(uuid "f3551aec-974e-4a74-a22f-33d32b562e45")
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 81.28 187.96 0)
 		(unit 1)
 		(body_style 1)
@@ -6079,7 +6079,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 256.54 166.37 0)
 		(unit 1)
 		(body_style 1)
@@ -6163,7 +6163,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 273.05 99.06 0)
 		(unit 1)
 		(body_style 1)
@@ -6272,7 +6272,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 316.23 210.82 0)
 		(mirror y)
 		(unit 1)
@@ -6453,7 +6453,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 109.22 59.69 0)
 		(unit 1)
 		(body_style 1)
@@ -6537,7 +6537,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 176.53 200.66 90)
 		(unit 1)
 		(body_style 1)
@@ -6622,7 +6622,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:L")
+		(lib_id "lib:L")
 		(at 176.53 236.22 90)
 		(unit 1)
 		(body_style 1)
@@ -6729,7 +6729,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 153.67 74.93 0)
 		(unit 1)
 		(body_style 1)
@@ -6839,7 +6839,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
+		(lib_id "lib:TestPoint")
 		(at 186.69 210.82 180)
 		(unit 1)
 		(body_style 1)
@@ -6921,7 +6921,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 261.62 99.06 0)
 		(unit 1)
 		(body_style 1)
@@ -7030,7 +7030,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 201.93 182.88 0)
 		(mirror y)
 		(unit 1)
@@ -7141,7 +7141,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 196.85 210.82 270)
 		(unit 1)
 		(body_style 1)
@@ -7226,7 +7226,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 77.47 71.12 270)
 		(unit 1)
 		(body_style 1)
@@ -7311,7 +7311,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 168.91 182.88 0)
 		(mirror y)
 		(unit 1)
@@ -7411,7 +7411,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 109.22 55.88 0)
 		(unit 1)
 		(body_style 1)
@@ -7521,7 +7521,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 264.16 213.36 0)
 		(unit 1)
 		(body_style 1)
@@ -7605,7 +7605,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 158.75 104.14 180)
 		(unit 1)
 		(body_style 1)
@@ -7689,7 +7689,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 168.91 186.69 0)
 		(mirror y)
 		(unit 1)
@@ -7774,7 +7774,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 153.67 78.74 0)
 		(unit 1)
 		(body_style 1)
@@ -7858,7 +7858,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 57.15 109.22 0)
 		(unit 1)
 		(body_style 1)
@@ -8084,7 +8084,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 288.29 104.14 0)
 		(unit 1)
 		(body_style 1)
@@ -8168,7 +8168,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 104.14 182.88 0)
 		(unit 1)
 		(body_style 1)
@@ -8252,7 +8252,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 83.82 104.14 0)
 		(unit 1)
 		(body_style 1)
@@ -8336,7 +8336,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 83.82 71.12 90)
 		(unit 1)
 		(body_style 1)
@@ -8443,7 +8443,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 130.81 233.68 270)
 		(unit 1)
 		(body_style 1)
@@ -8528,7 +8528,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 176.53 205.74 90)
 		(unit 1)
 		(body_style 1)
@@ -8613,7 +8613,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 157.48 241.3 0)
 		(unit 1)
 		(body_style 1)
@@ -8809,7 +8809,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 250.19 184.15 0)
 		(mirror y)
 		(unit 1)
@@ -8920,7 +8920,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 176.53 210.82 90)
 		(unit 1)
 		(body_style 1)
@@ -9005,7 +9005,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 222.25 246.38 0)
 		(unit 1)
 		(body_style 1)
@@ -9089,7 +9089,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:L")
+		(lib_id "lib:L")
 		(at 100.33 87.63 90)
 		(unit 1)
 		(body_style 1)
@@ -9174,7 +9174,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 83.82 87.63 90)
 		(unit 1)
 		(body_style 1)
@@ -9281,7 +9281,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 133.35 237.49 180)
 		(unit 1)
 		(body_style 1)
@@ -9390,7 +9390,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 95.25 119.38 90)
 		(unit 1)
 		(body_style 1)
@@ -9498,7 +9498,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 303.53 99.06 0)
 		(unit 1)
 		(body_style 1)
@@ -9607,7 +9607,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 250.19 187.96 0)
 		(mirror y)
 		(unit 1)
@@ -9692,7 +9692,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 201.93 186.69 0)
 		(mirror y)
 		(unit 1)
@@ -9954,7 +9954,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 125.73 133.35 0)
 		(unit 1)
 		(body_style 1)
@@ -10146,7 +10146,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 264.16 187.96 0)
 		(mirror y)
 		(unit 1)
@@ -10230,7 +10230,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 243.84 162.56 0)
 		(unit 1)
 		(body_style 1)
@@ -10340,7 +10340,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 313.69 93.98 0)
 		(unit 1)
 		(body_style 1)
@@ -10424,7 +10424,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 81.28 195.58 0)
 		(unit 1)
 		(body_style 1)
@@ -10508,7 +10508,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 54.61 116.84 270)
 		(unit 1)
 		(body_style 1)
@@ -10593,7 +10593,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 96.52 55.88 0)
 		(unit 1)
 		(body_style 1)
@@ -10703,7 +10703,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 303.53 207.01 0)
 		(unit 1)
 		(body_style 1)
@@ -10801,7 +10801,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 113.03 200.66 0)
 		(unit 1)
 		(body_style 1)
@@ -10885,7 +10885,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 54.61 119.38 270)
 		(unit 1)
 		(body_style 1)
@@ -10970,7 +10970,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 264.16 209.55 0)
 		(unit 1)
 		(body_style 1)
@@ -11079,7 +11079,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "lib:R")
 		(at 180.34 205.74 90)
 		(unit 1)
 		(body_style 1)
@@ -11186,7 +11186,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 256.54 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -11270,7 +11270,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 313.69 99.06 0)
 		(unit 1)
 		(body_style 1)
@@ -11379,7 +11379,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 276.86 205.74 270)
 		(unit 1)
 		(body_style 1)
@@ -11464,7 +11464,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 264.16 184.15 0)
 		(mirror y)
 		(unit 1)
@@ -11575,7 +11575,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 264.16 177.8 0)
 		(mirror y)
 		(unit 1)
@@ -11796,7 +11796,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 167.64 237.49 0)
 		(unit 1)
 		(body_style 1)
@@ -12019,7 +12019,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:L")
+		(lib_id "lib:L")
 		(at 190.0687 179.07 270)
 		(mirror x)
 		(unit 1)
@@ -12116,7 +12116,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 316.23 207.01 0)
 		(unit 1)
 		(body_style 1)
@@ -12214,7 +12214,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:L")
+		(lib_id "lib:L")
 		(at 309.88 200.66 270)
 		(mirror x)
 		(unit 1)
@@ -12311,7 +12311,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 76.2 87.63 270)
 		(unit 1)
 		(body_style 1)
@@ -12396,7 +12396,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 303.53 210.82 0)
 		(mirror y)
 		(unit 1)
@@ -12481,7 +12481,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "lib:R")
 		(at 180.34 200.66 90)
 		(unit 1)
 		(body_style 1)
@@ -12588,7 +12588,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
+		(lib_id "lib:GND")
 		(at 158.75 128.27 0)
 		(unit 1)
 		(body_style 1)
@@ -12775,7 +12775,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 109.22 52.07 0)
 		(unit 1)
 		(body_style 1)
@@ -12859,7 +12859,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 256.54 162.56 0)
 		(unit 1)
 		(body_style 1)
@@ -12969,7 +12969,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 81.28 191.77 0)
 		(mirror y)
 		(unit 1)
@@ -13080,7 +13080,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "lib:R")
 		(at 180.34 210.82 90)
 		(unit 1)
 		(body_style 1)
@@ -13187,7 +13187,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 231.14 162.56 0)
 		(unit 1)
 		(body_style 1)
@@ -13297,7 +13297,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "lib:C")
 		(at 181.61 182.88 0)
 		(mirror y)
 		(unit 1)
@@ -13408,7 +13408,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
+		(lib_id "lib:+5V")
 		(at 261.62 93.98 0)
 		(unit 1)
 		(body_style 1)
@@ -13486,7 +13486,7 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
+		(lib_id "lib:+3V3")
 		(at 168.91 179.07 0)
 		(mirror y)
 		(unit 1)
@@ -13571,7 +13571,7 @@
 		)
 	)
 	(symbol
-		(lib_id "MCU_Espressif:ESP32-C3")
+		(lib_id "lib:ESP32-C3")
 		(at 222.25 220.98 0)
 		(unit 1)
 		(body_style 1)
@@ -13751,7 +13751,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "lib:R")
 		(at 273.05 205.74 90)
 		(unit 1)
 		(body_style 1)

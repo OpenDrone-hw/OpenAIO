@@ -245,7 +245,7 @@
 		(uuid "3e908797-1677-4ed4-a964-5db3426bb707")
 	)
 	(embedded_fonts no)
-	(model "${OPENDRONE_LIB}/3dmodel/SOT-363_SC-70-6.step"
+	(model "${KIPRJMOD}/lib.3dshapes/SOT-363_SC-70-6.step"
 		(offset
 			(xyz 0 0 0)
 		)
