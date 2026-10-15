@@ -1,7 +1,10 @@
 """Give every through via the via type its connections need, in place: no via or track moves.
 
 Run with KiCad closed, using KiCad's bundled Python:
-  $KPY hardware/tools/via_types.py hardware/OpenAIO.kicad_pcb [--dry-run]
+  $KPY hardware/tools/via_types.py hardware/OpenAIO.kicad_pcb [--buried-drill 0.20] [--dry-run]
+
+Works for any 1+N+1 layer count: microvias F.Cu-In1.Cu and In(N).Cu-B.Cu, buried In1.Cu-In(N).Cu.
+--buried-drill is the minimum buried drill (span thickness / NextPCB's 5:1 limit; 0.20 for the 12L build).
 
 used = layers where the via's own net touches its land (track, pad, filled zone), as hdi_via_pass.used_layers.
   F and B both used     -> stays a through via (unchanged)
@@ -13,6 +16,10 @@ sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import hdi_via_pass as H
 P=H.pcbnew
 b=P.LoadBoard(sys.argv[1]); MM=P.FromMM
+n_inner=b.GetCopperLayerCount()-2
+H.I6=getattr(P,'In%d_Cu'%n_inner)                                  # last inner layer: bottom microvia target
+H.INNER={getattr(P,'In%d_Cu'%i) for i in range(2,n_inner)}
+MINB=MM(float(sys.argv[sys.argv.index('--buried-drill')+1])) if '--buried-drill' in sys.argv else MM(0.15)
 P.ZONE_FILLER(b).Fill(b.Zones())
 tracks=[t for t in b.GetTracks() if t.GetClass()!='PCB_VIA']
 vias=[t for t in b.GetTracks() if t.GetClass()=='PCB_VIA']
@@ -34,11 +41,11 @@ for v in vias:
         stat[(side,'through kept')]+=1; continue
     parts=H.plan(used)
     landw=v.GetWidth(v.TopLayer()); drill=v.GetDrillValue()
-    bdrill=max(MM(0.15),min(MM(0.25),landw-MM(0.18),drill))
+    bdrill=max(MINB,min(MM(0.25),landw-MM(0.18),drill)); bland=max(landw,bdrill+MM(0.18))
     for p in parts:
         n=P.PCB_VIA(b); b.Add(n); n.SetPosition(v.GetPosition()); n.SetNet(v.GetNet())
         if p=='buried':
-            n.SetViaType(P.VIATYPE_BURIED); n.SetLayerPair(H.I1,H.I6); n.SetWidth(landw); n.SetDrill(bdrill)
+            n.SetViaType(P.VIATYPE_BURIED); n.SetLayerPair(H.I1,H.I6); n.SetWidth(bland); n.SetDrill(bdrill)
         else:
             n.SetViaType(P.VIATYPE_MICROVIA); n.SetLayerPair(*((H.F,H.I1) if p=='micro_top' else (H.I6,H.B)))
             outer=H.F if p=='micro_top' else H.B
