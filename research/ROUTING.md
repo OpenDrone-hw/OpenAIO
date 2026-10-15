@@ -94,6 +94,10 @@ Vias:
 
 ## Routing workflow (edit form)
 
+Vias are consistent by net. GND: a microvia from the pad or pour into the nearest plane (L7 from the bottom, L2 from
+the top), through only where top and bottom GND copper meet; place it with Cmd+V. Everything else: one 0.33/0.15 via
+(V) while routing; the final pass turns it into a stack.
+
 Route with one via per connection: since 2026-10-15 every microvia + buried stack is collapsed into a single
 0.33/0.15 via (through, or blind L1-L7 / L2-L8 where the stack did not reach the far side). Keys: V via, Shift+V
 cycle layer pairs, 1-8 layers, D / G drag (via shoving is off in the router settings). The blind vias show as
