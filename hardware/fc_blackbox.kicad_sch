@@ -8,7 +8,7 @@
 		(title "BLACKBOX")
 	)
 	(lib_symbols
-		(symbol "lib:+3V3"
+		(symbol "lib:+3.3V"
 			(power global)
 			(pin_numbers
 				(hide yes)
@@ -33,7 +33,7 @@
 					)
 				)
 			)
-			(property "Value" "+3V3"
+			(property "Value" "+3.3V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -65,7 +65,7 @@
 					)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -87,7 +87,7 @@
 					)
 				)
 			)
-			(symbol "+3V3_0_1"
+			(symbol "+3.3V_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -125,7 +125,7 @@
 					)
 				)
 			)
-			(symbol "+3V3_1_1"
+			(symbol "+3.3V_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
@@ -1272,7 +1272,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1ec1adf4-cd1a-492a-816f-22ff8bdb6a5a")
-		(property "Reference" "Card1"
+		(property "Reference" "Card2"
 			(at 72.39 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -1667,7 +1667,7 @@
 		)
 	)
 	(symbol
-		(lib_id "lib:+3V3")
+		(lib_id "lib:+3.3V")
 		(at 92.71 57.15 0)
 		(unit 1)
 		(body_style 1)
@@ -1689,7 +1689,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+3.3V"
 			(at 92.71 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1745,7 +1745,7 @@
 		)
 	)
 	(symbol
-		(lib_id "lib:+3V3")
+		(lib_id "lib:+3.3V")
 		(at 72.39 50.8 0)
 		(unit 1)
 		(body_style 1)
@@ -1767,7 +1767,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+3.3V"
 			(at 72.39 45.72 0)
 			(show_name no)
 			(do_not_autoplace no)

@@ -22,7 +22,7 @@ dropped on cost). The Core sits inside the Base outline (owner's placement). Sta
 | L2 | In1 `L2.GND` | GND plane (microvia target), /CSA+ | none |
 | L3 | In2 `L3.Signal` | GND fill | Base signals (from the Base's L2) |
 | L4 | In3 `L4.BATT` | +BATT pour over the high-side row, +10V, +4v5 | Core LGA-era links, Base gate and BEMF tracks |
-| L5 | In4 `L5.Rails` | +3V3, +3.3V, +4v5, +5V_USB, +10V | Core signals A, Base +3V3-area tracks |
+| L5 | In4 `L5.Rails` | +3.3V (one rail since 2026-10-15), +4v5, +5V_USB, +10V | Core signals A, Base tracks |
 | L6 | In5 `L6.Signal_5V` | +5V pour | Core signals B |
 | L7 | In6 `L7.GND` | GND plane (microvia target), /CSA+ corridor | none |
 | L8 | B.Cu `L8.Bottom` | low-side FET GND pours, phase pours | ESC parts, most Base routing |
@@ -55,7 +55,7 @@ shaped pours with via arrays in the FET pads carry the current, not plane count.
 
 Pad connectivity of every net is identical to the owner's board. What is left: about 190 via stacks that sit on
 another via or a track with no clear spot within 0.5 mm, and 77 unconnected: the Base-Core links (GND 20, +BATT 11,
-UARTs, SPI0, I2C0, MOTOR3/4, BUZZER-, CURR, USB_D+), islands of the rail pours on L5 (+3.3V 7, +10V 5, +3V3 2),
+UARTs, SPI0, I2C0, MOTOR3/4, BUZZER-, CURR, USB_D+), islands of the rail pours on L5 (+3.3V, +10V),
 and U26/C107/C108 still parked off the board.
 
 ## Reroute plan
@@ -67,7 +67,9 @@ Power first:
 2. **+BATT (L4 + L1)**: close the 11 +BATT links; microvia + buried via arrays in every high-side drain pad (Q3,
    Q5, Q7, ...) into the L4 pour.
 3. **GND (L2 + L7 + L8)**: close the 20 GND links; via arrays in every low-side source pad.
-4. **Rails (L5)**: one region per rail: +3.3V under the FC, +3V3 under the radio and SD, +4v5 and +10V as strips;
+4. **Rails (L5)**: one +3.3V region from U7 (TLV76733, under the FC) to the radio, ESC MCUs and SD (the old +3V3
+   side lost its own LDO U23: link it to U7, ~0.4 A at peak, 0.3 mm or a pour), +4v5 and +10V as strips. Thermal vias in U7's
+   exposed pad to L2 GND (up to 0.85 W on the bench with WiFi on);
    that removes the 14 rail islands. +5V stays on L6.
 5. **Phase**: the BEMF taps run 17-24 mm of 0.10 mm switch-node track per phase; place each top divider resistor
    at the phase pour (under 3 mm). Optional: repeat the phase pour on L4 under each half-bridge.
@@ -109,7 +111,7 @@ were fixed on the two-board branch and are open here:
 | Issue | Effect | Fix on the two-board branch |
 |---|---|---|
 | LED strip driven through Q2/R14, which inverts | WS2812 data is inverted; the strip does not work with stock Betaflight | `cdb8534`: TXU0101 non-inverting buffer |
-| ESC MCUs on `+3V3` | On USB alone the AT32s run with no gate drive | `05537a3`: TLV75533 `+3V3_ESC` from `+5V` |
+| ESC MCUs on the 3.3 V rail | On USB alone the AT32s run with no gate drive | `05537a3`: TLV75533 `+3V3_ESC` from `+5V` |
 | No SWD test pads for the RP2354A (`SWDIO`/`SWCLK` unconnected) | USB BOOTSEL only | TP31/TP32 |
 
 Firmware status of each: `research/review-2026-10/firmware/ISSUES.md`. The reviews in
@@ -129,6 +131,6 @@ Found on the 8fa8d7b circuit; each applies to this board too. Not changed. Full 
 | Low-side gate 15R, no fast turn-off | Miller turn-on at 6S | 4.7R on the low side, or a diode across it; scope first boards |
 | Video pass-through has no clamp | AC-coupled cameras lose sync | Test cameras; add coupling cap + Schottky clamp if needed |
 | No USB ESD | User-facing connector | Low-capacitance 2-line array at USB1 |
-| U23 TLV75533 (500 mA, X2SON) for the radio rail | Margin | TLV76733 1 A, WSON 2x2 |
+| One 3.3 V LDO for FC, radio, ESC MCUs and SD | Done 2026-10-15: U7 TLV76733 1 A (same WSON-6 2x2 land, SNS tied to OUT), U23 removed | Radio and ESC current now share the RP2354 ADC and OSD supply; add a ferrite + 1 uF branch for them if the ADC or video shows noise |
 | Crystal CL unknown with 20 pF caps | Clock accuracy | Confirm CL; 15 pF if CL = 10 pF |
 | Blackbox is microSD, not NOR | Board area, a socket on a 35 mm board | Keep, or replace with a 16 MB NOR as on OpenAIO-Whoop (new circuit) |

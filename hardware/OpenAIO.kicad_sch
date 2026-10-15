@@ -5,7 +5,7 @@
 	(uuid "fb88b6f9-ee39-4640-a9d4-04a17ceeac64")
 	(paper "A4")
 	(lib_symbols
-		(symbol "lib:+3V3"
+		(symbol "lib:+3.3V"
 			(power global)
 			(pin_numbers
 				(hide yes)
@@ -30,7 +30,7 @@
 					)
 				)
 			)
-			(property "Value" "+3V3"
+			(property "Value" "+3.3V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -62,7 +62,7 @@
 					)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -84,7 +84,7 @@
 					)
 				)
 			)
-			(symbol "+3V3_0_1"
+			(symbol "+3.3V_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -122,7 +122,7 @@
 					)
 				)
 			)
-			(symbol "+3V3_1_1"
+			(symbol "+3.3V_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
@@ -6212,7 +6212,7 @@
 		)
 	)
 	(symbol
-		(lib_id "lib:+3V3")
+		(lib_id "lib:+3.3V")
 		(at 265.43 119.38 0)
 		(unit 1)
 		(body_style 1)
@@ -6234,7 +6234,7 @@
 				)
 			)
 		)
-		(property "Value" "+3V3"
+		(property "Value" "+3.3V"
 			(at 265.43 114.3 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8267,5 +8267,4 @@
 			(page "1")
 		)
 	)
-	(embedded_fonts no)
 )

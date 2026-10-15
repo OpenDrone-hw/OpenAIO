@@ -38,7 +38,7 @@ The pad nets of `OpenAIO-Core.kicad_pcb` and `OpenAIO-Base.kicad_pcb` match the 
 | 18 | 29 | `SPI0.SCK` | 12 | none | Card1.5 CLK | SPI0 SCK |
 | 19 | 31 | `SPI0.MOSI` | 13 | none | Card1.3 CMD | SPI0 SDO |
 | 20 | 32 | `SPI0.MISO` | 17 | none | Card1.7 DAT0 | SPI0 SDI |
-| 21 | 33 | `FLASH_CS` | 29 | none | Card1.2 CD/DAT3, R34 10k to +3V3 | SDCARD_SPI_CS. The name is historical: this is the SD card CS |
+| 21 | 33 | `FLASH_CS` | 29 | none | Card1.2 CD/DAT3, R34 10k to +3.3V | SDCARD_SPI_CS. The name is historical: this is the SD card CS |
 | 22 | 34 | `MOTOR4` | 21 | none | R96 220R to U19.25 PB4 (ESC4) | MOTOR 4, DShot on PIO0 |
 | 23 | 35 | `MOTOR3` | 19 | none | R77 220R to U17.25 PB4 (ESC3) | MOTOR 3 |
 | 24 | 36 | `MOTOR2` | 23 | none | R58 220R to U15.25 PB4 (ESC2) | MOTOR 2 |
@@ -72,7 +72,7 @@ The pad nets of `OpenAIO-Core.kicad_pcb` and `OpenAIO-Base.kicad_pcb` match the 
 
 | Pads | Net |
 |---|---|
-| 3, 4 | +4v5. Base: D2 from +5V, D3 from USB VBUS. Feeds the Core LDOs U7 and U6 and the Base LDO U23 |
+| 3, 4 | +4v5. Base: D2 from +5V, D3 from USB VBUS. Feeds U7 (TLV76733, the one 3.3 V rail) and U6 (1.8 V gyro) |
 | 6, 22 | +5V (Base buck U4) |
 | 36 | +BATT (VBAT divider on the Core) |
 | 1, 2, 5, 7, 9, 11, 14, 15, 16, 18, 26, 27, 28, 30, 31, 32, 35, 41, 43, 44, 45 | GND (21 pads) |
@@ -104,15 +104,15 @@ ESP32-C3 pins come from ESP32-C3FH4.pdf p14 (pin list) and p17-18 (GPIO numbers)
 | 27 U0RXD | 20 | `UART1_TX` | RP2354A GPIO6 via LGA 33 | `serial_rx: 20` | yes |
 | 28 U0TXD | 21 | `UART1_RX` | RP2354A GPIO7 via LGA 25 | `serial_tx: 21` | yes |
 | 5 XTAL_32K_N | 1 | `/RX/DIO1` | U21.8 DIO1 | `radio_dio1: 1` | yes |
-| 6 GPIO2 | 2 | `/RX/RST` | U21.3 NRESET, R111 10k to +3V3 (strap GPIO2 = 1) | `radio_rst: 2` | yes |
+| 6 GPIO2 | 2 | `/RX/RST` | U21.3 NRESET, R111 10k to +3.3V (strap GPIO2 = 1) | `radio_rst: 2` | yes |
 | 8 GPIO3 | 3 | `/RX/BUSY` | U21.7 BUSY | `radio_busy: 3` | yes |
 | 9 MTMS | 4 | `/RX/MOSI` | U21.17 MOSI | `radio_mosi: 4` | yes |
 | 10 MTDI | 5 | `/RX/MISO` | U21.16 MISO | `radio_miso: 5` | yes |
 | 12 MTCK | 6 | `/RX/SCK` | U21.18 SCK | `radio_sck: 6` | yes |
 | 13 MTDO | 7 | `/RX/NSS` | U21.19 NSS | `radio_nss: 7` | yes |
-| 14 GPIO8 | 8 | `/RX/LED` | D9.4 DIN (XL-1010RGBC WS2812, GRB), R112 10k to +3V3 (strap GPIO8 = 1) | `led_rgb: 8`, `led_rgb_isgrb: true` | yes |
-| 15 GPIO9 | 9 | `/RX/BOOT` | TP9 "BOOT" pad, R113 10k to +3V3 (strap: low = download) | `button: 9` | yes |
-| 7 CHIP_EN | none | `/RX/CHIP_EN` | R114 10k to +3V3, C84 1 uF to GND (RC only) | none | none |
+| 14 GPIO8 | 8 | `/RX/LED` | D9.4 DIN (XL-1010RGBC WS2812, GRB), R112 10k to +3.3V (strap GPIO8 = 1) | `led_rgb: 8`, `led_rgb_isgrb: true` | yes |
+| 15 GPIO9 | 9 | `/RX/BOOT` | TP9 "BOOT" pad, R113 10k to +3.3V (strap: low = download) | `button: 9` | yes |
+| 7 CHIP_EN | none | `/RX/CHIP_EN` | R114 10k to +3.3V, C84 1 uF to GND (RC only) | none | none |
 | 16 GPIO10 | 10 | GND | tied to ground | not used | harmless (ISSUES I12) |
 | 4 XTAL_32K_P | 0 | NC | none | not used | none |
 | 25, 26 | 18, 19 (USB) | NC | no native-USB flashing | none | none |
@@ -128,7 +128,7 @@ ESP32-C3 pins come from ESP32-C3FH4.pdf p14 (pin list) and p17-18 (GPIO numbers)
   - L4 15 uH runs from DCC_SW (14) to DCC_FB (12).
   - VDD_IN (2) is on DCC_FB, as the datasheet requires (SX1281.pdf p17).
   - So the optional `radio_dcdc` overlay is valid (`elrs.md`).
-- Supply: +3V3 from U23 (TLV75533, fed by +4v5).
+- Supply: +3.3V from U7 (TLV76733, fed by +4v5; one 3.3 V rail since 2026-10-15).
 
 ## ESC MCUs (Base): AT32F421G8U7 x4 (U13, U15, U17, U19), identical wiring
 
@@ -152,8 +152,8 @@ The AM32 groups are defined in `Inc/targets.h` of AM32 `50234143`:
 | 21 | PA13 | SWDIO | TP1 / TP3 / TP5 / TP7 | SWD (never remapped by AM32) | none |
 | 22 | PA14 | SWCLK | TP2 / TP4 / TP6 / TP8 | SWD | none |
 | 1 | BOOT0 | none | 10k to GND (R38/R57/R76/R95) | none | none |
-| 4 | NRST | none | 10k to +3V3 + 100n to GND. **Not on a test pad** | none | none |
-| 5, 17 | VDDA, VDD | none | VDDA via 10R + 100n. VDD = +3V3 from U23 | none | ISSUES I3 |
+| 4 | NRST | none | 10k to +3.3V + 100n to GND. **Not on a test pad** | none | none |
+| 5, 17 | VDDA, VDD | none | VDDA via 10R + 100n. VDD = +3.3V from U7 | none | ISSUES I3 |
 | 8, 9, 12, 23, 24, 26-28, 2, 3 | PA2, PA3, PA6, PA15, PB3, PB5-7, PF0, PF1 | NC | none | PA3/PA6 are the voltage and current sense pins on other targets. OPENESC sets `NO_VOLTAGE_SENSE` and `NO_CURRENT_SENSE` | no ESC-level sense |
 
 **ESC current sense:** none per ESC. The only current sense is the board-level INA186A3 (U25) into RP2354A GPIO28.
