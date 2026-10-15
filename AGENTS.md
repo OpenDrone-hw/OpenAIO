@@ -6,7 +6,7 @@ controller (BMI270, BMP580 baro, PIO analog OSD, microSD blackbox), 4x AM32 ESC
 (ESP32-C3 + SX1281). The sub-sheets come from the manufactured
 OpenFC-Lite-Mini, OpenESC-20x20 and OpenRX-Lite designs. The layout is the
 owner's hand-routed Base and Core boards of 2026-08-22 (d81e559, plus the
-always-on +10V of 9aba717), merged into one file, now a 12-layer
+always-on +10V of 9aba717), merged into one file on the OpenAIO-Whoop 8-layer
 HDI stackup.
 
 ## Architecture
@@ -35,8 +35,8 @@ no continuous-current figure is published at 2S or 6S without a measurement.
 
 ## Layout rules
 
-- Layer use: L2, L6 and L11 GND planes; Core signals on L3-L5, Base signals and power planes on L7-L10
-  (`research/ROUTING.md`). Core and Base tracks share no inner layer.
+- Layer use (OpenAIO-Whoop plan): L2 and L7 GND, L3 Base signals, L4 +BATT pour, L5 rails, L6 Core signals
+  and +5V (`research/ROUTING.md`).
 - The Core was routed on the 0.09 line standard with the Default class only.
   The rule area `Core layout` keeps that inside the Core; move it with the
   Core. Outside it the Base netclasses apply.
@@ -53,11 +53,11 @@ no continuous-current figure is published at 2S or 6S without a measurement.
 | Root schematic | `hardware/OpenAIO.kicad_sch`. Sub-sheets: `fc_power`, `fc_rp2350a`, `fc_imu`, `fc_osd`, `fc_blackbox`, `fc_pads` (OpenFC-Lite-Mini, plus the BMP580 baro U26), `esc_channel` x4 (OpenESC-20x20), `rx_esp32c3_sx1281` (OpenRX-Lite) |
 | Board | `hardware/OpenAIO.kicad_pcb`, 35.4 x 35.4 mm. While the merge is open, the Core layout sits right of the Base outline with its own Edge.Cuts; see `research/ROUTING.md` |
 | Library | Project-local only: every symbol is `lib:` in `hardware/lib.kicad_sym` (the stock `Device`, `power`, `Connector` ones included), every footprint in `hardware/lib.pretty/`, every 3D model in `hardware/lib.3dshapes/` as `${KIPRJMOD}/lib.3dshapes/...` on the board and in `lib.pretty`. No `OPENDRONE_LIB` or `KICAD*_3DMODEL_DIR` path anywhere. Keep it so with `tools/localise_symbols.py` and `tools/localise_models.py` |
-| Design rules | `hardware/OpenAIO.kicad_dru`: canonical block, the HDI 1+10+1 via rules (from OpenAIO-Whoop, re-spanned for 12 layers), and the `Core layout` clearance rule. The Base's 2 oz outer and the Core's LGA rules are gone with the 2 oz copper and the LGA |
+| Design rules | `hardware/OpenAIO.kicad_dru`: canonical block, the HDI 1+6+1 via rules from OpenAIO-Whoop, and the `Core layout` clearance rule. The Base's 2 oz outer and the Core's LGA rules are gone with the 2 oz copper and the LGA |
 | Netclasses | The Base's (`OpenAIO.kicad_pro`): VBAT, Phase, Gate, Power, Analog, RF, USB, Default |
 | Fab config | `hardware/fabrication-toolkit-options.json` |
-| Stackup | 12 layers, HDI 1+10+1, about 1.25 mm, 1 oz outer / 0.5 oz inner, ENIG (2026-10-15; inferred from NextPCB's published materials, confirm in the quote). Layer plan in `research/ROUTING.md` |
-| Vias | Through 0.35/0.20 where F.Cu and B.Cu copper meet them; elsewhere laser microvia F.Cu-In1.Cu / In10.Cu-B.Cu 0.25/0.10 stacked on a buried via In1.Cu-In10.Cu 0.38/0.20 (1.0 mm span, NextPCB 5:1). Typed by `tools/via_types.py --buried-drill 0.20` |
+| Stackup | 8-layer HDI 1+6+1, 1.0 mm (0.997 with mask), 1 oz on all layers, ENIG: the OpenAIO-Whoop stackup (NextPCB-confirmed, D123). 12 layers was tried on 2026-10-15 and dropped on cost. Layer plan and power paths in `research/ROUTING.md` |
+| Vias | Through 0.35/0.20 (power 0.5/0.3) where F.Cu and B.Cu copper meet them; elsewhere laser microvia F.Cu-In1.Cu / In6.Cu-B.Cu 0.25/0.10 and buried In1.Cu-In6.Cu 0.33/0.15. A microvia stacked on its buried via is HDI rank 2 at NextPCB; stagger 0.25 mm to stay rank 1. Typed by `tools/via_types.py --buried-size 0.33/0.15` |
 | Shared library | `hardware/KiCad-Library/`, pinned submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library). Not referenced by the lib tables: every part used is copied into `lib` |
 | License | CERN-OHL-S-2.0 |
 
@@ -93,7 +93,7 @@ deliberate changes.
 
 Board tools in `hardware/tools/`, from OpenAIO-Whoop, each with its usage in
 the docstring: `hdi_via_pass.py` (edit form <-> fab form vias, `--collapse`),
-`via_types.py` (via type from the layers each via connects), `via_nudge.py` (move conflicting vias), `track_widths.py` (standard widths), `localise_models.py` and `localise_symbols.py` (keep the library project-local), `sync_pcb.py`, `pad_vias.py`, `gnd_stitch.py`, `track_to_pour.py`,
+`via_types.py` (via type from the layers each via connects), `via_nudge.py` (move conflicting vias), `track_widths.py` (standard widths), `power_paths.py` (resistance and loss of the high-current paths), `localise_models.py` and `localise_symbols.py` (keep the library project-local), `sync_pcb.py`, `pad_vias.py`, `gnd_stitch.py`, `track_to_pour.py`,
 `track_widen.py`, `via_declutter.py`, `via_relocate.py`, `inner_router.py`,
 `loop_resistance.py`. They were written for the Whoop's net and class names
 (`Power`, `Gate`, `Phase`), which this board shares; it also has `VBAT`,

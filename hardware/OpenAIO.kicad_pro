@@ -278,9 +278,9 @@
     },
     "layer_pairs": [
       {
-        "bottomLayer": 22,
+        "bottomLayer": 14,
         "enabled": true,
-        "name": "Buried L2-L11",
+        "name": "Buried L2-L7",
         "topLayer": 4
       },
       {
@@ -292,8 +292,8 @@
       {
         "bottomLayer": 2,
         "enabled": true,
-        "name": "Micro L11-L12",
-        "topLayer": 22
+        "name": "Micro L7-L8",
+        "topLayer": 14
       }
     ],
     "layer_presets": [],

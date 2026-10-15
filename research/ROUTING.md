@@ -1,103 +1,105 @@
 # Routing the one-board OpenAIO
 
-State on 2026-10-15, after the owner moved the Core into the Base outline and the board went to 12 layers.
-Start here before routing.
+State on 2026-10-15: 8-layer HDI 1+6+1 on the OpenAIO-Whoop plan and stackup (12 layers was tried the same day and
+dropped on cost). The Core sits inside the Base outline (owner's placement). Start here before routing.
 
-## Board
+## Build and price
 
 | Item | Value |
 |---|---|
-| File | `hardware/OpenAIO.kicad_pcb`, one project with `OpenAIO.kicad_sch` |
-| Stackup | 12 layers, HDI 1+10+1, about 1.25 mm: 1 oz outer, 0.5 oz inner; 1080 prepreg L1-L2 and L11-L12, H/H 0.135 cores and 1080 alternating inside (inferred from NextPCB's published materials; NextPCB publishes no 12L HDI table, so confirm the build in the quote) |
-| Vias | Through 0.35/0.20 where F.Cu and B.Cu copper meet; elsewhere laser microvia 0.25/0.10 (F.Cu-In1.Cu, In10.Cu-B.Cu) stacked on a buried via In1.Cu-In10.Cu, 0.38/0.20 (the 1.0 mm L2-L11 span at NextPCB's 5:1 limit) |
-| Core | Moved in by the owner at (-34.326, +8.545) from its side-by-side position |
-| Rule area | `Core layout` keeps the Core's 0.09 line standard |
+| Stackup | 8L HDI 1+6+1, 1.0 mm (0.997 with mask), 1 oz on all layers, ENIG: 1080 0.077 / 1080 0.077 / core 0.127 / 2116 0.125 / core 0.127 / 1080 0.077 / 1080 0.077 (OpenAIO-Whoop, NextPCB-confirmed, D123) |
+| Through via | 0.35/0.20 (power 0.5/0.3) only where F.Cu and B.Cu copper both connect |
+| Microvia | 0.25/0.10, L1-L2 and L7-L8, in pad, filled and capped |
+| Buried via | 0.33/0.15, L2-L7 (0.74 mm span at NextPCB's 5:1) |
+| Price, NextPCB calculator data in Notion (OpenESC-30x30 panel basis, via-in-pad, rank 1) | 20 pcs about 248 USD per order; 250 pcs about 2.00 USD per board; 1000 pcs about 1.26 USD per board; one-time 198 USD |
+| Rank 2 risk | 766 sites have a microvia stacked on its buried via: NextPCB prices that as HDI rank 2, +0.34 USD per board at 1000 and a 388-547 USD order fee. Staggering them 0.25 mm keeps rank 1 |
 
-## Layer plan
+## Layers
 
-| Layer | KiCad | Use |
-|---|---|---|
-| L1 | F.Cu | parts (Core FC on top) |
-| L2 | In1.Cu | GND plane (microvia target), Base phase and CSA copper |
-| L3 | In2.Cu | Core signals, +3.3V / +10V (was Core In3) |
-| L4 | In3.Cu | Core signals (was Core In2) |
-| L5 | In4.Cu | Core LGA-era links, +4v5 (was Core B.Cu) |
-| L6 | In5.Cu | GND plane, new: separates the Core from the Base |
-| L7 | In6.Cu | Base signals, GND, +BATT (was Base In2) |
-| L8 | In7.Cu | Base signals, +3V3, +3.3V, +4v5, +5V_USB (was Base In3) |
-| L9 | In8.Cu | Base signals, +5V plane (was Base In4) |
-| L10 | In9.Cu | Base signals, +BATT and +10V planes (was Base In5) |
-| L11 | In10.Cu | GND plane (microvia target) |
-| L12 | B.Cu | parts (ESC side), Base signals |
+| Layer | KiCad | Power | Signals |
+|---|---|---|---|
+| L1 | F.Cu `L1.Top` | high-side FET +BATT pours, phase pours, /CSA+ at the battery pad | FC parts, short escapes |
+| L2 | In1 `L2.GND` | GND plane (microvia target), /CSA+ | none |
+| L3 | In2 `L3.Signal` | GND fill | Base signals (from the Base's L2) |
+| L4 | In3 `L4.BATT` | +BATT pour over the high-side row, +10V, +4v5 | Core LGA-era links, Base gate and BEMF tracks |
+| L5 | In4 `L5.Rails` | +3V3, +3.3V, +4v5, +5V_USB, +10V | Core signals A, Base +3V3-area tracks |
+| L6 | In5 `L6.Signal_5V` | +5V pour | Core signals B |
+| L7 | In6 `L7.GND` | GND plane (microvia target), /CSA+ corridor | none |
+| L8 | B.Cu `L8.Bottom` | low-side FET GND pours, phase pours | ESC parts, most Base routing |
 
-In the board, the copper layers carry these names (L1.Top ... L12.Bottom), the plan and the via cheat sheet are on Cmts.User
-right of the outline, and Route > Set Layer Pair offers Micro L1-L2, Buried L2-L11 and Micro L11-L12.
+The same table is on Cmts.User right of the outline; Route > Set Layer Pair offers Micro L1-L2, Buried L2-L7 and
+Micro L7-L8. Today's tracks were packed onto these layers by origin; 6 segments collide (L4).
 
-Core and Base tracks no longer share an inner layer. Every buried via still spans L2-L11, so where a Core via and
-a Base via land on each other they collide on every inner layer; those are positional and need a via move.
+## Power paths
+
+`$KPY hardware/tools/power_paths.py hardware/OpenAIO.kicad_pcb --esc 15` (15 A per ESC, 61 A battery, 45 C,
+copper and vias only; FET RDS(on) not included):
+
+| Path | 8L before the 12L work | 12L (dropped) | 8L now |
+|---|---|---|---|
+| Battery + pad to shunt Rsense2 (/CSA+) | 0.857 mOhm | 1.085 | **0.431** (corridor on all layers) |
+| Shunt (part) | 0.200 | 0.200 | 0.200 |
+| +BATT shunt to 12 high-side FETs | 0.107 | 0.147 | **0.090** |
+| GND 12 low-side FETs to battery - | 0.266 | 0.305 | **0.234** |
+| Phase, motor pad to FETs (each) | 0.048 | 0.052 | **0.048** |
+| Loss at 61 A, copper + shunt | 5.4 W | 6.6 W | **3.6 W** |
+
+Full +BATT planes were modelled and are worse (0.28-0.35 mOhm): every buried via perforates every inner plane, so
+shaped pours with via arrays in the FET pads carry the current, not plane count.
 
 ## DRC at hand-over
 
-`kicad-cli pcb drc --refill-zones hardware/OpenAIO.kicad_pcb` (counts at 199 are a report cap):
-
-| Step | Errors | Distinct spots | Unconnected |
+| | Errors | Distinct spots | Unconnected |
 |---|---|---|---|
-| Owner's 8L board (Core moved in) | 818 | | 80 |
-| 12L, layers remapped, vias typed | 1027 | 339 | 64 |
-| Vias nudged (`tools/via_nudge.py`, up to 0.5 mm, 92 moved) | 671 | 274 | 63 |
-| Widths standardised (`tools/track_widths.py`) | 632 | 243 | 63 |
+| 8L now | about 425-455 (DRC spread) | 212 | 77 |
 
-Pad connectivity of every net is identical to the owner's board after every step. What is left: about 180 via
-stacks with no clear spot within 0.5 mm (via on via, via in a track), and the 63 links (GND 20, +BATT 11, +3.3V 6,
-+3V3 5, UARTs, SPI0 + FLASH_CS, I2C0, MOTOR3/4, BUZZER-, CURR, USB_D+, the U21 DC-DC feedback).
+Pad connectivity of every net is identical to the owner's board. What is left: about 190 via stacks that sit on
+another via or a track with no clear spot within 0.5 mm, and 77 unconnected: the Base-Core links (GND 20, +BATT 11,
+UARTs, SPI0, I2C0, MOTOR3/4, BUZZER-, CURR, USB_D+), islands of the rail pours on L5 (+3.3V 7, +10V 5, +3V3 2),
+and U26/C107/C108 still parked off the board.
+
+## Reroute plan
+
+Power first:
+
+1. **Shunt**: move Rsense2 beside the battery + pad (U24.1). The corridor gives 0.43 mOhm; beside the pad it
+   would be about 0.2 (another ~0.9 W at 61 A). Keep the Kelvin taps to U25 as a pair.
+2. **+BATT (L4 + L1)**: close the 11 +BATT links; microvia + buried via arrays in every high-side drain pad (Q3,
+   Q5, Q7, ...) into the L4 pour.
+3. **GND (L2 + L7 + L8)**: close the 20 GND links; via arrays in every low-side source pad.
+4. **Rails (L5)**: one region per rail: +3.3V under the FC, +3V3 under the radio and SD, +4v5 and +10V as strips;
+   that removes the 14 rail islands. +5V stays on L6.
+5. **Phase**: the BEMF taps run 17-24 mm of 0.10 mm switch-node track per phase; place each top divider resistor
+   at the phase pour (under 3 mm). Optional: repeat the phase pour on L4 under each half-bridge.
+6. **Netclasses**: phase (`/[1-4][ABC]`) and gate (`Net-(Q*-G)`) nets match no class pattern; fix the patterns
+   once the phase copper is pours.
+
+Signals:
+
+7. Base signals on L3, Core signals on L5/L6, FC escapes on L1; the 6 colliding segments on L4 first.
+8. **LED_STRIP** 114 mm and 12 vias: daisy-chain the corner pads. **USB_D+/-** about 29 mm: route as a pair on L3
+   over L2, target under 15 mm. **I2C0, UART1, SD CS** 20-24 mm: one via pair each. **RX SPI** 15-18 mm: U21
+   next to U22.
+9. **GPIO** (config.h only): keep MOTOR1-4 on GPIO22-25; swap UART0/PIOUART0 or move LED_STRIP to a PIO pin only
+   if it shortens a route.
+10. **U26 BMP580** with C107/C108 next to R11/R12.
+
+Vias:
+
+11. Stagger microvias 0.25 mm from their buried via wherever there is room (rank 1 price), and run
+    `tools/via_types.py --buried-size 0.33/0.15` and `tools/via_nudge.py` after each session.
 
 ## Tools
 
-KiCad closed for every script; each prints a report and has `--dry-run`.
+KiCad closed for every script; each has `--dry-run` or only reads.
 
 ```sh
 KPY=/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3
-$KPY hardware/tools/via_types.py hardware/OpenAIO.kicad_pcb --buried-drill 0.20   # via type from the layers it joins
-$KPY hardware/tools/via_nudge.py hardware/OpenAIO.kicad_pcb 0.25                  # move conflicting vias up to 0.25 mm
-$KPY hardware/tools/track_widths.py hardware/OpenAIO.kicad_pcb                    # standard widths where they fit
+$KPY hardware/tools/via_types.py hardware/OpenAIO.kicad_pcb --buried-size 0.33/0.15
+$KPY hardware/tools/via_nudge.py hardware/OpenAIO.kicad_pcb 0.25
+$KPY hardware/tools/track_widths.py hardware/OpenAIO.kicad_pcb
+$KPY hardware/tools/power_paths.py hardware/OpenAIO.kicad_pcb --esc 15
 ```
-
-`hdi_via_pass.py` still assumes 8 layers; use `via_types.py`.
-
-## Reroute plan for 12 layers
-
-High current (resistance):
-
-1. **+BATT**: today it is a 382 mm2 plane on L10 and 148 mm2 on L7, now 0.5 oz. Give it two full planes, L9 and
-   L10 (move the +5V plane to L8 with +3V3), stitched with through-via arrays at the battery pads (U24.1 via the
-   shunt) and at every high-side FET drain. Close the 11 +BATT links first.
-2. **Phase nodes**: the current runs in the F.Cu/B.Cu pours; L2 and L7-L9 carry only 2-5 mm2 per phase. Repeat
-   the full phase shape on L3-L4 under each half-bridge with via arrays (L3-L4 are Core layers only under the
-   Core, free under the ESCs). Each phase net also carries
-   17-24 mm of 0.10 mm track to its BEMF divider (R47/R50/... top resistors), bootstrap cap (C40-C63) and driver
-   VS pin: move the top divider resistor next to the phase pour so the switch-node track is under 3 mm.
-3. **GND return**: L2, L6 and L11 are planes; tie them with via arrays along each half-bridge and at the shunt
-   ground (Kelvin taps stay single tracks).
-4. **Netclasses**: the Base patterns `/ESC?/Motor?` and `/ESC?/GH?` match no net; phase nets (`/[1-4][ABC]`) and
-   gates (`Net-(Q*-G)`) sit in Default. Fix the patterns once the phase copper is planes (Phase clearance 0.12).
-5. **+10V / +4v5 / +5V**: the 88 power tracks that had no room for 0.30 mm; route them as pours on their plane
-   layer instead of tracks.
-
-Signal length:
-
-6. **LED_STRIP**: 114 mm, 12 vias to four corner pads; one pad pair is enough electrically, or a daisy chain
-   corner to corner on L12.
-7. **USB_D+/-**: 28-30 mm with 6-8 vias; with the Core over the Base, route the pair on L3 straight from USB1 to U2
-   (target under 15 mm, two vias each, 90 ohm on L3 over L2).
-8. **I2C0, UART1, FLASH_CS** (20-24 mm, 5-9 vias): the RP2354 sits at the board centre; the SD socket (Card1) and
-   the ESP32-C3 (U22) are at opposite edges. Route them on L3/L4 with one via pair each.
-9. **RX SPI** (U21 to U22, 15-18 mm): place U21 SX1281 next to U22 or route the four lines as a group on L4.
-10. **GPIO remap** (firmware config.h only, no new parts): MOTOR1-4 are GPIO22-25 on U2 pins 34-37 (one side);
-    keep them. Swap UART0 and PIOUART0 pins if the SH-6 (U12) lands closer to pins 2-3 than 4-5 after the Core
-    move; put LED_STRIP on a PIO pin on the side facing the strip pads. Check the Betaflight target
-    (`research/review-2026-10/firmware/`) after any swap.
-11. **Via stacks**: 180 stacks still sit on other vias. With the layers now separated, most can become a single
-    microvia + short L3/L4 jog instead of a full buried via; run `via_nudge.py` again after each routing session.
 
 ## Known circuit issues kept on purpose
 

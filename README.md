@@ -5,7 +5,7 @@ ExpressLRS receiver on 25.5 x 25.5 mm mounting, on one PCB. It merges three
 boards OpenDrone already makes: OpenFC-Lite-Mini (RP2354A flight controller),
 OpenESC-20x20 (AM32 4-in-1) and OpenRX Lite (ELRS receiver). The layout is the
 hand-routed Base and Core hat of 2026-08-22, which were joined by an LGA; since
-2026-10-15 they are one 12-layer HDI board (1+10+1), with the Core placed inside
+2026-10-15 they are one 8-layer HDI board (1+6+1), with the Core placed inside
 the Base outline.
 
 [![Status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project)
@@ -34,7 +34,7 @@ From the design files. Not manufactured yet.
 | | |
 |---|---|
 | Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm |
-| Stack | One board: 12-layer HDI 1+10+1, about 1.25 mm, 1 oz outer / 0.5 oz inner, ENIG; through vias, laser microvias L1-L2 and L11-L12, buried vias L2-L11 |
+| Stack | One board: 8-layer HDI 1+6+1, 1.0 mm, 1 oz copper on all layers, ENIG; through vias, laser microvias L1-L2 and L7-L8, buried vias L2-L7 (OpenAIO-Whoop stackup) |
 | Input | 2-6S LiPo (6.0-25.2 V), with a low-ESR capacitor of at least 35 V and 220 uF at the battery lead (see Battery lead) |
 | Flight controller | RP2354A, BMI270 IMU, BMP580 barometer, analog PIO OSD, microSD blackbox, USB-C |
 | ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |
