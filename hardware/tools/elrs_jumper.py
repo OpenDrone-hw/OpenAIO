@@ -24,6 +24,7 @@ def footprint():
     f.SetReference("JP**")
     f.SetValue(FP)
     f.SetAttributes(P.FP_SMD | P.FP_EXCLUDE_FROM_BOM)
+    f.SetAllowSolderMaskBridges(True)    # the one mask opening over both pads is the jumper
     pitch = PAD_W + GAP
     for i, x in ((1, -pitch / 2), (2, pitch / 2)):
         p = P.PAD(f)

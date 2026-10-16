@@ -6,7 +6,7 @@
 	(property "Reference" "JP**"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "53ce94cb-60cf-4546-a150-eb78de20d089")
+		(uuid "4c55ca8e-a74b-4b4b-a6c4-a49249f56793")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16,7 +16,7 @@
 	(property "Value" "SolderJumper-2_P0.65mm_Tiny_Open"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "9498d908-587b-42fb-9572-2fe573445197")
+		(uuid "6e708710-822a-4226-9663-344f1fd9f7e6")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -27,7 +27,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "88fa09eb-9b5b-47d9-b25c-0ffc8f3b2746")
+		(uuid "41f2268e-48a4-46d6-99b0-fb16825d4ec4")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -38,14 +38,14 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "dacb0aa2-dc86-4cfd-b635-58d235235617")
+		(uuid "0c6af25d-4e12-4d6f-adc4-c07fe26591b8")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(attr smd exclude_from_bom)
+	(attr smd exclude_from_bom allow_soldermask_bridges)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_rect
 		(start -0.6 -0.325)
@@ -56,7 +56,7 @@
 		)
 		(fill yes)
 		(layer "F.Mask")
-		(uuid "c03d2adc-8794-4d8f-a9de-c589748aaecc")
+		(uuid "9f8c9cf6-01be-4d57-910d-27714c3c6eb4")
 	)
 	(fp_rect
 		(start -0.7 -0.425)
@@ -67,21 +67,21 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "ee63567e-9b41-426a-92c4-835f09e93fa0")
+		(uuid "7aa34ee3-dd5f-49e3-943b-177943356b53")
 	)
 	(pad "1" smd rect
 		(at -0.325 0)
 		(size 0.45 0.55)
 		(layers "F.Cu" "F.Mask")
 		(thermal_bridge_angle 45)
-		(uuid "043f1d19-d586-4c49-9d34-890a6a1d83a6")
+		(uuid "09d2a503-6212-49dc-bd71-497c71781f0b")
 	)
 	(pad "2" smd rect
 		(at 0.325 0)
 		(size 0.45 0.55)
 		(layers "F.Cu" "F.Mask")
 		(thermal_bridge_angle 45)
-		(uuid "31ddb605-4860-40d0-8ddd-1b723fa137c7")
+		(uuid "f605b6c1-aef1-4d5d-b43a-a9bd3445f2c6")
 	)
 	(embedded_fonts no)
 )
