@@ -83,15 +83,15 @@
 // Blackbox: microSD (Card1, Base) on SPI0, across the LGA
 // [CFG configs/RASP/RASPBERRY_PI_UAVFC/config.h:35-36,67,260,266]
 // [BF src/main/pg/sdcard.c:39-48,82-84; src/main/blackbox/blackbox.c:105-114]
-// SPI0 pin legality: [BF src/platform/PICO/bus_spi_pico.c:71 (PA22 SCK, list {2,6,18,22}),82 (PA20 MISO),91 (PA19 MOSI)]
+// SPI0 pin legality: [BF src/platform/PICO/bus_spi_pico.c:71 (PA18 SCK),82 (PA20 MISO),91 (PA19 MOSI)]
 // ---------------------------------------------------------------------------
 #define USE_SDCARD
 #define USE_SDCARD_SPI
-#define SPI0_SCK_PIN         PA22         // SPI0.SCK  | U2.34 | LGA 12 | Card1.5 CLK
+#define SPI0_SCK_PIN         PA18         // SPI0.SCK  | U2.29 | LGA 12 | Card1.5 CLK
 #define SPI0_SDI_PIN         PA20         // SPI0.MISO | U2.32 | LGA 17 | Card1.7 DAT0
 #define SPI0_SDO_PIN         PA19         // SPI0.MOSI | U2.31 | LGA 13 | Card1.3 CMD
 #define SDCARD_SPI_INSTANCE  SPI0
-#define SDCARD_SPI_CS_PIN    PA24         // FLASH_CS  | U2.36 | Card1.2 CD/DAT3, R34 10k pull-up to +3V3 (the net name is historical: SD card CS).
+#define SDCARD_SPI_CS_PIN    PA21         // FLASH_CS  | U2.33 | Card1.2 CD/DAT3, R34 10k pull-up to +3V3 (the net name is historical: SD card CS).
 #define SDCARD_DETECT_PIN    NONE         // no card-detect switch is wired
 #define DEFAULT_BLACKBOX_DEVICE BLACKBOX_DEVICE_SDCARD
 
@@ -104,9 +104,9 @@
 // Physical pad positions differ from the AIO_outline symbol's pad names: see PINOUT.md and ISSUES.md I7.
 // ---------------------------------------------------------------------------
 #define MOTOR1_PIN           PA25         // MOTOR1 | U2.37 | LGA 24 | R39 220R -> U13 (ESC1) PB4
-#define MOTOR2_PIN           PA21         // MOTOR2 | U2.33 | LGA 23 | R58 220R -> U15 (ESC2) PB4
-#define MOTOR3_PIN           PA18         // MOTOR3 | U2.29 | LGA 19 | R77 220R -> U17 (ESC3) PB4
-#define MOTOR4_PIN           PA8          // MOTOR4 | U2.12 | LGA 21 | R96 220R -> U19 (ESC4) PB4
+#define MOTOR2_PIN           PA24         // MOTOR2 | U2.36 | LGA 23 | R58 220R -> U15 (ESC2) PB4
+#define MOTOR3_PIN           PA23         // MOTOR3 | U2.35 | LGA 19 | R77 220R -> U17 (ESC3) PB4
+#define MOTOR4_PIN           PA22         // MOTOR4 | U2.34 | LGA 21 | R96 220R -> U19 (ESC4) PB4
 #define DEFAULT_DSHOT_TELEMETRY DSHOT_TELEMETRY_ON   // AM32 answers bidirectional DShot
 
 // ---------------------------------------------------------------------------
@@ -204,7 +204,7 @@
 // PWM beeper forces the pin low when off [BF src/platform/PICO/pwm_beeper_pico.c:38-44].
 #define BEEPER_INVERTED
 
-#define LED0_PIN             PA27         // /RP2354A/LED0 | U2.41 | Core only | R15 75R + R16 75R -> D1 (blue) anode, cathode GND
+#define LED0_PIN             PA26         // /RP2354A/LED0 | U2.40 | Core only | R15 75R + R16 75R -> D1 (blue) anode, cathode GND
 #define LED0_INVERTED                     // LED is active-high; Betaflight's default drives LEDs active-low
 
 // ---------------------------------------------------------------------------
@@ -213,7 +213,7 @@
 // TXU0101 + 200R per owner decision c1da3e7. NOT YET IN THE NETLIST at be152bb (ISSUES.md I2).
 // [BF src/main/io/ledstrip.c:207-208]
 // ---------------------------------------------------------------------------
-#define LED_STRIP_PIN        PA26         // /RP2354A/LED_STRIP_L | U2.40 | (Q2 today, TXU0101 planned) -> LED_STRIP
+#define LED_STRIP_PIN        PA8          // /RP2354A/LED_STRIP_L | U2.12 | (Q2 today, TXU0101 planned) -> LED_STRIP
                                           //   | LGA 46 | J20, J21, J31, J32 "LED" (Base)
 
 // ---------------------------------------------------------------------------
@@ -275,7 +275,7 @@
 // Not wired (recorded so nobody looks for them):
 //   USB VBUS detect: none. VBUS (+5V_USB) only feeds +4v5 through D3. Betaflight then treats
 //     "VCP connected" as cable inserted [BF src/main/drivers/usb_io.c:56-70]. No USB_DETECT_PIN.
-//   GPIO23 (U2.35): unconnected since the 2026-10-16 IO remap (shortest routes; GPIO27 now drives LED0). Candidate for ESP32-C3 CHIP_EN / BOOT control (ISSUES.md I5).
+//   GPIO27 (U2.41, ADC1): unconnected. Candidate for ESP32-C3 CHIP_EN / BOOT control (ISSUES.md I5).
 //   SWD: SWCLK U2.24 -> LGA 20 -> TP32, SWDIO U2.25 -> LGA 10 -> TP31 (Base B.Cu).
 //   BOOTSEL: U1 button -> R7 1k -> QSPI_SS (U2.60); the `bl` CLI command also reboots to the
 //     USB bootrom [BF src/platform/PICO/system.c:157-161].
