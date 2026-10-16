@@ -2781,16 +2781,6 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 44.45) (xy 179.07 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b2beef61-43bb-4efb-ba63-2464c7bfdad1")
-	)
-	(wire
-		(pts
 			(xy 91.44 33.02) (xy 91.44 35.56)
 		)
 		(stroke
@@ -2901,16 +2891,6 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 44.45) (xy 179.07 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eae1d4dc-2250-4562-8af2-e98ef710d0ff")
-	)
-	(wire
-		(pts
 			(xy 91.44 62.23) (xy 91.44 64.77)
 		)
 		(stroke
@@ -3018,6 +2998,16 @@
 			(justify left bottom)
 		)
 		(uuid "bfe12f78-3a93-4fc7-950a-e42d386c7cc7")
+	)
+	(label "PU0RX"
+		(at 179.07 59.69 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d99e8755-d936-4087-9d1f-f2c1db381f0b")
 	)
 	(label "I2C0.SCL"
 		(at 77.47 146.05 90)

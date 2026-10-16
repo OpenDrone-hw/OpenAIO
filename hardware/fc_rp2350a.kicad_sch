@@ -4801,7 +4801,7 @@
 		(uuid "159749b7-e8ed-496e-854c-8cfc9941945f")
 	)
 	(no_connect
-		(at 321.31 250.19)
+		(at 321.31 201.93)
 		(uuid "252533b0-3d19-4f7d-b004-3ff0358ed641")
 	)
 	(no_connect
@@ -5226,16 +5226,6 @@
 	)
 	(wire
 		(pts
-			(xy 321.31 182.88) (xy 324.485 182.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44e82242-8474-48ef-8374-8bc3c0a4f305")
-	)
-	(wire
-		(pts
 			(xy 321.31 187.96) (xy 324.4368 187.96)
 		)
 		(stroke
@@ -5444,16 +5434,6 @@
 		)
 		(uuid "6dfebba0-860d-4ef1-bfc0-1aded6789b97")
 	)
-	(wire
-		(pts
-			(xy 336.55 219.71) (xy 321.31 219.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e9e1572-ddc7-4787-853b-16b581488a5a")
-	)
 	(bus
 		(pts
 			(xy 394.97 232.41) (xy 394.97 229.87)
@@ -5513,16 +5493,6 @@
 			(type default)
 		)
 		(uuid "7867114c-6e48-4f07-a69b-7c4a1a7177df")
-	)
-	(wire
-		(pts
-			(xy 321.31 190.5) (xy 324.485 190.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "787d589b-e27e-4581-a225-4f87ea1ba177")
 	)
 	(bus
 		(pts
@@ -6214,16 +6184,6 @@
 		)
 		(uuid "093e2a44-169e-477f-b374-9f3d4dbde102")
 	)
-	(label "LED_STRIP_L"
-		(at 336.55 219.71 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0a018230-ea2e-45b6-b287-211d450bea80")
-	)
 	(label "D-"
 		(at 119.38 285.75 0)
 		(effects
@@ -6307,6 +6267,16 @@
 		)
 		(uuid "6bda9187-f192-4b87-a367-ed7a44b646f6")
 	)
+	(label "LED_STRIP_L"
+		(at 321.31 247.65 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "778a285b-8d63-4dc3-90ae-79e68332a5a6")
+	)
 	(label "ESC_CURR"
 		(at 151.13 184.15 0)
 		(effects
@@ -6329,7 +6299,7 @@
 		(uuid "812656dc-5c97-432d-b997-571ca3076de6")
 	)
 	(label "LED0"
-		(at 321.31 247.65 0)
+		(at 321.31 250.19 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6434,6 +6404,16 @@
 		)
 		(uuid "a823e4d9-535f-435e-82ab-efe030427cec")
 	)
+	(label "SPI0.SCK"
+		(at 321.31 199.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bb10b038-242d-4b88-a1aa-017921c011c6")
+	)
 	(label "SPI1.MOSI"
 		(at 342.9 168.91 180)
 		(effects
@@ -6465,6 +6445,16 @@
 			(justify right bottom)
 		)
 		(uuid "e44a3b5b-08a5-4371-afc6-5fccb60d13c7")
+	)
+	(label "FLASH_CS"
+		(at 321.31 204.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e8b57fd4-e3fb-49ba-9ad1-88c2772d3940")
 	)
 	(label "D+"
 		(at 119.38 293.37 0)
@@ -6564,7 +6554,7 @@
 	)
 	(hierarchical_label "MOTOR2"
 		(shape bidirectional)
-		(at 321.31 204.47 0)
+		(at 321.31 190.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6674,7 +6664,7 @@
 	)
 	(hierarchical_label "MOTOR4"
 		(shape bidirectional)
-		(at 321.31 199.39 0)
+		(at 321.31 219.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6773,7 +6763,7 @@
 	)
 	(hierarchical_label "MOTOR3"
 		(shape bidirectional)
-		(at 321.31 201.93 0)
+		(at 321.31 182.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)

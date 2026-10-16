@@ -2,6 +2,8 @@
 
 Source: `kicad-cli sch export netlist` of `hardware/OpenAIO.kicad_sch` at OpenAIO `be152bb` (branch `work/d81e559`).
 
+**2026-10-16 IO remap** (shortest U2-to-part runs on the placed 8L board, `hardware/tools/io_remap_sch.py`): MOTOR2-4, SD SCK/CS, LED_STRIP and LED0 moved; GPIO23 is now the free pin. SH-6 pin 6 (SBUS) moved from `UART1_RX`, where it fought the ESP32 TX, back to `PU0RX` as config.h intends. LGA columns are historical (one board since 2026-10).
+
 The pad nets of `OpenAIO-Core.kicad_pcb` and `OpenAIO-Base.kicad_pcb` match the netlist:
 - J91 (Core LGA pads) and J90 (Base land) carry the same net on all 46 pads.
 - U2, U22, U13, Card1 and U12 match pad for pad.
@@ -25,7 +27,7 @@ The pad nets of `OpenAIO-Core.kicad_pcb` and `OpenAIO-Base.kicad_pcb` match the 
 | 5 | 8 | `/Pads/I2C0.SCL` | Core | J23 "SCL", R11 5.1k to +3.3V | none | I2C0 SCL |
 | 6 | 9 | `UART1_TX` | 33 | J54 "TX1" | U22.27 U0RXD (ESP32-C3 GPIO20) | **UART1 TX** (F11 UART_AUX): CRSF to ELRS |
 | 7 | 10 | `UART1_RX` | 25 | J55 "RX1" | U22.28 U0TXD (ESP32-C3 GPIO21) | **UART1 RX** (F11 UART_AUX): CRSF from ELRS, `SERIALRX_UART` |
-| 8 | 12 | `/RP2354A/LED_STRIP_L` | 46 as `LED_STRIP` | Q2 AP1606 gate. Q2 drain = `LED_STRIP` with R14 2.4k to +5V. TXU0101 + 200R planned | J20, J21, J31, J32 "LED" | LED_STRIP, WS2812 on PIO1. Inverted by Q2 today (ISSUES I2) |
+| 8 | 12 | `MOTOR4` | 21 | none | R96 220R to U19.25 PB4 (ESC4) | MOTOR 4, DShot on PIO0 |
 | 9 | 13 | `/IMU/GYRO_INT` | Core | U8.4 INT1 | none | GYRO_1_EXTI |
 | 10 | 14 | `/IMU/SPI1.SCK` | Core | U8.13 SCx | none | SPI1 SCK |
 | 11 | 15 | `/IMU/SPI1.MOSI` | Core | U8.14 SDx | none | SPI1 SDO |
@@ -35,16 +37,16 @@ The pad nets of `OpenAIO-Core.kicad_pcb` and `OpenAIO-Base.kicad_pcb` match the 
 | 15 | 19 | `/OSD/OSD_EN` | Core | U9.6 S (SN74LVC1G3157). Low selects B1 = `VIDEO_IN` | none | OSD_EN (PIO2) |
 | 16 | 27 | `/OSD/OSD_SYNC` | Core | U11.1 TLV7031 OUT | none | OSD_SYNC (PIO2 input) |
 | 17 | 28 | `/RP2354A/BEEPER` | 34 as `BUZZER-` | Q1 AP1606 gate, R13 100k to GND | J29 "BUZ-" (J33 "BUZ+" = +5V) | BEEPER, `BEEPER_INVERTED` (high = on) |
-| 18 | 29 | `SPI0.SCK` | 12 | none | Card1.5 CLK | SPI0 SCK |
+| 18 | 29 | `MOTOR3` | 19 | none | R77 220R to U17.25 PB4 (ESC3) | MOTOR 3 |
 | 19 | 31 | `SPI0.MOSI` | 13 | none | Card1.3 CMD | SPI0 SDO |
 | 20 | 32 | `SPI0.MISO` | 17 | none | Card1.7 DAT0 | SPI0 SDI |
-| 21 | 33 | `FLASH_CS` | 29 | none | Card1.2 CD/DAT3, R34 10k to +3.3V | SDCARD_SPI_CS. The name is historical: this is the SD card CS |
-| 22 | 34 | `MOTOR4` | 21 | none | R96 220R to U19.25 PB4 (ESC4) | MOTOR 4, DShot on PIO0 |
-| 23 | 35 | `MOTOR3` | 19 | none | R77 220R to U17.25 PB4 (ESC3) | MOTOR 3 |
-| 24 | 36 | `MOTOR2` | 23 | none | R58 220R to U15.25 PB4 (ESC2) | MOTOR 2 |
+| 21 | 33 | `MOTOR2` | 23 | none | R58 220R to U15.25 PB4 (ESC2) | MOTOR 2 |
+| 22 | 34 | `SPI0.SCK` | 12 | none | Card1.5 CLK | SPI0 SCK |
+| 23 | 35 | unconnected | none | none | none | Free. See ISSUES I5 |
+| 24 | 36 | `FLASH_CS` | 29 | none | Card1.2 CD/DAT3, R34 10k to +3.3V | SDCARD_SPI_CS. The name is historical: this is the SD card CS |
 | 25 | 37 | `MOTOR1` | 24 | none | R39 220R to U13.25 PB4 (ESC1) | MOTOR 1 |
-| 26 | 40 | `/RP2354A/LED0` | Core | R15 75R + R16 75R to D1 (blue), cathode to GND | none | LED0, `LED0_INVERTED` (active high) |
-| 27 | 41 | unconnected | none | none | none | Free (ADC1). See ISSUES I5 and I6 |
+| 26 | 40 | `/RP2354A/LED_STRIP_L` | 46 as `LED_STRIP` | Q2 AP1606 gate. Q2 drain = `LED_STRIP` with R14 2.4k to +5V. TXU0101 + 200R planned | J20, J21, J31, J32 "LED" | LED_STRIP, WS2812 on PIO1. Inverted by Q2 today (ISSUES I2) |
+| 27 | 41 | `/RP2354A/LED0` | Core | R15 75R + R16 75R to D1 (blue), cathode to GND | none | LED0, `LED0_INVERTED` (active high) |
 | 28 | 42 | `/RP2354A/ESC_CURR` | 8 as `CURR` | R5 1k + C9 100n | U25.6 INA186A3 OUT | ADC_CURR (ADC2), `ibat_scale` 200 |
 | 29 | 43 | `/RP2354A/ADC_VBAT` | 36 as `+BATT` | R1 100k from +BATT, R2 10k to GND, C2 100n | +BATT | ADC_VBAT (ADC3), `vbat_scale` 110 |
 | SWCLK | 24 | `SWCLK` | 20 | none | TP32 (Base B.Cu) | SWD |
