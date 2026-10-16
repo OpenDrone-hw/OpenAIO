@@ -48,6 +48,26 @@ copper and vias only; FET RDS(on) not included):
 Full +BATT planes were modelled and are worse (0.28-0.35 mOhm): every buried via perforates every inner plane, so
 shaped pours with via arrays in the FET pads carry the current, not plane count.
 
+## Power at 40 A per ESC (2026-10-16, owner's routed board)
+
+`$KPY hardware/tools/power_paths_v2.py hardware/OpenAIO.kicad_pcb --esc 40 --temp 45 --hot 10` (161 A battery,
+6-step statistics, every via, pour and plane; DC, no skin effect). Copper at 80 C is x1.125.
+
+| Path | R_eff (mOhm) | Loss 45 C (W) | Loss 80 C (W) | Worst spot |
+|---|---|---|---|---|
+| /CSA+ battery pad to shunt | 0.176 | 4.6 | 5.1 | L8 (62.8, 51.0) 53 A/mm, 1.2 W |
+| Shunt Rsense2 0.2 mOhm (ASR-S-3-0.2F) | 0.200 | 5.2 | 5.2 | above its likely 3 W rating |
+| +BATT shunt to 12 high-side FETs | 0.616 | 16.0 | 18.0 | L4 carries 11.9 W; L4 neck (63.9, 53.7) 147 A/mm at the +5V_USB/CC1 vias |
+| GND low-side FETs to battery - | 0.268 | 7.0 | 7.8 | L7 (76.9, 46.6) 30 A/mm |
+| 12 phases | 0.10-0.14 per FET | 1.5 | 1.7 | even |
+| Copper + shunt | | 34.2 | 37.8 | |
+| FET conduction, 2 x DOY180N03T per ESC | 1.0 typ, about 1.4 hot | 12.8 | 18 | |
+
++BATT R_kk per high-side FET: ESC1 0.39-0.93, ESC2 1.10-1.24, ESC3 1.25-1.45, ESC4 1.28-1.42 mOhm: the current runs
+from the battery pad down to the shunt at (61, 54) and back up to the far ESCs, mostly on L4. Fed from C98 beside the
+battery pad, today's copper gives 14.9 W instead of 16.0: the shunt position, not plane count, sets this loss.
+Peak via current: 8.5 A per 0.15 mm via at the shunt (CSA+ and +BATT clusters).
+
 ## DRC at hand-over
 
 | | Errors | Distinct spots | Unconnected |
