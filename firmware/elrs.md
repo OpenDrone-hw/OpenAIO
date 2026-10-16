@@ -1,11 +1,11 @@
-# ELRS on the OpenAIO Base (ESP32-C3FH4 + SX1281)
+# ELRS on OpenAIO (ESP32-C3 + SX1281)
 
 Sources:
 - ExpressLRS/targets `42ed776a`
 - ExpressLRS/ExpressLRS `15c78990`
-- OpenAIO netlist at `be152bb`
+- OpenAIO netlist, 2026-10-16
 
-Pin-by-pin evidence is in `PINOUT.md`, section "ELRS receiver".
+Pin-by-pin evidence is in [PINOUT.md](PINOUT.md), section "ELRS receiver".
 
 ## Target
 
@@ -49,7 +49,9 @@ Not verified on hardware. Without the overlay, the board runs exactly as the sto
   - `SERIALRX_PROVIDER SERIALRX_CRSF`
   - `DEFAULT_RX_FEATURE FEATURE_RX_SERIAL`
 - **Telemetry:** CRSF telemetry runs on the same port (`FEATURE_TELEMETRY` is on by default).
-- **Test pads:** J54 "TX1" and J55 "RX1" on the Core sit on this link. They are not a spare UART (ISSUES I9).
+- **Test pads:** J54 "TX1" and J55 "RX1" sit on this link. They are not a spare UART (ISSUES I9).
+- **ELRS enable:** GPIO27 (`ELRS_EN`, PINIO1 in `config.h`) drives the ESP32-C3 CHIP_EN through R115. Solder jumper JP2
+  (normally open) pulls CHIP_EN to GND and holds ELRS off (ISSUES I5, I10).
 
 ## Flashing paths
 
@@ -57,7 +59,7 @@ The ESP32-C3 straps are correct for both boot modes (ESP32-C3FH4.pdf §3, p25-26
 - GPIO2 is pulled up by R111.
 - GPIO8 is pulled up by R112.
 - GPIO9 is pulled up by R113 and can be pulled low through TP9.
-- CHIP_EN is an RC only (R114 10k, C84 1 uF). The FC can neither reset nor strap the C3 (ISSUES I5).
+- CHIP_EN has R114 10k to +3.3V, C84 1 uF and R115 1k from `ELRS_EN` (GPIO27): the FC can reset the C3 but cannot pull GPIO9 low (ISSUES I5).
 
 **Power:** the RX runs on +3.3V from U7, which is fed by +4v5. USB power alone is enough for every path below.
 
@@ -69,15 +71,16 @@ The ESP32-C3 straps are correct for both boot modes (ESP32-C3FH4.pdf §3, p25-26
 ### 2. First flash of a blank C3, or recovery
 
 The ESP32-C3FH4 arrives blank. Passthrough cannot tell blank ELRS firmware to reboot into its bootloader, so the ROM download mode must be forced by hand:
-1. Short TP9 "BOOT" (Base B.Cu) to GND.
-2. Apply power, then remove the short. CHIP_EN's RC reset samples GPIO9 low, and the C3 enters UART download mode on U0TXD/U0RXD.
+1. Short TP9 "BOOT" (B.Cu) to GND.
+2. Apply power, or reset the C3 (JP2 briefly closed), then remove the short. The reset samples GPIO9 low and the C3 enters UART download mode on U0TXD/U0RXD.
 3. Flash, using either route:
-   - **(a) External 3.3 V USB-UART adapter on the Core pads.** Adapter TX goes to J54 "TX1" (net `UART1_TX`, ESP32 U0RXD). Adapter RX goes to J55 "RX1" (net `UART1_RX`, ESP32 U0TXD). Hold the RP2354A in BOOTSEL (U1 pressed at plug-in) so that it does not drive GPIO6. Then use the Configurator method "UART", or esptool.
+   - **(a) External 3.3 V USB-UART adapter on the pads.** Adapter TX goes to J54 "TX1" (net `UART1_TX`, ESP32 U0RXD). Adapter RX goes to J55 "RX1" (net `UART1_RX`, ESP32 U0TXD). Hold the RP2354A in BOOTSEL (U1 pressed at plug-in) so that it does not drive GPIO6. Then use the Configurator method "UART", or esptool.
    - **(b) Betaflight passthrough with the C3 already in ROM download mode.** Expected to work, because esptool only needs the ROM loader on the far side of the passthrough. **Not verified.**
 4. Power-cycle without the short.
 
 ## Known board limits that touch ELRS
 
-- **I5:** no FC control of CHIP_EN or GPIO9. Recovering a bricked RX needs TP9 and a power cycle.
+- **I5:** no FC control of GPIO9. Recovering a bricked RX needs TP9 and a reset.
+- **I10:** SH-6 pin 6 (SBUS from an air unit) is on the same net as the ESP32 TX; hold ELRS off to use it.
 - **I11:** the D9 status LED runs on +3.3V, below its 3.5 V VDD minimum. The LED may be dim, show wrong colours, or stay dark. The radio link is not affected.
 - **I12:** ESP32-C3 GPIO10 is tied to GND. No ELRS layout for this target uses GPIO10.

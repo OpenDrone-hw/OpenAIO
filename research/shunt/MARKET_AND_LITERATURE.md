@@ -2,7 +2,7 @@
 
 Market survey, literature review, firmware constraints and recommendation
 
-- Board under study: OpenAIO, 25.5 mm toothpick AIO, 2-6S, 4x AM32 ESC, Betaflight FC, INA186A3 (100 V/V), 0.2 mOhm 2512 shunt.
+- Board under study: OpenAIO, 25.5 mm toothpick AIO, 3S-6S (see [INPUT_RANGE.md](../INPUT_RANGE.md)), 4x AM32 ESC, Betaflight FC, INA186A3 (100 V/V), 0.2 mOhm 2512 shunt.
 - Date of research: 2026-10-07. Sources were fetched on this date. Every claim carries a URL. Claims I could not confirm are marked **UNCONFIRMED**. Numbers I calculated myself are marked **(derived)** and show their inputs.
 - Photo evidence: for the market survey I downloaded product photos (mostly 1000-1600 px) and inspected them, cropping when needed. Each row gives a confidence level:
   - **High**: a shunt body plus a legible value marking, or a manufacturer render or diagram that labels the part as a shunt.

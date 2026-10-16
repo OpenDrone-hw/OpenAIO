@@ -1,31 +1,22 @@
 # OpenAIO
 
-An all-in-one for toothpick-class FPV on 2 to 6 cells: flight controller, 4-in-1 ESC and
-ExpressLRS receiver on 25.5 x 25.5 mm mounting, on one PCB. It merges three
-boards OpenDrone already makes: OpenFC-Lite-Mini (RP2354A flight controller),
-OpenESC-20x20 (AM32 4-in-1) and OpenRX Lite (ELRS receiver). The layout is the
-hand-routed Base and Core hat of 2026-08-22, which were joined by an LGA; since
-2026-10-15 they are one 8-layer HDI board (1+6+1), with the Core placed inside
-the Base outline.
+An all-in-one for 85 mm whoops, 2.5 inch cinewhoops and 3 inch freestyle: RP2354A flight controller, four AM32 ESC channels and an ExpressLRS 2.4 GHz
+receiver on one 8-layer HDI board with 25.5 x 25.5 mm mounting. Its circuits follow OpenFC-Lite-Mini, OpenESC-20x20 and
+OpenRX-Lite.
+
+<p>
+<img src="images/front.png" width="400" alt="OpenAIO front render" />
+<img src="images/back.png" width="400" alt="OpenAIO back render" />
+</p>
 
 [![Status](https://img.shields.io/endpoint?url=https://opendrone.be/api/status/OpenAIO.json)](https://github.com/OpenDrone-hw/.github/blob/main/CONTRIBUTING.md#the-life-of-a-project)
 [![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/v3sWmTcx3R)
 
-The KiCad implementation lives in `hardware/`. Use Git for branch state and
-manufacturing or test evidence for maturity claims. Layout hand-over:
-[research/ROUTING.md](research/ROUTING.md).
-
 ## Why
 
-The three-board stack works and OpenDrone already ships all three parts, but on
-a toothpick the stack is most of the weight and all of the height. Merging them
-removes two connectors, two sets of mounting hardware and a lot of wiring, and
-those connectors are where builds fail.
-
-The parts are proven separately, so this is an integration problem rather than
-a research one. The only 6S AIO with onboard serial ELRS on the market is
-closed and digital-only; an open one with analog OSD and blackbox has a place,
-see the market research linked below.
+Flight controller, ESC and receiver are usually three boards joined by connectors and wiring. On a small quad the
+stack costs weight and height, and the connectors are where builds fail. OpenAIO puts all three on one board and keeps
+the firmware stock. The market research linked under Prior art covers competing AIOs.
 
 ## Specifications
 
@@ -33,116 +24,49 @@ From the design files. Not manufactured yet.
 
 | | |
 |---|---|
-| Mounting | 25.5 x 25.5 mm, board 35.4 x 35.4 mm |
-| Stack | One board: 8-layer HDI 1+6+1, 1.0 mm, 1 oz copper on all layers, ENIG; through vias, laser microvias L1-L2 and L7-L8, buried vias L2-L7 (OpenAIO-Whoop stackup) |
-| Input | 2-6S LiPo (6.0-25.2 V), with a low-ESR capacitor of at least 35 V and 220 uF at the battery lead (see Battery lead) |
-| Flight controller | RP2354A, BMI270 IMU, BMP580 barometer, analog PIO OSD, microSD blackbox, USB-C |
-| ESC | 4x AM32, AT32F421 + NSG2065Q per channel like the OpenESC boards |
-| Receiver | ExpressLRS 2.4 GHz, ESP32-C3 + SX1281 |
-| Assembly | Chosen per release; see production/. LCSC basic parts preferred |
+| Mounting | 25.5 x 25.5 mm, four 3.0 mm holes |
+| Board | 35.4 x 35.4 mm, 8 layers HDI 1+6+1, 0.997 mm, 1 oz copper on all layers, ENIG |
+| Input | 3S to 6S LiPo, 9.0 to 25.2 V; 2S is not supported (gate driver VCC, see research/INPUT_RANGE.md) |
+| Input protection | None: no reverse polarity protection, no TVS. Fit a low-ESR electrolytic of at least 35 V on the battery leads |
+| Current rating | Not established; no measurement exists |
+| Flight controller | RP2354A, BMI270 IMU, BMP580 barometer, USB-C |
+| OSD and blackbox | Analog PIO framebuffer OSD, microSD card |
+| ESC | 4x AM32, AT32F421G8U7 + NSG2065Q + 6x DOY180N03T (30 V) per channel, one shared current sensor |
+| Receiver | ExpressLRS 2.4 GHz, ESP32-C3 + SX1281, u.FL antenna |
+| Outputs | +10V (always on with a battery) on SH-6 and pads, +5V and +4v5 pads, WS2812 strip pads, buzzer pads |
+| Firmware | Betaflight, AM32, ExpressLRS, stock upstream |
 
-## Pinout
-
-Measured from `hardware/OpenAIO.kicad_pcb` (pad nets) and the Betaflight target in
-`research/review-2026-10/firmware/` (`config.h`; `PINOUT.md` has the full GPIO map). Port
-names follow `config.h`. The silkscreen carries short pad labels (`5V`, `LED`, `gnd`, `4v5`,
-`cam`, `VTX`, `SCL`, `SDA`, `R0`/`R1`/`T0`/`t1`, `B+`/`B-`); there is no forward arrow or motor
-map. `GYRO_1_ALIGN` is `CW180_DEG` with forward at the SH-6 (U12) edge; confirm it
-in the configurator Setup tab at bring-up.
-
-### FC pads (the Core's top pads)
-
-| Pad | Net | Function |
-|---|---|---|
-| J39 | `/OSD/VIDEO_OUT` | Analog video out (OSD) to the VTX |
-| J38 | `/OSD/VIDEO_IN` | Analog video in from the camera |
-| J30, J37 | `+5V` | 5 V out |
-| J42, J52 | `+4v5` | 4.5 V rail |
-| J34, J35, J40, J43, J50, J53 | `GND` | Ground |
-| J26 | `/Pads/I2C0.SDA` | I2C0 SDA, GPIO4 (external mag; the onboard BMP580 shares the bus at 0x47) |
-| J23 | `/Pads/I2C0.SCL` | I2C0 SCL, GPIO5 |
-| J44 | `/Pads/PIOUART0_TX` | Betaflight UART0 TX, GPIO2 |
-| J45 | `/Pads/PU0RX` | Betaflight UART0 RX, GPIO3: SBUS from the air unit (also SH-6 pin 6) |
-| J49 | `UART0_TX` | Betaflight PIOUART0 TX, GPIO0: MSP DisplayPort (also SH-6 pin 3) |
-| J48 | `UART0_RX` | Betaflight PIOUART0 RX, GPIO1 (also SH-6 pin 4) |
-| J54 | `UART1_TX` | UART1 TX, GPIO6, CRSF to the onboard ELRS (service pad) |
-| J55 | `UART1_RX` | UART1 RX, GPIO7, CRSF from the onboard ELRS; driven by the ESP32, do not drive it |
-
-The net names are the schematic's; `UART0_TX/RX` carry the PIO UART and
-`PIOUART0_TX`/`PU0RX` the hardware UART0, because Betaflight cannot run SBUS on a PIO
-UART (firmware ISSUES I1).
-
-### Base pads
-
-| Pad | Net | Function |
-|---|---|---|
-| U24.1 | `/CSA+` | Battery +, through the current shunt |
-| U24.2 | `GND` | Battery - |
-| U24.12-14 | `/1A /1B /1C` | Motor 1, ESC1 (Betaflight MOTOR1, GPIO25) |
-| U24.15-17 | `/2A /2B /2C` | Motor 2, ESC2 (MOTOR2, GPIO24) |
-| U24.18-20 | `/3C /3B /3A` | Motor 3, ESC3 (MOTOR3, GPIO23) |
-| U24.21-23 | `/4C /4B /4A` | Motor 4, ESC4 (MOTOR4, GPIO22) |
-| J15, J16, J24, J25 | `+5V` | 5 V for the LED strip, one per corner |
-| J17, J18, J27, J28 | `GND` | Ground, one per corner |
-| J20, J21, J31, J32 | `LED_STRIP` | WS2812 data, GPIO8, through the inverting Q2 stage (firmware ISSUES I2) |
-| J41, J51 | `+10V` | VTX / air-unit power, always on with a battery (U3 EN is tied to +BATT) |
-| U12 | SH-6 | 1 `+10V`, 2 `GND`, 3 PIOUART0 TX, 4 PIOUART0 RX, 5 `GND`, 6 UART0 RX (SBUS) |
-| J33 | `+5V` | Buzzer + |
-| J29 | `BUZZER-` | Buzzer - (low-side switched) |
-| TP9 | `/RX/BOOT` | ESP32-C3 boot strap (ELRS flashing) |
-| TP1, TP3, TP5, TP7 | ESC n `PA13` | AM32 SWDIO of ESC1-4 |
-| TP2, TP4, TP6, TP8 | ESC n `PA14` | AM32 SWCLK of ESC1-4 |
-| USB1 | USB-C | USB (DFU and configurator). The RP2354A has no SWD pads |
-| JP1 | RF | ELRS 2.4 GHz antenna connector |
-
-Within each motor group the pads carry phases A, B, C (nets above); swapping any two
-reverses the motor, so set direction in AM32 or with Betaflight's motor direction instead
-of rewiring.
-
-## Battery lead
-
-- No reverse polarity protection: a reversed battery destroys the board.
-- Required: a low-ESR capacitor of at least 35 V (50 V preferred) and 220 uF
-  or more at the battery pads. The on-board bank is ceramic only, and a
-  hot-plugged 6S pack can ring above the 30 V FETs, the 38 V buck and the 42 V
-  current-sense amplifier ([INPUT_RANGE.md](research/review-2026-10/INPUT_RANGE.md)).
+Technical write-up, part list and layout constraints: [AGENTS.md](AGENTS.md). Pinout and firmware:
+[firmware/](firmware/README.md).
 
 ## Constraints
 
-- 25.5 x 25.5 mm mounting, the toothpick standard.
-- Runs stock firmware: Betaflight on the FC, AM32 per ESC channel, ExpressLRS
-  on the receiver. No forks.
-- Reuses the manufactured circuits of OpenFC-Lite-Mini, OpenESC-20x20 and
-  OpenRX where they fit; parts come from the shared library first.
-- Assembly from LCSC parts, extended parts kept to a minimum; assembly house
-  chosen per release, see production/.
-- Do not start from the three schematics stitched together. That was tried,
-  and it produced a board that looked finished and was not (recoverable at the
-  `pre-reset-2026-08-13` tag). Start from the requirements.
+- 25.5 x 25.5 mm mounting, the whoop and toothpick standard.
+- Runs stock firmware: Betaflight on the FC, AM32 per ESC channel, ExpressLRS on the receiver. No forks.
+- Parts come from the shared library first; assembly from LCSC parts, extended parts kept to a minimum.
+- 8-layer HDI 1+6+1 with filled microvias; fabrication limits are in [research/NEXTPCB.md](research/NEXTPCB.md).
 
 ## Prior art
-
-The three designs this merges, all manufactured and flying:
 
 - [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini): the RP2354A flight controller
 - [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20): the AM32 4-in-1 power stage
 - [OpenRX Lite](https://github.com/OpenDrone-hw/OpenRX-Lite): the ELRS receiver
-
-Research so far, reference rather than decisions:
-
 - [Market research](https://app.notion.com/p/3f5fe06764e1818e9158c512edd58138): competing toothpick and whoop AIOs, June 2026
 - [Part alternatives](https://app.notion.com/p/3f5fe06764e1819eade0dc5bfbfdff7c): ESC-stage part alternatives, gate driver and FET options, March 2026
-- The stitched design reset in August 2026 is in the git history before #9; reference for the thinking, not a design to continue from.
+- [Current sensing](research/shunt/MARKET_AND_LITERATURE.md): shunt against copper sensing, market and literature
+
+Notes: [input range](research/INPUT_RANGE.md), [pin constraints](research/IO-CONSTRAINTS.md),
+[board data and copper model](research/ROUTING.md).
 
 ## Design questions
 
-Resolve these only as part of user-requested design work:
-
-- **Thermal.** Four power stages next to an MCU and a radio on 25.5 mm square,
-  with no airflow guarantee. What is the continuous current budget on 1 oz
-  copper on all eight layers?
-- **RF isolation.** A 2.4 GHz receiver next to four switching power stages.
-  Antenna placement, ground plane, shield can or not.
+- **Thermal.** Four power stages next to an MCU and a radio on 25.5 mm square, with no airflow guarantee. What is the
+  continuous current budget on 1 oz copper? The copper loss model in [research/ROUTING.md](research/ROUTING.md) is the
+  only number so far.
+- **RF isolation.** A 2.4 GHz receiver next to four switching power stages: ground plane and antenna placement are
+  untested.
+- **Open board issues.** The LED strip stage inverts, the ESC MCUs run from USB without gate drive power, and SBUS on
+  SH-6 shares a net with the ELRS TX: [firmware/ISSUES.md](firmware/ISSUES.md).
 
 ## In the line
 
@@ -154,6 +78,8 @@ What pairs with what, and what is available:
 KiCad files cannot be merged, so say what you intend to change before you do,
 on [Discord](https://discord.gg/v3sWmTcx3R). How everything works:
 [CONTRIBUTING.md](CONTRIBUTING.md).
+
+A repository holds design files only. Sourcing (suppliers, prices, quotes, RFQs, contacts) is handled by Incutec and never lives in OpenDrone repositories.
 
 ## License
 
