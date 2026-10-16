@@ -1272,7 +1272,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1ec1adf4-cd1a-492a-816f-22ff8bdb6a5a")
-		(property "Reference" "Card2"
+		(property "Reference" "Card1"
 			(at 72.39 77.47 0)
 			(hide yes)
 			(show_name no)

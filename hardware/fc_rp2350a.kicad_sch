@@ -4793,12 +4793,20 @@
 		(uuid "f2692429-f19e-4129-b112-092bb82207b4")
 	)
 	(no_connect
+		(at 270.51 196.85)
+		(uuid "0322078f-b774-4566-be40-1952e1dd5c15")
+	)
+	(no_connect
 		(at 119.38 295.91)
 		(uuid "0b785670-63b4-44d1-9292-9806d35ddb2e")
 	)
 	(no_connect
 		(at 270.51 219.71)
 		(uuid "159749b7-e8ed-496e-854c-8cfc9941945f")
+	)
+	(no_connect
+		(at 270.51 199.39)
+		(uuid "6088844c-e91e-49bb-8f9d-119bd07a52c8")
 	)
 	(no_connect
 		(at 270.51 217.17)
@@ -5164,7 +5172,7 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 187.96) (xy 259.08 187.96)
+			(xy 240.665 187.96) (xy 254 187.96)
 		)
 		(stroke
 			(width 0)
@@ -5544,7 +5552,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 187.96) (xy 270.51 187.96)
+			(xy 261.62 187.96) (xy 270.51 187.96)
 		)
 		(stroke
 			(width 0)
@@ -5674,7 +5682,7 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 190.5) (xy 259.08 190.5)
+			(xy 240.665 190.5) (xy 254 190.5)
 		)
 		(stroke
 			(width 0)
@@ -5954,7 +5962,7 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 190.5) (xy 270.51 190.5)
+			(xy 261.62 190.5) (xy 270.51 190.5)
 		)
 		(stroke
 			(width 0)
@@ -6243,7 +6251,7 @@
 		(uuid "1b6c8e92-01f3-4d40-b0c1-ecb55d5e047d")
 	)
 	(label "D-"
-		(at 252.73 187.96 0)
+		(at 240.665 187.96 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6282,16 +6290,6 @@
 			(justify right bottom)
 		)
 		(uuid "51dbd40f-9c57-4d31-a3de-14904ea8b6a2")
-	)
-	(label "SWCLK"
-		(at 270.51 196.85 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "55fb0ff4-3947-4adc-b284-24b5743aa6ec")
 	)
 	(label "XIN"
 		(at 270.51 179.07 180)
@@ -6390,7 +6388,7 @@
 		(uuid "8c799c9f-d9f1-4186-b8a8-5f9b0ed6b168")
 	)
 	(label "D+"
-		(at 252.73 190.5 0)
+		(at 240.665 190.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6494,19 +6492,9 @@
 		)
 		(uuid "fd39124d-7e82-49c1-959b-c015f484bb68")
 	)
-	(label "SWDIO"
-		(at 270.51 199.39 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "ffb75123-5b24-4b29-af02-c665c2bac97d")
-	)
 	(global_label "USB_D-"
 		(shape bidirectional)
-		(at 252.73 187.96 0)
+		(at 240.665 187.96 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6515,7 +6503,7 @@
 		)
 		(uuid "14432ee3-8b78-4a2b-974d-74f8ee804fbf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.73 187.96 0)
+			(at 240.665 187.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6550,7 +6538,7 @@
 	)
 	(global_label "USB_D+"
 		(shape bidirectional)
-		(at 252.73 190.5 0)
+		(at 240.665 190.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6559,7 +6547,7 @@
 		)
 		(uuid "7bf75963-1175-479f-b177-36deafcbffba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 252.73 190.5 0)
+			(at 240.665 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9769,7 +9757,7 @@
 	)
 	(symbol
 		(lib_id "lib:R")
-		(at 262.89 187.96 90)
+		(at 257.81 187.96 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9779,7 +9767,7 @@
 		(dnp no)
 		(uuid "43944504-ac69-4c1d-ba24-c6ed931cf3a2")
 		(property "Reference" "R8"
-			(at 262.89 182.626 90)
+			(at 257.81 182.626 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9789,7 +9777,7 @@
 			)
 		)
 		(property "Value" "30R"
-			(at 262.89 185.166 90)
+			(at 257.81 185.166 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9799,7 +9787,7 @@
 			)
 		)
 		(property "Footprint" "lib:R_0201_0603Metric"
-			(at 262.89 189.738 90)
+			(at 257.81 189.738 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9810,7 +9798,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 262.89 187.96 0)
+			(at 257.81 187.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9821,7 +9809,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 262.89 187.96 0)
+			(at 257.81 187.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9832,7 +9820,7 @@
 			)
 		)
 		(property "LCSC" "C778391"
-			(at 262.89 187.96 0)
+			(at 257.81 187.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9843,7 +9831,7 @@
 			)
 		)
 		(property "MPN" "NQ01WMJ0300TEE"
-			(at 71.12 71.12 0)
+			(at 66.04 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9854,7 +9842,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL"
-			(at 71.12 71.12 0)
+			(at 66.04 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9865,7 +9853,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 262.89 187.96 0)
+			(at 257.81 187.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11731,85 +11719,6 @@
 		)
 	)
 	(symbol
-		(lib_id "lib:TestPoint")
-		(at 270.51 196.85 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "73892328-8048-408b-bc43-983d5074f722")
-		(property "Reference" "TP42"
-			(at 266.415 192.2779 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 266.415 194.8179 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "lib:TestPoint_Pad_D1.0mm"
-			(at 269.59 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 269.59 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 264.51 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6a5800da-21fc-48ca-96ba-8f378228f486")
-		)
-		(instances
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2"
-					(reference "TP42")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "lib:GND")
 		(at 110.49 200.66 0)
 		(unit 1)
@@ -11889,7 +11798,7 @@
 	)
 	(symbol
 		(lib_id "lib:R")
-		(at 262.89 190.5 270)
+		(at 257.81 190.5 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11899,7 +11808,8 @@
 		(dnp no)
 		(uuid "77838cc4-5cd1-4b52-88d0-416922a8a22c")
 		(property "Reference" "R9"
-			(at 262.89 193.294 90)
+			(at 257.81 193.294 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11909,7 +11819,8 @@
 			)
 		)
 		(property "Value" "30R"
-			(at 262.89 195.834 90)
+			(at 257.81 195.834 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11919,7 +11830,7 @@
 			)
 		)
 		(property "Footprint" "lib:R_0201_0603Metric"
-			(at 262.89 188.722 90)
+			(at 257.81 188.722 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11930,7 +11841,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 262.89 190.5 0)
+			(at 257.81 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11941,7 +11852,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 262.89 190.5 0)
+			(at 257.81 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11952,7 +11863,7 @@
 			)
 		)
 		(property "LCSC" "C778391"
-			(at 262.89 190.5 0)
+			(at 257.81 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11963,7 +11874,7 @@
 			)
 		)
 		(property "MPN" "NQ01WMJ0300TEE"
-			(at 71.12 71.12 0)
+			(at 66.04 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11974,7 +11885,7 @@
 			)
 		)
 		(property "Manufacturer" "UNI-ROYAL"
-			(at 71.12 71.12 0)
+			(at 66.04 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11985,7 +11896,7 @@
 			)
 		)
 		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 262.89 190.5 0)
+			(at 257.81 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12578,86 +12489,7 @@
 	)
 	(symbol
 		(lib_id "lib:TestPoint")
-		(at 270.51 199.39 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "81a5ee99-be26-4cf4-8891-1f5983adc97d")
-		(property "Reference" "TP43"
-			(at 266.415 194.8179 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 266.415 197.3579 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "lib:TestPoint_Pad_D1.0mm"
-			(at 269.59 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 269.59 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 264.51 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0cad8d6b-0c69-4ddc-878c-8b4437821cf8")
-		)
-		(instances
-			(project "OpenAIO"
-				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2"
-					(reference "TP43")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "lib:TestPoint")
-		(at 252.73 190.5 90)
+		(at 240.665 190.5 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12668,7 +12500,7 @@
 		(fields_autoplaced yes)
 		(uuid "838b8145-21f2-4018-8bb4-d652f363e846")
 		(property "Reference" "TP25"
-			(at 249.428 184.785 90)
+			(at 237.363 184.785 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12678,7 +12510,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 249.428 187.325 90)
+			(at 237.363 187.325 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12688,7 +12520,7 @@
 			)
 		)
 		(property "Footprint" "lib:TestPoint_Pad_D1.0mm"
-			(at 252.73 185.42 0)
+			(at 240.665 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12699,7 +12531,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 252.73 185.42 0)
+			(at 240.665 185.42 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12710,7 +12542,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 252.73 190.5 0)
+			(at 240.665 190.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13015,7 +12847,7 @@
 	)
 	(symbol
 		(lib_id "lib:TestPoint")
-		(at 252.73 187.96 90)
+		(at 240.665 187.96 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -13026,7 +12858,7 @@
 		(fields_autoplaced yes)
 		(uuid "8cba8201-ec43-457d-8151-b68f2a7ca259")
 		(property "Reference" "TP24"
-			(at 249.428 182.88 90)
+			(at 237.363 182.88 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13036,7 +12868,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 249.428 185.42 90)
+			(at 237.363 185.42 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13046,7 +12878,7 @@
 			)
 		)
 		(property "Footprint" "lib:TestPoint_Pad_D1.0mm"
-			(at 252.73 182.88 0)
+			(at 240.665 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13057,7 +12889,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 252.73 182.88 0)
+			(at 240.665 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13068,7 +12900,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 252.73 187.96 0)
+			(at 240.665 187.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
