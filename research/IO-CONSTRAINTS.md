@@ -1,15 +1,13 @@
-# OpenAIO RP2354A IO remap: hard constraints
+# OpenAIO RP2354A pin constraints
 
-Read-only research. Sources: RP2350 datasheet (Table 3 sec 1.2.3 and Table 677 "GPIO Bank 0 Functions"), pico-sdk in the betaflight tree, betaflight branch `pico-enable-osd-hd`. Firmware cites are relative to `~/Incutec/OpenDrone/firmware/betaflight/src/platform/PICO/`.
+What the RP2350 and Betaflight allow on each GPIO, for anyone who wants to move a signal. Sources: RP2350 datasheet
+(Table 3 section 1.2.3 and Table 677 "GPIO Bank 0 Functions"), pico-sdk in the Betaflight tree, Betaflight branch
+`pico-enable-osd-hd`. Firmware cites are relative to `src/platform/PICO/` in the Betaflight tree. The pin assignment of
+this board is `firmware/betaflight/configs/OPENAIO/config.h`, listed in [PINOUT.md](../firmware/PINOUT.md).
 
-## 0. Which config.h is the real one (READ FIRST)
-
-| File | Matches PINOUT.md? |
-|---|---|
-| `hardware/OpenAIO/research/review-2026-10/firmware/betaflight/OPENAIO/config.h` | YES (this is what "29 of 29" was checked against) |
-| `src/config/configs/OPENFC_LITE_MINI_RP2350A/config.h` (in the tree) | NO. It is a different board: UART0=GPIO0/1 (VTX), PIOUART0=GPIO2/3 (GPS), PINIO1=GPIO27, no PIO_LEDSTRIP_INDEX override, no ADC/I2C baro. |
-
-Differences that matter: OPENAIO puts HW UART0 on GPIO2/3 (F11 AUX, for SBUS 8E2) and PIOUART0 on GPIO0/1; it sets `PIO_LEDSTRIP_INDEX 1` (OPENAIO config.h:159) because the OSD program takes 31 of 32 PIO2 slots. target.h default is LED strip on PIO2 (`target/RP2350A/target.h:104-110`) which would fail next to the OSD (`osd/osd_pico.c:225-230`). GPIO27 is free on OPENAIO (PINOUT row 27); the in-tree board uses it for PINIO.
+OPENAIO puts HW UART0 on GPIO2/3 (F11 AUX, for SBUS 8E2) and PIOUART0 on GPIO0/1. It sets `PIO_LEDSTRIP_INDEX 1`
+(config.h) because the OSD program takes 31 of 32 PIO2 slots; the target.h default is the LED strip on PIO2
+(`target/RP2350A/target.h:104-110`), which would fail next to the OSD (`osd/osd_pico.c:225-230`).
 
 ## 1. RP2350 GPIO function table, GPIO0-29 (QFN-60 RP2350A)
 
@@ -136,13 +134,13 @@ Derived pin sets (what Betaflight can actually use, section 2):
 | ADC VBAT, CURR | 2 | two of {26,27,28,29} |
 | MOTOR1-4, LED_STRIP, BEEPER, LED0, GYRO INT, 3 CS | 11 | free |
 | SWD / USB / QSPI / RUN | dedicated pins, not GPIO | n/a |
-| Total GPIO used today | 29 of 30 (GPIO27 free) | |
+| Total GPIO used today | 30 of 30 (GPIO27 is `ELRS_EN`) | |
 
-Conflict traps for a global search: (a) SPI0 and I2C0/UART share pins by position, a GPIO has exactly one funcsel; (b) UART0 and SPI0 positions overlap physically (GPIO0-3 both), so choose instances then positions; (c) ADC pins 26-29 are also SPI1/UART1/UART0/I2C pins, so using 2 for ADC removes 2 UART/SPI1 options; (d) PINOUT lists GPIO3 "PU0RX" as an LGA net, so moving SBUS RX changes the LGA pad.
+Conflict traps for a global search: (a) SPI0 and I2C0/UART share pins by position, a GPIO has exactly one funcsel; (b) UART0 and SPI0 positions overlap physically (GPIO0-3 both), so choose instances then positions; (c) ADC pins 26-29 are also SPI1/UART1/UART0/I2C pins, so using 2 for ADC removes 2 UART/SPI1 options.
 
-## 3. ESP32-C3 (U22 ESP32-C3FH4) for ExpressLRS
+## 3. ESP32-C3 (U22, schematic value `ESP32-C3`, pin usage as the FH4 package) for ExpressLRS
 
-Source: `hardware/KiCad-Library/datasheet/ESP32-C3FH4.pdf` v1.9, sec 2 pin tables and sec 3 strapping (Chinese edition); fork `~/Incutec/OpenDrone/firmware/ExpressLRS` (remote opendrone, HEAD 7077a815).
+Source: `hardware/KiCad-Library/datasheet/ESP32-C3FH4.pdf` v1.9, sec 2 pin tables and sec 3 strapping (Chinese edition).
 
 | Pins | Status |
 |---|---|
@@ -160,16 +158,4 @@ Safe for SX1281 on C3: SCK/MOSI/MISO/NSS any of {0,1,3,4,5,6,7,10}; BUSY any inp
 
 ## 4. AM32 ESC MCUs (AT32F421G8U7 x4: U13/U15/U17/U19)
 
-Netlist part: AT32F421G8U7 (per PINOUT.md). Input is fixed by the AM32 hardware group of the target, tied to a timer capture channel: AT_B = PB4/TMR3_CH1 (`Inc/targets.h` OPENESC_20_F421 uses AT_B at 4889-4922 of upstream 50234143; `HARDWARE_GROUP_AT_B` uses GPIOB, TMR3 ch1; AT_F uses PA2/TMR15 ch1 and AT_C/E use a GPIOA pin on TMR15 ch1 in the local tree `~/Incutec/OpenDrone/firmware/AM32/Inc/targets.h`). The bootloader (`AM32_F421_BOOTLOADER_PB4`) also assumes PB4. Answer: do NOT remap the ESC input; it is hardwired on the PCB to PB4, remapping needs a new PCB and a new AM32 target plus bootloader. The only free end is the FC side: MOTORn can be ANY RP2354A GPIO (PIO DShot, section 2), 220R series, so wiring length can be optimised freely there. Phase/comp pins are likewise fixed by AT_B/AT_045.
-
-## 5. Survey: automatic IO / pin assignment by wire length
-
-- Altium pin/part swapping, swap groups (user defines eligible pins, e.g. ADC group), https://resources.altium.com/p/how-to-simplify-your-routing-with-pin-swapping . Good for same-class swaps, no peripheral-position awareness.
-- Siemens Xpedition FPGA I/O Optimizer, rule/bank aware auto assignment with guaranteed legal swaps, https://eda.sw.siemens.com/en-US/pcb/model-based-systems-engineering/fpga-pcb-codesign . FPGA only, not MCU mux tables.
-- Cadence Allegro FPGA/"create optimum pin assignments" blog, FPGA-aware engine vs static swap matrix, https://community.cadence.com/cadence_blogs_8/b/pcb/posts/create-optimum-pin-assignments-for-fpgas-on-pcbs-part-2-of-2 . Searches found no usable detail on "FPGA System Planner" itself.
-- KiCad: no native pin swap, community "Swap pins" action plugin (5.x) and forward-annotation workaround, https://forum.kicad.info/t/pin-swapping-in-pcb/48004 and https://forum.kicad.info/t/is-there-a-way-to-have-invertible-pad-numbers/41319 . Nothing KiCad 10 that understands MCU peripheral muxing.
-- Academic: Hungarian-matching heuristic for I/O pin assignment, ICCAD 2020, https://ieeexplore.ieee.org/document/9159791/references (HPWL-driven, ~5% routed wirelength effect). ILP/relaxed LP for die pin assignment, https://nanocad.ee.ucla.edu/wp-content/papercite-data/pdf/msth6.pdf (ILP does not scale, irrelevant at 30 pins).
-- Patents describing the commercial engines (pin assignment with interface grouping), https://patents.google.com/patent/US8386982 and https://patents.google.com/patent/US11727178 .
-- RP2350 specific: found nothing that does constraint-checked peripheral/pin planning (only Pico header pinout viewers). The authoritative data is datasheet Table 677 (section 1 above). Plan to build it yourself.
-
-Fit for your case (30 GPIO, mux groups): two stage. Stage 1: enumerate discrete choices (SPI instance for IMU vs SD, UART instance for ELRS vs SBUS, I2C instance, OSD base N, ADC pair, HW pin position per bus) and prune with the hard sets in section 2.1; this is a few thousand combinations at most, so exhaustive search or CP-SAT/ILP with one binary x[signal, gpio] and "each gpio <= 1 signal" and "all SPI pins in one instance" constraints is trivial. Stage 2: for free-function signals (motors, LED strip, beeper, LED0, CS, INT, PIO UART) the leftover GPIOs form a pure linear assignment (Hungarian, cost = distance pad to GPIO pin), re-solved per stage-1 candidate. A single ILP (OR-tools CP-SAT) covering both is simplest and exact. Include the OSD consecutive triple as a "base N" variable and the ADC fixed pins as domain restrictions. Cost should be pad-to-pin Manhattan distance from the real footprint, not pin number.
+Netlist part: AT32F421G8U7. Input is fixed by the AM32 hardware group of the target, tied to a timer capture channel: AT_B = PB4/TMR3_CH1 (`Inc/targets.h` OPENESC_20_F421 uses AT_B at 4889-4922 of upstream 50234143; `HARDWARE_GROUP_AT_B` uses GPIOB, TMR3 ch1; AT_F uses PA2/TMR15 ch1 and AT_C/E use a GPIOA pin on TMR15 ch1 in the AM32 tree `Inc/targets.h`). The bootloader (`AM32_F421_BOOTLOADER_PB4`) also assumes PB4. Answer: do NOT remap the ESC input; it is hardwired on the PCB to PB4, remapping needs a new PCB and a new AM32 target plus bootloader. The only free end is the FC side: MOTORn can be ANY RP2354A GPIO (PIO DShot, section 2), 220R series, so wiring length can be optimised freely there. Phase/comp pins are likewise fixed by AT_B/AT_045.
