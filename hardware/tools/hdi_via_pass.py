@@ -88,7 +88,10 @@ def plan(layers):
     parts = []
     if F in layers:
         parts.append("micro_top")
-    if layers & INNER or (F in layers and B in layers):
+    # a top microvia reaches In1 only and a bottom one In6 only: In6 from the top, or In1 from the bottom, needs
+    # the buried via too (OSD_W ran L1 -> L7 between two blind vias and lost its L7 jumper)
+    if layers & INNER or (F in layers and B in layers) or (F in layers and I6 in layers) \
+            or (B in layers and I1 in layers):
         parts.append("buried")
     if B in layers:
         parts.append("micro_bot")

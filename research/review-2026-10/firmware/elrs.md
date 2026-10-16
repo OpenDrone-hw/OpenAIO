@@ -59,7 +59,7 @@ The ESP32-C3 straps are correct for both boot modes (ESP32-C3FH4.pdf §3, p25-26
 - GPIO9 is pulled up by R113 and can be pulled low through TP9.
 - CHIP_EN is an RC only (R114 10k, C84 1 uF). The FC can neither reset nor strap the C3 (ISSUES I5).
 
-**Power:** the RX runs on +3V3 from U23, which is fed by +4v5. USB power alone is enough for every path below.
+**Power:** the RX runs on +3.3V from U7, which is fed by +4v5. USB power alone is enough for every path below.
 
 ### 1. Normal update (ELRS already running)
 
@@ -79,5 +79,5 @@ The ESP32-C3FH4 arrives blank. Passthrough cannot tell blank ELRS firmware to re
 ## Known board limits that touch ELRS
 
 - **I5:** no FC control of CHIP_EN or GPIO9. Recovering a bricked RX needs TP9 and a power cycle.
-- **I11:** the D9 status LED runs on +3V3, below its 3.5 V VDD minimum. The LED may be dim, show wrong colours, or stay dark. The radio link is not affected.
+- **I11:** the D9 status LED runs on +3.3V, below its 3.5 V VDD minimum. The LED may be dim, show wrong colours, or stay dark. The radio link is not affected.
 - **I12:** ESP32-C3 GPIO10 is tied to GND. No ELRS layout for this target uses GPIO10.

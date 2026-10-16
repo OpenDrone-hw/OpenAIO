@@ -28,11 +28,11 @@
 | I8 | NIT | No forward marking, so the gyro alignment is an assumption | Open |
 | I9 | NIT | J54/J55 "TX1/RX1" are the ELRS link, not a spare UART | Open |
 | I10 | NIT | PU0RX shared by J45 and SH-6 pin 6 | Open |
-| I11 | MINOR | ELRS status LED D9 on +3V3, below its 3.5 V minimum | Open |
+| I11 | MINOR | ELRS status LED D9 on +3.3V, below its 3.5 V minimum | Open |
 | I12 | NIT | ESP32-C3 GPIO10 tied to GND | Harmless |
 | I13 | NIT | BMI270 INT2 on a one-node net named `/IMU/CLKIN` | Harmless |
 | I14 | NIT | microSD DAT1/DAT2 floating; no pull-ups on CMD/DAT0 | Open, unverified risk |
-| I15 | NIT | microSD VDD on the Base +3V3, SPI host IO on the Core +3.3V | Open |
+| I15 | NIT | microSD VDD on the Base +3.3V, SPI host IO on the Core +3.3V | **Resolved 2026-10-15**: one 3.3 V rail (U7 TLV76733), card and host on the same supply |
 | I16 | handled | 2 MB flash against the upstream 8 MB/4 MB defaults | Handled by `config.mk` + `pico_flash_mem.ld`; image size not verified |
 | I17 | handled | PIO2 overflows with LED strip + FB OSD | Handled by `PIO_LEDSTRIP_INDEX 1`; PIOUART1 must stay unused |
 | I18 | NIT | AT32 NRST and VTref not on test pads | Open |
@@ -90,10 +90,10 @@ J44 "PIO_TX0" is on `/Pads/PIOUART0_TX` (GPIO2). PLAN.md decision B2 routed SH-6
 
 ## I3: AT32 ESC MCUs powered from USB while gate-driver VCC = 0 V (MAJOR, fixed in `05537a3`)
 
-**Status: open on the one board (2026-08-22 circuit). It was fixed in `05537a3` on the two-board branch; that fix was not carried.** U27 TLV75533PDQNR (IN = EN = +5V, C110/C111 1 uF) makes `+3V3_ESC` for U13/U15/U17/U19 pin 17 VDD and their ESC-side pull-ups and decoupling. `+3V3` and the USB `+4v5` path no longer reach the ESC MCUs, so they are off without a battery. The text below describes the state before the fix.
+**Status: open on the one board (2026-08-22 circuit). It was fixed in `05537a3` on the two-board branch; that fix was not carried.** U27 TLV75533PDQNR (IN = EN = +5V, C110/C111 1 uF) makes `+3V3_ESC` for U13/U15/U17/U19 pin 17 VDD and their ESC-side pull-ups and decoupling. `+3.3V` and the USB `+4v5` path no longer reach the ESC MCUs, so they are off without a battery. The text below describes the state before the fix.
 
 **Netlist:**
-- U13/U15/U17/U19 pin 17 VDD = `+3V3`.
+- U13/U15/U17/U19 pin 17 VDD = `+3.3V`.
 - U23 TLV75533 IN = EN = `+4v5`.
 - D3 feeds `+4v5` from `+5V_USB`, so the ESC MCUs run on USB alone.
 - U3 VIN = EN = `+BATT` produces `+10V` = NSG2065Q VCC (U14.4 etc.), which is 0 V without a battery.
@@ -129,7 +129,7 @@ J44 "PIO_TX0" is on `/Pads/PIOUART0_TX` (GPIO2). PLAN.md decision B2 routed SH-6
 ## I5: FC cannot reset or strap the ESP32-C3 (MINOR)
 
 **Netlist:**
-- U22.7 CHIP_EN has only R114 10k to +3V3 and C84 1 uF.
+- U22.7 CHIP_EN has only R114 10k to +3.3V and C84 1 uF.
 - U22.15 GPIO9 has only R113 10k pull-up and TP9.
 - U2.41 GPIO27 is `unconnected-(U2-GPIO27_ADC1-Pad41)`.
 
@@ -183,9 +183,9 @@ J44 "PIO_TX0" is on `/Pads/PIOUART0_TX` (GPIO2). PLAN.md decision B2 routed SH-6
 
 **Effect:** a GPS on J44/J45 and an air unit that drives SBUS on SH-6 pin 6 cannot be connected together. These are either/or uses of Betaflight UART0 RX.
 
-## I11: ELRS status LED D9 on +3V3 (MINOR, ELRS LED only)
+## I11: ELRS status LED D9 on +3.3V (MINOR, ELRS LED only)
 
-**Netlist:** D9 XL-1010RGBC-WS2812B VDD (pin 2) = `+3V3`.
+**Netlist:** D9 XL-1010RGBC-WS2812B VDD (pin 2) = `+3.3V`.
 
 **Datasheet:** VDD 3.5-5.5 V (XL-1010RGBC-WS2812B.pdf p4, p5 minimum 3.5 V).
 
@@ -217,7 +217,7 @@ J44 "PIO_TX0" is on `/Pads/PIOUART0_TX` (GPIO2). PLAN.md decision B2 routed SH-6
 
 ## I15: microSD supply rail against the SPI host rail (NIT, earlier review O7)
 
-**Netlist:** Card1.4 VDD = `+3V3` (Base U23). U2 IOVDD = `+3.3V` (Core U7). Both LDOs are fed from `+4v5`.
+**Netlist:** Card1.4 VDD = `+3.3V` (Base U23). U2 IOVDD = `+3.3V` (Core U7). Both LDOs are fed from `+4v5`.
 
 **Firmware:** no impact expected, because card init happens after boot.
 

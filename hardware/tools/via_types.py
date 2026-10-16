@@ -1,7 +1,8 @@
-"""Give every through via the via type its connections need, in place: no via or track moves.
+"""Give every through (and edit-form blind) via the via type its connections need, in place: no via or track moves.
 
 Run with KiCad closed, using KiCad's bundled Python:
-  $KPY hardware/tools/via_types.py hardware/OpenAIO.kicad_pcb [--buried-size 0.33/0.15 | --buried-drill 0.20] [--dry-run]
+  $KPY hardware/tools/via_types.py hardware/OpenAIO.kicad_pcb [--buried-size 0.33/0.15 | --buried-drill 0.20] [--nets GND,...]
+       [--skip x,y;x,y] [--dry-run]
 
 Works for any 1+N+1 layer count: microvias F.Cu-In1.Cu and In(N).Cu-B.Cu, buried In1.Cu-In(N).Cu.
 --buried-size LAND/DRILL sets every buried via to that size (0.33/0.15 on the 8L Whoop stackup).
@@ -11,6 +12,7 @@ used = layers where the via's own net touches its land (track, pad, filled zone)
   F and B both used     -> stays a through via (unchanged)
   otherwise             -> microvia F-In1 if F used, buried In1-In6 if any of In2..In5 is used (or both outer
                            layers are not enough), microvia In6-B if B used
+GND: a microvia into the nearest plane (L2 or L7), no buried via under it.
 Microvia 0.25 / 0.10, or the routed land where 0.25 would lose a pad or track end. Buried: the via's land, drill min(land - 0.18, 0.25), at least 0.15 (ring 0.09)."""
 import os,sys,collections
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
@@ -21,6 +23,9 @@ n_inner=b.GetCopperLayerCount()-2
 H.I6=getattr(P,'In%d_Cu'%n_inner)                                  # last inner layer: bottom microvia target
 H.INNER={getattr(P,'In%d_Cu'%i) for i in range(2,n_inner)}
 MINB=MM(float(sys.argv[sys.argv.index('--buried-drill')+1])) if '--buried-drill' in sys.argv else MM(0.15)
+NETS=set(sys.argv[sys.argv.index('--nets')+1].split(',')) if '--nets' in sys.argv else None
+# --skip x,y;x,y: vias left as drawn (a short blind pair whose L2-L7 buried via would hit another net: reroute)
+SKIP={tuple(round(float(c),3) for c in xy.split(',')) for xy in sys.argv[sys.argv.index('--skip')+1].split(';')} if '--skip' in sys.argv else set()
 FIXB=[MM(float(x)) for x in sys.argv[sys.argv.index('--buried-size')+1].split('/')] if '--buried-size' in sys.argv else None
 P.ZONE_FILLER(b).Fill(b.Zones())
 tracks=[t for t in b.GetTracks() if t.GetClass()!='PCB_VIA']
@@ -30,18 +35,25 @@ pads_by_net=collections.defaultdict(list)
 for fp in b.GetFootprints():
     for pad in fp.Pads(): pads_by_net[pad.GetNetCode()].append(pad)
 for v in vias:
-    if v.GetViaType()!=P.VIATYPE_THROUGH: continue
+    if NETS and v.GetNetname() not in NETS: continue
+    if (round(P.ToMM(v.GetPosition().x),3),round(P.ToMM(v.GetPosition().y),3)) in SKIP:
+        stat[('skipped, reroute','Base')]+=1; continue
+    if v.GetViaType() not in (P.VIATYPE_THROUGH, P.VIATYPE_BLIND, P.VIATYPE_BURIED): continue  # edit form: one via per connection
     used=H.used_layers(b,v,tracks)
     # Pads by shape overlap, not a centre hit test: a via off the pad centre whose land overlaps the pad
     # still connects it (U21.19 was missed by the hit test).
     land=P.SHAPE_CIRCLE(v.GetPosition(), v.GetWidth(v.TopLayer())//2)
     for pad in pads_by_net.get(v.GetNetCode(),[]):
         for l in (H.F,H.B):
-            if pad.IsOnLayer(l) and pad.GetEffectiveShape(l).Collide(land,0): used.add(l)
+            # only layers the via spans: a blind L1-L7 via over a bottom pad does not reach it (2026-10-16: that
+            # kept 30 blind phase vias and put a +3.3V microvia into U9 pad 4)
+            if v.IsOnLayer(l) and pad.IsOnLayer(l) and pad.GetEffectiveShape(l).Collide(land,0): used.add(l)
     side='Core' if P.ToMM(v.GetPosition().x)>100 else 'Base'
     if H.F in used and H.B in used:
         stat[(side,'through kept')]+=1; continue
     parts=H.plan(used)
+    if v.GetNetname()=='GND' and ('micro_top' in parts or 'micro_bot' in parts):
+        parts=[p for p in parts if p!='buried']  # GND: a microvia into the nearest plane is enough
     landw=v.GetWidth(v.TopLayer()); drill=v.GetDrillValue()
     bdrill=max(MINB,min(MM(0.25),landw-MM(0.18),drill)); bland=max(landw,bdrill+MM(0.18))
     if FIXB: bland,bdrill=FIXB

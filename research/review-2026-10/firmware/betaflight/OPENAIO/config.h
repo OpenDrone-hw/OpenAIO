@@ -133,6 +133,14 @@
 #define SERIALRX_PROVIDER    SERIALRX_CRSF
 #define SERIALRX_UART        SERIAL_PORT_UART1
 
+// ELRS enable (2026-10-16): GPIO27 drives the ESP32-C3 CHIP_EN (net ELRS_EN, R114 10k pull-up, C84 1u).
+// Inverted push-pull: the PINIO "off" state is high, so ELRS runs by default. Switching PINIO1 on
+// (e.g. a USER1 mode box) pulls CHIP_EN low and holds the ESP32-C3 in reset, so its TX releases UART1_RX
+// for the DJI air unit's SBUS on SH-6 pin 6 (set SERIALRX_PROVIDER to SBUS for that build/setup).
+// [BF src/main/pg/pinio.c:56-57,103; src/main/drivers/pinio.h:29-31]
+#define PINIO1_PIN           PA27         // ELRS_EN | U2.41 | U22.7 CHIP_EN
+#define PINIO1_CONFIG        (PINIO_CONFIG_MODE_OUT_PP | PINIO_CONFIG_OUT_INVERTED)
+
 // Hardware UART0 (AUX pins): SBUS from the digital air unit (SH-6 pin 6), or a GPS on J44/J45.
 // 8E2 is supported here [BF uart_hw.c:269-274]. SBUS inversion is done in the pad (gpio_set_inover) [BF src/platform/PICO/uart/serial_uart_pico.c:59-87],
 // with the RX pull-down for an inverted port [BF uart_hw.c:261-265]. No external inverter is needed.
@@ -275,8 +283,8 @@
 // Not wired (recorded so nobody looks for them):
 //   USB VBUS detect: none. VBUS (+5V_USB) only feeds +4v5 through D3. Betaflight then treats
 //     "VCP connected" as cable inserted [BF src/main/drivers/usb_io.c:56-70]. No USB_DETECT_PIN.
-//   GPIO27 (U2.41, ADC1): unconnected. Candidate for ESP32-C3 CHIP_EN / BOOT control (ISSUES.md I5).
-//   SWD: SWCLK U2.24 -> LGA 20 -> TP32, SWDIO U2.25 -> LGA 10 -> TP31 (Base B.Cu).
+//   GPIO27 (U2.41): ELRS_EN, see PINIO1 above. No GPIO is free now.
+//   SWD: SWCLK U2.24 -> TP42, SWDIO U2.25 -> TP43 (2026-10-16). U2 pad 24 is still missing on the board.
 //   BOOTSEL: U1 button -> R7 1k -> QSPI_SS (U2.60); the `bl` CLI command also reboots to the
 //     USB bootrom [BF src/platform/PICO/system.c:157-161].
 // ---------------------------------------------------------------------------

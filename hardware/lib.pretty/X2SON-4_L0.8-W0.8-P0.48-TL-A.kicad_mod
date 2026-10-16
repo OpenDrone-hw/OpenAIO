@@ -7,7 +7,7 @@
 		(at 0 -4.24 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "5b64f637-ab97-4966-b819-0e554fc30526")
+		(uuid "ed42a620-d80f-4dec-a8c3-2c2dd38ab4ad")
 		(effects
 			(font
 				(size 1 1)
@@ -18,7 +18,7 @@
 	(property "Value" "TLV7031DPWR"
 		(at 0 4.24 0)
 		(layer "F.Fab")
-		(uuid "0c00c490-a245-446e-8da3-ee3b7f166fd0")
+		(uuid "3b3a3f63-bcc0-41e5-a7b2-afa7a430c9fe")
 		(effects
 			(font
 				(size 1 1)
@@ -30,7 +30,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "f72b4274-e595-4c74-9a89-a126023af070")
+		(uuid "02b65014-5f16-43a9-985b-6aa16c8d4bf7")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,7 +41,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "0d986c7b-d0cd-445f-a8c9-ade46c9a7898")
+		(uuid "559e27a3-300a-4ca0-bf4d-7a5f025181db")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -52,7 +52,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "2e877487-0bae-46a5-9ea1-306209cf4483")
+		(uuid "7f25abb0-6cf5-405d-b4e9-bb25c30947f9")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -65,7 +65,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "cdf62a59-9698-4b84-9400-65063ea14da7")
+		(uuid "72e5b2b5-cb9a-405f-8695-7a2cef4150d6")
 		(effects
 			(font
 				(size 1 1)
@@ -78,7 +78,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "620b278f-31b9-47fe-9ec4-bc518e46e848")
+		(uuid "04ca353a-626d-496d-85a0-8325a54ee8f9")
 		(effects
 			(font
 				(size 1 1)
@@ -88,7 +88,7 @@
 	)
 	(sheetname "/OSD/")
 	(sheetfile "fc_osd.kicad_sch")
-	(attr smd)
+	(attr smd allow_soldermask_bridges)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -0.51 -0.58)
@@ -98,7 +98,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "26dee3e6-8238-4391-a1dc-b64d8f34da4f")
+		(uuid "d1d1d052-5635-4cf4-9052-c43528904914")
 	)
 	(fp_line
 		(start 0.51 0.58)
@@ -108,7 +108,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "4c0184d1-7974-437a-8adb-8d8e1d2dbab4")
+		(uuid "2badb643-2c15-4867-9465-edc01480fe95")
 	)
 	(fp_circle
 		(center -0.76 -0.51)
@@ -119,7 +119,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "2a10b18d-9920-4632-ac05-924275233507")
+		(uuid "22d114b2-b0c0-4042-bd75-7a86c24741fb")
 	)
 	(fp_circle
 		(center -0.4 -0.4)
@@ -130,7 +130,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "b91b7169-27f8-4c62-9ea6-3e4de5692f10")
+		(uuid "7562259f-4e1d-4f4a-91ad-c35f4bb0a6f3")
 	)
 	(fp_circle
 		(center -0.62 -0.33)
@@ -141,7 +141,7 @@
 		)
 		(fill no)
 		(layer "Cmts.User")
-		(uuid "550bad1d-fcbe-4561-9505-1ae501328f37")
+		(uuid "39578837-e990-49bb-8e3a-e8f15b1d1eaf")
 	)
 	(fp_line
 		(start -0.4 -0.4)
@@ -151,7 +151,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "7bfb9bee-6d83-4c26-9c11-dc4c0172008c")
+		(uuid "abd33ec0-cb6d-43ea-8ae2-6bb3cf3cf779")
 	)
 	(fp_line
 		(start -0.4 0.4)
@@ -161,7 +161,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "688cac4b-5dfb-4a5c-ac6f-ea1fa1c274af")
+		(uuid "f015f98e-ceac-4a9d-a09a-9125b87d0905")
 	)
 	(fp_line
 		(start 0.4 -0.4)
@@ -171,7 +171,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "cb4665f5-0596-44e4-b691-ace7ea907e22")
+		(uuid "d4678c8e-af15-477c-a688-2322d22f0793")
 	)
 	(fp_line
 		(start 0.4 0.4)
@@ -181,12 +181,12 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "13c397e0-e21f-4b59-9096-67deecfd4620")
+		(uuid "ea055a86-643c-4781-a531-f6daf2888045")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "cf7b67f1-35f9-444e-a933-f23fe51f6bbc")
+		(uuid "02a69f9d-4d68-455a-b915-149db1a87797")
 		(effects
 			(font
 				(size 1 1)
@@ -212,7 +212,7 @@
 				(fill yes)
 			)
 		)
-		(uuid "5671914e-feea-419b-abc1-ca50ea29b95a")
+		(uuid "9071830e-9e3e-4dd7-adfc-bb684aafecd6")
 	)
 	(pad "2" smd custom
 		(at -0.39 0.24)
@@ -232,7 +232,7 @@
 				(fill yes)
 			)
 		)
-		(uuid "931cf09d-4c53-4a37-99eb-74ed2928163f")
+		(uuid "8ba8f4cf-5c67-4f41-aa9a-6f0c36deb86c")
 	)
 	(pad "3" smd custom
 		(at 0.39 0.24)
@@ -253,7 +253,7 @@
 				(fill yes)
 			)
 		)
-		(uuid "c42c6e06-32dc-4dea-8822-259646910616")
+		(uuid "d381b9e9-ce1b-4bbd-8654-e7a2829a2d99")
 	)
 	(pad "4" smd custom
 		(at 0.39 -0.24)
@@ -273,13 +273,13 @@
 				(fill yes)
 			)
 		)
-		(uuid "a1b3fd8b-b729-4d3a-a057-d19db814641a")
+		(uuid "a3799fdb-39a0-4c08-9aba-3fd0ed060a16")
 	)
 	(pad "5" smd rect
 		(at 0 0 225)
 		(size 0.25 0.25)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "85596e26-03d1-48fd-bac2-5d2b43e62a17")
+		(uuid "8dc59136-d93b-474e-a8f3-a7f1497ddb73")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/lib.3dshapes/X2SON-4_L0.8-W0.8-P0.48-TL-DPW.wrl"
