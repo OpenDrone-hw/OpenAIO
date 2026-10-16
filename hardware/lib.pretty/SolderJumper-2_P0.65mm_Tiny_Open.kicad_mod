@@ -1,0 +1,87 @@
+(footprint "SolderJumper-2_P0.65mm_Tiny_Open"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "JP**"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "53ce94cb-60cf-4546-a150-eb78de20d089")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "SolderJumper-2_P0.65mm_Tiny_Open"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "9498d908-587b-42fb-9572-2fe573445197")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "88fa09eb-9b5b-47d9-b25c-0ffc8f3b2746")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dacb0aa2-dc86-4cfd-b635-58d235235617")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -0.6 -0.325)
+		(end 0.6 0.325)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Mask")
+		(uuid "c03d2adc-8794-4d8f-a9de-c589748aaecc")
+	)
+	(fp_rect
+		(start -0.7 -0.425)
+		(end 0.7 0.425)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "ee63567e-9b41-426a-92c4-835f09e93fa0")
+	)
+	(pad "1" smd rect
+		(at -0.325 0)
+		(size 0.45 0.55)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "043f1d19-d586-4c49-9d34-890a6a1d83a6")
+	)
+	(pad "2" smd rect
+		(at 0.325 0)
+		(size 0.45 0.55)
+		(layers "F.Cu" "F.Mask")
+		(thermal_bridge_angle 45)
+		(uuid "31ddb605-4860-40d0-8ddd-1b723fa137c7")
+	)
+	(embedded_fonts no)
+)

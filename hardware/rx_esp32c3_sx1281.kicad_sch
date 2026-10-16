@@ -2865,6 +2865,184 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "lib:SolderJumper_2_Open"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "JP"
+				(at 0 2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_2_Open"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "lib:SolderJumper-2_P0.65mm_Tiny_Open"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Solder Jumper, 2-pole, open"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "solder jumper SPST"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Open*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Open_0_1"
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.016) (xy 0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Open_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "lib:TestPoint"
 			(pin_numbers
 				(hide yes)
@@ -4199,6 +4377,12 @@
 		(uuid "73480410-5b7a-422b-8318-7e2f321348eb")
 	)
 	(junction
+		(at 256.54 205.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7677827e-66a1-41ae-8c5a-9b5cd2bbb108")
+	)
+	(junction
 		(at 167.64 233.68)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4227,6 +4411,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "851eb176-b88d-496d-bbd6-c7a13eab49cb")
+	)
+	(junction
+		(at 264.16 213.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8544298a-6d92-4f79-97ab-222e7bac59e1")
 	)
 	(junction
 		(at 138.43 241.3)
@@ -4311,6 +4501,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e91a71d7-1587-4719-8602-06d3e922e2b6")
+	)
+	(junction
+		(at 260.35 205.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "efc1bcb7-4962-47af-9753-028b51cfdac4")
 	)
 	(junction
 		(at 168.91 186.69)
@@ -4675,6 +4871,16 @@
 			(type default)
 		)
 		(uuid "2fe976cc-6525-4afd-948b-add58ded8303")
+	)
+	(wire
+		(pts
+			(xy 260.35 215.9) (xy 264.16 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "308f6eb4-a8a2-4855-8459-cd469a1fe6ab")
 	)
 	(wire
 		(pts
@@ -5398,6 +5604,16 @@
 	)
 	(wire
 		(pts
+			(xy 264.16 215.9) (xy 264.16 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0af018a-96b3-4a8b-9abd-546b35b7578e")
+	)
+	(wire
+		(pts
 			(xy 243.84 166.37) (xy 256.54 166.37)
 		)
 		(stroke
@@ -5788,16 +6004,16 @@
 	)
 	(global_label "ELRS_EN"
 		(shape bidirectional)
-		(at 255.27 205.74 0)
+		(at 256.54 213.36 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "14496ec2-7354-41ee-8741-7272ed6d911f")
+		(uuid "2dde976d-922b-41bd-8b45-ae23ef4b841b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 255.27 205.74 180)
+			(at 256.54 213.36 270)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7604,6 +7820,107 @@
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR0227")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lib:R")
+		(at 256.54 209.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "400c3601-fd23-4428-b9fe-78b38da245a0")
+		(property "Reference" "R115"
+			(at 254.508 207.264 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 258.826 207.264 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lib:R_0201_0603Metric"
+			(at 256.54 211.328 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 256.54 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 200.66 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" ""
+			(at 200.66 356.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "24c537c0-3f6b-4267-8943-9bc45454a030")
+		)
+		(pin "1"
+			(uuid "ecbdba15-0b34-4971-91c7-0503a74e3f47")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "R115")
 					(unit 1)
 				)
 			)
@@ -11373,6 +11690,107 @@
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
 					(reference "#PWR0238")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lib:SolderJumper_2_Open")
+		(at 260.35 210.82 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ca173c02-fd0d-444e-99b5-c84423ac0fac")
+		(property "Reference" "JP2"
+			(at 258.318 208.534 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ELRS OFF"
+			(at 262.636 208.534 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "lib:SolderJumper-2_P0.65mm_Tiny_Open"
+			(at 260.35 212.598 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 260.35 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 260.35 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 204.47 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" ""
+			(at 204.47 358.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c8756ba2-432c-479a-9f99-8d8d2896dfc9")
+		)
+		(pin "1"
+			(uuid "759a8f57-e302-479f-9eca-82dff797e9bb")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/6e8501c6-71d5-4860-9b96-3d3562c097af"
+					(reference "JP2")
 					(unit 1)
 				)
 			)
