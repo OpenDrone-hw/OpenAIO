@@ -4801,14 +4801,6 @@
 		(uuid "159749b7-e8ed-496e-854c-8cfc9941945f")
 	)
 	(no_connect
-		(at 321.31 250.19)
-		(uuid "252533b0-3d19-4f7d-b004-3ff0358ed641")
-	)
-	(no_connect
-		(at 270.51 196.85)
-		(uuid "6f66b967-50d8-4666-a5ff-a92ef1c8cddf")
-	)
-	(no_connect
 		(at 270.51 217.17)
 		(uuid "8d0f1ef9-9c19-4b95-8b32-b924c1687d52")
 	)
@@ -4823,10 +4815,6 @@
 	(no_connect
 		(at 270.51 212.09)
 		(uuid "b7d6c20b-d3d4-4b60-bc8d-9e70d4845c79")
-	)
-	(no_connect
-		(at 270.51 199.39)
-		(uuid "dd8acd68-a27b-4c95-af5a-4e818e2c9f3e")
 	)
 	(no_connect
 		(at 270.51 209.55)
@@ -6295,6 +6283,16 @@
 		)
 		(uuid "51dbd40f-9c57-4d31-a3de-14904ea8b6a2")
 	)
+	(label "SWCLK"
+		(at 270.51 196.85 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "55fb0ff4-3947-4adc-b284-24b5743aa6ec")
+	)
 	(label "XIN"
 		(at 270.51 179.07 180)
 		(effects
@@ -6496,6 +6494,16 @@
 		)
 		(uuid "fd39124d-7e82-49c1-959b-c015f484bb68")
 	)
+	(label "SWDIO"
+		(at 270.51 199.39 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ffb75123-5b24-4b29-af02-c665c2bac97d")
+	)
 	(global_label "USB_D-"
 		(shape bidirectional)
 		(at 252.73 187.96 0)
@@ -6508,6 +6516,28 @@
 		(uuid "14432ee3-8b78-4a2b-974d-74f8ee804fbf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 252.73 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "ELRS_EN"
+		(shape bidirectional)
+		(at 321.31 250.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "352c3168-61f5-4f49-9324-27fc7a942c13")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 321.31 250.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11701,6 +11731,85 @@
 		)
 	)
 	(symbol
+		(lib_id "lib:TestPoint")
+		(at 270.51 196.85 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "73892328-8048-408b-bc43-983d5074f722")
+		(property "Reference" "TP42"
+			(at 266.415 192.2779 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 266.415 194.8179 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "lib:TestPoint_Pad_D1.0mm"
+			(at 269.59 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.59 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 264.51 196.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6a5800da-21fc-48ca-96ba-8f378228f486")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2"
+					(reference "TP42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "lib:GND")
 		(at 110.49 200.66 0)
 		(unit 1)
@@ -12462,6 +12571,85 @@
 			(project "OpenAIO"
 				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2"
 					(reference "TP27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "lib:TestPoint")
+		(at 270.51 199.39 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "81a5ee99-be26-4cf4-8891-1f5983adc97d")
+		(property "Reference" "TP43"
+			(at 266.415 194.8179 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 266.415 197.3579 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "lib:TestPoint_Pad_D1.0mm"
+			(at 269.59 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.59 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 264.51 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0cad8d6b-0c69-4ddc-878c-8b4437821cf8")
+		)
+		(instances
+			(project "OpenAIO"
+				(path "/fb88b6f9-ee39-4640-a9d4-04a17ceeac64/01bcb197-c5fe-4dbd-addf-fd4e1bc6a2d2"
+					(reference "TP43")
 					(unit 1)
 				)
 			)

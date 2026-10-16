@@ -5786,6 +5786,28 @@
 		)
 		(uuid "ff56df1e-361c-4d98-96e9-5c646950946b")
 	)
+	(global_label "ELRS_EN"
+		(shape bidirectional)
+		(at 255.27 205.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "14496ec2-7354-41ee-8741-7272ed6d911f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 255.27 205.74 180)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
 	(hierarchical_label "ELRS_RX"
 		(shape output)
 		(at 199.39 223.52 180)
