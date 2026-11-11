@@ -1,7 +1,7 @@
 # OpenAIO
 
 An all-in-one for 85 mm whoops, 2.5 inch cinewhoops and 3 inch freestyle: RP2354A flight controller, four AM32 ESC channels and an ExpressLRS 2.4 GHz
-receiver on one 8-layer HDI board with 25.5 x 25.5 mm mounting. Its circuits follow OpenFC-Lite-Mini, OpenESC-20x20 and
+receiver on one 8-layer HDI board with 25.5 x 25.5 mm mounting. Its circuits follow OpenFC Lite 20x20, OpenESC-20x20 and
 OpenRX-Lite.
 
 <p>
@@ -48,7 +48,7 @@ Technical write-up, part list and layout constraints: [AGENTS.md](AGENTS.md). Pi
 
 ## Prior art
 
-- [OpenFC-Lite-Mini](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini): the RP2354A flight controller
+- [OpenFC Lite 20x20](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini): the RP2354A flight controller
 - [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20): the AM32 4-in-1 power stage
 - [OpenRX Lite](https://github.com/OpenDrone-hw/OpenRX-Lite): the ELRS receiver
 - [Market research](https://app.notion.com/p/3f5fe06764e1818e9158c512edd58138): competing toothpick and whoop AIOs, June 2026
