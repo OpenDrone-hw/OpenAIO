@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.16
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 0.16,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -62,16 +78,16 @@
       ],
       "drc_exclusions": [
         [
-          "pth_inside_courtyard|88150000|48160000|2a2f0938-87e2-4c1a-98f0-1280b5582b7f|05eb81a9-750d-46a8-95ea-ebe5dd1b5dfa",
-          "X1 owner placement (d81e559): U24.11 NE grommet hole (3.0 drill) vs Q15 courtyard, courtyard 0.02 mm into the drill, Q15 body/land outside the drill. Owner item."
+          "npth_inside_courtyard|63100000|52620000|a952b81a-86fc-4c80-83fd-bb42436521ae|cc0b2979-c774-47d8-a67d-ad050f7ca3a4",
+          "X3 intended (R3-2b turned shunt): USB1 0.6 mm locating-peg NPTH under the B-side Rsense2 body; the peg is ~0.8 mm long in a 1.6 mm board and does not reach Rsense2; no copper within 0.20 mm of the hole."
         ],
         [
           "pth_inside_courtyard|62650000|48160000|b71f352c-e744-4f47-9c47-9a69e5aa033c|7acd7b70-a2a0-4635-8207-c90e3473420a",
           "X2 owner placement (d81e559): U24.11 NW grommet hole (3.0 drill) vs USB1 courtyard, courtyard 0.19 mm into the drill. Owner item."
         ],
         [
-          "npth_inside_courtyard|63100000|52620000|a952b81a-86fc-4c80-83fd-bb42436521ae|cc0b2979-c774-47d8-a67d-ad050f7ca3a4",
-          "X3 intended (R3-2b turned shunt): USB1 0.6 mm locating-peg NPTH under the B-side Rsense2 body; the peg is ~0.8 mm long in a 1.6 mm board and does not reach Rsense2; no copper within 0.20 mm of the hole."
+          "pth_inside_courtyard|88150000|48160000|2a2f0938-87e2-4c1a-98f0-1280b5582b7f|05eb81a9-750d-46a8-95ea-ebe5dd1b5dfa",
+          "X1 owner placement (d81e559): U24.11 NE grommet hole (3.0 drill) vs Q15 courtyard, courtyard 0.02 mm into the drill, Q15 body/land outside the drill. Owner item."
         ]
       ],
       "meta": {
@@ -530,44 +546,6 @@
       {
         "bus_width": 12,
         "clearance": 0.1,
-        "diff_pair_gap": 0.15,
-        "diff_pair_via_gap": 0.15,
-        "diff_pair_width": 0.15,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "USB",
-        "pcb_color": "rgb(30, 110, 255)",
-        "priority": 0,
-        "schematic_color": "rgb(30, 110, 255)",
-        "track_width": 0.15,
-        "tuning_profile": "",
-        "via_diameter": 0.35,
-        "via_drill": 0.2,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.14,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "RF",
-        "pcb_color": "rgb(200, 160, 0)",
-        "priority": 1,
-        "schematic_color": "rgb(200, 160, 0)",
-        "track_width": 0.16,
-        "tuning_profile": "",
-        "via_diameter": 0.35,
-        "via_drill": 0.2,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.1,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -617,6 +595,44 @@
         "priority": 4,
         "schematic_color": "rgb(255, 140, 0)",
         "track_width": 0.3,
+        "tuning_profile": "",
+        "via_diameter": 0.35,
+        "via_drill": 0.2,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.14,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "RF",
+        "pcb_color": "rgb(200, 160, 0)",
+        "priority": 1,
+        "schematic_color": "rgb(200, 160, 0)",
+        "track_width": 0.16,
+        "tuning_profile": "",
+        "via_diameter": 0.35,
+        "via_drill": 0.2,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.1,
+        "diff_pair_gap": 0.15,
+        "diff_pair_via_gap": 0.15,
+        "diff_pair_width": 0.15,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "USB",
+        "pcb_color": "rgb(30, 110, 255)",
+        "priority": 0,
+        "schematic_color": "rgb(30, 110, 255)",
+        "track_width": 0.15,
         "tuning_profile": "",
         "via_diameter": 0.35,
         "via_drill": 0.2,
