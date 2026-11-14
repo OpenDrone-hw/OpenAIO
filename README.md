@@ -60,12 +60,12 @@ Notes: [input range](research/INPUT_RANGE.md), [pin constraints](research/IO-CON
 
 ## Design questions
 
-- **Thermal.** Four power stages next to an MCU and a radio on 25.5 mm square, with no airflow guarantee. What is the
+- Thermal: four power stages next to an MCU and a radio on 25.5 mm square, with no airflow guarantee. What is the
   continuous current budget on 1 oz copper? The copper loss model in [research/ROUTING.md](research/ROUTING.md) is the
   only number so far.
-- **RF isolation.** A 2.4 GHz receiver next to four switching power stages: ground plane and antenna placement are
+- RF isolation: a 2.4 GHz receiver next to four switching power stages: ground plane and antenna placement are
   untested.
-- **Open board issues.** The LED strip stage inverts, the ESC MCUs run from USB without gate drive power, and SBUS on
+- Open board issues: the LED strip stage inverts, the ESC MCUs run from USB without gate drive power, and SBUS on
   SH-6 shares a net with the ELRS TX: [firmware/ISSUES.md](firmware/ISSUES.md).
 
 ## In the line
