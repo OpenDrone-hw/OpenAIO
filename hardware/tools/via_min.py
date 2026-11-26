@@ -3,7 +3,7 @@
 Run with KiCad closed:  $KPY hardware/tools/via_min.py hardware/OpenAIO.kicad_pcb [--dry-run]
 
 Sizes (land / drill, 8L HDI 1+6+1 on the OpenAIO-Whoop stackup):
-  microvia 0.25 / 0.10, buried 0.33 / 0.15, through 0.33 / 0.15 (0.997 mm board, 6.6:1, NextPCB min drill 0.15).
+  microvia 0.25 / 0.10, buried 0.33 / 0.15, through 0.33 / 0.15 (0.997 mm board, 6.6:1, fab min drill 0.15).
 A via keeps its position. Same-net copper (pad, track) that touched the old land but not the new one is joined by a
 stub track from the via centre to that copper, on the layer where it touched: to the pad centre, or to the nearest
 point of the track. A via whose old land reached a pour that the new land does not reach keeps its old size. Stub width 0.15 mm (or the touching track's width if smaller). Zones are refilled.

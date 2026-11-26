@@ -44,7 +44,7 @@ Technical write-up, part list and layout constraints: [AGENTS.md](AGENTS.md). Pi
 - 25.5 x 25.5 mm mounting, the whoop and toothpick standard.
 - Runs stock firmware: Betaflight on the FC, AM32 per ESC channel, ExpressLRS on the receiver. No forks.
 - Parts come from the shared library first; assembly from LCSC parts, extended parts kept to a minimum.
-- 8-layer HDI 1+6+1 with filled microvias; fabrication limits are in [research/NEXTPCB.md](research/NEXTPCB.md).
+- 8-layer HDI 1+6+1 with filled microvias; fabrication limits are in [research/ROUTING.md](research/ROUTING.md).
 
 ## Prior art
 

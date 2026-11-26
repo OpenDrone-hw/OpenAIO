@@ -6,7 +6,7 @@ Run with KiCad closed, using KiCad's bundled Python:
 
 Works for any 1+N+1 layer count: microvias F.Cu-In1.Cu and In(N).Cu-B.Cu, buried In1.Cu-In(N).Cu.
 --buried-size LAND/DRILL sets every buried via to that size (0.33/0.15 on the 8L Whoop stackup).
---buried-drill is the minimum buried drill (span thickness / NextPCB's 5:1 limit; 0.20 for the 12L build).
+--buried-drill is the minimum buried drill (span thickness / the fab's 5:1 limit; 0.20 for the 12L build).
 
 used = layers where the via's own net touches its land (track, pad, filled zone), as hdi_via_pass.used_layers.
   F and B both used     -> stays a through via (unchanged)
