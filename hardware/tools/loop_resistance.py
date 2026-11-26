@@ -7,7 +7,7 @@ Run with KiCad's bundled Python (it ships numpy, scipy and PIL); KiCad may stay 
 Model. Each net's copper (filled zones, tracks, pads, via lands) is rasterised per layer on a --grid mm mesh; a
 cell joins its four neighbours through the sheet resistance of that layer (copper thickness from the board
 stackup, resistivity at --temp C). Vias join layers through their barrel: buried 0.15 mm holes plated 20 um
-(NextPCB minimum average), laser microvias copper filled, plated pad holes 25 um, each barrel segment as long as
+(fab minimum average), laser microvias copper filled, plated pad holes 25 um, each barrel segment as long as
 the dielectric it crosses. A pad is one node (its copper is a short). The battery pad is the source; every load
 pad sinks its current; the sparse system is solved once and the loss is summed over every cell edge and via.
 

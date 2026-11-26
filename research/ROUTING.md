@@ -34,7 +34,20 @@ Stackup, top to bottom, from the board setup:
 | | prepreg 1080 | 0.077 |
 | B.Cu | copper | 0.035 |
 
-Fab: NextPCB (the stackup follows the OpenAIO-Whoop plan). Capability notes: [NEXTPCB.md](NEXTPCB.md).
+The stackup follows the OpenAIO-Whoop plan.
+
+Fabrication limits the layout is designed to:
+
+| Item | Limit |
+|---|---|
+| Laser microvia | 0.10 mm minimum drill, aspect ratio 1:1 max (0.10 into 0.077 mm 1080 is 0.77:1) |
+| Mechanical drill | 0.15 mm minimum, only on boards 1.2 mm thick or less |
+| Track / space, 1 oz outer | 0.076 / 0.076 mm (3 / 3 mil) |
+| Via annular ring, 1 oz | 0.09 mm per side |
+| Via fill and cap (IPC-4761 VII) | 0.45 mm max filled hole; holes over 0.45 mm cannot be fully tented |
+| Buried and blind barrel plating | 20 um minimum |
+| Copper to routed edge | 0.20 mm |
+| Solder mask dam | 0.089 mm green, 0.127 mm black or white |
 
 ## Layers
 
