@@ -51,8 +51,6 @@ Technical write-up, part list and layout constraints: [AGENTS.md](AGENTS.md). Pi
 - [OpenFC Lite 20x20](https://github.com/OpenDrone-hw/OpenFC-Lite-Mini): the RP2354A flight controller
 - [OpenESC-20x20](https://github.com/OpenDrone-hw/OpenESC-20x20): the AM32 4-in-1 power stage
 - [OpenRX Lite](https://github.com/OpenDrone-hw/OpenRX-Lite): the ELRS receiver
-- [Market research](https://app.notion.com/p/3f5fe06764e1818e9158c512edd58138): competing toothpick and whoop AIOs, June 2026
-- [Part alternatives](https://app.notion.com/p/3f5fe06764e1819eade0dc5bfbfdff7c): ESC-stage part alternatives, gate driver and FET options, March 2026
 - [Current sensing](research/shunt/MARKET_AND_LITERATURE.md): shunt against copper sensing, market and literature
 
 Notes: [input range](research/INPUT_RANGE.md), [pin constraints](research/IO-CONSTRAINTS.md),

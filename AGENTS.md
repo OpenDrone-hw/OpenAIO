@@ -135,89 +135,22 @@ Upstream: [Betaflight](https://github.com/betaflight/betaflight), [AM32](https:/
 | | |
 |---|---|
 | Maintainer | OpenDrone-hw |
-| Status | See the `status-*` topic on the repo. Never written here. |
-| Designed in | KiCad 10 |
 | KiCad project | `hardware/OpenAIO.kicad_pro` |
 | Root schematic | `hardware/OpenAIO.kicad_sch`, sub-sheets `fc_power`, `fc_rp2350a`, `fc_imu`, `fc_osd`, `fc_blackbox`, `fc_pads`, `esc_channel` (x4), `rx_esp32c3_sx1281` |
 | Board | `hardware/OpenAIO.kicad_pcb`, 8 layers, HDI 1+6+1, 0.997 mm, 1 oz on all layers, ENIG (stackup in research/ROUTING.md) |
-| Local library | `hardware/lib.kicad_sym`, `hardware/lib.pretty/`, `hardware/lib.3dshapes/`, nickname `lib` |
-| Shared library | `hardware/KiCad-Library/`, submodule of [OpenDrone-hw/KiCad-Library](https://github.com/OpenDrone-hw/KiCad-Library), nickname `OpenDrone`; 3D models and exact component datasheets resolve through the project text variable `OPENDRONE_LIB` |
 | Design rules | `hardware/OpenAIO.kicad_dru`, canonical block plus the HDI 1+6+1 via rules, the U9 land pattern (0.076), the USB1 peg to R4 exception and a `Core layout` clearance rule that matches no rule area on the board |
-| Fab config | `hardware/fabrication-toolkit-options.json` |
 | Board setup | 8 layers, 0.09 mm clearance and track, via 0.33 on 0.15 drill, microvia 0.25 on 0.10 |
-| License | CERN-OHL-S-2.0 |
-
-A repository holds design files only. Sourcing (suppliers, prices, quotes, RFQs, contacts) is handled by Incutec and never lives in OpenDrone repositories.
-
-## Parts and datasheets
-
-- **Per-repository part index:** the root schematic and its listed sub-sheets
-  are authoritative for what this board fits. Export the netlist with the
-  command below when a script-readable board index is needed; do not maintain
-  a second hand-written BOM.
-- **Proven shared parts:**
-  `hardware/KiCad-Library/PARTS-USED.md` is the catalogue index. Its `Boards`
-  column identifies every repository using each LCSC part; filter that column
-  for `OpenAIO` to get this repository's proven shared-part view.
-- **Exact datasheets:**
-  `hardware/KiCad-Library/datasheet/manifest.json` maps shared symbols to the
-  committed PDFs and their SHA-256 hashes. The PDFs live in
-  `hardware/KiCad-Library/datasheet/`, and symbol links resolve there through
-  `OPENDRONE_LIB`.
-- **Local-only parts:** inspect `hardware/lib.kicad_sym`,
-  `hardware/lib.pretty/`, and `hardware/lib.3dshapes/`, then verify supplier
-  fields in the board schematic. Do not duplicate a shared part or datasheet.
 
 ## Environment
 
-```sh
-# schematic and board checks
-kicad-cli sch erc hardware/OpenAIO.kicad_sch
-kicad-cli pcb drc --schematic-parity --refill-zones hardware/OpenAIO.kicad_pcb
-
-# netlist, for scripted analysis
-kicad-cli sch export netlist --format kicadsexpr -o /tmp/OpenAIO.net hardware/OpenAIO.kicad_sch
-```
-
-On macOS `kicad-cli` is at
-`/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli`, and `pcbnew` imports
-only under KiCad's bundled Python. Reusable scripts for renders, STEP export,
-and packaging art come from Incutec hardware tooling. The OpenDrone release
-standard is
-[RELEASES.md](https://github.com/OpenDrone-hw/.github/blob/main/RELEASES.md).
-Board-specific scripts, where a board has any, live in `hardware/tools/`: via
-passes (`via_*.py`, `hdi_via_pass.py`), copper models (`power_paths_v2.py`,
-`loop_resistance.py`), routing helpers (`fr_*.py`, `cleanup.py`) and library
-localisers. Each carries its usage in its docstring; read it before running, KiCad closed.
+Board scripts in `hardware/tools/`: via passes (`via_*.py`, `hdi_via_pass.py`),
+copper models (`power_paths_v2.py`, `loop_resistance.py`), routing helpers
+(`fr_*.py`, `cleanup.py`) and library localisers. Each carries its usage in its
+docstring; read it before running, with `KPY` and KiCad closed.
 
 ## Rules
 
-Identical in every OpenDrone board repo. Do not edit here; edit the template.
-
-- **Never text-edit** `.kicad_sch`, `.kicad_pcb` or `.kicad_dru`. Use KiCad, or
-  kicad-skip / the pcbnew API for scripted changes. `.kicad_pro` is JSON and may
-  be edited directly for metadata.
-  kicad-skip cannot round-trip KiCad 10 schematics: use a full S-expression
-  parser, `kicad-cli sch upgrade --force`, then an ERC and netlist diff.
-- **Metadata yes, connections no.** An agent may write BOM and documentation
-  fields (MPN, Manufacturer, LCSC, Cost, Datasheet, text variables). An agent
-  may not change nets, wiring, routing, placement, footprint assignment, or any
-  value that changes the circuit.
-- **Close KiCad before any write to a KiCad file.** KiCad caches library tables
-  at process start and overwrites files on save.
-- **Reuse before you draw.** Check the `OpenDrone` library and its
-  `PARTS-USED.md` first. If the part is there we have already sourced,
-  footprinted and shipped it, and its symbol links to the exact committed
-  datasheet: place it from `OpenDrone`. Draw a new part into `lib` only when
-  the catalogue has nothing that fits, imported with
-  `easyeda2kicad` from its LCSC number. Pulling a newer catalogue is a
-  deliberate, reviewed commit: `git submodule update --remote
-  hardware/KiCad-Library`, then DRC.
-- **One person holds a board layout at a time.** KiCad files do not merge. Say
-  on Discord that you are taking it. See [CONTRIBUTING.md](CONTRIBUTING.md).
-- **Run ERC and DRC before every pull request.** Existing approved findings
-  may remain; a new type or increased count must be reviewed before merge.
-  Commands are in Environment above.
+The shared [Board rules](https://github.com/OpenDrone-hw/hardware-template/blob/main/AGENTS.md#board-rules) apply. Only what differs for this board is listed here.
 
 ## Revisions
 
@@ -225,13 +158,3 @@ Identical in every OpenDrone board repo. Do not edit here; edit the template.
 |---|---|---|
 | unreleased | 2026-10-16 | One routed 8-layer HDI board, no release tag yet. ERC and DRC state in research/ROUTING.md. |
 
-## By task
-
-Board-specific paths are in Environment above. `KPY` is KiCad's bundled
-Python named there.
-
-- Check the design: run the ERC and DRC commands in Environment before every pull request.
-- Add a part: place it from the `OpenDrone` library if `hardware/KiCad-Library/PARTS-USED.md` lists it; otherwise import it into `lib` with `$KPY <hardware-tooling>/hardware/kicad/import_part.py` (read `--help` first), KiCad closed.
-- Render the board for the README: `$KPY <hardware-tooling>/hardware/kicad/render_board.py hardware/OpenAIO.kicad_pcb --outdir images`, KiCad closed.
-- Analyse the netlist: export it with the netlist command in Environment, then read it with a script; never hand-write a second BOM.
-- Update the shared library: `git submodule update --remote hardware/KiCad-Library`, run DRC, commit as its own reviewed change.
